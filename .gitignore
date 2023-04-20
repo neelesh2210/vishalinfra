@@ -2,7 +2,7 @@
 /.idea
 /vendor
 /.vscode
-#/storage
+/storage
 /public/hot
 .env.backup
 /node_modules
