@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/techuprealstate/public_html/
+    - export DEPLOYPATH=/home/vishalinfra/public_html/
     - /bin/cp -R * $DEPLOYPATH
