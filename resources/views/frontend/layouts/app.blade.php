@@ -1,22 +1,16 @@
 <!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
-    <head>
-        <title>{{env('APP_NAME')}} : Home</title>
-        <meta name="format-detection" content="telephone=no">
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
-        <meta name="author" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta charset="utf-8">
+<html lang="en">
 
-        {{-- <link rel="icon" href="images/favicon.ico" type="image/x-icon"> --}}
-        <link rel="stylesheet" href="{{ asset('frontend/css/settings.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/css/custom-style.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/css/main.css') }}">
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Themezhub" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vishal Infra</title>
+    <!-- Custom CSS -->
+    <link href="{{ asset('frontend/assets/css/styles.css')}}" rel="stylesheet">
+</head>
 
-    <body>
+    <body class="yellow-skin">
         <style>
             .text-danger{
                 color:red;
@@ -25,10 +19,8 @@
                 color:green;
             }
         </style>
-        <div class="preloader">
-            <div class="cssload-box-loading"></div>
-        </div>
-        <div class="page">
+         <div class="preloader"></div>
+         <div id="main-wrapper">
             @include('frontend.layouts.header')
                 @yield('content')
             @include('frontend.layouts.footer')

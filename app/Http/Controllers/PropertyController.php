@@ -87,4 +87,8 @@ class PropertyController extends Controller
         return view('frontend.properties_details',compact('property_detail'));
     }
 
+    public function properties_details(){
+        return view('frontend.properties_details');
+    }
+
 }

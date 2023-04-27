@@ -32,6 +32,7 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 
 //Property
 Route::get('properties',[PropertyController::class,'propertyList'])->name('properties');
+Route::get('properties_details',[PropertyController::class,'properties_details'])->name('properties_details');
 
 //Customer Register
 Route::get('register',[RegisterController::class,'register'])->name('register');

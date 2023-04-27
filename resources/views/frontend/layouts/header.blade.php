@@ -1,42 +1,82 @@
-<section class="section swiper-custom-container-3">
-    <header class="section page-header">
-        <div class="vanguard-navbar-wrap">
-            <nav class="vanguard-navbar vanguard-navbar-corporate" data-layout="vanguard-navbar-fixed" data-sm-layout="vanguard-navbar-fixed" data-md-layout="vanguard-navbar-fixed" data-md-device-layout="vanguard-navbar-fixed" data-lg-layout="vanguard-navbar-static" data-lg-device-layout="vanguard-navbar-fixed" data-xl-layout="vanguard-navbar-static" data-xl-device-layout="vanguard-navbar-static" data-xxl-layout="vanguard-navbar-static" data-xxl-device-layout="vanguard-navbar-static" data-lg-stick-up-offset="80px" data-xl-stick-up-offset="80px" data-xxl-stick-up-offset="80px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-                <div class="vanguard-navbar-collapse-toggle vanguard-navbar-fixed-element-1" data-vanguard-navbar-toggle=".vanguard-navbar-collapse"><span></span></div>
-                <div class="vanguard-navbar-main-outer">
-                    <div class="vanguard-navbar-main">
-                        <div class="vanguard-navbar-panel">
-                            <button class="vanguard-navbar-toggle" data-vanguard-navbar-toggle=".vanguard-navbar-nav-wrap"><span></span></button>
-                            <div class="vanguard-navbar-brand">
-                                <img src="{{asset('backend/img/logo.png')}}" style="height: 50px;width: 130px;">
-                            </div>
-                        </div>
-                        <div class="vanguard-navbar-main-element">
-                            <div class="vanguard-navbar-nav-wrap nav-style-separated">
-                                <ul class="vanguard-navbar-nav">
-                                    <li class="vanguard-nav-item active"><a class="vanguard-nav-link" href="/">Home</a></li>
-                                    <li class="vanguard-nav-item"><a class="vanguard-nav-link" href="#">About Us</a> </li>
-                                    <li class="vanguard-nav-item"><a class="vanguard-nav-link" href="#">Gallery</a></li>
-                                    <li class="vanguard-nav-item"><a class="vanguard-nav-link" href="#">Services</a></li>
-                                    <li class="vanguard-nav-item"><a class="vanguard-nav-link" href="{{route('properties')}}">Properties</a></li>
-                                    <li class="vanguard-nav-item"><a class="vanguard-nav-link" href="#">Contact Us</a> </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="vanguard-navbar-collapse">
-                            <ul class="vanguard-navbar-contacts-4">
-                                <li><i class="icon fa fa-user"></i>
-                                    @if(auth()->guard('web')->user())
-                                        <a href="{{route('user.dashboard')}}">{{Auth::guard('web')->user()->name}}</a>
-                                    @else
-                                        <a href="{{route('login')}}"> Login</a>
-                                    @endguest
-                                </li>
+        <!-- Start Navigation -->
+        <div class="header header-light">
+            <div class="container">
+                <nav id="navigation" class="navigation navigation-landscape">
+                    <div class="nav-header">
+                        <a class="nav-brand" href="#">
+                        <h2 class="mt-2">Vishal Infra</h2>
+                            {{-- <img src="{{ asset('frontend/assets/img/logo.png')}}" class="logo" alt="" /> --}}
+                        </a>
+                        <div class="nav-toggle"></div>
+                        <div class="mobile_nav">
+                            <ul>
+                                <li class="_my_prt_list"><a href="#"><span>2</span>My List</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#login"><i class="fas fa-user-circle fa-lg"></i></a></li>
                             </ul>
                         </div>
                     </div>
-                </div>
-            </nav>
+                    <div class="nav-menus-wrapper" style="transition-property: none;">
+                        <ul class="nav-menu">
+
+                            <li class="active"><a href="#">Home</a>
+                            </li>
+
+                            <li><a href="#">Buy<span class="submenu-indicator"></span></a>
+                                {{-- <ul class="nav-dropdown nav-submenu">
+                                    <li><a href="#">Listing Grid<span class="submenu-indicator"></span></a>
+                                        <ul class="nav-dropdown nav-submenu">
+                                            <li><a href="grid-layout-with-sidebar.html">Grid Style 1</a></li>
+                                            <li><a href="grid-layout-2.html">Grid Style 2</a></li>
+                                            <li><a href="grid-layout-3.html">Grid Style 3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Listing List<span class="submenu-indicator"></span></a>
+                                        <ul class="nav-dropdown nav-submenu">
+                                            <li><a href="list-layout-with-sidebar.html">List Style 1</a></li>
+                                            <li><a href="list-layout-with-map-2.html">List Style 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Listing Map<span class="submenu-indicator"></span></a>
+                                        <ul class="nav-dropdown nav-submenu">
+                                            <li><a href="half-map.html">Half Map</a></li>
+                                            <li><a href="half-map-2.html">Half Map 2</a></li>
+                                            <li><a href="classical-layout-with-map.html">Classical With Sidebar</a></li>
+                                            <li><a href="list-layout-with-map.html">List Sidebar Map</a></li>
+                                            <li><a href="grid-layout-with-map.html">Grid Sidebar Map</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Agents View<span class="submenu-indicator"></span></a>
+                                        <ul class="nav-dropdown nav-submenu">
+                                            <li><a href="agents.html">Agent Grid Style</a></li>
+                                            <li><a href="agents-2.html">Agent Grid 2</a></li>
+                                            <li><a href="agent-page.html">Agent Detail Page</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Agency View<span class="submenu-indicator"></span></a>
+                                        <ul class="nav-dropdown nav-submenu">
+                                            <li><a href="agencies.html">Agency Grid Style</a></li>
+                                            <li><a href="agency-page.html">Agency Detail Page</a></li>
+                                        </ul>
+                                    </li>
+                                </ul> --}}
+                            </li>
+                            <li><a href="#">Rent</a> </li>
+                            <li><a href="#">Sell</a> </li>
+                            <li><a href="#">Pay Rent</a> </li>
+                            <li><a href="{{route('properties')}}">Property Services</a> </li>
+                            <li><a href="#">Help</a> </li>
+                        </ul>
+
+                        <ul class="nav-menu nav-menu-social align-to-right">
+                            <li class="_my_prt_list"><a href="#" data-toggle="modal" data-target="#login"><i class="fas fa-sign-in-alt mr-1"></i>Sign in</a></li>
+                            <li class="add-listing">
+                                <a href="#" class="theme-cl">
+                                    <i class="fas fa-plus-circle mr-1"></i>Post Property<small>(Free)</small>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </div>
-    </header>
-</section>
+        <!-- End Navigation -->

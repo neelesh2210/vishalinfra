@@ -1,646 +1,1155 @@
 @extends('frontend.layouts.app')
 @section('content')
-<div class="tp-banner-container">
-    <div class="tp-banner">
-        <ul>
-            @foreach ($sliders as $slider)
-                <li data-slotamount="7" data-transition="3dcurtain-horizontal" data-masterspeed="1000" data-saveperformance="on">
-                    <img data-lazyload="{{asset('backend/img/sliders/'.$slider->image)}}">
-                </li>
-            @endforeach
-        </ul>
-    </div>
-</div>
-<section class="welcome-section section section-lg">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-12">
-                <div class="main-heading">
-                    <h2 class="section-title-dash">About <span class="section-title-dash-color"> Us</span>
-                        <span class="section-title-dash-bottom">&nbsp;</span>
-                    </h2>
-                    <p>Vishalinfra Company Development Industry Welcomes You!</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <p class="welcom_para">
-                    The motive of our company is to help people turn their ideas on paper into reality and live in their dream houses .
-                </p>
-                <p>
-                    Vishalinfra Company is well known in Varanasi as a commercial building contractor that aims to be the No.1
-                    Construction Company in the country under the leadership of Mr Om Prakash Gautam. We at Vishalinfra Company
-                    help try to provide our clients with their dream houses with the help of our expert team of
-                    architects who have been working in the industry for years. It is our sole goal here to provide
-                    clients with outstanding services at an affordable price so they can achieve what they are looking
-                    for.
-                </p>
-                <p>
-                    Our team consists of experienced Architects, Engineers, and Interior Designers who help us accomplish
-                    the client’s task from the scratch till the handover. This team of experts is what has helped us
-                    achieve the title of the Best residential and commercial building construction company in the state.
-                </p>
-                <div class="button-wrap oh-desktop">
-                    <a class="button button-icon button-primary wow slideInUp" href="#">Read more <i class="fa fa-chevron-circle-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="about-box-layout2">
-                    <div class="item-img">
-                        <div class="main-img">
-                            <img src="{{ asset('frontend/images/about1.jpg') }}" alt="about">
+    <!-- End Navigation -->
+    <div class="clearfix"></div>
+    <!-- ============================ Hero Banner  Start================================== -->
+    <div class="image-cover hero_banner" style="background:url({{ asset('frontend/assets/img/banner-3.png') }}) no-repeat;"
+        data-overlay="0">
+        <div class="container">
+
+            <h1 class="big-header-capt mb-0">Search Your Next Home</h1>
+            <p class="text-center mb-4">Find new & featured property located in your local city.</p>
+            <!-- Type -->
+            <div class="row justify-content-center">
+                <div class="col-xl-10 col-lg-12 col-md-12">
+                    <div class="full_search_box nexio_search lightanic_search hero_search-radius modern">
+                        <div class="search_hero_wrapping">
+
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-12">
+                                    <div class="form-group">
+                                        <label>City/Street</label>
+                                        <div class="input-with-icon">
+                                            <select id="location" class="form-control">
+                                                <option value="">&nbsp;</option>
+                                                <option value="1">New York City</option>
+                                                <option value="2">Honolulu, Hawaii</option>
+                                                <option value="3">California</option>
+                                                <option value="4">New Orleans</option>
+                                                <option value="5">Washington</option>
+                                                <option value="6">Charleston</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="form-group">
+                                        <label>Property Type</label>
+                                        <div class="input-with-icon">
+                                            <select id="ptypes" class="form-control">
+                                                <option value="">&nbsp;</option>
+                                                <option value="1">All categories</option>
+                                                <option value="2">Apartment</option>
+                                                <option value="3">Villas</option>
+                                                <option value="4">Commercial</option>
+                                                <option value="5">Offices</option>
+                                                <option value="6">Garage</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-sm-12 d-md-none d-lg-block">
+                                    <div class="form-group">
+                                        <label>Price Range</label>
+                                        <div class="input-with-icon">
+                                            <select id="price" class="form-control">
+                                                <option value="">&nbsp;</option>
+                                                <option value="1">From 40,000 To 10m</option>
+                                                <option value="2">From 60,000 To 20m</option>
+                                                <option value="3">From 70,000 To 30m</option>
+                                                <option value="3">From 80,000 To 40m</option>
+                                                <option value="3">From 90,000 To 50m</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-2 col-md-3 col-sm-12">
+                                    <div class="form-group none">
+                                        <a class="collapsed ad-search" data-toggle="collapse" data-parent="#search"
+                                            data-target="#advance-search" href="javascript:void(0);" aria-expanded="false"
+                                            aria-controls="advance-search"><i class="fa fa-sliders-h mr-2"></i>Advance
+                                            Filter</a>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-1 col-md-2 col-sm-12 small-padd">
+                                    <div class="form-group none">
+                                        <a href="#" class="btn search-btn"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Collapse Advance Search Form -->
+                            <div class="collapse" id="advance-search" aria-expanded="false" role="banner">
+
+                                <!-- row -->
+                                <div class="row">
+
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <div class="form-group none style-auto">
+                                            <select id="bedrooms" class="form-control">
+                                                <option value="">&nbsp;</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <div class="form-group none style-auto">
+                                            <select id="bathrooms" class="form-control">
+                                                <option value="">&nbsp;</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <div class="form-group none">
+                                            <input type="text" class="form-control" placeholder="min sqft" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <div class="form-group none">
+                                            <input type="text" class="form-control" placeholder="max sqft" />
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /row -->
+
+                                <!-- row -->
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mt-2">
+                                        <h6>Advance Price</h6>
+                                        <div class="rg-slider">
+                                            <input type="text" class="js-range-slider" name="my_range"
+                                                value="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /row -->
+
+                                <!-- row -->
+                                <div class="row">
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mt-3">
+                                        <h4 class="text-dark">Amenities & Features</h4>
+                                        <ul class="no-ul-list third-row">
+                                            <li>
+                                                <input id="a-1" class="checkbox-custom" name="a-1"
+                                                    type="checkbox">
+                                                <label for="a-1" class="checkbox-custom-label">Air Condition</label>
+                                            </li>
+                                            <li>
+                                                <input id="a-2" class="checkbox-custom" name="a-2"
+                                                    type="checkbox">
+                                                <label for="a-2" class="checkbox-custom-label">Bedding</label>
+                                            </li>
+                                            <li>
+                                                <input id="a-3" class="checkbox-custom" name="a-3"
+                                                    type="checkbox">
+                                                <label for="a-3" class="checkbox-custom-label">Heating</label>
+                                            </li>
+                                            <li>
+                                                <input id="a-4" class="checkbox-custom" name="a-4"
+                                                    type="checkbox">
+                                                <label for="a-4" class="checkbox-custom-label">Internet</label>
+                                            </li>
+                                            <li>
+                                                <input id="a-5" class="checkbox-custom" name="a-5"
+                                                    type="checkbox">
+                                                <label for="a-5" class="checkbox-custom-label">Microwave</label>
+                                            </li>
+                                            <li>
+                                                <input id="a-6" class="checkbox-custom" name="a-6"
+                                                    type="checkbox">
+                                                <label for="a-6" class="checkbox-custom-label">Smoking Allow</label>
+                                            </li>
+                                            <li>
+                                                <input id="a-7" class="checkbox-custom" name="a-7"
+                                                    type="checkbox">
+                                                <label for="a-7" class="checkbox-custom-label">Terrace</label>
+                                            </li>
+                                            <li>
+                                                <input id="a-8" class="checkbox-custom" name="a-8"
+                                                    type="checkbox">
+                                                <label for="a-8" class="checkbox-custom-label">Balcony</label>
+                                            </li>
+                                            <li>
+                                                <input id="a-9" class="checkbox-custom" name="a-9"
+                                                    type="checkbox">
+                                                <label for="a-9" class="checkbox-custom-label">Icon</label>
+                                            </li>
+                                            <li>
+                                                <input id="a-10" class="checkbox-custom" name="a-10"
+                                                    type="checkbox">
+                                                <label for="a-10" class="checkbox-custom-label">Wi-Fi</label>
+                                            </li>
+                                            <li>
+                                                <input id="a-11" class="checkbox-custom" name="a-11"
+                                                    type="checkbox">
+                                                <label for="a-11" class="checkbox-custom-label">Beach</label>
+                                            </li>
+                                            <li>
+                                                <input id="a-12" class="checkbox-custom" name="a-12"
+                                                    type="checkbox">
+                                                <label for="a-12" class="checkbox-custom-label">Parking</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <!-- /row -->
+
+                            </div>
+
                         </div>
-                        <div class="sub-img">
-                            <img src="{{ asset('frontend/images/main-gallery.jpg') }}" alt="about">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================ Hero Banner End ================================== -->
+
+    <!-- ============================ Property Type Start ================================== -->
+    <section class="gray-simple min">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="sec-heading center">
+                        <h2>Featured Property Types</h2>
+                        <p>Find All Type of Property.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg col-md-4">
+                    <!-- Single Category -->
+                    <div class="property_cats_boxs">
+                        <a href="grid-layout-with-sidebar.html" class="category-box">
+                            <div class="property_category_short">
+                                <div class="category-icon clip-1">
+                                    <i class="flaticon-beach-house-2"></i>
+                                </div>
+
+                                <div class="property_category_expand property_category_short-text">
+                                    <h4>Family House</h4>
+                                    <p>122 Property</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg col-md-4">
+                    <!-- Single Category -->
+                    <div class="property_cats_boxs">
+                        <a href="grid-layout-with-sidebar.html" class="category-box">
+                            <div class="property_category_short">
+                                <div class="category-icon clip-2">
+                                    <i class="flaticon-cabin"></i>
+                                </div>
+
+                                <div class="property_category_expand property_category_short-text">
+                                    <h4>House & Villa</h4>
+                                    <p>155 Property</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg col-md-4">
+                    <!-- Single Category -->
+                    <div class="property_cats_boxs">
+                        <a href="grid-layout-with-sidebar.html" class="category-box">
+                            <div class="property_category_short">
+                                <div class="category-icon clip-3">
+                                    <i class="flaticon-apartments"></i>
+                                </div>
+
+                                <div class="property_category_expand property_category_short-text">
+                                    <h4>Apartment</h4>
+                                    <p>300 Property</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg col-md-4">
+                    <!-- Single Category -->
+                    <div class="property_cats_boxs">
+                        <a href="grid-layout-with-sidebar.html" class="category-box">
+                            <div class="property_category_short">
+                                <div class="category-icon clip-4">
+                                    <i class="flaticon-student-housing"></i>
+                                </div>
+
+                                <div class="property_category_expand property_category_short-text">
+                                    <h4>Office & Studio</h4>
+                                    <p>80 Property</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg col-md-4">
+                    <!-- Single Category -->
+                    <div class="property_cats_boxs">
+                        <a href="grid-layout-with-sidebar.html" class="category-box">
+                            <div class="property_category_short">
+                                <div class="category-icon clip-5">
+                                    <i class="flaticon-modern-house-4"></i>
+                                </div>
+
+                                <div class="property_category_expand property_category_short-text">
+                                    <h4>Villa & Condo</h4>
+                                    <p>80 Property</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ============================ Property Type End ================================== -->
+
+    <!-- ============================ Recent Property Start ================================== -->
+    <section class="min">
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-md-8">
+                    <div class="sec-heading center">
+                        <h2>Recent Property Listed</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+
+                <!-- Single Property -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="property-listing property-2">
+
+                        <div class="listing-img-wrapper">
+                            <div class="list-img-slide">
+                                <a href="single-property-1.html"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
+                                        class="img-fluid mx-auto" alt="" /></a>
+                            </div>
+                        </div>
+
+                        <div class="listing-detail-wrapper">
+                            <div class="listing-short-detail-wrap">
+                                <div class="_card_list_flex mb-2">
+                                    <div class="_card_flex_01">
+                                        <span class="property-type elt_rent">For Rent</span>
+                                    </div>
+                                    <div class="_card_flex_last">
+                                        <div class="prt_saveed_12lk">
+                                            <label class="toggler toggler-danger"><input type="checkbox"><i
+                                                    class="fas fa-heart"></i></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="listing-short-detail">
+                                    <h4 class="listing-name verified"><a href="single-property-1.html"
+                                            class="prt-link-detail">Red Carpet Real Estate</a></h4>
+                                    <div class="foot-location"><img src="{{ asset('frontend/assets/img/pin.svg') }}"
+                                            width="18" alt="" />Varanasi, Uttar Pradesh, India</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="listing-detail-footer">
+                            <div class="footer-first">
+                                <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft</div>
+                            </div>
+                            <div class="footer-flex">
+                                <span>Apartment</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Single Property -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="property-listing property-2">
+
+                        <div class="listing-img-wrapper">
+                            <div class="list-img-slide">
+                                <a href="single-property-1.html"><img src="{{ asset('frontend/assets/img/p-2.png') }}"
+                                        class="img-fluid mx-auto" alt="" /></a>
+                            </div>
+                        </div>
+
+                        <div class="listing-detail-wrapper">
+                            <div class="listing-short-detail-wrap">
+                                <div class="_card_list_flex mb-2">
+                                    <div class="_card_flex_01">
+                                        <span class="property-type elt_sale">For Sale</span>
+                                    </div>
+                                    <div class="_card_flex_last">
+                                        <div class="prt_saveed_12lk">
+                                            <label class="toggler toggler-danger"><input type="checkbox"><i
+                                                    class="fas fa-heart"></i></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="listing-short-detail">
+                                    <h4 class="listing-name verified"><a href="single-property-1.html"
+                                            class="prt-link-detail">Fairmount Properties</a></h4>
+                                    <div class="foot-location"><img src="{{ asset('frontend/assets/img/pin.svg') }}"
+                                            width="18" alt="" />Varanasi, Uttar Pradesh, India</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="listing-detail-footer">
+                            <div class="footer-first">
+                                <div class="foot-location"><span class="pric_lio theme-bg">₹9,750</span>/sqft</div>
+                            </div>
+                            <div class="footer-flex">
+                                <span>Condos</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Single Property -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="property-listing property-2">
+
+                        <div class="listing-img-wrapper">
+                            <div class="list-img-slide">
+                                <a href="single-property-1.html"><img src="{{ asset('frontend/assets/img/p-4.png') }}"
+                                        class="img-fluid mx-auto" alt="" /></a>
+                            </div>
+                        </div>
+
+                        <div class="listing-detail-wrapper">
+                            <div class="listing-short-detail-wrap">
+                                <div class="_card_list_flex mb-2">
+                                    <div class="_card_flex_01">
+                                        <span class="property-type elt_rent">For Rent</span>
+                                    </div>
+                                    <div class="_card_flex_last">
+                                        <div class="prt_saveed_12lk">
+                                            <label class="toggler toggler-danger"><input type="checkbox"><i
+                                                    class="fas fa-heart"></i></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="listing-short-detail">
+                                    <h4 class="listing-name verified"><a href="single-property-1.html"
+                                            class="prt-link-detail">The Real Estate Corner</a></h4>
+                                    <div class="foot-location"><img src="{{ asset('frontend/assets/img/pin.svg') }}"
+                                            width="18" alt="" />Varanasi, Uttar Pradesh, India</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="listing-detail-footer">
+                            <div class="footer-first">
+                                <div class="foot-location"><span class="pric_lio theme-bg">₹5,860</span>/sqft</div>
+                            </div>
+                            <div class="footer-flex">
+                                <span>Offices</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Single Property -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="property-listing property-2">
+
+                        <div class="listing-img-wrapper">
+                            <div class="list-img-slide">
+                                <a href="single-property-1.html"><img src="{{ asset('frontend/assets/img/p-5.png') }}"
+                                        class="img-fluid mx-auto" alt="" /></a>
+                            </div>
+                        </div>
+
+                        <div class="listing-detail-wrapper">
+                            <div class="listing-short-detail-wrap">
+                                <div class="_card_list_flex mb-2">
+                                    <div class="_card_flex_01">
+                                        <span class="property-type elt_sale">For Sale</span>
+                                    </div>
+                                    <div class="_card_flex_last">
+                                        <div class="prt_saveed_12lk">
+                                            <label class="toggler toggler-danger"><input type="checkbox"><i
+                                                    class="fas fa-heart"></i></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="listing-short-detail">
+                                    <h4 class="listing-name verified"><a href="single-property-1.html"
+                                            class="prt-link-detail">Herringbone Realty</a></h4>
+                                    <div class="foot-location"><img src="{{ asset('frontend/assets/img/pin.svg') }}"
+                                            width="18" alt="" />Varanasi, Uttar Pradesh, India</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="listing-detail-footer">
+                            <div class="footer-first">
+                                <div class="foot-location"><span class="pric_lio theme-bg">₹7,540</span>/sqft</div>
+                            </div>
+                            <div class="footer-flex">
+                                <span>Homes & Villas</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Single Property -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="property-listing property-2">
+
+                        <div class="listing-img-wrapper">
+                            <div class="list-img-slide">
+                                <a href="single-property-1.html"><img src="{{ asset('frontend/assets/img/p-6.png') }}"
+                                        class="img-fluid mx-auto" alt="" /></a>
+                            </div>
+                        </div>
+
+                        <div class="listing-detail-wrapper">
+                            <div class="listing-short-detail-wrap">
+                                <div class="_card_list_flex mb-2">
+                                    <div class="_card_flex_01">
+                                        <span class="property-type elt_rent">For Rent</span>
+                                    </div>
+                                    <div class="_card_flex_last">
+                                        <div class="prt_saveed_12lk">
+                                            <label class="toggler toggler-danger"><input type="checkbox"><i
+                                                    class="fas fa-heart"></i></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="listing-short-detail">
+                                    <h4 class="listing-name verified"><a href="single-property-1.html"
+                                            class="prt-link-detail">Brick Lane Realty</a></h4>
+                                    <div class="foot-location"><img src="{{ asset('frontend/assets/img/pin.svg') }}"
+                                            width="18" alt="" />Varanasi, Uttar Pradesh, India</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="listing-detail-footer">
+                            <div class="footer-first">
+                                <div class="foot-location"><span class="pric_lio theme-bg">₹4,850</span>/sqft</div>
+                            </div>
+                            <div class="footer-flex">
+                                <span>Commercial</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Single Property -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="property-listing property-2">
+
+                        <div class="listing-img-wrapper">
+                            <div class="list-img-slide">
+                                <a href="single-property-1.html"><img src="{{ asset('frontend/assets/img/p-7.png') }}"
+                                        class="img-fluid mx-auto" alt="" /></a>
+                            </div>
+                        </div>
+
+                        <div class="listing-detail-wrapper">
+                            <div class="listing-short-detail-wrap">
+                                <div class="_card_list_flex mb-2">
+                                    <div class="_card_flex_01">
+                                        <span class="property-type elt_sale">For Sale</span>
+                                    </div>
+                                    <div class="_card_flex_last">
+                                        <div class="prt_saveed_12lk">
+                                            <label class="toggler toggler-danger"><input type="checkbox"><i
+                                                    class="fas fa-heart"></i></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="listing-short-detail">
+                                    <h4 class="listing-name verified"><a href="single-property-1.html"
+                                            class="prt-link-detail">Banyon Tree Realty</a></h4>
+                                    <div class="foot-location"><img src="{{ asset('frontend/assets/img/pin.svg') }}"
+                                            width="18" alt="" />Varanasi, Uttar Pradesh, India</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="listing-detail-footer">
+                            <div class="footer-first">
+                                <div class="foot-location"><span class="pric_lio theme-bg">₹2,742</span>/sqft</div>
+                            </div>
+                            <div class="footer-flex">
+                                <span>Apartment</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- ============================ Property End ================================== -->
+
+    <!-- ============================ Our Counter Start ================================== -->
+    <section class="image-cover"
+        style="background:#122947 url({{ asset('frontend/assets/img/pattern.png') }}) no-repeat;">
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-lg-10 col-md-12 col-sm-12">
+                    <div class="text-center mb-5">
+                        <span class="theme-cl">Our Awards</span>
+                        <h2 class="font-weight-normal text-light">Over 1,24,000+ Happy User Bieng with us Still they Love
+                            Our Services</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="_morder_counter">
+                        <div class="_morder_counter_thumb"><i class="ti-cup"></i></div>
+                        <div class="_morder_counter_caption">
+                            <h5 class="text-light"><span>32</span> M</h5>
+                            <span>Blue Burmin Award</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="_morder_counter">
+                        <div class="_morder_counter_thumb"><i class="ti-briefcase"></i></div>
+                        <div class="_morder_counter_caption">
+                            <h5 class="text-light"><span>43</span> M</h5>
+                            <span>Mimo X11 Award</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="_morder_counter">
+                        <div class="_morder_counter_thumb"><i class="ti-light-bulb"></i></div>
+                        <div class="_morder_counter_caption">
+                            <h5 class="text-light"><span>51</span> M</h5>
+                            <span>Australian UGC Award</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="_morder_counter">
+                        <div class="_morder_counter_thumb"><i class="ti-heart"></i></div>
+                        <div class="_morder_counter_caption">
+                            <h5 class="text-light"><span>42</span> M</h5>
+                            <span>IITCA Green Award</span>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
-    </div>
-</section>
-<section class="section section-lg bg-gray-100">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-12">
-                <div class="main-heading wow fadeInLeft">
-                    <h2 class="section-title-dash">Our <span class="section-title-dash-color"> Services</span>
-                        <span class="section-title-dash-bottom">&nbsp;</span>
-                    </h2>
-                    <p>
-                        As the name suggests, Vishalinfra Company is all about bringing the fortune in life by turning dreams
-                        into reality. From corporate and housing solution to entertainment and societal purpose
-                        constructions, Vishalinfra Company believes in crafting perfection.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row row-xs justify-content-center">
-            <div class="owl-carousel owl-style-3" data-items="1" data-sm-items="1" data-lg-items="3" data-margin="30" data-autoplay="true" data-dots="true" data-animation-in="fadeIn" data-animation-out="fadeOut" data-pagination-class=".dots-custom">
-                <div class="service_single_content text-center wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="service_img">
-                        <img src="{{ asset('frontend/images/furnishing.jpg') }}" alt="">
-                    </div>
-                    <div class="service_content">
-                        <h6 class="d-blue bold">Furnishing</h6>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur posuere adipiscing elit. Nulla neque quam, maxi ut
-                            accumsan ut, posuere sit Lorem ipsum
-                        </p>
-                        <a class="ttm-btn ttm-btn-size-sm" href="#">View More<i class="fa fa-angle-double-right"></i></a>
-                    </div>
-                </div>
-                <div class="service_single_content text-center wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="service_img">
-                        <img src="{{ asset('frontend/images/acp-and-false-ceiling-works.jpg') }}" alt="">
-                    </div>
-                    <div class="service_content">
-                        <h6 class="d-blue bold">A.C.P & false Ceiling Works</h6>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur posuere sit posuere neque adipiscing elit. Nulla
-                            neque quam, maxi ut accumsan ut, posuere sit Lorem ipsum
-                        </p>
-                        <a class="ttm-btn ttm-btn-size-sm" href="#">View More <i class="fa fa-angle-double-right"></i></a>
-                    </div>
-                </div>
-                <div class="service_single_content text-center wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="service_img">
-                        <img src="{{ asset('frontend/images/electrical-work.jpg') }}" alt="">
-                    </div>
-                    <div class="service_content">
-                        <h6 class="d-blue bold">Electric Work</h6>
-                        <p>Among many electricity providers in deregulated states competing to get your service, we're the best.</p>
-                        <a class="ttm-btn ttm-btn-size-sm" href="#">View More <i class="fa fa-angle-double-right"></i></a>
-                    </div>
-                </div>
-                <div class="service_single_content text-center wow fadeInDown" data-wow-delay="0.2s">
-                    <div class="service_img">
-                        <img src="{{ asset('frontend/images/painting-and-putty.jpg') }}" alt="">
-                    </div>
-                    <div class="service_content">
-                        <h6 class="d-blue bold">Painting & Putty</h6>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur posuere sit posuere neque adipiscing elit. Nulla
-                            neque quam, maxi ut accumsan ut, posuere sit Lorem ipsum
-                        </p>
-                        <a class="ttm-btn ttm-btn-size-sm" href="#">View More <i class="fa fa-angle-double-right"></i></a>
-                    </div>
-                </div>
-                <div class="service_single_content text-center wow fadeInDown" data-wow-delay="0.2s">
-                    <div class="service_img">
-                        <img src="{{ asset('frontend/images/tiles-fitting.jpg') }}" alt=""> </div>
-                    <div class="service_content">
-                        <h6 class="d-blue bold">Tiles Fitting</h6>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur posuere adipiscing elit. Nulla neque quam, maxi ut
-                            accumsan ut, posuere sit Lorem ipsum
-                        </p>
-                        <a class="ttm-btn ttm-btn-size-sm" href="#">View More <i class="fa fa-angle-double-right"></i></a>
-                    </div>
-                </div>
-                <div class="service_single_content text-center wow fadeInDown" data-wow-delay="0.2s">
-                    <div class="service_img">
-                        <img src="{{ asset('frontend/images/exterior-decoration.jpg') }}" alt="">
-                    </div>
-                    <div class="service_content">
-                        <h6 class="d-blue bold">Exterior Decoration & Much More</h6>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur posuere sit posuere neque adipiscing elit. Nulla
-                            neque quam, maxi ut accumsan ut, posuere sit Lorem ipsum
-                        </p>
-                        <a class="ttm-btn ttm-btn-size-sm" href="#">View More <i class="fa fa-angle-double-right"></i></a>
-                    </div>
-                </div>
-                <div class="service_single_content text-center wow fadeInDown" data-wow-delay="0.2s">
-                    <div class="service_img">
-                        <img src="{{ asset('frontend/images/architectural-design.jpg') }}" alt="">
-                    </div>
-                    <div class="service_content">
-                        <h6 class="d-blue bold">Architectural Design</h6>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur posuere adipiscing elit. Nulla neque quam, maxi ut
-                            accumsan ut, posuere sit Lorem ipsum
-                        </p>
-                        <a class="ttm-btn ttm-btn-size-sm" href="#">View More <i class="fa fa-angle-double-right"></i></a>
-                    </div>
-                </div>
-                <div class="service_single_content text-center wow fadeInDown" data-wow-delay="0.2s">
-                    <div class="service_img">
-                        <img src="{{ asset('frontend/images/vda-drawing.jpg') }}" alt="">
-                    </div>
-                    <div class="service_content">
-                        <h6 class="d-blue bold">V.D.A Drawing site Supervision</h6>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur posuere adipiscing elit. Nulla neque quam, maxi ut
-                            accumsan ut, posuere sit Lorem ipsum
-                        </p>
-                        <a class="ttm-btn ttm-btn-size-sm" href="#">View More <i
-                                class="fa fa-angle-double-right"></i></a>
-                    </div>
-                </div>
-                <!-- Services Creative-->
-                <div class="service_single_content text-center wow fadeInDown" data-wow-delay="0.2s">
-                    <div class="service_img"> <img
-                            src="{{ asset('frontend/images/sstimate-&-valuation.jpg') }}"
-                            alt=""> </div>
-                    <div class="service_content">
-                        <h6 class="d-blue bold">Estimate & Valuation</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur posuere adipiscing elit. Nulla neque quam, maxi ut
-                            accumsan ut, posuere sit Lorem ipsum</p>
-                        <a class="ttm-btn ttm-btn-size-sm" href="#">View More <i
-                                class="fa fa-angle-double-right"></i></a>
-                    </div>
-                </div>
-                <!-- Services Creative-->
-                <div class="service_single_content text-center wow fadeInDown" data-wow-delay="0.2s">
-                    <div class="service_img"> <img
-                            src="{{ asset('frontend/images/construction.jpeg') }}" alt="">
-                    </div>
-                    <div class="service_content">
-                        <h6 class="d-blue bold">Construction</h6>
-                        <p>It is not the beauty of a building you should look at; its the construction of the foundation
-                            that will stand the test of time.</p>
-                        <a class="ttm-btn ttm-btn-size-sm" href="#">View More <i
-                                class="fa fa-angle-double-right"></i></a>
-                    </div>
-                </div>
-                <!-- Services Creative-->
-                <div class="service_single_content text-center wow fadeInDown" data-wow-delay="0.2s">
-                    <div class="service_img"> <img
-                            src="{{ asset('frontend/images/boring-&-pumps.jpg') }}" alt="">
-                    </div>
-                    <div class="service_content">
-                        <h6 class="d-blue bold">Boring & Pumps</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur posuere adipiscing elit. Nulla neque quam, maxi ut
-                            accumsan ut, posuere sit Lorem ipsum</p>
-                        <a class="ttm-btn ttm-btn-size-sm" href="#">View More <i
-                                class="fa fa-chevron-circle-right"></i></a>
+    </section>
+    <!-- ============================ Our Counter End ================================== -->
+
+    <!-- ============================ Property Location ================================== -->
+    <section class="min">
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-md-8">
+                    <div class="sec-heading center">
+                        <h2>Explore By Location</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                     </div>
                 </div>
             </div>
 
+            <div class="row justify-content-center">
+
+                <!-- Single Location -->
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <a href="grid-layout-with-sidebar.html" class="img-wrap style-2">
+                        <div class="location_wrap_content visible">
+                            <div class="location_wrap_content_first">
+                                <h4>New Orleans, Louisiana</h4>
+                                <ul>
+                                    <li><span>12 Villas</span></li>
+                                    <li><span>10 Apartments</span></li>
+                                    <li><span>07 Offices</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-wrap-background"
+                            style="background-image: url({{ asset('frontend/assets/img/city-1.png') }});"></div>
+                    </a>
+                </div>
+
+                <!-- Single Location -->
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <a href="grid-layout-with-sidebar.html" class="img-wrap style-2">
+                        <div class="location_wrap_content visible">
+                            <div class="location_wrap_content_first">
+                                <h4>Jerrsy, United State</h4>
+                                <ul>
+                                    <li><span>12 Villas</span></li>
+                                    <li><span>10 Apartments</span></li>
+                                    <li><span>07 Offices</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-wrap-background"
+                            style="background-image: url({{ asset('frontend/assets/img/city-2.png') }});"></div>
+                    </a>
+                </div>
+
+                <!-- Single Location -->
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <a href="grid-layout-with-sidebar.html" class="img-wrap style-2">
+                        <div class="location_wrap_content visible">
+                            <div class="location_wrap_content_first">
+                                <h4>Liverpool, London</h4>
+                                <ul>
+                                    <li><span>12 Villas</span></li>
+                                    <li><span>10 Apartments</span></li>
+                                    <li><span>07 Offices</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-wrap-background"
+                            style="background-image: url({{ asset('frontend/assets/img/city-3.png') }});"></div>
+                    </a>
+                </div>
+
+                <!-- Single Location -->
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <a href="grid-layout-with-sidebar.html" class="img-wrap style-2">
+                        <div class="location_wrap_content visible">
+                            <div class="location_wrap_content_first">
+                                <h4>Varanasi, Uttar Pradesh, India</h4>
+                                <ul>
+                                    <li><span>12 Villas</span></li>
+                                    <li><span>10 Apartments</span></li>
+                                    <li><span>07 Offices</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-wrap-background"
+                            style="background-image: url({{ asset('frontend/assets/img/city-4.png') }});"></div>
+                    </a>
+                </div>
+
+                <!-- Single Location -->
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <a href="grid-layout-with-sidebar.html" class="img-wrap style-2">
+                        <div class="location_wrap_content visible">
+                            <div class="location_wrap_content_first">
+                                <h4>Varanasi, Uttar Pradesh, India</h4>
+                                <ul>
+                                    <li><span>12 Villas</span></li>
+                                    <li><span>10 Apartments</span></li>
+                                    <li><span>07 Offices</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-wrap-background"
+                            style="background-image: url({{ asset('frontend/assets/img/city-5.png') }});"></div>
+                    </a>
+                </div>
+
+                <!-- Single Location -->
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <a href="grid-layout-with-sidebar.html" class="img-wrap style-2">
+                        <div class="location_wrap_content visible">
+                            <div class="location_wrap_content_first">
+                                <h4>Varanasi, Uttar Pradesh, India</h4>
+                                <ul>
+                                    <li><span>12 Villas</span></li>
+                                    <li><span>10 Apartments</span></li>
+                                    <li><span>07 Offices</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-wrap-background"
+                            style="background-image: url({{ asset('frontend/assets/img/city-6.png') }});"></div>
+                    </a>
+                </div>
+
+            </div>
+
         </div>
-    </div>
-</section>
-<!--======= Services end =======-->
+    </section>
+    <!-- ============================ Property Location End ================================== -->
 
+    <!-- ============================ Top Agents ================================== -->
+    <section class="gray-simple min">
+        <div class="container">
 
-<section class="call-to-action-style-one section section-lg">
-    <div class="inner">
-        <div class="main-heading wow fadeInLeft">
-            <h2 class="section-title-dash" style="color:#fff;">Our <span class="section-title-dash-color">
-                    Services</span><span class="section-title-dash-bottom">&nbsp;</span> </h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-md-8">
+                    <div class="sec-heading center">
+                        <h2>Our Featured Agents</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="item-slide space">
+
+                        <!-- Single Item -->
+                        <div class="single_items">
+                            <div class="grid_agents">
+                                <div class="elio_mx_list theme-bg-2">102 Listings</div>
+                                <div class="grid_agents-wrap">
+
+                                    <div class="fr-grid-thumb">
+                                        <a href="agent-page.html">
+                                            <span class="verified"><img
+                                                    src="{{ asset('frontend/assets/img/verified.svg') }}"
+                                                    class="verify mx-auto" alt=""></span>
+                                            <img src="{{ asset('frontend/assets/img/team-1.jpg') }}"
+                                                class="img-fluid mx-auto" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="fr-grid-deatil">
+                                        <span><i class="ti-location-pin mr-1"></i>Varanasi, Uttar Pradesh, India</span>
+                                        <h5 class="fr-can-name"><a href="agent-page.html">Adam K. Jollio</a></h5>
+                                        <ul class="inline_social">
+                                            <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
+                                            <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
+                                            <li><a href="#" class="ins"><i class="ti-instagram"></i></a></li>
+                                            <li><a href="#" class="tw"><i class="ti-twitter"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="fr-infos-deatil">
+                                        <a href="#" data-toggle="modal" data-target="#autho-message"
+                                            class="btn agent-btn theme-bg"><i class="fa fa-envelope mr-2"></i>Message</a>
+                                        <a href="#" class="btn agent-btn theme-black"><i
+                                                class="fa fa-phone"></i></a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Single Item -->
+                        <div class="single_items">
+                            <div class="grid_agents">
+                                <div class="elio_mx_list theme-bg-2">72 Listings</div>
+                                <div class="grid_agents-wrap">
+
+                                    <div class="fr-grid-thumb">
+                                        <a href="agent-page.html">
+                                            <span class="verified"><img
+                                                    src="{{ asset('frontend/assets/img/verified.svg') }}"
+                                                    class="verify mx-auto" alt=""></span>
+                                            <img src="{{ asset('frontend/assets/img/team-2.jpg') }}"
+                                                class="img-fluid mx-auto" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="fr-grid-deatil">
+                                        <span><i class="ti-location-pin mr-1"></i>Varanasi, Uttar Pradesh, India</span>
+                                        <h5 class="fr-can-name"><a href="agent-page.html">Sargam S. Singh</a></h5>
+                                        <ul class="inline_social">
+                                            <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
+                                            <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
+                                            <li><a href="#" class="ins"><i class="ti-instagram"></i></a></li>
+                                            <li><a href="#" class="tw"><i class="ti-twitter"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="fr-infos-deatil">
+                                        <a href="#" data-toggle="modal" data-target="#autho-message"
+                                            class="btn agent-btn theme-bg"><i class="fa fa-envelope mr-2"></i>Message</a>
+                                        <a href="#" class="btn agent-btn theme-black"><i
+                                                class="fa fa-phone"></i></a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Single Item -->
+                        <div class="single_items">
+                            <div class="grid_agents">
+                                <div class="elio_mx_list theme-bg-2">22 Listings</div>
+                                <div class="grid_agents-wrap">
+
+                                    <div class="fr-grid-thumb">
+                                        <a href="agent-page.html">
+                                            <span class="verified"><img
+                                                    src="{{ asset('frontend/assets/img/verified.svg') }}"
+                                                    class="verify mx-auto" alt=""></span>
+                                            <img src="{{ asset('frontend/assets/img/team-3.jpg') }}"
+                                                class="img-fluid mx-auto" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="fr-grid-deatil">
+                                        <span><i class="ti-location-pin mr-1"></i>Varanasi, Uttar Pradesh, India</span>
+                                        <h5 class="fr-can-name"><a href="agent-page.html">Harijeet M. Siller</a></h5>
+                                        <ul class="inline_social">
+                                            <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
+                                            <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
+                                            <li><a href="#" class="ins"><i class="ti-instagram"></i></a></li>
+                                            <li><a href="#" class="tw"><i class="ti-twitter"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="fr-infos-deatil">
+                                        <a href="#" data-toggle="modal" data-target="#autho-message"
+                                            class="btn agent-btn theme-bg"><i class="fa fa-envelope mr-2"></i>Message</a>
+                                        <a href="#" class="btn agent-btn theme-black"><i
+                                                class="fa fa-phone"></i></a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Single Item -->
+                        <div class="single_items">
+                            <div class="grid_agents">
+                                <div class="elio_mx_list theme-bg-2">50 Listings</div>
+                                <div class="grid_agents-wrap">
+
+                                    <div class="fr-grid-thumb">
+                                        <a href="agent-page.html">
+                                            <span class="verified"><img
+                                                    src="{{ asset('frontend/assets/img/verified.svg') }}"
+                                                    class="verify mx-auto" alt=""></span>
+                                            <img src="{{ asset('frontend/assets/img/team-4.jpg') }}"
+                                                class="img-fluid mx-auto" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="fr-grid-deatil">
+                                        <span><i class="ti-location-pin mr-1"></i>Varanasi, Uttar Pradesh, India</span>
+                                        <h5 class="fr-can-name"><a href="agent-page.html">Anna K. Young</a></h5>
+                                        <ul class="inline_social">
+                                            <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
+                                            <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
+                                            <li><a href="#" class="ins"><i class="ti-instagram"></i></a></li>
+                                            <li><a href="#" class="tw"><i class="ti-twitter"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="fr-infos-deatil">
+                                        <a href="#" data-toggle="modal" data-target="#autho-message"
+                                            class="btn agent-btn theme-bg"><i class="fa fa-envelope mr-2"></i>Message</a>
+                                        <a href="#" class="btn agent-btn theme-black"><i
+                                                class="fa fa-phone"></i></a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Single Item -->
+                        <div class="single_items">
+                            <div class="grid_agents">
+                                <div class="elio_mx_list theme-bg-2">42 Listings</div>
+                                <div class="grid_agents-wrap">
+
+                                    <div class="fr-grid-thumb">
+                                        <a href="agent-page.html">
+                                            <span class="verified"><img
+                                                    src="{{ asset('frontend/assets/img/verified.svg') }}"
+                                                    class="verify mx-auto" alt=""></span>
+                                            <img src="{{ asset('frontend/assets/img/team-5.jpg') }}"
+                                                class="img-fluid mx-auto" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="fr-grid-deatil">
+                                        <span><i class="ti-location-pin mr-1"></i>Varanasi, Uttar Pradesh, India</span>
+                                        <h5 class="fr-can-name"><a href="agent-page.html">Michael P. Grimaldo</a></h5>
+                                        <ul class="inline_social">
+                                            <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
+                                            <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
+                                            <li><a href="#" class="ins"><i class="ti-instagram"></i></a></li>
+                                            <li><a href="#" class="tw"><i class="ti-twitter"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="fr-infos-deatil">
+                                        <a href="#" data-toggle="modal" data-target="#autho-message"
+                                            class="btn agent-btn theme-bg"><i class="fa fa-envelope mr-2"></i>Message</a>
+                                        <a href="#" class="btn agent-btn theme-black"><i
+                                                class="fa fa-phone"></i></a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="thm-container text-center">
-            <p class="text-center">We believe that our success won’t thrive unless we earn your trust and complete
-                satisfaction through our delivery of products and services.</p>
-            <p class="text-center"><b>Vishalinfra Company</b> are continuously monitored <b>24x7</b> under watchful eyes of a
-                Central Control unit. The quality checks of <b>Vishalinfra Company</b> thereby ensures the best of Customers.
-            </p>
-            <br>
-            <a href="#" class="button button-icon button-primary wow slideInUp">Contact Us <i
-                    class="fa fa-chevron-circle-right"></i></a>
+    </section>
+    <!-- ============================ Top Agents End ================================== -->
+
+    <!-- ============================ Price Table Start ================================== -->
+    <section class="min">
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-md-10 text-center">
+                    <div class="sec-heading center">
+                        <h2>Select your Package</h2>
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                            deleniti atque corrupti quos dolores</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+
+                <!-- Single Package -->
+                <div class="col-lg-4 col-md-4">
+                    <div class="pricing_wrap">
+                        <div class="prt_head">
+                            <h4>Basic</h4>
+                        </div>
+                        <div class="prt_price">
+                            <h2><span>₹</span>29</h2>
+                            <span>per user, per month</span>
+                        </div>
+                        <div class="prt_body">
+                            <ul>
+                                <li>99.5% Uptime Guarantee</li>
+                                <li>120GB CDN Bandwidth</li>
+                                <li>5GB Cloud Storage</li>
+                                <li class="none">Personal Help Support</li>
+                                <li class="none">Enterprise SLA</li>
+                            </ul>
+                        </div>
+                        <div class="prt_footer">
+                            <a href="#" class="btn choose_package">Start Basic</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Package -->
+                <div class="col-lg-4 col-md-4">
+                    <div class="pricing_wrap">
+                        <div class="prt_head">
+                            <div class="recommended">Best Value</div>
+                            <h4>Standard</h4>
+                        </div>
+                        <div class="prt_price">
+                            <h2><span>₹</span>49</h2>
+                            <span>per user, per month</span>
+                        </div>
+                        <div class="prt_body">
+                            <ul>
+                                <li>99.5% Uptime Guarantee</li>
+                                <li>150GB CDN Bandwidth</li>
+                                <li>10GB Cloud Storage</li>
+                                <li>Personal Help Support</li>
+                                <li class="none">Enterprise SLA</li>
+                            </ul>
+                        </div>
+                        <div class="prt_footer">
+                            <a href="#" class="btn choose_package active">Start Standard</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Package -->
+                <div class="col-lg-4 col-md-4">
+                    <div class="pricing_wrap">
+                        <div class="prt_head">
+                            <h4>Platinum</h4>
+                        </div>
+                        <div class="prt_price">
+                            <h2><span>₹</span>79</h2>
+                            <span>2 user, per month</span>
+                        </div>
+                        <div class="prt_body">
+                            <ul>
+                                <li>100% Uptime Guarantee</li>
+                                <li>200GB CDN Bandwidth</li>
+                                <li>20GB Cloud Storage</li>
+                                <li>Personal Help Support</li>
+                                <li>Enterprise SLA</li>
+                            </ul>
+                        </div>
+                        <div class="prt_footer">
+                            <a href="#" class="btn choose_package">Start Platinum</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-    </div>
-</section>
+    </section>
+    <!-- ============================ Price Table End ================================== -->
 
-<!--======= experience-section start=======-->
-
-<section class="section section-lg">
-    <div class="services-3 bg-grea-3">
+    <!-- ============================ Call To Action ================================== -->
+    <section class="theme-bg call_action_wrap-wrap">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 align-self-center">
-                    <div class="oh-desktop">
-                        <div class="main-heading wow fadeInLeft">
-                            <h2>Why <span class="section-title-dash-color">Choose </span> Us </h2>
-                        </div>
-                    </div>
-                    <p style="text-align:left;">Our clients have praised construction plans for houses, apartments, and
-                        commercial spaces in the real estate market because of our aggregate experience. We provide 1
-                        BHK, 2 BHK, and 3 BHK flats and villas at all of Varanasi most prime locations for residential
-                        properties.</p>
-                </div>
-                <div class="col-lg-8 wow fadeInRight delay-04s"
-                    style="visibility: visible; animation-name: fadeInRight;">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="service-info-2">
-                                <div class="number">1</div>
-                                <div class="icon">
-                                    <i class="fa fa-building-o" aria-hidden="true"></i>
-                                </div>
-                                <div class="service-info-2-ditels">
-                                    <h3>Affordable Housing</h3>
-                                    <p>Vishalinfra Company is aware of the needs of its customers. From a 1 BHK apartment to an
-                                        entire villa, we've got it all for you at the most excellent pricing.<br><br>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="service-info-2">
-                                <div class="number">2</div>
-                                <div class="icon">
-                                    <i class="fa fa-home" aria-hidden="true"></i>
-                                </div>
-                                <div class="service-info-2-ditels">
-                                    <h3>Fittings of the Highest Quality</h3>
-                                    <p>We at Vishalinfra Company care about your lifestyle, which is why we provide you with the
-                                        most significant fittings and fixtures available, regardless of the size and
-                                        capacity of your house.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="service-info-2">
-                                <div class="number">3</div>
-                                <div class="icon">
-                                    <i class="fa fa-cogs" aria-hidden="true"></i>
-                                </div>
-                                <div class="service-info-2-ditels">
-                                    <h3>Assurance of safety</h3>
-                                    <p>A large number of delighted clients can attest to the fact that Vishalinfra Company
-                                        delivers quality homes for more than a decade. So don't worry, we've got your
-                                        life savings covered.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="service-info-2">
-                                <div class="number">4</div>
-                                <div class="icon">
-                                    <i class="fa fa-comments-o" aria-hidden="true"></i>
-                                </div>
-                                <div class="service-info-2-ditels">
-                                    <h3>Support for Home Loans</h3>
-                                    <p>Are you having financial difficulties? Relax! In addition to home loan support,
-                                        Vishalinfra Company offers a full range of financial services to help you with your
-                                        finances.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--======= experience-section end =======-->
+                <div class="col-lg-12">
 
-<!--======= Gallery start=======-->
-<section class="section section-lg bg-default bg-gray-100 isotope-wrap">
-    <div class="container">
-        <!--section-title start-->
-        <div class="row text-center">
-            <div class="col-md-12">
-                <div class="main-heading wow fadeInLeft">
-                    <h2 class="section-title-dash">Our <span class="section-title-dash-color"> Project</span><span
-                            class="section-title-dash-bottom">&nbsp;</span> </h2>
-                    <p>Have a look at some of the recent projects we have undertaken!</p>
-                </div>
-            </div>
-            <!-- Col end -->
-        </div>
-        <!--section-title end-->
-    </div>
-    <div class="container-fluid container-inset-0">
-        <div class="row row-10 row-desktop-8 gutters-8 isotope hoverdir" data-lightgallery="group">
-        </div>
-    </div>
-</section>
-<!--======= Gallery end =======-->
-<!--======= testimonialWrap start=======-->
-<section class="section swiper-container swiper-slider swiper-slider-8 testimonialWrap" data-loop="true"
-    data-autoplay="5000" data-simulate-touch="false" data-slide-effect="fade">
-    <div class="swiper-wrapper text-left">
-        <div class="swiper-slide context-dark">
-            <div class="swiper-slide-caption section-lg">
-                <div class="container">
-                    <div class="row justify-content-center justify-content-md-between">
-                        <div class="col-5 d-none d-md-block position-static">
-                            <div class="quote-classic-figure"><img src="{{ asset('frontend/images/about-2.jpg') }}" alt="" />
-                            </div>
+                    <div class="call_action_wrap">
+                        <div class="call_action_wrap-head">
+                            <h3>Do You Have Questions ?</h3>
+                            <span>We'll help you to grow your career and growth.</span>
                         </div>
-                        <div class="col-sm-11 col-md-7 col-xl-6">
-                            <div class="inset-left-xl-70">
-                                <div class="main-heading wow fadeInLeft">
-                                    <h2 class="section-title-dash">What <span
-                                            class="section-title-dash-color">clients</span> say <span
-                                            class="section-title-dash-bottom">&nbsp;</span> </h2>
-                                </div>
+                        <a href="#" class="btn btn-call_action_wrap">Contact Us Today</a>
+                    </div>
 
-                                <!-- Quote Classic-->
-                                <article class="quote-classic quote-classic-2 quote-classic-4"
-                                    data-caption-animate="fadeInLeft" data-caption-delay="0">
-                                    <div class="quote-classic-text">
-                                        <h6 class="q">I wanted to acknowledge the satisfaction we experienced
-                                            after the Vishalinfra Company work of our Marriage Lawn. I must give a 100%
-                                            satisfied mark as you not only finished the job early and under budget, but
-                                            with great sub-contractors and excellent workmanship.</h6>
-                                    </div>
-                                    <p class="quote-classic-author">Ashutosh Singh (Varanasi)</p>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-        <div class="swiper-slide context-dark">
-            <div class="swiper-slide-caption section-lg">
-                <div class="container">
-                    <div class="row justify-content-center justify-content-md-between">
-                        <div class="col-5 d-none d-md-block position-static">
-                            <div class="quote-classic-figure"><img
-                                    src="{{ asset('frontend/images/about-2.jpg') }}" alt="" />
-                            </div>
-                        </div>
-                        <div class="col-sm-11 col-md-7 col-xl-6">
-                            <div class="inset-left-xl-70">
-                                <div class="main-heading wow fadeInLeft">
-                                    <h2 class="section-title-dash">What <span
-                                            class="section-title-dash-color">clients</span> say <span
-                                            class="section-title-dash-bottom">&nbsp;</span> </h2>
-                                </div>
-
-                                <!-- Quote Classic-->
-                                <article class="quote-classic quote-classic-2 quote-classic-4"
-                                    data-caption-animate="fadeInLeft" data-caption-delay="0">
-                                    <div class="quote-classic-text">
-                                        <h6 class="q">I wanted to acknowledge the satisfaction we experienced
-                                            after the Vishalinfra Company work of our Marriage Lawn. I must give a 100%
-                                            satisfied mark as you not only finished the job early and under budget, but
-                                            with great sub-contractors and excellent workmanship.</h6>
-                                    </div>
-                                    <p class="quote-classic-author">Ashutosh Singh (Varanasi)</p>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-slide context-dark">
-            <div class="swiper-slide-caption section-lg">
-                <div class="container">
-                    <div class="row justify-content-center justify-content-md-between">
-                        <div class="col-5 d-none d-md-block position-static">
-                            <div class="quote-classic-figure"><img
-                                    src="{{ asset('frontend/images/about-2.jpg') }}" alt="" />
-                            </div>
-                        </div>
-                        <div class="col-sm-11 col-md-7 col-xl-6">
-                            <div class="inset-left-xl-70">
-                                <div class="main-heading wow fadeInLeft">
-                                    <h2 class="section-title-dash">What <span
-                                            class="section-title-dash-color">clients</span> say <span
-                                            class="section-title-dash-bottom">&nbsp;</span> </h2>
-                                </div>
-
-                                <!-- Quote Classic-->
-                                <article class="quote-classic quote-classic-2 quote-classic-4"
-                                    data-caption-animate="fadeInLeft" data-caption-delay="0">
-                                    <div class="quote-classic-text">
-                                        <h6 class="q">I wanted to acknowledge the satisfaction we experienced
-                                            after the Vishalinfra Company work of our Marriage Lawn. I must give a 100%
-                                            satisfied mark as you not only finished the job early and under budget, but
-                                            with great sub-contractors and excellent workmanship.</h6>
-                                    </div>
-                                    <p class="quote-classic-author">Ashutosh Singh (Varanasi)</p>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-slide context-dark">
-            <div class="swiper-slide-caption section-lg">
-                <div class="container">
-                    <div class="row justify-content-center justify-content-md-between">
-                        <div class="col-5 d-none d-md-block position-static">
-                            <div class="quote-classic-figure"><img
-                                    src="{{ asset('frontend/images/about-2.jpg') }}" alt="" />
-                            </div>
-                        </div>
-                        <div class="col-sm-11 col-md-7 col-xl-6">
-                            <div class="inset-left-xl-70">
-                                <div class="main-heading wow fadeInLeft">
-                                    <h2 class="section-title-dash">What <span
-                                            class="section-title-dash-color">clients</span> say <span
-                                            class="section-title-dash-bottom">&nbsp;</span> </h2>
-                                </div>
-
-                                <!-- Quote Classic-->
-                                <article class="quote-classic quote-classic-2 quote-classic-4"
-                                    data-caption-animate="fadeInLeft" data-caption-delay="0">
-                                    <div class="quote-classic-text">
-                                        <h6 class="q">I wanted to acknowledge the satisfaction we experienced
-                                            after the Vishalinfra Company work of our Marriage Lawn. I must give a 100%
-                                            satisfied mark as you not only finished the job early and under budget, but
-                                            with great sub-contractors and excellent workmanship.</h6>
-                                    </div>
-                                    <p class="quote-classic-author">Ashutosh Singh (Varanasi)</p>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--======= testimonialWrap end =======-->
-<!--======= faqwrap start=======-->
-<section class="section section-lg bg-default text-md-left faqwrap">
-    <div class="container">
-        <div class="row row-xxl row-50 justify-content-lg-between">
-            <div class="col-md-6">
-                <div class="main-heading wow fadeInLeft">
-                    <h2 class="section-title-dash">F <span class="section-title-dash-color">A</span> Q<span
-                            class="section-title-dash-bottom">&nbsp;</span> </h2>
-                </div>
-                <!-- Bootstrap collapse-->
-                <div class="card-group-classic" id="accordion6" role="tablist" aria-multiselectable="false">
-                    <!--Bootstrap card-->
-                    <article class="card card-custom card-classic card-classic-2 wow fadeInLeft">
-                        <div class="card-header" role="tab">
-                            <h6 class="card-title"><a id="accordion6-card-head-ckebbdjx" data-toggle="collapse"
-                                    data-parent="#accordion6" href="#accordion6-card-body-nqsdivvf"
-                                    aria-controls="accordion6-card-body-nqsdivvf" aria-expanded="true"
-                                    role="button">Lorem Ipsum is simply printing. <span class="card-arrow"></span>
-                                </a></h6>
-                        </div>
-                        <div class="collapse show" id="accordion6-card-body-nqsdivvf"
-                            aria-labelledby="accordion6-card-head-ckebbdjx" data-parent="#accordion6"
-                            role="tabpanel">
-                            <div class="card-body">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer essentially unchanged. </p>
-                            </div>
-                        </div>
-                    </article>
-                    <!--Bootstrap card-->
-                    <article class="card card-custom card-classic card-classic-2 wow fadeInLeft"
-                        data-wow-delay=".05s">
-                        <div class="card-header" role="tab">
-                            <h6 class="card-title"><a class="collapsed" id="accordion6-card-head-sxpeyhxv"
-                                    data-toggle="collapse" data-parent="#accordion6"
-                                    href="#accordion6-card-body-pclffkth"
-                                    aria-controls="accordion6-card-body-pclffkth" aria-expanded="false"
-                                    role="button">Lorem Ipsum is simply printing. <span class="card-arrow"></span>
-                                </a></h6>
-                        </div>
-                        <div class="collapse" id="accordion6-card-body-pclffkth"
-                            aria-labelledby="accordion6-card-head-sxpeyhxv" data-parent="#accordion6"
-                            role="tabpanel">
-                            <div class="card-body">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer essentially unchanged. </p>
-                            </div>
-                        </div>
-                    </article>
-                    <!--Bootstrap card-->
-                    <article class="card card-custom card-classic card-classic-2 wow fadeInLeft" data-wow-delay=".1s">
-                        <div class="card-header" role="tab">
-                            <h6 class="card-title"><a class="collapsed" id="accordion6-card-head-iqdknafw"
-                                    data-toggle="collapse" data-parent="#accordion6"
-                                    href="#accordion6-card-body-nwgfdwng"
-                                    aria-controls="accordion6-card-body-nwgfdwng" aria-expanded="false"
-                                    role="button">Lorem Ipsum is simply printing. <span class="card-arrow"></span>
-                                </a></h6>
-                        </div>
-                        <div class="collapse" id="accordion6-card-body-nwgfdwng"
-                            aria-labelledby="accordion6-card-head-iqdknafw" data-parent="#accordion6"
-                            role="tabpanel">
-                            <div class="card-body">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer essentially unchanged. </p>
-                            </div>
-                        </div>
-                    </article>
-                    <!--Bootstrap card-->
-                    <article class="card card-custom card-classic card-classic-2 wow fadeInLeft"
-                        data-wow-delay=".15s">
-                        <div class="card-header" role="tab">
-                            <h6 class="card-title"><a class="collapsed" id="accordion6-card-head-miiayuqb"
-                                    data-toggle="collapse" data-parent="#accordion6"
-                                    href="#accordion6-card-body-gqqphbuh"
-                                    aria-controls="accordion6-card-body-gqqphbuh" aria-expanded="false"
-                                    role="button">Lorem Ipsum is simply printing. <span class="card-arrow"></span>
-                                </a></h6>
-                        </div>
-                        <div class="collapse" id="accordion6-card-body-gqqphbuh"
-                            aria-labelledby="accordion6-card-head-miiayuqb" data-parent="#accordion6"
-                            role="tabpanel">
-                            <div class="card-body">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer essentially unchanged. </p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-5 bg-sd">
-                <article class="team-classic">
-                    <div class="unit flex-column flex-sm-row align-items-start align-items-sm-center">
-                        <div class="unit-left"><a class="team-classic-figure-3" href="#"><img
-                                    src="{{ asset('frontend/images/client1.jpg') }}"
-                                    alt="" /></a></div>
-                        <div class="unit-body">
-                            <h5 class="team-classic-title-2">Contact Us! We'll get in touch as soon as possible.</h5>
-                            <div class="team-classic-name"><a href="#">Vishalinfra Company</a>, <span>Manager</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                @if ($message = Session::get('success'))
-                    <div class="alert alert-success">
-                        <strong>Success!</strong> {{ $message }}
-                    </div>
-                @endif
-                <form action="" method="post">
-                    @csrf
-                    <div class="form-wrap wow fadeInRight">
-                        <input class="form-input" id="contact-name-6" type="text" name="name" required>
-                        <label class="form-label" for="contact-name-6">Name*</label>
-                    </div>
-                    <div class="form-wrap wow fadeInRight" data-wow-delay=".2s">
-                        <input class="form-input" id="contact-phone-6" type="text" name="phone" required>
-                        <label class="form-label" for="contact-phone-6">Phone*</label>
-                    </div>
-                    <div class="form-wrap wow fadeInRight" data-wow-delay=".15s">
-                        <!--Select 2-->
-                        <select class="form-input" data-minimum-results-for-search="Infinity"
-                            data-constraints="@Required" name="purpose">
-                            <option value="Furnishing">Furnishing</option>
-                            <option value="ACP">A.C.P & false Ceiling Works</option>
-                            <option value="Electric">Electric Work</option>
-                            <option value="Painting">Painting & Putty</option>
-                            <option value="Tiles">Tiles Fitting</option>
-                            <option value="Exterior Decoration & Much More">Exterior Decoration & Much More</option>
-                            <option value="Architectural">Architectural Design</option>
-                            <option value="VDA">V.D.A Drawing site Supervision</option>
-                            <option value="Estimate">Estimate & Valuation</option>
-                            <option value="Construction">Construction</option>
-                            <option value="Boring & Pumps">Boring & Pumps</option>
-                        </select>
-                    </div>
-                    <div class="form-wrap wow fadeInRight" data-wow-delay=".05s">
-                        <label class="form-label" for="message">Message</label>
-                        <textarea class="form-input textarea-lg" id="message" name="Address" required=""></textarea>
-                    </div>
-                    <button class="button button-icon button-primary wow slideInUp" type="submit" name="submit"
-                        data-wow-delay=".25s">Get in touch <i class="fa fa-chevron-circle-right"></i></button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+    <!-- ============================ Call To Action End ================================== -->
 @endsection
