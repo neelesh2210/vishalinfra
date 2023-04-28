@@ -1,7 +1,7 @@
 $(function() {
     "use strict";
 
-	//Loader	
+	//Loader
 	$(function preloaderLoad() {
         if($('.preloader').length){
             $('.preloader').delay(200).fadeOut(300);
@@ -10,7 +10,7 @@ $(function() {
             $("#preloader").hide();
         });
     });
-	
+
 	// Script Navigation
 	! function(n, e, i, a) {
 		n.navigation = function(t, s) {
@@ -156,15 +156,15 @@ $(function() {
 	(jQuery, window, document), $(document).ready(function() {
 		$("#navigation").navigation()
 	});
-	
-	
+
+
 	// Script Show Calling Number
 	$('#number').on('click', function() {
 		var tel = $(this).data('last');
 		$(this).find('span').html( '<a href="tel:' + tel + '">' + tel + '</a>' );
 	});
-	
-	
+
+
 	// Script For Select Adult & Child Number
 	$(function() {
 
@@ -178,7 +178,7 @@ $(function() {
 	  });
 
 	});
-	
+
 	$(function() {
 
 	  var guestAmount = $('#kidsNo');
@@ -190,8 +190,8 @@ $(function() {
 		guestAmount.val(Math.max(parseInt($('#kidsNo').val()) - 1, 0));
 	  });
 	});
-	
-	
+
+
 	// Check In & Check Out Daterange Script
 	$(function() {
 	  $('input[name="checkout"]').daterangepicker({
@@ -203,17 +203,17 @@ $(function() {
 	$(function() {
 	  $('input[name="checkin"]').daterangepicker({
 		singleDatePicker: true,
-		
+
 	  });
 		$('input[name="checkin"]').val('');
 		$('input[name="checkin"]').attr("placeholder","Check In");
 	});
-	
-	
+
+
 	// Tooltip
 	$('[data-toggle="tooltip"]').tooltip();
-	
-	
+
+
 	// Range Slider Script
 	$(".js-range-slider").ionRangeSlider({
 		type: "double",
@@ -223,7 +223,7 @@ $(function() {
 		to: 500,
 		grid: true
 	});
-	
+
 	// Bottom To Top Scroll Script
 	$(window).on('scroll', function() {
 		var height = $(window).scrollTop();
@@ -233,10 +233,10 @@ $(function() {
 			$('#back2Top').fadeOut();
 		}
 	});
-	
-	
+
+
 	// Script For Fix Header on Scroll
-	$(window).on('scroll', function() {    
+	$(window).on('scroll', function() {
 		var scroll = $(window).scrollTop();
 
 		if (scroll >= 50) {
@@ -245,8 +245,8 @@ $(function() {
 			$(".header").removeClass("header-fixed");
 		}
 	});
-	
-	
+
+
 	// smart_textimonials_style
 	$('.modern-testimonial').slick({
 	  slidesToShow:1,
@@ -272,7 +272,7 @@ $(function() {
 		}
 	  ]
 	});
-	
+
 	// smart_textimonials_style
 	$('.list_views').slick({
 	  slidesToShow:1,
@@ -298,10 +298,10 @@ $(function() {
 		}
 	  ]
 	});
-	
+
 	// Property Slide
 	$('.item-slide').slick({
-	  slidesToShow:3,
+	  slidesToShow:4,
 	  arrows: true,
 	  dots: false,
 	  infinite: true,
@@ -326,8 +326,8 @@ $(function() {
 		}
 	  ]
 	});
-	
-	
+
+
 	// location Slide
 	$('.item-slide-2').slick({
 	  slidesToShow:3,
@@ -359,7 +359,7 @@ $(function() {
 		}
 	  ]
 	});
-	
+
 	// Property Slide
 	$('.testi-slide').slick({
 	  slidesToShow:3,
@@ -390,159 +390,159 @@ $(function() {
 	  ]
 	});
 
-	
+
 	// Select Bedrooms
 	$('#bedrooms').select2({
 		placeholder: "Bedrooms",
 		allowClear: true
 	});
-	
+
 	// Select Bedrooms
 	$('#bedrooms1').select2({
 		placeholder: "Bedrooms",
 		allowClear: true
 	});
-	
+
 	// Select Bedrooms
 	$('#bedrooms2').select2({
 		placeholder: "Bedrooms",
 		allowClear: true
 	});
-	
+
 	// Select Bathrooms
 	$('#bathrooms').select2({
 		placeholder: "Bathrooms",
 		allowClear: true
 	});
-	
+
 	// Select Bathrooms
 	$('#bathrooms1').select2({
 		placeholder: "Bathrooms",
 		allowClear: true
 	});
-	
+
 	// Select Bathrooms
 	$('#bathrooms2').select2({
 		placeholder: "Bathrooms",
 		allowClear: true
 	});
-	
+
 	// Select Property Types
 	$('#ptypes').select2({
 		placeholder: "Property Types",
 		allowClear: true
 	});
-	
+
 	// Select Property Types
 	$('#ptype').select2({
 		placeholder: "Property Types",
 		allowClear: true
 	});
-	
+
 	// Looking For
 	$('#lookingfor').select2({
 		placeholder: "Looking For",
 		allowClear: true
 	});
-	
+
 	// Select Property status
 	$('#status').select2({
 		placeholder: "Property Status",
 		allowClear: true
 	});
-	
+
 	// Select Property price
 	$('#price').select2({
 		placeholder: "Price Range",
 		allowClear: true
 	});
-	
+
 	// Select Property garage
 	$('#garage').select2({
 		placeholder: "Garage",
 		allowClear: true
 	});
-	
+
 	// Select Property built
 	$('#built').select2({
 		placeholder: "Year Built",
 		allowClear: true
 	});
-	
+
 	// Select Country
 	$('#country').select2({
 		placeholder: "Country",
 		allowClear: true
 	});
-	
+
 	// Select Town
 	$('#town').select2({
 		placeholder: "City/Town",
 		allowClear: true
 	});
-	
+
 	// Select Town
 	$('#location').select2({
 		placeholder: "Location",
 		allowClear: true
 	});
-	
+
 	// Select Cities
 	$('#cities').select2({
 		placeholder: "All Cities",
 		allowClear: true
 	});
-	
+
 	// Select Status
 	$('#status').select2({
 		placeholder: "Select Status",
 		allowClear: true
 	});
-	
+
 	// Select Rooms
 	$('#rooms').select2({
 		placeholder: "Choose Rooms",
 		allowClear: true
 	});
-	
+
 	// Select Garage
 	$('#garage').select2({
 		placeholder: "Choose Garage",
 		allowClear: true
 	});
-	
+
 	// Select Rooms
 	$('#bage').select2({
 		placeholder: "Select An Option",
 		allowClear: true
 	});
-	
+
 	// Select Tab Location
 	$('#lot-1').select2({
 		placeholder: "Choose Location",
 		allowClear: true
 	});
-	
+
 	// Select Tab Location
 	$('#lot-2').select2({
 		placeholder: "Location",
 		allowClear: true
 	});
-	
+
 	// Select Tab  Property Types
 	$('#ptype-1').select2({
 		placeholder: "Properties Types",
 		allowClear: true
 	});
-	
+
 	// Select Tab Property Types
 	$('#ptype-2').select2({
 		placeholder: "Properties Types",
 		allowClear: true
 	});
-	
-	
-	
+
+
+
 	// Home Slider
 	$('.home-slider').slick({
 	  centerMode:false,
@@ -564,7 +564,7 @@ $(function() {
 		}
 	  ]
 	});
-	
+
 	$('.click').slick({
 	  slidesToShow:1,
 	  slidesToScroll: 1,
@@ -574,9 +574,9 @@ $(function() {
 	  dots:true,
 	  autoplaySpeed:4000,
 	});
-	
+
 	// Advance Single Slider
-	$(function() { 
+	$(function() {
 	// Card's slider
 	  var $carousel = $('.slider-for');
 
@@ -643,10 +643,10 @@ $(function() {
 		centerMode: false,
 		focusOnSelect: true
 	  });
-	  
-	  
+
+
 	});
-	
+
 	// Featured Slick Slider
 	$('.featured_slick_gallery-slide').slick({
 		centerMode: true,
@@ -674,7 +674,7 @@ $(function() {
 		}
 		]
 	});
-	
+
 	// Featured Slick Slider
 	$('.featured_slick_gallery-slide-single').slick({
 		centerMode: true,
@@ -701,7 +701,7 @@ $(function() {
 		}
 		]
 	});
-	
+
 	// MagnificPopup
 	$('body').magnificPopup({
 		type: 'image',
@@ -717,7 +717,7 @@ $(function() {
 			enabled: true
 		}
 	});
-	
+
 	// fullwidth home slider
 	function inlineCSS() {
 		$(".home-slider .item").each(function() {
@@ -732,7 +732,7 @@ $(function() {
 		});
 	}
 	inlineCSS();
-	
+
 	// Search Radio
 	function searchTypeButtons() {
 		$('.property_search_filter label.active input[type="radio"]').prop('checked', true);
@@ -756,5 +756,5 @@ $(function() {
 			searchTypeButtons();
 		});
 	}
-	
+
 });

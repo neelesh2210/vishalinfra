@@ -3,14 +3,14 @@
     <section class="gallery_parts pt-2 pb-2 d-none d-sm-none d-md-none d-lg-none d-xl-block">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-8 col-md-7 col-sm-12 pr-1">
+                <div class="col-lg-12 col-md-12 col-sm-12 pr-1">
                     <div class="gg_single_part left">
                         <a href="{{asset('backend/img/properies/'.$property_detail->thumbnail_img)}}" class="mfp-gallery">
                             <img src="{{asset('backend/img/properies/'.$property_detail->thumbnail_img)}}" class="img-fluid mx-auto" alt="" />
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-5 col-sm-12 pl-1">
+                {{-- <div class="col-lg-4 col-md-5 col-sm-12 pl-1">
                     @foreach (json_decode($property_detail->photos) as $photo)
                         <div class="gg_single_part-right min">
                             <a href="{{asset('backend/img/properies/'.$photo)}}" class="mfp-gallery">
@@ -18,7 +18,7 @@
                             </a>
                         </div>
                     @endforeach
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>
