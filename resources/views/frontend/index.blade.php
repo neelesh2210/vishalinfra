@@ -91,7 +91,7 @@
                 <div class="col-lg col-md-4">
                     <!-- Single Category -->
                     <div class="property_cats_boxs">
-                        <a href="grid-layout-with-sidebar.html" class="category-box">
+                        <a href="#" class="category-box">
                             <div class="property_category_short">
                                 <div class="category-icon clip-1">
                                     <i class="flaticon-beach-house-2"></i>
@@ -109,7 +109,7 @@
                 <div class="col-lg col-md-4">
                     <!-- Single Category -->
                     <div class="property_cats_boxs">
-                        <a href="grid-layout-with-sidebar.html" class="category-box">
+                        <a href="#" class="category-box">
                             <div class="property_category_short">
                                 <div class="category-icon clip-2">
                                     <i class="flaticon-cabin"></i>
@@ -127,7 +127,7 @@
                 <div class="col-lg col-md-4">
                     <!-- Single Category -->
                     <div class="property_cats_boxs">
-                        <a href="grid-layout-with-sidebar.html" class="category-box">
+                        <a href="#" class="category-box">
                             <div class="property_category_short">
                                 <div class="category-icon clip-3">
                                     <i class="flaticon-apartments"></i>
@@ -145,7 +145,7 @@
                 <div class="col-lg col-md-4">
                     <!-- Single Category -->
                     <div class="property_cats_boxs">
-                        <a href="grid-layout-with-sidebar.html" class="category-box">
+                        <a href="#" class="category-box">
                             <div class="property_category_short">
                                 <div class="category-icon clip-4">
                                     <i class="flaticon-student-housing"></i>
@@ -163,7 +163,7 @@
                 <div class="col-lg col-md-4">
                     <!-- Single Category -->
                     <div class="property_cats_boxs">
-                        <a href="grid-layout-with-sidebar.html" class="category-box">
+                        <a href="#" class="category-box">
                             <div class="property_category_short">
                                 <div class="category-icon clip-5">
                                     <i class="flaticon-modern-house-4"></i>
@@ -205,7 +205,7 @@
 
                         <div class="listing-img-wrapper">
                             <div class="list-img-slide">
-                                <a href="single-property-1.html"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
+                                <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
                                         class="img-fluid mx-auto" alt="" /></a>
                             </div>
                         </div>
@@ -224,7 +224,7 @@
                                     </div>
                                 </div>
                                 <div class="listing-short-detail">
-                                    <h4 class="listing-name verified"><a href="single-property-1.html"
+                                    <h4 class="listing-name verified"><a href="#"
                                             class="prt-link-detail">Red Carpet Real Estate</a></h4>
                                     <div class="foot-location"><img src="{{ asset('frontend/assets/img/pin.svg') }}"
                                             width="18" alt="" />Varanasi, Uttar Pradesh, India</div>
@@ -250,7 +250,7 @@
 
                         <div class="listing-img-wrapper">
                             <div class="list-img-slide">
-                                <a href="single-property-1.html"><img src="{{ asset('frontend/assets/img/p-2.png') }}"
+                                <a href="#"><img src="{{ asset('frontend/assets/img/p-2.png') }}"
                                         class="img-fluid mx-auto" alt="" /></a>
                             </div>
                         </div>
@@ -269,7 +269,7 @@
                                     </div>
                                 </div>
                                 <div class="listing-short-detail">
-                                    <h4 class="listing-name verified"><a href="single-property-1.html"
+                                    <h4 class="listing-name verified"><a href="#"
                                             class="prt-link-detail">Fairmount Properties</a></h4>
                                     <div class="foot-location"><img src="{{ asset('frontend/assets/img/pin.svg') }}"
                                             width="18" alt="" />Varanasi, Uttar Pradesh, India</div>
@@ -295,7 +295,7 @@
 
                         <div class="listing-img-wrapper">
                             <div class="list-img-slide">
-                                <a href="single-property-1.html"><img src="{{ asset('frontend/assets/img/p-4.png') }}"
+                                <a href="#"><img src="{{ asset('frontend/assets/img/p-4.png') }}"
                                         class="img-fluid mx-auto" alt="" /></a>
                             </div>
                         </div>
@@ -314,7 +314,7 @@
                                     </div>
                                 </div>
                                 <div class="listing-short-detail">
-                                    <h4 class="listing-name verified"><a href="single-property-1.html"
+                                    <h4 class="listing-name verified"><a href="#"
                                             class="prt-link-detail">The Real Estate Corner</a></h4>
                                     <div class="foot-location"><img src="{{ asset('frontend/assets/img/pin.svg') }}"
                                             width="18" alt="" />Varanasi, Uttar Pradesh, India</div>
@@ -340,7 +340,7 @@
 
                         <div class="listing-img-wrapper">
                             <div class="list-img-slide">
-                                <a href="single-property-1.html"><img src="{{ asset('frontend/assets/img/p-5.png') }}"
+                                <a href="#"><img src="{{ asset('frontend/assets/img/p-5.png') }}"
                                         class="img-fluid mx-auto" alt="" /></a>
                             </div>
                         </div>
@@ -359,7 +359,7 @@
                                     </div>
                                 </div>
                                 <div class="listing-short-detail">
-                                    <h4 class="listing-name verified"><a href="single-property-1.html"
+                                    <h4 class="listing-name verified"><a href="#"
                                             class="prt-link-detail">Herringbone Realty</a></h4>
                                     <div class="foot-location"><img src="{{ asset('frontend/assets/img/pin.svg') }}"
                                             width="18" alt="" />Varanasi, Uttar Pradesh, India</div>
@@ -385,7 +385,7 @@
 
                         <div class="listing-img-wrapper">
                             <div class="list-img-slide">
-                                <a href="single-property-1.html"><img src="{{ asset('frontend/assets/img/p-6.png') }}"
+                                <a href="#"><img src="{{ asset('frontend/assets/img/p-6.png') }}"
                                         class="img-fluid mx-auto" alt="" /></a>
                             </div>
                         </div>
@@ -404,7 +404,7 @@
                                     </div>
                                 </div>
                                 <div class="listing-short-detail">
-                                    <h4 class="listing-name verified"><a href="single-property-1.html"
+                                    <h4 class="listing-name verified"><a href="#"
                                             class="prt-link-detail">Brick Lane Realty</a></h4>
                                     <div class="foot-location"><img src="{{ asset('frontend/assets/img/pin.svg') }}"
                                             width="18" alt="" />Varanasi, Uttar Pradesh, India</div>
@@ -430,7 +430,7 @@
 
                         <div class="listing-img-wrapper">
                             <div class="list-img-slide">
-                                <a href="single-property-1.html"><img src="{{ asset('frontend/assets/img/p-7.png') }}"
+                                <a href="#"><img src="{{ asset('frontend/assets/img/p-7.png') }}"
                                         class="img-fluid mx-auto" alt="" /></a>
                             </div>
                         </div>
@@ -449,7 +449,7 @@
                                     </div>
                                 </div>
                                 <div class="listing-short-detail">
-                                    <h4 class="listing-name verified"><a href="single-property-1.html"
+                                    <h4 class="listing-name verified"><a href="#"
                                             class="prt-link-detail">Banyon Tree Realty</a></h4>
                                     <div class="foot-location"><img src="{{ asset('frontend/assets/img/pin.svg') }}"
                                             width="18" alt="" />Varanasi, Uttar Pradesh, India</div>
@@ -476,7 +476,7 @@
     <!-- ============================ Property End ================================== -->
 
     <!-- ============================ Our Counter Start ================================== -->
-    <section class="image-cover"
+    {{-- <section class="image-cover"
         style="background:#122947 url({{ asset('frontend/assets/img/pattern.png') }}) no-repeat;">
         <div class="container">
 
@@ -530,11 +530,11 @@
             </div>
 
         </div>
-    </section>
+    </section> --}}
     <!-- ============================ Our Counter End ================================== -->
 
     <!-- ============================ Property Location ================================== -->
-    <section class="min">
+    <section class="min gray-simple">
         <div class="container">
 
             <div class="row justify-content-center">
@@ -551,7 +551,7 @@
 
                 <!-- Single Location -->
                 <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="grid-layout-with-sidebar.html" class="img-wrap style-2">
+                    <a href="#" class="img-wrap style-2">
                         <div class="location_wrap_content visible">
                             <div class="location_wrap_content_first">
                                 <h4>New Orleans, Louisiana</h4>
@@ -569,7 +569,7 @@
 
                 <!-- Single Location -->
                 <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="grid-layout-with-sidebar.html" class="img-wrap style-2">
+                    <a href="#" class="img-wrap style-2">
                         <div class="location_wrap_content visible">
                             <div class="location_wrap_content_first">
                                 <h4>Jerrsy, United State</h4>
@@ -587,7 +587,7 @@
 
                 <!-- Single Location -->
                 <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="grid-layout-with-sidebar.html" class="img-wrap style-2">
+                    <a href="#" class="img-wrap style-2">
                         <div class="location_wrap_content visible">
                             <div class="location_wrap_content_first">
                                 <h4>Liverpool, London</h4>
@@ -605,7 +605,7 @@
 
                 <!-- Single Location -->
                 <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="grid-layout-with-sidebar.html" class="img-wrap style-2">
+                    <a href="#" class="img-wrap style-2">
                         <div class="location_wrap_content visible">
                             <div class="location_wrap_content_first">
                                 <h4>Varanasi, Uttar Pradesh, India</h4>
@@ -623,7 +623,7 @@
 
                 <!-- Single Location -->
                 <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="grid-layout-with-sidebar.html" class="img-wrap style-2">
+                    <a href="#" class="img-wrap style-2">
                         <div class="location_wrap_content visible">
                             <div class="location_wrap_content_first">
                                 <h4>Varanasi, Uttar Pradesh, India</h4>
@@ -641,7 +641,7 @@
 
                 <!-- Single Location -->
                 <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="grid-layout-with-sidebar.html" class="img-wrap style-2">
+                    <a href="#" class="img-wrap style-2">
                         <div class="location_wrap_content visible">
                             <div class="location_wrap_content_first">
                                 <h4>Varanasi, Uttar Pradesh, India</h4>
@@ -664,7 +664,7 @@
     <!-- ============================ Property Location End ================================== -->
 
     <!-- ============================ Top Agents ================================== -->
-    <section class="gray-simple min">
+    <section class="min">
         <div class="container">
 
             <div class="row justify-content-center">
