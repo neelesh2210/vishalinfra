@@ -2624,7 +2624,7 @@ a.btn-trans-video i {
     display: table;
     padding-left: 0;
     border-radius: 4px;
-    margin:20px auto 0 !important;
+    margin:5px auto 0 !important;
 }
 
 .pagination>li>a,
@@ -2667,8 +2667,8 @@ a.btn-trans-video i {
 }
 
 .pagination li:last-child a {
-    background: #35434e;
-    border: 1px solid #35434e;
+    background: #00976c;
+    border: 1px solid #00976c;
     border-radius:50% !important;
     color: #fff
 }
@@ -7317,16 +7317,15 @@ span.tag_t {
     width: 100%;
     position: relative;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    justify-content: left;
 }
 .listing-card-info-icon {
     display: inline-block;
     padding-left: 0px;
     position: relative;
     vertical-align: top;
-    width: 33.333333%;
-    flex: 0 0 33.333333%;
+    width: 25%;
+    flex: 0 0 25%;
     margin-bottom: 0rem;
     font-size: 14px;
     color: #616e96;
@@ -9142,6 +9141,8 @@ ul.shorting_grid li a span {
     margin: 0;
     line-height: 1;
     font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 .shorting_pagination_right ul {
     margin: 0;
@@ -10779,7 +10780,7 @@ span.approved-agent i {
 	box-shadow:none !important;
 	background: #ffffff;
 	border:1px solid #e7eaf1;
-	color:#707e9c;
+	color:#115a62;
 	border-radius:4px;
 }
 .form-group.gray .form-control{
@@ -12148,7 +12149,7 @@ span.tes_quote {
 .irs--flat .irs-bar {
     top: 25px;
     height:7px;
-    background-color:#ff9800;
+    background-color:#115a62;
 }
 .irs--flat .irs-handle>i:first-child {
     position: absolute;
@@ -12164,10 +12165,10 @@ span.tes_quote {
     border:5px solid #333c56;
 }
 .irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
-    background-color:#ff9800;
+    background-color:#115a62;
 }
 .irs--flat .irs-from:before, .irs--flat .irs-to:before, .irs--flat .irs-single:before {
-    border-top-color:#ff9800;
+    border-top-color:#115a62;
 }
 .irs--flat .irs-handle.state_hover>i:first-child, .irs--flat .irs-handle:hover>i:first-child {
     background-color:#fff;

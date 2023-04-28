@@ -16,7 +16,7 @@
             <div class="row m-0">
                 <div class="short_wraping">
                     <div class="row align-items-center">
-                        <div class="col-lg-8 col-md-12 col-sm-12 order-lg-2 order-md-3 elco_bor col-sm-12">
+                        <div class="col-lg-7 col-md-12 col-sm-12 order-lg-2 order-md-3 col-sm-12">
                             <div class="shorting_pagination">
                                 <div class="shorting_pagination_laft">
                                     <h5>Showing {{($properties->currentpage()-1)*$properties->perpage()+1}}-{{(($properties->currentpage()-1)*$properties->perpage())+$properties->count()}} of {{$properties->total()}} results</h5>
@@ -26,7 +26,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 order-lg-3 order-md-2 col-sm-6">
+                        <div class="col-lg-5 col-md-6 col-sm-12 order-lg-3 order-md-2 col-sm-6">
                             <div class="shorting-right">
                                 <label>Short By:</label>
                                 <div class="dropdown show">
@@ -166,6 +166,21 @@
                                                         <img src="{{ asset('frontend/assets/img/bed.svg') }}" width="13" alt="" />
                                                     </div> --}}
                                                     3 Beds
+                                                </div>
+                                                <div class="listing-card-info-icon">
+                                                    <div class="inc-fleat-icon">
+                                                        <img src="{{ asset('frontend/assets/img/bed.svg') }}" width="13" alt="" />
+                                                    </div>3 Beds
+                                                </div>
+                                                <div class="listing-card-info-icon">
+                                                    <div class="inc-fleat-icon">
+                                                        <img src="{{ asset('frontend/assets/img/bed.svg') }}" width="13" alt="" />
+                                                    </div>3 Beds
+                                                </div>
+                                                <div class="listing-card-info-icon">
+                                                    <div class="inc-fleat-icon">
+                                                        <img src="{{ asset('frontend/assets/img/bed.svg') }}" width="13" alt="" />
+                                                    </div>3 Beds
                                                 </div>
                                                 <div class="listing-card-info-icon">
                                                     <div class="inc-fleat-icon">
