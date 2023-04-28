@@ -295,13 +295,31 @@ class PropertyController extends Controller
         $phases = PhaseManager::withoutTrash()->where('id',$old_property->phase_id)->first();
 
         $plot_number = [];
+        if($phases){
+            for($i=1;$i<=$phases->number_of_plot;$i++){
+                $plot_number[] = $i;
+            }
+            $remaining_plot_number = array_values(array_diff($plot_number,$propertis->toArray()));
+            $plot_number_count = count($remaining_plot_number);
+            if($plot_number_count > 0){
+                $new_property = $old_property->replicate();
+                $property_number = Property::orderBy('id','desc')->first();
+                if($property_number){
+                    $property_number = $property_number->property_number + 1;
+                }else{
+                    $property_number = 10000001;
+                }
+                $new_property->slug=str_replace(' ','-',$old_property->name).'-'.generateRandomString(4);
+                $new_property->property_number = $property_number;
+                $new_property->plot_number=$remaining_plot_number[0];
+                $new_property->booking_status = 'available';
+                $new_property->save();
 
-        for($i=1;$i<=$phases->number_of_plot;$i++){
-            $plot_number[] = $i;
-        }
-        $remaining_plot_number = array_values(array_diff($plot_number,$propertis->toArray()));
-        $plot_number_count = count($remaining_plot_number);
-        if($plot_number_count > 0){
+                return back()->with('success','Property Duplicated Successfully!');
+            }else{
+                return back()->with('error','No Plot in this Phase!');
+            }
+        }else{
             $new_property = $old_property->replicate();
             $property_number = Property::orderBy('id','desc')->first();
             if($property_number){
@@ -311,13 +329,10 @@ class PropertyController extends Controller
             }
             $new_property->slug=str_replace(' ','-',$old_property->name).'-'.generateRandomString(4);
             $new_property->property_number = $property_number;
-            $new_property->plot_number=$remaining_plot_number[0];
             $new_property->booking_status = 'available';
             $new_property->save();
 
             return back()->with('success','Property Duplicated Successfully!');
-        }else{
-            return back()->with('error','No Plot in this Phase!');
         }
 
     }

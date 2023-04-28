@@ -20,7 +20,7 @@
                     <b>Name: </b>{{$property->project->name}} <br>
                     <b>Address: </b>{{$property->project->address}} {{$property->project->city}}, {{$property->project->state}}, {{$property->project->country}},{{$property->project->pincode}}
                 </td>
-                <td class="text-center">{{$property->phase->name}}</td>
+                <td class="text-center">{{optional($property->phase)->name}}</td>
                 <td>
                     <b>Name: </b>{{$property->name}} <br>
                     <b>Plot Number: </b>{{$property->plot_number}} <br>

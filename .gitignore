@@ -3,6 +3,7 @@
 /vendor
 /.vscode
 /storage
+/storage/logs/laravel.log
 /public/hot
 .env.backup
 /node_modules

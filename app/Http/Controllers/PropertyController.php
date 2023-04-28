@@ -78,7 +78,7 @@ class PropertyController extends Controller
     }
 
     public function propertyList(){
-        $properties = PropertyManager::withoutTrash()->with(['project'])->orderBy('created_at','desc')->get();
+        $properties = PropertyManager::withoutTrash()->with(['project'])->orderBy('created_at','desc')->paginate(1);
         return view('frontend.properties',compact('properties'));
     }
 
