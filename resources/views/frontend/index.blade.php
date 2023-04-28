@@ -184,7 +184,7 @@
     <!-- ============================ Property Type End ================================== -->
 
     <!-- ============================ Recent Property Start ================================== -->
-    <section class="min">
+    <section class="min ">
         <div class="container">
 
             <div class="row justify-content-center">
@@ -470,7 +470,11 @@
                 </div>
 
             </div>
-
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                    <a href="#" class="btn btn-theme-light-2 rounded">Explore More Properties</a>
+                </div>
+            </div>
         </div>
     </section>
     <!-- ============================ Property End ================================== -->
@@ -532,9 +536,71 @@
         </div>
     </section> --}}
     <!-- ============================ Our Counter End ================================== -->
+<!-- ============================ How It Works Start ================================== -->
+<section class="min gray-simple">
+    <div class="container">
 
+        <div class="row justify-content-center">
+            <div class="col-lg-7 col-md-8">
+                <div class="sec-heading center">
+                    <h2>How It Works?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="wpk_process">
+                    <div class="wpk_thumb">
+                        <div class="wpk_thumb_figure">
+                            <img src="{{ asset('frontend/assets/img/account-cl.svg')}}" class="img-fluid" alt="" />
+                        </div>
+                    </div>
+                    <div class="wpk_caption">
+                        <h4>Create An Account</h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have Ipsum available.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="wpk_process active">
+                    <div class="wpk_thumb">
+                        <div class="wpk_thumb_figure">
+                            <img src="{{ asset('frontend/assets/img/search.svg')}}" class="img-fluid" alt="" />
+                        </div>
+                    </div>
+                    <div class="wpk_caption">
+                        <h4>Find & Search Property</h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have Ipsum available.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="wpk_process">
+                    <div class="wpk_thumb">
+                        <div class="wpk_thumb_figure">
+                            <img src="{{ asset('frontend/assets/img/booking-cl.svg')}}" class="img-fluid" alt="" />
+                        </div>
+                    </div>
+                    <div class="wpk_caption">
+                        <h4>Book Your Property</h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have Ipsum available.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<div class="clearfix"></div>
+<!-- ============================ How It Works End ================================== -->
     <!-- ============================ Property Location ================================== -->
-    <section class="min gray-simple">
+    <section class="min">
         <div class="container">
 
             <div class="row justify-content-center">
@@ -664,7 +730,7 @@
     <!-- ============================ Property Location End ================================== -->
 
     <!-- ============================ Top Agents ================================== -->
-    <section class="min">
+    <section class="min gray-simple">
         <div class="container">
 
             <div class="row justify-content-center">
