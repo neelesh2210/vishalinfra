@@ -150,23 +150,19 @@
                                                         <span>₹{{$property->price}}/sqft</span>
                                                     </div>
                                                 </div>
-                                                <div class="_card_list_flex">
-                                                    <div class="_card_flex_01">
-                                                        <h4 class="listing-name verified">
-                                                            <i class="ti-location-pin"></i> <a href="{{ route('property.detail',$property->slug) }}" class="prt-link-detail">{{optional($property->project)->city}}, {{optional($property->project)->state}}, {{optional($property->project)->country}} - {{optional($property->project)->pincode}}</a>
-                                                        </h4>
+                                                @if($property->pincode)
+                                                    <div class="_card_list_flex">
+                                                        <div class="_card_flex_01">
+                                                            <h4 class="listing-name verified">
+                                                                <i class="ti-location-pin"></i> <a href="{{ route('property.detail',$property->slug) }}" class="prt-link-detail">{{optional($property->project)->city}}, {{optional($property->project)->state}}, {{optional($property->project)->country}} - {{optional($property->project)->pincode}}</a>
+                                                            </h4>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                @endif
                                             </div>
                                         </div>
                                         <div class="price-features-wrapper">
                                             <div class="list-fx-features">
-                                                <div class="listing-card-info-icon">
-                                                    {{-- <div class="inc-fleat-icon">
-                                                        <img src="{{ asset('frontend/assets/img/bed.svg') }}" width="13" alt="" />
-                                                    </div> --}}
-                                                    3 Beds
-                                                </div>
                                                 <div class="listing-card-info-icon">
                                                     <div class="inc-fleat-icon">
                                                         <img src="{{ asset('frontend/assets/img/bed.svg') }}" width="13" alt="" />
