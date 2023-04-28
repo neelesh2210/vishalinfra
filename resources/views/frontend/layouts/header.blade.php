@@ -3,14 +3,14 @@
             <div class="container">
                 <nav id="navigation" class="navigation navigation-landscape">
                     <div class="nav-header">
-                        <a class="nav-brand" href="#">
+                        <a class="nav-brand" href="{{route('index')}}">
                         <h2 class="mt-2">Vishal Infra</h2>
                             {{-- <img src="{{ asset('frontend/assets/img/logo.png')}}" class="logo" alt="" /> --}}
                         </a>
                         <div class="nav-toggle"></div>
                         <div class="mobile_nav">
                             <ul>
-                                <li class="_my_prt_list"><a href="#"><span>2</span>My List</a></li>
+                                {{-- <li class="_my_prt_list"><a href="#"><span>2</span>My List</a></li> --}}
                                 <li><a href="#" data-toggle="modal" data-target="#login"><i class="fas fa-user-circle fa-lg"></i></a></li>
                             </ul>
                         </div>
@@ -18,7 +18,7 @@
                     <div class="nav-menus-wrapper" style="transition-property: none;">
                         <ul class="nav-menu">
 
-                            <li class="active"><a href="#">Home</a>
+                            <li class="active"><a href="{{route('index')}}">Home</a>
                             </li>
 
                             <li><a href="#">Buy<span class="submenu-indicator"></span></a>
@@ -64,13 +64,13 @@
                             <li><a href="#">Sell</a> </li>
                             <li><a href="#">Pay Rent</a> </li>
                             <li><a href="{{route('properties')}}">Property Services</a> </li>
-                            <li><a href="#">Help</a> </li>
+                            <li><a href="{{route('contact')}}">Help</a> </li>
                         </ul>
 
                         <ul class="nav-menu nav-menu-social align-to-right">
                             <li class="_my_prt_list"><a href="#" data-toggle="modal" data-target="#login"><i class="fas fa-sign-in-alt mr-1"></i>Sign in</a></li>
                             <li class="add-listing">
-                                <a href="#" class="theme-cl">
+                                <a href="{{route('submit_property')}}" class="theme-cl">
                                     <i class="fas fa-plus-circle mr-1"></i>Post Property<small>(Free)</small>
                                 </a>
                             </li>

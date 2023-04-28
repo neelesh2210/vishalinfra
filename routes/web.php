@@ -30,6 +30,11 @@ Auth::routes(['login'=>false,'register'=>false,'logout'=>false]);
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
+//Static Route
+Route::view('about', 'frontend.about')->name('about');
+Route::view('contact', 'frontend.contact')->name('contact');
+Route::view('submit-property', 'frontend.submit-property')->name('submit_property');
+
 //Property
 Route::get('properties',[PropertyController::class,'propertyList'])->name('properties');
 Route::get('properties_details',[PropertyController::class,'properties_details'])->name('properties_details');

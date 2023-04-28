@@ -34,36 +34,16 @@
                                         <div class="card__photo__fig--post">Posted: {{$property->created_at->diffForHumans()}}</div>
                                     </div>
                                     <div class="card__ads">
-                                        {{-- <div class="card__ads__shield">
-                                            <div class="card__ads__shield--item" data-shieldicon="agent-certified">Certified Agent</div>
-                                            <div class="card__ads__shield--item" data-shieldicon="locality-superstar">Locality Superstar</div>
-                                        </div> --}}
                                         <div class="card__ads__info">
                                             <div class="card__ads__info--right">
                                                 <div class="card__ads__info--name">{{optional($property->project)->name}}</div>
-                                                {{-- <div class="card__ads__info--served">{{optional($property->project)->state}}, {{optional($property->project)->country}} - {{optional($property->project)->pincode}}</div> --}}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    {{-- <div class="card__sort">
-                                        <span class="card__sort--doat">
-                                            <div class="card__tooltip" data-position="top-right" style="width: 178px;">
-                                                <div class="card__tooltip__box">
-                                                    <div class="card__tooltip__body">
-                                                        <ul class="card__sort--doat__list">
-                                                            <li class="card__sort--doat__list--item"><a href="javascript:void(0)" data-ico="ico-share-feedback">Share Feedback</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </span>
-                                    </div> --}}
+
                                     <h2 class="card--title">{{$property->name}}</h2>
-                                    {{-- <span class="card__share--icon" data-ico="ico-share"></span>
-                                    <span class="card__sort--icon"></span> --}}
                                     <div class="card__society">
                                         <a class="card__society--name" href="{{ route('property.detail',$property->slug) }}" target="_blank">
                                             <div class="card__ads__info--served">{{optional($property->project)->city}}, {{optional($property->project)->state}}, {{optional($property->project)->country}} - {{optional($property->project)->pincode}}</div>
@@ -79,10 +59,6 @@
                                                 <div class="card__summary--label">Status</div>
                                                 <div class="card__summary--value">{{ucwords(str_replace('_',' ',$property->prossession_status))}}</div>
                                             </div>
-                                            {{-- <div class="card__summary__list--item" data-summary="floor">
-                                                <div class="card__summary--label">Floor</div>
-                                                <div class="card__summary--value">4 out of 10</div>
-                                            </div> --}}
                                         </div>
                                     </div>
                                     <div class="card--desc remove-truncated">

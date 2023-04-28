@@ -8,7 +8,7 @@
         <div class="container">
 
             <h1 class="big-header-capt mb-0">Search Your Next Home</h1>
-            <p class="text-center mb-4">Find new & featured property located in your local city.</p>
+            <p class="text-center mb-4">Welcome back! Let’s continue your search</p>
             <!-- Type -->
             <div class="row justify-content-center">
                 <div class="col-xl-10 col-lg-12 col-md-12">
@@ -16,29 +16,24 @@
                         <div class="search_hero_wrapping">
 
                             <div class="row">
-                                <div class="col-lg-3 col-md-3 col-sm-12">
+                                <div class="col-lg-4 col-md-4 col-sm-12">
                                     <div class="form-group">
-                                        <label>City/Street</label>
                                         <div class="input-with-icon">
                                             <select id="location" class="form-control">
-                                                <option value="">&nbsp;</option>
-                                                <option value="1">New York City</option>
-                                                <option value="2">Honolulu, Hawaii</option>
-                                                <option value="3">California</option>
-                                                <option value="4">New Orleans</option>
-                                                <option value="5">Washington</option>
-                                                <option value="6">Charleston</option>
+                                                <option value="">Select City</option>
+                                                <option value="1">New Delhi</option>
+                                                <option value="2">Kolkata</option>
+                                                <option value="3">Varanasi</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                <div class="col-lg-4 col-md-4 col-sm-12">
                                     <div class="form-group">
-                                        <label>Property Type</label>
                                         <div class="input-with-icon">
                                             <select id="ptypes" class="form-control">
-                                                <option value="">&nbsp;</option>
+                                                <option value="">Property Type</option>
                                                 <option value="1">All categories</option>
                                                 <option value="2">Apartment</option>
                                                 <option value="3">Villas</option>
@@ -52,10 +47,9 @@
 
                                 <div class="col-lg-3 col-sm-12 d-md-none d-lg-block">
                                     <div class="form-group">
-                                        <label>Price Range</label>
                                         <div class="input-with-icon">
                                             <select id="price" class="form-control">
-                                                <option value="">&nbsp;</option>
+                                                <option value="">Price Range</option>
                                                 <option value="1">From 40,000 To 10m</option>
                                                 <option value="2">From 60,000 To 20m</option>
                                                 <option value="3">From 70,000 To 30m</option>
@@ -65,159 +59,14 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="col-lg-2 col-md-3 col-sm-12">
-                                    <div class="form-group none">
-                                        <a class="collapsed ad-search" data-toggle="collapse" data-parent="#search"
-                                            data-target="#advance-search" href="javascript:void(0);" aria-expanded="false"
-                                            aria-controls="advance-search"><i class="fa fa-sliders-h mr-2"></i>Advance
-                                            Filter</a>
-                                    </div>
-                                </div>
-
                                 <div class="col-lg-1 col-md-2 col-sm-12 small-padd">
                                     <div class="form-group none">
                                         <a href="#" class="btn search-btn"><i class="fa fa-search"></i></a>
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Collapse Advance Search Form -->
-                            <div class="collapse" id="advance-search" aria-expanded="false" role="banner">
-
-                                <!-- row -->
-                                <div class="row">
-
-                                    <div class="col-lg-3 col-md-6 col-sm-6">
-                                        <div class="form-group none style-auto">
-                                            <select id="bedrooms" class="form-control">
-                                                <option value="">&nbsp;</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-3 col-md-6 col-sm-6">
-                                        <div class="form-group none style-auto">
-                                            <select id="bathrooms" class="form-control">
-                                                <option value="">&nbsp;</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-3 col-md-6 col-sm-6">
-                                        <div class="form-group none">
-                                            <input type="text" class="form-control" placeholder="min sqft" />
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-3 col-md-6 col-sm-6">
-                                        <div class="form-group none">
-                                            <input type="text" class="form-control" placeholder="max sqft" />
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <!-- /row -->
-
-                                <!-- row -->
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 mt-2">
-                                        <h6>Advance Price</h6>
-                                        <div class="rg-slider">
-                                            <input type="text" class="js-range-slider" name="my_range"
-                                                value="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /row -->
-
-                                <!-- row -->
-                                <div class="row">
-
-                                    <div class="col-lg-12 col-md-12 col-sm-12 mt-3">
-                                        <h4 class="text-dark">Amenities & Features</h4>
-                                        <ul class="no-ul-list third-row">
-                                            <li>
-                                                <input id="a-1" class="checkbox-custom" name="a-1"
-                                                    type="checkbox">
-                                                <label for="a-1" class="checkbox-custom-label">Air Condition</label>
-                                            </li>
-                                            <li>
-                                                <input id="a-2" class="checkbox-custom" name="a-2"
-                                                    type="checkbox">
-                                                <label for="a-2" class="checkbox-custom-label">Bedding</label>
-                                            </li>
-                                            <li>
-                                                <input id="a-3" class="checkbox-custom" name="a-3"
-                                                    type="checkbox">
-                                                <label for="a-3" class="checkbox-custom-label">Heating</label>
-                                            </li>
-                                            <li>
-                                                <input id="a-4" class="checkbox-custom" name="a-4"
-                                                    type="checkbox">
-                                                <label for="a-4" class="checkbox-custom-label">Internet</label>
-                                            </li>
-                                            <li>
-                                                <input id="a-5" class="checkbox-custom" name="a-5"
-                                                    type="checkbox">
-                                                <label for="a-5" class="checkbox-custom-label">Microwave</label>
-                                            </li>
-                                            <li>
-                                                <input id="a-6" class="checkbox-custom" name="a-6"
-                                                    type="checkbox">
-                                                <label for="a-6" class="checkbox-custom-label">Smoking Allow</label>
-                                            </li>
-                                            <li>
-                                                <input id="a-7" class="checkbox-custom" name="a-7"
-                                                    type="checkbox">
-                                                <label for="a-7" class="checkbox-custom-label">Terrace</label>
-                                            </li>
-                                            <li>
-                                                <input id="a-8" class="checkbox-custom" name="a-8"
-                                                    type="checkbox">
-                                                <label for="a-8" class="checkbox-custom-label">Balcony</label>
-                                            </li>
-                                            <li>
-                                                <input id="a-9" class="checkbox-custom" name="a-9"
-                                                    type="checkbox">
-                                                <label for="a-9" class="checkbox-custom-label">Icon</label>
-                                            </li>
-                                            <li>
-                                                <input id="a-10" class="checkbox-custom" name="a-10"
-                                                    type="checkbox">
-                                                <label for="a-10" class="checkbox-custom-label">Wi-Fi</label>
-                                            </li>
-                                            <li>
-                                                <input id="a-11" class="checkbox-custom" name="a-11"
-                                                    type="checkbox">
-                                                <label for="a-11" class="checkbox-custom-label">Beach</label>
-                                            </li>
-                                            <li>
-                                                <input id="a-12" class="checkbox-custom" name="a-12"
-                                                    type="checkbox">
-                                                <label for="a-12" class="checkbox-custom-label">Parking</label>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                                <!-- /row -->
-
-                            </div>
-
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -839,7 +688,7 @@
                                 <div class="grid_agents-wrap">
 
                                     <div class="fr-grid-thumb">
-                                        <a href="agent-page.html">
+                                        <a href="#">
                                             <span class="verified"><img
                                                     src="{{ asset('frontend/assets/img/verified.svg') }}"
                                                     class="verify mx-auto" alt=""></span>
@@ -850,7 +699,7 @@
 
                                     <div class="fr-grid-deatil">
                                         <span><i class="ti-location-pin mr-1"></i>Varanasi, Uttar Pradesh, India</span>
-                                        <h5 class="fr-can-name"><a href="agent-page.html">Adam K. Jollio</a></h5>
+                                        <h5 class="fr-can-name"><a href="#">Adam K. Jollio</a></h5>
                                         <ul class="inline_social">
                                             <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
                                             <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
@@ -878,7 +727,7 @@
                                 <div class="grid_agents-wrap">
 
                                     <div class="fr-grid-thumb">
-                                        <a href="agent-page.html">
+                                        <a href="#">
                                             <span class="verified"><img
                                                     src="{{ asset('frontend/assets/img/verified.svg') }}"
                                                     class="verify mx-auto" alt=""></span>
@@ -889,7 +738,7 @@
 
                                     <div class="fr-grid-deatil">
                                         <span><i class="ti-location-pin mr-1"></i>Varanasi, Uttar Pradesh, India</span>
-                                        <h5 class="fr-can-name"><a href="agent-page.html">Sargam S. Singh</a></h5>
+                                        <h5 class="fr-can-name"><a href="#">Sargam S. Singh</a></h5>
                                         <ul class="inline_social">
                                             <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
                                             <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
@@ -917,7 +766,7 @@
                                 <div class="grid_agents-wrap">
 
                                     <div class="fr-grid-thumb">
-                                        <a href="agent-page.html">
+                                        <a href="#">
                                             <span class="verified"><img
                                                     src="{{ asset('frontend/assets/img/verified.svg') }}"
                                                     class="verify mx-auto" alt=""></span>
@@ -928,7 +777,7 @@
 
                                     <div class="fr-grid-deatil">
                                         <span><i class="ti-location-pin mr-1"></i>Varanasi, Uttar Pradesh, India</span>
-                                        <h5 class="fr-can-name"><a href="agent-page.html">Harijeet M. Siller</a></h5>
+                                        <h5 class="fr-can-name"><a href="#">Harijeet M. Siller</a></h5>
                                         <ul class="inline_social">
                                             <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
                                             <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
@@ -956,7 +805,7 @@
                                 <div class="grid_agents-wrap">
 
                                     <div class="fr-grid-thumb">
-                                        <a href="agent-page.html">
+                                        <a href="#">
                                             <span class="verified"><img
                                                     src="{{ asset('frontend/assets/img/verified.svg') }}"
                                                     class="verify mx-auto" alt=""></span>
@@ -967,7 +816,7 @@
 
                                     <div class="fr-grid-deatil">
                                         <span><i class="ti-location-pin mr-1"></i>Varanasi, Uttar Pradesh, India</span>
-                                        <h5 class="fr-can-name"><a href="agent-page.html">Anna K. Young</a></h5>
+                                        <h5 class="fr-can-name"><a href="#">Anna K. Young</a></h5>
                                         <ul class="inline_social">
                                             <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
                                             <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
@@ -995,7 +844,7 @@
                                 <div class="grid_agents-wrap">
 
                                     <div class="fr-grid-thumb">
-                                        <a href="agent-page.html">
+                                        <a href="#">
                                             <span class="verified"><img
                                                     src="{{ asset('frontend/assets/img/verified.svg') }}"
                                                     class="verify mx-auto" alt=""></span>
@@ -1006,7 +855,7 @@
 
                                     <div class="fr-grid-deatil">
                                         <span><i class="ti-location-pin mr-1"></i>Varanasi, Uttar Pradesh, India</span>
-                                        <h5 class="fr-can-name"><a href="agent-page.html">Michael P. Grimaldo</a></h5>
+                                        <h5 class="fr-can-name"><a href="#">Michael P. Grimaldo</a></h5>
                                         <ul class="inline_social">
                                             <li><a href="#" class="fb"><i class="ti-facebook"></i></a></li>
                                             <li><a href="#" class="ln"><i class="ti-linkedin"></i></a></li>
@@ -1034,104 +883,6 @@
         </div>
     </section>
     <!-- ============================ Top Agents End ================================== -->
-
-    <!-- ============================ Price Table Start ================================== -->
-    <section class="min">
-        <div class="container">
-
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-md-10 text-center">
-                    <div class="sec-heading center">
-                        <h2>Select your Package</h2>
-                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                            deleniti atque corrupti quos dolores</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row align-items-center">
-
-                <!-- Single Package -->
-                <div class="col-lg-4 col-md-4">
-                    <div class="pricing_wrap">
-                        <div class="prt_head">
-                            <h4>Basic</h4>
-                        </div>
-                        <div class="prt_price">
-                            <h2><span>₹</span>29</h2>
-                            <span>per user, per month</span>
-                        </div>
-                        <div class="prt_body">
-                            <ul>
-                                <li>99.5% Uptime Guarantee</li>
-                                <li>120GB CDN Bandwidth</li>
-                                <li>5GB Cloud Storage</li>
-                                <li class="none">Personal Help Support</li>
-                                <li class="none">Enterprise SLA</li>
-                            </ul>
-                        </div>
-                        <div class="prt_footer">
-                            <a href="#" class="btn choose_package">Start Basic</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Package -->
-                <div class="col-lg-4 col-md-4">
-                    <div class="pricing_wrap">
-                        <div class="prt_head">
-                            <div class="recommended">Best Value</div>
-                            <h4>Standard</h4>
-                        </div>
-                        <div class="prt_price">
-                            <h2><span>₹</span>49</h2>
-                            <span>per user, per month</span>
-                        </div>
-                        <div class="prt_body">
-                            <ul>
-                                <li>99.5% Uptime Guarantee</li>
-                                <li>150GB CDN Bandwidth</li>
-                                <li>10GB Cloud Storage</li>
-                                <li>Personal Help Support</li>
-                                <li class="none">Enterprise SLA</li>
-                            </ul>
-                        </div>
-                        <div class="prt_footer">
-                            <a href="#" class="btn choose_package active">Start Standard</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Package -->
-                <div class="col-lg-4 col-md-4">
-                    <div class="pricing_wrap">
-                        <div class="prt_head">
-                            <h4>Platinum</h4>
-                        </div>
-                        <div class="prt_price">
-                            <h2><span>₹</span>79</h2>
-                            <span>2 user, per month</span>
-                        </div>
-                        <div class="prt_body">
-                            <ul>
-                                <li>100% Uptime Guarantee</li>
-                                <li>200GB CDN Bandwidth</li>
-                                <li>20GB Cloud Storage</li>
-                                <li>Personal Help Support</li>
-                                <li>Enterprise SLA</li>
-                            </ul>
-                        </div>
-                        <div class="prt_footer">
-                            <a href="#" class="btn choose_package">Start Platinum</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-    <!-- ============================ Price Table End ================================== -->
 
     <!-- ============================ Call To Action ================================== -->
     <section class="theme-bg call_action_wrap-wrap">
