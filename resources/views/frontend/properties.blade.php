@@ -23,14 +23,6 @@
                                 </div>
                                 <div class="shorting_pagination_right">
                                     {!! $properties->links() !!}
-                                    {{-- <ul>
-                                        <li><a href="javascript:void(0);" class="active">1</a></li>
-                                        <li><a href="javascript:void(0);">2</a></li>
-                                        <li><a href="javascript:void(0);">3</a></li>
-                                        <li><a href="javascript:void(0);">4</a></li>
-                                        <li><a href="javascript:void(0);">5</a></li>
-                                        <li><a href="javascript:void(0);">6</a></li>
-                                    </ul> --}}
                                 </div>
                             </div>
                         </div>
@@ -133,8 +125,8 @@
                     <div class="row justify-content-center">
                         @foreach($properties as $property)
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                <div class="property-listing list_view">
-                                    <div class="listing-img-wrapper">
+                                <div class="property-listing list_view row m-0">
+                                    <div class="col-md-4 p-0">
                                         <div class="_exlio_125">{{ucfirst($property->transaction_type)}}</div>
                                         <div class="list-img-slide">
                                             <div class="click">
@@ -146,11 +138,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="list_view_flex">
+                                    <div class="col-md-8">
                                         <div class="listing-detail-wrapper mt-1">
                                             <div class="listing-short-detail-wrap">
                                                 <div class="_card_list_flex mb-2">
                                                     <div class="_card_flex_01">
+                                                    <h5><a href="{{ route('property.detail',$property->slug) }}" class="prt-link-detail">{{$property->name}} </a></h5>
                                                     </div>
                                                     <div class="_card_flex_last">
                                                         <h6 class="listing-card-info-price mb-0">₹{{$property->booking_amount}}</h6>
@@ -160,7 +153,7 @@
                                                 <div class="_card_list_flex">
                                                     <div class="_card_flex_01">
                                                         <h4 class="listing-name verified">
-                                                            <a href="{{ route('property.detail',$property->slug) }}" class="prt-link-detail">{{$property->name}} {{optional($property->project)->city}}, {{optional($property->project)->state}}, {{optional($property->project)->country}} - {{optional($property->project)->pincode}}</a>
+                                                            <i class="ti-location-pin"></i> <a href="{{ route('property.detail',$property->slug) }}" class="prt-link-detail">{{optional($property->project)->city}}, {{optional($property->project)->state}}, {{optional($property->project)->country}} - {{optional($property->project)->pincode}}</a>
                                                         </h4>
                                                     </div>
                                                 </div>
