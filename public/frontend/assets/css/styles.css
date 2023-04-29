@@ -3493,7 +3493,7 @@ nav a:hover {
     font-weight:500;
     transition: color .3s, background .3s;
     font-size: 16px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .navigation-portrait .nav-menu>li>a {
@@ -5037,14 +5037,14 @@ span.like-listing {
     min-width: 100%;
     min-height: 100%;
     width:100%;
-    height: auto;
+    height: 350px;
     z-index: 0;
-	max-height: 640px;
     object-fit: cover;
     -ms-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
+    border-radius: 30px;
 }
 .hero-banner.vedio-banner .container {
     z-index: 5;
@@ -8472,7 +8472,7 @@ span.agents_count {
 .gg_single_part.left {
     position: relative;
     display: block;
-    border-radius: 6px 0px 0px 6px;
+    border-radius: 6px;
     overflow: hidden;
 }
 .gg_single_part a {
@@ -8480,7 +8480,7 @@ span.agents_count {
 }
 .gg_single_part-right {
     display: block;
-    border-radius: 0px 6px 6px 0px;
+    border-radius: 6px;
     overflow: hidden;
 }
 .gg_single_part-right a {
@@ -14102,7 +14102,7 @@ h1, .h1 {
 	font-size:60px;
 }
 .sec-heading h2{
-	font-size:35px;
+	font-size:26px;
 	line-height:1.2;
 }
 
@@ -14155,12 +14155,12 @@ h1, .h1 {
 }
 .vedio-banner {
     position: relative;
-    background-color: black;
-    height: 100vh;
+    background-color: #fff;
+    height: 50vh;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    min-height: 640px;
+    min-height: 350px;
     width: 100%;
 }
 .hidden-xl-up {
@@ -15028,8 +15028,8 @@ h1, .h1 {
 		right: -3px;
 	}
 	.avl-features li {
-		-ms-flex: 0 0 100%;
-		flex: 0 0 100%;
+		/* -ms-flex: 0 0 100%;
+		flex: 0 0 100%; */
 		max-width: 100%;
 	}
 }
@@ -15058,5 +15058,40 @@ h1, .h1 {
 	}
 
 }
-
-
+.default-btn {
+    border: 0;
+    outline: none;
+    font-weight: 600;
+}
+.default-btn {
+    padding: 10px 18px!important;
+    color: #fff !important;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    font-size: 14px;
+    z-index: 1;
+    text-transform: capitalize;
+    background-color: #00976c;
+    border: none;
+    outline: none;
+}
+.border-radius {
+    border-radius: 50px;
+}
+.float-end{
+float: right;
+}
+.story-wrap p{
+text-align: justify;
+}
+.nav-style-separated ul>li:not(:last-child)>a:after {
+    background: #d9d9d9c4 none repeat scroll 0 0;
+    content: "";
+    height: 10px;
+    margin-top: -2px;
+    position: absolute;
+    top: 48%;
+    width: 1px;
+    margin-left: 12px;
+}

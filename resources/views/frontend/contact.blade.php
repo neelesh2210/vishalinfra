@@ -17,29 +17,26 @@
 							<div class="contact-box">
 								<i class="ti-shopping-cart theme-cl"></i>
 								<h4>Contact Sales</h4>
-								<p>sales@rikadahelp.co.uk</p>
-								<span>+01 215 245 6258</span>
+								<p>vishalinfra@gmail.com</p>
+								<span>+91-1234567890</span>
 							</div>
 						</div>
-
 						<div class="col-lg-4 col-md-4 col-sm-12">
 							<div class="contact-box">
 								<i class="ti-user theme-cl"></i>
 								<h4>Contact Sales</h4>
-								<p>sales@rikadahelp.co.uk</p>
-								<span>+01 215 245 6258</span>
+								<p>vishalinfra@gmail.com</p>
+								<span>+91-1234567890</span>
 							</div>
 						</div>
-
 						<div class="col-lg-4 col-md-4 col-sm-12">
 							<div class="contact-box">
 								<i class="ti-comment-alt theme-cl"></i>
 								<h4>Start Live Chat</h4>
-								<span>+01 215 245 6258</span>
+								<span>+91-1234567890</span>
 								<span class="live-chat">Live Chat</span>
 							</div>
 						</div>
-
 					</div>
 
 					<!-- row Start -->
@@ -95,56 +92,6 @@
 				</div>
 			</section>
 			<!-- ============================ Agency List End ================================== -->
-
-			<!-- ============================ Our Partner Start ================================== -->
-			<section class="gray-simple">
-				<div class="container">
-
-					<div class="row justify-content-center">
-						<div class="col-lg-8 col-md-10 col-sm-12">
-							<div class="reio_o9i text-center mb-5">
-								<h2>Less work, meet our partner.</h2>
-								<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="row justify-content-center">
-						<div class="col-lg-9 col-md-10 col-sm-12 flex-wrap justify-content-center text-center">
-							<div class="pertner_flexio">
-								<img src="{{ asset('frontend/assets/img/c-1.png')}}" class="img-fluid" alt="" />
-								<h5>Google Inc</h5>
-							</div>
-							<div class="pertner_flexio">
-								<img src="{{ asset('frontend/assets/img/c-2.png')}}" class="img-fluid" alt="" />
-								<h5>Dribbbdio</h5>
-							</div>
-							<div class="pertner_flexio">
-								<img src="{{ asset('frontend/assets/img/c-3.png')}}" class="img-fluid" alt="" />
-								<h5>Lio Vission</h5>
-							</div>
-							<div class="pertner_flexio">
-								<img src="{{ asset('frontend/assets/img/c-4.png')}}" class="img-fluid" alt="" />
-								<h5>Alzerra</h5>
-							</div>
-							<div class="pertner_flexio">
-								<img src="{{ asset('frontend/assets/img/c-5.png')}}" class="img-fluid" alt="" />
-								<h5>Skyepio</h5>
-							</div>
-							<div class="pertner_flexio">
-								<img src="{{ asset('frontend/assets/img/c-6.png')}}" class="img-fluid" alt="" />
-								<h5>Twikller</h5>
-							</div>
-							<div class="pertner_flexio">
-								<img src="{{ asset('frontend/assets/img/c-7.png')}}" class="img-fluid" alt="" />
-								<h5>Sincherio</h5>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</section>
-			<!-- ============================ Our Partner End ================================== -->
 
 			<!-- ============================ Call To Action ================================== -->
 			<section class="theme-bg call_action_wrap-wrap">

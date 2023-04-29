@@ -162,27 +162,12 @@
                                             </div>
                                         </div>
                                         <div class="price-features-wrapper">
-                                            <div class="list-fx-features">
-                                                <div class="listing-card-info-icon">
-                                                    <div class="inc-fleat-icon">
-                                                        <img src="{{ asset('frontend/assets/img/bed.svg') }}" width="13" alt="" />
-                                                    </div>3 Beds
-                                                </div>
-                                                <div class="listing-card-info-icon">
-                                                    <div class="inc-fleat-icon">
-                                                        <img src="{{ asset('frontend/assets/img/bed.svg') }}" width="13" alt="" />
-                                                    </div>3 Beds
-                                                </div>
-                                                <div class="listing-card-info-icon">
-                                                    <div class="inc-fleat-icon">
-                                                        <img src="{{ asset('frontend/assets/img/bed.svg') }}" width="13" alt="" />
-                                                    </div>3 Beds
-                                                </div>
-                                                <div class="listing-card-info-icon">
-                                                    <div class="inc-fleat-icon">
-                                                        <img src="{{ asset('frontend/assets/img/bed.svg') }}" width="13" alt="" />
-                                                    </div>3 Beds
-                                                </div>
+                                            <div class="block-body">
+                                                <ul class="avl-features third">
+                                                    <li class="active">3 BHK</li>
+                                                    <li class="active">Balcony</li>
+                                                    <li class="active">Corner Plot</li>
+                                                </ul>
                                             </div>
                                         </div>
                                         <div class="listing-detail-footer">
@@ -199,7 +184,7 @@
                                                 </div>
                                             </div>
                                             <div class="footer-flex">
-                                                <a href="{{ route('property.detail',$property->slug) }}" class="prt-view">View Detail</a>
+                                                <a href="{{ route('property.detail',$property->slug) }}" class="prt-view">View Detail  <i class="fas fa-chevron-right pl-1"></i></a>
                                             </div>
                                         </div>
                                     </div>

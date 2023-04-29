@@ -60,11 +60,11 @@
                                 <p>Customers</p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="{{route('admin.associates')}}" class="nav-link  @if(Route::currentRouteName() == 'admin.associates' || Route::currentRouteName() == 'admin.add.associate' || Route::currentRouteName() == 'admin.edit.associate' || Route::currentRouteName() == 'admin.associate.wallet.index') active @endif">
                                 <p>Associates</p>
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </li>
                 <li class="nav-item @if(Route::currentRouteName() == 'admin.countries.index' || Route::currentRouteName() == 'admin.countries.edit' || Route::currentRouteName() == 'admin.states.index' || Route::currentRouteName() == 'admin.states.edit' || Route::currentRouteName() == 'admin.cities.index' || Route::currentRouteName() == 'admin.cities.edit' || Route::currentRouteName() == 'admin.pincodes.index' || Route::currentRouteName() == 'admin.pincodes.edit') menu-is-opening menu-open @endif">
@@ -97,12 +97,12 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="{{route('admin.commission.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.commission.index') active @endif">
                         <i class="nav-icon fas fa-handshake"></i>
                         <p>Commission</p>
                     </a>
-                </li>
+                </li> --}}
                 <li class="nav-item @if(Route::currentRouteName() == 'admin.sliders.index' || Route::currentRouteName() == 'admin.sliders.edit' || Route::currentRouteName() == 'admin.level-percent.index' || Route::currentRouteName() == 'admin.level-percent.edit') menu-is-opening menu-open @endif">
                     <a href="#" class="nav-link @if(Route::currentRouteName() == 'admin.sliders.index' || Route::currentRouteName() == 'admin.sliders.edit' || Route::currentRouteName() == 'admin.level-percent.index' || Route::currentRouteName() == 'admin.level-percent.edit') active @endif">
                         <i class="nav-icon fas fa-cogs" aria-hidden="true"></i>
@@ -116,11 +116,11 @@
                                 <p>Sliders</p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="{{route('admin.level-percent.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.level-percent.index' || Route::currentRouteName() == 'admin.level-percent.edit') active @endif">
                                 <p>Level Percent</p>
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </li>
             </ul>

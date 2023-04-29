@@ -10,16 +10,14 @@
                         <div class="nav-toggle"></div>
                         <div class="mobile_nav">
                             <ul>
-                                {{-- <li class="_my_prt_list"><a href="#"><span>2</span>My List</a></li> --}}
                                 <li><a href="#" data-toggle="modal" data-target="#login"><i class="fas fa-user-circle fa-lg"></i></a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="nav-menus-wrapper" style="transition-property: none;">
+                    <div class="nav-menus-wrapper nav-style-separated" style="transition-property: none;">
                         <ul class="nav-menu">
 
-                            <li class="active"><a href="{{route('index')}}">Home</a>
-                            </li>
+                            <li class="active"><a href="{{route('index')}}">Home</a></li>
 
                             <li><a href="#">Buy<span class="submenu-indicator"></span></a>
                                 {{-- <ul class="nav-dropdown nav-submenu">
@@ -60,11 +58,11 @@
                                     </li>
                                 </ul> --}}
                             </li>
-                            <li><a href="#">Rent</a> </li>
-                            <li><a href="#">Sell</a> </li>
-                            <li><a href="#">Pay Rent</a> </li>
+                            <li><a href="#">Rent</a></li>
+                            <li><a href="#">Sell</a></li>
                             <li><a href="{{route('properties')}}">Property Services</a> </li>
-                            <li><a href="{{route('contact')}}">Help</a> </li>
+                            <li><a href="{{route('about')}}">About</a></li>
+                            <li><a href="{{route('contact')}}">Contact</a></li>
                         </ul>
 
                         <ul class="nav-menu nav-menu-social align-to-right">

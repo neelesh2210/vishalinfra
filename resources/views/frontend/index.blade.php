@@ -6,7 +6,6 @@
     <div class="image-cover hero_banner" style="background:url({{ asset('frontend/assets/img/banner-3.png') }}) no-repeat;"
         data-overlay="0">
         <div class="container">
-
             <h1 class="big-header-capt mb-0">Search Your Next Home</h1>
             <p class="text-center mb-4">Welcome back! Let’s continue your search</p>
             <!-- Type -->
@@ -14,7 +13,6 @@
                 <div class="col-xl-10 col-lg-12 col-md-12">
                     <div class="full_search_box nexio_search lightanic_search hero_search-radius modern">
                         <div class="search_hero_wrapping">
-
                             <div class="row">
                                 <div class="col-lg-4 col-md-4 col-sm-12">
                                     <div class="form-group">
@@ -28,7 +26,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="col-lg-4 col-md-4 col-sm-12">
                                     <div class="form-group">
                                         <div class="input-with-icon">
@@ -44,7 +41,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="col-lg-3 col-sm-12 d-md-none d-lg-block">
                                     <div class="form-group">
                                         <div class="input-with-icon">
@@ -73,17 +69,21 @@
     </div>
     <section class="gray-simple min">
         <div class="container">
-
             <div class="row">
-                <div class="col-lg-12 col-md-12">
+                <div class="col-lg-9 col-md-9">
                     <div class="sec-heading">
-                        <h2>Popular Owner Properties</h2>
+                        <h2>Popular Category</h2>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="float-end mt-2">
+                        <a href="#" class="default-btn border-radius">
+                            View All <i class="fas fa-chevron-circle-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-
             <div class="row justify-content-center">
-
                 <div class="col-lg col-md-4">
                     <!-- Single Category -->
                     <div class="property_cats_boxs">
@@ -92,7 +92,6 @@
                                 <div class="category-icon clip-1">
                                     <i class="flaticon-beach-house-2"></i>
                                 </div>
-
                                 <div class="property_category_expand property_category_short-text">
                                     <h4>Family House</h4>
                                     <p>122 Property</p>
@@ -101,7 +100,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="col-lg col-md-4">
                     <!-- Single Category -->
                     <div class="property_cats_boxs">
@@ -119,7 +117,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="col-lg col-md-4">
                     <!-- Single Category -->
                     <div class="property_cats_boxs">
@@ -128,7 +125,6 @@
                                 <div class="category-icon clip-3">
                                     <i class="flaticon-apartments"></i>
                                 </div>
-
                                 <div class="property_category_expand property_category_short-text">
                                     <h4>Apartment</h4>
                                     <p>300 Property</p>
@@ -137,7 +133,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="col-lg col-md-4">
                     <!-- Single Category -->
                     <div class="property_cats_boxs">
@@ -146,7 +141,6 @@
                                 <div class="category-icon clip-4">
                                     <i class="flaticon-student-housing"></i>
                                 </div>
-
                                 <div class="property_category_expand property_category_short-text">
                                     <h4>Office & Studio</h4>
                                     <p>80 Property</p>
@@ -155,7 +149,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="col-lg col-md-4">
                     <!-- Single Category -->
                     <div class="property_cats_boxs">
@@ -164,7 +157,6 @@
                                 <div class="category-icon clip-5">
                                     <i class="flaticon-modern-house-4"></i>
                                 </div>
-
                                 <div class="property_category_expand property_category_short-text">
                                     <h4>Villa & Condo</h4>
                                     <p>80 Property</p>
@@ -173,34 +165,37 @@
                         </a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
     <section class="min">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-12 col-md-12">
+                <div class="col-lg-9 col-md-9">
                     <div class="sec-heading">
                         <h2>Popular Owner Properties</h2>
                     </div>
                 </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="float-end mt-2">
+                        <a href="#" class="default-btn border-radius">
+                            View All <i class="fas fa-chevron-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="item-slide space">
-
                         <!-- Single Item -->
                         <div class="single_items">
                             <div class="property-listing property-2">
-
                                 <div class="listing-img-wrapper">
                                     <div class="list-img-slide">
                                         <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
                                                 class="img-fluid mx-auto" alt="" /></a>
                                     </div>
                                 </div>
-
                                 <div class="listing-detail-wrapper">
                                     <div class="listing-short-detail-wrap">
                                         <div class="_card_list_flex mb-2">
@@ -223,7 +218,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="listing-detail-footer">
                                     <div class="footer-first">
                                         <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
@@ -233,20 +227,17 @@
                                         <span>Apartment</span>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <!-- Single Item -->
                         <div class="single_items">
                             <div class="property-listing property-2">
-
                                 <div class="listing-img-wrapper">
                                     <div class="list-img-slide">
                                         <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
                                                 class="img-fluid mx-auto" alt="" /></a>
                                     </div>
                                 </div>
-
                                 <div class="listing-detail-wrapper">
                                     <div class="listing-short-detail-wrap">
                                         <div class="_card_list_flex mb-2">
@@ -269,7 +260,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="listing-detail-footer">
                                     <div class="footer-first">
                                         <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
@@ -279,20 +269,17 @@
                                         <span>Apartment</span>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <!-- Single Item -->
                         <div class="single_items">
                             <div class="property-listing property-2">
-
                                 <div class="listing-img-wrapper">
                                     <div class="list-img-slide">
                                         <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
                                                 class="img-fluid mx-auto" alt="" /></a>
                                     </div>
                                 </div>
-
                                 <div class="listing-detail-wrapper">
                                     <div class="listing-short-detail-wrap">
                                         <div class="_card_list_flex mb-2">
@@ -315,7 +302,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="listing-detail-footer">
                                     <div class="footer-first">
                                         <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
@@ -325,20 +311,17 @@
                                         <span>Apartment</span>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <!-- Single Item -->
                         <div class="single_items">
                             <div class="property-listing property-2">
-
                                 <div class="listing-img-wrapper">
                                     <div class="list-img-slide">
                                         <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
                                                 class="img-fluid mx-auto" alt="" /></a>
                                     </div>
                                 </div>
-
                                 <div class="listing-detail-wrapper">
                                     <div class="listing-short-detail-wrap">
                                         <div class="_card_list_flex mb-2">
@@ -361,7 +344,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="listing-detail-footer">
                                     <div class="footer-first">
                                         <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
@@ -371,20 +353,17 @@
                                         <span>Apartment</span>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <!-- Single Item -->
                         <div class="single_items">
                             <div class="property-listing property-2">
-
                                 <div class="listing-img-wrapper">
                                     <div class="list-img-slide">
                                         <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
                                                 class="img-fluid mx-auto" alt="" /></a>
                                     </div>
                                 </div>
-
                                 <div class="listing-detail-wrapper">
                                     <div class="listing-short-detail-wrap">
                                         <div class="_card_list_flex mb-2">
@@ -407,7 +386,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="listing-detail-footer">
                                     <div class="footer-first">
                                         <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
@@ -417,29 +395,55 @@
                                         <span>Apartment</span>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
     <section class="min gray-simple">
         <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-9">
+                    <div class="sec-heading">
+                        <h2>Project Gallery</h2>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="float-end mt-2">
+                        <a href="#" class="default-btn border-radius">
+                            View All <i class="fas fa-chevron-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-banner vedio-banner">
+                <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                    <source src="{{ asset('frontend/assets/img/banners.mp4') }}" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+    <section class="min">
+        <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-12 col-md-12">
+                <div class="col-lg-9 col-md-9">
                     <div class="sec-heading">
                         <h2>Top Projects</h2>
                     </div>
                 </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="float-end mt-2">
+                        <a href="#" class="default-btn border-radius">
+                            View All <i class="fas fa-chevron-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="item-slide space">
-
                         <!-- Single Item -->
                         <div class="single_items">
                             <div class="property-listing property-2">
@@ -450,7 +454,6 @@
                                                 class="img-fluid mx-auto" alt="" /></a>
                                     </div>
                                 </div>
-
                                 <div class="listing-detail-wrapper">
                                     <div class="listing-short-detail-wrap">
                                         <div class="_card_list_flex mb-2">
@@ -473,7 +476,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="listing-detail-footer">
                                     <div class="footer-first">
                                         <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
@@ -483,20 +485,17 @@
                                         <span>Apartment</span>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <!-- Single Item -->
                         <div class="single_items">
                             <div class="property-listing property-2">
-
                                 <div class="listing-img-wrapper">
                                     <div class="list-img-slide">
                                         <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
                                                 class="img-fluid mx-auto" alt="" /></a>
                                     </div>
                                 </div>
-
                                 <div class="listing-detail-wrapper">
                                     <div class="listing-short-detail-wrap">
                                         <div class="_card_list_flex mb-2">
@@ -519,7 +518,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="listing-detail-footer">
                                     <div class="footer-first">
                                         <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
@@ -529,20 +527,17 @@
                                         <span>Apartment</span>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <!-- Single Item -->
                         <div class="single_items">
                             <div class="property-listing property-2">
-
                                 <div class="listing-img-wrapper">
                                     <div class="list-img-slide">
                                         <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
                                                 class="img-fluid mx-auto" alt="" /></a>
                                     </div>
                                 </div>
-
                                 <div class="listing-detail-wrapper">
                                     <div class="listing-short-detail-wrap">
                                         <div class="_card_list_flex mb-2">
@@ -565,7 +560,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="listing-detail-footer">
                                     <div class="footer-first">
                                         <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
@@ -575,20 +569,17 @@
                                         <span>Apartment</span>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <!-- Single Item -->
                         <div class="single_items">
                             <div class="property-listing property-2">
-
                                 <div class="listing-img-wrapper">
                                     <div class="list-img-slide">
                                         <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
                                                 class="img-fluid mx-auto" alt="" /></a>
                                     </div>
                                 </div>
-
                                 <div class="listing-detail-wrapper">
                                     <div class="listing-short-detail-wrap">
                                         <div class="_card_list_flex mb-2">
@@ -611,7 +602,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="listing-detail-footer">
                                     <div class="footer-first">
                                         <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
@@ -621,20 +611,17 @@
                                         <span>Apartment</span>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <!-- Single Item -->
                         <div class="single_items">
                             <div class="property-listing property-2">
-
                                 <div class="listing-img-wrapper">
                                     <div class="list-img-slide">
                                         <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
                                                 class="img-fluid mx-auto" alt="" /></a>
                                     </div>
                                 </div>
-
                                 <div class="listing-detail-wrapper">
                                     <div class="listing-short-detail-wrap">
                                         <div class="_card_list_flex mb-2">
@@ -657,7 +644,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="listing-detail-footer">
                                     <div class="footer-first">
                                         <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
@@ -666,148 +652,16 @@
                                     <div class="footer-flex">
                                         <span>Apartment</span>
                                     </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <section class="min ">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-12 col-md-12">
-                    <div class="sec-heading">
-                        <h2>Recent Property Listed</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                @foreach ($properties as $property)
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="property-listing property-2">
-                            <div class="listing-img-wrapper">
-                                <div class="list-img-slide">
-                                    <a href="#">
-                                        <img src="{{ asset('backend/img/properies/' . $property->thumbnail_img) }}"
-                                            class="img-fluid mx-auto" alt="" />
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="listing-detail-wrapper">
-                                <div class="listing-short-detail-wrap">
-                                    <div class="_card_list_flex mb-2">
-                                        <div class="_card_flex_01">
-                                            <span
-                                                class="property-type elt_rent">{{ ucfirst($property->transaction_type) }}</span>
-                                        </div>
-                                        <div class="_card_flex_last">
-                                            <div class="prt_saveed_12lk">
-                                                <label class="toggler toggler-danger">
-                                                    <input type="checkbox">
-                                                    <i class="fas fa-heart"></i>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="listing-short-detail">
-                                        <h4 class="listing-name verified">
-                                            <a href="#" class="prt-link-detail">{{ $property->name }}</a>
-                                        </h4>
-                                        <div class="foot-location">
-                                            <img src="{{ asset('frontend/assets/img/pin.svg') }}" width="18"
-                                                alt="" />{{ optional($property->project)->city }},
-                                            {{ optional($property->project)->state }},
-                                            {{ optional($property->project)->country }} -
-                                            {{ optional($property->project)->pincode }}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="listing-detail-footer">
-                                <div class="footer-first">
-                                    <div class="foot-location"><span
-                                            class="pric_lio theme-bg">₹{{ $property->price }}</span>/sqft</div>
-                                </div>
-                                <div class="footer-flex">
-                                    <span>{{ ucwords(str_replace('_', ' ', $property->properties_type)) }}</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                @endforeach
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-                    <a href="{{ route('property.detail', $property->slug) }}"
-                        class="btn btn-theme-light-2 rounded">Explore More Properties</a>
                 </div>
             </div>
         </div>
     </section>
-    {{-- <section class="image-cover"
-        style="background:#122947 url({{ asset('frontend/assets/img/pattern.png') }}) no-repeat;">
-        <div class="container">
-
-            <div class="row justify-content-center">
-                <div class="col-xl-7 col-lg-10 col-md-12 col-sm-12">
-                    <div class="text-center mb-5">
-                        <span class="theme-cl">Our Awards</span>
-                        <h2 class="font-weight-normal text-light">Over 1,24,000+ Happy User Bieng with us Still they Love
-                            Our Services</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="_morder_counter">
-                        <div class="_morder_counter_thumb"><i class="ti-cup"></i></div>
-                        <div class="_morder_counter_caption">
-                            <h5 class="text-light"><span>32</span> M</h5>
-                            <span>Blue Burmin Award</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="_morder_counter">
-                        <div class="_morder_counter_thumb"><i class="ti-briefcase"></i></div>
-                        <div class="_morder_counter_caption">
-                            <h5 class="text-light"><span>43</span> M</h5>
-                            <span>Mimo X11 Award</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="_morder_counter">
-                        <div class="_morder_counter_thumb"><i class="ti-light-bulb"></i></div>
-                        <div class="_morder_counter_caption">
-                            <h5 class="text-light"><span>51</span> M</h5>
-                            <span>Australian UGC Award</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="_morder_counter">
-                        <div class="_morder_counter_thumb"><i class="ti-heart"></i></div>
-                        <div class="_morder_counter_caption">
-                            <h5 class="text-light"><span>42</span> M</h5>
-                            <span>IITCA Green Award</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section> --}}
-
     <section class="min gray-simple">
         <div class="container">
-
             <div class="row justify-content-center">
                 <div class="col-lg-7 col-md-8">
                     <div class="sec-heading center">
@@ -817,9 +671,7 @@
                     </div>
                 </div>
             </div>
-
             <div class="row justify-content-center">
-
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="wpk_process">
                         <div class="wpk_thumb">
@@ -835,7 +687,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="wpk_process active">
                         <div class="wpk_thumb">
@@ -851,7 +702,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="wpk_process">
                         <div class="wpk_thumb">
@@ -867,395 +717,286 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </section>
-    <div class="clearfix"></div>
     <section class="min">
         <div class="container">
-
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-md-8">
-                    <div class="sec-heading center">
-                        <h2>Explore By Location</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-
-                <!-- Single Location -->
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="#" class="img-wrap style-2">
-                        <div class="location_wrap_content visible">
-                            <div class="location_wrap_content_first">
-                                <h4>New Orleans, Louisiana</h4>
-                                <ul>
-                                    <li><span>12 Villas</span></li>
-                                    <li><span>10 Apartments</span></li>
-                                    <li><span>07 Offices</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="img-wrap-background"
-                            style="background-image: url({{ asset('frontend/assets/img/city-1.png') }});"></div>
-                    </a>
-                </div>
-
-                <!-- Single Location -->
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="#" class="img-wrap style-2">
-                        <div class="location_wrap_content visible">
-                            <div class="location_wrap_content_first">
-                                <h4>Jerrsy, United State</h4>
-                                <ul>
-                                    <li><span>12 Villas</span></li>
-                                    <li><span>10 Apartments</span></li>
-                                    <li><span>07 Offices</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="img-wrap-background"
-                            style="background-image: url({{ asset('frontend/assets/img/city-2.png') }});"></div>
-                    </a>
-                </div>
-
-                <!-- Single Location -->
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="#" class="img-wrap style-2">
-                        <div class="location_wrap_content visible">
-                            <div class="location_wrap_content_first">
-                                <h4>Liverpool, London</h4>
-                                <ul>
-                                    <li><span>12 Villas</span></li>
-                                    <li><span>10 Apartments</span></li>
-                                    <li><span>07 Offices</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="img-wrap-background"
-                            style="background-image: url({{ asset('frontend/assets/img/city-3.png') }});"></div>
-                    </a>
-                </div>
-
-                <!-- Single Location -->
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="#" class="img-wrap style-2">
-                        <div class="location_wrap_content visible">
-                            <div class="location_wrap_content_first">
-                                <h4>Varanasi, Uttar Pradesh, India</h4>
-                                <ul>
-                                    <li><span>12 Villas</span></li>
-                                    <li><span>10 Apartments</span></li>
-                                    <li><span>07 Offices</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="img-wrap-background"
-                            style="background-image: url({{ asset('frontend/assets/img/city-4.png') }});"></div>
-                    </a>
-                </div>
-
-                <!-- Single Location -->
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="#" class="img-wrap style-2">
-                        <div class="location_wrap_content visible">
-                            <div class="location_wrap_content_first">
-                                <h4>Varanasi, Uttar Pradesh, India</h4>
-                                <ul>
-                                    <li><span>12 Villas</span></li>
-                                    <li><span>10 Apartments</span></li>
-                                    <li><span>07 Offices</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="img-wrap-background"
-                            style="background-image: url({{ asset('frontend/assets/img/city-5.png') }});"></div>
-                    </a>
-                </div>
-
-                <!-- Single Location -->
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="#" class="img-wrap style-2">
-                        <div class="location_wrap_content visible">
-                            <div class="location_wrap_content_first">
-                                <h4>Varanasi, Uttar Pradesh, India</h4>
-                                <ul>
-                                    <li><span>12 Villas</span></li>
-                                    <li><span>10 Apartments</span></li>
-                                    <li><span>07 Offices</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="img-wrap-background"
-                            style="background-image: url({{ asset('frontend/assets/img/city-6.png') }});"></div>
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-    <section class="min gray-simple">
-        <div class="container">
-
-            <div class="row justify-content-center">
-                <div class="col-lg-12 col-md-12">
-                    <div class="sec-heading">
-                        <h2>Top Projects</h2>
-                    </div>
-                </div>
-            </div>
-
             <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="item-slide space">
-
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="property-listing property-2">
-
-                                <div class="listing-img-wrapper">
-                                    <div class="list-img-slide">
-                                        <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
-                                                class="img-fluid mx-auto" alt="" /></a>
-                                    </div>
-                                </div>
-
-                                <div class="listing-detail-wrapper">
-                                    <div class="listing-short-detail-wrap">
-                                        <div class="_card_list_flex mb-2">
-                                            <div class="_card_flex_01">
-                                                <span class="property-type elt_rent">For Rent</span>
-                                            </div>
-                                            <div class="_card_flex_last">
-                                                <div class="prt_saveed_12lk">
-                                                    <label class="toggler toggler-danger"><input type="checkbox"><i
-                                                            class="fas fa-heart"></i></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="listing-short-detail">
-                                            <h4 class="listing-name verified"><a href="#"
-                                                    class="prt-link-detail">Red Carpet Real Estate</a></h4>
-                                            <div class="foot-location"><img
-                                                    src="{{ asset('frontend/assets/img/pin.svg') }}" width="18"
-                                                    alt="" />Varanasi, Uttar Pradesh, India</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="listing-detail-footer">
-                                    <div class="footer-first">
-                                        <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
-                                        </div>
-                                    </div>
-                                    <div class="footer-flex">
-                                        <span>Apartment</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="property-listing property-2">
-
-                                <div class="listing-img-wrapper">
-                                    <div class="list-img-slide">
-                                        <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
-                                                class="img-fluid mx-auto" alt="" /></a>
-                                    </div>
-                                </div>
-
-                                <div class="listing-detail-wrapper">
-                                    <div class="listing-short-detail-wrap">
-                                        <div class="_card_list_flex mb-2">
-                                            <div class="_card_flex_01">
-                                                <span class="property-type elt_rent">For Rent</span>
-                                            </div>
-                                            <div class="_card_flex_last">
-                                                <div class="prt_saveed_12lk">
-                                                    <label class="toggler toggler-danger"><input type="checkbox"><i
-                                                            class="fas fa-heart"></i></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="listing-short-detail">
-                                            <h4 class="listing-name verified"><a href="#"
-                                                    class="prt-link-detail">Red Carpet Real Estate</a></h4>
-                                            <div class="foot-location"><img
-                                                    src="{{ asset('frontend/assets/img/pin.svg') }}" width="18"
-                                                    alt="" />Varanasi, Uttar Pradesh, India</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="listing-detail-footer">
-                                    <div class="footer-first">
-                                        <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
-                                        </div>
-                                    </div>
-                                    <div class="footer-flex">
-                                        <span>Apartment</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="property-listing property-2">
-
-                                <div class="listing-img-wrapper">
-                                    <div class="list-img-slide">
-                                        <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
-                                                class="img-fluid mx-auto" alt="" /></a>
-                                    </div>
-                                </div>
-
-                                <div class="listing-detail-wrapper">
-                                    <div class="listing-short-detail-wrap">
-                                        <div class="_card_list_flex mb-2">
-                                            <div class="_card_flex_01">
-                                                <span class="property-type elt_rent">For Rent</span>
-                                            </div>
-                                            <div class="_card_flex_last">
-                                                <div class="prt_saveed_12lk">
-                                                    <label class="toggler toggler-danger"><input type="checkbox"><i
-                                                            class="fas fa-heart"></i></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="listing-short-detail">
-                                            <h4 class="listing-name verified"><a href="#"
-                                                    class="prt-link-detail">Red Carpet Real Estate</a></h4>
-                                            <div class="foot-location"><img
-                                                    src="{{ asset('frontend/assets/img/pin.svg') }}" width="18"
-                                                    alt="" />Varanasi, Uttar Pradesh, India</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="listing-detail-footer">
-                                    <div class="footer-first">
-                                        <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
-                                        </div>
-                                    </div>
-                                    <div class="footer-flex">
-                                        <span>Apartment</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="property-listing property-2">
-
-                                <div class="listing-img-wrapper">
-                                    <div class="list-img-slide">
-                                        <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
-                                                class="img-fluid mx-auto" alt="" /></a>
-                                    </div>
-                                </div>
-
-                                <div class="listing-detail-wrapper">
-                                    <div class="listing-short-detail-wrap">
-                                        <div class="_card_list_flex mb-2">
-                                            <div class="_card_flex_01">
-                                                <span class="property-type elt_rent">For Rent</span>
-                                            </div>
-                                            <div class="_card_flex_last">
-                                                <div class="prt_saveed_12lk">
-                                                    <label class="toggler toggler-danger"><input type="checkbox"><i
-                                                            class="fas fa-heart"></i></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="listing-short-detail">
-                                            <h4 class="listing-name verified"><a href="#"
-                                                    class="prt-link-detail">Red Carpet Real Estate</a></h4>
-                                            <div class="foot-location"><img
-                                                    src="{{ asset('frontend/assets/img/pin.svg') }}" width="18"
-                                                    alt="" />Varanasi, Uttar Pradesh, India</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="listing-detail-footer">
-                                    <div class="footer-first">
-                                        <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
-                                        </div>
-                                    </div>
-                                    <div class="footer-flex">
-                                        <span>Apartment</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="property-listing property-2">
-
-                                <div class="listing-img-wrapper">
-                                    <div class="list-img-slide">
-                                        <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
-                                                class="img-fluid mx-auto" alt="" /></a>
-                                    </div>
-                                </div>
-
-                                <div class="listing-detail-wrapper">
-                                    <div class="listing-short-detail-wrap">
-                                        <div class="_card_list_flex mb-2">
-                                            <div class="_card_flex_01">
-                                                <span class="property-type elt_rent">For Rent</span>
-                                            </div>
-                                            <div class="_card_flex_last">
-                                                <div class="prt_saveed_12lk">
-                                                    <label class="toggler toggler-danger"><input type="checkbox"><i
-                                                            class="fas fa-heart"></i></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="listing-short-detail">
-                                            <h4 class="listing-name verified"><a href="#"
-                                                    class="prt-link-detail">Red Carpet Real Estate</a></h4>
-                                            <div class="foot-location"><img
-                                                    src="{{ asset('frontend/assets/img/pin.svg') }}" width="18"
-                                                    alt="" />Varanasi, Uttar Pradesh, India</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="listing-detail-footer">
-                                    <div class="footer-first">
-                                        <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
-                                        </div>
-                                    </div>
-                                    <div class="footer-flex">
-                                        <span>Apartment</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
+                <div class="col-lg-9 col-md-9">
+                    <div class="sec-heading">
+                        <h2>New Project Gallery</h2>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="float-end mt-2">
+                        <a href="#" class="default-btn border-radius">
+                            View All <i class="fas fa-chevron-circle-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="list_views">
+                        <!-- Single Item -->
+                        <div class="single_items">
+                            <div class="row">
+                                <!-- Single Property -->
+                                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                                    <div class="property-listing list_view row m-0">
+                                        <div class="col-md-4 p-0">
+                                            <div class="_exlio_125">For Sale</div>
+                                            <div class="list-img-slide">
+                                                <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
+                                                        class="img-fluid mx-auto" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="listing-detail-wrapper mt-1">
+                                                <div class="listing-short-detail-wrap">
+                                                    <div class="_card_list_flex mb-2">
+                                                        <div class="_card_flex_01">
+                                                            <h5><a href="#" class="prt-link-detail">Property Name
+                                                                </a></h5>
+                                                        </div>
+                                                        <div class="_card_flex_last">
+                                                            <h6 class="listing-card-info-price mb-0">₹1000</h6>
+                                                            <span>₹100/sqft</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="_card_list_flex">
+                                                        <div class="_card_flex_01">
+                                                            <h4 class="listing-name verified"><a href="#"
+                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh, India</a></h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="price-features-wrapper">
+                                                <div class="block-body">
+                                                    <ul class="avl-features third">
+                                                        <li class="active">3 BHK</li>
+                                                        <li class="active">Balcony</li>
+                                                        <li class="active">Corner Plot</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="listing-detail-footer">
+                                                <div class="footer-first">
+                                                    <div class="foot-rates">
+                                                        <span class="elio_rate good">4.4</span>
+                                                        <div class="_rate_stio">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="footer-flex">
+                                                    <a href="#" class="prt-view">View</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                                    <div class="property-listing list_view row m-0">
+                                        <div class="col-md-4 p-0">
+                                            <div class="_exlio_125">For Sale</div>
+                                            <div class="list-img-slide">
+                                                <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
+                                                        class="img-fluid mx-auto" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="listing-detail-wrapper mt-1">
+                                                <div class="listing-short-detail-wrap">
+                                                    <div class="_card_list_flex mb-2">
+                                                        <div class="_card_flex_01">
+                                                            <h5><a href="#" class="prt-link-detail">Property Name
+                                                                </a></h5>
+                                                        </div>
+                                                        <div class="_card_flex_last">
+                                                            <h6 class="listing-card-info-price mb-0">₹1000</h6>
+                                                            <span>₹100/sqft</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="_card_list_flex">
+                                                        <div class="_card_flex_01">
+                                                            <h4 class="listing-name verified"><a href="#"
+                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh, India</a></h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="price-features-wrapper">
+                                                <div class="block-body">
+                                                    <ul class="avl-features third">
+                                                        <li class="active">3 BHK</li>
+                                                        <li class="active">Balcony</li>
+                                                        <li class="active">Corner Plot</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="listing-detail-footer">
+                                                <div class="footer-first">
+                                                    <div class="foot-rates">
+                                                        <span class="elio_rate good">4.4</span>
+                                                        <div class="_rate_stio">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="footer-flex">
+                                                    <a href="#" class="prt-view">View</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Item -->
+                        <div class="single_items">
+                            <div class="row">
+                                <!-- Single Property -->
+                                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                                    <div class="property-listing list_view row m-0">
+                                        <div class="col-md-4 p-0">
+                                            <div class="_exlio_125">For Sale</div>
+                                            <div class="list-img-slide">
+                                                <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
+                                                        class="img-fluid mx-auto" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="listing-detail-wrapper mt-1">
+                                                <div class="listing-short-detail-wrap">
+                                                    <div class="_card_list_flex mb-2">
+                                                        <div class="_card_flex_01">
+                                                            <h5><a href="#" class="prt-link-detail">Property Name
+                                                                </a></h5>
+                                                        </div>
+                                                        <div class="_card_flex_last">
+                                                            <h6 class="listing-card-info-price mb-0">₹1000</h6>
+                                                            <span>₹100/sqft</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="_card_list_flex">
+                                                        <div class="_card_flex_01">
+                                                            <h4 class="listing-name verified"><a href="#"
+                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh, India</a></h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="price-features-wrapper">
+                                                <div class="block-body">
+                                                    <ul class="avl-features third">
+                                                        <li class="active">3 BHK</li>
+                                                        <li class="active">Balcony</li>
+                                                        <li class="active">Corner Plot</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="listing-detail-footer">
+                                                <div class="footer-first">
+                                                    <div class="foot-rates">
+                                                        <span class="elio_rate good">4.4</span>
+                                                        <div class="_rate_stio">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="footer-flex">
+                                                    <a href="#" class="prt-view">View</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                                    <div class="property-listing list_view row m-0">
+                                        <div class="col-md-4 p-0">
+                                            <div class="_exlio_125">For Sale</div>
+                                            <div class="list-img-slide">
+                                                <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
+                                                        class="img-fluid mx-auto" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="listing-detail-wrapper mt-1">
+                                                <div class="listing-short-detail-wrap">
+                                                    <div class="_card_list_flex mb-2">
+                                                        <div class="_card_flex_01">
+                                                            <h5><a href="#" class="prt-link-detail">Property Name
+                                                                </a></h5>
+                                                        </div>
+                                                        <div class="_card_flex_last">
+                                                            <h6 class="listing-card-info-price mb-0">₹1000</h6>
+                                                            <span>₹100/sqft</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="_card_list_flex">
+                                                        <div class="_card_flex_01">
+                                                            <h4 class="listing-name verified"><a href="#"
+                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh, India</a></h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="price-features-wrapper">
+                                                <div class="block-body">
+                                                    <ul class="avl-features third">
+                                                        <li class="active">3 BHK</li>
+                                                        <li class="active">Balcony</li>
+                                                        <li class="active">Corner Plot</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="listing-detail-footer">
+                                                <div class="footer-first">
+                                                    <div class="foot-rates">
+                                                        <span class="elio_rate good">4.4</span>
+                                                        <div class="_rate_stio">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="footer-flex">
+                                                    <a href="#" class="prt-view">View</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Item -->
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section class="theme-bg call_action_wrap-wrap">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-
                     <div class="call_action_wrap">
                         <div class="call_action_wrap-head">
                             <h3>Do You Have Questions ?</h3>
@@ -1263,10 +1004,8 @@
                         </div>
                         <a href="#" class="btn btn-call_action_wrap">Contact Us Today</a>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
-
 @endsection

@@ -5,11 +5,9 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-12 col-md-12">
-
 							<div class="breadcrumbs-wrap">
 								<h2 class="breadcrumb-title">Submit Your Property</h2>
 							</div>
-
 						</div>
 					</div>
 				</div>
@@ -18,46 +16,37 @@
 
 			<!-- ============================ Submit Property Start ================================== -->
 			<section>
-
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-12 col-md-12">
-
 							<div class="alert alert-info" role="alert">
 							<p>If you don't have an account you can create one by <a href="#">Click Here</a></p>
 							</div>
-
 						</div>
-
 						<!-- Submit Form -->
 						<div class="col-lg-12 col-md-12">
-
 							<div class="submit-page p-0">
-
 								<!-- Basic Information -->
 								<div class="frm_submit_block">
 									<h3>Basic Information</h3>
 									<div class="frm_submit_wrap">
 										<div class="form-row">
-
 											<div class="form-group col-md-12">
 												<label>Property Title<a href="#" class="tip-topdata" data-tip="Property Title"><i class="ti-help"></i></a></label>
-												<input type="text" class="form-control">
+												<input type="text" placeholder="Enter Property Title" class="form-control">
 											</div>
-
 											<div class="form-group col-md-6">
 												<label>Status</label>
 												<select id="status" class="form-control">
-													<option value="">&nbsp;</option>
+													<option value="">Select Type</option>
 													<option value="1">For Rent</option>
 													<option value="2">For Sale</option>
 												</select>
 											</div>
-
 											<div class="form-group col-md-6">
 												<label>Property Type</label>
 												<select id="ptypes" class="form-control">
-													<option value="">&nbsp;</option>
+													<option value="">Property Type</option>
 													<option value="1">Houses</option>
 													<option value="2">Apartment</option>
 													<option value="3">Villas</option>
@@ -66,21 +55,18 @@
 													<option value="6">Garage</option>
 												</select>
 											</div>
-
 											<div class="form-group col-md-6">
 												<label>Price</label>
-												<input type="text" class="form-control" placeholder="USD">
+												<input type="text" class="form-control" placeholder="Price">
 											</div>
-
 											<div class="form-group col-md-6">
 												<label>Area</label>
-												<input type="text" class="form-control">
+												<input type="text" placeholder="Area" class="form-control">
 											</div>
-
 											<div class="form-group col-md-6">
 												<label>Bedrooms</label>
 												<select id="bedrooms" class="form-control">
-													<option value="">&nbsp;</option>
+													<option value="">Select Bedrooms</option>
 													<option value="1">1</option>
 													<option value="2">2</option>
 													<option value="3">3</option>
@@ -88,11 +74,10 @@
 													<option value="5">5</option>
 												</select>
 											</div>
-
 											<div class="form-group col-md-6">
 												<label>Bathrooms</label>
 												<select id="bathrooms" class="form-control">
-													<option value="">&nbsp;</option>
+													<option value="">Select Bathrooms</option>
 													<option value="1">1</option>
 													<option value="2">2</option>
 													<option value="3">3</option>
@@ -100,76 +85,63 @@
 													<option value="5">5</option>
 												</select>
 											</div>
-
 										</div>
 									</div>
 								</div>
-
 								<!-- Gallery -->
 								<div class="frm_submit_block">
 									<h3>Gallery</h3>
 									<div class="frm_submit_wrap">
 										<div class="form-row">
-
 											<div class="form-group col-md-12">
 												<label>Upload Gallery</label>
-												<form action="https://themezhub.net/upload-target" class="dropzone dz-clickable primary-dropzone">
+												<form action="#" class="dropzone dz-clickable primary-dropzone">
 													<div class="dz-default dz-message">
 														<i class="ti-gallery"></i>
 														<span>Drag & Drop To Change Logo</span>
 													</div>
 												</form>
 											</div>
-
 										</div>
 									</div>
 								</div>
-
 								<!-- Location -->
 								<div class="frm_submit_block">
 									<h3>Location</h3>
 									<div class="frm_submit_wrap">
 										<div class="form-row">
-
 											<div class="form-group col-md-6">
 												<label>Address</label>
-												<input type="text" class="form-control">
+												<input type="text" placeholder="Enter Address" class="form-control">
 											</div>
-
 											<div class="form-group col-md-6">
 												<label>City</label>
-												<input type="text" class="form-control">
+												<input type="text" placeholder="Enter City" class="form-control">
 											</div>
-
 											<div class="form-group col-md-6">
 												<label>State</label>
-												<input type="text" class="form-control">
+												<input type="text" placeholder="Enter State" class="form-control">
 											</div>
-
 											<div class="form-group col-md-6">
 												<label>Zip Code</label>
-												<input type="text" class="form-control">
+												<input type="text" placeholder="Enter Zip Code" class="form-control">
 											</div>
-
 										</div>
 									</div>
 								</div>
-
 								<!-- Detailed Information -->
 								<div class="frm_submit_block">
 									<h3>Detailed Information</h3>
 									<div class="frm_submit_wrap">
 										<div class="form-row">
-
 											<div class="form-group col-md-12">
 												<label>Description</label>
 												<textarea class="form-control h-120"></textarea>
 											</div>
-
 											<div class="form-group col-md-4">
 												<label>Building Age (optional)</label>
 												<select id="bage" class="form-control">
-													<option value="">&nbsp;</option>
+													<option value="">Select Building Age</option>
 													<option value="1">0 - 5 Years</option>
 													<option value="2">0 - 10Years</option>
 													<option value="3">0 - 15 Years</option>
@@ -177,11 +149,10 @@
 													<option value="5">20+ Years</option>
 												</select>
 											</div>
-
 											<div class="form-group col-md-4">
 												<label>Garage (optional)</label>
 												<select id="garage" class="form-control">
-													<option value="">&nbsp;</option>
+													<option value="">Select Garage</option>
 													<option value="1">1</option>
 													<option value="2">2</option>
 													<option value="3">3</option>
@@ -189,11 +160,10 @@
 													<option value="5">5</option>
 												</select>
 											</div>
-
 											<div class="form-group col-md-4">
 												<label>Rooms (optional)</label>
 												<select id="rooms" class="form-control">
-													<option value="">&nbsp;</option>
+													<option value="">Select Rooms</option>
 													<option value="1">1</option>
 													<option value="2">2</option>
 													<option value="3">3</option>
@@ -201,7 +171,6 @@
 													<option value="5">5</option>
 												</select>
 											</div>
-
 											<div class="form-group col-md-12">
 												<label>Other Features (optional)</label>
 												<div class="o-features">
@@ -257,48 +226,38 @@
 													</ul>
 												</div>
 											</div>
-
 										</div>
 									</div>
 								</div>
-
 								<!-- Contact Information -->
 								<div class="frm_submit_block">
 									<h3>Contact Information</h3>
 									<div class="frm_submit_wrap">
 										<div class="form-row">
-
 											<div class="form-group col-md-4">
 												<label>Name</label>
-												<input type="text" class="form-control">
+												<input type="text" placeholder="Enter Name" class="form-control">
 											</div>
-
 											<div class="form-group col-md-4">
 												<label>Email</label>
-												<input type="text" class="form-control">
+												<input type="text" placeholder="Enter Email" class="form-control">
 											</div>
-
 											<div class="form-group col-md-4">
-												<label>Phone (optional)</label>
-												<input type="text" class="form-control">
+												<label>Phone</label>
+												<input type="text" placeholder="Enter Phone" class="form-control">
 											</div>
-
 										</div>
 									</div>
 								</div>
-
 								<div class="form-group">
 									<div class="col-lg-12 col-md-12">
-									<button class="btn btn-theme" type="submit">Submit & Preview</button>
+									<button class="btn btn-theme" type="submit">Submit</button>
 									</div>
 								</div>
-
 							</div>
 						</div>
-
 					</div>
 				</div>
-
 			</section>
 			<!-- ============================ Submit Property End ================================== -->
 
@@ -307,7 +266,6 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-12">
-
 							<div class="call_action_wrap">
 								<div class="call_action_wrap-head">
 									<h3>Do You Have Questions ?</h3>
@@ -315,7 +273,6 @@
 								</div>
 								<a href="#" class="btn btn-call_action_wrap">Contact Us Today</a>
 							</div>
-
 						</div>
 					</div>
 				</div>
