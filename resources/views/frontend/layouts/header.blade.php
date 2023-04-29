@@ -4,8 +4,7 @@
                 <nav id="navigation" class="navigation navigation-landscape">
                     <div class="nav-header">
                         <a class="nav-brand" href="{{route('index')}}">
-                        <h2 class="mt-2">Vishal Infra</h2>
-                            {{-- <img src="{{ asset('frontend/assets/img/logo.png')}}" class="logo" alt="" /> --}}
+                            <img src="{{ asset('frontend/assets/img/logo.png')}}" class="logo" alt="" />
                         </a>
                         <div class="nav-toggle"></div>
                         <div class="mobile_nav">
