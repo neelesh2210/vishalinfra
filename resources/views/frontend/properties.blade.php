@@ -115,7 +115,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12 pt-4">
-                                    <button class="btn theme-bg rounded full-width">Find New Home</button>
+                                    <button class="btn theme-bg rounded full-width">Find New Home <i class="fa fa-search"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -200,15 +200,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-
                     <div class="call_action_wrap">
                         <div class="call_action_wrap-head">
                             <h3>Do You Have Questions ?</h3>
                             <span>We'll help you to grow your career and growth.</span>
                         </div>
-                        <a href="#" class="btn btn-call_action_wrap">Contact Us Today</a>
+                        <a href="{{route('contact')}}" class="btn btn-call_action_wrap">Contact Us <i class="fas fa-chevron-right"></i></a>
                     </div>
-
                 </div>
             </div>
         </div>

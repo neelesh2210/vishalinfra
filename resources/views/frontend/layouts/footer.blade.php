@@ -17,12 +17,12 @@
 										<div class="footer_widget">
 											<h4 class="widget_title">Properties in India</h4>
 											<ul class="footer-menu">
-												<li><a href="#">Property in New Delhi</a></li>
-												<li><a href="#">Property in New Delhi</a></li>
-												<li><a href="#">Property in New Delhi</a></li>
-												<li><a href="#">Property in New Delhi</a></li>
-												<li><a href="#">Property in New Delhi</a></li>
-												<li><a href="#">Property in New Delhi</a></li>
+												<li><a href="#">Property in New Delhi <i class="fas fa-chevron-right"></i></a></li>
+												<li><a href="#">Property in New Delhi <i class="fas fa-chevron-right"></i></a></li>
+												<li><a href="#">Property in New Delhi <i class="fas fa-chevron-right"></i></a></li>
+												<li><a href="#">Property in New Delhi <i class="fas fa-chevron-right"></i></a></li>
+												<li><a href="#">Property in New Delhi <i class="fas fa-chevron-right"></i></a></li>
+												<li><a href="#">Property in New Delhi <i class="fas fa-chevron-right"></i></a></li>
 											</ul>
 										</div>
 									</div>
@@ -31,12 +31,12 @@
 										<div class="footer_widget">
 											<h4 class="widget_title">All Sections</h4>
 											<ul class="footer-menu">
-												<li><a href="#">Headers</a></li>
-												<li><a href="#">Features</a></li>
-												<li><a href="#">Attractive</a></li>
-												<li><a href="#">Testimonials</a></li>
-												<li><a href="#">Videos</a></li>
-												<li><a href="#">Footers</a></li>
+												<li><a href="#">Headers <i class="fas fa-chevron-right"></i></a></li>
+												<li><a href="#">Features <i class="fas fa-chevron-right"></i></a></li>
+												<li><a href="#">Attractive <i class="fas fa-chevron-right"></i></a></li>
+												<li><a href="#">Testimonials <i class="fas fa-chevron-right"></i></a></li>
+												<li><a href="#">Videos <i class="fas fa-chevron-right"></i></a></li>
+												<li><a href="#">Footers <i class="fas fa-chevron-right"></i></a></li>
 											</ul>
 										</div>
 									</div>
@@ -45,12 +45,12 @@
 										<div class="footer_widget">
 											<h4 class="widget_title">Company</h4>
 											<ul class="footer-menu">
-												<li><a href="#">About</a></li>
-												<li><a href="#">Blog</a></li>
-												<li><a href="#">Pricing</a></li>
-												<li><a href="#">Affiliate</a></li>
-												<li><a href="#">Login</a></li>
-												<li><a href="#">Changelog</a></li>
+												<li><a href="#">About <i class="fas fa-chevron-right"></i></a></li>
+												<li><a href="#">Blog <i class="fas fa-chevron-right"></i></a></li>
+												<li><a href="#">Pricing <i class="fas fa-chevron-right"></i></a></li>
+												<li><a href="#">Affiliate <i class="fas fa-chevron-right"></i></a></li>
+												<li><a href="#">Login <i class="fas fa-chevron-right"></i></a></li>
+												<li><a href="#">Changelog <i class="fas fa-chevron-right"></i></a></li>
 											</ul>
 										</div>
 									</div>
@@ -65,7 +65,7 @@
 					<div class="container">
 						<div class="row align-items-center">
 							<div class="col-lg-12 col-md-12 text-center">
-								<p class="mb-0">© 2023 all right reserved. Developed By <a href="#">Techup Technologies</a>.</p>
+								<p class="mb-0">© 2023 all right reserved. Developed By <a href="https://www.techuptechnologies.com/" style="color:#00976c;" target="_blank">Techup Technologies</a>.</p>
 							</div>
 						</div>
 					</div>

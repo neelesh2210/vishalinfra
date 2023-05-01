@@ -2,114 +2,91 @@
 @section('content')
     <!-- End Navigation -->
     <div class="clearfix"></div>
-			<!-- ============================ Page Title Start================================== -->
-			<div class="page-title" style="background:#f4f4f4 url({{ asset('frontend/assets/img/slider-3.jpg')}});" data-overlay="5">
-				<div class="ht-80"></div>
-				<div class="ht-120"></div>
-			</div>
-			<!-- ============================ Page Title End ================================== -->
+    <!-- ============================ Page Title Start================================== -->
+    <div class="page-title" style="background:#f4f4f4 url({{ asset('frontend/assets/img/slider-3.jpg') }});" data-overlay="5">
+        <div class="ht-80"></div>
+        <div class="ht-120"></div>
+    </div>
+    <!-- ============================ Page Title End ================================== -->
 
-			<!-- ============================ Agency List Start ================================== -->
-			<section class="pt-0">
-				<div class="container">
-					<div class="row align-items-center pretio_top">
-						<div class="col-lg-4 col-md-4 col-sm-12">
-							<div class="contact-box">
-								<i class="ti-shopping-cart theme-cl"></i>
-								<h4>Contact Sales</h4>
-								<p>vishalinfra@gmail.com</p>
-								<span>+91-1234567890</span>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-12">
-							<div class="contact-box">
-								<i class="ti-user theme-cl"></i>
-								<h4>Contact Sales</h4>
-								<p>vishalinfra@gmail.com</p>
-								<span>+91-1234567890</span>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-12">
-							<div class="contact-box">
-								<i class="ti-comment-alt theme-cl"></i>
-								<h4>Start Live Chat</h4>
-								<span>+91-1234567890</span>
-								<span class="live-chat">Live Chat</span>
-							</div>
-						</div>
-					</div>
+    <!-- ============================ Agency List Start ================================== -->
+    <section class="pt-0">
+        <div class="container">
+            <div class="row align-items-center pretio_top">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="contact-box">
+                        <i class="fas fa-phone-alt theme-cl"></i>
+                        <h4>Contact</h4>
+                        <p>+91-1234567890</p>
+                        <p>+91-1234567890</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="contact-box">
+                        <i class="fas fa-envelope theme-cl"></i>
+                        <h4>Email</h4>
+                        <p>vishalinfra@gmail.com</p>
+                        <p>vishalinfra@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="contact-box">
+                        <i class="fas fa-map-marker-alt theme-cl"></i>
+                        <h4>Address</h4>
+                        <p>Varanasi, Uttar Pradesh, <br> India</p>
+                    </div>
+                </div>
+            </div>
 
-					<!-- row Start -->
-					<div class="row">
-						<div class="col-lg-8 col-md-7">
-							<div class="property_block_wrap">
+            <!-- row Start -->
+            <div class="row">
+                <div class="col-lg-8 col-md-7">
+                    <div class="property_block_wrap">
+                        <div class="property_block_wrap_header">
+                            <h4 class="property_block_title">Enquiry Now -</h4>
+                        </div>
+                        <div class="block-body">
+                            <form >
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="form-group">
+                                            <label>Name</label>
+                                            <input type="text" placeholder="Enter Name" class="form-control simple">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="form-group">
+                                            <label>Email</label>
+                                            <input type="email" placeholder="Enter Email" class="form-control simple">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Subject</label>
+                                    <input type="text" placeholder="Enter Subject" class="form-control simple">
+                                </div>
+                                <div class="form-group">
+                                    <label>Message</label>
+                                    <textarea placeholder="Enter Message" class="form-control simple"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-theme" type="submit">Submit Request <i class="fas fa-chevron-right"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
 
-								<div class="property_block_wrap_header">
-									<h4 class="property_block_title">Enquiry Now -</h4>
-								</div>
+                </div>
 
-								<div class="block-body">
-									<div class="row">
-										<div class="col-lg-6 col-md-12">
-											<div class="form-group">
-												<label>Name</label>
-												<input type="text" class="form-control simple">
-											</div>
-										</div>
-										<div class="col-lg-6 col-md-12">
-											<div class="form-group">
-												<label>Email</label>
-												<input type="email" class="form-control simple">
-											</div>
-										</div>
-									</div>
+                <div class="col-lg-4 col-md-5">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30766912.422177866!2d60.95728322188994!3d19.72426012689727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1682661381672!5m2!1sen!2sin"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
 
-									<div class="form-group">
-										<label>Subject</label>
-										<input type="text" class="form-control simple">
-									</div>
-
-									<div class="form-group">
-										<label>Message</label>
-										<textarea class="form-control simple"></textarea>
-									</div>
-
-									<div class="form-group">
-										<button class="btn btn-theme" type="submit">Submit Request</button>
-									</div>
-								</div>
-
-							</div>
-
-						</div>
-
-						<div class="col-lg-4 col-md-5">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30766912.422177866!2d60.95728322188994!3d19.72426012689727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1682661381672!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-						</div>
-
-					</div>
-					<!-- /row -->
-				</div>
-			</section>
-			<!-- ============================ Agency List End ================================== -->
-
-			<!-- ============================ Call To Action ================================== -->
-			<section class="theme-bg call_action_wrap-wrap">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-
-							<div class="call_action_wrap">
-								<div class="call_action_wrap-head">
-									<h3>Do You Have Questions ?</h3>
-									<span>We'll help you to grow your career and growth.</span>
-								</div>
-								<a href="#" class="btn btn-call_action_wrap">Contact Us Today</a>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- ============================ Call To Action End ================================== -->
-            @endsection
+            </div>
+            <!-- /row -->
+        </div>
+    </section>
+@endsection

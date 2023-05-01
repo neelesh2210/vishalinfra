@@ -108,7 +108,7 @@
                             <h3>Do You Have Questions ?</h3>
                             <span>We'll help you to grow your career and growth.</span>
                         </div>
-                        <a href="#" class="btn btn-call_action_wrap">Contact Us Today</a>
+                        <a href="{{route('contact')}}" class="btn btn-call_action_wrap">Contact Us <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
             </div>

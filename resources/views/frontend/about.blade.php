@@ -24,7 +24,7 @@
 								<span class="theme-cl">Check out our company story and work process</span>
 								<p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 								<p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-								<a href="#" class="btn theme-bg btn-rounded">More About Us</a>
+								<a href="#" class="btn theme-bg btn-rounded">More About Us <i class="fas fa-chevron-right"></i></a>
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6">

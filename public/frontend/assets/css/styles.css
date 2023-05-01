@@ -97,7 +97,7 @@ a:focus {
 a.link {
   color:#e42d29; }
 a.link:hover, a.link:focus, a:hover, a:focus {
-    color:#00966a;
+    color:#fff;
 }
 a.text-success:focus, a.text-success:hover {
     color:#27b737 !important;
@@ -4434,7 +4434,7 @@ span.expiration {
 li._my_prt_list a {
     display: inline-flex;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     color:#293544;
     font-family: 'Lexend Deca', sans-serif;
 }
@@ -6103,7 +6103,7 @@ button.btn.adv-btn {
     transition: 0.6s cubic-bezier(0.45, 0.01, 0.1, 1.49);
 }
 .category-box .property_category_short .property_category_expand h4 {
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 0px;
     font-size: 16px;
     color: #1c2b56;
@@ -7379,7 +7379,7 @@ span._list_blickes.types {
 }
 
 .listing-card-info-price {
-    font-weight:700;
+    font-weight:600;
 	position:relative;
     font-size:22px;
     color:#00966a;
@@ -7568,7 +7568,7 @@ span._list_blickes.types {
     background: #232c3d;
     border-radius:0.2rem;
     height: 42px;
-	font-weight: 600;
+	font-weight: 500;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -7579,7 +7579,7 @@ span._list_blickes.types {
 	color:#626c8a;
     border-radius:0.2rem;
     height: 42px;
-	font-weight: 600;
+	font-weight: 500;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -7899,7 +7899,7 @@ span.property-type.elt_rent {
     padding: 4px 15px;
     border-radius: 2px;
     color: #ff9800;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 13px;
     display: inline-block;
 }
@@ -8206,7 +8206,7 @@ ul.inline_social li a.tw{
     margin: 0 5px;
     border-radius: 4px;
     background: #232c3d;
-	font-weight:600;
+	font-weight:500;
 	color:#ffffff;
 }
 
@@ -8267,7 +8267,7 @@ ul.inline_social li a.tw{
     color: #ffffff;
 }
 .foot-location span.pric_lio {
-    height: 42px;
+    height: 38px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -8277,8 +8277,8 @@ ul.inline_social li a.tw{
     font-weight: 500;
     color: #ffffff;
     border-radius: 50px;
-	font-family: 'Lexend Deca', sans-serif;
-    font-size: 17px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
 }
 /*----------- Agency Grid -----------*/
 .agency_gridio_wrap {
@@ -8338,7 +8338,7 @@ element.style {
     justify-content: center;
     background: #f2f4f7;
     border-radius: 50px;
-    font-weight: 600;
+    font-weight: 500;
     padding: 0 60px;
     margin-top: 2rem;
 	color:#546277;
@@ -10145,7 +10145,6 @@ li.article_comments_wrap:last-child {
     display: table;
     margin: 0 auto;
     font-size: 14px;
-    font-weight: 600;
     background: #eff1f5;
     padding: 5px 15px;
     font-size: 12px;
@@ -10782,6 +10781,7 @@ span.approved-agent i {
 	border:1px solid #e7eaf1;
 	color:#115a62;
 	border-radius:4px;
+    font-weight: 500;
 }
 .form-group.gray .form-control{
 	background:#f7f9fc;
@@ -13218,7 +13218,7 @@ table.property-table-wrap .dashboard_propert_wrapper .title .table-property-pric
     padding: 18px 40px;
     border-radius: 50px;
     color: #333640;
-    font-weight: 600;
+    font-weight: 500;
 	box-shadow: 0px 0px 0px 5px rgba(255,255,255,0.2);
 	-webkit-box-shadow: 0px 0px 0px 5px rgba(255,255,255,0.2);
 }
@@ -13289,13 +13289,12 @@ footer.skin-dark-footer h4{
     color: #ffffff;
 }
 footer.skin-dark-footer .footer_widget ul li a, footer.skin-dark-footer, footer.skin-dark-footer a {
-    color: #5e6d88;
+    color: #fdfdfd;
     transition: all ease 0.4s;
     font-size: 14px;
-    font-weight: 600;
 }
 footer.skin-dark-footer .footer_widget ul li a:hover, footer.skin-dark-footer .footer_widget ul li a:focus{
-    color:#ffffff;
+    color:#00976c;
 }
 .footer-bottom {
     padding:10px 0;
@@ -13885,9 +13884,9 @@ input.form-control.tbl_quan {
     right: 20px;
     text-align: center;
     font-size: 15px;
-    border-radius: 4px;
+    border-radius: 25px;
     text-decoration: none;
-    background:#333c56;
+    background: #00976c;
     color: #ffffff;
 }
 #back2Top:hover {
@@ -15061,7 +15060,7 @@ h1, .h1 {
 .default-btn {
     border: 0;
     outline: none;
-    font-weight: 600;
+    font-weight: 500;
 }
 .default-btn {
     padding: 10px 18px!important;
