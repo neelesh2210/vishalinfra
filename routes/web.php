@@ -30,6 +30,8 @@ Auth::routes(['login'=>false,'register'=>false,'logout'=>false]);
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
+Route::view('signin', 'frontend.signin')->name('signin');
+Route::view('signup', 'frontend.signup')->name('signup');
 //Static Route
 Route::view('about', 'frontend.about')->name('about');
 Route::view('contact', 'frontend.contact')->name('contact');

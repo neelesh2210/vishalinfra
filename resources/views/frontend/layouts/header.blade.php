@@ -9,7 +9,7 @@
                         <div class="nav-toggle"></div>
                         <div class="mobile_nav">
                             <ul>
-                                <li><a href="#" data-toggle="modal" data-target="#login"><i class="fas fa-user-circle fa-lg"></i></a></li>
+                                <li><a href="{{route('signin')}}"><i class="fas fa-user-circle fa-lg"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -65,7 +65,7 @@
                         </ul>
 
                         <ul class="nav-menu nav-menu-social align-to-right">
-                            <li class="_my_prt_list"><a href="#" data-toggle="modal" data-target="#login"><i class="fas fa-sign-in-alt mr-1"></i>Sign in</a></li>
+                            <li class="_my_prt_list"><a href="{{route('signin')}}"><i class="fas fa-sign-in-alt mr-1"></i>Sign in</a></li>
                             <li class="add-listing">
                                 <a href="{{route('submit_property')}}" class="theme-cl">
                                     <i class="fas fa-plus-circle mr-1"></i>Post Property<small>(Free)</small>
@@ -77,3 +77,4 @@
             </div>
         </div>
         <!-- End Navigation -->
+        <div class="clearfix"></div>

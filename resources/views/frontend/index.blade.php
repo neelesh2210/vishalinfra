@@ -4,13 +4,12 @@
     <div class="clearfix"></div>
     <!-- ============================ Hero Banner  Start================================== -->
     <div class="image-cover hero_banner" style="background:url({{ asset('frontend/assets/img/banner-3.png') }}) no-repeat;"
-        data-overlay="0">
+    data-overlay="0">
         <div class="container">
-            <h1 class="big-header-capt mb-0">Search Your Next Home</h1>
-            <p class="text-center mb-4">Welcome back! Let’s continue your search</p>
             <!-- Type -->
             <div class="row justify-content-center">
-                <div class="col-xl-10 col-lg-12 col-md-12">
+                <div class="col-xl-9 col-lg-9 col-md-12">
+                    <h1 class="big-header-capt mb-4">Welcome back! Let’s continue your search</h1>
                     <div class="full_search_box nexio_search lightanic_search hero_search-radius modern">
                         <div class="search_hero_wrapping">
                             <div class="row">
@@ -64,6 +63,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-xl-3 col-lg-3 col-md-9">
+                 <img src="{{ asset('frontend/assets/img/destination-projects-web.jpg') }}" class="img-fluid br_red">
+                </div>
             </div>
         </div>
     </div>
@@ -72,7 +74,7 @@
             <div class="row">
                 <div class="col-lg-9 col-md-9">
                     <div class="sec-heading">
-                        <h2>Popular Category</h2>
+                        <h2>Get Started With Exploring Real Estate Options</h2>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3">
@@ -93,8 +95,8 @@
                                     <i class="flaticon-beach-house-2"></i>
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
-                                    <h4>Family House</h4>
-                                    <p>122 Property</p>
+                                    <h4>Buying a home</h4>
+                                    <p>122 Home</p>
                                 </div>
                             </div>
                         </a>
@@ -110,8 +112,8 @@
                                 </div>
 
                                 <div class="property_category_expand property_category_short-text">
-                                    <h4>House & Villa</h4>
-                                    <p>155 Property</p>
+                                    <h4>Renting a home</h4>
+                                    <p>155 Home</p>
                                 </div>
                             </div>
                         </a>
@@ -126,7 +128,7 @@
                                     <i class="flaticon-apartments"></i>
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
-                                    <h4>Apartment</h4>
+                                    <h4>Sell/Rent your property</h4>
                                     <p>300 Property</p>
                                 </div>
                             </div>
@@ -142,7 +144,7 @@
                                     <i class="flaticon-student-housing"></i>
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
-                                    <h4>Office & Studio</h4>
+                                    <h4>Plots/Land</h4>
                                     <p>80 Property</p>
                                 </div>
                             </div>
@@ -158,7 +160,7 @@
                                     <i class="flaticon-modern-house-4"></i>
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
-                                    <h4>Villa & Condo</h4>
+                                    <h4>Buying commercial spaces</h4>
                                     <p>80 Property</p>
                                 </div>
                             </div>
