@@ -65,7 +65,7 @@
 					<div class="container">
 						<div class="row align-items-center">
 							<div class="col-lg-12 col-md-12 text-center">
-								<p class="mb-0">© 2023 all right reserved. Developed By <a href="https://www.techuptechnologies.com/" style="color:#00976c;" target="_blank">Techup Technologies</a>.</p>
+								<p class="mb-0">© 2023 all right reserved. Developed By <a href="https://www.techuptechnologies.com/" style="color:#ff5f20;" target="_blank">Techup Technologies</a>.</p>
 							</div>
 						</div>
 					</div>
