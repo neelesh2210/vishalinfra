@@ -61,7 +61,8 @@
                     <!-- Single Block Wrap -->
                     <div class="property_block_wrap">
                         <div class="property_block_wrap_header">
-                            <h3 class="property_block_title">More Details</h3><hr/>
+                            <h3 class="property_block_title">More Details</h3>
+                            <hr />
                         </div>
                         <div class="row">
                             <div class="col-md-4">
@@ -144,7 +145,8 @@
                     </div>
                     <div class="property_block_wrap">
                         <div class="property_block_wrap_header">
-                            <h4 class="property_block_title">Amenities</h4><hr/>
+                            <h4 class="property_block_title">Amenities</h4>
+                            <hr />
                         </div>
                         <div class="block-body">
                             <ul class="row p-0 m-0">
@@ -170,11 +172,15 @@
                     <!-- Single Block Wrap -->
                     <div class="property_block_wrap">
                         <div class="property_block_wrap_header">
-                            <h4 class="property_block_title">Popular Landmarks Nearby</h4><hr/>
+                            <h4 class="property_block_title">Popular Landmarks Nearby</h4>
+                            <hr />
                         </div>
                         <div class="block-body">
                             <div class="map-container">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115408.09799694136!2d82.90870601301123!3d25.320894921383157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2db76febcf4d%3A0x68131710853ff0b5!2sVaranasi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1683535825071!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115408.09799694136!2d82.90870601301123!3d25.320894921383157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2db76febcf4d%3A0x68131710853ff0b5!2sVaranasi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1683535825071!5m2!1sen!2sin"
+                                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
@@ -234,6 +240,146 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-0">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="list_views">
+                    <!-- Single Item -->
+                    <div class="single_items">
+                        <div class="row">
+                            <!-- Single Property -->
+                            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                                <div class="property-listing list_view row m-0">
+                                    <div class="col-md-4 p-0">
+                                        <div class="_exlio_125">For Sale</div>
+                                        <div class="list-img-slide">
+                                            <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
+                                                    class="img-fluid mx-auto" alt="" /></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="listing-detail-wrapper mt-1">
+                                            <div class="listing-short-detail-wrap">
+                                                <div class="_card_list_flex mb-2">
+                                                    <div class="_card_flex_01">
+                                                        <h5><a href="#" class="prt-link-detail">Red Carpet Real
+                                                                Estate
+                                                            </a></h5>
+                                                    </div>
+                                                    <div class="_card_flex_last">
+                                                        <h6 class="listing-card-info-price mb-0">₹1000</h6>
+                                                        <span>₹100/sqft</span>
+                                                    </div>
+                                                </div>
+                                                <div class="_card_list_flex">
+                                                    <div class="_card_flex_01">
+                                                        <h4 class="listing-name verified"><a href="#"
+                                                                class="prt-link-detail">Varanasi, Uttar Pradesh, India</a>
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="price-features-wrapper">
+                                            <div class="block-body">
+                                                <ul class="avl-features third">
+                                                    <li class="active">3 BHK</li>
+                                                    <li class="active">Balcony</li>
+                                                    <li class="active">Corner Plot</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="listing-detail-footer">
+                                            <div class="footer-first">
+                                                <div class="foot-rates">
+                                                    <span class="elio_rate good">4.4</span>
+                                                    <div class="_rate_stio">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="footer-flex">
+                                                <a href="#" class="prt-view">View</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                                <div class="property-listing list_view row m-0">
+                                    <div class="col-md-4 p-0">
+                                        <div class="_exlio_125">For Sale</div>
+                                        <div class="list-img-slide">
+                                            <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
+                                                    class="img-fluid mx-auto" alt="" /></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="listing-detail-wrapper mt-1">
+                                            <div class="listing-short-detail-wrap">
+                                                <div class="_card_list_flex mb-2">
+                                                    <div class="_card_flex_01">
+                                                        <h5><a href="#" class="prt-link-detail">Red Carpet Real
+                                                                Estate
+                                                            </a></h5>
+                                                    </div>
+                                                    <div class="_card_flex_last">
+                                                        <h6 class="listing-card-info-price mb-0">₹1000</h6>
+                                                        <span>₹100/sqft</span>
+                                                    </div>
+                                                </div>
+                                                <div class="_card_list_flex">
+                                                    <div class="_card_flex_01">
+                                                        <h4 class="listing-name verified"><a href="#"
+                                                                class="prt-link-detail">Varanasi, Uttar Pradesh, India</a>
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="price-features-wrapper">
+                                            <div class="block-body">
+                                                <ul class="avl-features third">
+                                                    <li class="active">3 BHK</li>
+                                                    <li class="active">Balcony</li>
+                                                    <li class="active">Corner Plot</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="listing-detail-footer">
+                                            <div class="footer-first">
+                                                <div class="foot-rates">
+                                                    <span class="elio_rate good">4.4</span>
+                                                    <div class="_rate_stio">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="footer-flex">
+                                                <a href="#" class="prt-view">View</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Item -->
+                </div>
+              </div>
             </div>
         </div>
     </section>
