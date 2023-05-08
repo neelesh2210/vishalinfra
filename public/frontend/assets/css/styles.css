@@ -71,7 +71,7 @@ i.req {
 }
 body {
 	background: #ffffff;
-	color:#5d6881;
+	color:#000;
 	font-size:15px;
 	font-family: 'Lexend Deca', sans-serif;
 	margin: 0;
@@ -15132,4 +15132,14 @@ border-radius: 10px;
     color: #000;
     font-size: 14px;
     line-height: 18px;
+}
+
+  .moretext {
+    display: none;
+  }
+  .morecontent span {
+    display: none;
+}
+.morelink {
+    display: block;
 }
