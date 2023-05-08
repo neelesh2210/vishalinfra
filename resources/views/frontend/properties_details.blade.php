@@ -90,6 +90,47 @@
                     </div> --}}
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="property-sidebar side_stiky">
+                        <div class="sider_blocks_wrap shadows">
+                          <div class="sidetab-content">
+                              <!-- Appointment Now Tab -->
+                                <div class="sider-block-body p-3">
+                                  <div class="row">
+                                      <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <h5>Fill this one-time contact form</h5>
+                                      <div class="form-group">
+                                        <label>Full Name</label>
+                                        <input type="text" class="form-control light" placeholder="Enter Name">
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                      <div class="form-group">
+                                        <label>Email ID</label>
+                                        <input type="text" class="form-control light" placeholder="Enter Email">
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                      <div class="form-group">
+                                        <label>Contact Number</label>
+                                        <input type="text" class="form-control light" placeholder="Enter Phone No.">
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                      <div class="form-group">
+                                        <label>Message</label>
+                                        <textarea class="form-control light" placeholder="Explain Query"></textarea>
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                      <div class="form-group">
+                                        <button class="btn book_btn theme-bg">Submit</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
                     <div class="property-sidebar">
                         <div class="sidebar-widgets">
                             <h4>Similar Property</h4>

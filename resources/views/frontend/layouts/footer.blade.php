@@ -27,7 +27,7 @@
 										</div>
 									</div>
 
-									<div class="col-lg-4 col-md-4">
+									<div class="col-lg-4 col-md-4 col-xs-6">
 										<div class="footer_widget">
 											<h4 class="widget_title">All Sections</h4>
 											<ul class="footer-menu">
@@ -41,7 +41,7 @@
 										</div>
 									</div>
 
-									<div class="col-lg-4 col-md-4">
+									<div class="col-lg-4 col-md-4 col-xs-6">
 										<div class="footer_widget">
 											<h4 class="widget_title">Company</h4>
 											<ul class="footer-menu">

@@ -32,7 +32,7 @@
 									<div class="frm_submit_wrap">
 										<div class="form-row">
 											<div class="form-group col-md-12">
-												<label>Property Title<a href="#" class="tip-topdata" data-tip="Property Title"><i class="ti-help"></i></a></label>
+												<label>Property Title</label>
 												<input type="text" placeholder="Enter Property Title" class="form-control">
 											</div>
 											<div class="form-group col-md-6">

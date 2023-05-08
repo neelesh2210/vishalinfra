@@ -3205,17 +3205,17 @@ footer.style-2 {
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-    padding: .375rem .75rem;
+    padding: 0.375rem 0.75rem;
     margin-bottom: 0;
-    font-size: 1rem;
+    /* font-size: 1rem; */
     font-weight: 400;
     line-height: 1.5;
     color: #495057;
     text-align: center;
     white-space: nowrap;
-    background-color: #e9ecef;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
+    background-color: #e5f4f0;
+    border: 1px solid #b7e1d6;
+    border-radius: 0;
 }
 .input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle), .input-group>.input-group-append:last-child>.input-group-text:not(:last-child), .input-group>.input-group-append:not(:last-child)>.btn, .input-group>.input-group-append:not(:last-child)>.input-group-text, .input-group>.input-group-prepend>.btn, .input-group>.input-group-prepend>.input-group-text {
     border-top-right-radius: 0;
@@ -3395,9 +3395,9 @@ nav a:hover {
     position: absolute;
     width: 24px;
     height: 2px;
-    background-color: #70798b;
+    background-color: #000;
     border-radius: 10px;
-    box-shadow: 0 .5em 0 0 #70798b, 0 1em 0 0 #70798b
+    box-shadow: 0 0.5em 0 0 #000, 0 1em 0 0 #000
 }
 
 .navigation-portrait .nav-toggle {
@@ -3437,7 +3437,7 @@ nav a:hover {
     margin: 10px 7px;
     display: none;
     float: right;
-    color: #70798b;
+    color: #000;
     font-size: 26px;
     cursor: pointer
 }
@@ -3504,7 +3504,7 @@ nav a:hover {
 .nav-menu>.active>a,
 .nav-menu>.focus>a,
 .nav-menu>li:hover>a {
-    color: #234ca0 !important;
+    color: #000 !important;
 }
 
 .nav-menu>li>a>[class*=ion-], .nav-menu>li>a>i {
@@ -10253,11 +10253,11 @@ h4.modal-header-title {
     font-weight: 300;
 }
 .btn.pop-login {
-    border-radius:0.4rem;
-    padding: 20px 0;
-	background:#234ca0;
-	border-color:#234ca0;
-	margin-top:0.6rem;
+    border-radius: 30px;
+    padding: 15px 0;
+    background: #234ca0;
+    border-color: #234ca0;
+    margin-top: 0.5rem;
 }
 .modal-divider {
     position: relative;
@@ -10358,7 +10358,7 @@ span.mod-close {
     padding:2.5rem;
 }
 .resp_log_caption label {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     color: #2a3961;
 }
@@ -10366,7 +10366,7 @@ span.mod-close {
     background: rgba(0, 150, 106,0.1);
     border: 1px solid rgba(0, 150, 106,0.2);
     color: #234ca0;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
 }
 .resp_log_caption .form-group .form-control:focus{
@@ -13516,9 +13516,14 @@ text-align: center;
     -moz-box-shadow: 0 0 20px 0 rgba(62,28,131,0.1);
 }
 .contact-box i {
-    font-size:3em;
-    display:table;
+    width: 61px;
+    height: 60px;
+    font-size: 2em;
+    display: table;
     margin: 0 auto 1rem auto;
+    border: 1px solid #004e9d;
+    padding: 15px;
+    border-radius: 50px;
 }
 .contact-box h4 {
     font-size: 18px;
@@ -14442,6 +14447,12 @@ h1, .h1 {
 
 
 @media (max-width: 767px) {
+    .nav-style-separated ul>li:not(:last-child)>a:after {
+        display: none;
+       }
+       .col-xs-6{
+       width: 50%;
+       }
 	ul.prs_lists li span {
 		display: inline-block;
 		margin-bottom: 0;
