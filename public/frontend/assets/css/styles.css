@@ -7532,7 +7532,7 @@ span._list_blickes.types {
 }
 .listing-detail-footer {
     padding: 1rem 1.5rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     border-top: 1px solid #e4e8f3;
     display: flex;
     align-items: center;
@@ -7570,7 +7570,7 @@ span._list_blickes.types {
     color: #ffffff !important;
     background: #ff5f20;
     border-radius:0.2rem;
-    height: 42px;
+    height: 32px;
 	font-weight: 500;
     display: inline-flex;
     align-items: center;
@@ -7737,7 +7737,7 @@ a._calss_tyui {
 }
 .property-listing.list_view .listing-detail-footer {
     border: none;
-    padding: 1rem 0rem;
+    padding: 0.5rem 0rem 0;
 }
 .property-listing.list_view .foot-rates {
     display: flex;
@@ -8543,7 +8543,7 @@ span.agents_count {
     display: block;
     list-style: none;
     position: relative;
-    margin: 10px 0 10px;
+    margin: 10px 0 5px;
     padding-left: 30px;
 	-ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;

@@ -798,7 +798,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="footer-flex">
-                                                    <a href="#" class="prt-view">View</a>
+                                                    <a href="#" class="prt-view">View <i class="fas fa-chevron-right pl-1"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -857,7 +857,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="footer-flex">
-                                                    <a href="#" class="prt-view">View</a>
+                                                    <a href="#" class="prt-view">View <i class="fas fa-chevron-right pl-1"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -922,7 +922,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="footer-flex">
-                                                    <a href="#" class="prt-view">View</a>
+                                                    <a href="#" class="prt-view">View <i class="fas fa-chevron-right pl-1"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -981,7 +981,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="footer-flex">
-                                                    <a href="#" class="prt-view">View</a>
+                                                    <a href="#" class="prt-view">View <i class="fas fa-chevron-right pl-1"></i></a>
                                                 </div>
                                             </div>
                                         </div>
