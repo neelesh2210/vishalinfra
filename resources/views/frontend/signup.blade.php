@@ -13,10 +13,28 @@
                                 <h3>Sign Up</h3>
                                 <hr />
                                 <form>
+                                <div class="form-group">
+                                    <label>I am</label>
+                                    <div class="input-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Owner" value="Owner">
+                                            <label class="form-check-label" for="Owner">Buyer/Owner </label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Agent" value="Agent">
+                                            <label class="form-check-label" for="Agent">Agent </label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Builder" value="Builder">
+                                            <label class="form-check-label" for="Builder">Builder </label>
+                                          </div>
+                                    </div>
+                                </div>
                                     <div class="form-group">
                                         <label>Name</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Enter Name" name="name">
+                                            <input type="text" class="form-control" placeholder="Enter Name"
+                                                name="name">
                                             <div class="input-group-append ">
                                                 <div class="input-group-text">
                                                     <i class="fas fa-user"></i>
@@ -27,7 +45,8 @@
                                     <div class="form-group">
                                         <label>Email ID</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Enter E-mail" name="email">
+                                            <input type="text" class="form-control" placeholder="Enter E-mail"
+                                                name="email">
                                             <div class="input-group-append ">
                                                 <div class="input-group-text">
                                                     <i class="fas fa-envelope"></i>
@@ -39,11 +58,12 @@
                                     <div class="form-group">
                                         <label>Password</label>
                                         <div class="input-group" id="show_hide_password">
-                                            <input type="password" class="form-control " placeholder="Password" name="password"
-                                                id="password">
+                                            <input type="password" class="form-control " placeholder="Password"
+                                                name="password" id="password">
                                             <div class="input-group-append ">
                                                 <div class="input-group-text">
-                                                    <a href=""><i class="fas fa-low-vision" aria-hidden="true"></i></a>
+                                                    <a href=""><i class="fas fa-low-vision"
+                                                            aria-hidden="true"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -51,7 +71,8 @@
                                     <div class="form-group">
                                         <label>Phone</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Enter Phone" name="phone">
+                                            <input type="text" class="form-control" placeholder="Enter Phone"
+                                                name="phone">
                                             <div class="input-group-append ">
                                                 <div class="input-group-text">
                                                     <i class="fas fa-phone-alt"></i>
@@ -59,20 +80,20 @@
                                             </div>
                                         </div>
                                     </div>
-                                        <div class="form-group">
-                                            <div class="eltio_ol9">
-                                                <div class="eltio_k1">
-                                                    <input id="dds" class="checkbox-custom" name="dds"
-                                                        type="checkbox">
-                                                    <label for="dds" class="checkbox-custom-label">I agree to Vishal
-                                                        Infra T&C, Privacy Policy, & Cookie Policy</label>
-                                                </div>
+                                    <div class="form-group">
+                                        <div class="eltio_ol9">
+                                            <div class="eltio_k1">
+                                                <input id="dds" class="checkbox-custom" name="dds"
+                                                    type="checkbox">
+                                                <label for="dds" class="checkbox-custom-label">I agree to Vishal
+                                                    Infra T&C, Privacy Policy, & Cookie Policy</label>
                                             </div>
                                         </div>
+                                    </div>
 
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-md full-width pop-login">Register</button>
-                                        </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-md full-width pop-login">Register</button>
+                                    </div>
 
                                 </form>
                                 <div class="login-block">
@@ -87,9 +108,9 @@
             <!-- /row -->
         </div>
     </section>
-    <script src="{{ asset('frontend/assets/js/jquery.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery.min.js') }}"></script>
     <script type="text/javascript">
-         $(document).ready(function() {
+        $(document).ready(function() {
             $("#show_hide_password a").on('click', function(event) {
                 event.preventDefault();
                 if ($('#show_hide_password input').attr("type") == "text") {
