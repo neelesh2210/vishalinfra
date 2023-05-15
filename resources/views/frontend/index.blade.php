@@ -1,12 +1,9 @@
 @extends('frontend.layouts.app')
 @section('content')
-    <!-- End Navigation -->
     <div class="clearfix"></div>
-    <!-- ============================ Hero Banner  Start================================== -->
     <div class="image-cover hero_banner" style="background:url({{ asset('frontend/assets/img/banner-3.png') }}) no-repeat;"
-    data-overlay="0">
+        data-overlay="0">
         <div class="container">
-            <!-- Type -->
             <div class="row justify-content-center">
                 <div class="col-xl-9 col-lg-9 col-md-12">
                     <h1 class="big-header-capt mb-4">Welcome back! Let’s continue your search</h1>
@@ -64,7 +61,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-9">
-                 <img src="{{ asset('frontend/assets/img/destination-projects-web.jpg') }}" class="img-fluid br_red">
+                    <img src="{{ asset('frontend/assets/img/destination-projects-web.jpg') }}" class="img-fluid br_red">
                 </div>
             </div>
         </div>
@@ -79,15 +76,13 @@
                 </div>
                 <div class="col-lg-3 col-md-3">
                     <div class="float-end mt-2">
-                        <a href="#" class="default-btn border-radius">
-                            View All <i class="fas fa-chevron-circle-right"></i>
+                        <a href="#" class="default-btn border-radius"> View All <i class="fas fa-chevron-circle-right"></i>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg col-md-4">
-                    <!-- Single Category -->
                     <div class="property_cats_boxs">
                         <a href="#" class="category-box">
                             <div class="property_category_short">
@@ -103,14 +98,12 @@
                     </div>
                 </div>
                 <div class="col-lg col-md-4">
-                    <!-- Single Category -->
                     <div class="property_cats_boxs">
                         <a href="#" class="category-box">
                             <div class="property_category_short">
                                 <div class="category-icon clip-2">
                                     <i class="flaticon-cabin"></i>
                                 </div>
-
                                 <div class="property_category_expand property_category_short-text">
                                     <h4>Renting a home</h4>
                                     <p>155 Home</p>
@@ -120,7 +113,6 @@
                     </div>
                 </div>
                 <div class="col-lg col-md-4">
-                    <!-- Single Category -->
                     <div class="property_cats_boxs">
                         <a href="#" class="category-box">
                             <div class="property_category_short">
@@ -136,7 +128,6 @@
                     </div>
                 </div>
                 <div class="col-lg col-md-4">
-                    <!-- Single Category -->
                     <div class="property_cats_boxs">
                         <a href="#" class="category-box">
                             <div class="property_category_short">
@@ -152,7 +143,6 @@
                     </div>
                 </div>
                 <div class="col-lg col-md-4">
-                    <!-- Single Category -->
                     <div class="property_cats_boxs">
                         <a href="#" class="category-box">
                             <div class="property_category_short">
@@ -189,216 +179,52 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="item-slide space">
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="property-listing property-2">
-                                <div class="listing-img-wrapper">
-                                    <div class="list-img-slide">
-                                        <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
-                                                class="img-fluid mx-auto" alt="" /></a>
+                        @foreach ($properties as $property)
+                            <div class="single_items">
+                                <div class="property-listing property-2">
+                                    <div class="listing-img-wrapper">
+                                        <div class="list-img-slide">
+                                            <a href="#">
+                                                <img src="{{ asset('backend/img/properies/'.$property->thumbnail_img) }}" class="img-fluid mx-auto" alt="" />
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="listing-detail-wrapper">
-                                    <div class="listing-short-detail-wrap">
-                                        <div class="_card_list_flex mb-2">
-                                            <div class="_card_flex_01">
-                                                <span class="property-type elt_rent">For Rent</span>
-                                            </div>
-                                            <div class="_card_flex_last">
-                                                <div class="prt_saveed_12lk">
-                                                    <label class="toggler toggler-danger"><input type="checkbox"><i
-                                                            class="fas fa-heart"></i></label>
+                                    <div class="listing-detail-wrapper">
+                                        <div class="listing-short-detail-wrap">
+                                            <div class="_card_list_flex mb-2">
+                                                <div class="_card_flex_01">
+                                                    <span class="property-type elt_rent">For Rent</span>
+                                                </div>
+                                                <div class="_card_flex_last">
+                                                    <div class="prt_saveed_12lk">
+                                                        <label class="toggler toggler-danger"><input type="checkbox"><i class="fas fa-heart"></i></label>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="listing-short-detail">
-                                            <h4 class="listing-name verified"><a href="#"
-                                                    class="prt-link-detail">Red Carpet Real Estate</a></h4>
-                                            <div class="foot-location"><img
-                                                    src="{{ asset('frontend/assets/img/pin.svg') }}" width="18"
-                                                    alt="" />Varanasi, Uttar Pradesh, India</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="listing-detail-footer">
-                                    <div class="footer-first">
-                                        <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
+                                            <div class="listing-short-detail">
+                                                <h4 class="listing-name verified"><a href="#" class="prt-link-detail">{{$property->name}}</a></h4>
+                                                @if($property->project->pincode || $property->project->address)
+                                                <div class="foot-location">
+                                                    <img src="{{ asset('frontend/assets/img/pin.svg') }}" width="18" alt="" />{{$property->project->address}}
+                                                    @if($property->project->pincode)
+                                                        {{$property->project->city}}, {{$property->project->state}}, {{$property->project->country}},{{$property->project->pincode}}
+                                                    @endif
+                                                </div>
+                                                @endif
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="footer-flex">
-                                        <span>Apartment</span>
+                                    <div class="listing-detail-footer">
+                                        <div class="footer-first">
+                                            <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft</div>
+                                        </div>
+                                        <div class="footer-flex">
+                                            <span>Apartment</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="property-listing property-2">
-                                <div class="listing-img-wrapper">
-                                    <div class="list-img-slide">
-                                        <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
-                                                class="img-fluid mx-auto" alt="" /></a>
-                                    </div>
-                                </div>
-                                <div class="listing-detail-wrapper">
-                                    <div class="listing-short-detail-wrap">
-                                        <div class="_card_list_flex mb-2">
-                                            <div class="_card_flex_01">
-                                                <span class="property-type elt_rent">For Rent</span>
-                                            </div>
-                                            <div class="_card_flex_last">
-                                                <div class="prt_saveed_12lk">
-                                                    <label class="toggler toggler-danger"><input type="checkbox"><i
-                                                            class="fas fa-heart"></i></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="listing-short-detail">
-                                            <h4 class="listing-name verified"><a href="#"
-                                                    class="prt-link-detail">Red Carpet Real Estate</a></h4>
-                                            <div class="foot-location"><img
-                                                    src="{{ asset('frontend/assets/img/pin.svg') }}" width="18"
-                                                    alt="" />Varanasi, Uttar Pradesh, India</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="listing-detail-footer">
-                                    <div class="footer-first">
-                                        <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
-                                        </div>
-                                    </div>
-                                    <div class="footer-flex">
-                                        <span>Apartment</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="property-listing property-2">
-                                <div class="listing-img-wrapper">
-                                    <div class="list-img-slide">
-                                        <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
-                                                class="img-fluid mx-auto" alt="" /></a>
-                                    </div>
-                                </div>
-                                <div class="listing-detail-wrapper">
-                                    <div class="listing-short-detail-wrap">
-                                        <div class="_card_list_flex mb-2">
-                                            <div class="_card_flex_01">
-                                                <span class="property-type elt_rent">For Rent</span>
-                                            </div>
-                                            <div class="_card_flex_last">
-                                                <div class="prt_saveed_12lk">
-                                                    <label class="toggler toggler-danger"><input type="checkbox"><i
-                                                            class="fas fa-heart"></i></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="listing-short-detail">
-                                            <h4 class="listing-name verified"><a href="#"
-                                                    class="prt-link-detail">Red Carpet Real Estate</a></h4>
-                                            <div class="foot-location"><img
-                                                    src="{{ asset('frontend/assets/img/pin.svg') }}" width="18"
-                                                    alt="" />Varanasi, Uttar Pradesh, India</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="listing-detail-footer">
-                                    <div class="footer-first">
-                                        <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
-                                        </div>
-                                    </div>
-                                    <div class="footer-flex">
-                                        <span>Apartment</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="property-listing property-2">
-                                <div class="listing-img-wrapper">
-                                    <div class="list-img-slide">
-                                        <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
-                                                class="img-fluid mx-auto" alt="" /></a>
-                                    </div>
-                                </div>
-                                <div class="listing-detail-wrapper">
-                                    <div class="listing-short-detail-wrap">
-                                        <div class="_card_list_flex mb-2">
-                                            <div class="_card_flex_01">
-                                                <span class="property-type elt_rent">For Rent</span>
-                                            </div>
-                                            <div class="_card_flex_last">
-                                                <div class="prt_saveed_12lk">
-                                                    <label class="toggler toggler-danger"><input type="checkbox"><i
-                                                            class="fas fa-heart"></i></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="listing-short-detail">
-                                            <h4 class="listing-name verified"><a href="#"
-                                                    class="prt-link-detail">Red Carpet Real Estate</a></h4>
-                                            <div class="foot-location"><img
-                                                    src="{{ asset('frontend/assets/img/pin.svg') }}" width="18"
-                                                    alt="" />Varanasi, Uttar Pradesh, India</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="listing-detail-footer">
-                                    <div class="footer-first">
-                                        <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
-                                        </div>
-                                    </div>
-                                    <div class="footer-flex">
-                                        <span>Apartment</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="property-listing property-2">
-                                <div class="listing-img-wrapper">
-                                    <div class="list-img-slide">
-                                        <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
-                                                class="img-fluid mx-auto" alt="" /></a>
-                                    </div>
-                                </div>
-                                <div class="listing-detail-wrapper">
-                                    <div class="listing-short-detail-wrap">
-                                        <div class="_card_list_flex mb-2">
-                                            <div class="_card_flex_01">
-                                                <span class="property-type elt_rent">For Rent</span>
-                                            </div>
-                                            <div class="_card_flex_last">
-                                                <div class="prt_saveed_12lk">
-                                                    <label class="toggler toggler-danger"><input type="checkbox"><i
-                                                            class="fas fa-heart"></i></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="listing-short-detail">
-                                            <h4 class="listing-name verified"><a href="#"
-                                                    class="prt-link-detail">Red Carpet Real Estate</a></h4>
-                                            <div class="foot-location"><img
-                                                    src="{{ asset('frontend/assets/img/pin.svg') }}" width="18"
-                                                    alt="" />Varanasi, Uttar Pradesh, India</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="listing-detail-footer">
-                                    <div class="footer-first">
-                                        <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
-                                        </div>
-                                    </div>
-                                    <div class="footer-flex">
-                                        <span>Apartment</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -759,7 +585,8 @@
                                                 <div class="listing-short-detail-wrap">
                                                     <div class="_card_list_flex mb-2">
                                                         <div class="_card_flex_01">
-                                                            <h5><a href="#" class="prt-link-detail">Red Carpet Real Estate
+                                                            <h5><a href="#" class="prt-link-detail">Red Carpet Real
+                                                                    Estate
                                                                 </a></h5>
                                                         </div>
                                                         <div class="_card_flex_last">
@@ -770,7 +597,8 @@
                                                     <div class="_card_list_flex">
                                                         <div class="_card_flex_01">
                                                             <h4 class="listing-name verified"><a href="#"
-                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh, India</a></h4>
+                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh,
+                                                                    India</a></h4>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -798,7 +626,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="footer-flex">
-                                                    <a href="#" class="prt-view">View <i class="fas fa-chevron-right pl-1"></i></a>
+                                                    <a href="#" class="prt-view">View <i
+                                                            class="fas fa-chevron-right pl-1"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -818,7 +647,8 @@
                                                 <div class="listing-short-detail-wrap">
                                                     <div class="_card_list_flex mb-2">
                                                         <div class="_card_flex_01">
-                                                            <h5><a href="#" class="prt-link-detail">Red Carpet Real Estate
+                                                            <h5><a href="#" class="prt-link-detail">Red Carpet Real
+                                                                    Estate
                                                                 </a></h5>
                                                         </div>
                                                         <div class="_card_flex_last">
@@ -829,7 +659,8 @@
                                                     <div class="_card_list_flex">
                                                         <div class="_card_flex_01">
                                                             <h4 class="listing-name verified"><a href="#"
-                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh, India</a></h4>
+                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh,
+                                                                    India</a></h4>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -857,7 +688,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="footer-flex">
-                                                    <a href="#" class="prt-view">View <i class="fas fa-chevron-right pl-1"></i></a>
+                                                    <a href="#" class="prt-view">View <i
+                                                            class="fas fa-chevron-right pl-1"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -883,7 +715,8 @@
                                                 <div class="listing-short-detail-wrap">
                                                     <div class="_card_list_flex mb-2">
                                                         <div class="_card_flex_01">
-                                                            <h5><a href="#" class="prt-link-detail">Red Carpet Real Estate
+                                                            <h5><a href="#" class="prt-link-detail">Red Carpet Real
+                                                                    Estate
                                                                 </a></h5>
                                                         </div>
                                                         <div class="_card_flex_last">
@@ -894,7 +727,8 @@
                                                     <div class="_card_list_flex">
                                                         <div class="_card_flex_01">
                                                             <h4 class="listing-name verified"><a href="#"
-                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh, India</a></h4>
+                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh,
+                                                                    India</a></h4>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -922,7 +756,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="footer-flex">
-                                                    <a href="#" class="prt-view">View <i class="fas fa-chevron-right pl-1"></i></a>
+                                                    <a href="#" class="prt-view">View <i
+                                                            class="fas fa-chevron-right pl-1"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -942,7 +777,8 @@
                                                 <div class="listing-short-detail-wrap">
                                                     <div class="_card_list_flex mb-2">
                                                         <div class="_card_flex_01">
-                                                            <h5><a href="#" class="prt-link-detail">Red Carpet Real Estate
+                                                            <h5><a href="#" class="prt-link-detail">Red Carpet Real
+                                                                    Estate
                                                                 </a></h5>
                                                         </div>
                                                         <div class="_card_flex_last">
@@ -953,7 +789,8 @@
                                                     <div class="_card_list_flex">
                                                         <div class="_card_flex_01">
                                                             <h4 class="listing-name verified"><a href="#"
-                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh, India</a></h4>
+                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh,
+                                                                    India</a></h4>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -981,7 +818,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="footer-flex">
-                                                    <a href="#" class="prt-view">View <i class="fas fa-chevron-right pl-1"></i></a>
+                                                    <a href="#" class="prt-view">View <i
+                                                            class="fas fa-chevron-right pl-1"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1004,7 +842,8 @@
                             <h3>Do You Have Questions ?</h3>
                             <span>We'll help you to grow your career and growth.</span>
                         </div>
-                        <a href="{{route('contact')}}" class="btn btn-call_action_wrap">Contact Us <i class="fas fa-chevron-right"></i></a>
+                        <a href="{{ route('contact') }}" class="btn btn-call_action_wrap">Contact Us <i
+                                class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
             </div>

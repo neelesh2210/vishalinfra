@@ -20,8 +20,6 @@ class CreateUsersTable extends Migration
             $table->string('name',150)->nullable();
             $table->bigInteger('phone')->unique();
             $table->string('email')->nullable();
-            $table->string('referrer_code');
-            $table->string('referral_code')->nullable();
             $table->string('password');
             $table->enum('is_verified', [1, 0])->default(0);
             $table->enum('is_kyced', [1, 0])->default(0);

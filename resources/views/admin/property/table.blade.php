@@ -18,13 +18,20 @@
                 <td class="text-center">{{ucwords(str_replace('_',' ',$property->properties_type))}}</td>
                 <td>
                     <b>Name: </b>{{$property->project->name}} <br>
-                    <b>Address: </b>{{$property->project->address}} {{$property->project->city}}, {{$property->project->state}}, {{$property->project->country}},{{$property->project->pincode}}
+                    @if($property->project->pincode || $property->project->address)
+                        <b>Address: </b>{{$property->project->address}}
+                        @if($property->project->pincode)
+                            {{$property->project->city}}, {{$property->project->state}}, {{$property->project->country}},{{$property->project->pincode}}
+                        @endif
+                    @endif
                 </td>
                 <td class="text-center">{{optional($property->phase)->name}}</td>
                 <td>
                     <b>Name: </b>{{$property->name}} <br>
-                    <b>Plot Number: </b>{{$property->plot_number}} <br>
-                    <b>Plot Area: </b>{{$property->plot_area}} sqft. ({{$property->plot_length}}X{{$property->plot_breadth}})
+                    @if($property->plot_number)
+                        <b>Plot Number: </b>{{$property->plot_number}} <br>
+                        <b>Plot Area: </b>{{$property->plot_area}} sqft. ({{$property->plot_length}}X{{$property->plot_breadth}})
+                    @endif
                 </td>
                 <td>
                     <b>Price: </b>{{$property->expected_price}} <br>

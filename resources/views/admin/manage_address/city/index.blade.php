@@ -9,7 +9,7 @@
                             <div class="card-header">
                                 <h5 class="mb-0">@isset($page_title) {{ $page_title }} @endisset</h5>
                                 <div class="card-tools">
-                                    <form action="{{route('admin.customers')}}" id="search_form">
+                                    <form action="{{route('admin.cities.index')}}" id="search_form">
                                         <div class="row">
                                             {{-- <div class="input-group input-group-sm mr-2 sel" style="width: 200px;">
                                                 <select name="search_country" class="form-control float-right select2" onchange="fillter()">

@@ -482,14 +482,6 @@
                                                         <label class="col-from-label">Final Price <span class="text-danger">*</span></label>
                                                         <input type="number" step="0.01" min="0.00" class="form-control" name="final_price" id="final_price" placeholder="Final Price..." required>
                                                     </div>
-                                                    <div class="col-md-3">
-                                                        <label class="col-from-label">Commission <span class="text-danger">*</span></label>
-                                                        <input type="number" step="0.01" min="0.00" class="form-control" name="commission" id="commission" placeholder="Commission..." required>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <label class="col-from-label">Prize <span class="text-danger">*</span></label>
-                                                        <input type="number" step="0.01" min="0.00" class="form-control" name="prize" id="prize" placeholder="Prize..." required>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

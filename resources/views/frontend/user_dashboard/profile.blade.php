@@ -13,22 +13,6 @@
                 <div class="row">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="mb-3 text-uppercase bg-light p-2">Sponsor Information</h5>
-                            <hr>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="sponsor_name" class="form-label">Name</label>
-                                    <input type="text" id="sponsor_name" class="form-control" value="{{optional($profile->sponserDetail)->name}}" placeholder="Sponsor Name..." readonly>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="sponsor_email" class="form-label">Email</label>
-                                    <input type="email" id="sponsor_email" class="form-control" value="{{optional($profile->sponserDetail)->email}}" placeholder="Sponsor Email..." readonly>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="sponsor_phone" class="form-label">Phone</label>
-                                    <input type="number" id="sponsor_phone" class="form-control" value="{{optional($profile->sponserDetail)->phone}}" placeholder="Sponsor Phone..." readonly>
-                                </div>
-                            </div>
                             <h5 class="mb-3 text-uppercase bg-light p-2">Personal Information</h5>
                             <hr>
                             <form action="{{route('user.save.profile')}}" method="POST" enctype="multipart/form-data">

@@ -48,8 +48,6 @@ class CreatePropertiesTable extends Migration
             $table->double('base_price',15,2)->nullable();
             $table->double('agent_price',15,2)->nullable();
             $table->double('final_price',15,2)->nullable();
-            $table->double('commission',15,2)->nullable();
-            $table->double('prize',15,2)->nullable();
             $table->string('photos')->nullable();
             $table->string('thumbnail_img')->nullable();
             $table->string('remark')->nullable();

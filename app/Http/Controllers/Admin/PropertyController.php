@@ -63,7 +63,7 @@ class PropertyController extends Controller
             $properties = $properties->where('name','like','%'.$search_key.'%');
         }
 
-        $properties = $properties->with(['bookProperty','project','phase'])->orderBy('id','desc')->paginate(15);
+        $properties = $properties->with(['project','phase'])->orderBy('id','desc')->paginate(15);
 
         if($request->ajax()){
             return view('admin.property.table',compact('properties','search_key','search_price','search_bedroom','search_room_type','search_city','search_property','search_project','search_status'));
@@ -161,8 +161,6 @@ class PropertyController extends Controller
         $property->base_price=$request->base_price;
         $property->agent_price=$request->agent_price;
         $property->final_price=$request->final_price;
-        $property->commission=$request->commission;
-        $property->prize=$request->prize;
         if($request->gallery_image){
             $gall_imgs = [];
             foreach($request->gallery_image as $gallery_image){
@@ -263,8 +261,6 @@ class PropertyController extends Controller
         $property->base_price=$request->base_price;
         $property->agent_price=$request->agent_price;
         $property->final_price=$request->final_price;
-        $property->commission=$request->commission;
-        $property->prize=$request->prize;
         if($request->gallery_image){
             $gall_imgs = [];
             foreach($request->gallery_image as $gallery_image){

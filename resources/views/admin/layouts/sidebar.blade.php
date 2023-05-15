@@ -41,32 +41,6 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="{{route('admin.booked.property.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.booked.property.index') active @endif">
-                        <i class="nav-icon fas fa-building"></i>
-                        <p>Booked Property</p>
-                    </a>
-                </li>
-                <li class="nav-item @if(Route::currentRouteName() == 'admin.customers' || Route::currentRouteName() == 'admin.add.customer' || Route::currentRouteName() == 'admin.edit.customer' || Route::currentRouteName() == 'admin.associates' || Route::currentRouteName() == 'admin.add.associate' || Route::currentRouteName() == 'admin.edit.associate' || Route::currentRouteName() == 'admin.associate.wallet.index') menu-is-opening menu-open @endif">
-                    <a href="#" class="nav-link @if(Route::currentRouteName() == 'admin.customers' || Route::currentRouteName() == 'admin.add.customers' || Route::currentRouteName() == 'admin.edit.customers' || Route::currentRouteName() == 'admin.associates' || Route::currentRouteName() == 'admin.add.associate' || Route::currentRouteName() == 'admin.edit.associate' || Route::currentRouteName() == 'admin.associate.wallet.index') active @endif">
-                        <i class="nav-icon fa fa-users" aria-hidden="true"></i>
-                        <p>Users
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{route('admin.customers')}}" class="nav-link @if(Route::currentRouteName() == 'admin.customers' || Route::currentRouteName() == 'admin.add.customer' || Route::currentRouteName() == 'admin.edit.customer') active @endif">
-                                <p>Customers</p>
-                            </a>
-                        </li>
-                        {{-- <li class="nav-item">
-                            <a href="{{route('admin.associates')}}" class="nav-link  @if(Route::currentRouteName() == 'admin.associates' || Route::currentRouteName() == 'admin.add.associate' || Route::currentRouteName() == 'admin.edit.associate' || Route::currentRouteName() == 'admin.associate.wallet.index') active @endif">
-                                <p>Associates</p>
-                            </a>
-                        </li> --}}
-                    </ul>
-                </li>
                 <li class="nav-item @if(Route::currentRouteName() == 'admin.countries.index' || Route::currentRouteName() == 'admin.countries.edit' || Route::currentRouteName() == 'admin.states.index' || Route::currentRouteName() == 'admin.states.edit' || Route::currentRouteName() == 'admin.cities.index' || Route::currentRouteName() == 'admin.cities.edit' || Route::currentRouteName() == 'admin.pincodes.index' || Route::currentRouteName() == 'admin.pincodes.edit') menu-is-opening menu-open @endif">
                     <a href="#" class="nav-link @if(Route::currentRouteName() == 'admin.countries.index' || Route::currentRouteName() == 'admin.countries.edit' || Route::currentRouteName() == 'admin.states.index' || Route::currentRouteName() == 'admin.states.edit' || Route::currentRouteName() == 'admin.cities.index' || Route::currentRouteName() == 'admin.cities.edit' || Route::currentRouteName() == 'admin.pincodes.index' || Route::currentRouteName() == 'admin.pincodes.edit') active @endif">
                         <i class="nav-icon fa fa-map-marker-alt" aria-hidden="true"></i>
@@ -97,14 +71,8 @@
                         </li>
                     </ul>
                 </li>
-                {{-- <li class="nav-item">
-                    <a href="{{route('admin.commission.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.commission.index') active @endif">
-                        <i class="nav-icon fas fa-handshake"></i>
-                        <p>Commission</p>
-                    </a>
-                </li> --}}
-                <li class="nav-item @if(Route::currentRouteName() == 'admin.sliders.index' || Route::currentRouteName() == 'admin.sliders.edit' || Route::currentRouteName() == 'admin.level-percent.index' || Route::currentRouteName() == 'admin.level-percent.edit') menu-is-opening menu-open @endif">
-                    <a href="#" class="nav-link @if(Route::currentRouteName() == 'admin.sliders.index' || Route::currentRouteName() == 'admin.sliders.edit' || Route::currentRouteName() == 'admin.level-percent.index' || Route::currentRouteName() == 'admin.level-percent.edit') active @endif">
+                <li class="nav-item @if(Route::currentRouteName() == 'admin.sliders.index' || Route::currentRouteName() == 'admin.sliders.edit') menu-is-opening menu-open @endif">
+                    <a href="#" class="nav-link @if(Route::currentRouteName() == 'admin.sliders.index' || Route::currentRouteName() == 'admin.sliders.edit') active @endif">
                         <i class="nav-icon fas fa-cogs" aria-hidden="true"></i>
                         <p>Website Setting
                             <i class="fas fa-angle-left right"></i>
@@ -116,11 +84,6 @@
                                 <p>Sliders</p>
                             </a>
                         </li>
-                        {{-- <li class="nav-item">
-                            <a href="{{route('admin.level-percent.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.level-percent.index' || Route::currentRouteName() == 'admin.level-percent.edit') active @endif">
-                                <p>Level Percent</p>
-                            </a>
-                        </li> --}}
                     </ul>
                 </li>
             </ul>

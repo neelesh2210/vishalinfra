@@ -8,7 +8,7 @@
                         <div class="card card-outline card-primary mt-4">
                             <div class="card-header">
                                 <div class="card-tools">
-                                    <form action="{{route('admin.customers')}}" id="search_form">
+                                    <form action="{{route('admin.pincodes.index')}}" id="search_form">
                                         <div class="row">
                                             <div class="input-group input-group-sm mr-2 sel" style="width: 200px;">
                                                 <select name="search_state" id="search_state" class="form-control float-right select2" onchange="get_city()">

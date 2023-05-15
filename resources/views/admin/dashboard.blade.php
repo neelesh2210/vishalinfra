@@ -27,30 +27,6 @@
                     <div class="col-lg-3 col-6">
                         <div class="small-box bg-info">
                             <div class="inner">
-                                <h3>{{$customers}}</h3>
-                                <p>Customers</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fa fa-users"></i>
-                            </div>
-                            <a href="{{route('admin.customers')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6">
-                        <div class="small-box bg-info">
-                            <div class="inner">
-                                <h3>{{$associates}}</h3>
-                                <p>Associates</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <a href="{{route('admin.associates')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6">
-                        <div class="small-box bg-info">
-                            <div class="inner">
                                 <h3>{{$properties}}</h3>
                                 <p>Properties</p>
                             </div>

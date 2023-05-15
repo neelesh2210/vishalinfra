@@ -42,19 +42,19 @@ Route::get('properties',[PropertyController::class,'propertyList'])->name('prope
 Route::get('properties_details',[PropertyController::class,'properties_details'])->name('properties_details');
 
 //Customer Register
-Route::get('register',[RegisterController::class,'register'])->name('register');
-Route::post('registration',[RegisterController::class,'registration'])->name('registartion');
+// Route::get('register',[RegisterController::class,'register'])->name('register');
+// Route::post('registration',[RegisterController::class,'registration'])->name('registartion');
 Route::post('get-address',[RegisterController::class,'getAddress'])->name('get.address');
 
 //Associate Register
-Route::get('associate-register',[RegisterController::class,'associateRegister'])->name('associate.register');
+// Route::get('associate-register',[RegisterController::class,'associateRegister'])->name('associate.register');
 
 //Send OTP
 Route::post('send-otp',[RegisterController::class,'sendOtp'])->name('send.otp');
 
 //Login
-Route::get('login',[LoginController::class,'showLogin'])->name('login');
-Route::post('login',[LoginController::class,'login'])->name('login');
+// Route::get('login',[LoginController::class,'showLogin'])->name('login');
+// Route::post('login',[LoginController::class,'login'])->name('login');
 
 Route::group(['middleware'=>['auth:web'],'prefix'=>'user','as'=>'user.'],function () {
 
@@ -73,29 +73,29 @@ Route::group(['middleware'=>['auth:web'],'prefix'=>'user','as'=>'user.'],functio
     Route::post('save-bank-detail',[UserBankDetailController::class,'saveBankDetail'])->name('save.bank.detail');
 
     //Customers
-    Route::get('customer-index',[CustomerController::class,'index'])->name('customer.index');
-    Route::get('customer-create',[CustomerController::class,'create'])->name('customer.create');
+    // Route::get('customer-index',[CustomerController::class,'index'])->name('customer.index');
+    // Route::get('customer-create',[CustomerController::class,'create'])->name('customer.create');
 
     //Associate Wallet Transation
-    Route::get('associate-wallet-transaction-index',[AssociateWalletController::class,'index'])->name('associate.wallet.transaction.index');
+    // Route::get('associate-wallet-transaction-index',[AssociateWalletController::class,'index'])->name('associate.wallet.transaction.index');
 
     //Referral Link
-    Route::view('referral-link','frontend.user_dashboard.referral_link')->name('referral.link');
+    // Route::view('referral-link','frontend.user_dashboard.referral_link')->name('referral.link');
 
     //Property
-    Route::get('property-index',[PropertyController::class,'index'])->name('property.index');
-    Route::get('property-detail/{property_id}',[PropertyController::class,'propertyDetail'])->name('property.detail');
+    // Route::get('property-index',[PropertyController::class,'index'])->name('property.index');
+    // Route::get('property-detail/{property_id}',[PropertyController::class,'propertyDetail'])->name('property.detail');
 
     //Property Book
-    Route::post('property-book',[BookPropertyController::class,'propertyBook'])->name('property.book');
+    // Route::post('property-book',[BookPropertyController::class,'propertyBook'])->name('property.book');
 
     //Commission Distribution
-    Route::get('commission-distribution/{assocaite_id}/{property_id}/{amount}',[BookPropertyController::class,'commissionDistribution'])->name('commission.distribution');
+    // Route::get('commission-distribution/{assocaite_id}/{property_id}/{amount}',[BookPropertyController::class,'commissionDistribution'])->name('commission.distribution');
 
     //Property Booking Request
-    Route::get('property-booking-request-list',[PropertyBookingRequestController::class,'propertyBookingRequestList'])->name('property.booking.request.list');
-    Route::get('property-booking-request/{property_id}',[PropertyBookingRequestController::class,'propertyBookingRequest'])->name('property.booking.request');
-    Route::get('property-booking-change-status/{id}/{status}',[PropertyBookingRequestController::class,'propertyBookingChangeStatus'])->name('property.booking.change.status');
+    // Route::get('property-booking-request-list',[PropertyBookingRequestController::class,'propertyBookingRequestList'])->name('property.booking.request.list');
+    // Route::get('property-booking-request/{property_id}',[PropertyBookingRequestController::class,'propertyBookingRequest'])->name('property.booking.request');
+    // Route::get('property-booking-change-status/{id}/{status}',[PropertyBookingRequestController::class,'propertyBookingChangeStatus'])->name('property.booking.change.status');
 
     //Logout
     Route::post('user-logout',[LoginController::class,'logout'])->name('logout');

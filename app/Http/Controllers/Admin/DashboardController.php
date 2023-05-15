@@ -15,11 +15,9 @@ class DashboardController extends Controller
 
     public function index()
     {
-        $customers = User::where('type','customer')->get()->count();
-        $associates = User::where('type','associate')->get()->count();
         $properties = PropertyManager::withoutTrash()->get()->count();
 
-        return view('admin.dashboard',compact('customers','associates','properties'),['page_title'=>'Dashboard']);
+        return view('admin.dashboard',compact('properties'),['page_title'=>'Dashboard']);
     }
 
     public function changePassword(Request $request){

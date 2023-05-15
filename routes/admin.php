@@ -38,31 +38,12 @@ Route::group(['middleware'=>'auth:admin','as'=>'admin.'],function () {
     //Dashboard
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
-    //Customer
-    Route::get('customers',[UserController::class,'customers'])->name('customers');
-    Route::get('verify_status',[UserController::class,'verifyStatus'])->name('verifiy.status');
-    Route::get('kyc_status',[UserController::class,'kycStatus'])->name('kyc.status');
-    Route::get('add-customer',[UserController::class,'addCustomer'])->name('add.customer');
-    Route::post('save-customer',[UserController::class,'saveCustomer'])->name('save.customer');
-    Route::get('edit-customer/{id}',[UserController::class,'editCustomer'])->name('edit.customer');
-    Route::post('update-customer',[UserController::class,'updateCustomer'])->name('update.customer');
-    Route::post('update-profile',[UserController::class,'updateProfile'])->name('update.profile');
-    Route::post('update-bank-detail',[UserController::class,'updateBankDetail'])->name('update.bank.detail');
-
-    //Associate
-    Route::get('associates',[UserController::class,'associates'])->name('associates');
-    Route::get('add-associate',[UserController::class,'addAssociate'])->name('add.associate');
-    Route::post('save-associate',[UserController::class,'saveAssociate'])->name('save.associate');
-    Route::get('edit-associate/{id}',[UserController::class,'editAssociate'])->name('edit.associate');
-    Route::post('update-associate',[UserController::class,'updateAssociate'])->name('update.associate');
-
     //Address
     Route::resource('countries',CountryController::class);
     Route::resource('states',StateController::class);
     Route::resource('cities',CityController::class);
     Route::get('get-cities-by-state',[CityController::class,'getCitiesByState'])->name('get.cities.by.state');
     Route::resource('pincodes',PincodeController::class);
-    // Route::get('add-pincodes',[PincodeController::class,'addPincodes'])->name('add.pincode');
 
     //Inventory Management
 
@@ -81,21 +62,8 @@ Route::group(['middleware'=>'auth:admin','as'=>'admin.'],function () {
         Route::resource('property',PropertyController::class);
         Route::get('duplicate-property/{property_id}',[PropertyController::class,'duplicateProperty'])->name('duplicate.property');
 
-    //Associate Wallet
-    Route::get('associate-wallet-index/{associate_id}',[AssociateWalletController::class,'index'])->name('associate.wallet.index');
-    Route::post('associate-wallet-store',[AssociateWalletController::class,'store'])->name('associate.wallet.store');
-
-    //Booked Property
-    Route::get('booked-property-index',[BookPropertyController::class,'bookedPropertyIndex'])->name('booked.property.index');
-
     //Sliders
     Route::resource('sliders', SliderController::class);
-
-    //Level Percent
-    Route::resource('level-percent', LevelPercentController::class);
-
-    //Commission
-    Route::get('commission-index',[CommissionController::class,'index'])->name('commission.index');
 
     //Change Password
     Route::post('change-password',[DashboardController::class,'changePassword'])->name('change.password');

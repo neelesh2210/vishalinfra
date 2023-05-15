@@ -60,8 +60,4 @@ class Property extends Model
     public function phase(){
         return $this->belongsTo(Phase::class);
     }
-
-    public function bookProperty(){
-        return $this->belongsTo(BookProperty::class,'id','property_id');
-    }
 }
