@@ -3006,7 +3006,7 @@ outline:none;
     padding-right: 15px;
     padding-left: 15px;
 }
-.frm_submit_block h3 {
+.frm_submit_block h3 p{
     margin-left: 10px;
 }
 .form-control.simple {
@@ -11828,11 +11828,16 @@ h3.pa-name {
     display: block;
     overflow: hidden;
     margin: 0 0 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e6eaf1;
 }
 .single_widgets.widget_thumb_post ul li .left {
     display: block;
     float: left;
-    width: 80px;
+    width: 60px;
+    border: 1px solid #e6eaf1;
+    padding: 10px;
+    border-radius: 30px;
 }
 .single_widgets.widget_thumb_post ul li .right {
     display: block;
@@ -13678,7 +13683,7 @@ text-align: center;
 .submit-page {
     position: relative;
     width: 100%;
-    padding: 2em;
+    padding: 1em;
     background: #ffffff;
     border-radius: 10px;
 }
@@ -14447,6 +14452,12 @@ h1, .h1 {
 
 
 @media (max-width: 767px) {
+    .submit-page{
+        padding:0;
+    }
+    .dashboard-wraper{
+     padding: 1rem;
+    }
     .nav-style-separated ul>li:not(:last-child)>a:after {
         display: none;
        }
@@ -15142,4 +15153,7 @@ border-radius: 10px;
 }
 .morelink {
     display: block;
+}
+.frm_submit_block h3 p{
+    margin-left: 10px;
 }
