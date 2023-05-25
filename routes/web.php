@@ -38,7 +38,8 @@ Route::post('registration',[RegisterController::class,'registration'])->name('re
 Route::get('signin',[LoginController::class,'signin'])->name('signin');
 Route::post('login',[LoginController::class,'login'])->name('login');
 
-
+Route::view('forgot-password', 'frontend.auth.forgot_password')->name('forgot_password');
+Route::view('reset-password', 'frontend.auth.reset_password')->name('reset_password');
 //Static Route
 Route::view('about', 'frontend.about')->name('about');
 Route::view('contact', 'frontend.contact')->name('contact');

@@ -1,3 +1,18 @@
+<style>
+/* .overlay-wrapper {
+    position: relative;
+} */
+.overlay-wrapper>.overlay {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: -1.25rem;
+    margin-left: -2rem;
+    height: calc(100% + 2 * 1.25rem);
+    width: calc(100% + 2 * 1.25rem);
+}
+</style>
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
@@ -10,6 +25,11 @@
         </tr>
     </thead>
     <tbody>
+        <div class="overlay-wrapper">
+        <div class="overlay">
+            <i class="fas fa-3x fa-sync-alt fa-spin"></i>
+            <div class="text-bold pt-2">Loading...</div>
+        </div>
         @forelse ($properties as $key=>$property)
             <tr>
                 <td class="text-center">{{($key+1) + ($properties->currentPage() - 1)*$properties->perPage()}}</td>
@@ -41,6 +61,7 @@
                     </form> --}}
                 </td>
             </tr>
+        </div>
         @empty
             <tr class="footable-empty">
                 <td colspan="11">

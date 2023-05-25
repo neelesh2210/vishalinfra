@@ -118,10 +118,7 @@ class PropertyController extends Controller
             $property->plot_breadth=null;
             $property->self_tieup=null;
             $property->plot_type=null;
-            $property->phase_id=null;
-            $property->plot_number=null;
             $property->facing=null;
-            $property->featuers=null;
         }elseif($request->properties_type == 'commerical_space'){
             $property->furnished_status=$request->furnished_status;
             $property->balconies=$request->balconies;
@@ -136,10 +133,7 @@ class PropertyController extends Controller
             $property->plot_breadth=null;
             $property->self_tieup=null;
             $property->plot_type=null;
-            $property->phase_id=null;
-            $property->plot_number=null;
             $property->facing=null;
-            $property->featuers=null;
         }
 
         $property->transaction_type=$request->transaction_type;
@@ -189,10 +183,7 @@ class PropertyController extends Controller
             $property->plot_breadth=$request->plot_breadth;
             $property->self_tieup=$request->self_tieup;
             $property->plot_type=$request->plot_type;
-            $property->phase_id=$request->phase_id;
-            $property->plot_number=$request->plot_number;
             $property->facing=$request->facing;
-            $property->featuers=json_encode($request->featuers);
 
             $property->furnished_status=null;
             $property->bedroom=null;
@@ -218,10 +209,7 @@ class PropertyController extends Controller
             $property->plot_breadth=null;
             $property->self_tieup=null;
             $property->plot_type=null;
-            $property->phase_id=null;
-            $property->plot_number=null;
             $property->facing=null;
-            $property->featuers=null;
         }elseif($request->properties_type == 'commerical_space'){
             $property->furnished_status=$request->furnished_status;
             $property->balconies=$request->balconies;
@@ -236,10 +224,7 @@ class PropertyController extends Controller
             $property->plot_breadth=null;
             $property->self_tieup=null;
             $property->plot_type=null;
-            $property->phase_id=null;
-            $property->plot_number=null;
             $property->facing=null;
-            $property->featuers=null;
         }
 
         $property->transaction_type=$request->transaction_type;
@@ -275,54 +260,54 @@ class PropertyController extends Controller
         return back()->with('error','Property Deleted Successfully!');
     }
 
-    public function duplicateProperty($property_id){
+    // public function duplicateProperty($property_id){
 
-        $old_property = Property::find($property_id);
+    //     $old_property = Property::find($property_id);
 
-        $propertis = PropertyManager::withoutTrash()->where('phase_id',$old_property->phase_id)->pluck('plot_number');
-        $phases = PhaseManager::withoutTrash()->where('id',$old_property->phase_id)->first();
+    //     $propertis = PropertyManager::withoutTrash()->pluck('plot_number');
+    //     $phases = PhaseManager::withoutTrash()->where('id',$old_property->phase_id)->first();
 
-        $plot_number = [];
-        if($phases){
-            for($i=1;$i<=$phases->number_of_plot;$i++){
-                $plot_number[] = $i;
-            }
-            $remaining_plot_number = array_values(array_diff($plot_number,$propertis->toArray()));
-            $plot_number_count = count($remaining_plot_number);
-            if($plot_number_count > 0){
-                $new_property = $old_property->replicate();
-                $property_number = Property::orderBy('id','desc')->first();
-                if($property_number){
-                    $property_number = $property_number->property_number + 1;
-                }else{
-                    $property_number = 10000001;
-                }
-                $new_property->slug=str_replace(' ','-',$old_property->name).'-'.generateRandomString(4);
-                $new_property->property_number = $property_number;
-                $new_property->plot_number=$remaining_plot_number[0];
-                $new_property->booking_status = 'available';
-                $new_property->save();
+    //     $plot_number = [];
+    //     if($phases){
+    //         for($i=1;$i<=$phases->number_of_plot;$i++){
+    //             $plot_number[] = $i;
+    //         }
+    //         $remaining_plot_number = array_values(array_diff($plot_number,$propertis->toArray()));
+    //         $plot_number_count = count($remaining_plot_number);
+    //         if($plot_number_count > 0){
+    //             $new_property = $old_property->replicate();
+    //             $property_number = Property::orderBy('id','desc')->first();
+    //             if($property_number){
+    //                 $property_number = $property_number->property_number + 1;
+    //             }else{
+    //                 $property_number = 10000001;
+    //             }
+    //             $new_property->slug=str_replace(' ','-',$old_property->name).'-'.generateRandomString(4);
+    //             $new_property->property_number = $property_number;
+    //             $new_property->plot_number=$remaining_plot_number[0];
+    //             $new_property->booking_status = 'available';
+    //             $new_property->save();
 
-                return back()->with('success','Property Duplicated Successfully!');
-            }else{
-                return back()->with('error','No Plot in this Phase!');
-            }
-        }else{
-            $new_property = $old_property->replicate();
-            $property_number = Property::orderBy('id','desc')->first();
-            if($property_number){
-                $property_number = $property_number->property_number + 1;
-            }else{
-                $property_number = 10000001;
-            }
-            $new_property->slug=str_replace(' ','-',$old_property->name).'-'.generateRandomString(4);
-            $new_property->property_number = $property_number;
-            $new_property->booking_status = 'available';
-            $new_property->save();
+    //             return back()->with('success','Property Duplicated Successfully!');
+    //         }else{
+    //             return back()->with('error','No Plot in this Phase!');
+    //         }
+    //     }else{
+    //         $new_property = $old_property->replicate();
+    //         $property_number = Property::orderBy('id','desc')->first();
+    //         if($property_number){
+    //             $property_number = $property_number->property_number + 1;
+    //         }else{
+    //             $property_number = 10000001;
+    //         }
+    //         $new_property->slug=str_replace(' ','-',$old_property->name).'-'.generateRandomString(4);
+    //         $new_property->property_number = $property_number;
+    //         $new_property->booking_status = 'available';
+    //         $new_property->save();
 
-            return back()->with('success','Property Duplicated Successfully!');
-        }
+    //         return back()->with('success','Property Duplicated Successfully!');
+    //     }
 
-    }
+    // }
 
 }

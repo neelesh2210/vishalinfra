@@ -8,41 +8,13 @@
                         <div class="resp_log_thumb" style="background:url({{ asset('frontend/assets/img/log.jpg') }})no-repeat;"></div>
                         <div class="resp_log_caption">
                             <div class="login-form">
-                                <h3>Sign In</h3>
+                                <h3>Genrate New Password</h3>
                                 <hr/>
-                                @if ($errors->any())
-                                    <div class="alert alert-danger">
-                                        <ul>
-                                            @foreach ($errors->all() as $error)
-                                                <li class="text-danger">*{{ $error }}</li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                @endif
-                                @if ($message = Session::get('error'))
-                                    <div class="alert alert-danger">
-                                        <ul>
-                                            <li class="text-danger">{{ $message }}</li>
-                                        </ul>
-                                    </div>
-                                @endif
-                                <form action="{{route('login')}}" method="POST">
-                                    @csrf
+                                <form action="#" method="POST">
                                     <div class="form-group">
-                                        <label>User Name</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="User Name" name="user_name" required>
-                                            <div class="input-group-append ">
-                                                <div class="input-group-text">
-                                                    <i class="fas fa-user"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Password</label>
+                                        <label>New Password</label>
                                         <div class="input-group" id="show_hide_password">
-                                            <input type="password" class="form-control " placeholder="Password" name="password" id="password" required>
+                                            <input type="password" class="form-control " placeholder="New Password" name="password" id="password" required>
                                             <div class="input-group-append ">
                                                 <div class="input-group-text">
                                                     <a href=""><i class="fas fa-low-vision" aria-hidden="true"></i></a>
@@ -51,19 +23,23 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <div class="eltio_ol9 d-flex justify-content-center">
-                                            <div class="eltio_k2">
-                                                <a href="{{ route('forgot_password') }}">Lost Your Password?</a>
+                                        <label>Confirm Password</label>
+                                        <div class="input-group" id="show_hide_cpassword">
+                                            <input type="password" class="form-control " placeholder="Confirm Password" name="password" id="password" required>
+                                            <div class="input-group-append ">
+                                                <div class="input-group-text">
+                                                    <a href=""><i class="fas fa-low-vision" aria-hidden="true"></i></a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-md full-width pop-login">Login</button>
+                                        <button type="submit" class="btn btn-md full-width pop-login">Change Password</button>
                                     </div>
                                 </form>
                                 <div class="signup__text">
-                                    New to Vishal Infra?
-                                    <a href="{{ route('signup') }}" class="signup__link">Sign Up</a>
+                                   Back to
+                                    <a href="{{ route('signin') }}" class="signup__link">Sign In</a>
                                 </div>
                             </div>
                         </div>
@@ -86,6 +62,20 @@
                     $('#show_hide_password input').attr('type', 'text');
                     $('#show_hide_password i').removeClass("fas fa-low-vision");
                     $('#show_hide_password i').addClass("fas fa-eye");
+                }
+            });
+        });
+        $(document).ready(function() {
+            $("#show_hide_cpassword a").on('click', function(event) {
+                event.preventDefault();
+                if ($('#show_hide_cpassword input').attr("type") == "text") {
+                    $('#show_hide_cpassword input').attr('type', 'password');
+                    $('#show_hide_cpassword i').addClass("fas fa-low-vision");
+                    $('#show_hide_cpassword i').removeClass("la-eye");
+                } else if ($('#show_hide_cpassword input').attr("type") == "password") {
+                    $('#show_hide_cpassword input').attr('type', 'text');
+                    $('#show_hide_cpassword i').removeClass("fas fa-low-vision");
+                    $('#show_hide_cpassword i').addClass("fas fa-eye");
                 }
             });
         });
