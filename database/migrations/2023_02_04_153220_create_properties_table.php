@@ -17,6 +17,7 @@ class CreatePropertiesTable extends Migration
             $table->id();
             $table->string('slug');
             $table->bigInteger('added_by');
+            $table->bigInteger('property_number');
             $table->string('name');
             $table->string('properties_type');
             $table->string('furnished_status')->nullable();

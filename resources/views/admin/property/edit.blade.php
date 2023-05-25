@@ -114,17 +114,6 @@
                                                 <div class="form-group row">
                                                     <div class="col-md-4 form_div">
                                                         <div class="form-group">
-                                                            <label for="project_id">Project <span class="text-danger">*</span></label>
-                                                            <select name="project_id" id="project_id" class="form-control select2" required>
-                                                                <option value="">Select Project...</option>
-                                                                @foreach (App\Models\Admin\Project::where('is_delete','0')->get() as $project)
-                                                                    <option value="{{$project->id}}" @if($property->project_id == $project->id) selected @endif>{{$project->name}}</option>
-                                                                @endforeach
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4 form_div">
-                                                        <div class="form-group">
                                                             <label for="properties_type">Property Type <span class="text-danger">*</span></label>
                                                             <select class="form-control select2" name="properties_type" id="properties_type" required onchange="showDiv()">
                                                                 <option value="">Select Property Type</option>
@@ -364,28 +353,6 @@
                                                             &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                                                             <input class="form-check-input" type="radio" name="facing" id="south" value="south" @if($property->facing == 'south') checked @endif>
                                                             <label class="form-check-label"> South</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <label class="col-from-label" for="phase_id">Phase</label>
-                                                        <select name="phase_id" id="phase_id" class="form-control select2" onchange="get_plot_number()">
-                                                            <option value="">Select Phase...</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <label class="col-from-label" for="plot_number">Plot Number</label>
-                                                        <select name="plot_number" id="plot_number" class="form-control select2">
-                                                            <option value="">Select Plot Number...</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label class="col-from-label" for="featuers">Featuers</label>
-                                                        <div class="form-check">
-                                                            @foreach (App\CPU\FeatureManager::withoutTrash()->get() as $feature)
-                                                                <input type="checkbox" class="form-check-input" name="featuers[]" value="{{$feature->id}}" @if($property->featuers)@if(in_array($feature->id,json_decode($property->featuers))) checked @endif @endif>
-                                                                <label class="form-check-label"> {{$feature->name}} </label>
-                                                                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                                                            @endforeach
                                                         </div>
                                                     </div>
                                                 </div>
@@ -643,44 +610,6 @@
             if (file) {
                 img1.src = URL.createObjectURL(file)
             }
-        }
-
-        $(get_phase());
-
-        function get_phase() {
-            var project_id = $('#project_id').val()
-            $.ajax({
-                type: 'GET',
-                url: "{{route('admin.get.phase','')}}/"+project_id,
-                success: function(data) {
-                    $('#phase_id').empty();
-                    $('#phase_id').append("<option value=''>Select Phase...</option>");
-                    $.each(data, function(key, val) {
-                        if('{{$property->phase_id}}' == val.id){
-                            $('#phase_id').append("<option value="+val.id+" selected>"+val.name+"</option>");
-                        }else{
-                            $('#phase_id').append("<option value="+val.id+">"+val.name+"</option>");
-                        }
-                    });
-                }
-            });
-        }
-
-        setTimeout(function() {$(get_plot_number())},1000)
-        function get_plot_number(){
-            var phase_id = $('#phase_id').val();
-            $.ajax({
-                type: 'GET',
-                url: "{{route('admin.get.plot.number','')}}/"+phase_id,
-                success: function(data) {
-                    $('#plot_number').empty();
-                    $('#plot_number').append("<option value=''>Select Plot Number...</option>");
-                    $('#plot_number').append("<option value='{{$property->plot_number}}' selected>{{$property->plot_number}}</option>");
-                    $.each(data, function(key, val) {
-                        $('#plot_number').append("<option value="+val+">"+val+"</option>");
-                    });
-                }
-            });
         }
 
      </script>

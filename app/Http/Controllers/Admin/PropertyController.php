@@ -82,7 +82,6 @@ class PropertyController extends Controller
         $property=new Property;
         $property->slug=str_replace(' ','-',$request->name).'-'.generateRandomString(4);
         $property->added_by=Auth::guard('admin')->user()->id;
-        $property->project_id=$request->project_id;
         $property->property_number=$property_number;
         $property->name=$request->name;
         $property->properties_type=$request->properties_type;
@@ -93,10 +92,7 @@ class PropertyController extends Controller
             $property->plot_breadth=$request->plot_breadth;
             $property->self_tieup=$request->self_tieup;
             $property->plot_type=$request->plot_type;
-            $property->phase_id=$request->phase_id;
-            $property->plot_number=$request->plot_number;
             $property->facing=$request->facing;
-            $property->featuers=json_encode($request->featuers);
 
             $property->furnished_status=null;
             $property->bedroom=null;
