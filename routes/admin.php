@@ -3,19 +3,13 @@
 
 use App\Http\Controllers\Admin\CityController;
 use App\Http\Controllers\Admin\UserController;
-use App\Http\Controllers\Admin\PhaseController;
 use App\Http\Controllers\Admin\StateController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\CountryController;
-use App\Http\Controllers\Admin\FeatureController;
 use App\Http\Controllers\Admin\PincodeController;
-use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\Auth\LoginController;
-use App\Http\Controllers\Admin\CommissionController;
-use App\Http\Controllers\Admin\BookPropertyController;
-use App\Http\Controllers\Admin\LevelPercentController;
 use App\Http\Controllers\Admin\AssociateWalletController;
 
 
@@ -45,11 +39,12 @@ Route::group(['middleware'=>'auth:admin','as'=>'admin.'],function () {
     Route::get('get-cities-by-state',[CityController::class,'getCitiesByState'])->name('get.cities.by.state');
     Route::resource('pincodes',PincodeController::class);
 
-    //Inventory Management
+    //Property
+    Route::resource('property',PropertyController::class);
+    Route::get('duplicate-property/{property_id}',[PropertyController::class,'duplicateProperty'])->name('duplicate.property');
 
-        //Property
-        Route::resource('property',PropertyController::class);
-        Route::get('duplicate-property/{property_id}',[PropertyController::class,'duplicateProperty'])->name('duplicate.property');
+    //Customers
+    Route::get('customer-index',[UserController::class,'index'])->name('customer.index');
 
     //Sliders
     Route::resource('sliders', SliderController::class);

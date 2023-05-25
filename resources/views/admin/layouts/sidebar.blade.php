@@ -11,35 +11,26 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="nav-item @if(Route::currentRouteName() == 'admin.project.index' || Route::currentRouteName() == 'admin.project.create' || Route::currentRouteName() == 'admin.project.edit' || Route::currentRouteName() == 'admin.property.index' || Route::currentRouteName() == 'admin.property.create' || Route::currentRouteName() == 'admin.property.edit' || Route::currentRouteName() == 'admin.phase.index' || Route::currentRouteName() == 'admin.phase.create' || Route::currentRouteName() == 'admin.phase.edit' || Route::currentRouteName() == 'admin.feature.index' || Route::currentRouteName() == 'admin.feature.create' || Route::currentRouteName() == 'admin.feature.edit') menu-is-opening menu-open @endif">
-                    <a href="#" class="nav-link @if(Route::currentRouteName() == 'admin.project.index' || Route::currentRouteName() == 'admin.project.create' || Route::currentRouteName() == 'admin.project.edit' || Route::currentRouteName() == 'admin.property.index' || Route::currentRouteName() == 'admin.property.create' || Route::currentRouteName() == 'admin.property.edit' || Route::currentRouteName() == 'admin.phase.index' || Route::currentRouteName() == 'admin.phase.create' || Route::currentRouteName() == 'admin.phase.edit' || Route::currentRouteName() == 'admin.feature.index' || Route::currentRouteName() == 'admin.feature.create' || Route::currentRouteName() == 'admin.feature.edit') active @endif">
+                <li class="nav-item @if(Route::currentRouteName() == 'admin.project.index' || Route::currentRouteName() == 'admin.project.create' || Route::currentRouteName() == 'admin.project.edit') menu-is-opening menu-open @endif">
+                    <a href="#" class="nav-link @if(Route::currentRouteName() == 'admin.project.index' || Route::currentRouteName() == 'admin.project.create' || Route::currentRouteName() == 'admin.project.edit' || Route::currentRouteName() == 'admin.property.index' || Route::currentRouteName() == 'admin.property.create' || Route::currentRouteName() == 'admin.property.edit') active @endif">
                         <i class="nav-icon fa fa-building" aria-hidden="true"></i>
-                        <p>Inventroy Management
+                        <p>Propertie Management
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        {{-- <li class="nav-item">
-                            <a href="{{route('admin.project.index')}}" class="nav-link  @if(Route::currentRouteName() == 'admin.project.index' || Route::currentRouteName() == 'admin.project.create' || Route::currentRouteName() == 'admin.project.edit') active @endif">
-                                <p>Projects</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('admin.phase.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.phase.index' || Route::currentRouteName() == 'admin.phase.create' || Route::currentRouteName() == 'admin.phase.edit') active @endif">
-                                <p>Phases</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('admin.feature.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.feature.index' || Route::currentRouteName() == 'admin.feature.create' || Route::currentRouteName() == 'admin.feature.edit') active @endif">
-                                <p>Features</p>
-                            </a>
-                        </li> --}}
                         <li class="nav-item">
                             <a href="{{route('admin.property.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.property.index' || Route::currentRouteName() == 'admin.property.create' || Route::currentRouteName() == 'admin.property.edit') active @endif">
                                 <p>Properties</p>
                             </a>
                         </li>
                     </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('admin.customer.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.customer.index') active @endif">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>Customers</p>
+                    </a>
                 </li>
                 <li class="nav-item @if(Route::currentRouteName() == 'admin.countries.index' || Route::currentRouteName() == 'admin.countries.edit' || Route::currentRouteName() == 'admin.states.index' || Route::currentRouteName() == 'admin.states.edit' || Route::currentRouteName() == 'admin.cities.index' || Route::currentRouteName() == 'admin.cities.edit' || Route::currentRouteName() == 'admin.pincodes.index' || Route::currentRouteName() == 'admin.pincodes.edit') menu-is-opening menu-open @endif">
                     <a href="#" class="nav-link @if(Route::currentRouteName() == 'admin.countries.index' || Route::currentRouteName() == 'admin.countries.edit' || Route::currentRouteName() == 'admin.states.index' || Route::currentRouteName() == 'admin.states.edit' || Route::currentRouteName() == 'admin.cities.index' || Route::currentRouteName() == 'admin.cities.edit' || Route::currentRouteName() == 'admin.pincodes.index' || Route::currentRouteName() == 'admin.pincodes.edit') active @endif">

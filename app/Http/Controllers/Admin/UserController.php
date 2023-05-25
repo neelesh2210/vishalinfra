@@ -5,23 +5,18 @@ namespace App\Http\Controllers\Admin;
 use Carbon\Carbon;
 use App\Models\User;
 use App\CPU\UserManager;
-use App\Models\UserAddress;
-use App\Models\UserProfile;
 use Illuminate\Http\Request;
-use App\Models\UserBankDetail;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
 
-    public function customers(Request $request){
+    public function index(Request $request){
         $search_date = $request->search_date;
         $search_key = $request->search_key;
-        $search_verify_status = $request->search_verify_status;
-        $search_kyc_status = $request->search_kyc_status;
 
-        $customers = UserManager::customerWithoutTrash();
+        $customers = User::orderBy('created_at','desc');
         if($search_date){
             $dates=explode('-',$search_date);
             $d1=strtotime($dates[0]);
@@ -34,25 +29,18 @@ class UserController extends Controller
             $search_date=$dates[0].'-'.$dates[1];
             $customers = $customers->whereBetween('created_at', [$startDate, $endDate]);
         }
-        if($search_verify_status != ''){
-            $customers = $customers->where('is_verified',$search_verify_status);
-        }
-        if($search_kyc_status != ''){
-            $customers = $customers->where('is_kyced',$search_kyc_status);
-        }
         if($search_key){
             $customers = $customers->where(function($query) use ($search_key){
                 $query->where('name','like','%'.$search_key.'%')
                 ->orWhere('phone',$search_key)
-                ->orWhere('email','like','%'.$search_key.'%')
-                ->orWhere('referrer_code','like','%'.$search_key.'%');
+                ->orWhere('email','like','%'.$search_key.'%');
             });
         }
-        $customers = $customers->with(['sponserDetail'])->withCount('associateDetail')->orderBy('created_at','desc')->paginate(15);
+        $customers = $customers->paginate(15);
         if($request->ajax()){
-            return view('admin.user.customer.table',compact('customers','search_date','search_key','search_verify_status','search_kyc_status'));
+            return view('admin.user.customer.table',compact('customers','search_date','search_key'));
         }
-        return view('admin.user.customer.index',compact('customers','search_date','search_key','search_verify_status','search_kyc_status'),['page_title'=>'Customers']);
+        return view('admin.user.customer.index',compact('customers','search_date','search_key'),['page_title'=>'Customers']);
 
     }
 

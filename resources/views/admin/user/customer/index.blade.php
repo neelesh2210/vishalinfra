@@ -11,7 +11,7 @@
                         </ol>
                     </div>
                     <div class="col-sm-6">
-                        <a href="{{route('admin.add.customer')}}" class="btn btn-primary float-right">Add Customer <i class="fas fa-plus"></i></a>
+                        <a href="#" class="btn btn-primary float-right">Add Customer <i class="fas fa-plus"></i></a>
                     </div>
                 </div>
             </div>
@@ -23,7 +23,7 @@
                         <div class="card card-outline card-primary">
                             <div class="card-header">
                                 <div class="card-tools">
-                                    <form action="{{route('admin.customers')}}" id="search_form">
+                                    <form action="{{route('admin.customer.index')}}" id="search_form">
                                         <div class="row">
                                             <div class="input-group input-group-sm mr-2" style="width: 200px;">
                                                 <div class="input-group-prepend">
@@ -32,20 +32,6 @@
                                                     </span>
                                                 </div>
                                                 <input type="text" name="search_date" value="{{$search_date}}" class="form-control float-right" id="reservation" placeholder="Select Daterange...">
-                                            </div>
-                                            <div class="input-group input-group-sm mr-2" style="width: 200px;">
-                                                <select name="search_verify_status" class="form-control float-right" onchange="fillter()">
-                                                    <option value="">Select Verify Status...</option>
-                                                    <option value="0" @if($search_verify_status == '0') selected @endif>Not Verified</option>
-                                                    <option value="1" @if($search_verify_status == '1') selected @endif>Verified</option>
-                                                </select>
-                                            </div>
-                                            <div class="input-group input-group-sm mr-2" style="width: 200px;">
-                                                <select name="search_kyc_status" class="form-control float-right" onchange="fillter()">
-                                                    <option value="">Select KYC Status...</option>
-                                                    <option value="0" @if($search_kyc_status == '0') selected @endif>Not Verified</option>
-                                                    <option value="1" @if($search_kyc_status == '1') selected @endif>Verified</option>
-                                                </select>
                                             </div>
                                             <div class="input-group input-group-sm" style="width: 200px;">
                                                 <input type="text" name="search_key" value="{{$search_key}}" class="form-control float-right" placeholder="Search" onkeyup="fillter()">
@@ -76,64 +62,10 @@
             }, 1000);
         });
 
-        function changeVerifyStatus(user_id,verify_status){
-            if(verify_status == '0'){
-                var confirm_text = 'Are you sure you want to Not Verified this Customer?';
-            }else{
-                var confirm_text = 'Are you sure you want to Verified this Customer?';
-            }
-            if(confirm(confirm_text) == true){
-                $.ajax({
-                    type: 'GET',
-                    url: "{{route('admin.verifiy.status')}}?user_id="+user_id+"&verify_status="+verify_status,
-                    success: function(data) {
-                        var Toast = Swal.mixin({
-                            toast: true,
-                            position: 'top-end',
-                            showConfirmButton: false,
-                            timer: 3000
-                        });
-                        Toast.fire({
-                            icon: 'success',
-                            title: 'Status Changed Successfully!'
-                        })
-                        fillter()
-                    }
-                });
-            }
-        }
-
-        function changeKycStatus(user_id,kyc_status){
-            if(kyc_status == '0'){
-                var confirm_text = 'Are you sure you want to Not Verified this Customer?';
-            }else{
-                var confirm_text = 'Are you sure you want to Verified this Customer?';
-            }
-            if(confirm(confirm_text) == true){
-                $.ajax({
-                    type: 'GET',
-                    url: "{{route('admin.kyc.status')}}?user_id="+user_id+"&kyc_status="+kyc_status,
-                    success: function(data) {
-                        var Toast = Swal.mixin({
-                            toast: true,
-                            position: 'top-end',
-                            showConfirmButton: false,
-                            timer: 3000
-                        });
-                        Toast.fire({
-                            icon: 'success',
-                            title: 'Status Changed Successfully!'
-                        })
-                        fillter()
-                    }
-                });
-            }
-        }
-
         function fillter(){
             $.ajax({
                 type: 'GET',
-                url: "{{route('admin.customers')}}",
+                url: "{{route('admin.customer.index')}}",
                 data: $('#search_form').serialize(),
                 success: function(data) {
                     $('#table').html(data)
