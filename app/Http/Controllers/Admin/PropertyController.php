@@ -19,13 +19,9 @@ class PropertyController extends Controller
         $search_room_type = $request->search_room_type;
         $search_city = $request->search_city;
         $search_property = $request->search_property;
-        $search_project = $request->search_project;
         $search_status = $request->search_status;
 
         $properties = PropertyManager::withoutTrash();
-        if($search_project){
-            $properties = $properties->where('project_id',$search_project);
-        }
         if($search_property){
             $properties = $properties->where('properties_type',$search_property);
         }
@@ -63,13 +59,13 @@ class PropertyController extends Controller
             $properties = $properties->where('name','like','%'.$search_key.'%');
         }
 
-        $properties = $properties->with(['project','phase'])->orderBy('id','desc')->paginate(15);
+        $properties = $properties->orderBy('id','desc')->paginate(15);
 
         if($request->ajax()){
-            return view('admin.property.table',compact('properties','search_key','search_price','search_bedroom','search_room_type','search_city','search_property','search_project','search_status'));
+            return view('admin.property.table',compact('properties','search_key','search_price','search_bedroom','search_room_type','search_city','search_property','search_status'));
         }
 
-        return view('admin.property.index',compact('properties','search_key','search_price','search_bedroom','search_room_type','search_city','search_property','search_project','search_status'),['page_title'=>'Properties']);
+        return view('admin.property.index',compact('properties','search_key','search_price','search_bedroom','search_room_type','search_city','search_property','search_status'),['page_title'=>'Properties']);
     }
 
     public function create(){

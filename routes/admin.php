@@ -47,17 +47,6 @@ Route::group(['middleware'=>'auth:admin','as'=>'admin.'],function () {
 
     //Inventory Management
 
-        //Project
-        Route::resource('project',ProjectController::class);
-
-        //Phase
-        Route::resource('phase',PhaseController::class);
-        Route::get('get-phase/{project_id}',[PhaseController::class,'getPhase'])->name('get.phase');
-        Route::get('get-plot-number/{phase_id}',[PhaseController::class,'getPlotNumber'])->name('get.plot.number');
-
-        //Feature
-        Route::resource('feature',FeatureController::class);
-
         //Property
         Route::resource('property',PropertyController::class);
         Route::get('duplicate-property/{property_id}',[PropertyController::class,'duplicateProperty'])->name('duplicate.property');

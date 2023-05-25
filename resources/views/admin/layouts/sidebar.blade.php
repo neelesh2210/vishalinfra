@@ -19,7 +19,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="{{route('admin.project.index')}}" class="nav-link  @if(Route::currentRouteName() == 'admin.project.index' || Route::currentRouteName() == 'admin.project.create' || Route::currentRouteName() == 'admin.project.edit') active @endif">
                                 <p>Projects</p>
                             </a>
@@ -33,7 +33,7 @@
                             <a href="{{route('admin.feature.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.feature.index' || Route::currentRouteName() == 'admin.feature.create' || Route::currentRouteName() == 'admin.feature.edit') active @endif">
                                 <p>Features</p>
                             </a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <a href="{{route('admin.property.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.property.index' || Route::currentRouteName() == 'admin.property.create' || Route::currentRouteName() == 'admin.property.edit') active @endif">
                                 <p>Properties</p>

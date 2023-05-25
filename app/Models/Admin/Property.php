@@ -13,8 +13,6 @@ class Property extends Model
     protected $fillable =[
         'slug',
         'added_by',
-        'project_id',
-        'property_number',
         'name',
         'properties_type',
         'furnished_status',
@@ -32,10 +30,7 @@ class Property extends Model
         'plot_breadth',
         'self_tieup',
         'plot_type',
-        'phase_id',
-        'plot_number',
         'facing',
-        'featuers',
         'expected_price',
         'price',
         'booking_amount',
@@ -52,12 +47,4 @@ class Property extends Model
         'remark',
         'status',
     ];
-
-    public function project(){
-        return $this->belongsTo(Project::class);
-    }
-
-    public function phase(){
-        return $this->belongsTo(Phase::class);
-    }
 }

@@ -34,15 +34,6 @@
                                     <form id="search_form">
                                         <div class="row">
                                             <div class="col-md-3 mb-2">
-                                                <label>Project Name</label>
-                                                <select name="search_project" class="form-control select2" onchange="fillter()">
-                                                    <option value="">Select Project...</option>
-                                                    @foreach (App\Models\Admin\Project::orderBy('name','asc')->get() as $project)
-                                                        <option value="{{$project->id}}">{{$project->name}}</option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
-                                            <div class="col-md-3 mb-2">
                                                 <label>Bed Room</label>
                                                 <select name="search_bedroom" class="form-control select2" onchange="fillter()">
                                                     <option value="">Select Bed Room...</option>

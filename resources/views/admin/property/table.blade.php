@@ -3,8 +3,6 @@
         <tr>
             <th class="text-center">#</th>
             <th class="text-center">Property Type</th>
-            <th class="text-center">Project</th>
-            <th class="text-center">Phase</th>
             <th class="text-center">Property</th>
             <th class="text-center">Price</th>
             <th class="text-center">Status</th>
@@ -17,21 +15,8 @@
                 <td class="text-center">{{($key+1) + ($properties->currentPage() - 1)*$properties->perPage()}}</td>
                 <td class="text-center">{{ucwords(str_replace('_',' ',$property->properties_type))}}</td>
                 <td>
-                    <b>Name: </b>{{$property->project->name}} <br>
-                    @if($property->project->pincode || $property->project->address)
-                        <b>Address: </b>{{$property->project->address}}
-                        @if($property->project->pincode)
-                            {{$property->project->city}}, {{$property->project->state}}, {{$property->project->country}},{{$property->project->pincode}}
-                        @endif
-                    @endif
-                </td>
-                <td class="text-center">{{optional($property->phase)->name}}</td>
-                <td>
                     <b>Name: </b>{{$property->name}} <br>
-                    @if($property->plot_number)
-                        <b>Plot Number: </b>{{$property->plot_number}} <br>
-                        <b>Plot Area: </b>{{$property->plot_area}} sqft. ({{$property->plot_length}}X{{$property->plot_breadth}})
-                    @endif
+                    <b>Plot Area: </b>{{$property->plot_area}} sqft. ({{$property->plot_length}}X{{$property->plot_breadth}})
                 </td>
                 <td>
                     <b>Price: </b>{{$property->expected_price}} <br>
@@ -73,7 +58,7 @@
         <p><b>Showing {{($properties->currentpage()-1)*$properties->perpage()+1}} to {{(($properties->currentpage()-1)*$properties->perpage())+$properties->count()}} of {{$properties->total()}} Properties</b></p>
     </div>
     <div class="col-md-8 d-flex justify-content-end">
-        {!! $properties->appends(['search_key'=>$search_key,'search_project'=>$search_project,'search_price'=>$search_price,'search_bedroom'=>$search_bedroom,'search_room_type'=>$search_room_type,'search_city'=>$search_city,'search_property'=>$search_property])->links() !!}
+        {!! $properties->appends(['search_key'=>$search_key,'search_price'=>$search_price,'search_bedroom'=>$search_bedroom,'search_room_type'=>$search_room_type,'search_city'=>$search_city,'search_property'=>$search_property])->links() !!}
     </div>
 </div>
 

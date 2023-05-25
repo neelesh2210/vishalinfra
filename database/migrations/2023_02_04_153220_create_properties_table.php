@@ -17,8 +17,6 @@ class CreatePropertiesTable extends Migration
             $table->id();
             $table->string('slug');
             $table->bigInteger('added_by');
-            $table->bigInteger('project_id');
-            $table->bigInteger('property_number');
             $table->string('name');
             $table->string('properties_type');
             $table->string('furnished_status')->nullable();
@@ -33,10 +31,7 @@ class CreatePropertiesTable extends Migration
             $table->double('super_area',8,2)->nullable();
             $table->string('self_tieup')->nullable();
             $table->string('plot_type')->nullable();
-            $table->bigInteger('phase_id')->nullable();
-            $table->bigInteger('plot_number')->nullable();
             $table->string('facing')->nullable();
-            $table->text('featuers')->nullable();
             $table->double('plot_area',8,2)->nullable();
             $table->double('plot_length',8,2)->nullable();
             $table->double('plot_breadth',8,2)->nullable();
