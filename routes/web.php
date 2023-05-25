@@ -46,6 +46,7 @@ Route::view('submit-property', 'frontend.submit-property')->name('submit_propert
 
 //Property
 Route::get('properties',[PropertyController::class,'propertyList'])->name('properties');
+Route::get('/{slug}',[PropertyController::class,'detail'])->name('property.detail');
 // Route::get('properties_details',[PropertyController::class,'properties_details'])->name('properties_details');
 
 //Associate Register
@@ -97,5 +98,3 @@ Route::group(['middleware'=>['auth:web'],'prefix'=>'user','as'=>'user.'],functio
     Route::post('user-logout',[LoginController::class,'logout'])->name('logout');
 
 });
-
-Route::get('/{slug}',[PropertyController::class,'detail'])->name('property.detail');
