@@ -30,8 +30,15 @@ Auth::routes(['login'=>false,'register'=>false,'logout'=>false]);
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
-Route::view('signin', 'frontend.signin')->name('signin');
-Route::view('signup', 'frontend.signup')->name('signup');
+//Register
+Route::get('signup',[RegisterController::class,'register'])->name('signup');
+Route::post('registration',[RegisterController::class,'registration'])->name('registartion');
+
+//Login
+Route::get('signin',[LoginController::class,'signin'])->name('signin');
+Route::post('login',[LoginController::class,'login'])->name('login');
+
+
 //Static Route
 Route::view('about', 'frontend.about')->name('about');
 Route::view('contact', 'frontend.contact')->name('contact');
@@ -39,22 +46,11 @@ Route::view('submit-property', 'frontend.submit-property')->name('submit_propert
 
 //Property
 Route::get('properties',[PropertyController::class,'propertyList'])->name('properties');
-Route::get('properties_details',[PropertyController::class,'properties_details'])->name('properties_details');
-
-//Customer Register
-// Route::get('register',[RegisterController::class,'register'])->name('register');
-// Route::post('registration',[RegisterController::class,'registration'])->name('registartion');
-Route::post('get-address',[RegisterController::class,'getAddress'])->name('get.address');
+// Route::get('properties_details',[PropertyController::class,'properties_details'])->name('properties_details');
 
 //Associate Register
 // Route::get('associate-register',[RegisterController::class,'associateRegister'])->name('associate.register');
 
-//Send OTP
-Route::post('send-otp',[RegisterController::class,'sendOtp'])->name('send.otp');
-
-//Login
-// Route::get('login',[LoginController::class,'showLogin'])->name('login');
-// Route::post('login',[LoginController::class,'login'])->name('login');
 
 Route::group(['middleware'=>['auth:web'],'prefix'=>'user','as'=>'user.'],function () {
 
@@ -62,15 +58,15 @@ Route::group(['middleware'=>['auth:web'],'prefix'=>'user','as'=>'user.'],functio
     Route::view('dashboard','frontend.user_dashboard.dashboard')->name('dashboard');
 
     //Profile
-    Route::get('profile',[UserProfileController::class,'profile'])->name('profile');
-    Route::post('save-profile',[UserProfileController::class,'saveProfile'])->name('save.profile');
+    // Route::get('profile',[UserProfileController::class,'profile'])->name('profile');
+    // Route::post('save-profile',[UserProfileController::class,'saveProfile'])->name('save.profile');
 
     //KYC
-    Route::get('kyc',[UserProfileController::class,'kyc'])->name('kyc');
-    Route::post('save-kyc',[UserProfileController::class,'saveKyc'])->name('save.kyc');
+    // Route::get('kyc',[UserProfileController::class,'kyc'])->name('kyc');
+    // Route::post('save-kyc',[UserProfileController::class,'saveKyc'])->name('save.kyc');
 
     //Bank Detail
-    Route::post('save-bank-detail',[UserBankDetailController::class,'saveBankDetail'])->name('save.bank.detail');
+    // Route::post('save-bank-detail',[UserBankDetailController::class,'saveBankDetail'])->name('save.bank.detail');
 
     //Customers
     // Route::get('customer-index',[CustomerController::class,'index'])->name('customer.index');

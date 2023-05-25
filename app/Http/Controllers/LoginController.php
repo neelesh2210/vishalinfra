@@ -14,7 +14,7 @@ class LoginController extends Controller
         $this->middleware('guest:web', ['except' => ['logout']]);
     }
 
-    public function showLogin(){
+    public function signin(){
         if(Auth::guard('web')->user()){
             return redirect()->route('user.dashboard');
         }else{
@@ -25,36 +25,19 @@ class LoginController extends Controller
 
     public function login(Request $request){
         $this->validate($request, [
-            'phone' => 'required|exists:users,phone',
+            'user_name' => 'required|exists:users,user_name',
             'password' => 'required|min:8'
         ]);
 
-        // if (Auth::guard('web')->attempt([
-        //     'phone' => $request->phone,
-        //     'password' => $request->password,
-        //     'status' => function ($query) {
-        //         $query->where('is_verified', '1');
-        //     }
-        //     ])){
-        //     return redirect()->route('user.dashboard');
-        // }
-        if (Auth::guard('web')->attempt([
-            'phone' => $request->phone,
-            'password' => $request->password,
-            ])){
-
-            if($request->previous_url){
-                return redirect()->to($request->previous_url);
-            }else{
-                return redirect()->route('user.dashboard');
-            }
+        if (Auth::guard('web')->attempt(['user_name' => $request->user_name,'password' => $request->password,])){
+            return redirect()->route('user.dashboard');
         }
         return back()->with('error','*Credential does not Matched!');
     }
 
     public function logout(){
         Auth::guard('web')->logout();
-        return redirect()->route('login');
+        return redirect()->route('signin');
     }
 
 }

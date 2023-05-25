@@ -16,8 +16,8 @@
                     <img src="#" onerror="this.onerror=null;this.src='{{asset('user_dashboard/images/users/avatar-1.jpg')}}'" class="rounded-circle">
                 </span>
                 <span>
-                    <span class="account-user-name">{{auth()->guard('web')->user()->name}} ({{auth()->guard('web')->user()->type}})</span>
-                    <span class="account-user-name text-center">{{auth()->guard('web')->user()->referrer_code}}</span>
+                    <span class="account-user-name">{{auth()->guard('web')->user()->name}}</span>
+                    <span class="account-user-name text-center">{{str_replace('_','/',auth()->guard('web')->user()->type)}}</span>
                 </span>
             </a>
             <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">

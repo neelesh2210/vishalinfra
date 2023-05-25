@@ -4,7 +4,7 @@ use App\Models\Admin\AssociateWallet;
 
 if (! function_exists('generateRandomString')) {
     function generateRandomString($n) {
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $randomString = '';
 
         for ($i = 0; $i < $n; $i++) {

@@ -27,21 +27,11 @@ class RegisterRequest extends FormRequest
         $rule = [
             'type' => 'required',
             'name' => 'required|string|max:150',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' =>'required|string|min:8',
             'phone' => 'required|min:10|max:10|unique:users,phone',
-            'password' =>'required|string|min:8'
+            'agree' => 'required',
         ];
-        if($request->email){
-            $rule['email']='required|string|email|max:255|unique:users';
-        }
-        if($request->referral_code){
-            $rule['referral_code']='exists:users,referrer_code';
-        }
-        if($request->pincode){
-            $rule['pincode']='exists:pincodes,pincode';
-        }
-        if($request->type == 'associate'){
-            $rule['aadhar_number']='required';
-        }
 
         return $rule;
     }
