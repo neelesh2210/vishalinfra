@@ -52,7 +52,7 @@
 								<div class="single-team">
 									<div class="team-grid">
 										<div class="teamgrid-user">
-											<img src="{{ asset('frontend/assets/img/user-2.jpg')}}" alt="" class="img-fluid" />
+											<img src="{{ asset('frontend/assets/img/profile.png')}}" alt="" class="img-fluid" />
 										</div>
 										<div class="teamgrid-content">
 											<h4>Shaurya Preet</h4>
@@ -72,11 +72,11 @@
 								<div class="single-team">
 									<div class="team-grid">
 										<div class="teamgrid-user">
-											<img src="{{ asset('frontend/assets/img/user-2.jpg')}}" alt="" class="img-fluid" />
+											<img src="{{ asset('frontend/assets/img/profile.png')}}" alt="" class="img-fluid" />
 										</div>
 										<div class="teamgrid-content">
-											<h4>Shivangi Preet</h4>
-											<span>Content Writer</span>
+											<h4>Vishal Infra</h4>
+											<span>Co-Founder</span>
 										</div>
 										<div class="teamgrid-social">
 											<ul>
@@ -92,11 +92,11 @@
 								<div class="single-team">
 									<div class="team-grid">
 										<div class="teamgrid-user">
-											<img src="{{ asset('frontend/assets/img/user-2.jpg')}}" alt="" class="img-fluid" />
+											<img src="{{ asset('frontend/assets/img/profile.png')}}" alt="" class="img-fluid" />
 										</div>
 										<div class="teamgrid-content">
-											<h4>Yash Preet</h4>
-											<span>Content Writer</span>
+											<h4>Vishal Infra</h4>
+											<span>Co-Founder</span>
 										</div>
 										<div class="teamgrid-social">
 											<ul>
@@ -112,11 +112,11 @@
 								<div class="single-team">
 									<div class="team-grid">
 										<div class="teamgrid-user">
-											<img src="{{ asset('frontend/assets/img/user-2.jpg')}}" alt="" class="img-fluid" />
+											<img src="{{ asset('frontend/assets/img/profile.png')}}" alt="" class="img-fluid" />
 										</div>
 										<div class="teamgrid-content">
-											<h4>Dhananjay Preet</h4>
-											<span>CEO & Manager</span>
+											<h4>Vishal Infra</h4>
+											<span>Co-Founder</span>
 										</div>
 										<div class="teamgrid-social">
 											<ul>
@@ -132,11 +132,11 @@
 								<div class="single-team">
 									<div class="team-grid">
 										<div class="teamgrid-user">
-											<img src="{{ asset('frontend/assets/img/user-2.jpg')}}" alt="" class="img-fluid" />
+											<img src="{{ asset('frontend/assets/img/profile.png')}}" alt="" class="img-fluid" />
 										</div>
 										<div class="teamgrid-content">
-											<h4>Rahul Gilkrist</h4>
-											<span>App Designer</span>
+											<h4>Vishal Infra</h4>
+											<span>Co-Founder</span>
 										</div>
 										<div class="teamgrid-social">
 											<ul>
@@ -152,11 +152,11 @@
 								<div class="single-team">
 									<div class="team-grid">
 										<div class="teamgrid-user">
-											<img src="{{ asset('frontend/assets/img/user-2.jpg')}}" alt="" class="img-fluid" />
+											<img src="{{ asset('frontend/assets/img/profile.png')}}" alt="" class="img-fluid" />
 										</div>
 										<div class="teamgrid-content">
-											<h4>Adam Wilcard</h4>
-											<span>Web Developer</span>
+											<h4>Vishal Infra</h4>
+											<span>Co-Founder</span>
 										</div>
 										<div class="teamgrid-social">
 											<ul>

@@ -4244,7 +4244,7 @@ height: 60px;
 .drp_menu_headr {
     display: flex;
     align-items: center;
-    padding:1.2rem;
+    padding:.5rem .75rem;
     background: #234ca0;
 }
 .drp_menu_headr h4{
@@ -4271,7 +4271,7 @@ height: 60px;
     color: #495363;
 	position:relative;
     font-family: 'Lexend Deca', sans-serif;
-    padding: 1rem 1.2rem;
+    padding: .5rem .75rem;
     border-bottom: 1px solid #edf0f3;
 }
 .account-drop .dropdown-menu ul li:last-child a{

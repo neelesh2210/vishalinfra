@@ -39,7 +39,6 @@
     }
 
     .prop {
-        text-transform: uppercase;
         color: #2b2e37;
         font-size: 15px;
         font-weight: 500;
@@ -144,12 +143,15 @@
                                                         <li class="bedroom" onclick="select_list('bedroom','2')"><a>2</a></li>
                                                         <li class="bedroom" onclick="select_list('bedroom','3')"><a>3</a></li>
                                                         <li class="bedroom" onclick="select_list('bedroom','4')"><a>4</a></li>
-                                                        <li class="btn dropdown-toggle btn_bedroom-toggle bedroom" type="button" data-toggle="dropdown" style="width: 55px;">5</li>
+                                                        <li class="bedroom" onclick="select_list('bedroom','5')"><a>5</a> </li>
+                                                        <li class="bedroom" onclick="select_list('bedroom','6')"><a>6</a></li>
+                                                        <li class="bedroom" onclick="select_list('bedroom','7')"><a>7</a></li>
+                                                        <li class="bedroom" onclick="select_list('bedroom','8')"><a>8</a></li>
+                                                        <li class="bedroom" onclick="select_list('bedroom','9')"><a>9</a></li>
+                                                        <li class="btn dropdown-toggle btn_bedroom-toggle bedroom" type="button" data-toggle="dropdown" style="width: 55px;">10</li>
                                                         <ul class="dropdown-menu bedroom_list">
-                                                            <li  class="bedroom" onclick="select_list('bedroom','5')"><a>5</a></li>
-                                                            <li  class="bedroom" onclick="select_list('bedroom','6')"><a>6</a></li>
-                                                            <li  class="bedroom" onclick="select_list('bedroom','7')"><a>7</a></li>
-                                                            <li  class="bedroom" onclick="select_list('bedroom','8')"><a>8</a></li>
+                                                            <li  class="bedroom" onclick="select_list('bedroom','11')"><a>11</a></li>
+                                                            <li  class="bedroom" onclick="select_list('bedroom','12')"><a>12</a></li>
                                                         </ul>
                                                     </ul>
                                                 </div>
@@ -172,12 +174,16 @@
                                                         <li class="balconies" class="csF bdOption" onclick="select_list('balconies','2')"><a>2</a></li>
                                                         <li class="balconies" class="csF bdOption" onclick="select_list('balconies','3')"><a>3</a></li>
                                                         <li class="balconies" class="csF bdOption" onclick="select_list('balconies','4')"><a>4</a></li>
-                                                        <li class="btn dropdown-toggle btn_balconies-toggle balconies" type="button" data-toggle="dropdown" style="width: 55px;">5</li>
+                                                        <li class="balconies" class="csF bdOption" onclick="select_list('balconies','5')"><a>5</a></li>
+                                                        <li class="balconies" class="csF bdOption" onclick="select_list('balconies','6')"><a>6</a></li>
+                                                        <li class="balconies" class="csF bdOption" onclick="select_list('balconies','7')"><a>7</a></li>
+                                                        <li class="balconies" class="csF bdOption" onclick="select_list('balconies','8')"><a>8</a></li>
+                                                        <li class="balconies" class="csF bdOption" onclick="select_list('balconies','9')"><a>9</a></li>
+                                                        <li class="btn dropdown-toggle btn_balconies-toggle balconies" type="button" data-toggle="dropdown" style="width: 55px;">10</li>
                                                         <ul class="dropdown-menu balconies_list">
-                                                            <li class="balconies" onclick="select_list('balconies','5')"><a>5</a></li>
-                                                            <li class="balconies" onclick="select_list('balconies','6')"><a>6</a></li>
-                                                            <li class="balconies" onclick="select_list('balconies','7')"><a>7</a></li>
-                                                            <li class="balconies" onclick="select_list('balconies','8')"><a>8</a></li>
+                                                            <li class="balconies" onclick="select_list('balconies','10')"><a>10</a></li>
+                                                            <li class="balconies" onclick="select_list('balconies','11')"><a>11</a></li>
+                                                            <li class="balconies" onclick="select_list('balconies','12')"><a>12</a></li>
                                                         </ul>
                                                     </ul>
                                                 </div>
@@ -200,12 +206,16 @@
                                                         <li class="bathroom" onclick="select_list('bathroom','2')"><a>2</a></li>
                                                         <li class="bathroom" onclick="select_list('bathroom','3')"><a>3</a></li>
                                                         <li class="bathroom" onclick="select_list('bathroom','4')"><a>4</a></li>
-                                                        <li class="btn dropdown-toggle btn_bathroom-toggle bathroom" type="button" data-toggle="dropdown" style="width: 55px;">5</li>
+                                                        <li class="bathroom" onclick="select_list('bathroom','5')"><a>5</a> </li>
+                                                        <li class="bathroom" onclick="select_list('bathroom','6')"><a>6</a></li>
+                                                        <li class="bathroom" onclick="select_list('bathroom','7')"><a>7</a></li>
+                                                        <li class="bathroom" onclick="select_list('bathroom','8')"><a>8</a></li>
+                                                        <li class="bathroom" onclick="select_list('bathroom','9')"><a>9</a></li>
+                                                        <li class="btn dropdown-toggle btn_bathroom-toggle bathroom" type="button" data-toggle="dropdown" style="width: 55px;">10</li>
                                                         <ul class="dropdown-menu bathroom_list">
-                                                            <li class="bathroom" onclick="select_list('bathroom','5')"><a>5</a></li>
-                                                            <li class="bathroom" onclick="select_list('bathroom','6')"><a>6</a></li>
-                                                            <li class="bathroom" onclick="select_list('bathroom','7')"><a>7</a></li>
-                                                            <li class="bathroom" onclick="select_list('bathroom','8')"><a>8</a></li>
+                                                            <li class="bathroom" onclick="select_list('bathroom','10')"><a>10</a></li>
+                                                            <li class="bathroom" onclick="select_list('bathroom','11')"><a>11</a></li>
+                                                            <li class="bathroom" onclick="select_list('bathroom','12')"><a>12</a></li>
                                                         </ul>
                                                     </ul>
                                                 </div>
@@ -233,7 +243,12 @@
                                                         <li class="floor_no" onclick="select_list('floor_no','2')"><a>2</a></li>
                                                         <li class="floor_no" onclick="select_list('floor_no','3')"><a>3</a></li>
                                                         <li class="floor_no" onclick="select_list('floor_no','4')"><a>4</a></li>
-                                                        <li class="btn dropdown-toggle btn_floor_no-toggle floor_no" type="button" data-toggle="dropdown" style="width: 55px;">5</li>
+                                                        <li class="floor_no" onclick="select_list('floor_no','5')"><a>5</a></li>
+                                                        <li class="floor_no" onclick="select_list('floor_no','6')"><a>6</a></li>
+                                                        <li class="floor_no" onclick="select_list('floor_no','7')"><a>7</a></li>
+                                                        <li class="floor_no" onclick="select_list('floor_no','8')"><a>8</a></li>
+                                                        <li class="floor_no" onclick="select_list('floor_no','9')"><a>9</a></li>
+                                                        <li class="btn dropdown-toggle btn_floor_no-toggle floor_no" type="button" data-toggle="dropdown" style="width: 55px;">10</li>
                                                         <ul class="dropdown-menu floor_no_list">
                                                             @for($i=5;$i<=20;$i++)
                                                         <li class="floor_no" onclick="select_list('floor_no','{{$i}}')"><a>{{$i}}</a></li>
@@ -260,7 +275,10 @@
                                                         <li class="total_floor" onclick="select_list('total_floor','2')"><a>2</a></li>
                                                         <li class="total_floor" onclick="select_list('total_floor','3')"><a>3</a></li>
                                                         <li class="total_floor" onclick="select_list('total_floor','4')"><a>4</a></li>
-                                                        <li class="btn dropdown-toggle btn_total_floor-toggle total_floor" type="button" data-toggle="dropdown" style="width: 55px;">5</li>
+                                                        <li class="total_floor" onclick="select_list('total_floor','5')"><a>5</a> </li>
+                                                        <li class="total_floor" onclick="select_list('total_floor','6')"><a>6</a></li>
+                                                        <li class="total_floor" onclick="select_list('total_floor','7')"><a>7</a></li>
+                                                        <li class="btn dropdown-toggle btn_total_floor-toggle total_floor" type="button" data-toggle="dropdown" style="width: 55px;">8</li>
                                                         <ul class="dropdown-menu total_floor_list">
                                                             @for($i=5;$i<=20;$i++)
                                                                 <li class="total_floor" onclick="select_list('total_floor','{{$i}}')"><a>{{$i}}</a></li>
@@ -384,7 +402,7 @@
                                     <div class="p-2">
                                         <div class="form-group row">
                                             <div class="col-sm-6">
-                                                <label class="col-from-label" for="transaction_type">Transaction Type <span class="text-danger">*</span></label>
+                                                <label class="col-from-label" for="transaction_type">Transaction Type <span class="text-danger">*</span></label><br>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input"  type="radio" name="transaction_type" id="new" value="new" required>
                                                     <label class="form-check-label" for="new"> New Property</label>
@@ -394,7 +412,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
-                                                <label class="col-from-label" for="prossession_status">Possession Status <span class="text-danger">*</span></label>
+                                                <label class="col-from-label" for="prossession_status">Possession Status <span class="text-danger">*</span></label><br>
                                                 <div class="form-check">
                                                     <input class="form-check-input"  type="radio" name="prossession_status" id="under_construction" value="under_construction" required>
                                                     <label class="form-check-label" for="under_construction">Under Construction</label>
@@ -457,7 +475,7 @@
                                     <div class="p-2">
                                         <div class="form-group row">
                                             <div class="col-lg-6">
-                                                <label>Gallery Image</label>
+                                                <label>Gallery Image</label><br>
                                                 <div class="custom-file">
                                                     <input type="file" name="gallery_image[]" class="form-control" accept="image/*" multiple id="gallery-photo-add" onclick="gallery_image()">
                                                 </div>
@@ -469,7 +487,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label>Image</label>
+                                                    <label>Image</label><br>
                                                     <div class="custom-file">
                                                         <input type="file" name="image" id="img_input1" class="form-control" accept="image/*">
                                                     </div>

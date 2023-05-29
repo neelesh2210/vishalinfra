@@ -68,7 +68,22 @@
                             @if(!Auth::guard('web')->user())
                                 <li class="_my_prt_list"><a href="{{route('signin')}}"><i class="fas fa-sign-in-alt mr-1"></i>Sign in</a></li>
                             @else
-                               <a href="{{route('user.dashboard')}}">{{Auth::guard('web')->user()->name}}</a>
+                            <li>
+                                <div class="btn-group account-drop">
+                                    <button type="button" class="btn btn-order-by-filt" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="{{ asset('frontend/assets/img/profile.png')}}" class="avater-img" alt="">
+                                    </button>
+                                    <div class="dropdown-menu pull-right animated flipInX">
+                                        <div class="drp_menu_headr">
+                                            <h4>Hi, {{Auth::guard('web')->user()->name}}</h4>
+                                        </div>
+                                        <ul>
+                                            <li><a href="{{route('user.dashboard')}}"><i class="fa fa-user-tie"></i>My Profile</a></li>
+                                            <li><a href="#"><i class="fa fa-unlock-alt"></i>Logout</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
                             @endif
                             <li class="add-listing">
                                 <a href="{{route('user.property.listing')}}" class="theme-cl">
