@@ -9,11 +9,11 @@
             <th class="text-center">Action</th>
         </tr>
     </thead>
-    <tbody class="loading">
+    <tbody>
         @forelse ($customers as $key=>$customer)
             <tr>
                 <td class="text-center">{{($key+1) + ($customers->currentPage() - 1)*$customers->perPage()}}</td>
-                <td class="text-center">{{$customer->name}}</td>
+                <td class="text-center">{{$customer->name}} ({{$customer->user_id}})</td>
                 <td class="text-center">{{$customer->email}}</td>
                 <td class="text-center">{{$customer->phone}}</td>
                 <td class="text-center">{{$customer->created_at->format('d-M-Y')}}</td>
