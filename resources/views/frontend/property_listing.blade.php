@@ -32,7 +32,7 @@
         float: left;
         color: #606060;
         border-left: 1px solid #e0e0e0;
-        padding: 8px;
+        padding: 10px 13px;
         width: fit-content;
         cursor: pointer;
         list-style: none;
@@ -40,7 +40,6 @@
     }
 
     .prop {
-        text-transform: uppercase;
         color: #2b2e37;
         font-size: 15px;
         font-weight: 500;
@@ -48,7 +47,6 @@
 
     .listForSelect ul li a {
         color: #606060;
-        padding: 8px 15px;
         cursor: pointer;
     }
 
@@ -121,7 +119,7 @@
                                     </div>
                                     <div class="p-2">
                                         <div class="form-group row">
-                                            <div class="col-md-4 form_div">
+                                            <div class="col-md-6 form_div">
                                                 <div class="form-group">
                                                     <label for="properties_type">Property Type <span class="text-danger">*</span></label>
                                                     <select class="form-control select2" name="properties_type" id="properties_type"  data-live-search="true" required>
@@ -133,7 +131,7 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4 form_div">
+                                            <div class="col-md-6 form_div">
                                                 <div class="form-group">
                                                     <label>Property Name <span class="text-danger">*</span></label>
                                                     <input type="text" class="form-control" name="name" placeholder="Property Name..." required>
@@ -148,7 +146,7 @@
                                     </div>
                                     <div class="p-2">
                                         <div class="row">
-                                            <div class="col-md-4" id="bed">
+                                            <div class="col-md-6 mb-2" id="bed">
                                                 <b class="prop">Bedroom</b> <br>
                                                 <div class="bedRooms listForSelect" >
                                                     <ul>
@@ -176,7 +174,7 @@
                                                     <option value='8' >8</option>
                                                 </select>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-6 mb-2">
                                                 <b class="prop">Balconies</b><br>
                                                 <div class="bedRooms listForSelect">
                                                     <ul>
@@ -193,7 +191,7 @@
                                                         </ul>
                                                     </ul>
                                                 </div>
-                                                <select  name="balconies" id="balconies"  style="display:none;">
+                                                <select name="balconies" id="balconies"  style="display:none;">
                                                     <option value='1' >1</option>
                                                     <option value='2' >2</option>
                                                     <option value='3' >3</option>
@@ -204,7 +202,7 @@
                                                     <option value='8' >8</option>
                                                 </select>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-6 mb-2">
                                                 <b class="prop"> Bathroom</b><br>
                                                 <div class="bedRooms listForSelect">
                                                     <ul>
@@ -264,7 +262,7 @@
                                             </div>
                                         </div>
                                         <div class="row pt-20">
-                                            <div class="col-md-6">
+                                            <div class="col-md-5">
                                                 <b class="prop">Total Floors</b><br>
                                                 <div class="bedRooms listForSelect">
                                                     <ul>
@@ -286,7 +284,7 @@
                                                     @endfor
                                                 </select>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-7">
                                                 <b class="prop">Furnished Status</b><br>
                                                 <div class="bedRooms listForSelect">
                                                     <ul>
@@ -327,40 +325,40 @@
                                     </div>
                                     <div class="p-2">
                                         <div class="form-group row">
-                                            <div class="col-sm-4">
+                                            <div class="col-md-6">
                                                 <label class="col-from-label" for="self_tieup">Self / Tieup</label>
                                                 <div class="form-check">
                                                     <input class="form-check-input"  type="radio" name="self_tieup" id="self" value="self">
-                                                    <label class="form-check-label"> Self</label>
+                                                    <label class="form-check-label" for="self"> Self</label>
                                                     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                                                     <input class="form-check-input" type="radio" name="self_tieup" id="tieup" value="tieup">
-                                                    <label class="form-check-label"> Tieup</label>
+                                                    <label class="form-check-label" for="tieup"> Tieup</label>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-4">
+                                            <div class="col-md-6">
                                                 <label class="col-from-label" for="plot_type">Plot Type</label>
                                                 <div class="form-check">
                                                     <input class="form-check-input"  type="radio" name="plot_type" id="commercial" value="commercial">
-                                                    <label class="form-check-label"> Commercial </label>
+                                                    <label class="form-check-label" for="commercial"> Commercial </label>
                                                     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                                                     <input class="form-check-input" type="radio" name="plot_type" id="residential" value="residential">
-                                                    <label class="form-check-label"> Residential</label>
+                                                    <label class="form-check-label" for="residential"> Residential</label>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-4">
+                                            <div class="col-md-12">
                                                 <label class="col-from-label" for="facing">Facing</label>
                                                 <div class="form-check">
                                                     <input class="form-check-input"  type="radio" name="facing" id="east" value="east">
-                                                    <label class="form-check-label"> East </label>
+                                                    <label class="form-check-label" for="east"> East </label>
                                                     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                                                     <input class="form-check-input" type="radio" name="facing" id="west" value="west">
-                                                    <label class="form-check-label"> West</label>
+                                                    <label class="form-check-label" for="west"> West</label>
                                                     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                                                     <input class="form-check-input" type="radio" name="facing" id="north" value="north">
-                                                    <label class="form-check-label"> North</label>
+                                                    <label class="form-check-label" for="north"> North</label>
                                                     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                                                     <input class="form-check-input" type="radio" name="facing" id="south" value="south">
-                                                    <label class="form-check-label"> South</label>
+                                                    <label class="form-check-label" for="south"> South</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -397,25 +395,25 @@
                                         <div class="form-group row">
                                             <div class="col-sm-6">
                                                 <label class="col-from-label" for="transaction_type">Transaction Type <span class="text-danger">*</span></label>
-                                                <div class="form-check">
+                                                <div class="form-check form-check-inline">
                                                     <input class="form-check-input"  type="radio" name="transaction_type" id="new" value="new" required>
-                                                    <label class="form-check-label"> New Property</label>
+                                                    <label class="form-check-label" for="new"> New Property</label>
                                                     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                                                     <input class="form-check-input" type="radio" name="transaction_type" id="resale" value="resale" required>
-                                                    <label class="form-check-label"> Resale</label>
+                                                    <label class="form-check-label" for="resale"> Resale</label>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
                                                 <label class="col-from-label" for="prossession_status">Possession Status <span class="text-danger">*</span></label>
                                                 <div class="form-check">
                                                     <input class="form-check-input"  type="radio" name="prossession_status" id="under_construction" value="under_construction" required>
-                                                    <label class="form-check-label">Under Construction</label>
+                                                    <label class="form-check-label" for="under_construction">Under Construction</label>
                                                     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                                                     <input class="form-check-input" type="radio" name="prossession_status" id="ready_to_move" value="ready_to_move" required>
-                                                    <label class="form-check-label"> Ready To Move</label>
+                                                    <label class="form-check-label" for="ready_to_move"> Ready To Move</label>
                                                     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                                                     <input class="form-check-input" type="radio" name="prossession_status" id="proposed_site" value="proposed_site" required>
-                                                    <label class="form-check-label"> Proposed Site</label>
+                                                    <label class="form-check-label" for="proposed_site"> Proposed Site</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -427,35 +425,35 @@
                                     </div>
                                     <div class="p-2">
                                         <div class="form-group row">
-                                            <div class="col-md-3">
+                                            <div class="col-md-4 mb-2">
                                                 <label class="col-from-label">Booking Amount <span class="text-danger">*</span></label>
                                                 <input type="number" step="0.01" min="0.00" class="form-control" name="booking_amount" placeholder="Booking Amount..."  required>
                                             </div>
-                                            <div class="col-md-3">
+                                            <div class="col-md-4 mb-2">
                                                 <label class="col-from-label">Maintenance Charge <span class="text-danger">*</span></label>
                                                 <input type="number" step="0.01" min="0.00" class="form-control" name="maintenance_charge" placeholder="Maintenance Charge..."  required>
                                             </div>
-                                            <div class="col-md-3">
+                                            <div class="col-md-4 mb-2">
                                                 <label class="col-from-label">Expected Price <span class="text-danger">*</span></label>
                                                 <input type="number" step="0.01" min="0.00" class="form-control area" name="expected_price" id="expected_price" placeholder="Expected Price..."  required>
                                             </div>
-                                            <div class="col-md-3">
+                                            <div class="col-md-4 mb-2">
                                                 <label class="col-from-label">Price per sq ft <span class="text-danger">*</span></label>
                                                 <input type="number" step="0.01" min="0.00" class="form-control" name="price" id="price_per_sq_ft" placeholder="Price..." readonly>
                                             </div>
-                                            <div class="col-md-3">
+                                            <div class="col-md-4 mb-2">
                                                 <label class="col-from-label">Token Money <span class="text-danger">*</span></label>
                                                 <input type="number" step="0.01" min="0.00" class="form-control" name="token_money" id="token_money" placeholder="Token Money..." required>
                                             </div>
-                                            <div class="col-md-3">
+                                            <div class="col-md-4 mb-2">
                                                 <label class="col-from-label">Base Price <span class="text-danger">*</span></label>
                                                 <input type="number" step="0.01" min="0.00" class="form-control" name="base_price" id="base_price" placeholder="Base Price..." required>
                                             </div>
-                                            <div class="col-md-3">
+                                            <div class="col-md-4 mb-2">
                                                 <label class="col-from-label">Agent Price <span class="text-danger">*</span></label>
                                                 <input type="number" step="0.01" min="0.00" class="form-control" name="agent_price" id="agent_price" placeholder="Agent Price..." required>
                                             </div>
-                                            <div class="col-md-3">
+                                            <div class="col-md-4 mb-2">
                                                 <label class="col-from-label">Final Price <span class="text-danger">*</span></label>
                                                 <input type="number" step="0.01" min="0.00" class="form-control" name="final_price" id="final_price" placeholder="Final Price..." required>
                                             </div>
@@ -469,10 +467,9 @@
                                     <div class="p-2">
                                         <div class="form-group row">
                                             <div class="col-lg-6">
-                                                <label for="attachment">Gallery Image</label>
+                                                <label>Gallery Image</label>
                                                 <div class="custom-file">
-                                                    <input type="file" name="gallery_image[]" class="custom-file-input" accept="image/*" multiple id="gallery-photo-add" onclick="gallery_image()">
-                                                    <label class="custom-file-label" for="customFile">Choose file...</label>
+                                                    <input type="file" name="gallery_image[]" class="form-control" accept="image/*" multiple id="gallery-photo-add" onclick="gallery_image()">
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-lg-12 form-group">
@@ -484,8 +481,7 @@
                                                 <div class="form-group">
                                                     <label>Image</label>
                                                     <div class="custom-file">
-                                                        <input type="file" name="image" id="img_input1" class="custom-file-input" accept="image/*">
-                                                        <label class="custom-file-label" for="customFile">Choose file...</label>
+                                                        <input type="file" name="image" id="img_input1" class="form-control" accept="image/*">
                                                     </div>
                                                     <div class="p-2 mt-2">
                                                         <img id="img1" src="{{ asset('backend/img/no-image.png') }}" height="100px" width="100px">
