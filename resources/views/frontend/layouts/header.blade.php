@@ -67,7 +67,7 @@
                         <ul class="nav-menu nav-menu-social align-to-right">
                             <li class="_my_prt_list"><a href="{{route('signin')}}"><i class="fas fa-sign-in-alt mr-1"></i>Sign in</a></li>
                             <li class="add-listing">
-                                <a href="{{route('submit_property')}}" class="theme-cl">
+                                <a href="{{route('user.property.listing')}}" class="theme-cl">
                                     <i class="fas fa-plus-circle mr-1"></i>Post Property<small>(Free)</small>
                                 </a>
                             </li>

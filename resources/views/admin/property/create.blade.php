@@ -600,5 +600,5 @@
             }
         }
 
-     </script>
+    </script>
 @endsection

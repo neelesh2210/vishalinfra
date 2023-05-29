@@ -8,6 +8,7 @@
     <title>Vishal Infra</title>
     <!-- Custom CSS -->
     <link href="{{ asset('frontend/assets/css/styles.css')}}" rel="stylesheet">
+    <script src="{{ asset('frontend/assets/js/jquery.min.js')}}"></script>
 </head>
 
     <body class="yellow-skin">

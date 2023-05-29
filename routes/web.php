@@ -10,6 +10,7 @@ use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\BookPropertyController;
 use App\Http\Controllers\UserBankDetailController;
 use App\Http\Controllers\AssociateWalletController;
+use App\Http\Controllers\PropertyListingController;
 use App\Http\Controllers\PropertyBookingRequestController;
 
 /*
@@ -58,6 +59,9 @@ Route::group(['middleware'=>['auth:web'],'prefix'=>'user','as'=>'user.'],functio
 
     //Dashboard
     Route::view('dashboard','frontend.user_dashboard.dashboard')->name('dashboard');
+
+    //Register Property
+    Route::get('property-listing',[PropertyListingController::class,'create'])->name('property.listing');
 
     //Profile
     // Route::get('profile',[UserProfileController::class,'profile'])->name('profile');
