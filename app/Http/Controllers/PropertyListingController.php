@@ -2,13 +2,112 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
+use App\CPU\PropertyManager;
 use Illuminate\Http\Request;
+use App\Models\Admin\Property;
 
 class PropertyListingController extends Controller
 {
 
+    public function index(){
+        $properties = PropertyManager::withoutTrash()->orderBy('id','desc')->paginate(15);
+
+        return view('frontend.property_index',compact('properties'));
+    }
+
     public function create(){
         return view('frontend.property_listing');
+    }
+
+    public function store(Request $request){
+        $property_number = Property::orderBy('id','desc')->first();
+        if($property_number){
+            $property_number = $property_number->property_number + 1;
+        }else{
+            $property_number = 10000001;
+        }
+        $property=new Property;
+        $property->slug=str_replace(' ','-',$request->name).'-'.generateRandomString(4);
+        $property->added_by=Auth::guard('web')->user()->id;
+        $property->property_number=$property_number;
+        $property->name=$request->name;
+        $property->properties_type=$request->properties_type;
+
+        if($request->properties_type == 'plot'){
+            $property->plot_area=$request->plot_area;
+            $property->plot_length=$request->plot_length;
+            $property->plot_breadth=$request->plot_breadth;
+            $property->self_tieup=$request->self_tieup;
+            $property->plot_type=$request->plot_type;
+            $property->facing=$request->facing;
+
+            $property->furnished_status=null;
+            $property->bedroom=null;
+            $property->balconies=null;
+            $property->bathroom=null;
+            $property->floor_no=null;
+            $property->total_floor=null;
+            $property->carpet_area=null;
+            $property->super_area=null;
+
+        }elseif($request->properties_type == 'flat_apartment' || $request->properties_type == 'residental_house'){
+            $property->furnished_status=$request->furnished_status;
+            $property->bedroom=$request->bedroom;
+            $property->balconies=$request->balconies;
+            $property->bathroom=$request->bathroom;
+            $property->floor_no=$request->floor_no;
+            $property->total_floor=$request->total_floor;
+            $property->carpet_area=$request->carpet_area;
+            $property->super_area=$request->super_area;
+
+            $property->plot_area=null;
+            $property->plot_length=null;
+            $property->plot_breadth=null;
+            $property->self_tieup=null;
+            $property->plot_type=null;
+            $property->facing=null;
+        }elseif($request->properties_type == 'commerical_space'){
+            $property->furnished_status=$request->furnished_status;
+            $property->balconies=$request->balconies;
+            $property->bathroom=$request->bathroom;
+            $property->floor_no=$request->floor_no;
+            $property->total_floor=$request->total_floor;
+            $property->carpet_area=$request->carpet_area;
+            $property->super_area=$request->super_area;
+
+            $property->plot_area=null;
+            $property->plot_length=null;
+            $property->plot_breadth=null;
+            $property->self_tieup=null;
+            $property->plot_type=null;
+            $property->facing=null;
+        }
+
+        $property->transaction_type=$request->transaction_type;
+        $property->prossession_status=$request->prossession_status;
+
+        $property->expected_price=$request->expected_price;
+        $property->price=$request->price;
+        $property->booking_amount=$request->booking_amount;
+        $property->maintenance_charge=$request->maintenance_charge;
+        $property->token_money=$request->token_money;
+        $property->base_price=$request->base_price;
+        $property->agent_price=$request->agent_price;
+        $property->final_price=$request->final_price;
+        if($request->gallery_image){
+            $gall_imgs = [];
+            foreach($request->gallery_image as $gallery_image){
+                $gall_imgs[] = imageUpload($gallery_image,'backend/img/properies');
+            }
+            $property->photos=json_encode($gall_imgs);
+        }
+
+        $property->thumbnail_img=imageUpload($request->file('image'),'backend/img/properies');;
+        $property->remark=$request->remark;
+        $property->save();
+
+        return back()->with('success','Property Added Successfully!');
     }
 
 }

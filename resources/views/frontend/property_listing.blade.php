@@ -101,7 +101,7 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="dashboard-body">
                         <div class="dashboard-wraper">
-                            <form class="form form-horizontal mar-top" action="{{route('admin.property.store')}}" method="POST" enctype="multipart/form-data" id="choice_form">
+                            <form class="form form-horizontal mar-top" action="{{route('user.property.listing.store')}}" method="POST" enctype="multipart/form-data" id="choice_form">
                                 @csrf
                                 <div class="card">
                                     <div class="card-header">

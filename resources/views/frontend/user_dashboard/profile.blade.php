@@ -74,40 +74,6 @@
                                     <button type="submit" class="btn btn-primary">Save Changes</button>
                                 </div>
                             </form>
-                            <h5 class="mb-3 text-uppercase bg-light p-2">Bank Account Information</h5>
-                            <hr>
-                            <form action="{{route('user.save.bank.detail')}}" method="POST" enctype="multipart/form-data">
-                                @csrf
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="holder_name" class="form-label">Holder Name</label>
-                                        <input type="text" id="holder_name" name="holder_name" value="{{optional($profile->bankDetail)->holder_name}}" class="form-control" placeholder="Holder Name...">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="account_number" class="form-label">Account Number</label>
-                                        <input type="text" id="account_number" name="account_number" value="{{optional($profile->bankDetail)->account_number}}" class="form-control" placeholder="Account Number...">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="ifsc_code" class="form-label">IFSC Code</label>
-                                        <input type="text" id="ifsc_code" name="ifsc_code" value="{{optional($profile->bankDetail)->ifsc_code}}" class="form-control" placeholder="IFSC Code...">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="bank_name" class="form-label">Bank Name</label>
-                                        <input type="text" id="bank_name" name="bank_name" value="{{optional($profile->bankDetail)->bank_name}}" class="form-control" placeholder="Bank Name...">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="branch_name" class="form-label">Branch Name</label>
-                                        <input type="text" id="branch_name" name="branch_name" value="{{optional($profile->bankDetail)->branch_name}}" class="form-control" placeholder="Branch Name...">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="upi_id" class="form-label">UPI Id</label>
-                                        <input type="text" id="upi_id" name="upi_id" value="{{optional($profile->bankDetail)->upi_id}}" class="form-control" placeholder="UPI Id...">
-                                    </div>
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-primary">Save Changes</button>
-                                </div>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -132,7 +98,7 @@
             });
             $.ajax({
                 type: 'POST',
-                url: "{{route('get.address')}}?pincode="+pincode,
+                url: "#",
                 success: function(data) {
                     if(data != ''){
                         $('#country').val(data.country.name);

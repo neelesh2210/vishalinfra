@@ -61,11 +61,13 @@ Route::group(['middleware'=>['auth:web'],'prefix'=>'user','as'=>'user.'],functio
     Route::view('dashboard','frontend.user_dashboard.dashboard')->name('dashboard');
 
     //Register Property
+    Route::get('property-index',[PropertyListingController::class,'index'])->name('property.index');
     Route::get('property-listing',[PropertyListingController::class,'create'])->name('property.listing');
+    Route::post('property-listing-store',[PropertyListingController::class,'store'])->name('property.listing.store');
 
     //Profile
-    // Route::get('profile',[UserProfileController::class,'profile'])->name('profile');
-    // Route::post('save-profile',[UserProfileController::class,'saveProfile'])->name('save.profile');
+    Route::get('profile',[UserProfileController::class,'profile'])->name('profile');
+    Route::post('save-profile',[UserProfileController::class,'saveProfile'])->name('save.profile');
 
     //KYC
     // Route::get('kyc',[UserProfileController::class,'kyc'])->name('kyc');

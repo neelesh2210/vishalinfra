@@ -65,7 +65,11 @@
                         </ul>
 
                         <ul class="nav-menu nav-menu-social align-to-right">
-                            <li class="_my_prt_list"><a href="{{route('signin')}}"><i class="fas fa-sign-in-alt mr-1"></i>Sign in</a></li>
+                            @if(!Auth::guard('web')->user())
+                                <li class="_my_prt_list"><a href="{{route('signin')}}"><i class="fas fa-sign-in-alt mr-1"></i>Sign in</a></li>
+                            @else
+                               <a href="{{route('user.dashboard')}}">{{Auth::guard('web')->user()->name}}</a>
+                            @endif
                             <li class="add-listing">
                                 <a href="{{route('user.property.listing')}}" class="theme-cl">
                                     <i class="fas fa-plus-circle mr-1"></i>Post Property<small>(Free)</small>
