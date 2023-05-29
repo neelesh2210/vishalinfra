@@ -203,11 +203,11 @@
                                             </div>
                                             <div class="listing-short-detail">
                                                 <h4 class="listing-name verified"><a href="#" class="prt-link-detail">{{$property->name}}</a></h4>
-                                                @if($property->project->pincode || $property->project->address)
+                                                @if($property->pincode || $property->address)
                                                 <div class="foot-location">
-                                                    <img src="{{ asset('frontend/assets/img/pin.svg') }}" width="18" alt="" />{{$property->project->address}}
-                                                    @if($property->project->pincode)
-                                                        {{$property->project->city}}, {{$property->project->state}}, {{$property->project->country}},{{$property->project->pincode}}
+                                                    <img src="{{ asset('frontend/assets/img/pin.svg') }}" width="18" alt="" />{{$property->address}}
+                                                    @if($property->pincode)
+                                                        {{$property->city}}, {{$property->state}}, {{$property->country}},{{$property->pincode}}
                                                     @endif
                                                 </div>
                                                 @endif

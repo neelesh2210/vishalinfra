@@ -116,11 +116,13 @@
     <script>
 
         function fillter(){
+            $('tbody').addClass('loading')
             $.ajax({
                 type: 'GET',
                 url: "{{route('admin.property.index')}}",
                 data: $('#search_form').serialize(),
                 success: function(data) {
+                    $('tbody').removeClass('loading')
                     $('#table').html(data)
                 }
             });

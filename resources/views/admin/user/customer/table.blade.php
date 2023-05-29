@@ -9,7 +9,7 @@
             <th class="text-center">Action</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody class="loading">
         @forelse ($customers as $key=>$customer)
             <tr>
                 <td class="text-center">{{($key+1) + ($customers->currentPage() - 1)*$customers->perPage()}}</td>

@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
 
     public function index(){
-        $properties = PropertyManager::withoutTrash()->with(['project'])->orderBy('created_at','desc')->take(12)->get();
+        $properties = PropertyManager::withoutTrash()->orderBy('created_at','desc')->take(12)->get();
         return view('frontend.index',compact('properties'));
     }
 }
