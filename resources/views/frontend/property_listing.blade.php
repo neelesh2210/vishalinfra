@@ -32,34 +32,23 @@
         float: left;
         color: #606060;
         border-left: 1px solid #e0e0e0;
-        padding: 10px 13px;
-        width: fit-content;
+        padding: 10px 20px;
         cursor: pointer;
         list-style: none;
         text-align: center;
     }
 
     .prop {
+        text-transform: uppercase;
         color: #2b2e37;
         font-size: 15px;
         font-weight: 500;
     }
 
     .listForSelect ul li a {
-        color: #606060;
         cursor: pointer;
     }
 
-    .listForSelect ul li ol {
-        color: #606060;
-        border: 1px solid #e0e0e0;
-        border-top: 0;
-        height: 32px;
-        line-height: 32px;
-        width: 44px;
-        text-align: center;
-        background: #fff;
-    }
 
     .listForSelect>ul>li.csB {
         height: 224px;
@@ -73,8 +62,9 @@
     }
 
     .dropdown-menu.show {
-        display: block;
-        display: inline-grid;
+    display: inline-grid;
+    width: 56px;
+    text-align: center;
     }
 
     .dropdown-menu {
@@ -108,7 +98,7 @@
     <section class="gray pt-5 pb-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-md-8">
+                <div class="col-lg-12 col-md-12">
                     <div class="dashboard-body">
                         <div class="dashboard-wraper">
                             <form class="form form-horizontal mar-top" action="{{route('admin.property.store')}}" method="POST" enctype="multipart/form-data" id="choice_form">
@@ -501,45 +491,6 @@
                            </form>
                         </div>
                         <!-- row -->
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="single_widgets widget_thumb_post">
-                        <h4 class="title">How to find the right Buyer?</h4>
-                        <hr>
-                        <ul>
-                            <li>
-                                <span class="left">
-                                    <img src="{{ asset('frontend/assets/img/add-user.png') }}" alt=""
-                                        class="">
-                                </span>
-                                <span class="right">
-                                    <a class="feed-title" href="#">Respond to Buyer Enquiries</a>
-                                    <span class="post-date">Connect with Buyers when they contact on your property.</span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="left">
-                                    <img src="{{ asset('frontend/assets/img/telephone-call.png') }}" alt=""
-                                        class="">
-                                </span>
-                                <span class="right">
-                                    <a class="feed-title" href="#">Connect with Matching Buyers</a>
-                                    <span class="post-date">Actively check for matching Buyers & connect.</span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="left">
-                                    <img src="{{ asset('frontend/assets/img/cloud.png') }}" alt=""
-                                        class="">
-                                </span>
-                                <span class="right">
-                                    <a class="feed-title" href="#">Download the App</a>
-                                    <span class="post-date">Get notified on all new Buyer enquiries and connect
-                                        instantly.</span>
-                                </span>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
