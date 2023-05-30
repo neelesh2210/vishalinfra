@@ -11,7 +11,7 @@ class PropertyListingController extends Controller
 {
 
     public function index(){
-        $properties = PropertyManager::withoutTrash()->orderBy('id','desc')->paginate(15);
+        $properties = PropertyManager::withoutTrash()->where('added_by',Auth::guard('web')->user()->id)->orderBy('id','desc')->paginate(15);
 
         return view('frontend.property_index',compact('properties'));
     }
@@ -113,7 +113,7 @@ class PropertyListingController extends Controller
         $property->remark=$request->remark;
         $property->save();
 
-        return back()->with('success','Property Added Successfully!');
+        return redirect()->route('user.property.index')->with('success','Property Added Successfully!');
     }
 
 }
