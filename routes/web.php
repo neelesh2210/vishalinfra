@@ -40,6 +40,7 @@ Route::view('forgot-password', 'frontend.auth.forgot_password')->name('forgot_pa
 Route::view('reset-password', 'frontend.auth.reset_password')->name('reset_password');
 //Static Route
 Route::view('about', 'frontend.about')->name('about');
+Route::view('pricing', 'frontend.pricing')->name('pricing');
 Route::view('contact', 'frontend.contact')->name('contact');
 
 //Property
