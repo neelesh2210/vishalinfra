@@ -81,7 +81,7 @@ class PropertyController extends Controller
         }
         $property=new Property;
         $property->slug=str_replace(' ','-',$request->name).'-'.generateRandomString(4);
-        $property->added_by=Auth::guard('admin')->user()->id;
+        $property->added_by=0;
         $property->property_number=$property_number;
         $property->name=$request->name;
         $property->properties_type=$request->properties_type;

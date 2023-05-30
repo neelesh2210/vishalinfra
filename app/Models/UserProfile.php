@@ -16,6 +16,5 @@ class UserProfile extends Model
         'adhar_back',
         'pan_front',
         'pan_back',
-        'level'
     ];
 }

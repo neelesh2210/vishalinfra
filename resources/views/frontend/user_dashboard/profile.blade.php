@@ -24,7 +24,12 @@
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="phone" class="form-label">Phone <span class="text-danger">*</span></label>
-                                        <input type="number" id="phone" value="{{$profile->phone}}" class="form-control" readonly required>
+                                        <input type="number" id="phone" name="phone" value="{{$profile->phone}}" class="form-control" required>
+                                        @error('phone')
+                                        <span class="text-danger">
+                                            {{$message}}
+                                        </span>
+                                        @enderror
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="email" class="form-label">Email</label>
@@ -98,7 +103,7 @@
             });
             $.ajax({
                 type: 'POST',
-                url: "#",
+                url: "{{route('get.address')}}?pincode="+pincode,
                 success: function(data) {
                     if(data != ''){
                         $('#country').val(data.country.name);

@@ -83,14 +83,10 @@ class PropertyController extends Controller
     }
 
     public function detail($slug){
-        $property_detail = PropertyManager::withoutTrash()->where('slug',$slug)->with(['project'])->first();
+        $property_detail = PropertyManager::withoutTrash()->where('slug',$slug)->first();
         $similer_properties = PropertyManager::withoutTrash()->where('id','!=',$property_detail->id)->orderBy('created_at','desc')->take(5)->get();
 
         return view('frontend.properties_details',compact('property_detail','similer_properties'));
-    }
-
-    public function properties_details(){
-        return view('frontend.properties_details');
     }
 
 }

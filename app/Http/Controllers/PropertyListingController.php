@@ -17,7 +17,13 @@ class PropertyListingController extends Controller
     }
 
     public function create(){
-        return view('frontend.property_listing');
+        $register_properties = PropertyManager::withoutTrash()->where('added_by',Auth::guard('web')->user()->id)->get();
+
+        if($register_properties->count() >= 1){
+            return 'Purchase Plan';
+        }else{
+            return view('frontend.property_listing');
+        }
     }
 
     public function store(Request $request){

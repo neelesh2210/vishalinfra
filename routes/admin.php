@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\Admin\CityController;
+use App\Http\Controllers\Admin\PlanController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\StateController;
 use App\Http\Controllers\Admin\SliderController;
@@ -45,6 +46,9 @@ Route::group(['middleware'=>'auth:admin','as'=>'admin.'],function () {
 
     //Customers
     Route::get('customer-index',[UserController::class,'index'])->name('customer.index');
+
+    //Plans
+    Route::resource('plan', PlanController::class);
 
     //Sliders
     Route::resource('sliders', SliderController::class);

@@ -17,26 +17,14 @@
                     </a>
                 </li>
                 <li class="side-nav-item">
+                    <a href="{{route('user.profile')}}" class="side-nav-link">
+                        <i class="uil uil-user"></i>
+                        <span> Profile </span>
+                    </a>
+                </li>
+                <li class="side-nav-item">
                     <a href="{{route('user.property.index')}}" class="side-nav-link">
-                        <i class="uil-user"></i>
-                        <span> Property </span>
-                    </a>
-                </li>
-                <li class="side-nav-item">
-                    <a href="#" class="side-nav-link">
-                        <i class="uil uil-user-square"></i>
-                        <span> KYC </span>
-                    </a>
-                </li>
-                <li class="side-nav-item">
-                    <a href="#" class="side-nav-link">
-                        <i class="uil uil-users-alt"></i>
-                        <span> Customers </span>
-                    </a>
-                </li>
-                <li class="side-nav-item">
-                    <a href="#" class="side-nav-link">
-                        <i class="uil uil-building"></i>
+                        <i class="uil-building"></i>
                         <span> Property </span>
                     </a>
                 </li>

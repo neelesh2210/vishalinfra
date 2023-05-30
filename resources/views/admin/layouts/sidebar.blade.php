@@ -11,8 +11,8 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="nav-item @if(Route::currentRouteName() == 'admin.project.index' || Route::currentRouteName() == 'admin.project.create' || Route::currentRouteName() == 'admin.project.edit') menu-is-opening menu-open @endif">
-                    <a href="#" class="nav-link @if(Route::currentRouteName() == 'admin.project.index' || Route::currentRouteName() == 'admin.project.create' || Route::currentRouteName() == 'admin.project.edit' || Route::currentRouteName() == 'admin.property.index' || Route::currentRouteName() == 'admin.property.create' || Route::currentRouteName() == 'admin.property.edit') active @endif">
+                <li class="nav-item @if(in_array(Route::currentRouteName(), ['admin.property.index','admin.property.create','admin.property.edit'])) menu-is-opening menu-open @endif">
+                    <a href="#" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.property.index','admin.property.create','admin.property.edit'])) active @endif">
                         <i class="nav-icon fa fa-building" aria-hidden="true"></i>
                         <p>Propertie Management
                             <i class="fas fa-angle-left right"></i>
@@ -20,20 +20,26 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('admin.property.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.property.index' || Route::currentRouteName() == 'admin.property.create' || Route::currentRouteName() == 'admin.property.edit') active @endif">
+                            <a href="{{route('admin.property.index')}}" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.property.index','admin.property.create','admin.property.edit'])) active @endif">
                                 <p>Properties</p>
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('admin.customer.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.customer.index') active @endif">
+                    <a href="{{route('admin.customer.index')}}" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.customer.index'])) active @endif">
                         <i class="nav-icon fas fa-users"></i>
                         <p>Customers</p>
                     </a>
                 </li>
-                <li class="nav-item @if(Route::currentRouteName() == 'admin.countries.index' || Route::currentRouteName() == 'admin.countries.edit' || Route::currentRouteName() == 'admin.states.index' || Route::currentRouteName() == 'admin.states.edit' || Route::currentRouteName() == 'admin.cities.index' || Route::currentRouteName() == 'admin.cities.edit' || Route::currentRouteName() == 'admin.pincodes.index' || Route::currentRouteName() == 'admin.pincodes.edit') menu-is-opening menu-open @endif">
-                    <a href="#" class="nav-link @if(Route::currentRouteName() == 'admin.countries.index' || Route::currentRouteName() == 'admin.countries.edit' || Route::currentRouteName() == 'admin.states.index' || Route::currentRouteName() == 'admin.states.edit' || Route::currentRouteName() == 'admin.cities.index' || Route::currentRouteName() == 'admin.cities.edit' || Route::currentRouteName() == 'admin.pincodes.index' || Route::currentRouteName() == 'admin.pincodes.edit') active @endif">
+                <li class="nav-item">
+                    <a href="{{route('admin.plan.index')}}" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.plan.index','admin.plan.create','admin.plan.edit'])) active @endif">
+                        <i class="nav-icon fas fa-file-alt"></i>
+                        <p>Plan</p>
+                    </a>
+                </li>
+                <li class="nav-item @if(in_array(Route::currentRouteName(), ['admin.countries.index','admin.countries.edit','admin.states.index','admin.states.edit','admin.cities.index','admin.cities.edit','admin.pincodes.index','admin.pincodes.edit'])) menu-is-opening menu-open @endif">
+                    <a href="#" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.countries.index','admin.countries.edit','admin.states.index','admin.states.edit','admin.cities.index','admin.cities.edit','admin.pincodes.index','admin.pincodes.edit'])) active @endif">
                         <i class="nav-icon fa fa-map-marker-alt" aria-hidden="true"></i>
                         <p>Manage Address
                             <i class="fas fa-angle-left right"></i>
@@ -41,29 +47,29 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('admin.countries.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.countries.index' || Route::currentRouteName() == 'admin.countries.edit') active @endif">
+                            <a href="{{route('admin.countries.index')}}" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.countries.index','admin.countries.edit'])) active @endif">
                                 <p>Countries</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('admin.states.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.states.index' || Route::currentRouteName() == 'admin.states.edit') active @endif">
+                            <a href="{{route('admin.states.index')}}" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.states.index','admin.states.edit'])) active @endif">
                                 <p>States</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('admin.cities.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.cities.index' || Route::currentRouteName() == 'admin.cities.edit') active @endif">
+                            <a href="{{route('admin.cities.index')}}" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.cities.index','admin.cities.edit'])) active @endif">
                                 <p>Cities</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('admin.pincodes.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.pincodes.index' || Route::currentRouteName() == 'admin.pincodes.edit') active @endif">
+                            <a href="{{route('admin.pincodes.index')}}" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.pincodes.index','admin.pincodes.edit'])) active @endif">
                                 <p>Pincodes</p>
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item @if(Route::currentRouteName() == 'admin.sliders.index' || Route::currentRouteName() == 'admin.sliders.edit') menu-is-opening menu-open @endif">
-                    <a href="#" class="nav-link @if(Route::currentRouteName() == 'admin.sliders.index' || Route::currentRouteName() == 'admin.sliders.edit') active @endif">
+                <li class="nav-item @if(in_array(Route::currentRouteName(), ['admin.sliders.index','admin.sliders.edit'])) menu-is-opening menu-open @endif">
+                    <a href="#" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.sliders.index','admin.sliders.edit'])) active @endif">
                         <i class="nav-icon fas fa-cogs" aria-hidden="true"></i>
                         <p>Website Setting
                             <i class="fas fa-angle-left right"></i>
@@ -71,7 +77,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('admin.sliders.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.sliders.index' || Route::currentRouteName() == 'admin.sliders.edit') active @endif">
+                            <a href="{{route('admin.sliders.index')}}" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.sliders.index','admin.sliders.edit'])) active @endif">
                                 <p>Sliders</p>
                             </a>
                         </li>

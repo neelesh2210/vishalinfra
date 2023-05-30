@@ -9,6 +9,9 @@
                             <h4 class="page-title">Property List</h4>
                         </div>
                     </div>
+                    <div class="col-6">
+                        <a href="{{route('user.property.listing')}}" class="btn btn-primary float-end mt-3"><i class="uil-plus"></i> Add Property</a>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-12">

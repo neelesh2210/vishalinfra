@@ -1,39 +1,46 @@
 @extends('frontend.layouts.app')
 @section('content')
-    <!-- Gallery Part Start -->
     <section class="gallery_parts pt-2 pb-2 d-none d-sm-none d-md-none d-lg-none d-xl-block">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 col-md-7 col-sm-12 pr-1">
-                    <div class="gg_single_part left"><a
-                            href="{{ asset('backend/img/properies/' . $property_detail->thumbnail_img) }}"
-                            class="mfp-gallery"><img
-                                src="{{ asset('backend/img/properies/' . $property_detail->thumbnail_img) }}"
-                                class="img-fluid mx-auto" alt="" /></a></div>
+                    <div class="gg_single_part left">
+                        <a href="{{ asset('backend/img/properies/' . $property_detail->thumbnail_img) }}" class="mfp-gallery">
+                            <img src="{{ asset('backend/img/properies/' . $property_detail->thumbnail_img) }}" class="img-fluid mx-auto" alt="" />
+                        </a>
+                    </div>
                 </div>
                 <div class="col-lg-4 col-md-5 col-sm-12 pl-1">
-                    @foreach (json_decode($property_detail->photos) as $photo)
-                        <div class="gg_single_part-right min  mb-2"><a href="{{ asset('backend/img/properies/' . $photo) }}"
-                                class="mfp-gallery"><img src="{{ asset('backend/img/properies/' . $photo) }}"
-                                    class="img-fluid mx-auto" alt="" />
-                                <p class="vw_dtls"> <i class="fas fa-images"></i> <br> <span> + 19 Photos</span> </p>
-                            </a></div>
-                    @endforeach
+                    @if($property_detail->photos)
+                        @foreach (json_decode($property_detail->photos) as $photo)
+                            <div class="gg_single_part-right min  mb-2">
+                                <a href="{{ asset('backend/img/properies/' . $photo) }}" class="mfp-gallery">
+                                    <img src="{{ asset('backend/img/properies/' . $photo) }}" class="img-fluid mx-auto" alt="" />
+                                    <p class="vw_dtls"> <i class="fas fa-images"></i> <br> <span> + 19 Photos</span> </p>
+                                </a>
+                            </div>
+                        @endforeach
+                    @endif
                 </div>
             </div>
         </div>
     </section>
     <div class="featured_slick_gallery gray d-block d-md-block d-lg-block d-xl-none">
         <div class="featured_slick_gallery-slide">
-            <div class="featured_slick_padd"><a
-                    href="{{ asset('backend/img/properies/' . $property_detail->thumbnail_img) }}" class="mfp-gallery"><img
-                        src="{{ asset('backend/img/properies/' . $property_detail->thumbnail_img) }}"
-                        class="img-fluid mx-auto" alt="" /></a></div>
-            @foreach (json_decode($property_detail->photos) as $photo)
-                <div class="featured_slick_padd"><a href="{{ asset('backend/img/properies/' . $photo) }}"
-                        class="mfp-gallery"><img src="{{ asset('backend/img/properies/' . $photo) }}"
-                            class="img-fluid mx-auto" alt="" /></a></div>
-            @endforeach
+            <div class="featured_slick_padd">
+                <a href="{{ asset('backend/img/properies/' . $property_detail->thumbnail_img) }}" class="mfp-gallery">
+                    <img src="{{ asset('backend/img/properies/' . $property_detail->thumbnail_img) }}" class="img-fluid mx-auto" alt="" />
+                </a>
+            </div>
+            @if($property_detail->photos)
+                @foreach (json_decode($property_detail->photos) as $photo)
+                    <div class="featured_slick_padd">
+                        <a href="{{ asset('backend/img/properies/' . $photo) }}" class="mfp-gallery">
+                            <img src="{{ asset('backend/img/properies/' . $photo) }}" class="img-fluid mx-auto" alt="" />
+                        </a>
+                    </div>
+                @endforeach
+            @endif
         </div>
     </div>
 
@@ -51,14 +58,10 @@
                                     <li><span class="sqft">{{ $property_detail->price }} sqft</span></li>
                                 </ul>
                                 <h2 class="mb-3">{{ $property_detail->name }}</h2>
-                                <span><i class="lni-map-marker"></i> {{ optional($property_detail->project)->city }},
-                                    {{ optional($property_detail->project)->state }},
-                                    {{ optional($property_detail->project)->country }} -
-                                    {{ optional($property_detail->project)->pincode }}</span>
+                                <span><i class="lni-map-marker"></i> </span>
                             </div>
                         </div>
                     </div>
-                    <!-- Single Block Wrap -->
                     <div class="property_block_wrap">
                         <div class="property_block_wrap_header">
                             <h3 class="property_block_title">More Details</h3>
@@ -82,10 +85,8 @@
                                 <p>Address</p>
                             </div>
                             <div class="col-md-8">
-                                <strong>129, Confident Lilian, Halehalli, TC Palya, KR Puram, Bangalore. Opposite to
-                                    CasaGrand Luxus Villas, K R Puram, Bangalore - East, Karnataka</strong>
+                                <strong>129, Confident Lilian, Halehalli, TC Palya, KR Puram, Bangalore. Opposite to CasaGrand Luxus Villas, K R Puram, Bangalore - East, Karnataka</strong>
                             </div>
-
                             <div class="col-md-4">
                                 <p>Landmarks</p>
                             </div>
@@ -139,7 +140,8 @@
                                     Security, Kids Play area, Swimming pool, Clubhouse, walking tracks and wide cement
                                     roads. Schools Colleges nearbyBirla Open Minds, New Baldwin, DonBosco, Diamond
                                     CollegeThis is a quiet home in a beautiful neighbourhood.This East facing 1400 sqft.
-                                    home comes with a convenient parking facility for bike and open parking for Car.</p>
+                                    home comes with a convenient parking facility for bike and open parking for Car.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -157,7 +159,6 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- Single Block Wrap -->
                     <div class="property_block_wrap">
                         <div class="property_block_wrap_header">
                             <h4 class="property_block_title">Popular Landmarks Nearby</h4>
@@ -165,10 +166,7 @@
                         </div>
                         <div class="block-body">
                             <div class="map-container">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115408.09799694136!2d82.90870601301123!3d25.320894921383157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2db76febcf4d%3A0x68131710853ff0b5!2sVaranasi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1683535825071!5m2!1sen!2sin"
-                                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115408.09799694136!2d82.90870601301123!3d25.320894921383157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2db76febcf4d%3A0x68131710853ff0b5!2sVaranasi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1683535825071!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
@@ -185,7 +183,6 @@
                     <div class="property-sidebar side_stiky">
                         <div class="sider_blocks_wrap shadows">
                             <div class="sidetab-content">
-                                <!-- Appointment Now Tab -->
                                 <div class="sider-block-body p-3">
                                     <div class="row">
                                         <div class="col-lg-12 col-md-12 col-sm-12">
@@ -193,22 +190,19 @@
                                             <hr>
                                             <div class="form-group">
                                                 <label>Full Name</label>
-                                                <input type="text" class="form-control light"
-                                                    placeholder="Enter Name">
+                                                <input type="text" class="form-control light" placeholder="Enter Name">
                                             </div>
                                         </div>
                                         <div class="col-lg-12 col-md-12 col-sm-12">
                                             <div class="form-group">
                                                 <label>Email ID</label>
-                                                <input type="text" class="form-control light"
-                                                    placeholder="Enter Email">
+                                                <input type="text" class="form-control light" placeholder="Enter Email">
                                             </div>
                                         </div>
                                         <div class="col-lg-12 col-md-12 col-sm-12">
                                             <div class="form-group">
                                                 <label>Contact Number</label>
-                                                <input type="text" class="form-control light"
-                                                    placeholder="Enter Phone No.">
+                                                <input type="text" class="form-control light" placeholder="Enter Phone No.">
                                             </div>
                                         </div>
                                         <div class="col-lg-12 col-md-12 col-sm-12">
@@ -237,17 +231,14 @@
             <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="list_views">
-                    <!-- Single Item -->
                     <div class="single_items">
                         <div class="row">
-                            <!-- Single Property -->
                             <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
                                 <div class="property-listing list_view row m-0">
                                     <div class="col-md-4 p-0">
                                         <div class="_exlio_125">Sponsored</div>
                                         <div class="list-img-slide">
-                                            <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
-                                                    class="img-fluid mx-auto" alt="" /></a>
+                                            <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}" class="img-fluid mx-auto" alt="" /></a>
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -255,9 +246,9 @@
                                             <div class="listing-short-detail-wrap">
                                                 <div class="_card_list_flex mb-2">
                                                     <div class="_card_flex_01">
-                                                        <h5><a href="#" class="prt-link-detail">Red Carpet Real
-                                                                Estate
-                                                            </a></h5>
+                                                        <h5>
+                                                            <a href="#" class="prt-link-detail">Red Carpet Real Estate</a>
+                                                        </h5>
                                                     </div>
                                                     <div class="_card_flex_last">
                                                         <h6 class="listing-card-info-price mb-0">₹1000</h6>
@@ -266,8 +257,8 @@
                                                 </div>
                                                 <div class="_card_list_flex">
                                                     <div class="_card_flex_01">
-                                                        <h4 class="listing-name verified"><a href="#"
-                                                                class="prt-link-detail">Varanasi, Uttar Pradesh, India</a>
+                                                        <h4 class="listing-name verified">
+                                                            <a href="#" class="prt-link-detail">Varanasi, Uttar Pradesh, India</a>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -307,8 +298,9 @@
                                     <div class="col-md-4 p-0">
                                         <div class="_exlio_125">Sponsored</div>
                                         <div class="list-img-slide">
-                                            <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
-                                                    class="img-fluid mx-auto" alt="" /></a>
+                                            <a href="#">
+                                                <img src="{{ asset('frontend/assets/img/p-1.png') }}" class="img-fluid mx-auto" alt="" />
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -316,9 +308,9 @@
                                             <div class="listing-short-detail-wrap">
                                                 <div class="_card_list_flex mb-2">
                                                     <div class="_card_flex_01">
-                                                        <h5><a href="#" class="prt-link-detail">Red Carpet Real
-                                                                Estate
-                                                            </a></h5>
+                                                        <h5>
+                                                            <a href="#" class="prt-link-detail">Red Carpet Real Estate</a>
+                                                        </h5>
                                                     </div>
                                                     <div class="_card_flex_last">
                                                         <h6 class="listing-card-info-price mb-0">₹1000</h6>
@@ -327,8 +319,8 @@
                                                 </div>
                                                 <div class="_card_list_flex">
                                                     <div class="_card_flex_01">
-                                                        <h4 class="listing-name verified"><a href="#"
-                                                                class="prt-link-detail">Varanasi, Uttar Pradesh, India</a>
+                                                        <h4 class="listing-name verified">
+                                                            <a href="#" class="prt-link-detail">Varanasi, Uttar Pradesh, India</a>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -365,7 +357,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Single Item -->
                 </div>
               </div>
             </div>

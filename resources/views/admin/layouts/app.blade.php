@@ -91,7 +91,7 @@
 <script>
     $(function () {
         // Summernote
-        $('#summernote').summernote()
+        $('.summernote').summernote()
         // Select2
         $('.select2').select2()
 
