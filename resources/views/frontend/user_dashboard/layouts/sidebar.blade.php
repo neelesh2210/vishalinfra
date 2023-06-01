@@ -11,7 +11,7 @@
         <div class="h-100" id="leftside-menu-container" data-simplebar>
             <ul class="side-nav">
                 <li class="side-nav-item">
-                    <a href="#" class="side-nav-link active">
+                    <a href="{{route('index')}}" class="side-nav-link active">
                         <i class="uil-home-alt"></i>
                         <span> Dashboard </span>
                     </a>

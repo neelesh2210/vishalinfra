@@ -13,7 +13,7 @@
                 <div class="row">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="mb-3 text-uppercase bg-light p-2">Personal Information</h5>
+                            <h5 class="text-uppercase">Personal Information</h5>
                             <hr>
                             <form action="{{route('user.save.profile')}}" method="POST" enctype="multipart/form-data">
                                 @csrf
