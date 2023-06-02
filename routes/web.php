@@ -2,10 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PlanController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\InstamojoController;
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\PropertyListingController;
 
@@ -38,10 +40,13 @@ Route::post('login',[LoginController::class,'login'])->name('login');
 
 Route::view('forgot-password', 'frontend.auth.forgot_password')->name('forgot_password');
 Route::view('reset-password', 'frontend.auth.reset_password')->name('reset_password');
+
 //Static Route
 Route::view('about', 'frontend.about')->name('about');
-Route::view('pricing', 'frontend.pricing')->name('pricing');
 Route::view('contact', 'frontend.contact')->name('contact');
+
+//Plan
+Route::get('plan',[PlanController::class,'plan'])->name('plan');
 
 //Property
 Route::get('properties',[PropertyController::class,'propertyList'])->name('properties');
@@ -60,6 +65,11 @@ Route::group(['middleware'=>['auth:web'],'prefix'=>'user','as'=>'user.'],functio
     //Profile
     Route::get('profile',[UserProfileController::class,'profile'])->name('profile');
     Route::post('save-profile',[UserProfileController::class,'saveProfile'])->name('save.profile');
+
+    //Plan Purchase
+    Route::view('pricing-plan','frontend.user_dashboard.pricing_plan')->name('pricing_plan');
+    Route::post('plan-purchase',[PlanController::class,'planPurchase'])->name('plan.purchase');
+    Route::get('instamojo/payment/pay-success',[InstamojoController::class, 'success'])->name('instamojo.success');
 
     //Logout
     Route::post('user-logout',[LoginController::class,'logout'])->name('logout');

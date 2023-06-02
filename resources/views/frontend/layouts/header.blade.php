@@ -61,7 +61,7 @@
                             <li><a href="#">Sell</a></li>
                             <li><a href="{{route('properties')}}">Property Services</a> </li>
                             <li><a href="{{route('about')}}">About</a></li>
-                            <li><a href="{{route('pricing')}}">Pricing</a></li>
+                            <li><a href="{{route('plan')}}">Pricing</a></li>
                             <li><a href="{{route('contact')}}">Contact</a></li>
                         </ul>
 

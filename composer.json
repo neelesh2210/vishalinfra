@@ -9,6 +9,7 @@
         "craftsys/msg91-laravel": "^0.13.3",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "instamojo/instamojo-php": "^0.4.0",
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
