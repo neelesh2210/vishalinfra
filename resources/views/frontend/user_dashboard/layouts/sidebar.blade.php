@@ -11,15 +11,15 @@
         <div class="h-100" id="leftside-menu-container" data-simplebar>
             <ul class="side-nav">
                 <li class="side-nav-item">
-                    <a href="{{route('index')}}" class="side-nav-link active">
+                    <a href="{{route('user.dashboard')}}" class="side-nav-link active">
                         <i class="uil-home-alt"></i>
                         <span> Dashboard </span>
                     </a>
                 </li>
                 <li class="side-nav-item">
-                    <a href="{{route('user.profile')}}" class="side-nav-link">
-                        <i class="uil uil-user"></i>
-                        <span> Profile </span>
+                    <a href="{{route('user.pricing_plan')}}" class="side-nav-link">
+                        <i class="uil-book-open"></i>
+                        <span> Plan </span>
                     </a>
                 </li>
                 <li class="side-nav-item">

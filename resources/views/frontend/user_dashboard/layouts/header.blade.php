@@ -21,14 +21,38 @@
                 </span>
             </a>
             <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
-                <div class=" dropdown-header noti-title">
-                    <h6 class="text-overflow m-0">Welcome !</h6>
-                </div>
+                <!-- item-->
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <span>View Response</span>
+                </a>
+
+                <!-- item-->
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <span>Manage Properties</span>
+                </a>
+
+                <!-- item-->
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <span>Manage Alert</span>
+                </a>
+
+                <!-- item-->
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <span>Manage Subscription </span>
+                </a>
+
+                <!-- item-->
+                <a href="{{route('user.profile')}}" class="dropdown-item notify-item">
+                    <span>Manage Profile</span>
+                </a>
+
+                <div class="dropdown-divider m-0"></div>
+                <!-- item-->
                 <form id="delete-form" action="{{route('user.logout')}}" method="POST">
                     @csrf
                     <button href="{{route('user.logout')}}" class="dropdown-item notify-item">
                         <i class="mdi mdi-logout me-1"></i>
-                        <span>Logout</span>
+                        <span>Sign Out</span>
                     </button>
                 </form>
             </div>
