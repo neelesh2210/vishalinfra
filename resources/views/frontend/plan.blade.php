@@ -45,7 +45,7 @@
                             </div>
                             <div class="prt_footer">
                                 <a class="btn choose_package" onclick="$('#form_{{$plan->id}}').submit()">Buy Now</a>
-                                <form action="{{route('user.plan.purchase')}}" id="form_{{$plan->id}}" method="POST">
+                                <form action="{{route('user.attempt.plan.purchase')}}" id="form_{{$plan->id}}" method="POST">
                                     @csrf
                                     <input type="hidden" name="plan_id" value="{{$plan->id}}">
                                 </form>

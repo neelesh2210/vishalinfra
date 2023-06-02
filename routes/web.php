@@ -71,7 +71,7 @@ Route::group(['middleware'=>['auth:web'],'prefix'=>'user','as'=>'user.'],functio
 
     //Plan Purchase
     Route::view('pricing-plan','frontend.user_dashboard.pricing_plan')->name('pricing_plan');
-    Route::post('plan-purchase',[PlanController::class,'planPurchase'])->name('plan.purchase');
+    Route::post('attempt-plan-purchase',[PlanController::class,'attemptPlanPurchase'])->name('attempt.plan.purchase');
     Route::get('instamojo/payment/pay-success',[InstamojoController::class, 'success'])->name('instamojo.success');
 
     //Logout

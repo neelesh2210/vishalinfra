@@ -31,7 +31,7 @@
                 <li class="side-nav-item">
                     <a href="{{route('user.leads')}}" class="side-nav-link">
                         <i class="uil-book-open"></i>
-                        <span>Get Leads </span>
+                        <span>Property Enquiry </span>
                     </a>
                 </li>
                 <li class="side-nav-item">

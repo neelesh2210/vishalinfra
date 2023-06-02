@@ -13,6 +13,7 @@ class Property extends Model
     protected $fillable =[
         'slug',
         'added_by',
+        'plan_purchase_id',
         'property_number',
         'name',
         'properties_type',

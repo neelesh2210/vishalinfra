@@ -104,11 +104,24 @@
                                 @csrf
                                 <div class="card">
                                     <div class="card-header">
-                                        <h5 class="mb-0 h6">Property Information</h5>
+                                        <h5 class="mb-0 h6">Property Information {{$times}}</h5>
                                     </div>
                                     <div class="p-2">
                                         <div class="form-group row">
-                                            <div class="col-md-6 form_div">
+                                            @if($times > 0)
+                                                <div class="col-md-4 form_div">
+                                                    <div class="form-group">
+                                                        <label for="purchase_plan_id">Select Plan <span class="text-danger">*</span></label>
+                                                        <select class="form-control select2" name="purchase_plan_id" id="purchase_plan_id"  data-live-search="true" required>
+                                                            <option value="">Select Plan...</option>
+                                                            @foreach ($plan_purchases as $plan_purchase)
+                                                                <option value="{{$plan_purchase->id}}">{{$plan_purchase->plan->name}} Expire at {{$plan_purchase->created_at->addDay($plan_purchase->duration_in_day)}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            @endif
+                                            <div class="col-md-4 form_div">
                                                 <div class="form-group">
                                                     <label for="properties_type">Property Type <span class="text-danger">*</span></label>
                                                     <select class="form-control select2" name="properties_type" id="properties_type"  data-live-search="true" required>
@@ -120,7 +133,7 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 form_div">
+                                            <div class="col-md-4 form_div">
                                                 <div class="form-group">
                                                     <label>Property Name <span class="text-danger">*</span></label>
                                                     <input type="text" class="form-control" name="name" placeholder="Property Name..." required>

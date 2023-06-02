@@ -6,6 +6,7 @@ use Auth;
 use App\CPU\PropertyManager;
 use Illuminate\Http\Request;
 use App\Models\Admin\Property;
+use App\Models\Admin\PlanPurchase;
 
 class PropertyListingController extends Controller
 {
@@ -19,10 +20,18 @@ class PropertyListingController extends Controller
     public function create(){
         $register_properties = PropertyManager::withoutTrash()->where('added_by',Auth::guard('web')->user()->id)->get();
 
+        $plan_purchases = PlanPurchase::where('user_id',Auth::guard('web')->user()->id)->get();
+        $times = 0;
         if($register_properties->count() >= 1){
-            return 'Purchase Plan';
+            $times = $register_properties->count();
+            if($plan_purchases->count() != 0){
+                return view('frontend.property_listing',compact('times','plan_purchases'));
+            }else{
+                return redirect()->route('plan');
+            }
         }else{
-            return view('frontend.property_listing');
+            $times = 0;
+            return view('frontend.property_listing',compact('times','plan_purchases'));
         }
     }
 
@@ -35,6 +44,7 @@ class PropertyListingController extends Controller
         }
         $property=new Property;
         $property->slug=str_replace(' ','-',$request->name).'-'.generateRandomString(4);
+        $property->plan_purchase_id=$request->purchase_plan_id;
         $property->added_by=Auth::guard('web')->user()->id;
         $property->property_number=$property_number;
         $property->name=$request->name;

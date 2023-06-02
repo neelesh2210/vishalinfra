@@ -68,10 +68,9 @@ class InstamojoController extends Controller
         }
         $payment = json_encode($response);
 
-        //$request->request->add($input);
         $payment_detalis = json_encode(array('id' => $request->payment_id,'method' => 'instamojo','amount' => $request->amount,'currency' => 'INR'));
         $request->request->add(['payment_detalis' => $payment_detalis]);
         $register = new PlanController;
-        return $register->buy($request);
+        return $register->planPurchase($request);
     }
 }
