@@ -66,6 +66,9 @@ Route::group(['middleware'=>['auth:web'],'prefix'=>'user','as'=>'user.'],functio
     Route::get('profile',[UserProfileController::class,'profile'])->name('profile');
     Route::post('save-profile',[UserProfileController::class,'saveProfile'])->name('save.profile');
 
+    //Leads
+    Route::view('leads','frontend.user_dashboard.leads')->name('leads');
+
     //Plan Purchase
     Route::view('pricing-plan','frontend.user_dashboard.pricing_plan')->name('pricing_plan');
     Route::post('plan-purchase',[PlanController::class,'planPurchase'])->name('plan.purchase');

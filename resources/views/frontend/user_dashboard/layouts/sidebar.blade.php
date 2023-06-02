@@ -17,15 +17,33 @@
                     </a>
                 </li>
                 <li class="side-nav-item">
-                    <a href="{{route('user.pricing_plan')}}" class="side-nav-link">
-                        <i class="uil-book-open"></i>
-                        <span> Plan </span>
-                    </a>
-                </li>
-                <li class="side-nav-item">
                     <a href="{{route('user.property.index')}}" class="side-nav-link">
                         <i class="uil-building"></i>
                         <span> Property </span>
+                    </a>
+                </li>
+                <li class="side-nav-item">
+                    <a href="{{route('user.pricing_plan')}}" class="side-nav-link">
+                        <i class="uil-book-open"></i>
+                        <span> Subscription Status </span>
+                    </a>
+                </li>
+                <li class="side-nav-item">
+                    <a href="{{route('user.leads')}}" class="side-nav-link">
+                        <i class="uil-book-open"></i>
+                        <span>Get Leads </span>
+                    </a>
+                </li>
+                <li class="side-nav-item">
+                    <a href="#" class="side-nav-link">
+                        <i class="uil-building"></i>
+                        <span> Manage Payment</span>
+                    </a>
+                </li>
+                <li class="side-nav-item">
+                    <a href="#" class="side-nav-link">
+                        <i class="uil-building"></i>
+                        <span> Property Alert</span>
                     </a>
                 </li>
             </ul>
