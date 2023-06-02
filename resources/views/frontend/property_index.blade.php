@@ -4,18 +4,20 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-6">
-                        <div class="page-title-box">
-                            <h4 class="page-title">Property List</h4>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <a href="{{route('user.property.listing')}}" class="btn btn-primary float-end mt-3"><i class="uil-plus"></i> Add Property</a>
-                    </div>
-                </div>
-                <div class="row">
                     <div class="col-12">
-                        <div class="card">
+                        <div class="card mt-3">
+                            <div class="card-header">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="page-title-box">
+                                            <h4 class="page-title">Property List</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="{{route('user.property.listing')}}" class="btn btn-primary float-end"><i class="uil-plus"></i> Add Property</a>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="card-body">
                                 <div id="table">
                                     <table class="table table-bordered table-striped">

@@ -15631,7 +15631,7 @@ body[data-leftbar-theme=dark] .side-nav .menuitem-active>a {
     background: #f2f7f8;
     color: #042d74;
     font-weight: 600;
-    border-left: 3px solid #00389b;
+    border-left: 4px solid #00389b;
     letter-spacing: 0.75px;
 }
 
@@ -16313,7 +16313,7 @@ body[data-layout-color=dark] .topnav-navbar-dark .app-search span {
 .page-title-box .page-title {
 	font-size: 18px;
 	margin: 0;
-	line-height: 75px;
+	line-height: 38px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -19110,7 +19110,7 @@ table.table-striped tbody tr:nth-of-type(odd)>* {
 
 
 .table td, .table th {
-    vertical-align: top;
+    vertical-align: middle;
     border-top: 1px solid #dee2e6;
 }
 
