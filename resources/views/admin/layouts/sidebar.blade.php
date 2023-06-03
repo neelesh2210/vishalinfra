@@ -38,6 +38,12 @@
                         <p>Plan</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{route('admin.purchase.plan.index')}}" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.purchase.plan.index'])) active @endif">
+                        <i class="nav-icon fas fa-file-alt"></i>
+                        <p>Plan Purchase</p>
+                    </a>
+                </li>
                 <li class="nav-item @if(in_array(Route::currentRouteName(), ['admin.countries.index','admin.countries.edit','admin.states.index','admin.states.edit','admin.cities.index','admin.cities.edit','admin.pincodes.index','admin.pincodes.edit'])) menu-is-opening menu-open @endif">
                     <a href="#" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.countries.index','admin.countries.edit','admin.states.index','admin.states.edit','admin.cities.index','admin.cities.edit','admin.pincodes.index','admin.pincodes.edit'])) active @endif">
                         <i class="nav-icon fa fa-map-marker-alt" aria-hidden="true"></i>

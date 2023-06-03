@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\PincodeController;
 use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\Auth\LoginController;
+use App\Http\Controllers\Admin\PurchasePlanController;
 use App\Http\Controllers\Admin\AssociateWalletController;
 
 
@@ -46,6 +47,9 @@ Route::group(['middleware'=>'auth:admin','as'=>'admin.'],function () {
 
     //Customers
     Route::get('customer-index',[UserController::class,'index'])->name('customer.index');
+
+    //Purchase Plan
+    Route::get('purchase-plan-index',[PurchasePlanController::class,'index'])->name('purchase.plan.index');
 
     //Plans
     Route::resource('plan', PlanController::class);
