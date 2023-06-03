@@ -30,9 +30,9 @@
                     <a href="{{route('admin.property.edit',encrypt($property->id))}}" class="btn btn-outline-primary btn-sm mr-1 mb-1">
                         <i class="fas fa-edit "></i>
                     </a>
-                    <a href="{{route('admin.duplicate.property',$property->id)}}" class="btn btn-outline-primary btn-sm mr-1 mb-1">
+                    {{-- <a href="{{route('admin.duplicate.property',$property->id)}}" class="btn btn-outline-primary btn-sm mr-1 mb-1">
                         <i class="fas fa-copy "></i>
-                    </a>
+                    </a> --}}
                     {{-- <form id="delete-form" action="{{ route('admin.property.destroy', encrypt($property->id)) }}" method="POST" onsubmit="return confirm('Are you want delete this Property!');">
                         @method('DELETE')
                         @csrf

@@ -104,7 +104,7 @@
                                 @csrf
                                 <div class="card">
                                     <div class="card-header">
-                                        <h5 class="mb-0 h6">Property Information {{$times}}</h5>
+                                        <h5 class="mb-0 h6">Property Information</h5>
                                     </div>
                                     <div class="p-2">
                                         <div class="form-group row">
@@ -137,6 +137,23 @@
                                                 <div class="form-group">
                                                     <label>Property Name <span class="text-danger">*</span></label>
                                                     <input type="text" class="form-control" name="name" placeholder="Property Name..." required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 form_div">
+                                                <div class="form-group">
+                                                    <label>City <span class="text-danger">*</span></label>
+                                                    <select name="city_id" class="form-control select2" required>
+                                                        <option value="">Select City...</option>
+                                                        @foreach (App\Models\Admin\City::orderBy('name','asc')->get() as $city)
+                                                            <option value="{{$city->id}}">{{$city->name}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 form_div">
+                                                <div class="form-group">
+                                                    <label>Landmark <span class="text-danger">*</span></label>
+                                                    <input type="text" name="landmark" class="form-control" placeholder="Enter Landmark... " required>
                                                 </div>
                                             </div>
                                         </div>

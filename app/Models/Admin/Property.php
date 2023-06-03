@@ -17,6 +17,8 @@ class Property extends Model
         'property_number',
         'name',
         'properties_type',
+        'city',
+        'landmark',
         'furnished_status',
         'transaction_type',
         'prossession_status',
@@ -49,4 +51,8 @@ class Property extends Model
         'remark',
         'status',
     ];
+
+    public function planPurchase(){
+        return $this->belongsTo(PlanPurchase::class);
+    }
 }

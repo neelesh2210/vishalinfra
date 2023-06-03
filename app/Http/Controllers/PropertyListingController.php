@@ -13,7 +13,7 @@ class PropertyListingController extends Controller
 {
 
     public function index(){
-        $properties = PropertyManager::withoutTrash()->where('added_by',Auth::guard('web')->user()->id)->orderBy('id','desc')->paginate(15);
+        $properties = PropertyManager::withoutTrash()->where('added_by',Auth::guard('web')->user()->id)->with('planPurchase')->orderBy('id','desc')->paginate(15);
 
         return view('frontend.property_index',compact('properties'));
     }
@@ -50,6 +50,8 @@ class PropertyListingController extends Controller
         $property->property_number=$property_number;
         $property->name=$request->name;
         $property->properties_type=$request->properties_type;
+        $property->city=$request->city_id;
+        $property->landmark=$request->landmark;
 
         if($request->properties_type == 'plot'){
             $property->plot_area=$request->plot_area;

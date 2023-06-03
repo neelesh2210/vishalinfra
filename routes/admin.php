@@ -60,5 +60,5 @@ Route::group(['middleware'=>'auth:admin','as'=>'admin.'],function () {
     //Change Password
     Route::post('change-password',[DashboardController::class,'changePassword'])->name('change.password');
 
-    Route::post('logout/', [LoginController::class, 'logout'])->name('logout');
+    Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 });

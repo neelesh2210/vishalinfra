@@ -21,6 +21,8 @@ class CreatePropertiesTable extends Migration
             $table->bigInteger('property_number');
             $table->string('name');
             $table->string('properties_type');
+            $table->integer('city');
+            $table->text('landmark');
             $table->string('furnished_status')->nullable();
             $table->string('transaction_type');
             $table->string('prossession_status');
