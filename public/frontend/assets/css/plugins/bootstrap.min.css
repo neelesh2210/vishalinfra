@@ -3556,11 +3556,13 @@ tbody.collapse.show {
 }
 
 .tab-content>.tab-pane {
-    display: none
+    display: none;
+    padding:20px;
 }
 
 .tab-content>.active {
-    display: block
+    display: block;
+    border: 1px solid #ddd;
 }
 
 .navbar {

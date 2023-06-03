@@ -47,7 +47,7 @@ Route::view('contact', 'frontend.contact')->name('contact');
 Route::view('dashboard','frontend.dashboard')->name('dashboard');
 Route::view('my-profile','frontend.profile')->name('profile');
 Route::view('my-property','frontend.my_property')->name('my_property');
-
+Route::view('requested-property','frontend.requested_property')->name('requested_property');
 //Plan
 Route::get('plan',[PlanController::class,'plan'])->name('plan');
 

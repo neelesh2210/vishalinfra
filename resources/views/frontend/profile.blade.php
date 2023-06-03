@@ -4,135 +4,64 @@
 			<!-- ============================ User Dashboard ================================== -->
 			<section class="gray pt-5 pb-5">
 				<div class="container-fluid">
-
 					<div class="row">
-
 						<div class="col-lg-3 col-md-4 col-sm-12">
                             @include('frontend.include.sidebar')
 						</div>
-
 						<div class="col-lg-9 col-md-8 col-sm-12">
 							<div class="dashboard-body">
-
 								<div class="dashboard-wraper">
-
 									<!-- Basic Information -->
 									<div class="frm_submit_block">
 										<h4>My Account</h4>
 										<div class="frm_submit_wrap">
 											<div class="form-row">
-
 												<div class="form-group col-md-6">
 													<label>Your Name</label>
 													<input type="text" class="form-control" value="Shaurya Preet">
 												</div>
-
 												<div class="form-group col-md-6">
 													<label>Email</label>
 													<input type="email" class="form-control" value="preet77@gmail.com">
 												</div>
-
 												<div class="form-group col-md-6">
 													<label>Your Title</label>
 													<input type="text" class="form-control" value="Web Designer">
 												</div>
-
 												<div class="form-group col-md-6">
 													<label>Phone</label>
 													<input type="text" class="form-control" value="123 456 5847">
 												</div>
-
 												<div class="form-group col-md-6">
 													<label>Address</label>
 													<input type="text" class="form-control" value="522, Arizona, Canada">
 												</div>
-
 												<div class="form-group col-md-6">
 													<label>City</label>
 													<input type="text" class="form-control" value="Montquebe">
 												</div>
-
 												<div class="form-group col-md-6">
 													<label>State</label>
 													<input type="text" class="form-control" value="Canada">
 												</div>
-
 												<div class="form-group col-md-6">
 													<label>Zip</label>
 													<input type="text" class="form-control" value="160052">
 												</div>
-
 												<div class="form-group col-md-12">
 													<label>About</label>
 													<textarea class="form-control">Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper</textarea>
 												</div>
-
 											</div>
 										</div>
 									</div>
-
-									<div class="frm_submit_block">
-										<h4>Social Accounts</h4>
-										<div class="frm_submit_wrap">
-											<div class="form-row">
-
-												<div class="form-group col-md-6">
-													<label>Facebook</label>
-													<input type="text" class="form-control" value="https://facebook.com/">
-												</div>
-
-												<div class="form-group col-md-6">
-													<label>Twitter</label>
-													<input type="email" class="form-control" value="https://twitter.com/">
-												</div>
-
-												<div class="form-group col-md-6">
-													<label>Google Plus</label>
-													<input type="text" class="form-control" value="https://googleplus.com/">
-												</div>
-
-												<div class="form-group col-md-6">
-													<label>LinkedIn</label>
-													<input type="text" class="form-control" value="https://linkedin.com/">
-												</div>
-
-												<div class="form-group col-lg-12 col-md-12 mt-4">
-													<button class="btn btn-theme btn-lg" type="submit">Save Changes</button>
-												</div>
-
-											</div>
-										</div>
-									</div>
-
 								</div>
-
 							</div>
 						</div>
-
 					</div>
 				</div>
 			</section>
 			<!-- ============================ User Dashboard End ================================== -->
-
-			<!-- ============================ Call To Action ================================== -->
-			<section class="theme-bg call_action_wrap-wrap">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-
-							<div class="call_action_wrap">
-								<div class="call_action_wrap-head">
-									<h3>Do You Have Questions ?</h3>
-									<span>We'll help you to grow your career and growth.</span>
-								</div>
-								<a href="#" class="btn btn-call_action_wrap">Contact Us Today</a>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- ============================ Call To Action End ================================== -->
 
 			<!-- Log In Modal -->
 			<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="registermodal" aria-hidden="true">
@@ -245,13 +174,9 @@
 				</div>
 			</div>
 			<!-- End Modal -->
-
 			<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
-
-
 		</div>
 		<!-- ============================================================== -->
 		<!-- End Wrapper -->
 		<!-- ============================================================== -->
-
         @endsection
