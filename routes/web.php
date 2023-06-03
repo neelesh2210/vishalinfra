@@ -44,6 +44,9 @@ Route::view('reset-password', 'frontend.auth.reset_password')->name('reset_passw
 //Static Route
 Route::view('about', 'frontend.about')->name('about');
 Route::view('contact', 'frontend.contact')->name('contact');
+Route::view('dashboard','frontend.dashboard')->name('dashboard');
+Route::view('my-profile','frontend.profile')->name('profile');
+Route::view('my-property','frontend.my_property')->name('my_property');
 
 //Plan
 Route::get('plan',[PlanController::class,'plan'])->name('plan');

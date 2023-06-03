@@ -79,6 +79,12 @@
                                             <h4>Hi, {{Auth::guard('web')->user()->name}}</h4>
                                         </div>
                                         <ul>
+                                            <li><a href="#"><i class="fa fa-user-tie"></i>Requested Properties</a></li>
+                                            <li><a href="#"><i class="fa fa-user-tie"></i>View Response</a></li>
+                                            <li><a href="#"><i class="fa fa-user-tie"></i>Manage Properties</a></li>
+                                            <li><a href="#"><i class="fa fa-user-tie"></i>iAdvantage</a></li>
+                                            <li><a href="#"><i class="fa fa-user-tie"></i>Manage Subscriptions</a></li>
+                                            <li><a href="#"><i class="fa fa-user-tie"></i>PG Dashboard</a></li>
                                             <li><a href="{{route('user.profile')}}"><i class="fa fa-user-tie"></i>My Profile</a></li>
                                             <li><a onclick="$('#logout-form').submit()" href="#"><i class="fa fa-unlock-alt"></i>Logout</a></li>
                                             <form id="logout-form" action="{{route('user.logout')}}" method="POST">
