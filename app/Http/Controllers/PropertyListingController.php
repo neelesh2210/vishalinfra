@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Auth;
+use Carbon\Carbon;
 use App\CPU\PropertyManager;
 use Illuminate\Http\Request;
 use App\Models\Admin\Property;
@@ -20,7 +21,7 @@ class PropertyListingController extends Controller
     public function create(){
         $register_properties = PropertyManager::withoutTrash()->where('added_by',Auth::guard('web')->user()->id)->get();
 
-        $plan_purchases = PlanPurchase::where('user_id',Auth::guard('web')->user()->id)->get();
+        $plan_purchases = PlanPurchase::where('user_id',Auth::guard('web')->user()->id)->whereRaw('DATE_ADD(`created_at`, INTERVAL `duration_in_day` DAY) >= NOW()')->get();
         $times = 0;
         if($register_properties->count() >= 1){
             $times = $register_properties->count();
