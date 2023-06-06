@@ -1,5 +1,11 @@
 @extends('frontend.layouts.app')
 @section('content')
+    <style>
+        .tab-content>.active {
+            display: block;
+            border: 0;
+        }
+    </style>
     <div class="clearfix"></div>
     <div class="image-cover hero_banner" style="background:url({{ asset('frontend/assets/img/banner-3.png') }}) no-repeat;"
         data-overlay="0">
@@ -7,6 +13,17 @@
             <div class="row justify-content-center">
                 <div class="col-xl-9 col-lg-9 col-md-12">
                     <h1 class="big-header-capt mb-4">Welcome back! Let’s continue your search</h1>
+                    <div class="simple-search-wrap mb-3">
+                        <div class="hero_search-2">
+                            <div class="simple_tab_search">
+                                <div class="pk-input-group">
+                                    <input type="text" name="email" class="email form-control"
+                                        placeholder="Search By City, Locality, Project">
+                                    <button class="pk-subscribe-submit" type="submit"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="full_search_box nexio_search lightanic_search hero_search-radius modern">
                         <div class="search_hero_wrapping">
                             <div class="row">
@@ -28,11 +45,10 @@
                                             <select id="ptypes" class="form-control">
                                                 <option value="">Property Type</option>
                                                 <option value="1">All categories</option>
-                                                <option value="2">Apartment</option>
-                                                <option value="3">Villas</option>
-                                                <option value="4">Commercial</option>
-                                                <option value="5">Offices</option>
-                                                <option value="6">Garage</option>
+                                                <option value="2">Flat/ Apartment</option>
+                                                <option value="3">Residential House</option>
+                                                <option value="4">Commercial Space</option>
+                                                <option value="5">Plot</option>
                                             </select>
                                         </div>
                                     </div>
@@ -42,11 +58,11 @@
                                         <div class="input-with-icon">
                                             <select id="price" class="form-control">
                                                 <option value="">Price Range</option>
-                                                <option value="1">From 40,000 To 10m</option>
-                                                <option value="2">From 60,000 To 20m</option>
-                                                <option value="3">From 70,000 To 30m</option>
-                                                <option value="3">From 80,000 To 40m</option>
-                                                <option value="3">From 90,000 To 50m</option>
+                                                <option value="1">From 40,000 To 10l</option>
+                                                <option value="2">From 60,000 To 20l</option>
+                                                <option value="3">From 70,000 To 30l</option>
+                                                <option value="3">From 80,000 To 40l</option>
+                                                <option value="3">From 90,000 To 50l</option>
                                             </select>
                                         </div>
                                     </div>
@@ -76,7 +92,8 @@
                 </div>
                 <div class="col-lg-3 col-md-3">
                     <div class="float-end mt-2">
-                        <a href="#" class="default-btn border-radius"> View All <i class="fas fa-chevron-circle-right"></i>
+                        <a href="#" class="default-btn border-radius"> View All <i
+                                class="fas fa-chevron-circle-right"></i>
                         </a>
                     </div>
                 </div>
@@ -86,57 +103,12 @@
                     <div class="property_cats_boxs">
                         <a href="#" class="category-box">
                             <div class="property_category_short">
-                                <div class="category-icon clip-1">
-                                    <i class="flaticon-beach-house-2"></i>
-                                </div>
-                                <div class="property_category_expand property_category_short-text">
-                                    <h4>Buying a home</h4>
-                                    <p>122 Home</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg col-md-4">
-                    <div class="property_cats_boxs">
-                        <a href="#" class="category-box">
-                            <div class="property_category_short">
-                                <div class="category-icon clip-2">
-                                    <i class="flaticon-cabin"></i>
-                                </div>
-                                <div class="property_category_expand property_category_short-text">
-                                    <h4>Renting a home</h4>
-                                    <p>155 Home</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg col-md-4">
-                    <div class="property_cats_boxs">
-                        <a href="#" class="category-box">
-                            <div class="property_category_short">
                                 <div class="category-icon clip-3">
                                     <i class="flaticon-apartments"></i>
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
-                                    <h4>Sell/Rent your property</h4>
+                                    <h4>Flat/ Apartment</h4>
                                     <p>300 Property</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg col-md-4">
-                    <div class="property_cats_boxs">
-                        <a href="#" class="category-box">
-                            <div class="property_category_short">
-                                <div class="category-icon clip-4">
-                                    <i class="flaticon-student-housing"></i>
-                                </div>
-                                <div class="property_category_expand property_category_short-text">
-                                    <h4>Plots/Land</h4>
-                                    <p>80 Property</p>
                                 </div>
                             </div>
                         </a>
@@ -150,13 +122,58 @@
                                     <i class="flaticon-modern-house-4"></i>
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
-                                    <h4>Buying commercial spaces</h4>
+                                    <h4>Residential House</h4>
                                     <p>80 Property</p>
                                 </div>
                             </div>
                         </a>
                     </div>
                 </div>
+                <div class="col-lg col-md-4">
+                    <div class="property_cats_boxs">
+                        <a href="#" class="category-box">
+                            <div class="property_category_short">
+                                <div class="category-icon clip-4">
+                                    <i class="flaticon-student-housing"></i>
+                                </div>
+                                <div class="property_category_expand property_category_short-text">
+                                    <h4>Commercial Space</h4>
+                                    <p>80 Property</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg col-md-4">
+                    <div class="property_cats_boxs">
+                        <a href="#" class="category-box">
+                            <div class="property_category_short">
+                                <div class="category-icon clip-1">
+                                    <i class="flaticon-beach-house-2"></i>
+                                </div>
+                                <div class="property_category_expand property_category_short-text">
+                                    <h4>Plot</h4>
+                                    <p>122 Home</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {{-- <div class="col-lg col-md-4">
+                    <div class="property_cats_boxs">
+                        <a href="#" class="category-box">
+                            <div class="property_category_short">
+                                <div class="category-icon clip-2">
+                                    <i class="flaticon-cabin"></i>
+                                </div>
+                                <div class="property_category_expand property_category_short-text">
+                                    <h4>Renting a home</h4>
+                                    <p>155 Home</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div> --}}
             </div>
         </div>
     </section>
@@ -185,7 +202,8 @@
                                     <div class="listing-img-wrapper">
                                         <div class="list-img-slide">
                                             <a href="#">
-                                                <img src="{{ asset('backend/img/properies/'.$property->thumbnail_img) }}" class="img-fluid mx-auto" alt="" />
+                                                <img src="{{ asset('backend/img/properies/' . $property->thumbnail_img) }}"
+                                                    class="img-fluid mx-auto" alt="" />
                                             </a>
                                         </div>
                                     </div>
@@ -197,26 +215,31 @@
                                                 </div>
                                                 <div class="_card_flex_last">
                                                     <div class="prt_saveed_12lk">
-                                                        <label class="toggler toggler-danger"><input type="checkbox"><i class="fas fa-heart"></i></label>
+                                                        <label class="toggler toggler-danger"><input type="checkbox"><i
+                                                                class="fas fa-heart"></i></label>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="listing-short-detail">
-                                                <h4 class="listing-name verified"><a href="#" class="prt-link-detail">{{$property->name}}</a></h4>
-                                                @if($property->pincode || $property->address)
-                                                <div class="foot-location">
-                                                    <img src="{{ asset('frontend/assets/img/pin.svg') }}" width="18" alt="" />{{$property->address}}
-                                                    @if($property->pincode)
-                                                        {{$property->city}}, {{$property->state}}, {{$property->country}},{{$property->pincode}}
-                                                    @endif
-                                                </div>
+                                                <h4 class="listing-name verified"><a href="#"
+                                                        class="prt-link-detail">{{ $property->name }}</a></h4>
+                                                @if ($property->pincode || $property->address)
+                                                    <div class="foot-location">
+                                                        <img src="{{ asset('frontend/assets/img/pin.svg') }}"
+                                                            width="18" alt="" />{{ $property->address }}
+                                                        @if ($property->pincode)
+                                                            {{ $property->city }}, {{ $property->state }},
+                                                            {{ $property->country }},{{ $property->pincode }}
+                                                        @endif
+                                                    </div>
                                                 @endif
                                             </div>
                                         </div>
                                     </div>
                                     <div class="listing-detail-footer">
                                         <div class="footer-first">
-                                            <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft</div>
+                                            <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
+                                            </div>
                                         </div>
                                         <div class="footer-flex">
                                             <span>Apartment</span>

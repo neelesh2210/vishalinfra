@@ -41,7 +41,6 @@
                                             <thead class="thead-dark">
                                                 <tr>
                                                     <th scope="col">Property</th>
-                                                    <th scope="col" class="m2_hide">Leads</th>
                                                     <th scope="col" class="m2_hide">Stats</th>
                                                     <th scope="col" class="m2_hide">Posted On</th>
                                                     <th scope="col">Status</th>
@@ -61,32 +60,6 @@
                                                                     <div class="prt_dashb_lot">5682 Brown River Suit 18</div>
                                                                     <div class="prt_dash_rate"><span>₹ {{ $property->expected_price }}</span></div>
                                                                 </div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="m2_hide">
-                                                            <div class="prt_leads"><span>27 till now</span></div>
-                                                            <div class="prt_leads_list">
-                                                                <ul>
-                                                                    <li>
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('frontend/assets/img/team-1.jpg') }}" class="img-fluid mg-circle" alt="" />
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('frontend/assets/img/team-1.jpg') }}" class="img-fluid img-circle" alt="" />
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="#" class="_leads_name style-1">K</a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('frontend/assets/img/team-1.jpg') }}" class="img-fluid img-circle" alt="" />
-                                                                        </a>
-                                                                    </li>
-                                                                    <li><a href="#" class="leades_more">10+</a></li>
-                                                                </ul>
                                                             </div>
                                                         </td>
                                                         <td class="m2_hide">

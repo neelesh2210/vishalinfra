@@ -12535,7 +12535,7 @@ ul.packages-lists-list li {
 .dash_user_menues ul li a {
     padding:1rem 1rem;
     color:#144273;
-	border-radius:0.4rem;
+	border-radius:0;
 	background:#ffffff;
     font-size: 13px;
     display: inline-block;
@@ -12546,14 +12546,16 @@ ul.packages-lists-list li {
 	font-family:'Lexend Deca', sans-serif;
 }
 .dash_user_menues ul li a:hover, .dash_user_menues ul li a:focus{
-	color: #234ca0;
-	background: rgba(39, 174, 96,0.15);
+    color: #234ca0;
+    background: rgb(0 91 187 / 14%);
+    border-left: 3px solid;
 }
 .dash_user_menues ul li.active a {
     color: #234ca0;
-	background: rgba(39, 174, 96,0.15);
+    background: rgb(255 87 46 / 18%);
     padding: 1rem 1rem;
-    border-radius: 0.4rem;
+    border-radius: 0;
+    border-left: 3px solid;
 }
 .dash_user_menues ul li a i{
 	margin-right:10px;
@@ -14362,7 +14364,7 @@ h1, .h1 {
 		display:none;
 	}
 	.main-banner.image-banner, .hero-header, .hero_banner, .large-banner{
-		min-height:580px;
+		min-height:475px;
 	}
 	#main2 .filter_open_btn.style2 {
 		left: 10px;
@@ -14565,7 +14567,11 @@ h1, .h1 {
 	.full_search_box.hero_search-radius.modern {
 		padding: 0;
 		background: transparent;
+        display: none;
 	}
+    .simple-search-wrap{
+      display: block !important;
+    }
 	.full_search_box.lightanic_search.modern .small-padd .form-group {
 		padding: 0;
 		background: transparent;
@@ -15219,3 +15225,7 @@ background: linear-gradient(45deg, #39afd1, #0acf97) !important;
     right: 0;
     height: 100%;
 }
+
+.simple-search-wrap{
+    display: none;
+  }
