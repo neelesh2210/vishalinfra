@@ -16,6 +16,7 @@
             <li><a href="#"><i class="fa fa-envelope"></i>Get Leads<span class="notti_coun style-3">3</span></a></li>
             <li><a href="#"><i class="fa fa-gift"></i> Subscription Status <span class="expiration">10 days left</span></a></li>
             <li><a href="#"><i class="fa fa-pen-nib"></i>Submit New Property</a></li>
+            <li><a href="{{route('add_project')}}"><i class="fa fa-pen-nib"></i>Add Project</a></li>
         </ul>
     </div>
     <div class="dash_user_footer">

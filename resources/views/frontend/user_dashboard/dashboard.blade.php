@@ -1,5 +1,5 @@
 @extends('frontend.layouts.app')
-@section('content')>
+@section('content')
     <section class="gray pt-5 pb-5">
         <div class="container-fluid">
             <div class="row">
@@ -9,25 +9,25 @@
                 <div class="col-lg-9 col-md-8">
                     <div class="dashboard-body">
                         <div class="row">
-                            <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan ">
                                     <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
                                     <div class="dashboard_stats_wrap_content"><h4>607</h4> <span>Total Property</span></div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="dashboard_stats_wrap widget-3 gradient-45deg-red-pink">
                                     <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
                                     <div class="dashboard_stats_wrap_content"><h4>540</h4> <span>Approved Property</span></div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="dashboard_stats_wrap widget-2 gradient-45deg-amber-amber">
                                     <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
                                     <div class="dashboard_stats_wrap_content"><h4>580</h4> <span>Total Leads</span></div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
                                     <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
                                     <div class="dashboard_stats_wrap_content"><h4>580</h4> Consumed Leads<span></span></div>
