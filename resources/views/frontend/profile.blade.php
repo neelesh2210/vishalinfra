@@ -13,44 +13,48 @@
 								<div class="dashboard-wraper">
 									<!-- Basic Information -->
 									<div class="frm_submit_block">
-										<h4>My Account</h4>
+										<h4>User Profile (Personal Information)</h4><hr>
 										<div class="frm_submit_wrap">
 											<div class="form-row">
 												<div class="form-group col-md-6">
-													<label>Your Name</label>
-													<input type="text" class="form-control" value="Shaurya Preet">
+													<label>NAME *</label>
+													<input type="text" class="form-control" value="Vikas Sharma">
+												</div>
+                                                <div class="form-group col-md-6">
+													<label>PHONE *</label>
+													<input type="text" class="form-control" value="9454528015">
 												</div>
 												<div class="form-group col-md-6">
-													<label>Email</label>
-													<input type="email" class="form-control" value="preet77@gmail.com">
+													<label>EMAIL</label>
+													<input type="email" class="form-control" value="vikas@gmail.com">
 												</div>
 												<div class="form-group col-md-6">
-													<label>Your Title</label>
-													<input type="text" class="form-control" value="Web Designer">
+													<label>PINCODE</label>
+													<input type="text" class="form-control" value="221010">
+												</div>
+
+												<div class="form-group col-md-6">
+													<label>LANDMARK</label>
+													<input type="text" class="form-control" value="Near Rampur Gate">
 												</div>
 												<div class="form-group col-md-6">
-													<label>Phone</label>
-													<input type="text" class="form-control" value="123 456 5847">
+													<label>CITY</label>
+													<input type="text" class="form-control" value="Varanasi">
 												</div>
 												<div class="form-group col-md-6">
-													<label>Address</label>
-													<input type="text" class="form-control" value="522, Arizona, Canada">
+													<label>STATE</label>
+													<input type="text" class="form-control" value="UP">
 												</div>
 												<div class="form-group col-md-6">
-													<label>City</label>
-													<input type="text" class="form-control" value="Montquebe">
+													<label>COUNTRY</label>
+													<input type="text" class="form-control" value="India">
 												</div>
-												<div class="form-group col-md-6">
-													<label>State</label>
-													<input type="text" class="form-control" value="Canada">
+                                                <div class="form-group col-md-6">
+													<label>PROFILE</label>
+													<input type="file" class="form-control">
 												</div>
-												<div class="form-group col-md-6">
-													<label>Zip</label>
-													<input type="text" class="form-control" value="160052">
-												</div>
-												<div class="form-group col-md-12">
-													<label>About</label>
-													<textarea class="form-control">Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper</textarea>
+                                                <div class="form-group col-md-6 mt-20">
+													<button class="btn btn-theme" type="submit">Update & Submit</button>
 												</div>
 											</div>
 										</div>

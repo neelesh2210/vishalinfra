@@ -30,8 +30,8 @@
                                     <h4>{{$plan->name}}</h4>
                                 </div>
                                 <div class="prt_price">
-                                    <del><span>₹</span>{{$plan->price}}</del>
-                                    <h2><span>₹</span>{{$plan->discounted_price}}</h2>
+
+                                    <h2><span>₹</span>{{$plan->discounted_price}} <del class="ml-2" style="color: #ff5f20; font-size:25px;"> {{$plan->price}}</del></h2>
                                     <span>{{$plan->duration_in_day}} Days Validity</span>
                                 </div>
                             </div>

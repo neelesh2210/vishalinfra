@@ -9,33 +9,28 @@
                 <div class="col-lg-9 col-md-8">
                     <div class="dashboard-body">
                         <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                <h4>Your Current Package: <span class="pc-title theme-cl">Gold Package</span></h4>
-                            </div>
-                        </div>
-                        <div class="row">
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-1">
+                                <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan ">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
                                     <div class="dashboard_stats_wrap_content"><h4>607</h4> <span>New Matching Leads</span></div>
-                                    <div class="dashboard_stats_wrap-icon"><i class="ti-credit-card"></i></div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-3">
+                                <div class="dashboard_stats_wrap widget-3 gradient-45deg-red-pink">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
                                     <div class="dashboard_stats_wrap_content"><h4>540</h4> <span>MB Points Consumed</span></div>
-                                    <div class="dashboard_stats_wrap-icon"><i class="ti-wallet"></i></div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-2">
+                                <div class="dashboard_stats_wrap widget-2 gradient-45deg-amber-amber">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
                                     <div class="dashboard_stats_wrap_content"><h4>580</h4> <span>Leads Consumed</span></div>
-                                    <div class="dashboard_stats_wrap-icon"><i class="ti-credit-card"></i></div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-2">
+                                <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
                                     <div class="dashboard_stats_wrap_content"><h4>580</h4> <span>Average Spend Per Lead</span></div>
-                                    <div class="dashboard_stats_wrap-icon"><i class="ti-wallet"></i></div>
                                 </div>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 <div class="property_dashboard_navbar">
     <div class="dash_user_avater">
-        <img src="{{ asset('frontend/assets/img/user-3.jpg') }}" class="img-fluid avater" alt="">
+        <img src="{{ asset('frontend/assets/img/profile.png') }}" class="img-fluid avater" alt="">
         <h4>{{ Auth::guard('web')->user()->name }}</h4>
         {{-- <span>Varanasi</span> --}}
     </div>

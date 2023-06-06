@@ -13,29 +13,19 @@
 
 						<div class="col-lg-9 col-md-8">
 							<div class="dashboard-body">
-
 								<div class="row">
-									<div class="col-lg-12 col-md-12 col-sm-12">
-										<h4>Your Current Package: <span class="pc-title theme-cl">Gold Package</span></h4>
-									</div>
-								</div>
-
-								<div class="row">
-
 									<div class="col-lg-4 col-md-6 col-sm-12">
-										<div class="dashboard_stats_wrap widget-1">
+										<div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan ">
 											<div class="dashboard_stats_wrap_content"><h4>607</h4> <span>New Matching Leads</span></div>
 											<div class="dashboard_stats_wrap-icon"><i class="ti-credit-card"></i></div>
 										</div>
 									</div>
-
 									<div class="col-lg-4 col-md-6 col-sm-12">
 										<div class="dashboard_stats_wrap widget-3">
 											<div class="dashboard_stats_wrap_content"><h4>540</h4> <span>MB Points Consumed</span></div>
 											<div class="dashboard_stats_wrap-icon"><i class="ti-wallet"></i></div>
 										</div>
 									</div>
-
 									<div class="col-lg-4 col-md-6 col-sm-12">
 										<div class="dashboard_stats_wrap widget-2">
 											<div class="dashboard_stats_wrap_content"><h4>580</h4> <span>Leads Consumed</span></div>
@@ -48,10 +38,8 @@
 											<div class="dashboard_stats_wrap-icon"><i class="ti-wallet"></i></div>
 										</div>
 									</div>
-
 								</div>
 								<!--  row -->
-
 								<div class="row">
 									<div class="col-lg-8 col-md-7 col-sm-12">
 										<div class="card">
@@ -74,7 +62,6 @@
 											</div>
 										</div>
 									</div>
-
 									<div class="col-lg-4 col-md-5 col-sm-12">
 										<div class="card">
 											<div class="card-header">
@@ -91,45 +78,37 @@
 														<span class="small">Just Now</span>
 													</div>
 												</div>
-
 												<div class="ground ground-single-list">
 													<a href="#">
 														<div class="btn-circle-40 theme-cl theme-bg-light"><i class="ti-comment-alt"></i></div>
 													</a>
-
 													<div class="ground-content">
 														<h6><a href="#">Litha Lynes left a review on <strong>Renovated Apartment</strong></a></h6>
 														<span class="small">20 min ago</span>
 													</div>
 												</div>
-
 												<div class="ground ground-single-list">
 													<a href="#">
 														<div class="btn-circle-40 theme-cl theme-bg-light"><i class="ti-heart"></i></div>
 													</a>
-
 													<div class="ground-content">
 														<h6><a href="#">Someone bookmark your View listing!<strong>Sargun Villa Bay</strong></a></h6>
 														<span class="small">1 day ago</span>
 													</div>
 												</div>
-
 												<div class="ground ground-single-list">
 													<a href="#">
 														<div class="btn-circle-40 theme-cl theme-bg-light"><i class="ti-home"></i></div>
 													</a>
-
 													<div class="ground-content">
 														<h6><a href="#">Your listing <strong>Modern Family Home</strong> has been approved!.</a></h6>
 														<span class="small">10 days ago</span>
 													</div>
 												</div>
-
 												<div class="ground ground-single-list">
 													<a href="#">
 														<div class="btn-circle-40 theme-cl theme-bg-light"><i class="ti-comment-alt"></i></div>
 													</a>
-
 													<div class="ground-content">
 														<h6><a href="#">Adam Brown left a review on <strong>Renovated Apartment</strong></a></h6>
 														<span class="small">Just Now</span>
@@ -146,7 +125,6 @@
 				</div>
 			</section>
 			<!-- ============================ User Dashboard End ================================== -->
-
 			<!-- Log In Modal -->
 			<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="registermodal" aria-hidden="true">
 				<div class="modal-dialog modal-xl login-pop-form" role="document">
@@ -258,19 +236,13 @@
 				</div>
 			</div>
 			<!-- End Modal -->
-
 			<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
-
-
 		</div>
 		<!-- ============================================================== -->
 		<!-- End Wrapper -->
-
         <!-- Morris.js charts -->
         <script src="{{ asset('frontend/assets/js/raphael.min.js')}}"></script>
         <script src="{{ asset('frontend/assets/js/morris.min.js')}}"></script>
-
         <!-- Custom Morrisjs JavaScript -->
         <script src="{{ asset('frontend/assets/js/morris.js')}}"></script>
-
         @endsection
