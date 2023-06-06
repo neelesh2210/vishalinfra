@@ -121,6 +121,19 @@
                                                     </div>
                                                 </div>
                                             @endif
+                                            @if(Auth::guard('web')->user()->type == 'builder')
+                                                <div class="col-md-4 form_div">
+                                                    <div class="form-group">
+                                                        <label for="project_id">Select Project <span class="text-danger">*</span></label>
+                                                        <select class="form-control select2" name="project_id" id="project_id"  data-live-search="true" required>
+                                                            <option value="">Select Project...</option>
+                                                            @foreach ($projects as $project)
+                                                                <option value="{{$project->id}}">{{$projects->name}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            @endif
                                             <div class="col-md-4 form_div">
                                                 <div class="form-group">
                                                     <label for="properties_type">Property Type <span class="text-danger">*</span></label>

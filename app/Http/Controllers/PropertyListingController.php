@@ -6,6 +6,7 @@ use Auth;
 use Carbon\Carbon;
 use App\CPU\PropertyManager;
 use Illuminate\Http\Request;
+use App\Models\Admin\Project;
 use App\Models\Admin\Property;
 use App\Models\Admin\PlanPurchase;
 
@@ -20,19 +21,20 @@ class PropertyListingController extends Controller
 
     public function create(){
         $register_properties = PropertyManager::withoutTrash()->where('added_by',Auth::guard('web')->user()->id)->get();
+        $projects = Project::where('user_id',Auth::guard('web')->user()->id)->get();
 
         $plan_purchases = PlanPurchase::where('user_id',Auth::guard('web')->user()->id)->whereRaw('DATE_ADD(`created_at`, INTERVAL `duration_in_day` DAY) >= NOW()')->get();
         $times = 0;
         if($register_properties->count() >= 1){
             $times = $register_properties->count();
             if($plan_purchases->count() != 0){
-                return view('frontend.property_listing',compact('times','plan_purchases'));
+                return view('frontend.property_listing',compact('times','plan_purchases','projects'));
             }else{
                 return redirect()->route('plan');
             }
         }else{
             $times = 0;
-            return view('frontend.property_listing',compact('times','plan_purchases'));
+            return view('frontend.property_listing',compact('times','plan_purchases','projects'));
         }
     }
 
