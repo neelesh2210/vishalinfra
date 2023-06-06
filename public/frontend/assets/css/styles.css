@@ -14364,7 +14364,7 @@ h1, .h1 {
 		display:none;
 	}
 	.main-banner.image-banner, .hero-header, .hero_banner, .large-banner{
-		min-height:580px;
+		min-height:475px;
 	}
 	#main2 .filter_open_btn.style2 {
 		left: 10px;
@@ -14567,7 +14567,11 @@ h1, .h1 {
 	.full_search_box.hero_search-radius.modern {
 		padding: 0;
 		background: transparent;
+        display: none;
 	}
+    .simple-search-wrap{
+      display: block !important;
+    }
 	.full_search_box.lightanic_search.modern .small-padd .form-group {
 		padding: 0;
 		background: transparent;
@@ -15221,3 +15225,7 @@ background: linear-gradient(45deg, #39afd1, #0acf97) !important;
     right: 0;
     height: 100%;
 }
+
+.simple-search-wrap{
+    display: none;
+  }

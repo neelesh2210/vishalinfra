@@ -1,5 +1,11 @@
 @extends('frontend.layouts.app')
 @section('content')
+    <style>
+        .tab-content>.active {
+            display: block;
+            border: 0;
+        }
+    </style>
     <div class="clearfix"></div>
     <div class="image-cover hero_banner" style="background:url({{ asset('frontend/assets/img/banner-3.png') }}) no-repeat;"
         data-overlay="0">
@@ -7,6 +13,17 @@
             <div class="row justify-content-center">
                 <div class="col-xl-9 col-lg-9 col-md-12">
                     <h1 class="big-header-capt mb-4">Welcome back! Let’s continue your search</h1>
+                    <div class="simple-search-wrap mb-3">
+                        <div class="hero_search-2">
+                            <div class="simple_tab_search">
+                                <div class="pk-input-group">
+                                    <input type="text" name="email" class="email form-control"
+                                        placeholder="Search By City, Locality, Project">
+                                    <button class="pk-subscribe-submit" type="submit"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="full_search_box nexio_search lightanic_search hero_search-radius modern">
                         <div class="search_hero_wrapping">
                             <div class="row">
@@ -75,7 +92,8 @@
                 </div>
                 <div class="col-lg-3 col-md-3">
                     <div class="float-end mt-2">
-                        <a href="#" class="default-btn border-radius"> View All <i class="fas fa-chevron-circle-right"></i>
+                        <a href="#" class="default-btn border-radius"> View All <i
+                                class="fas fa-chevron-circle-right"></i>
                         </a>
                     </div>
                 </div>
@@ -184,7 +202,8 @@
                                     <div class="listing-img-wrapper">
                                         <div class="list-img-slide">
                                             <a href="#">
-                                                <img src="{{ asset('backend/img/properies/'.$property->thumbnail_img) }}" class="img-fluid mx-auto" alt="" />
+                                                <img src="{{ asset('backend/img/properies/' . $property->thumbnail_img) }}"
+                                                    class="img-fluid mx-auto" alt="" />
                                             </a>
                                         </div>
                                     </div>
@@ -196,26 +215,31 @@
                                                 </div>
                                                 <div class="_card_flex_last">
                                                     <div class="prt_saveed_12lk">
-                                                        <label class="toggler toggler-danger"><input type="checkbox"><i class="fas fa-heart"></i></label>
+                                                        <label class="toggler toggler-danger"><input type="checkbox"><i
+                                                                class="fas fa-heart"></i></label>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="listing-short-detail">
-                                                <h4 class="listing-name verified"><a href="#" class="prt-link-detail">{{$property->name}}</a></h4>
-                                                @if($property->pincode || $property->address)
-                                                <div class="foot-location">
-                                                    <img src="{{ asset('frontend/assets/img/pin.svg') }}" width="18" alt="" />{{$property->address}}
-                                                    @if($property->pincode)
-                                                        {{$property->city}}, {{$property->state}}, {{$property->country}},{{$property->pincode}}
-                                                    @endif
-                                                </div>
+                                                <h4 class="listing-name verified"><a href="#"
+                                                        class="prt-link-detail">{{ $property->name }}</a></h4>
+                                                @if ($property->pincode || $property->address)
+                                                    <div class="foot-location">
+                                                        <img src="{{ asset('frontend/assets/img/pin.svg') }}"
+                                                            width="18" alt="" />{{ $property->address }}
+                                                        @if ($property->pincode)
+                                                            {{ $property->city }}, {{ $property->state }},
+                                                            {{ $property->country }},{{ $property->pincode }}
+                                                        @endif
+                                                    </div>
                                                 @endif
                                             </div>
                                         </div>
                                     </div>
                                     <div class="listing-detail-footer">
                                         <div class="footer-first">
-                                            <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft</div>
+                                            <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
+                                            </div>
                                         </div>
                                         <div class="footer-flex">
                                             <span>Apartment</span>
