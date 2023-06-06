@@ -28,11 +28,10 @@
                                             <select id="ptypes" class="form-control">
                                                 <option value="">Property Type</option>
                                                 <option value="1">All categories</option>
-                                                <option value="2">Apartment</option>
-                                                <option value="3">Villas</option>
-                                                <option value="4">Commercial</option>
-                                                <option value="5">Offices</option>
-                                                <option value="6">Garage</option>
+                                                <option value="2">Flat/ Apartment</option>
+                                                <option value="3">Residential House</option>
+                                                <option value="4">Commercial Space</option>
+                                                <option value="5">Plot</option>
                                             </select>
                                         </div>
                                     </div>
@@ -42,11 +41,11 @@
                                         <div class="input-with-icon">
                                             <select id="price" class="form-control">
                                                 <option value="">Price Range</option>
-                                                <option value="1">From 40,000 To 10m</option>
-                                                <option value="2">From 60,000 To 20m</option>
-                                                <option value="3">From 70,000 To 30m</option>
-                                                <option value="3">From 80,000 To 40m</option>
-                                                <option value="3">From 90,000 To 50m</option>
+                                                <option value="1">From 40,000 To 10l</option>
+                                                <option value="2">From 60,000 To 20l</option>
+                                                <option value="3">From 70,000 To 30l</option>
+                                                <option value="3">From 80,000 To 40l</option>
+                                                <option value="3">From 90,000 To 50l</option>
                                             </select>
                                         </div>
                                     </div>
@@ -86,57 +85,12 @@
                     <div class="property_cats_boxs">
                         <a href="#" class="category-box">
                             <div class="property_category_short">
-                                <div class="category-icon clip-1">
-                                    <i class="flaticon-beach-house-2"></i>
-                                </div>
-                                <div class="property_category_expand property_category_short-text">
-                                    <h4>Buying a home</h4>
-                                    <p>122 Home</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg col-md-4">
-                    <div class="property_cats_boxs">
-                        <a href="#" class="category-box">
-                            <div class="property_category_short">
-                                <div class="category-icon clip-2">
-                                    <i class="flaticon-cabin"></i>
-                                </div>
-                                <div class="property_category_expand property_category_short-text">
-                                    <h4>Renting a home</h4>
-                                    <p>155 Home</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg col-md-4">
-                    <div class="property_cats_boxs">
-                        <a href="#" class="category-box">
-                            <div class="property_category_short">
                                 <div class="category-icon clip-3">
                                     <i class="flaticon-apartments"></i>
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
-                                    <h4>Sell/Rent your property</h4>
+                                    <h4>Flat/ Apartment</h4>
                                     <p>300 Property</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg col-md-4">
-                    <div class="property_cats_boxs">
-                        <a href="#" class="category-box">
-                            <div class="property_category_short">
-                                <div class="category-icon clip-4">
-                                    <i class="flaticon-student-housing"></i>
-                                </div>
-                                <div class="property_category_expand property_category_short-text">
-                                    <h4>Plots/Land</h4>
-                                    <p>80 Property</p>
                                 </div>
                             </div>
                         </a>
@@ -150,13 +104,58 @@
                                     <i class="flaticon-modern-house-4"></i>
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
-                                    <h4>Buying commercial spaces</h4>
+                                    <h4>Residential House</h4>
                                     <p>80 Property</p>
                                 </div>
                             </div>
                         </a>
                     </div>
                 </div>
+                <div class="col-lg col-md-4">
+                    <div class="property_cats_boxs">
+                        <a href="#" class="category-box">
+                            <div class="property_category_short">
+                                <div class="category-icon clip-4">
+                                    <i class="flaticon-student-housing"></i>
+                                </div>
+                                <div class="property_category_expand property_category_short-text">
+                                    <h4>Commercial Space</h4>
+                                    <p>80 Property</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg col-md-4">
+                    <div class="property_cats_boxs">
+                        <a href="#" class="category-box">
+                            <div class="property_category_short">
+                                <div class="category-icon clip-1">
+                                    <i class="flaticon-beach-house-2"></i>
+                                </div>
+                                <div class="property_category_expand property_category_short-text">
+                                    <h4>Plot</h4>
+                                    <p>122 Home</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {{-- <div class="col-lg col-md-4">
+                    <div class="property_cats_boxs">
+                        <a href="#" class="category-box">
+                            <div class="property_category_short">
+                                <div class="category-icon clip-2">
+                                    <i class="flaticon-cabin"></i>
+                                </div>
+                                <div class="property_category_expand property_category_short-text">
+                                    <h4>Renting a home</h4>
+                                    <p>155 Home</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div> --}}
             </div>
         </div>
     </section>

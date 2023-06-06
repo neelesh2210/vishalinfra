@@ -12535,7 +12535,7 @@ ul.packages-lists-list li {
 .dash_user_menues ul li a {
     padding:1rem 1rem;
     color:#144273;
-	border-radius:0.4rem;
+	border-radius:0;
 	background:#ffffff;
     font-size: 13px;
     display: inline-block;
@@ -12546,14 +12546,16 @@ ul.packages-lists-list li {
 	font-family:'Lexend Deca', sans-serif;
 }
 .dash_user_menues ul li a:hover, .dash_user_menues ul li a:focus{
-	color: #234ca0;
-	background: rgba(39, 174, 96,0.15);
+    color: #234ca0;
+    background: rgb(0 91 187 / 14%);
+    border-left: 3px solid;
 }
 .dash_user_menues ul li.active a {
     color: #234ca0;
-	background: rgba(39, 174, 96,0.15);
+    background: rgb(255 87 46 / 18%);
     padding: 1rem 1rem;
-    border-radius: 0.4rem;
+    border-radius: 0;
+    border-left: 3px solid;
 }
 .dash_user_menues ul li a i{
 	margin-right:10px;

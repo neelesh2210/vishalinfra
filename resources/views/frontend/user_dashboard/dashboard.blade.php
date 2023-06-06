@@ -12,25 +12,25 @@
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan ">
                                     <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content"><h4>607</h4> <span>New Matching Leads</span></div>
+                                    <div class="dashboard_stats_wrap_content"><h4>607</h4> <span>Total Property</span></div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="dashboard_stats_wrap widget-3 gradient-45deg-red-pink">
                                     <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content"><h4>540</h4> <span>MB Points Consumed</span></div>
+                                    <div class="dashboard_stats_wrap_content"><h4>540</h4> <span>Approved Property</span></div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="dashboard_stats_wrap widget-2 gradient-45deg-amber-amber">
                                     <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content"><h4>580</h4> <span>Leads Consumed</span></div>
+                                    <div class="dashboard_stats_wrap_content"><h4>580</h4> <span>Total Leads</span></div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
                                     <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content"><h4>580</h4> <span>Average Spend Per Lead</span></div>
+                                    <div class="dashboard_stats_wrap_content"><h4>580</h4> Consumed Leads<span></span></div>
                                 </div>
                             </div>
                         </div>
@@ -78,34 +78,6 @@
                                             <div class="ground-content">
                                                 <h6><a href="#">Litha Lynes left a review on <strong>Renovated Apartment</strong></a></h6>
                                                 <span class="small">20 min ago</span>
-                                            </div>
-                                        </div>
-                                        <div class="ground ground-single-list">
-                                            <a href="#">
-                                                <div class="btn-circle-40 theme-cl theme-bg-light"><i class="ti-heart"></i></div>
-                                            </a>
-                                            <div class="ground-content">
-                                                <h6><a href="#">Someone bookmark your View listing!<strong>Sargun Villa Bay</strong></a></h6>
-                                                <span class="small">1 day ago</span>
-                                            </div>
-                                        </div>
-                                        <div class="ground ground-single-list">
-                                            <a href="#">
-                                                <div class="btn-circle-40 theme-cl theme-bg-light"><i class="ti-home"></i></div>
-                                            </a>
-                                            <div class="ground-content">
-                                                <h6><a href="#">Your listing <strong>Modern Family Home</strong> has been approved!.</a></h6>
-                                                <span class="small">10 days ago</span>
-                                            </div>
-                                        </div>
-                                        <div class="ground ground-single-list">
-                                            <a href="#">
-                                                <div class="btn-circle-40 theme-cl theme-bg-light"><i class="ti-comment-alt"></i></div>
-                                            </a>
-
-                                            <div class="ground-content">
-                                                <h6><a href="#">Adam Brown left a review on <strong>Renovated Apartment</strong></a></h6>
-                                                <span class="small">Just Now</span>
                                             </div>
                                         </div>
                                     </div>

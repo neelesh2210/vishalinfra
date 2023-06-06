@@ -20,9 +20,7 @@
     </div>
     <div class="dash_user_footer">
         <ul>
-            <li><a href="#"><i class="fa fa-power-off"></i></a></li>
-            <li><a href="#"><i class="fa fa-comment"></i></a></li>
-            <li><a href="#"><i class="fa fa-cog"></i></a></li>
+            <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
         </ul>
     </div>
 </div>
