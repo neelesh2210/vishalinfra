@@ -15,8 +15,10 @@
             <li><a href="{{ route('user.property.index') }}"><i class="fa fa-tasks"></i>My Properties</a></li>
             <li><a href="#"><i class="fa fa-envelope"></i>Get Leads<span class="notti_coun style-3">3</span></a></li>
             <li><a href="#"><i class="fa fa-gift"></i> Subscription Status <span class="expiration">10 days left</span></a></li>
-            <li><a href="#"><i class="fa fa-pen-nib"></i>Submit New Property</a></li>
-            <li><a href="{{route('add_project')}}"><i class="fa fa-pen-nib"></i>Add Project</a></li>
+            <li><a href="{{route('user.property.listing')}}"><i class="fa fa-pen-nib"></i>Submit New Property</a></li>
+            @if(Auth::guard('web')->user()->type == 'builder')
+                <li><a href="{{route('user.add.project')}}"><i class="fa fa-pen-nib"></i>Add Project</a></li>
+            @endif
         </ul>
     </div>
     <div class="dash_user_footer">

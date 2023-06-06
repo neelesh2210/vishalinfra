@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PlanController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\RegisterController;
@@ -47,7 +48,6 @@ Route::view('contact', 'frontend.contact')->name('contact');
 //Route::view('dashboard','frontend.dashboard')->name('dashboard');
 Route::view('my-profile','frontend.profile')->name('profile');
 //Route::view('my-property','frontend.my_property')->name('my_property');
-Route::view('add-project', 'frontend.add_project')->name('add_project');
 Route::view('requested-property','frontend.requested_property')->name('requested_property');
 //Plan
 Route::get('plan',[PlanController::class,'plan'])->name('plan');
@@ -77,6 +77,10 @@ Route::group(['middleware'=>['auth:web'],'prefix'=>'user','as'=>'user.'],functio
     Route::view('pricing-plan','frontend.user_dashboard.pricing_plan')->name('pricing_plan');
     Route::post('attempt-plan-purchase',[PlanController::class,'attemptPlanPurchase'])->name('attempt.plan.purchase');
     Route::get('instamojo/payment/pay-success',[InstamojoController::class, 'success'])->name('instamojo.success');
+
+    //Add Project
+    Route::get('add-project', [ProjectController::class,'index'])->name('add.project');
+    Route::post('store-project',[ProjectController::class,'store'])->name('store.project');
 
     //Logout
     Route::post('user-logout',[LoginController::class,'logout'])->name('logout');

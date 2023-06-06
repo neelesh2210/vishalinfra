@@ -47,6 +47,9 @@ class PropertyListingController extends Controller
         }
         $property=new Property;
         $property->slug=str_replace(' ','-',$request->name).'-'.generateRandomString(4);
+        if(Auth::guard('web')->user()->type == 'builder'){
+            $property->project_id = $request->project_id;
+        }
         $property->plan_purchase_id=$request->purchase_plan_id;
         $property->added_by=Auth::guard('web')->user()->id;
         $property->property_number=$property_number;
