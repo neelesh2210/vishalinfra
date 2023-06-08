@@ -171,11 +171,10 @@ class PropertyController extends Controller
     public function update(Request $request,$id){
 
         $property=Property::find(decrypt($id));
-        $property->project_id=$request->project_id;
-
-        // $property->slug=str_replace(' ','-',$request->name).'-'.generateRandomString(4);
         $property->name=$request->name;
         $property->properties_type=$request->properties_type;
+        $property->city=$request->city_id;
+        $property->landmark=$request->landmark;
 
         if($request->properties_type == 'plot'){
             $property->plot_area=$request->plot_area;
@@ -245,8 +244,8 @@ class PropertyController extends Controller
             }
             $property->photos=json_encode($gall_imgs);
         }
-        if($request->image){
-            $property->thumbnail_img=imageUpload($request->file('image'),'backend/img/properies');;
+        if($request->has('image')){
+            $property->thumbnail_img=imageUpload($request->file('image'),'backend/img/properies');
         }
         $property->remark=$request->remark;
         $property->save();
