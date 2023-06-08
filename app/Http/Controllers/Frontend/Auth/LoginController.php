@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Frontend\Auth;
 
 use Auth;
 use Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
+use App\Http\Controllers\Controller;
 
 class LoginController extends Controller
 {

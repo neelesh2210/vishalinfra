@@ -3,15 +3,15 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PlanController;
-use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\PropertyController;
-use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AizUploadController;
 use App\Http\Controllers\InstamojoController;
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\PropertyListingController;
+use App\Http\Controllers\Frontend\Auth\LoginController;
+use App\Http\Controllers\Frontend\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,10 +45,8 @@ Route::view('reset-password', 'frontend.auth.reset_password')->name('reset_passw
 //Static Route
 Route::view('about', 'frontend.about')->name('about');
 Route::view('contact', 'frontend.contact')->name('contact');
-//Route::view('dashboard','frontend.dashboard')->name('dashboard');
-Route::view('my-profile','frontend.profile')->name('profile');
-//Route::view('my-property','frontend.my_property')->name('my_property');
 Route::view('requested-property','frontend.requested_property')->name('requested_property');
+
 //Plan
 Route::get('plan',[PlanController::class,'plan'])->name('plan');
 
@@ -56,38 +54,39 @@ Route::get('plan',[PlanController::class,'plan'])->name('plan');
 Route::get('properties',[PropertyController::class,'propertyList'])->name('properties');
 Route::get('/{slug}',[PropertyController::class,'detail'])->name('property.detail');
 
-Route::group(['middleware'=>['auth:web'],'prefix'=>'user','as'=>'user.'],function () {
+Route::group(['middleware'=>['auth:web']],function () {
 
-    //Dashboard
-    Route::view('dashboard','frontend.user_dashboard.dashboard')->name('dashboard');
+    Route::group(['prefix'=>'user','as'=>'user.'],function () {
 
-    //Register Property
-    Route::get('property-index',[PropertyListingController::class,'index'])->name('property.index');
-    Route::get('property-listing',[PropertyListingController::class,'create'])->name('property.listing');
-    Route::post('property-listing-store',[PropertyListingController::class,'store'])->name('property.listing.store');
+        //Dashboard
+        Route::view('dashboard','frontend.user.dashboard')->name('dashboard');
 
-    //Profile
-    Route::get('profile',[UserProfileController::class,'profile'])->name('profile');
-    Route::post('save-profile',[UserProfileController::class,'saveProfile'])->name('save.profile');
+        //Register Property
+        Route::get('property-index',[PropertyListingController::class,'index'])->name('property.index');
+        Route::get('property-listing',[PropertyListingController::class,'create'])->name('property.listing');
+        Route::post('property-listing-store',[PropertyListingController::class,'store'])->name('property.listing.store');
 
-    //Leads
-    Route::view('leads','frontend.user_dashboard.leads')->name('leads');
+        //Profile
+        Route::get('profile',[UserProfileController::class,'profile'])->name('profile');
+        Route::post('save-profile',[UserProfileController::class,'saveProfile'])->name('save.profile');
 
-    //Plan Purchase
-    Route::view('pricing-plan','frontend.user_dashboard.pricing_plan')->name('pricing_plan');
-    Route::post('attempt-plan-purchase',[PlanController::class,'attemptPlanPurchase'])->name('attempt.plan.purchase');
-    Route::get('instamojo/payment/pay-success',[InstamojoController::class, 'success'])->name('instamojo.success');
+        //Leads
+        Route::view('leads','frontend.user.leads')->name('leads');
 
-    //Add Project
-    Route::get('project-list', [ProjectController::class,'index'])->name('project.list');
-    Route::get('add-project', [ProjectController::class,'create'])->name('add.project');
-    Route::post('store-project',[ProjectController::class,'store'])->name('store.project');
+        //Plan Purchase
+        Route::view('pricing-plan','frontend.user.pricing_plan')->name('pricing_plan');
+        Route::post('attempt-plan-purchase',[PlanController::class,'attemptPlanPurchase'])->name('attempt.plan.purchase');
+        Route::get('instamojo/payment/pay-success',[InstamojoController::class, 'success'])->name('instamojo.success');
 
-    //Logout
-    Route::post('user-logout',[LoginController::class,'logout'])->name('logout');
+        //Add Project
+        Route::get('project-list', [ProjectController::class,'index'])->name('project.list');
+        Route::get('add-project', [ProjectController::class,'create'])->name('add.project');
+        Route::post('store-project',[ProjectController::class,'store'])->name('store.project');
 
-});
+        //Logout
+        Route::post('logout',[LoginController::class,'logout'])->name('logout');
 
+    });
 
     // Upload multiple Images
     Route::any('aiz-uploader', [AizUploadController::class, 'show_uploader']);
@@ -96,3 +95,6 @@ Route::group(['middleware'=>['auth:web'],'prefix'=>'user','as'=>'user.'],functio
     Route::delete('aiz-uploader/destroy/{id}', [AizUploadController::class, 'destroy']);
     Route::post('aiz-uploader/get_file_by_ids', [AizUploadController::class, 'get_preview_files']);
     Route::get('aiz-uploader/download/{id}', [AizUploadController::class, 'attachment_download'])->name('download_attachment');
+
+});
+

@@ -20,10 +20,10 @@
     </head>
 
     <body class="loading " data-layout-color="light" data-leftbar-theme="dark" data-layout-mode="fluid" data-rightbar-onstart="true" @if(Route::currentRouteName() == "user.course.detail")data-leftbar-compact-mode="condensed" @endif>
-        @include('frontend.user_dashboard.layouts.sidebar')
-        @include('frontend.user_dashboard.layouts.header')
+        @include('frontend.user.layouts.sidebar')
+        @include('frontend.user.layouts.header')
         @yield('content')
-        @include('frontend.user_dashboard.layouts.footer')
+        @include('frontend.user.layouts.footer')
 
 
     </body>

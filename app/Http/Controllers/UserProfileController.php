@@ -13,7 +13,7 @@ class UserProfileController extends Controller
 
     public function profile(){
         $profile = Auth::guard('web')->user();
-        return view('frontend.user_dashboard.profile',compact('profile'));
+        return view('frontend.user.profile',compact('profile'));
     }
 
     public function saveProfile(Request $request){

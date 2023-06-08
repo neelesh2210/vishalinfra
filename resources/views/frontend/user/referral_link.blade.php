@@ -1,4 +1,4 @@
-@extends('frontend.user_dashboard.layouts.app')
+@extends('frontend.user.layouts.app')
 @section('content')
     <div class="content-page">
         <div class="content">

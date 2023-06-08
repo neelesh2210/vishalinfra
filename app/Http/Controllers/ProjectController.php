@@ -10,11 +10,11 @@ class ProjectController extends Controller
 {
 
     public function index(){
-        return view('frontend.project_list');
+        return view('frontend.user.project.index');
     }
 
     public function create(){
-        return view('frontend.add_project');
+        return view('frontend.user.project.create');
     }
 
     public function store(Request $request){

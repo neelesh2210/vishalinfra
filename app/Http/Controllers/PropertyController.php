@@ -64,17 +64,17 @@ class PropertyController extends Controller
         $properties = $properties->with(['bookProperty','project','phase'])->orderBy('id','desc')->paginate(15);
 
         if($request->ajax()){
-            return view('frontend.user_dashboard.property.table',compact('properties','search_key','search_price','search_bedroom','search_room_type','search_city','search_property','search_project','search_status'));
+            return view('frontend.user.property.table',compact('properties','search_key','search_price','search_bedroom','search_room_type','search_city','search_property','search_project','search_status'));
         }
 
-        return view('frontend.user_dashboard.property.index',compact('properties','search_key','search_price','search_bedroom','search_room_type','search_city','search_property','search_project','search_status'),['page_title'=>'Properties']);
+        return view('frontend.user.property.index',compact('properties','search_key','search_price','search_bedroom','search_room_type','search_city','search_property','search_project','search_status'),['page_title'=>'Properties']);
     }
 
     public function propertyDetail($property_id){
         $property = PropertyManager::withoutTrash()->where('id',$property_id)->first();
         $users = UserManager::customerWithoutTrash()->where('referral_code',Auth::guard('web')->user()->referrer_code)->get();
 
-        return view('frontend.user_dashboard.property.detail',compact('property','users'));
+        return view('frontend.user.property.detail',compact('property','users'));
     }
 
     public function propertyList(){
