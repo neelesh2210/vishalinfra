@@ -33,49 +33,6 @@ if (! function_exists('imageUpload')) {
     }
 }
 
-if (! function_exists('states')) {
-    function states() {
-        return [
-            'Andhra Pradesh',
-            'Arunachal Pradesh',
-            'Assam',
-            'Bihar',
-            'Chhattisgarh',
-            'Goa',
-            'Gujarat',
-            'Haryana',
-            'Himachal Pradesh',
-            'Jharkhand',
-            'Karnataka',
-            'Kerala',
-            'Madhya Pradesh',
-            'Maharashtra',
-            'Manipur',
-            'Meghalaya',
-            'Mizoram',
-            'Nagaland',
-            'Odisha',
-            'Punjab',
-            'Rajasthan',
-            'Sikkim',
-            'Tamil Nadu',
-            'Telangana',
-            'Tripura',
-            'Uttarakhand',
-            'Uttar Pradesh',
-            'West Bengal',
-            'Andaman and Nicobar Islands',
-            'Chandigarh',
-            'Dadra and Nagar Haveli and Daman & Diu',
-            'Delhi',
-            'Jammu & Kashmir',
-            'Ladakh',
-            'Lakshadweep',
-            'Puducherry'
-        ];
-    }
-}
-
 if (! function_exists('razorpay_payout_bank'))
 {
     function razorpay_payout_bank($user,$amount)
@@ -207,14 +164,129 @@ if (! function_exists('razorpay_payout_upi'))
     }
 }
 
-if(!function_exists('associateWallet')){
-
-    function associateWallet($associate_id){
-        $associate_credit = AssociateWallet::where('user_id',$associate_id)->where('transaction_type','credit')->get()->sum('amount');
-        $associate_debit = AssociateWallet::where('user_id',$associate_id)->where('transaction_type','debit')->get()->sum('amount');
-        $remaining_wallet_balance = $associate_credit - $associate_debit;
-
-        return ['associate_credit'=>$associate_credit,'associate_debit'=>$associate_debit,'remaining_wallet_balance'=>$remaining_wallet_balance];
+if (!function_exists('api_asset')) {
+    function api_asset($id){
+        if (($asset = \App\Models\Upload::find($id)) != null) {
+            return $asset->file_name;
+        }
+        return "";
     }
+}
 
+if (!function_exists('uploaded_asset')) {
+    function uploaded_asset($id){
+        if (($asset = \App\Models\Upload::find($id)) != null) {
+            return my_asset($asset->file_name);
+        }
+        return null;
+    }
+}
+
+if (! function_exists('my_asset')) {
+    function my_asset($path, $secure = null){
+        if(env('FILESYSTEM_DRIVER') == 's3'){
+            return Storage::disk('s3')->url($path);
+        }else{
+            return app('url')->asset($path, $secure);
+        }
+    }
+}
+
+if (! function_exists('static_asset')) {
+    function static_asset($path, $secure = null){
+        return app('url')->asset($path, $secure);
+    }
+}
+
+if (!function_exists('getBaseURL')) {
+    function getBaseURL(){
+        $root =(isset($_SERVER['HTTPS']) ? "https://" : "http://").$_SERVER['HTTP_HOST'];
+        $root .= str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
+
+        return $root;
+    }
+}
+
+if (!function_exists('getFileBaseURL')) {
+    function getFileBaseURL(){
+        if(env('FILESYSTEM_DRIVER') == 's3'){
+            return env('AWS_URL').'/';
+        }
+        else{
+            return getBaseURL();
+        }
+    }
+}
+
+function hex2rgba($color, $opacity = false) {
+
+    $default = 'rgb(230,46,4)';
+    if(empty($color))
+          return $default;
+    if ($color[0] == '#' ) {
+        $color = substr( $color, 1 );
+    }
+    if (strlen($color) == 6) {
+        $hex = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
+    } elseif ( strlen( $color ) == 3 ) {
+        $hex = array( $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] );
+    } else {
+        return $default;
+    }
+    $rgb = array_map('hexdec', $hex);
+    if($opacity){
+        if(abs($opacity) > 1)
+            $opacity = 1.0;
+        $output = 'rgba('.implode(",",$rgb).','.$opacity.')';
+    } else {
+        $output = 'rgb('.implode(",",$rgb).')';
+    }
+    return $output;
+}
+
+function compress($src, $dist, $dis_width =500) {
+    $img = '';
+    $extension = strtolower(strrchr($src, '.'));
+    switch($extension)
+    {
+        case '.jpg':
+        case '.jpeg':
+            $img = imagecreatefromjpeg($src);
+            break;
+        case '.gif':
+            $img = imagecreatefromgif($src);
+            break;
+        case '.png':
+            $img = imagecreatefrompng($src);
+            break;
+    }
+    $width = imagesx($img);
+    $height = imagesy($img);
+    $dis_height = $dis_width * ($height / $width);
+    $new_image = imagecreatetruecolor($dis_width, $dis_height);
+    imagecopyresampled($new_image, $img, 0, 0, 0, 0, $dis_width, $dis_height, $width, $height);
+    $imageQuality = 90;
+    switch($extension)
+    {
+        case '.jpg':
+        case '.jpeg':
+            if (imagetypes() & IMG_JPG) {
+                imagejpeg($new_image, $dist, $imageQuality);
+            }
+            break;
+        case '.gif':
+            if (imagetypes() & IMG_GIF) {
+                imagegif($new_image, $dist);
+            }
+            break;
+        case '.png':
+            $scaleQuality = round(($imageQuality/100) * 9);
+            $invertScaleQuality = 9 - $scaleQuality;
+            if (imagetypes() & IMG_PNG) {
+                imagepng($new_image, $dist, $invertScaleQuality);
+            }
+            break;
+    }
+    imagedestroy($new_image);
+    return filesize($src);
 }

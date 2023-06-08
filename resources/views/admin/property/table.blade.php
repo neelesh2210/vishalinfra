@@ -6,7 +6,7 @@
             <th class="text-center">Property</th>
             <th class="text-center">Price</th>
             <th class="text-center">Status</th>
-            <th class="text-center">Action</th>
+            {{-- <th class="text-center">Action</th> --}}
         </tr>
     </thead>
     <tbody>
@@ -27,9 +27,9 @@
                     {{ucwords(str_replace('_',' ',$property->booking_status))}}
                 </td>
                 <td class="text-center">
-                    <a href="{{route('admin.property.edit',encrypt($property->id))}}" class="btn btn-outline-primary btn-sm mr-1 mb-1">
+                    {{-- <a href="{{route('admin.property.edit',encrypt($property->id))}}" class="btn btn-outline-primary btn-sm mr-1 mb-1">
                         <i class="fas fa-edit "></i>
-                    </a>
+                    </a> --}}
                     {{-- <a href="{{route('admin.duplicate.property',$property->id)}}" class="btn btn-outline-primary btn-sm mr-1 mb-1">
                         <i class="fas fa-copy "></i>
                     </a> --}}

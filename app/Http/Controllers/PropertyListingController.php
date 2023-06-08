@@ -119,15 +119,9 @@ class PropertyListingController extends Controller
         $property->base_price=$request->base_price;
         $property->agent_price=$request->agent_price;
         $property->final_price=$request->final_price;
-        if($request->gallery_image){
-            $gall_imgs = [];
-            foreach($request->gallery_image as $gallery_image){
-                $gall_imgs[] = imageUpload($gallery_image,'backend/img/properies');
-            }
-            $property->photos=json_encode($gall_imgs);
-        }
+        $property->photos=$request->gallery_image;
 
-        $property->thumbnail_img=imageUpload($request->file('image'),'backend/img/properies');;
+        $property->thumbnail_img=$request->image;
         $property->remark=$request->remark;
         $property->save();
 

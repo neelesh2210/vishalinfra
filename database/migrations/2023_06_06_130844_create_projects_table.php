@@ -20,8 +20,6 @@ class CreateProjectsTable extends Migration
             $table->string('cover_image')->nullable();
             $table->string('gallery_image')->nullable();
             $table->string('address')->nullable();
-            $table->integer('state_id')->nullable();
-            $table->integer('city_id')->nullable();
             $table->string('pincode')->nullable();
             $table->text('about')->nullable();
             $table->string('launch_date')->nullable();

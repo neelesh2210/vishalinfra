@@ -3,7 +3,6 @@
 /vendor
 /.vscode
 /storage
-/storage/logs/laravel.log
 /public/hot
 .env.backup
 /node_modules
@@ -13,10 +12,12 @@ yarn-error.log
 Homestead.json
 Homestead.yaml
 /public/storage
+/public/uploads/all
 .phpunit.result.cache
 /database/address_table
 /public/backend/img/plan
 /public/backend/img/topic
+/storage/logs/laravel.log
 /public/backend/img/course
 docker-compose.override.yml
 /public/backend/img/sliders

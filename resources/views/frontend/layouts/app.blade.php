@@ -2,13 +2,21 @@
 <html lang="en">
 
 <head>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+	<meta name="app-url" content="{{ getBaseURL() }}">
+	<meta name="file-base-url" content="{{ getFileBaseURL() }}">
     <meta charset="utf-8" />
     <meta name="author" content="Themezhub" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vishal Infra</title>
     <!-- Custom CSS -->
     <link href="{{ asset('frontend/assets/css/styles.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/image/css/vendors.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/image/css/aiz-core.css') }}">
     <script src="{{ asset('frontend/assets/js/jquery.min.js')}}"></script>
+    <script>
+        var AIZ = AIZ || {};
+    </script>
 </head>
 
     <body class="yellow-skin">

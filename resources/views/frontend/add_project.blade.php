@@ -11,7 +11,7 @@
                         <div class="dashboard-wraper">
                             <div class="row">
                                 <div class="col-lg-12 col-md-12">
-                                    <form action="{{route('user.store.project')}}" method="POST">
+                                    <form action="{{route('user.store.project')}}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <div class="submit-page">
                                             <div class="frm_submit_block">
@@ -20,7 +20,7 @@
                                                     <div class="form-row">
                                                         <div class="form-group col-md-12">
                                                             <label>Project Name</label>
-                                                            <input type="text" class="form-control" name="name" placeholder="Enter Project Name...">
+                                                            <input type="text" class="form-control" name="name" placeholder="Enter Project Name..." required>
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label>Status</label>
@@ -57,20 +57,32 @@
                                                             <label>Total Units</label>
                                                             <select class="form-control" name="total_unit">
                                                                 <option value="">Select Total Unit...</option>
-                                                                <option value="1">1</option>
-                                                                <option value="2">2</option>
-                                                                <option value="3">3</option>
-                                                                <option value="4">4</option>
-                                                                <option value="5">5</option>
+                                                                @for ($i=1;$i<=100;$i++)
+                                                                    <option value="{{$i}}">{{$i}}</option>
+                                                                @endfor
                                                             </select>
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label>Occupancy Certificate</label>
-                                                            <input type="file" class="form-control" name="occupancy_certificated" placeholder="Occupancy Certificate">
+                                                            <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="false">
+                                                                <div class="form-control file-amount">Choose Occupancy Certificate</div>
+                                                                <input type="hidden" name="occupancy_certificated" class="selected-files">
+                                                                <div class="input-group-prepend">
+                                                                    <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="file-preview box sm"></div>
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label>Commencement Certificate</label>
-                                                            <input type="file" class="form-control" name="commencement_certificated" placeholder="Commencement Certificate">
+                                                            <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="false">
+                                                                <div class="form-control file-amount">Choose Commencement Certificate</div>
+                                                                <input type="hidden" name="commencement_certificated" class="selected-files">
+                                                                <div class="input-group-prepend">
+                                                                    <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="file-preview box sm"></div>
                                                         </div>
                                                         <div class="form-group col-md-12">
                                                             <label>Why Buy ?</label>
@@ -78,12 +90,25 @@
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label>Floor plan - PDF</label>
-                                                            <input type="file" name="floor_plan" class="form-control">
+                                                            <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="false">
+                                                                <div class="form-control file-amount">Choose Floor plan - PDF</div>
+                                                                <input type="hidden" name="floor_plan" class="selected-files">
+                                                                <div class="input-group-prepend">
+                                                                    <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="file-preview box sm"></div>
                                                         </div>
-                                                        <div class="form-group col-md-6">
+                                                        <div class="form-group col-md-4">
                                                             <label>Add videos</label>
                                                             <input type="text" class="form-control" name="videos[]" placeholder="Option to add videos">
                                                         </div>
+                                                        <div class="form-group col-md-2">
+                                                            <a class="btn btn-success" style="margin-top: 31px;" onclick="addVideoDiv()"><i class="fas fa-plus"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row vidiv">
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -93,11 +118,25 @@
                                                     <div class="form-row">
                                                         <div class="form-group col-md-6">
                                                             <label>Gallery</label>
-                                                            <input type="file" name="gallery_image[]" class="form-control">
+                                                            <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="true">
+                                                                <div class="form-control file-amount">Choose Gallery</div>
+                                                                <input type="hidden" name="gallery_image" class="selected-files">
+                                                                <div class="input-group-prepend">
+                                                                    <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="file-preview box sm"></div>
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label>Cover Picture</label>
-                                                            <input type="file" name="cover_image" class="form-control">
+                                                            <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="false">
+                                                                <div class="form-control file-amount">Choose Cover Picture</div>
+                                                                <input type="hidden" name="cover_image" class="selected-files">
+                                                                <div class="input-group-prepend">
+                                                                    <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="file-preview box sm"></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -111,16 +150,16 @@
                                                             <input type="text" class="form-control" name="address" placeholder="Address">
                                                         </div>
                                                         <div class="form-group col-md-6">
+                                                            <label>Pin Code</label>
+                                                            <input type="text" class="form-control" name="pincode" id="pincode" placeholder="Pin Code" onchange="getCityState()">
+                                                        </div>
+                                                        <div class="form-group col-md-6">
                                                             <label>City</label>
-                                                            <input type="text" class="form-control" name="city_id" placeholder="City">
+                                                            <input type="text" class="form-control" name="city_id" id="city" placeholder="City" readonly>
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label>State</label>
-                                                            <input type="text" class="form-control" name="state_id" placeholder="State">
-                                                        </div>
-                                                        <div class="form-group col-md-6">
-                                                            <label>Pin Code</label>
-                                                            <input type="text" class="form-control" name="pincode" placeholder="Pin Code">
+                                                            <input type="text" class="form-control" name="state_id" id="state" placeholder="State" readonly>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -138,51 +177,51 @@
                                                             <div class="o-features">
                                                                 <ul class="no-ul-list third-row">
                                                                     <li>
-                                                                        <input id="a-1" class="checkbox-custom" name="a-1" value="Air Condition" type="checkbox">
+                                                                        <input id="a-1" class="checkbox-custom" name="amenity[]" value="Air Condition" type="checkbox">
                                                                         <label for="a-1" class="checkbox-custom-label">Air Condition</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-2" class="checkbox-custom" name="a-2" value="Bedding" type="checkbox">
+                                                                        <input id="a-2" class="checkbox-custom" name="amenity[]" value="Bedding" type="checkbox">
                                                                         <label for="a-2" class="checkbox-custom-label">Bedding</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-3" class="checkbox-custom" name="a-3" value="Heating" type="checkbox">
+                                                                        <input id="a-3" class="checkbox-custom" name="amenity[]" value="Heating" type="checkbox">
                                                                         <label for="a-3" class="checkbox-custom-label">Heating</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-4" class="checkbox-custom" name="a-4" value="Internet" type="checkbox">
+                                                                        <input id="a-4" class="checkbox-custom" name="amenity[]" value="Internet" type="checkbox">
                                                                         <label for="a-4" class="checkbox-custom-label">Internet</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-5" class="checkbox-custom" name="a-5" value="Microwave" type="checkbox">
+                                                                        <input id="a-5" class="checkbox-custom" name="amenity[]" value="Microwave" type="checkbox">
                                                                         <label for="a-5" class="checkbox-custom-label">Microwave</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-6" class="checkbox-custom" name="a-6" value="Smoking Allow" type="checkbox">
+                                                                        <input id="a-6" class="checkbox-custom" name="amenity[]" value="Smoking Allow" type="checkbox">
                                                                         <label for="a-6" class="checkbox-custom-label">Smoking Allow</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-7" class="checkbox-custom" name="a-7" value="Terrace" type="checkbox">
+                                                                        <input id="a-7" class="checkbox-custom" name="amenity[]" value="Terrace" type="checkbox">
                                                                         <label for="a-7" class="checkbox-custom-label">Terrace</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-8" class="checkbox-custom" name="a-8" value="Balcony" type="checkbox">
+                                                                        <input id="a-8" class="checkbox-custom" name="amenity[]" value="Balcony" type="checkbox">
                                                                         <label for="a-8" class="checkbox-custom-label">Balcony</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-9" class="checkbox-custom" name="a-9" value="Icon" type="checkbox">
+                                                                        <input id="a-9" class="checkbox-custom" name="amenity[]" value="Icon" type="checkbox">
                                                                         <label for="a-9" class="checkbox-custom-label">Icon</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-10" class="checkbox-custom" name="a-10" value="Wi-Fi" type="checkbox">
+                                                                        <input id="a-10" class="checkbox-custom" name="amenity[]" value="Wi-Fi" type="checkbox">
                                                                         <label for="a-10" class="checkbox-custom-label">Wi-Fi</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-11" class="checkbox-custom" name="a-11" value="Beach" type="checkbox">
+                                                                        <input id="a-11" class="checkbox-custom" name="amenity[]" value="Beach" type="checkbox">
                                                                         <label for="a-11" class="checkbox-custom-label">Beach</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-12" class="checkbox-custom" name="a-12" value="Parking" type="checkbox">
+                                                                        <input id="a-12" class="checkbox-custom" name="amenity[]" value="Parking" type="checkbox">
                                                                         <label for="a-12" class="checkbox-custom-label">Parking</label>
                                                                     </li>
                                                                 </ul>
@@ -213,4 +252,44 @@
             </div>
         </div>
     </section>
+
+    <script>
+        var x = 1;
+        function addVideoDiv(){
+            x++;
+            $('.vidiv').append('<div class="form-group col-md-4 remdiv'+x+'">'+
+                                '<label>Add videos</label>'+
+                                '<input type="text" class="form-control" name="videos[]" placeholder="Option to add videos">'+
+                            '</div>'+
+                            '<div class="form-group col-md-2 remdiv'+x+'">'+
+                                '<a class="btn btn-danger" style="margin-top: 31px;" onclick="removeVideoDiv('+x+')"><i class="fas fa-minus"></i></a>'+
+                            '</div>');
+        }
+
+        function removeVideoDiv(a){
+            $('.remdiv'+a).remove();
+            x--;
+        }
+
+        function getCityState(){
+            var pincode = $('#pincode').val();
+
+            $.ajax({
+                type: 'POST',
+                url: "{{route('get.address')}}",
+                data: {
+                    _token: "{{csrf_token()}}",
+                    pincode:pincode
+                },
+                success: function(data) {
+                    if(data){
+                        $('#city').val(data.city.name)
+                        $('#state').val(data.state.name)
+                    }
+                }
+            });
+        }
+
+    </script>
+
 @endsection

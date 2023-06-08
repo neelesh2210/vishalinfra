@@ -15,8 +15,6 @@ class Project extends Model
         'cover_image',
         'gallery_image',
         'address',
-        'state_id',
-        'city_id',
         'pincode',
         'about',
         'launch_date',

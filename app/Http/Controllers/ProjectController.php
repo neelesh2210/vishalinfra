@@ -2,17 +2,44 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
+use App\Models\Admin\Project;
 
 class ProjectController extends Controller
 {
 
     public function index(){
+        return view('frontend.project_list');
+    }
+
+    public function create(){
         return view('frontend.add_project');
     }
 
     public function store(Request $request){
-        return $request->all();
+        $project = new Project;
+        $project->user_id = Auth::guard('web')->user()->id;
+        $project->name = $request->name;
+        $project->cover_image = $request->cover_image;
+        $project->gallery_image = $request->gallery_image;
+        $project->address = $request->address;
+        $project->pincode = $request->pincode;
+        $project->about = $request->about;
+        $project->launch_date = $request->launch_date;
+        $project->completion_date = $request->completion_date;
+        $project->total_unit = $request->total_unit;
+        $project->project_type = $request->project_type;
+        $project->project_area = $request->project_area;
+        $project->occupancy_certificated = $request->occupancy_certificated;
+        $project->commencement_certificated = $request->commencement_certificated;
+        $project->why_buy = $request->why_buy;
+        $project->amenities = json_encode($request->amenity);
+        $project->floor_plan = $request->floor_plan;
+        $project->videos = json_encode($request->videos);
+        $project->save();
+
+        return redirect()->route('user.project.list')->with('success','Project Added Successfully!');
     }
 
 }

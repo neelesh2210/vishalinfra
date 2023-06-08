@@ -79,7 +79,8 @@
 		<!-- ============================================================== -->
 		<!-- All Jquery -->
 		<!-- ============================================================== -->
-
+        <script src="{{ asset('assets/image/js/vendors.js')}}"></script>
+        <script src="{{ asset('assets/image/js/aiz-core.js')}}"></script>
 		<script src="{{ asset('frontend/assets/js/popper.min.js')}}"></script>
 		<script src="{{ asset('frontend/assets/js/bootstrap.min.js')}}"></script>
         <script src="{{ asset('frontend/assets/js/ion.rangeSlider.min.js')}}"></script>

@@ -202,7 +202,7 @@
                                     <div class="listing-img-wrapper">
                                         <div class="list-img-slide">
                                             <a href="#">
-                                                <img src="{{ asset('backend/img/properies/' . $property->thumbnail_img) }}"
+                                                <img src="{{uploaded_asset($property->thumbnail_img)}}"
                                                     class="img-fluid mx-auto" alt="" />
                                             </a>
                                         </div>

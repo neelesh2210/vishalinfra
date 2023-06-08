@@ -8,6 +8,7 @@ use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\AizUploadController;
 use App\Http\Controllers\InstamojoController;
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\PropertyListingController;
@@ -26,7 +27,6 @@ Route::get('/admin',function(){
     return redirect()->route('login');
 });
 
-Auth::routes(['login'=>false,'register'=>false,'logout'=>false]);
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
@@ -79,10 +79,20 @@ Route::group(['middleware'=>['auth:web'],'prefix'=>'user','as'=>'user.'],functio
     Route::get('instamojo/payment/pay-success',[InstamojoController::class, 'success'])->name('instamojo.success');
 
     //Add Project
-    Route::get('add-project', [ProjectController::class,'index'])->name('add.project');
+    Route::get('project-list', [ProjectController::class,'index'])->name('project.list');
+    Route::get('add-project', [ProjectController::class,'create'])->name('add.project');
     Route::post('store-project',[ProjectController::class,'store'])->name('store.project');
 
     //Logout
     Route::post('user-logout',[LoginController::class,'logout'])->name('logout');
 
 });
+
+
+    // Upload multiple Images
+    Route::any('aiz-uploader', [AizUploadController::class, 'show_uploader']);
+    Route::post('aiz-uploader/upload', [AizUploadController::class, 'upload']);
+    Route::get('aiz-uploader/get_uploaded_files', [AizUploadController::class, 'get_uploaded_files']);
+    Route::delete('aiz-uploader/destroy/{id}', [AizUploadController::class, 'destroy']);
+    Route::post('aiz-uploader/get_file_by_ids', [AizUploadController::class, 'get_preview_files']);
+    Route::get('aiz-uploader/download/{id}', [AizUploadController::class, 'attachment_download'])->name('download_attachment');

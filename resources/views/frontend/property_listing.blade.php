@@ -128,7 +128,7 @@
                                                         <select class="form-control select2" name="project_id" id="project_id"  data-live-search="true" required>
                                                             <option value="">Select Project...</option>
                                                             @foreach ($projects as $project)
-                                                                <option value="{{$project->id}}">{{$projects->name}}</option>
+                                                                <option value="{{$project->id}}">{{$project->name}}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -518,25 +518,27 @@
                                     <div class="p-2">
                                         <div class="form-group row">
                                             <div class="col-lg-6">
-                                                <label>Gallery Image</label><br>
-                                                <div class="custom-file">
-                                                    <input type="file" name="gallery_image[]" class="form-control" accept="image/*" multiple id="gallery-photo-add" onclick="gallery_image()">
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-lg-12 form-group">
-                                                        <div class="gallery" id="gallery_image" style="padding-top:10px"></div>
+                                                <label>Gallery Image</label>
+                                                <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="true">
+                                                    <div class="form-control file-amount">Choose Gallery Image</div>
+                                                    <input type="hidden" name="gallery_image" class="selected-files">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
                                                     </div>
                                                 </div>
+                                                <div class="file-preview box sm"></div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label>Image</label><br>
-                                                    <div class="custom-file">
-                                                        <input type="file" name="image" id="img_input1" class="form-control" accept="image/*">
+                                                    <label>Image</label>
+                                                    <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="false">
+                                                        <div class="form-control file-amount">Choose Gallery Image</div>
+                                                        <input type="hidden" name="image" class="selected-files">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
+                                                        </div>
                                                     </div>
-                                                    <div class="p-2 mt-2">
-                                                        <img id="img1" src="{{ asset('backend/img/no-image.png') }}" height="100px" width="100px">
-                                                    </div>
+                                                    <div class="file-preview box sm"></div>
                                                 </div>
                                             </div>
                                             <div class="col-md-12 pt-20">
@@ -594,7 +596,7 @@
                     var area = parseInt($('#super_area').val());
                     if(expected_price && area){
                         var price=expected_price/area;
-                        $('#price_per_sq_ft').val(price);
+                        $('#price_per_sq_ft').val(price.toFixed(2));
                     }
                 });
             }else if(property_type=='plot'){
@@ -605,7 +607,7 @@
                     var area = parseInt($('#plot_area').val());
                     if(expected_price && area){
                         var price=expected_price/area;
-                        $('#price_per_sq_ft').val(price);
+                        $('#price_per_sq_ft').val(price.toFixed(2));
                     }
                 });
             }else{
