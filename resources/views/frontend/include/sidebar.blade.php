@@ -11,7 +11,7 @@
                     <i class="fa fa-tachometer-alt"></i>Dashboard<span class="notti_coun style-1">4</span>
                 </a>
             </li>
-            <li><a href="{{ route('profile') }}"><i class="fa fa-user-tie"></i>My Profile</a></li>
+            <li><a href="{{ route('user.profile') }}"><i class="fa fa-user-tie"></i>My Profile</a></li>
             <li><a href="{{ route('user.property.index') }}"><i class="fa fa-tasks"></i>My Properties</a></li>
             <li><a href="#"><i class="fa fa-envelope"></i>Get Leads<span class="notti_coun style-3">3</span></a></li>
             <li><a href="#"><i class="fa fa-gift"></i> Subscription Status <span class="expiration">10 days left</span></a></li>

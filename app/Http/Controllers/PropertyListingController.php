@@ -23,7 +23,7 @@ class PropertyListingController extends Controller
         $register_properties = PropertyManager::withoutTrash()->where('added_by',Auth::guard('web')->user()->id)->get();
         $projects = Project::where('user_id',Auth::guard('web')->user()->id)->get();
 
-        $plan_purchases = PlanPurchase::where('user_id',Auth::guard('web')->user()->id)->whereRaw('DATE_ADD(`created_at`, INTERVAL `duration_in_day` DAY) >= NOW()')->get();
+        $plan_purchases = PlanPurchase::where('user_id',Auth::guard('web')->user()->id)->where('number_of_property','>',$register_properties->count())->whereRaw('DATE_ADD(`created_at`, INTERVAL `duration_in_day` DAY) >= NOW()')->get();
         $times = 0;
         if($register_properties->count() >= 1){
             $times = $register_properties->count();
