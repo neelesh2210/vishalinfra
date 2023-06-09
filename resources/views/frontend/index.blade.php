@@ -85,12 +85,12 @@
     <section class="gray-simple min">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9 col-md-9">
+                <div class="col-9 col-md-9">
                     <div class="sec-heading">
                         <h2>Get Started With Exploring Real Estate Options</h2>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3">
+                <div class="col-3 col-md-3">
                     <div class="float-end mt-2">
                         <a href="#" class="default-btn border-radius"> View All <i
                                 class="fas fa-chevron-circle-right"></i>
@@ -180,12 +180,12 @@
     <section class="min">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-9 col-md-9">
+                <div class="col-9 col-md-9">
                     <div class="sec-heading">
                         <h2>Popular Owner Properties</h2>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3">
+                <div class="col-3 col-md-3">
                     <div class="float-end mt-2">
                         <a href="#" class="default-btn border-radius">
                             View All <i class="fas fa-chevron-circle-right"></i>
@@ -256,12 +256,12 @@
     <section class="min gray-simple">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9 col-md-9">
+                <div class="col-9 col-md-9">
                     <div class="sec-heading">
                         <h2>Project Gallery</h2>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3">
+                <div class="col-3 col-md-3">
                     <div class="float-end mt-2">
                         <a href="#" class="default-btn border-radius">
                             View All <i class="fas fa-chevron-circle-right"></i>
@@ -279,12 +279,12 @@
     <section class="min">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-9 col-md-9">
+                <div class="col-9 col-md-9">
                     <div class="sec-heading">
                         <h2>Top Projects</h2>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3">
+                <div class="col-3 col-md-3">
                     <div class="float-end mt-2">
                         <a href="#" class="default-btn border-radius">
                             View All <i class="fas fa-chevron-circle-right"></i>
@@ -574,12 +574,12 @@
     <section class="min">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9 col-md-9">
+                <div class="col-9 col-md-9">
                     <div class="sec-heading">
                         <h2>New Project Gallery</h2>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3">
+                <div class="col-3 col-md-3">
                     <div class="float-end mt-2">
                         <a href="#" class="default-btn border-radius">
                             View All <i class="fas fa-chevron-circle-right"></i>

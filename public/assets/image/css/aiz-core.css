@@ -3912,7 +3912,7 @@ fixed-bottom 1030*/
 }
 
 
-.default-btn {
+/* .default-btn {
       padding: 10px 30px !important;
     color: #fff !important;
     text-align: center;
@@ -3933,7 +3933,7 @@ fixed-bottom 1030*/
     padding: 0 30px;
     height: 54px;
     border: 0;
-}
+} */
 
 .form-control-sm {
     height: calc(1.5rem + 0.8rem + 2px);
@@ -4558,7 +4558,7 @@ fixed-bottom 1030*/
     margin-left: -10px;
     margin-right: -10px;
     overflow-y: auto;
-    height: calc(100vh - 303px);
+    min-height: 225px;
 }
 .uppy-Dashboard-files {
     max-height: calc(100vh - 363px);
@@ -5412,7 +5412,7 @@ div.footable-loader > span.fooicon:after {
     border: 1px solid rgba(20, 20, 35, 0.2);
 }
 
-.modal-content .modal-header
+/* .modal-content .modal-header
 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5428,7 +5428,7 @@ div.footable-loader > span.fooicon:after {
     border-bottom: 1px solid #ebedf2;
     min-height: 50px;
     background-color: transparent;
-}
+} */
 
 .newsltr
 {

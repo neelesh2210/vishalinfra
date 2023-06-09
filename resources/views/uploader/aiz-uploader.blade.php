@@ -1,6 +1,6 @@
 <div class="modal fade" id="aizUploaderModal" data-backdrop="static" role="dialog" aria-hidden="true" >
 	<div class="modal-dialog modal-adaptive" role="document">
-		<div class="modal-content h-100">
+		<div class="modal-content hh-100">
 			<div class="modal-header pb-0 bg-light">
 				<div class="uppy-modal-nav">
 					<ul class="nav nav-tabs border-0">
@@ -17,8 +17,8 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<div class="tab-content h-100">
-					<div class="tab-pane active h-100" id="aiz-select-file">
+				<div class="tab-content hh-100">
+					<div class="tab-pane active hh-100" id="aiz-select-file">
 						<div class="aiz-uploader-filter pt-1 pb-3 border-bottom mb-4">
 							<div class="row align-items-center gutters-5 gutters-md-10 position-relative">
 								<div class="col-xl-2 col-md-3 col-5">
@@ -35,8 +35,8 @@
 								</div>
 								<div class="col-md-3 col-5">
 									<div class="custom-control custom-radio">
-										<input type="checkbox" class="custom-control-input" name="aiz-show-selected" id="aiz-show-selected" name="stylishRadio">
-										<label class="custom-control-label" for="aiz-show-selected">
+										<input type="checkbox" class="checkbox-custom" name="aiz-show-selected" id="aiz-show-selected" name="stylishRadio">
+										<label class="checkbox-custom-label" for="aiz-show-selected">
 										Selected Only
 										</label>
 									</div>
@@ -50,7 +50,7 @@
 							</div>
 						</div>
 						<div class="aiz-uploader-all clearfix c-scrollbar-light">
-							<div class="align-items-center d-flex h-100 justify-content-center w-100">
+							<div class="align-items-center d-flex mn-hi8 justify-content-center w-100">
 								<div class="text-center">
 									<h3>No files found</h3>
 								</div>
@@ -58,7 +58,7 @@
 						</div>
 					</div>
 
-					<div class="tab-pane h-100" id="aiz-upload-new">
+					<div class="tab-pane hh-100" id="aiz-upload-new">
                         <div class="d-flex mb-3">
                             <div class="custom-control custom-radio pr-2">
                                 <input class="custom-control-input" type="radio" id="customRadio2" name="customRadio" checked="">
@@ -69,17 +69,17 @@
                                 <label for="customRadio1" class="custom-control-label">Custom Radio</label>
                             </div>
                         </div>
-						<div id="aiz-upload-files" class="h-100">
+						<div id="aiz-upload-files" class="hh-100">
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="modal-footer justify-content-between bg-light">
 				<div class="flex-grow-1 overflow-hidden d-flex">
-					<div class="">
+					{{-- <div class="">
 						<div class="aiz-uploader-selected">0 File selected</div>
 						<button type="button" class="btn-link btn btn-sm p-0 aiz-uploader-selected-clear">Clear</button>
-					</div>
+					</div> --}}
 					<div class="mb-0 ml-3">
 						<button type="button" class="btn btn-sm btn-primary" id="uploader_prev_btn">Prev</button>
 						<button type="button" class="btn btn-sm btn-primary" id="uploader_next_btn">Next</button>

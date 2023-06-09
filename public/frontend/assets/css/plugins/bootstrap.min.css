@@ -811,7 +811,9 @@ pre code {
 .col-3 {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
-    max-width: 25%
+    max-width: 25%;
+    padding-right: 15px !important;
+    padding-left: 5px !important;
 }
 
 .col-4 {
@@ -3717,7 +3719,6 @@ tbody.collapse.show {
 }
 
 @media (max-width:767px) {
-
     .navbar-expand-md>.container,
     .navbar-expand-md>.container-fluid {
         padding-right: 0;
