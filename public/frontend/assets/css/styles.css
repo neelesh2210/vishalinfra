@@ -7113,7 +7113,7 @@ span.tag_t {
 	width: 100%;
 }
 .property-listing.property-2 .listing-detail-wrapper {
-    padding:1rem 1.5rem;
+    padding:1rem 1rem;
     width: 100%;
     display: flex;
     vertical-align: middle;
@@ -7121,13 +7121,17 @@ span.tag_t {
 }
 .property-listing.property-2 .listing-short-detail{
 	flex:1;
+    width: 100%;
 }
 .property-listing.property-2 .listing-name {
     font-size: 17px;
     position: relative;
-    margin-bottom: 0px;
+    margin-bottom: 3px;
     font-weight: 500;
     line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .property-listing.property-2 .listing-location{
@@ -7357,9 +7361,9 @@ span._list_blickes {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 28px;
+    height: 26px;
     padding: 0 15px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 13px;
     text-align: center;
     background: #f4f5f7;
@@ -7382,7 +7386,6 @@ span._list_blickes.types {
 }
 
 .listing-card-info-price {
-    font-weight:600;
 	position:relative;
     font-size:22px;
     color:#234ca0;
@@ -7531,8 +7534,7 @@ span._list_blickes.types {
 	color: #808fa0;
 }
 .listing-detail-footer {
-    padding: 1rem 1.5rem;
-    /* margin-top: 1rem; */
+    padding: 10px 14px 12px 14px;
     border-top: 1px solid #e4e8f3;
     display: flex;
     align-items: center;

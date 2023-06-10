@@ -211,12 +211,11 @@
                                         <div class="listing-short-detail-wrap">
                                             <div class="_card_list_flex mb-2">
                                                 <div class="_card_flex_01">
-                                                    <span class="property-type elt_rent">For Rent</span>
+                                                    <span class="property-type elt_rent">3, 4, 5 BHK Flats</span>
                                                 </div>
                                                 <div class="_card_flex_last">
                                                     <div class="prt_saveed_12lk">
-                                                        <label class="toggler toggler-danger"><input type="checkbox"><i
-                                                                class="fas fa-heart"></i></label>
+                                                        <span class="latest_new_post hot">600 sqft</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -238,11 +237,10 @@
                                     </div>
                                     <div class="listing-detail-footer">
                                         <div class="footer-first">
-                                            <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
-                                            </div>
+                                            <h6 class="listing-card-info-price mb-0 p-0">₹3,700</h6>
                                         </div>
                                         <div class="footer-flex">
-                                            <span>Apartment</span>
+                                            <a href="#" class="prt-view">View Detail</a>
                                         </div>
                                     </div>
                                 </div>
@@ -298,7 +296,6 @@
                         <!-- Single Item -->
                         <div class="single_items">
                             <div class="property-listing property-2">
-
                                 <div class="listing-img-wrapper">
                                     <div class="list-img-slide">
                                         <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
@@ -309,13 +306,7 @@
                                     <div class="listing-short-detail-wrap">
                                         <div class="_card_list_flex mb-2">
                                             <div class="_card_flex_01">
-                                                <span class="property-type elt_rent">For Rent</span>
-                                            </div>
-                                            <div class="_card_flex_last">
-                                                <div class="prt_saveed_12lk">
-                                                    <label class="toggler toggler-danger"><input type="checkbox"><i
-                                                            class="fas fa-heart"></i></label>
-                                                </div>
+                                                <span class="_list_blickes _netork">4 BHK Flat</span>
                                             </div>
                                         </div>
                                         <div class="listing-short-detail">
@@ -329,11 +320,10 @@
                                 </div>
                                 <div class="listing-detail-footer">
                                     <div class="footer-first">
-                                        <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
-                                        </div>
+                                        <h6 class="listing-card-info-price mb-0 p-0">₹3,700</h6>
                                     </div>
                                     <div class="footer-flex">
-                                        <span>Apartment</span>
+                                        <a href="#" class="prt-view">View Detail</a>
                                     </div>
                                 </div>
                             </div>
@@ -351,13 +341,7 @@
                                     <div class="listing-short-detail-wrap">
                                         <div class="_card_list_flex mb-2">
                                             <div class="_card_flex_01">
-                                                <span class="property-type elt_rent">For Rent</span>
-                                            </div>
-                                            <div class="_card_flex_last">
-                                                <div class="prt_saveed_12lk">
-                                                    <label class="toggler toggler-danger"><input type="checkbox"><i
-                                                            class="fas fa-heart"></i></label>
-                                                </div>
+                                                <span class="_list_blickes _netork">4 BHK Flat</span>
                                             </div>
                                         </div>
                                         <div class="listing-short-detail">
@@ -371,11 +355,10 @@
                                 </div>
                                 <div class="listing-detail-footer">
                                     <div class="footer-first">
-                                        <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
-                                        </div>
+                                        <h6 class="listing-card-info-price mb-0 p-0">₹3,700</h6>
                                     </div>
                                     <div class="footer-flex">
-                                        <span>Apartment</span>
+                                        <a href="#" class="prt-view">View Detail</a>
                                     </div>
                                 </div>
                             </div>
@@ -393,13 +376,7 @@
                                     <div class="listing-short-detail-wrap">
                                         <div class="_card_list_flex mb-2">
                                             <div class="_card_flex_01">
-                                                <span class="property-type elt_rent">For Rent</span>
-                                            </div>
-                                            <div class="_card_flex_last">
-                                                <div class="prt_saveed_12lk">
-                                                    <label class="toggler toggler-danger"><input type="checkbox"><i
-                                                            class="fas fa-heart"></i></label>
-                                                </div>
+                                                <span class="_list_blickes _netork">4 BHK Flat</span>
                                             </div>
                                         </div>
                                         <div class="listing-short-detail">
@@ -413,11 +390,10 @@
                                 </div>
                                 <div class="listing-detail-footer">
                                     <div class="footer-first">
-                                        <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
-                                        </div>
+                                        <h6 class="listing-card-info-price mb-0 p-0">₹3,700</h6>
                                     </div>
                                     <div class="footer-flex">
-                                        <span>Apartment</span>
+                                        <a href="#" class="prt-view">View Detail</a>
                                     </div>
                                 </div>
                             </div>
@@ -435,13 +411,7 @@
                                     <div class="listing-short-detail-wrap">
                                         <div class="_card_list_flex mb-2">
                                             <div class="_card_flex_01">
-                                                <span class="property-type elt_rent">For Rent</span>
-                                            </div>
-                                            <div class="_card_flex_last">
-                                                <div class="prt_saveed_12lk">
-                                                    <label class="toggler toggler-danger"><input type="checkbox"><i
-                                                            class="fas fa-heart"></i></label>
-                                                </div>
+                                                <span class="_list_blickes _netork">4 BHK Flat</span>
                                             </div>
                                         </div>
                                         <div class="listing-short-detail">
@@ -455,11 +425,10 @@
                                 </div>
                                 <div class="listing-detail-footer">
                                     <div class="footer-first">
-                                        <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
-                                        </div>
+                                        <h6 class="listing-card-info-price mb-0 p-0">₹3,700</h6>
                                     </div>
                                     <div class="footer-flex">
-                                        <span>Apartment</span>
+                                        <a href="#" class="prt-view">View Detail</a>
                                     </div>
                                 </div>
                             </div>
@@ -477,13 +446,7 @@
                                     <div class="listing-short-detail-wrap">
                                         <div class="_card_list_flex mb-2">
                                             <div class="_card_flex_01">
-                                                <span class="property-type elt_rent">For Rent</span>
-                                            </div>
-                                            <div class="_card_flex_last">
-                                                <div class="prt_saveed_12lk">
-                                                    <label class="toggler toggler-danger"><input type="checkbox"><i
-                                                            class="fas fa-heart"></i></label>
-                                                </div>
+                                                <span class="_list_blickes _netork">3 BHK</span>
                                             </div>
                                         </div>
                                         <div class="listing-short-detail">
@@ -497,11 +460,10 @@
                                 </div>
                                 <div class="listing-detail-footer">
                                     <div class="footer-first">
-                                        <div class="foot-location"><span class="pric_lio theme-bg">₹3,700</span>/sqft
-                                        </div>
+                                        <h6 class="listing-card-info-price mb-0 p-0">₹3,700</h6>
                                     </div>
                                     <div class="footer-flex">
-                                        <span>Apartment</span>
+                                        <a href="#" class="prt-view">View Detail</a>
                                     </div>
                                 </div>
                             </div>

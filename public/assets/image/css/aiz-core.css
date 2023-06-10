@@ -3782,7 +3782,7 @@ fixed-bottom 1030*/
     font-size: 16px;
 }
 
-.heading h3, h5
+/* .heading h3, h5
 {
       color: #333;
     font-size: 22px;
@@ -3790,7 +3790,7 @@ fixed-bottom 1030*/
     text-transform: uppercase;
     line-height: 18px;
     letter-spacing: 1px;
-}
+} */
 
 .img-responsive {
     width: 100%;
