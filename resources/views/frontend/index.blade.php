@@ -77,7 +77,37 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-9">
-                    <img src="{{ asset('frontend/assets/img/destination-projects-web.jpg') }}" class="img-fluid br_red">
+							<div class="modern-testimonial">
+
+								<!-- Single Items -->
+								<div class="single_items">
+                                    <div class="">
+                                        <img src="{{ asset('frontend/assets/img/destination-projects-web.jpg') }}" class="img-fluid br_red">
+                                    </div>
+								</div>
+
+								<!-- Single Items -->
+								<div class="single_items">
+                                    <div class="">
+                                        <img src="{{ asset('frontend/assets/img/destination-projects-web.jpg') }}" class="img-fluid br_red">
+                                    </div>
+								</div>
+
+								<!-- Single Items -->
+								<div class="single_items">
+                                    <div class="">
+                                        <img src="{{ asset('frontend/assets/img/destination-projects-web.jpg') }}" class="img-fluid br_red">
+                                    </div>
+								</div>
+
+								<!-- Single Items -->
+								<div class="single_items">
+                                    <div class="">
+                                        <img src="{{ asset('frontend/assets/img/destination-projects-web.jpg') }}" class="img-fluid br_red">
+                                    </div>
+								</div>
+
+							</div>
                 </div>
             </div>
         </div>
