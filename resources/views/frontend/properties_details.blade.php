@@ -11,16 +11,14 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-5 col-sm-12 pl-1">
-                    @if($property_detail->photos)
-                        @foreach (json_decode($property_detail->photos) as $photo)
-                            <div class="gg_single_part-right min  mb-2">
-                                <a href="{{ asset('backend/img/properies/' . $photo) }}" class="mfp-gallery">
-                                    <img src="{{ asset('backend/img/properies/' . $photo) }}" class="img-fluid mx-auto" alt="" />
-                                    <p class="vw_dtls"> <i class="fas fa-images"></i> <br> <span> + 19 Photos</span> </p>
-                                </a>
-                            </div>
-                        @endforeach
-                    @endif
+                    @foreach (explode(',',$property_detail->photos) as $photo)
+                        <div class="gg_single_part-right min  mb-2">
+                            <a href="{{uploaded_asset($photo)}}" class="mfp-gallery">
+                                <img src="{{uploaded_asset($photo)}}" class="img-fluid mx-auto" alt="" />
+                                <p class="vw_dtls"> <i class="fas fa-images"></i> <br> <span> + 19 Photos</span> </p>
+                            </a>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -28,19 +26,17 @@
     <div class="featured_slick_gallery gray d-block d-md-block d-lg-block d-xl-none">
         <div class="featured_slick_gallery-slide">
             <div class="featured_slick_padd">
-                <a href="{{ asset('backend/img/properies/' . $property_detail->thumbnail_img) }}" class="mfp-gallery">
-                    <img src="{{ asset('backend/img/properies/' . $property_detail->thumbnail_img) }}" class="img-fluid mx-auto" alt="" />
+                <a href="{{uploaded_asset($photo)}}" class="mfp-gallery">
+                    <img src="{{uploaded_asset($photo)}}" class="img-fluid mx-auto" alt="" />
                 </a>
             </div>
-            @if($property_detail->photos)
-                @foreach (json_decode($property_detail->photos) as $photo)
+                @foreach (explode(',',$property_detail->photos) as $photo)
                     <div class="featured_slick_padd">
-                        <a href="{{ asset('backend/img/properies/' . $photo) }}" class="mfp-gallery">
-                            <img src="{{ asset('backend/img/properies/' . $photo) }}" class="img-fluid mx-auto" alt="" />
+                        <a href="{{uploaded_asset($photo)}}" class="mfp-gallery">
+                            <img src="{{uploaded_asset($photo)}}" class="img-fluid mx-auto" alt="" />
                         </a>
                     </div>
                 @endforeach
-            @endif
         </div>
     </div>
 
@@ -55,7 +51,7 @@
                                     <li><span class="bed">{{ $property_detail->bedroom }} Beds</span></li>
                                     <li><span class="bath">{{ $property_detail->bathroom }} Bath</span></li>
                                     <li><span class="gar">{{ $property_detail->balconies }} Balcony</span></li>
-                                    <li><span class="sqft">{{ $property_detail->price }} sqft</span></li>
+                                    <li><span class="sqft">{{ $property_detail->price }}/sqft</span></li>
                                 </ul>
                                 <h2 class="mb-3">{{ $property_detail->name }}</h2>
                                 <span><i class="lni-map-marker"></i> </span>
@@ -69,29 +65,35 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4">
-                                <p>Rental Value</p>
+                                <p>Price</p>
                             </div>
                             <div class="col-md-8">
-                                <strong>₹16,000 | ₹1,000</strong> <span>Monthly Maintenance</span>
+                                <strong>10000000</strong> <span><del>12000000</del></span>
                             </div>
                             <div class="col-md-4">
-                                <p>Security Deposit</p>
+                                <p>Booking Amount</p>
                             </div>
                             <div class="col-md-8">
-                                <strong>₹50,000</strong>
+                                <strong>100000</strong>
+                            </div>
+                            <div class="col-md-4">
+                                <p>Carpet Area</p>
+                            </div>
+                            <div class="col-md-8">
+                                <strong>1000sqft | ₹7,500/sqft </strong>
                             </div>
 
                             <div class="col-md-4">
                                 <p>Address</p>
                             </div>
                             <div class="col-md-8">
-                                <strong>129, Confident Lilian, Halehalli, TC Palya, KR Puram, Bangalore. Opposite to CasaGrand Luxus Villas, K R Puram, Bangalore - East, Karnataka</strong>
+                                <strong>Varanasi, India</strong>
                             </div>
                             <div class="col-md-4">
                                 <p>Landmarks</p>
                             </div>
                             <div class="col-md-8">
-                                <strong>Birla Open Minds International School, Diamond college, CasagrandLuxus</strong>
+                                <strong>Near Sai Temple</strong>
                             </div>
                             <div class="col-md-4">
                                 <p>Furnishing</p>
@@ -100,48 +102,14 @@
                                 <strong>Semi-Furnished</strong>
                             </div>
                             <div class="col-md-4">
-                                <p>Flooring</p>
-                            </div>
-                            <div class="col-md-8">
-                                <strong>Ceramic Tiles</strong>
-                            </div>
-                            <div class="col-md-4">
-                                <p>Overlooking</p>
-                            </div>
-                            <div class="col-md-8">
-                                <strong>Main Road</strong>
-                            </div>
-                            <div class="col-md-4">
                                 <p>Age of Construction</p>
                             </div>
                             <div class="col-md-8">
-                                <strong>Less than 5 years</strong>
-                            </div>
-                            <div class="col-md-4">
-                                <p>Water Availability</p>
-                            </div>
-                            <div class="col-md-8">
-                                <strong>24 Hours Available</strong>
-                            </div>
-                            <div class="col-md-4">
-                                <p>Status of Electricity</p>
-                            </div>
-                            <div class="col-md-8">
-                                <strong>No/Rare Powercut</strong>
+                                <strong>Above 20 years</strong>
                             </div>
                             <div class="col-md-12">
                                 <h6 class="property_block_title">Description :</h6>
-                                <p class="more">BHK flat available for rent. Spacious hall with Dining area, puja room.
-                                    Modular kitchen with a laundry area,2 bedrooms with attached bath rooms.
-                                    Solar connection is available for hotBHK flat available for rent .Spacious hall with
-                                    Dining
-                                    area, puja room.Modular kitchen with a laundry area, 2 bedrooms with attached bath
-                                    rooms.Solar connection is available for hot water. <br /> Gated community with 247
-                                    Security, Kids Play area, Swimming pool, Clubhouse, walking tracks and wide cement
-                                    roads. Schools Colleges nearbyBirla Open Minds, New Baldwin, DonBosco, Diamond
-                                    CollegeThis is a quiet home in a beautiful neighbourhood.This East facing 1400 sqft.
-                                    home comes with a convenient parking facility for bike and open parking for Car.
-                                </p>
+                                <p class="more">{{ $property_detail->remark }}</p>
                             </div>
                         </div>
                     </div>
@@ -170,14 +138,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="property_block_wrap">
-                        <div class="property_block_wrap_header">
-                            <h4 class="property_block_title">About Property</h4>
-                        </div>
-                        <div class="block-body">
-                            <p>{{ $property_detail->remark }}</p>
-                        </div>
-                    </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="property-sidebar side_stiky">
@@ -187,16 +147,11 @@
                                     <div class="row">
                                         <div class="col-lg-12 col-md-12 col-sm-12">
                                             <h5>Fill this one-time contact form</h5>
+                                             <p>Get Agent's details over email</p>
                                             <hr>
                                             <div class="form-group">
                                                 <label>Full Name</label>
                                                 <input type="text" class="form-control light" placeholder="Enter Name">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12">
-                                            <div class="form-group">
-                                                <label>Email ID</label>
-                                                <input type="text" class="form-control light" placeholder="Enter Email">
                                             </div>
                                         </div>
                                         <div class="col-lg-12 col-md-12 col-sm-12">
@@ -207,13 +162,13 @@
                                         </div>
                                         <div class="col-lg-12 col-md-12 col-sm-12">
                                             <div class="form-group">
-                                                <label>Message</label>
-                                                <textarea class="form-control light" placeholder="Explain Query"></textarea>
+                                                <label>Email ID</label>
+                                                <input type="text" class="form-control light" placeholder="Enter Email">
                                             </div>
                                         </div>
                                         <div class="col-lg-12 col-md-12 col-sm-12">
                                             <div class="form-group">
-                                                <button class="btn book_btn theme-bg">Submit</button>
+                                                <button class="btn book_btn theme-bg">Get Contact Details</button>
                                             </div>
                                         </div>
                                     </div>

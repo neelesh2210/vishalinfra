@@ -231,7 +231,7 @@
                                 <div class="property-listing property-2">
                                     <div class="listing-img-wrapper">
                                         <div class="list-img-slide">
-                                            <a href="#">
+                                            <a href="{{ route('property.detail',$property->slug) }}">
                                                 <img src="{{uploaded_asset($property->thumbnail_img)}}"
                                                     class="img-fluid mx-auto" alt="" />
                                             </a>
@@ -241,16 +241,16 @@
                                         <div class="listing-short-detail-wrap">
                                             <div class="_card_list_flex mb-2">
                                                 <div class="_card_flex_01">
-                                                    <span class="property-type elt_rent">3, 4, 5 BHK Flats</span>
+                                                    <span class="property-type elt_rent">3 BHK Flats</span>
                                                 </div>
                                                 <div class="_card_flex_last">
                                                     <div class="prt_saveed_12lk">
-                                                        <span class="latest_new_post hot">600 sqft</span>
+                                                        <span class="latest_new_post hot">{{ $property->carpet_area }} sqft</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="listing-short-detail">
-                                                <h4 class="listing-name verified"><a href="#"
+                                                <h4 class="listing-name verified"><a href="{{ route('property.detail',$property->slug) }}"
                                                         class="prt-link-detail">{{ $property->name }}</a></h4>
                                                 @if ($property->pincode || $property->address)
                                                     <div class="foot-location">
@@ -267,10 +267,10 @@
                                     </div>
                                     <div class="listing-detail-footer">
                                         <div class="footer-first">
-                                            <h6 class="listing-card-info-price mb-0 p-0">₹3,700</h6>
+                                            <h6 class="listing-card-info-price mb-0 p-0">₹{{ $property->final_price }}</h6>
                                         </div>
                                         <div class="footer-flex">
-                                            <a href="#" class="prt-view">View Detail</a>
+                                            <a href="{{ route('property.detail',$property->slug) }}" class="prt-view">View Detail</a>
                                         </div>
                                     </div>
                                 </div>

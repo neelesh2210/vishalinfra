@@ -7390,7 +7390,6 @@ span._list_blickes.types {
     font-size:22px;
     color:#234ca0;
 	line-height:1.4;
-	padding-left: 0.35em;
 }
 .price-prefix:before {
     content: '$';
@@ -7875,21 +7874,19 @@ ul.eplios_list li:before {
 }
 ._exlio_125 {
     position: absolute;
-    left: 15px;
+    left: 10px;
     top: 20px;
     z-index: 1;
-    background:#234ca0;
-    height: 38px;
-    padding: 0 18px;
-    font-size: 16px;
-    font-weight: 700;
+    background: #234ca0;
+    height: 30px;
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: 500;
+border-radius: 50px;
     color: #ffffff;
     align-items: center;
     justify-content: center;
     display: inline-flex;
-    border-radius: 50px;
-    box-shadow: 0px 0px 0px 5px rgb(255 255 255 / 20%);
-	-webkit-box-shadow: 0px 0px 0px 5px rgb(255 255 255 / 20%);
 }
 span.property-type.elt_sale {
     background: rgba(37, 181, 121,0.1);
@@ -8546,10 +8543,11 @@ span.agents_count {
     list-style: none;
     position: relative;
     margin: 10px 0 5px;
-    padding-left: 30px;
-	-ms-flex: 0 0 33.333333%;
-    flex: 0 0 33.333333%;
-    max-width:33.333333%;
+    padding-left: 25px;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    font-size: 13px;
 }
 .avl-features li:before {
     content: "\f00c";
@@ -8563,7 +8561,7 @@ span.agents_count {
     line-height: 20px;
     border-radius: 50%;
     left: 0;
-    top: 5px;
+    top: 1px;
     font-size: 10px;
 }
 .avl-features li.active:before {
@@ -14458,9 +14456,10 @@ h1, .h1 {
 	}
 
 	.avl-features li {
-		-ms-flex: 0 0 50%;
-		flex: 0 0 50%;
-		max-width: 50%;
+		-ms-flex: 0 0 33.33%;
+		flex: 0 0 33.33%;
+		max-width: 33.33%;
+        font-size: 12px;
 	}
 
 	.property_info_detail_wrap {

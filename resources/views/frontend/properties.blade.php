@@ -127,14 +127,12 @@
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                 <div class="property-listing list_view row m-0">
                                     <div class="col-md-4 p-0">
-                                        <div class="_exlio_125">{{ucfirst($property->transaction_type)}}</div>
+                                        <div class="_exlio_125">Verified on Site</div>
                                         <div class="list-img-slide">
                                             <div class="click">
-                                                <div>
                                                     <a href="{{ route('property.detail',$property->slug) }}">
-                                                        <img src="{{asset('backend/img/properies/'.$property->thumbnail_img)}}" class="img-fluid mx-auto" alt="{{$property->name}}" />
+                                                        <img src="{{asset('uploads/all/1.jpg')}}" class="img-fluid mx-auto" alt="{{$property->name}}" />
                                                     </a>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -167,6 +165,7 @@
                                                     <li class="active">3 BHK</li>
                                                     <li class="active">Balcony</li>
                                                     <li class="active">Corner Plot</li>
+                                                    <li class="active">Semi-Furnished</li>
                                                 </ul>
                                             </div>
                                         </div>
