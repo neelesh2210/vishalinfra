@@ -283,6 +283,154 @@
     </section>
     <section class="min gray-simple">
         <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-9 col-md-9">
+                    <div class="sec-heading">
+                        <h2>Exclusive Owner Properties in Varanasi</h2>
+                    </div>
+                </div>
+                <div class="col-3 col-md-3">
+                    <div class="float-end mt-2">
+                        <a href="#" class="default-btn border-radius">
+                            View All <i class="fas fa-chevron-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="item-slide space">
+                        @foreach ($properties as $property)
+                            <div class="single_items">
+                                <div class="property-listing property-2">
+                                    <div class="listing-img-wrapper">
+                                        <div class="list-img-slide">
+                                            <a href="{{ route('property.detail',$property->slug) }}">
+                                                <img src="{{uploaded_asset($property->thumbnail_img)}}"
+                                                    class="img-fluid mx-auto" alt="" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="listing-detail-wrapper">
+                                        <div class="listing-short-detail-wrap">
+                                            <div class="_card_list_flex mb-2">
+                                                <div class="_card_flex_01">
+                                                    <span class="property-type elt_rent">3 BHK Flats</span>
+                                                </div>
+                                                <div class="_card_flex_last">
+                                                    <div class="prt_saveed_12lk">
+                                                        <span class="latest_new_post hot">{{ $property->carpet_area }} sqft</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="listing-short-detail">
+                                                <h4 class="listing-name verified"><a href="{{ route('property.detail',$property->slug) }}"
+                                                        class="prt-link-detail">{{ $property->name }}</a></h4>
+                                                @if ($property->pincode || $property->address)
+                                                    <div class="foot-location">
+                                                        <img src="{{ asset('frontend/assets/img/pin.svg') }}"
+                                                            width="18" alt="" />{{ $property->address }}
+                                                        @if ($property->pincode)
+                                                            {{ $property->city }}, {{ $property->state }},
+                                                            {{ $property->country }},{{ $property->pincode }}
+                                                        @endif
+                                                    </div>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="listing-detail-footer">
+                                        <div class="footer-first">
+                                            <h6 class="listing-card-info-price mb-0 p-0">₹{{ $property->final_price }}</h6>
+                                        </div>
+                                        <div class="footer-flex">
+                                            <a href="{{ route('property.detail',$property->slug) }}" class="prt-view">View Detail</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="min">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-9 col-md-9">
+                    <div class="sec-heading">
+                        <h2>Featured Projects</h2>
+                    </div>
+                </div>
+                <div class="col-3 col-md-3">
+                    <div class="float-end mt-2">
+                        <a href="#" class="default-btn border-radius">
+                            View All <i class="fas fa-chevron-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="item-slide space">
+                        @foreach ($properties as $property)
+                            <div class="single_items">
+                                <div class="property-listing property-2">
+                                    <div class="listing-img-wrapper">
+                                        <div class="list-img-slide">
+                                            <a href="{{ route('property.detail',$property->slug) }}">
+                                                <img src="{{uploaded_asset($property->thumbnail_img)}}"
+                                                    class="img-fluid mx-auto" alt="" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="listing-detail-wrapper">
+                                        <div class="listing-short-detail-wrap">
+                                            <div class="_card_list_flex mb-2">
+                                                <div class="_card_flex_01">
+                                                    <span class="property-type elt_rent">3 BHK Flats</span>
+                                                </div>
+                                                <div class="_card_flex_last">
+                                                    <div class="prt_saveed_12lk">
+                                                        <span class="latest_new_post hot">{{ $property->carpet_area }} sqft</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="listing-short-detail">
+                                                <h4 class="listing-name verified"><a href="{{ route('property.detail',$property->slug) }}"
+                                                        class="prt-link-detail">{{ $property->name }}</a></h4>
+                                                @if ($property->pincode || $property->address)
+                                                    <div class="foot-location">
+                                                        <img src="{{ asset('frontend/assets/img/pin.svg') }}"
+                                                            width="18" alt="" />{{ $property->address }}
+                                                        @if ($property->pincode)
+                                                            {{ $property->city }}, {{ $property->state }},
+                                                            {{ $property->country }},{{ $property->pincode }}
+                                                        @endif
+                                                    </div>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="listing-detail-footer">
+                                        <div class="footer-first">
+                                            <h6 class="listing-card-info-price mb-0 p-0">₹{{ $property->final_price }}</h6>
+                                        </div>
+                                        <div class="footer-flex">
+                                            <a href="{{ route('property.detail',$property->slug) }}" class="prt-view">View Detail</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="min gray-simple">
+        <div class="container">
             <div class="row">
                 <div class="col-9 col-md-9">
                     <div class="sec-heading">
