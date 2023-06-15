@@ -902,7 +902,7 @@ div[data-overlay] h3,
 div[data-overlay] h4,
 div[data-overlay] h5,
 div[data-overlay] h6 {
-  color: #fff;
+  color: #333;
 }
 div[data-overlay] p{
   color: #fff;
@@ -7080,8 +7080,8 @@ span.tag_t {
 .property-listing.property-2 .listing-img-wrapper {
     overflow: hidden;
 	position:relative;
-	min-height: 240px;
-    max-height: 240px;
+	min-height: 220px;
+    max-height: 220px;
 }
 /* .list-img-slide {
     overflow: hidden;
@@ -7108,8 +7108,8 @@ span.tag_t {
     bottom: 0;
 }
 .property-listing.property-2 .listing-img-wrapper img{
-	max-height: 240px;
-    min-height: 240px;
+	max-height: 220px;
+    min-height: 220px;
 	width: 100%;
 }
 .property-listing.property-2 .listing-detail-wrapper {
@@ -7387,7 +7387,7 @@ span._list_blickes.types {
 
 .listing-card-info-price {
 	position:relative;
-    font-size:22px;
+    font-size:20px;
     color:#234ca0;
 	line-height:1.4;
 }
@@ -7539,8 +7539,8 @@ span._list_blickes.types {
     align-items: center;
     width: 100%;
     justify-content: flex-start;
-    min-height: 60px;
-	max-height:60px;
+    min-height: 48px;
+	max-height:48px;
 }
 .footer-first{
 	flex:1;
@@ -7738,7 +7738,7 @@ a._calss_tyui {
 }
 .property-listing.list_view .listing-detail-footer {
     border: none;
-    padding: 0.5rem 0rem 0;
+    padding: 0;
 }
 .property-listing.list_view .foot-rates {
     display: flex;
@@ -7875,10 +7875,10 @@ ul.eplios_list li:before {
 ._exlio_125 {
     position: absolute;
     left: 10px;
-    top: 20px;
+    top: 10px;
     z-index: 1;
     background: #234ca0;
-    height: 30px;
+    height: 25px;
     padding: 0 10px;
     font-size: 12px;
     font-weight: 500;
@@ -15242,4 +15242,14 @@ background: linear-gradient(45deg, #39afd1, #0acf97) !important;
 
 .simple-search-wrap{
     display: none;
-  }
+}
+.project img{
+    height: 135px;
+    width: 100%;
+}
+.foot-rate{
+line-height: 1.15;
+}
+.foot-rate span{
+font-size: 12px;
+}

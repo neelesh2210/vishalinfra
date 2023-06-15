@@ -7,7 +7,7 @@
         }
     </style>
     <div class="clearfix"></div>
-    <div class="image-cover hero_banner" style="background:url({{ asset('frontend/assets/img/banner-3.png') }}) no-repeat;"
+    <div class="image-cover hero_banner" style="background:url({{ asset('frontend/assets/img/banner-1.jpg') }}) no-repeat;"
         data-overlay="0">
         <div class="container">
             <div class="row justify-content-center">
@@ -586,27 +586,23 @@
                         <div class="single_items">
                             <div class="row">
                                 <!-- Single Property -->
-                                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
                                     <div class="property-listing list_view row m-0">
                                         <div class="col-md-4 p-0">
-                                            <div class="_exlio_125">For Sale</div>
-                                            <div class="list-img-slide">
+                                            <div class="_exlio_125">Sponsored</div>
+                                            <div class="project">
                                                 <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
                                                         class="img-fluid mx-auto" alt="" /></a>
                                             </div>
                                         </div>
-                                        <div class="col-md-8">
+                                        <div class="col-md-8 pr-0">
                                             <div class="listing-detail-wrapper mt-1">
                                                 <div class="listing-short-detail-wrap">
-                                                    <div class="_card_list_flex mb-2">
+                                                    <div class="_card_list_flex">
                                                         <div class="_card_flex_01">
                                                             <h5><a href="#" class="prt-link-detail">Red Carpet Real
                                                                     Estate
                                                                 </a></h5>
-                                                        </div>
-                                                        <div class="_card_flex_last">
-                                                            <h6 class="listing-card-info-price mb-0">₹1000</h6>
-                                                            <span>₹100/sqft</span>
                                                         </div>
                                                     </div>
                                                     <div class="_card_list_flex">
@@ -616,28 +612,15 @@
                                                                     India</a></h4>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="price-features-wrapper">
-                                                <div class="block-body">
-                                                    <ul class="avl-features third">
-                                                        <li class="active">3 BHK</li>
-                                                        <li class="active">Balcony</li>
-                                                        <li class="active">Corner Plot</li>
-                                                    </ul>
+                                                    <div class="_card_flex_last">
+                                                        <h6 class="listing-card-info-price mb-0">₹3,700 <span><del>4000</del></span></spa></h6>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="listing-detail-footer">
                                                 <div class="footer-first">
-                                                    <div class="foot-rates">
-                                                        <span class="elio_rate good">4.4</span>
-                                                        <div class="_rate_stio">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                        </div>
+                                                    <div class="foot-rate">
+                                                        <span>Marketed by VHV Builders Pvt. Ltd.</span>
                                                     </div>
                                                 </div>
                                                 <div class="footer-flex">
@@ -648,27 +631,23 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
                                     <div class="property-listing list_view row m-0">
                                         <div class="col-md-4 p-0">
-                                            <div class="_exlio_125">For Sale</div>
-                                            <div class="list-img-slide">
+                                            <div class="_exlio_125">Sponsored</div>
+                                            <div class="project">
                                                 <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
                                                         class="img-fluid mx-auto" alt="" /></a>
                                             </div>
                                         </div>
-                                        <div class="col-md-8">
+                                        <div class="col-md-8 pr-0">
                                             <div class="listing-detail-wrapper mt-1">
                                                 <div class="listing-short-detail-wrap">
-                                                    <div class="_card_list_flex mb-2">
+                                                    <div class="_card_list_flex">
                                                         <div class="_card_flex_01">
                                                             <h5><a href="#" class="prt-link-detail">Red Carpet Real
                                                                     Estate
                                                                 </a></h5>
-                                                        </div>
-                                                        <div class="_card_flex_last">
-                                                            <h6 class="listing-card-info-price mb-0">₹1000</h6>
-                                                            <span>₹100/sqft</span>
                                                         </div>
                                                     </div>
                                                     <div class="_card_list_flex">
@@ -678,28 +657,60 @@
                                                                     India</a></h4>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="price-features-wrapper">
-                                                <div class="block-body">
-                                                    <ul class="avl-features third">
-                                                        <li class="active">3 BHK</li>
-                                                        <li class="active">Balcony</li>
-                                                        <li class="active">Corner Plot</li>
-                                                    </ul>
+                                                    <div class="_card_flex_last">
+                                                        <h6 class="listing-card-info-price mb-0">₹3,700 <span><del>4000</del></span></spa></h6>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="listing-detail-footer">
                                                 <div class="footer-first">
-                                                    <div class="foot-rates">
-                                                        <span class="elio_rate good">4.4</span>
-                                                        <div class="_rate_stio">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
+                                                    <div class="foot-rate">
+                                                        <span>Marketed by VHV Builders Pvt. Ltd.</span>
+                                                    </div>
+                                                </div>
+                                                <div class="footer-flex">
+                                                    <a href="#" class="prt-view">View <i
+                                                            class="fas fa-chevron-right pl-1"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
+                                    <div class="property-listing list_view row m-0">
+                                        <div class="col-md-4 p-0">
+                                            <div class="_exlio_125">Sponsored</div>
+                                            <div class="project">
+                                                <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
+                                                        class="img-fluid mx-auto" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 pr-0">
+                                            <div class="listing-detail-wrapper mt-1">
+                                                <div class="listing-short-detail-wrap">
+                                                    <div class="_card_list_flex">
+                                                        <div class="_card_flex_01">
+                                                            <h5><a href="#" class="prt-link-detail">Red Carpet Real
+                                                                    Estate
+                                                                </a></h5>
                                                         </div>
+                                                    </div>
+                                                    <div class="_card_list_flex">
+                                                        <div class="_card_flex_01">
+                                                            <h4 class="listing-name verified"><a href="#"
+                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh,
+                                                                    India</a></h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="_card_flex_last">
+                                                        <h6 class="listing-card-info-price mb-0">₹3,700 <span><del>4000</del></span></spa></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="listing-detail-footer">
+                                                <div class="footer-first">
+                                                    <div class="foot-rate">
+                                                        <span>Marketed by VHV Builders Pvt. Ltd.</span>
                                                     </div>
                                                 </div>
                                                 <div class="footer-flex">
@@ -716,27 +727,23 @@
                         <div class="single_items">
                             <div class="row">
                                 <!-- Single Property -->
-                                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
                                     <div class="property-listing list_view row m-0">
                                         <div class="col-md-4 p-0">
-                                            <div class="_exlio_125">For Sale</div>
-                                            <div class="list-img-slide">
+                                            <div class="_exlio_125">Sponsored</div>
+                                            <div class="project">
                                                 <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
                                                         class="img-fluid mx-auto" alt="" /></a>
                                             </div>
                                         </div>
-                                        <div class="col-md-8">
+                                        <div class="col-md-8 pr-0">
                                             <div class="listing-detail-wrapper mt-1">
                                                 <div class="listing-short-detail-wrap">
-                                                    <div class="_card_list_flex mb-2">
+                                                    <div class="_card_list_flex">
                                                         <div class="_card_flex_01">
                                                             <h5><a href="#" class="prt-link-detail">Red Carpet Real
                                                                     Estate
                                                                 </a></h5>
-                                                        </div>
-                                                        <div class="_card_flex_last">
-                                                            <h6 class="listing-card-info-price mb-0">₹1000</h6>
-                                                            <span>₹100/sqft</span>
                                                         </div>
                                                     </div>
                                                     <div class="_card_list_flex">
@@ -746,28 +753,15 @@
                                                                     India</a></h4>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="price-features-wrapper">
-                                                <div class="block-body">
-                                                    <ul class="avl-features third">
-                                                        <li class="active">3 BHK</li>
-                                                        <li class="active">Balcony</li>
-                                                        <li class="active">Corner Plot</li>
-                                                    </ul>
+                                                    <div class="_card_flex_last">
+                                                        <h6 class="listing-card-info-price mb-0">₹3,700 <span><del>4000</del></span></spa></h6>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="listing-detail-footer">
                                                 <div class="footer-first">
-                                                    <div class="foot-rates">
-                                                        <span class="elio_rate good">4.4</span>
-                                                        <div class="_rate_stio">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                        </div>
+                                                    <div class="foot-rate">
+                                                        <span>Marketed by VHV Builders Pvt. Ltd.</span>
                                                     </div>
                                                 </div>
                                                 <div class="footer-flex">
@@ -778,27 +772,23 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
                                     <div class="property-listing list_view row m-0">
                                         <div class="col-md-4 p-0">
-                                            <div class="_exlio_125">For Sale</div>
-                                            <div class="list-img-slide">
+                                            <div class="_exlio_125">Sponsored</div>
+                                            <div class="project">
                                                 <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
                                                         class="img-fluid mx-auto" alt="" /></a>
                                             </div>
                                         </div>
-                                        <div class="col-md-8">
+                                        <div class="col-md-8 pr-0">
                                             <div class="listing-detail-wrapper mt-1">
                                                 <div class="listing-short-detail-wrap">
-                                                    <div class="_card_list_flex mb-2">
+                                                    <div class="_card_list_flex">
                                                         <div class="_card_flex_01">
                                                             <h5><a href="#" class="prt-link-detail">Red Carpet Real
                                                                     Estate
                                                                 </a></h5>
-                                                        </div>
-                                                        <div class="_card_flex_last">
-                                                            <h6 class="listing-card-info-price mb-0">₹1000</h6>
-                                                            <span>₹100/sqft</span>
                                                         </div>
                                                     </div>
                                                     <div class="_card_list_flex">
@@ -808,28 +798,60 @@
                                                                     India</a></h4>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="price-features-wrapper">
-                                                <div class="block-body">
-                                                    <ul class="avl-features third">
-                                                        <li class="active">3 BHK</li>
-                                                        <li class="active">Balcony</li>
-                                                        <li class="active">Corner Plot</li>
-                                                    </ul>
+                                                    <div class="_card_flex_last">
+                                                        <h6 class="listing-card-info-price mb-0">₹3,700 <span><del>4000</del></span></spa></h6>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="listing-detail-footer">
                                                 <div class="footer-first">
-                                                    <div class="foot-rates">
-                                                        <span class="elio_rate good">4.4</span>
-                                                        <div class="_rate_stio">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
+                                                    <div class="foot-rate">
+                                                        <span>Marketed by VHV Builders Pvt. Ltd.</span>
+                                                    </div>
+                                                </div>
+                                                <div class="footer-flex">
+                                                    <a href="#" class="prt-view">View <i
+                                                            class="fas fa-chevron-right pl-1"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
+                                    <div class="property-listing list_view row m-0">
+                                        <div class="col-md-4 p-0">
+                                            <div class="_exlio_125">Sponsored</div>
+                                            <div class="project">
+                                                <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
+                                                        class="img-fluid mx-auto" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 pr-0">
+                                            <div class="listing-detail-wrapper mt-1">
+                                                <div class="listing-short-detail-wrap">
+                                                    <div class="_card_list_flex">
+                                                        <div class="_card_flex_01">
+                                                            <h5><a href="#" class="prt-link-detail">Red Carpet Real
+                                                                    Estate
+                                                                </a></h5>
                                                         </div>
+                                                    </div>
+                                                    <div class="_card_list_flex">
+                                                        <div class="_card_flex_01">
+                                                            <h4 class="listing-name verified"><a href="#"
+                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh,
+                                                                    India</a></h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="_card_flex_last">
+                                                        <h6 class="listing-card-info-price mb-0">₹3,700 <span><del>4000</del></span></spa></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="listing-detail-footer">
+                                                <div class="footer-first">
+                                                    <div class="foot-rate">
+                                                        <span>Marketed by VHV Builders Pvt. Ltd.</span>
                                                     </div>
                                                 </div>
                                                 <div class="footer-flex">
