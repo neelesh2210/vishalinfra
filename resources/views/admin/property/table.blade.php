@@ -5,6 +5,7 @@
             <th class="text-center">Property Type</th>
             <th class="text-center">Property</th>
             <th class="text-center">Price</th>
+            <th class="text-center">Is Featured</th>
             <th class="text-center">Status</th>
             {{-- <th class="text-center">Action</th> --}}
         </tr>
@@ -22,6 +23,13 @@
                 <td>
                     <b>Price: </b>{{$property->expected_price}} <br>
                     <b>sqft. Price: </b>{{$property->price}}
+                </td>
+                <td class="text-center">
+                    @if($property->is_featured == '1')
+                        <a href="{{route('admin.property.featured.status',[$property->id,'0'])}}"><span class="badge bg-success">Featured</span></a>
+                    @else
+                        <a href="{{route('admin.property.featured.status',[$property->id,'1'])}}"><span class="badge bg-danger">Not Featured</span></a>
+                    @endif
                 </td>
                 <td class="text-center">
                     {{ucwords(str_replace('_',' ',$property->booking_status))}}

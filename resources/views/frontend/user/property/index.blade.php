@@ -86,7 +86,7 @@
                                                         </td>
                                                         <td>
                                                             <div class="_leads_action">
-                                                                <a href="#"><i class="fas fa-edit"></i></a>
+                                                                <a href="{{route('user.property.listing.edit',encrypt($property->id))}}"><i class="fas fa-edit"></i></a>
                                                                 <a href="#"><i class="fas fa-trash"></i></a>
                                                             </div>
                                                         </td>

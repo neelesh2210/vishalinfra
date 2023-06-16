@@ -65,6 +65,7 @@ Route::group(['middleware'=>['auth:web']],function () {
         Route::get('property-index',[PropertyListingController::class,'index'])->name('property.index');
         Route::get('property-listing',[PropertyListingController::class,'create'])->name('property.listing');
         Route::post('property-listing-store',[PropertyListingController::class,'store'])->name('property.listing.store');
+        Route::get('property-listing-edit/{id}',[PropertyListingController::class,'edit'])->name('property.listing.edit');
 
         //Profile
         Route::get('profile',[UserProfileController::class,'profile'])->name('profile');
@@ -82,6 +83,8 @@ Route::group(['middleware'=>['auth:web']],function () {
         Route::get('project-list', [ProjectController::class,'index'])->name('project.list');
         Route::get('add-project', [ProjectController::class,'create'])->name('add.project');
         Route::post('store-project',[ProjectController::class,'store'])->name('store.project');
+        Route::get('edit-project/{id}',[ProjectController::class,'edit'])->name('edit.project');
+        Route::put('update-project/{id}',[ProjectController::class,'update'])->name('update.project');
 
         //Logout
         Route::post('logout',[LoginController::class,'logout'])->name('logout');

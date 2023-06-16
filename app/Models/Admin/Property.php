@@ -36,13 +36,10 @@ class Property extends Model
         'self_tieup',
         'plot_type',
         'facing',
-        'expected_price',
         'price',
         'booking_amount',
         'maintenance_charge',
-        'token_money',
-        'base_price',
-        'agent_price',
+        'discounted_price',
         'final_price',
         'commission',
         'prize',
@@ -50,6 +47,7 @@ class Property extends Model
         'thumbnail_img',
         'booking_status',
         'remark',
+        'is_featured',
         'status',
     ];
 

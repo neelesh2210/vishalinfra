@@ -627,36 +627,5 @@
             $(this).parent('li').addClass('current');
         });
 
-        $(function() {
-            var imagesPreview = function(input, placeToInsertImagePreview) {
-                if (input.files) {
-                    var filesAmount = input.files.length;
-                    for (i = 0; i < filesAmount; i++) {
-                        var reader = new FileReader();
-                        reader.onload = function(event) {
-                            $($.parseHTML('<img style="width: 100px;height: 100px;padding: 5px;">')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
-                        }
-                        reader.readAsDataURL(input.files[i]);
-                    }
-                }
-            };
-
-            $('#gallery-photo-add').on('change', function() {
-                imagesPreview(this, 'div.gallery');
-            });
-        });
-
-        function gallery_image()
-        {
-            $('#gallery_image').empty();
-        }
-
-        img_input1.onchange = evt => {
-            const [file] = img_input1.files
-            if (file) {
-                img1.src = URL.createObjectURL(file)
-            }
-        }
-
     </script>
 @endsection

@@ -43,7 +43,7 @@ Route::group(['middleware'=>'auth:admin','as'=>'admin.'],function () {
 
     //Property
     Route::resource('property',PropertyController::class);
-    Route::get('duplicate-property/{property_id}',[PropertyController::class,'duplicateProperty'])->name('duplicate.property');
+    Route::get('property-featured-status/{id}/{status}',[PropertyController::class,'featuredStatus'])->name('property.featured.status');
 
     //Customers
     Route::get('customer-index',[UserController::class,'index'])->name('customer.index');

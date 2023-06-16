@@ -23,7 +23,7 @@ class PropertyListingController extends Controller
         $register_properties = PropertyManager::withoutTrash()->where('added_by',Auth::guard('web')->user()->id)->get();
         $projects = Project::where('user_id',Auth::guard('web')->user()->id)->get();
 
-        $plan_purchases = PlanPurchase::where('user_id',Auth::guard('web')->user()->id)->where('number_of_property','>',$register_properties->count())->whereRaw('DATE_ADD(`created_at`, INTERVAL `duration_in_day` DAY) >= NOW()')->get();
+        $plan_purchases = PlanPurchase::where('user_id',Auth::guard('web')->user()->id)->whereRaw('DATE_ADD(`created_at`, INTERVAL `duration_in_day` DAY) >= NOW()')->withcount('property')->get();
         $times = 0;
         if($register_properties->count() >= 1){
             $times = $register_properties->count();
@@ -111,13 +111,10 @@ class PropertyListingController extends Controller
         $property->transaction_type=$request->transaction_type;
         $property->prossession_status=$request->prossession_status;
 
-        $property->expected_price=$request->expected_price;
         $property->price=$request->price;
         $property->booking_amount=$request->booking_amount;
         $property->maintenance_charge=$request->maintenance_charge;
-        $property->token_money=$request->token_money;
-        $property->base_price=$request->base_price;
-        $property->agent_price=$request->agent_price;
+        $property->discounted_price=$request->discounted_price;
         $property->final_price=$request->final_price;
         $property->photos=$request->gallery_image;
 
@@ -126,6 +123,26 @@ class PropertyListingController extends Controller
         $property->save();
 
         return redirect()->route('user.property.index')->with('success','Property Added Successfully!');
+    }
+
+    public function edit($id){
+        $property = Property::find(decrypt($id));
+        $register_properties = PropertyManager::withoutTrash()->where('added_by',Auth::guard('web')->user()->id)->get();
+        $projects = Project::where('user_id',Auth::guard('web')->user()->id)->get();
+
+        $plan_purchases = PlanPurchase::where('user_id',Auth::guard('web')->user()->id)->whereRaw('DATE_ADD(`created_at`, INTERVAL `duration_in_day` DAY) >= NOW()')->withcount('property')->get();
+        $times = 0;
+        if($register_properties->count() >= 1){
+            $times = $register_properties->count();
+            if($plan_purchases->count() != 0){
+                return view('frontend.user.property.edit',compact('times','plan_purchases','projects','property'));
+            }else{
+                return redirect()->route('plan');
+            }
+        }else{
+            $times = 0;
+            return view('frontend.user.property.edit',compact('times','plan_purchases','projects','property'));
+        }
     }
 
 }
