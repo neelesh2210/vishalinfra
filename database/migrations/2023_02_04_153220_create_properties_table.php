@@ -47,6 +47,7 @@ class CreatePropertiesTable extends Migration
             $table->double('final_price',15,2)->nullable();
             $table->string('photos')->nullable();
             $table->string('thumbnail_img')->nullable();
+            $table->text('amenities')->nullable();
             $table->string('remark')->nullable();
             $table->enum('booking_status', ['available', 'booked', 'reserved', 'on_hold', 'not_available'])->default('available');
             $table->enum('is_featured', ['1','0'])->default('0');

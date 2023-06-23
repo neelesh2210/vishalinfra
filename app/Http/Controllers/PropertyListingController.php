@@ -117,6 +117,7 @@ class PropertyListingController extends Controller
         $property->discounted_price=$request->discounted_price;
         $property->final_price=$request->final_price;
         $property->photos=$request->gallery_image;
+        $property->amenities=json_encode($request->amenity);
 
         $property->thumbnail_img=$request->image;
         $property->remark=$request->remark;

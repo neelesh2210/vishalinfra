@@ -59,7 +59,7 @@
                                     <li><span class="sqft">{{ $property_detail->price }}/sqft</span></li>
                                 </ul>
                                 <h2 class="mb-3">{{ $property_detail->name }}</h2>
-                                <span><i class="lni-map-marker"></i> </span>
+                                <span><i class="lni-map-marker"></i> {{ $property_detail->landmark }}, {{$property_detail->cities->name}}</span>
                             </div>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                                 <p>Address</p>
                             </div>
                             <div class="col-md-8">
-                                <strong>{{ optional($property_detail->city)->name }}, India</strong>
+                                <strong>{{ optional($property_detail->cities)->name }}, India</strong>
                             </div>
                             <div class="col-md-4">
                                 <p>Landmarks</p>
@@ -118,20 +118,24 @@
                             </div>
                         </div>
                     </div>
-                    <div class="property_block_wrap">
-                        <div class="property_block_wrap_header">
-                            <h4 class="property_block_title">Amenities</h4>
-                            <hr />
+                    @if($property_detail->amenities)
+                        <div class="property_block_wrap">
+                            <div class="property_block_wrap_header">
+                                <h4 class="property_block_title">Amenities</h4>
+                                <hr />
+                            </div>
+                            <div class="block-body">
+                                <ul class="row p-0 m-0">
+                                    @foreach (json_decode($property_detail->amenities) as $amenity)
+                                    @php
+                                        $am = App\Models\Admin\Amenity::find($amenity);
+                                    @endphp
+                                        <li class="col-lg-4 col-md-6 mb-2 p-0"><i class="{{$am->icon}} mr-1"></i>{{$am->name}}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
                         </div>
-                        <div class="block-body">
-                            <ul class="row p-0 m-0">
-                                <li class="col-lg-4 col-md-6 mb-2 p-0"><i class="fa fa-building mr-1"></i>Club House</li>
-                                <li class="col-lg-4 col-md-6 mb-2 p-0"><i class="fa fa-bed mr-1"></i>4 Bedrooms</li>
-                                <li class="col-lg-4 col-md-6 mb-2 p-0"><i class="fa fa-expand-arrows-alt mr-1"></i>Kids Play Area</li>
-                                <li class="col-lg-4 col-md-6 mb-2 p-0"><i class="fa fa-car mr-1"></i>Car Parking</li>
-                            </ul>
-                        </div>
-                    </div>
+                    @endif
                     <div class="property_block_wrap">
                         <div class="property_block_wrap_header">
                             <h4 class="property_block_title">Popular Landmarks Nearby</h4>

@@ -509,7 +509,7 @@
                                     <div class="card-header">
                                         <h5 class="mb-0 h6">Amenities</h5>
                                     </div>
-                                    <div class="p-2">
+                                    {{-- <div class="p-2">
                                         <div class="form-group row">
                                             @foreach (App\Models\Admin\Amenity::orderBy('name','asc')->get() as $amenity)
                                                 <div class="col-lg-3">
@@ -518,60 +518,17 @@
                                                 </div>
                                             @endforeach
                                         </div>
-                                    </div>
+                                    </div> --}}
 
                                     <div class="form-group col-md-12">
-                                        <label>Other Features (optional)</label>
                                         <div class="o-features">
                                             <ul class="no-ul-list third-row">
-                                                <li>
-                                                    <input id="a-1" class="checkbox-custom" name="a-1" type="checkbox">
-                                                    <label for="a-1" class="checkbox-custom-label">Air Condition</label>
-                                                </li>
-                                                <li>
-                                                    <input id="a-2" class="checkbox-custom" name="a-2" type="checkbox">
-                                                    <label for="a-2" class="checkbox-custom-label">Bedding</label>
-                                                </li>
-                                                <li>
-                                                    <input id="a-3" class="checkbox-custom" name="a-3" type="checkbox">
-                                                    <label for="a-3" class="checkbox-custom-label">Heating</label>
-                                                </li>
-                                                <li>
-                                                    <input id="a-4" class="checkbox-custom" name="a-4" type="checkbox">
-                                                    <label for="a-4" class="checkbox-custom-label">Internet</label>
-                                                </li>
-                                                <li>
-                                                    <input id="a-5" class="checkbox-custom" name="a-5" type="checkbox">
-                                                    <label for="a-5" class="checkbox-custom-label">Microwave</label>
-                                                </li>
-                                                <li>
-                                                    <input id="a-6" class="checkbox-custom" name="a-6" type="checkbox">
-                                                    <label for="a-6" class="checkbox-custom-label">Smoking Allow</label>
-                                                </li>
-                                                <li>
-                                                    <input id="a-7" class="checkbox-custom" name="a-7" type="checkbox">
-                                                    <label for="a-7" class="checkbox-custom-label">Terrace</label>
-                                                </li>
-                                                <li>
-                                                    <input id="a-8" class="checkbox-custom" name="a-8" type="checkbox">
-                                                    <label for="a-8" class="checkbox-custom-label">Balcony</label>
-                                                </li>
-                                                <li>
-                                                    <input id="a-9" class="checkbox-custom" name="a-9" type="checkbox">
-                                                    <label for="a-9" class="checkbox-custom-label">Icon</label>
-                                                </li>
-                                                <li>
-                                                    <input id="a-10" class="checkbox-custom" name="a-10" type="checkbox">
-                                                    <label for="a-10" class="checkbox-custom-label">Wi-Fi</label>
-                                                </li>
-                                                <li>
-                                                    <input id="a-11" class="checkbox-custom" name="a-11" type="checkbox">
-                                                    <label for="a-11" class="checkbox-custom-label">Beach</label>
-                                                </li>
-                                                <li>
-                                                    <input id="a-12" class="checkbox-custom" name="a-12" type="checkbox">
-                                                    <label for="a-12" class="checkbox-custom-label">Parking</label>
-                                                </li>
+                                                @foreach (App\Models\Admin\Amenity::orderBy('name','asc')->get() as $amenity)
+                                                    <li>
+                                                        <input id="{{$amenity->id}}" class="checkbox-custom" name="amenity[]" type="checkbox" value="{{$amenity->id}}">
+                                                        <label for="{{$amenity->id}}" class="checkbox-custom-label">{{$amenity->name}}</label>
+                                                    </li>
+                                                @endforeach
                                             </ul>
                                         </div>
                                     </div>

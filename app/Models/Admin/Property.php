@@ -46,6 +46,7 @@ class Property extends Model
         'photos',
         'thumbnail_img',
         'booking_status',
+        'amenities',
         'remark',
         'is_featured',
         'is_demanded',
@@ -57,7 +58,7 @@ class Property extends Model
         return $this->belongsTo(PlanPurchase::class);
     }
 
-    public function city(){
+    public function cities(){
         return $this->belongsTo(City::class,'city');
     }
 }
