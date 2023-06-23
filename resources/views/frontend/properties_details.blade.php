@@ -5,19 +5,24 @@
             <div class="row align-items-center">
                 <div class="col-lg-8 col-md-7 col-sm-12 pr-1">
                     <div class="gg_single_part left">
-                        <a href="{{ asset('backend/img/properies/' . $property_detail->thumbnail_img) }}" class="mfp-gallery">
-                            <img src="{{ asset('backend/img/properies/' . $property_detail->thumbnail_img) }}" class="img-fluid mx-auto" alt="" />
+                        <a href="{{uploaded_asset($property_detail->thumbnail_img)}}" class="mfp-gallery">
+                            <img src="{{uploaded_asset($property_detail->thumbnail_img)}}" class="img-fluid mx-auto" alt="" />
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-5 col-sm-12 pl-1">
-                    @foreach (explode(',',$property_detail->photos) as $photo)
+                    @foreach (explode(',',$property_detail->photos) as $keyp=>$photo)
                         <div class="gg_single_part-right min  mb-2">
                             <a href="{{uploaded_asset($photo)}}" class="mfp-gallery">
                                 <img src="{{uploaded_asset($photo)}}" class="img-fluid mx-auto" alt="" />
-                                <p class="vw_dtls"> <i class="fas fa-images"></i> <br> <span> + 19 Photos</span> </p>
+                                <p class="vw_dtls"> <i class="fas fa-images"></i> <br> <span> + {{count(explode(',',$property_detail->photos)) -3}} Photos</span> </p>
                             </a>
                         </div>
+                        @if($keyp == 2)
+                            @php
+                                break;
+                            @endphp
+                        @endif
                     @endforeach
                 </div>
             </div>
@@ -68,45 +73,45 @@
                                 <p>Price</p>
                             </div>
                             <div class="col-md-8">
-                                <strong>10000000</strong> <span><del>12000000</del></span>
+                                <strong>{{ $property_detail->discounted_price }}</strong> <span><del>{{ $property_detail->final_price }}</del></span>
                             </div>
                             <div class="col-md-4">
                                 <p>Booking Amount</p>
                             </div>
                             <div class="col-md-8">
-                                <strong>100000</strong>
+                                <strong>{{ $property_detail->booking_amount }}</strong>
                             </div>
                             <div class="col-md-4">
                                 <p>Carpet Area</p>
                             </div>
                             <div class="col-md-8">
-                                <strong>1000sqft | ₹7,500/sqft </strong>
+                                <strong>{{ $property_detail->carpet_area }}sqft | ₹{{ $property_detail->price }}/sqft </strong>
                             </div>
 
                             <div class="col-md-4">
                                 <p>Address</p>
                             </div>
                             <div class="col-md-8">
-                                <strong>Varanasi, India</strong>
+                                <strong>{{ optional($property_detail->city)->name }}, India</strong>
                             </div>
                             <div class="col-md-4">
                                 <p>Landmarks</p>
                             </div>
                             <div class="col-md-8">
-                                <strong>Near Sai Temple</strong>
+                                <strong>{{ $property_detail->landmark }}</strong>
                             </div>
                             <div class="col-md-4">
                                 <p>Furnishing</p>
                             </div>
                             <div class="col-md-8">
-                                <strong>Semi-Furnished</strong>
+                                <strong>{{ $property_detail->furnished_status }}</strong>
                             </div>
-                            <div class="col-md-4">
+                            {{-- <div class="col-md-4">
                                 <p>Age of Construction</p>
                             </div>
                             <div class="col-md-8">
                                 <strong>Above 20 years</strong>
-                            </div>
+                            </div> --}}
                             <div class="col-md-12">
                                 <h6 class="property_block_title">Description :</h6>
                                 <p class="more">{{ $property_detail->remark }}</p>

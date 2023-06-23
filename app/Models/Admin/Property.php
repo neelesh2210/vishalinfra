@@ -54,4 +54,8 @@ class Property extends Model
     public function planPurchase(){
         return $this->belongsTo(PlanPurchase::class);
     }
+
+    public function city(){
+        return $this->belongsTo(City::class,'city');
+    }
 }
