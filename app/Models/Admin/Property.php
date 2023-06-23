@@ -48,6 +48,8 @@ class Property extends Model
         'booking_status',
         'remark',
         'is_featured',
+        'is_demanded',
+        'is_trending',
         'status',
     ];
 

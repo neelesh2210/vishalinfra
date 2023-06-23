@@ -6,8 +6,11 @@
             <th class="text-center">Property</th>
             <th class="text-center">Price</th>
             <th class="text-center">Is Featured</th>
+            <th class="text-center">Most Demanded</th>
+            <th class="text-center">Is Trending</th>
+            <th class="text-center">Is Published</th>
             <th class="text-center">Status</th>
-            {{-- <th class="text-center">Action</th> --}}
+            <th class="text-center">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -32,12 +35,33 @@
                     @endif
                 </td>
                 <td class="text-center">
+                    @if($property->is_demanded == '1')
+                        <a href="{{route('admin.property.demanded.status',[$property->id,'0'])}}"><span class="badge bg-success">Yes</span></a>
+                    @else
+                        <a href="{{route('admin.property.demanded.status',[$property->id,'1'])}}"><span class="badge bg-danger">No</span></a>
+                    @endif
+                </td>
+                <td class="text-center">
+                    @if($property->is_trending == '1')
+                        <a href="{{route('admin.property.trending.status',[$property->id,'0'])}}"><span class="badge bg-success">Yes</span></a>
+                    @else
+                        <a href="{{route('admin.property.trending.status',[$property->id,'1'])}}"><span class="badge bg-danger">No</span></a>
+                    @endif
+                </td>
+                <td class="text-center">
+                    @if($property->is_status == '1')
+                        <a href="{{route('admin.property.published.status',[$property->id,'0'])}}"><span class="badge bg-success">Published</span></a>
+                    @else
+                        <a href="{{route('admin.property.published.status',[$property->id,'1'])}}"><span class="badge bg-danger">Not Published</span></a>
+                    @endif
+                </td>
+                <td class="text-center">
                     {{ucwords(str_replace('_',' ',$property->booking_status))}}
                 </td>
                 <td class="text-center">
-                    {{-- <a href="{{route('admin.property.edit',encrypt($property->id))}}" class="btn btn-outline-primary btn-sm mr-1 mb-1">
+                    <a href="{{route('admin.property.edit',encrypt($property->id))}}" class="btn btn-outline-primary btn-sm mr-1 mb-1">
                         <i class="fas fa-edit "></i>
-                    </a> --}}
+                    </a>
                     {{-- <a href="{{route('admin.duplicate.property',$property->id)}}" class="btn btn-outline-primary btn-sm mr-1 mb-1">
                         <i class="fas fa-copy "></i>
                     </a> --}}

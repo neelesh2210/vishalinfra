@@ -497,6 +497,21 @@
                                 </div>
                                 <div class="card">
                                     <div class="card-header">
+                                        <h5 class="mb-0 h6">Amenities</h5>
+                                    </div>
+                                    <div class="p-2">
+                                        <div class="form-group row">
+                                            @foreach (App\Models\Admin\Amenity::orderBy('name','asc')->get() as $amenity)
+                                                <div class="col-lg-3">
+                                                    <label>{{$amenity->name}}</label>
+                                                    <input type="checkbox" name="amenity[]" value="{{$amenity->id}}">
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
                                         <h5 class="mb-0 h6">Property Images</h5>
                                     </div>
                                     <div class="p-2">

@@ -50,6 +50,8 @@ class CreatePropertiesTable extends Migration
             $table->string('remark')->nullable();
             $table->enum('booking_status', ['available', 'booked', 'reserved', 'on_hold', 'not_available'])->default('available');
             $table->enum('is_featured', ['1','0'])->default('0');
+            $table->enum('is_demanded', ['1','0'])->default('0');
+            $table->enum('is_trending', ['1','0'])->default('0');
             $table->enum('is_status', ['1','0'])->default('1');
             $table->enum('is_delete', ['1','0'])->default('0');
             $table->timestamps();

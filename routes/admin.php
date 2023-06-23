@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\PlanController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\StateController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\AmenityController;
 use App\Http\Controllers\Admin\CountryController;
 use App\Http\Controllers\Admin\PincodeController;
 use App\Http\Controllers\Admin\PropertyController;
@@ -44,6 +45,9 @@ Route::group(['middleware'=>'auth:admin','as'=>'admin.'],function () {
     //Property
     Route::resource('property',PropertyController::class);
     Route::get('property-featured-status/{id}/{status}',[PropertyController::class,'featuredStatus'])->name('property.featured.status');
+    Route::get('property-demanded-status/{id}/{status}',[PropertyController::class,'demandedStatus'])->name('property.demanded.status');
+    Route::get('property-trending-status/{id}/{status}',[PropertyController::class,'trendingStatus'])->name('property.trending.status');
+    Route::get('property-published-status/{id}/{status}',[PropertyController::class,'publishedStatus'])->name('property.published.status');
 
     //Customers
     Route::get('customer-index',[UserController::class,'index'])->name('customer.index');
@@ -59,6 +63,9 @@ Route::group(['middleware'=>'auth:admin','as'=>'admin.'],function () {
 
     //Change Password
     Route::post('change-password',[DashboardController::class,'changePassword'])->name('change.password');
+
+    //Amenity
+    Route::resource('amenities', AmenityController::class);
 
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 });

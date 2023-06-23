@@ -68,9 +68,9 @@ class PropertyController extends Controller
         return view('admin.property.index',compact('properties','search_key','search_price','search_bedroom','search_room_type','search_city','search_property','search_status'),['page_title'=>'Properties']);
     }
 
-    public function create(){
-        return view('admin.property.create',['page_title'=>'Add Property']);
-    }
+    // public function create(){
+    //     return view('admin.property.create',['page_title'=>'Add Property']);
+    // }
 
     public function store(Request $request){
         $property_number = Property::orderBy('id','desc')->first();
@@ -228,25 +228,13 @@ class PropertyController extends Controller
 
         $property->transaction_type=$request->transaction_type;
         $property->prossession_status=$request->prossession_status;
-
-        $property->expected_price=$request->expected_price;
         $property->price=$request->price;
         $property->booking_amount=$request->booking_amount;
         $property->maintenance_charge=$request->maintenance_charge;
-        $property->token_money=$request->token_money;
-        $property->base_price=$request->base_price;
-        $property->agent_price=$request->agent_price;
+        $property->discounted_price=$request->discounted_price;
         $property->final_price=$request->final_price;
-        if($request->gallery_image){
-            $gall_imgs = [];
-            foreach($request->gallery_image as $gallery_image){
-                $gall_imgs[] = imageUpload($gallery_image,'backend/img/properies');
-            }
-            $property->photos=json_encode($gall_imgs);
-        }
-        if($request->has('image')){
-            $property->thumbnail_img=imageUpload($request->file('image'),'backend/img/properies');
-        }
+        // $property->photos=$request->gallery_image;
+        // $property->thumbnail_img=$request->image;
         $property->remark=$request->remark;
         $property->save();
 
@@ -265,6 +253,30 @@ class PropertyController extends Controller
         $property->save();
 
         return back()->with('success','Featured Status Changed Successfully!');
+    }
+
+    public function demandedStatus($id,$status){
+        $property = Property::find($id);
+        $property->is_demanded = $status;
+        $property->save();
+
+        return back()->with('success','Demanded Status Changed Successfully!');
+    }
+
+    public function trendingStatus($id,$status){
+        $property = Property::find($id);
+        $property->is_trending = $status;
+        $property->save();
+
+        return back()->with('success','Treanding Status Changed Successfully!');
+    }
+
+    public function publishedStatus($id,$status){
+        $property = Property::find($id);
+        $property->is_status = $status;
+        $property->save();
+
+        return back()->with('success','Published Status Changed Successfully!');
     }
 
 }
