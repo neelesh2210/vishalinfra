@@ -902,7 +902,7 @@ div[data-overlay] h3,
 div[data-overlay] h4,
 div[data-overlay] h5,
 div[data-overlay] h6 {
-  color: #333;
+  color: #fff;
 }
 div[data-overlay] p{
   color: #fff;
@@ -6067,7 +6067,7 @@ button.btn.adv-btn {
 
 .category-box {
     position: relative;
-    height:170px;
+    height:225px;
     background: #fff;
     box-shadow:0 0 20px 0 rgba(112, 121, 138, 0.18);
     -webkit-box-shadow:0 0 20px 0 rgba(112, 121, 138, 0.18);
@@ -6088,9 +6088,9 @@ button.btn.adv-btn {
 }
 
 .category-box .property_category_short .category-icon {
-    width: 65px;
-    height: 65px;
-    margin:0.5rem auto 0.5rem;
+    width: 100px;
+    height: 100px;
+    margin:0.5rem auto 0.75rem;
     font-size: 20px;
     background: #f4f5f7;
     color: #ff7c39;
@@ -6098,16 +6098,19 @@ button.btn.adv-btn {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    border: 6px solid #fff;
+    box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 5%);
     transition: 0.6s cubic-bezier(0.45, 0.01, 0.1, 1.49);
+
 }
 .category-box .property_category_short i{
-    font-size:30px;
-    margin-bottom:7px;
+    font-size:45px;
+    margin-bottom:0px;
     transition: 0.6s cubic-bezier(0.45, 0.01, 0.1, 1.49);
 }
 .category-box .property_category_short .property_category_expand h4 {
     font-weight: 500;
-    margin-bottom: 0px;
+    margin-bottom: 7px;
     font-size: 16px;
     color: #1c2b56;
 }
@@ -9072,7 +9075,7 @@ ul.list-gallery-inline li a {
 }
 /*----------- Breadcrumbs -----------*/
 .breadcrumbs-wrap{
-	margin-bottom:4rem;
+	/* margin-bottom:4rem; */
 }
 .breadcrumb {
     padding: 0;

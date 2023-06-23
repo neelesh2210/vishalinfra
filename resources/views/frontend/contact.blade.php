@@ -1,18 +1,22 @@
 @extends('frontend.layouts.app')
 @section('content')
-    <!-- End Navigation -->
-    <div class="clearfix"></div>
     <!-- ============================ Page Title Start================================== -->
-    <div class="page-title" style="background:#f4f4f4 url({{ asset('frontend/assets/img/slider-3.jpg') }});" data-overlay="5">
-        <div class="ht-80"></div>
-        <div class="ht-120"></div>
+    <div class="page-title" style="background:#f4f4f4 url({{ asset('frontend/assets/img/bg.jpg')}});" data-overlay="5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="breadcrumbs-wrap">
+                        <h2 class="breadcrumb-title">Contact Us</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- ============================ Page Title End ================================== -->
 
     <!-- ============================ Agency List Start ================================== -->
-    <section class="pt-0">
+    <section>
         <div class="container">
-            <div class="row align-items-center pretio_top">
+            <div class="row align-items-center">
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="contact-box">
                         <i class="fas fa-phone-alt theme-cl"></i>
