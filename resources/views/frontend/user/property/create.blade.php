@@ -44,9 +44,7 @@
         font-weight: 500;
     }
 
-    .listForSelect ul li a {
-        cursor: pointer;
-    }
+
 
 
     .listForSelect>ul>li.csB {
