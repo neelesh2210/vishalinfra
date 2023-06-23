@@ -3589,12 +3589,12 @@ fixed-bottom 1030*/
     transition: margin-top 0.3s, visibility 0.3s, opacity 0.3s;
     margin-top: 20px !important;
 }
-.show.dropdown-menu {
+/* .show.dropdown-menu {
     visibility: visible;
     opacity: 1;
     height: fit-content !important;
     margin-top: 0 !important;
-}
+} */
 .dropdown-menu.dropdown-menu-xs {
     width: 160px;
     min-width: 160px;

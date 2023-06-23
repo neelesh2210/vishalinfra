@@ -14,10 +14,6 @@
         color: #000;
     }
 
-    .current {
-        background: #59a8e736;
-    }
-
     dl,ol,ul {
         margin-top: 0;
         margin-bottom: 1rem;
@@ -28,10 +24,18 @@
         padding: 0;
     }
 
+
     .listForSelect ul li {
         float: left;
         color: #606060;
         border-left: 1px solid #e0e0e0;
+        padding: 0;
+        cursor: pointer;
+        list-style: none;
+        text-align: center;
+    }
+    .listForSelect ul li a{
+        float: left;
         padding: 10px 18px;
         cursor: pointer;
         list-style: none;
@@ -62,7 +66,9 @@
     display: inline-grid;
     width: 56px;
     text-align: center;
-    }
+    max-height: 220px;
+    overflow-y: overlay;
+}
 
     .dropdown-menu {
         border-radius: 0;
@@ -72,7 +78,7 @@
     .dropdown-toggle{
         border-radius: 0px;
     }
-    .current {
+    .listForSelect .current {
         background: #0a69ff;
         color: #fff !important;
     }
@@ -187,7 +193,7 @@
                                                         <li class="bedroom" onclick="select_list('bedroom','7')"><a>7</a></li>
                                                         <li class="bedroom" onclick="select_list('bedroom','8')"><a>8</a></li>
                                                         <li class="bedroom" onclick="select_list('bedroom','9')"><a>9</a></li>
-                                                        <li class="btn dropdown-toggle btn_bedroom-toggle bedroom" type="button" data-toggle="dropdown" style="width: 55px;">10</li>
+                                                        <li class="btn dropdown-toggle btn_bedroom-toggle bedroom" type="button" data-toggle="dropdown" style="width: 55px;padding:9px">10</li>
                                                         <ul class="dropdown-menu bedroom_list">
                                                             <li  class="bedroom" onclick="select_list('bedroom','11')"><a>11</a></li>
                                                             <li  class="bedroom" onclick="select_list('bedroom','12')"><a>12</a></li>
@@ -218,7 +224,7 @@
                                                         <li class="balconies" class="csF bdOption" onclick="select_list('balconies','7')"><a>7</a></li>
                                                         <li class="balconies" class="csF bdOption" onclick="select_list('balconies','8')"><a>8</a></li>
                                                         <li class="balconies" class="csF bdOption" onclick="select_list('balconies','9')"><a>9</a></li>
-                                                        <li class="btn dropdown-toggle btn_balconies-toggle balconies" type="button" data-toggle="dropdown" style="width: 55px;">10</li>
+                                                        <li class="btn dropdown-toggle btn_balconies-toggle balconies" type="button" data-toggle="dropdown" style="width: 55px;padding:9px">10</li>
                                                         <ul class="dropdown-menu balconies_list">
                                                             <li class="balconies" onclick="select_list('balconies','10')"><a>10</a></li>
                                                             <li class="balconies" onclick="select_list('balconies','11')"><a>11</a></li>
@@ -250,7 +256,7 @@
                                                         <li class="bathroom" onclick="select_list('bathroom','7')"><a>7</a></li>
                                                         <li class="bathroom" onclick="select_list('bathroom','8')"><a>8</a></li>
                                                         <li class="bathroom" onclick="select_list('bathroom','9')"><a>9</a></li>
-                                                        <li class="btn dropdown-toggle btn_bathroom-toggle bathroom" type="button" data-toggle="dropdown" style="width: 55px;">10</li>
+                                                        <li class="btn dropdown-toggle btn_bathroom-toggle bathroom" type="button" data-toggle="dropdown" style="width: 55px;padding:9px">10</li>
                                                         <ul class="dropdown-menu bathroom_list">
                                                             <li class="bathroom" onclick="select_list('bathroom','10')"><a>10</a></li>
                                                             <li class="bathroom" onclick="select_list('bathroom','11')"><a>11</a></li>
@@ -287,7 +293,11 @@
                                                         <li class="floor_no" onclick="select_list('floor_no','7')"><a>7</a></li>
                                                         <li class="floor_no" onclick="select_list('floor_no','8')"><a>8</a></li>
                                                         <li class="floor_no" onclick="select_list('floor_no','9')"><a>9</a></li>
-                                                        <li class="btn dropdown-toggle btn_floor_no-toggle floor_no" type="button" data-toggle="dropdown" style="width: 55px;">10</li>
+                                                        <li class="floor_no" onclick="select_list('floor_no','10')"><a>10</a></li>
+                                                        <li class="floor_no" onclick="select_list('floor_no','11')"><a>11</a></li>
+                                                        <li class="floor_no" onclick="select_list('floor_no','12')"><a>12</a></li>
+                                                        <li class="floor_no" onclick="select_list('floor_no','13')"><a>13</a></li>
+                                                        <li class="btn dropdown-toggle btn_floor_no-toggle floor_no" type="button" data-toggle="dropdown" style="width: 55px;padding:9px">14</li>
                                                         <ul class="dropdown-menu floor_no_list">
                                                             @for($i=5;$i<=20;$i++)
                                                         <li class="floor_no" onclick="select_list('floor_no','{{$i}}')"><a>{{$i}}</a></li>
@@ -317,7 +327,7 @@
                                                         <li class="total_floor" onclick="select_list('total_floor','5')"><a>5</a> </li>
                                                         <li class="total_floor" onclick="select_list('total_floor','6')"><a>6</a></li>
                                                         <li class="total_floor" onclick="select_list('total_floor','7')"><a>7</a></li>
-                                                        <li class="btn dropdown-toggle btn_total_floor-toggle total_floor" type="button" data-toggle="dropdown" style="width: 55px;">8</li>
+                                                        <li class="btn dropdown-toggle btn_total_floor-toggle total_floor" type="button" data-toggle="dropdown" style="width: 55px;padding:9px">8</li>
                                                         <ul class="dropdown-menu total_floor_list">
                                                             @for($i=5;$i<=20;$i++)
                                                                 <li class="total_floor" onclick="select_list('total_floor','{{$i}}')"><a>{{$i}}</a></li>
