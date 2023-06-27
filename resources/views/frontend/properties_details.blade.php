@@ -118,7 +118,7 @@
                             </div>
                         </div>
                     </div>
-                    @if($property_detail->amenities || $property_detail->amenities != 'null')
+                    @if($property_detail->amenities && $property_detail->amenities != 'null')
                         <div class="property_block_wrap">
                             <div class="property_block_wrap_header">
                                 <h4 class="property_block_title">Amenities</h4>
