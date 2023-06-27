@@ -118,7 +118,7 @@
                             </div>
                         </div>
                     </div>
-                    @if($property_detail->amenities)
+                    @if($property_detail->amenities || $property_detail->amenities != 'null')
                         <div class="property_block_wrap">
                             <div class="property_block_wrap_header">
                                 <h4 class="property_block_title">Amenities</h4>
@@ -127,9 +127,9 @@
                             <div class="block-body">
                                 <ul class="row p-0 m-0">
                                     @foreach (json_decode($property_detail->amenities) as $amenity)
-                                    @php
-                                        $am = App\Models\Admin\Amenity::find($amenity);
-                                    @endphp
+                                        @php
+                                            $am = App\Models\Admin\Amenity::find($amenity);
+                                        @endphp
                                         <li class="col-lg-4 col-md-6 mb-2 p-0"><i class="{{$am->icon}} mr-1"></i>{{$am->name}}</li>
                                     @endforeach
                                 </ul>
