@@ -82,7 +82,7 @@
         <script src="{{ asset('assets/image/js/vendors.js')}}"></script>
         <script src="{{ asset('assets/image/js/aiz-core.js')}}"></script>
 		<script src="{{ asset('frontend/assets/js/popper.min.js')}}"></script>
-		<script src="{{ asset('frontend/assets/js/bootstrap.min.js')}}"></script>
+		{{-- <script src="{{ asset('frontend/assets/js/bootstrap.min.js')}}"></script> --}}
         <script src="{{ asset('frontend/assets/js/ion.rangeSlider.min.js')}}"></script>
 		<script src="{{ asset('frontend/assets/js/select2.min.js')}}"></script>
 		<script src="{{ asset('frontend/assets/js/jquery.magnific-popup.min.js')}}"></script>
@@ -90,7 +90,6 @@
 		<script src="{{ asset('frontend/assets/js/slider-bg.js')}}"></script>
 		<script src="{{ asset('frontend/assets/js/lightbox.js')}}"></script>
 		<script src="{{ asset('frontend/assets/js/imagesloaded.js')}}"></script>
-		<script src="{{ asset('frontend/assets/js/daterangepicker.js')}}"></script>
 		<script src="{{ asset('frontend/assets/js/custom.js')}}"></script>
 		<!-- ============================================================== -->
 		<!-- This page plugins -->

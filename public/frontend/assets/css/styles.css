@@ -9113,8 +9113,7 @@ ul.list-gallery-inline li a {
     border: 1px solid #ebedf1;
     border-radius: 0.3rem;
     background: #ffffff;
-    margin-bottom: 2rem;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
 }
 ul.shorting_grid {
     padding: 0;
@@ -10358,9 +10357,8 @@ span.mod-close {
     overflow: hidden;
 }
 .resp_log_thumb {
-    width: 45%;
-    flex: 0 0 45%;
-    background-size: cover !important;
+    width: 50%;
+    flex: 0 0 50%;
     background-position: center !important;
 }
 .resp_log_caption {

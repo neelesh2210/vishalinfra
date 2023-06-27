@@ -13,39 +13,6 @@
     </div>
     <section class="gray pt-4">
         <div class="container">
-            <div class="row m-0">
-                <div class="short_wraping">
-                    <div class="row align-items-center">
-                        <div class="col-lg-7 col-md-12 col-sm-12 order-lg-2 order-md-3 col-sm-12">
-                            <div class="shorting_pagination">
-                                <div class="shorting_pagination_laft">
-                                    <h5>Showing {{($properties->currentpage()-1)*$properties->perpage()+1}}-{{(($properties->currentpage()-1)*$properties->perpage())+$properties->count()}} of {{$properties->total()}} results</h5>
-                                </div>
-                                <div class="shorting_pagination_right">
-                                    {!! $properties->links() !!}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5 col-md-6 col-sm-12 order-lg-3 order-md-2 col-sm-6">
-                            <div class="shorting-right">
-                                <label>Short By:</label>
-                                <div class="dropdown show">
-                                    <a class="btn btn-filter dropdown-toggle" href="#" data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">
-                                        <span class="selection">Most Rated</span>
-                                    </a>
-                                    <div class="drp-select dropdown-menu">
-                                        <a class="dropdown-item" href="JavaScript:Void(0);">Most Rated</a>
-                                        <a class="dropdown-item" href="JavaScript:Void(0);">Most Viewd</a>
-                                        <a class="dropdown-item" href="JavaScript:Void(0);">News Listings</a>
-                                        <a class="dropdown-item" href="JavaScript:Void(0);">High Rated</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="page-sidebar p-0">
@@ -195,6 +162,22 @@
                                 </div>
                             </div>
                         @endforeach
+                    </div>
+                    <div class="row justify-content-center pt-3 m-0">
+                        <div class="short_wraping">
+                            <div class="row align-items-center">
+                                <div class="col-lg-12 col-md-12 col-sm-12 order-lg-2 order-md-3 col-sm-12">
+                                    <div class="shorting_pagination">
+                                        <div class="shorting_pagination_laft">
+                                            <h5>Showing {{($properties->currentpage()-1)*$properties->perpage()+1}}-{{(($properties->currentpage()-1)*$properties->perpage())+$properties->count()}} of {{$properties->total()}} results</h5>
+                                        </div>
+                                        <div class="shorting_pagination_right">
+                                            {!! $properties->links() !!}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
