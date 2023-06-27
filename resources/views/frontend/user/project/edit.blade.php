@@ -185,51 +185,51 @@
                                                             <div class="o-features">
                                                                 <ul class="no-ul-list third-row">
                                                                     <li>
-                                                                        <input id="a-1" class="checkbox-custom" name="amenity[]" value="Air Condition" type="checkbox" @if(in_array('Air Condition',json_decode($project->amenities))) checked @endif>
+                                                                        <input id="a-1" class="checkbox-custom" name="amenity[]" value="Air Condition" type="checkbox" @if(is_array(json_decode($project->amenities))) @if(in_array('Air Condition',json_decode($project->amenities))) checked @endif @endif>
                                                                         <label for="a-1" class="checkbox-custom-label">Air Condition</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-2" class="checkbox-custom" name="amenity[]" value="Bedding" type="checkbox" @if(in_array('Bedding',json_decode($project->amenities))) checked @endif>
+                                                                        <input id="a-2" class="checkbox-custom" name="amenity[]" value="Bedding" type="checkbox" @if(is_array(json_decode($project->amenities))) @if(in_array('Bedding',json_decode($project->amenities))) checked @endif @endif>
                                                                         <label for="a-2" class="checkbox-custom-label">Bedding</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-3" class="checkbox-custom" name="amenity[]" value="Heating" type="checkbox" @if(in_array('Heating',json_decode($project->amenities))) checked @endif>
+                                                                        <input id="a-3" class="checkbox-custom" name="amenity[]" value="Heating" type="checkbox" @if(is_array(json_decode($project->amenities))) @if(in_array('Heating',json_decode($project->amenities))) checked @endif @endif>
                                                                         <label for="a-3" class="checkbox-custom-label">Heating</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-4" class="checkbox-custom" name="amenity[]" value="Internet" type="checkbox" @if(in_array('Internet',json_decode($project->amenities))) checked @endif>
+                                                                        <input id="a-4" class="checkbox-custom" name="amenity[]" value="Internet" type="checkbox" @if(is_array(json_decode($project->amenities))) @if(in_array('Internet',json_decode($project->amenities))) checked @endif @endif>
                                                                         <label for="a-4" class="checkbox-custom-label">Internet</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-5" class="checkbox-custom" name="amenity[]" value="Microwave" type="checkbox" @if(in_array('Microwave',json_decode($project->amenities))) checked @endif>
+                                                                        <input id="a-5" class="checkbox-custom" name="amenity[]" value="Microwave" type="checkbox" @if(is_array(json_decode($project->amenities))) @if(in_array('Microwave',json_decode($project->amenities))) checked @endif @endif>
                                                                         <label for="a-5" class="checkbox-custom-label">Microwave</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-6" class="checkbox-custom" name="amenity[]" value="Smoking Allow" type="checkbox" @if(in_array('Smoking Allow',json_decode($project->amenities))) checked @endif>
+                                                                        <input id="a-6" class="checkbox-custom" name="amenity[]" value="Smoking Allow" type="checkbox" @if(is_array(json_decode($project->amenities))) @if(in_array('Smoking Allow',json_decode($project->amenities))) checked @endif @endif>
                                                                         <label for="a-6" class="checkbox-custom-label">Smoking Allow</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-7" class="checkbox-custom" name="amenity[]" value="Terrace" type="checkbox" @if(in_array('Terrace',json_decode($project->amenities))) checked @endif>
+                                                                        <input id="a-7" class="checkbox-custom" name="amenity[]" value="Terrace" type="checkbox" @if(is_array(json_decode($project->amenities))) @if(in_array('Terrace',json_decode($project->amenities))) checked @endif @endif>
                                                                         <label for="a-7" class="checkbox-custom-label">Terrace</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-8" class="checkbox-custom" name="amenity[]" value="Balcony" type="checkbox" @if(in_array('Balcony',json_decode($project->amenities))) checked @endif>
+                                                                        <input id="a-8" class="checkbox-custom" name="amenity[]" value="Balcony" type="checkbox" @if(is_array(json_decode($project->amenities))) @if(in_array('Balcony',json_decode($project->amenities))) checked @endif @endif>
                                                                         <label for="a-8" class="checkbox-custom-label">Balcony</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-9" class="checkbox-custom" name="amenity[]" value="Icon" type="checkbox" @if(in_array('Icon',json_decode($project->amenities))) checked @endif>
+                                                                        <input id="a-9" class="checkbox-custom" name="amenity[]" value="Icon" type="checkbox" @if(is_array(json_decode($project->amenities))) @if(in_array('Icon',json_decode($project->amenities))) checked @endif @endif>
                                                                         <label for="a-9" class="checkbox-custom-label">Icon</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-10" class="checkbox-custom" name="amenity[]" value="Wi-Fi" type="checkbox" @if(in_array('Wi-Fi',json_decode($project->amenities))) checked @endif>
+                                                                        <input id="a-10" class="checkbox-custom" name="amenity[]" value="Wi-Fi" type="checkbox" @if(is_array(json_decode($project->amenities))) @if(in_array('Wi-Fi',json_decode($project->amenities))) checked @endif @endif>
                                                                         <label for="a-10" class="checkbox-custom-label">Wi-Fi</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-11" class="checkbox-custom" name="amenity[]" value="Beach" type="checkbox" @if(in_array('Beach',json_decode($project->amenities))) checked @endif>
+                                                                        <input id="a-11" class="checkbox-custom" name="amenity[]" value="Beach" type="checkbox" @if(is_array(json_decode($project->amenities))) @if(in_array('Beach',json_decode($project->amenities))) checked @endif @endif>
                                                                         <label for="a-11" class="checkbox-custom-label">Beach</label>
                                                                     </li>
                                                                     <li>
-                                                                        <input id="a-12" class="checkbox-custom" name="amenity[]" value="Parking" type="checkbox" @if(in_array('Parking',json_decode($project->amenities))) checked @endif>
+                                                                        <input id="a-12" class="checkbox-custom" name="amenity[]" value="Parking" type="checkbox" @if(is_array(json_decode($project->amenities))) @if(in_array('Parking',json_decode($project->amenities))) checked @endif @endif>
                                                                         <label for="a-12" class="checkbox-custom-label">Parking</label>
                                                                     </li>
                                                                 </ul>

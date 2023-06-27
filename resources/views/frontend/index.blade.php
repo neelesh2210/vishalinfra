@@ -26,53 +26,54 @@
                     </div>
                     <div class="full_search_box nexio_search lightanic_search hero_search-radius modern">
                         <div class="search_hero_wrapping">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                    <div class="form-group">
-                                        <div class="input-with-icon">
-                                            <select id="location" class="form-control">
-                                                <option value="">Select City</option>
-                                                <option value="1">New Delhi</option>
-                                                <option value="2">Kolkata</option>
-                                                <option value="3">Varanasi</option>
-                                            </select>
+                            <form action="{{route('properties')}}">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-12">
+                                        <div class="form-group">
+                                            <div class="input-with-icon">
+                                                <select id="location" name="location" class="form-control">
+                                                    <option value="">Select City</option>
+                                                    @foreach (App\CPU\PropertyManager::withoutTrash()->groupBy('city')->with('cities')->get() as $city)
+                                                        <option value="{{$city->city}}">{{$city->cities->name}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-12">
+                                        <div class="form-group">
+                                            <div class="input-with-icon">
+                                                <select id="ptypes" name="properties_type" class="form-control">
+                                                    <option value="">All categories</option>
+                                                    <option value="flat_apartment">Flat/ Apartment</option>
+                                                    <option value="residental_house">Residential House</option>
+                                                    <option value="commerical_space">Commercial Space</option>
+                                                    <option value="plot">Plot</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-12 d-md-none d-lg-block">
+                                        <div class="form-group">
+                                            <div class="input-with-icon">
+                                                <select id="price" name="price_range" class="form-control">
+                                                    <option value="">Price Range</option>
+                                                    <option value="40000,1000000">From 40,000 To 10l</option>
+                                                    <option value="60000,2000000">From 60,000 To 20l</option>
+                                                    <option value="70000,3000000">From 70,000 To 30l</option>
+                                                    <option value="80000,4000000">From 80,000 To 40l</option>
+                                                    <option value="90000,5000000">From 90,000 To 50l</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-2 col-sm-12 small-padd">
+                                        <div class="form-group none">
+                                            <button class="btn search-btn"><i class="fa fa-search"></i></button>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                    <div class="form-group">
-                                        <div class="input-with-icon">
-                                            <select id="ptypes" class="form-control">
-                                                <option value="">Property Type</option>
-                                                <option value="1">All categories</option>
-                                                <option value="2">Flat/ Apartment</option>
-                                                <option value="3">Residential House</option>
-                                                <option value="4">Commercial Space</option>
-                                                <option value="5">Plot</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-sm-12 d-md-none d-lg-block">
-                                    <div class="form-group">
-                                        <div class="input-with-icon">
-                                            <select id="price" class="form-control">
-                                                <option value="">Price Range</option>
-                                                <option value="1">From 40,000 To 10l</option>
-                                                <option value="2">From 60,000 To 20l</option>
-                                                <option value="3">From 70,000 To 30l</option>
-                                                <option value="3">From 80,000 To 40l</option>
-                                                <option value="3">From 90,000 To 50l</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-1 col-md-2 col-sm-12 small-padd">
-                                    <div class="form-group none">
-                                        <a href="#" class="btn search-btn"><i class="fa fa-search"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -131,14 +132,14 @@
             <div class="row justify-content-center">
                 <div class="col-lg col-md-4">
                     <div class="property_cats_boxs">
-                        <a href="#" class="category-box">
+                        <a href="{{route('properties')}}?properties_type=flat_apartment" class="category-box">
                             <div class="property_category_short">
                                 <div class="category-icon clip-3">
                                     <i class="flaticon-apartments"></i>
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
                                     <h4>Flat/ Apartment</h4>
-                                    <p>300 Property</p>
+                                    <p>{{App\CPU\PropertyManager::withoutTrash()->where('properties_type','flat_apartment')->get()->count()}} Property</p>
                                 </div>
                             </div>
                         </a>
@@ -146,14 +147,14 @@
                 </div>
                 <div class="col-lg col-md-4">
                     <div class="property_cats_boxs">
-                        <a href="#" class="category-box">
+                        <a href="{{route('properties')}}?properties_type=residental_house" class="category-box">
                             <div class="property_category_short">
                                 <div class="category-icon clip-5">
                                     <i class="flaticon-modern-house-4"></i>
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
                                     <h4>Residential House</h4>
-                                    <p>80 Property</p>
+                                    <p>{{App\CPU\PropertyManager::withoutTrash()->where('properties_type','residental_house')->get()->count()}} Property</p>
                                 </div>
                             </div>
                         </a>
@@ -161,14 +162,14 @@
                 </div>
                 <div class="col-lg col-md-4">
                     <div class="property_cats_boxs">
-                        <a href="#" class="category-box">
+                        <a href="{{route('properties')}}?properties_type=commerical_space" class="category-box">
                             <div class="property_category_short">
                                 <div class="category-icon clip-4">
                                     <i class="flaticon-student-housing"></i>
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
                                     <h4>Commercial Space</h4>
-                                    <p>80 Property</p>
+                                    <p>{{App\CPU\PropertyManager::withoutTrash()->where('properties_type','commerical_space')->get()->count()}} Property</p>
                                 </div>
                             </div>
                         </a>
@@ -176,14 +177,14 @@
                 </div>
                 <div class="col-lg col-md-4">
                     <div class="property_cats_boxs">
-                        <a href="#" class="category-box">
+                        <a href="{{route('properties')}}?properties_type=plot" class="category-box">
                             <div class="property_category_short">
                                 <div class="category-icon clip-1">
                                     <i class="flaticon-beach-house-2"></i>
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
                                     <h4>Plot</h4>
-                                    <p>122 Home</p>
+                                    <p>{{App\CPU\PropertyManager::withoutTrash()->where('properties_type','plot')->get()->count()}} Home</p>
                                 </div>
                             </div>
                         </a>

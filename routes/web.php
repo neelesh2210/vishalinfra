@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PlanController;
+use App\Http\Controllers\EnquiryController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\PropertyController;
@@ -54,6 +55,9 @@ Route::get('plan',[PlanController::class,'plan'])->name('plan');
 Route::get('properties',[PropertyController::class,'propertyList'])->name('properties');
 Route::get('/{slug}',[PropertyController::class,'detail'])->name('property.detail');
 
+//Enquiry
+Route::post('enquiry-store',[EnquiryController::class,'store'])->name('enquiry.store');
+
 Route::group(['middleware'=>['auth:web']],function () {
 
     Route::group(['prefix'=>'user','as'=>'user.'],function () {
@@ -85,6 +89,8 @@ Route::group(['middleware'=>['auth:web']],function () {
         Route::post('store-project',[ProjectController::class,'store'])->name('store.project');
         Route::get('edit-project/{id}',[ProjectController::class,'edit'])->name('edit.project');
         Route::put('update-project/{id}',[ProjectController::class,'update'])->name('update.project');
+
+        Route::get('enquiry-index',[EnquiryController::class,'index'])->name('enquiry.index');
 
         //Logout
         Route::post('logout',[LoginController::class,'logout'])->name('logout');

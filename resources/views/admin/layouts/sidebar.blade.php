@@ -38,6 +38,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{route('admin.enquiry.index')}}" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.enquiry.index'])) active @endif">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>Enquiry</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{route('admin.plan.index')}}" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.plan.index','admin.plan.create','admin.plan.edit'])) active @endif">
                         <i class="nav-icon fas fa-file-alt"></i>
                         <p>Plan</p>

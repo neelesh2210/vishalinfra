@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\StateController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\AmenityController;
 use App\Http\Controllers\Admin\CountryController;
+use App\Http\Controllers\Admin\EnquiryController;
 use App\Http\Controllers\Admin\PincodeController;
 use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -60,6 +61,9 @@ Route::group(['middleware'=>'auth:admin','as'=>'admin.'],function () {
 
     //Sliders
     Route::resource('sliders', SliderController::class);
+
+    //Enquiry
+    Route::get('enquiry-index',[EnquiryController::class,'index'])->name('enquiry.index');
 
     //Change Password
     Route::post('change-password',[DashboardController::class,'changePassword'])->name('change.password');

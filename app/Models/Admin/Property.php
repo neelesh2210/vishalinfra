@@ -2,6 +2,7 @@
 
 namespace App\Models\Admin;
 
+use App\Models\User;
 use App\Models\BookProperty;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -60,5 +61,9 @@ class Property extends Model
 
     public function cities(){
         return $this->belongsTo(City::class,'city');
+    }
+
+    public function addedBy(){
+        return $this->belongsTo(User::class,'added_by');
     }
 }

@@ -6,6 +6,7 @@ use Auth;
 use App\CPU\UserManager;
 use App\CPU\PropertyManager;
 use Illuminate\Http\Request;
+use App\Models\Admin\Project;
 
 class PropertyController extends Controller
 {
@@ -77,17 +78,34 @@ class PropertyController extends Controller
         return view('frontend.user.property.detail',compact('property','users'));
     }
 
-    public function propertyList(){
-        $properties = PropertyManager::withoutTrash()->orderBy('created_at','desc')->paginate(1);
+    public function propertyList(Request $request){
+        $search_property_type = $request->properties_type;
+        $search_location = $request->location;
+        $search_price_range = $request->price_range;
+
+        $properties = PropertyManager::withoutTrash();
+
+        if($search_property_type){
+            $properties = $properties->where('properties_type',$search_property_type);
+        }
+        if($search_location){
+            $properties = $properties->where('city',$search_location);
+        }
+        if($search_price_range){
+            $properties = $properties->whereBetween('final_price',[explode(',',$search_price_range)[0],explode(',',$search_price_range)[1]]);
+        }
+        $properties = $properties->orderBy('created_at','desc')->paginate(10);
+
         return view('frontend.properties',compact('properties'));
     }
 
     public function detail($slug){
         try {
             $property_detail = PropertyManager::withoutTrash()->where('slug',$slug)->first();
-            $similer_properties = PropertyManager::withoutTrash()->where('id','!=',$property_detail->id)->orderBy('created_at','desc')->take(5)->get();
+            $similer_properties = PropertyManager::withoutTrash()->where('id','!=',$property_detail->id)->where('properties_type',$property_detail->properties_type)->orderBy('created_at','desc')->take(10)->get();
+            $projects = Project::where('is_active','1')->take(10)->get();
 
-            return view('frontend.properties_details',compact('property_detail','similer_properties'));
+            return view('frontend.properties_details',compact('property_detail','similer_properties','projects'));
         } catch (\Throwable $th) {
             abort(404);
         }

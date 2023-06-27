@@ -13,7 +13,7 @@
             </li>
             <li><a href="{{ route('user.profile') }}"><i class="fa fa-user-tie"></i>My Profile</a></li>
             <li><a href="{{ route('user.property.index') }}"><i class="fa fa-tasks"></i>My Properties</a></li>
-            <li><a href="#"><i class="fa fa-envelope"></i>Get Leads<span class="notti_coun style-3">3</span></a></li>
+            <li><a href="{{route('user.enquiry.index')}}"><i class="fa fa-envelope"></i>Get Leads<span class="notti_coun style-3">3</span></a></li>
             <li><a href="#"><i class="fa fa-gift"></i> Subscription Status <span class="expiration">10 days left</span></a></li>
             <li><a href="{{route('user.property.listing')}}"><i class="fa fa-pen-nib"></i>Submit New Property</a></li>
             @if(Auth::guard('web')->user()->type == 'builder')

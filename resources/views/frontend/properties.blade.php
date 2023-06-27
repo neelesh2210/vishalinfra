@@ -130,8 +130,8 @@
                                         <div class="_exlio_125">Verified on Site</div>
                                         <div class="list-img-slide">
                                             <div class="click">
-                                                    <a href="{{ route('property.detail',$property->slug) }}">
-                                                        <img src="{{asset('uploads/all/1.jpg')}}" class="img-fluid mx-auto" alt="{{$property->name}}" />
+                                                    <a href="{{uploaded_asset($property->thumbnail_img)}}">
+                                                        <img src="{{uploaded_asset($property->thumbnail_img)}}" class="img-fluid mx-auto" alt="{{$property->name}}" />
                                                     </a>
                                             </div>
                                         </div>
@@ -162,10 +162,15 @@
                                         <div class="price-features-wrapper">
                                             <div class="block-body">
                                                 <ul class="avl-features third">
-                                                    <li class="active">3 BHK</li>
-                                                    <li class="active">Balcony</li>
-                                                    <li class="active">Corner Plot</li>
-                                                    <li class="active">Semi-Furnished</li>
+                                                    @if($property->bedroom)
+                                                        <li class="active">{{$property->bedroom}} BHK</li>
+                                                        <li class="active">Balcony</li>
+                                                        {{-- <li class="active">Corner Plot</li> --}}
+                                                        <li class="active">{{ucwords(str_replace('-',' ',$property->furnished_status))}}</li>
+                                                    @else
+                                                        <li class="active">{{$property->plot_length}} Length</li>
+                                                        <li class="active">{{$property->plot_breadth}} Breadth</li>
+                                                    @endif
                                                 </ul>
                                             </div>
                                         </div>
