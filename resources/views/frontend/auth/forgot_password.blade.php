@@ -5,7 +5,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-9 m-auto ">
                     <div class="row resp_log_wrap m-2">
-                        <div class="resp_log_thumb" style="background:url({{ asset('frontend/assets/img/log.jpg') }})no-repeat;"></div>
+                        <div class="resp_log_thumb">
+                            <img class="img-fluid" src="{{ asset('frontend/assets/img/log.jpg') }}">
+                        </div>
                         <div class="resp_log_caption">
                             <div class="login-form">
                                 <h3>Forgot Password</h3>

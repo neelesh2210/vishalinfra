@@ -14,84 +14,10 @@
     <section class="gray pt-4">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="page-sidebar p-0">
-                        <div class="sidebar-widgets p-4">
-                            <h4>Fillter Property</h4>
-                            <div class="form-group">
-                                <div class="input-with-icon">
-                                    <input type="text" class="form-control" placeholder="Search Here">
-                                    <i class="ti-search"></i>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-with-icon">
-                                    <input type="text" class="form-control" placeholder="Location">
-                                    <i class="ti-location-pin"></i>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="simple-input">
-                                    <select id="ptype" class="form-control">
-                                        <option value="">Property Type</option>
-                                        <option value="1">Apartment</option>
-                                        <option value="3">Family</option>
-                                        <option value="4">Houses</option>
-                                        <option value="5">Villa</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="form-group">
-                                        <div class="simple-input">
-                                            <input type="text" class="form-control" placeholder="Min Area">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="form-group">
-                                        <div class="simple-input">
-                                            <input type="text" class="form-control" placeholder="Max Area">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12 pt-4 pb-4">
-                                    <h6>Choose Price</h6>
-                                    <div class="rg-slider">
-                                        <input type="text" class="js-range-slider" name="my_range" value="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12 pt-4">
-                                    <h6>Advance Features</h6>
-                                    <ul class="row p-0 m-0">
-                                        <li class="col-lg-6 col-md-6 p-0">
-                                            <input id="a-1" class="checkbox-custom" name="a-1" type="checkbox">
-                                            <label for="a-1" class="checkbox-custom-label">Air Condition</label>
-                                        </li>
-                                        <li class="col-lg-6 col-md-6 p-0">
-                                            <input id="a-2" class="checkbox-custom" name="a-2" type="checkbox">
-                                            <label for="a-2" class="checkbox-custom-label">Bedding</label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12 pt-4">
-                                    <button class="btn theme-bg rounded full-width">Find New Home <i class="fa fa-search"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-lg-8 col-md-12 col-sm-12">
                     <div class="row justify-content-center">
                         @foreach($properties as $property)
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-3">
                                 <div class="property-listing list_view row m-0">
                                     <div class="col-md-4 p-0">
                                         <div class="_exlio_125">Verified on Site</div>
@@ -180,6 +106,26 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="p-0">
+                        <div class="sider_blocks_wrap">
+                            <div class="side-booking-body">
+                                <div class="agent-_blocks_title">
+                                    <div class="agent-_blocks_thumb"><img src="{{ asset('frontend/assets/img/profile.png')}}" alt=""></div>
+                                    <div class="agent-_blocks_caption">
+                                        <h4><a href="#">Customer Support</a></h4>
+                                        <span class="approved-agent"><i class="ti-check"></i>approved</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <a href="#" class="agent-btn-contact" data-toggle="modal" data-target="#autho-message"><i class="ti-comment-alt"></i>Message</a>
+                                <span id="number" data-last="+91-1234567890">
+                                    <span><a href="tel:+91-1234567890">+91-1234567890</a></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -198,4 +144,47 @@
             </div>
         </div>
     </section>
+
+    			<!-- Send Message -->
+			<div class="modal fade" id="autho-message" tabindex="-1" role="dialog" aria-labelledby="authomessage" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+					<div class="modal-content" id="authomessage">
+						<span class="mod-close" data-dismiss="modal" aria-hidden="true"><i class="ti-close"></i></span>
+						<div class="modal-body">
+							<h4 class="modal-header-title">Drop Message</h4>
+							<div class="login-form">
+								<form>
+                                    <div class="form-group">
+										<div class="input-with-icons">
+											<input type="text" class="form-control" placeholder="Enter Name">
+										</div>
+									</div>
+                                    <div class="form-group">
+										<div class="input-with-icons">
+											<input type="text" class="form-control" placeholder="Enter Phone No.">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-with-icons">
+											<input type="text" class="form-control" placeholder="Message Title">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<div class="input-with-icons">
+											<textarea class="form-control ht-80" placeholder="Message"></textarea>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<button type="submit" class="btn btn-md full-width pop-login">Send Message</button>
+									</div>
+
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Modal -->
 @endsection
