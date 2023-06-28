@@ -202,7 +202,7 @@
             <div class="row">
                 <div class="col-12 col-md-12">
                     <div class="sec-heading">
-                        <h2>New Project Gallery</h2>
+                        <h2>Related Products</h2>
                     </div>
                 </div>
             </div>
