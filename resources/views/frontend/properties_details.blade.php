@@ -224,7 +224,7 @@
                                 <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
                                     <div class="property-listing list_view row m-0">
                                         <div class="col-md-4 p-0">
-                                            <div class="_exlio_125">Sponsored</div>
+                                            <div class="_exlio_125">{{ $similer_property->properties_type }}</div>
                                             <div class="project">
                                                 <a href="{{ route('property.detail',$similer_property->slug) }}"><img src="{{uploaded_asset($similer_property->thumbnail_img)}}"
                                                         class="img-fluid mx-auto" alt="" /></a>
@@ -236,19 +236,18 @@
                                                     <div class="_card_list_flex">
                                                         <div class="_card_flex_01">
                                                             <h5><a href="#" class="prt-link-detail">{{ $similer_property->name }}
-                                                                    Estate
                                                                 </a></h5>
                                                         </div>
                                                     </div>
                                                     <div class="_card_list_flex">
                                                         <div class="_card_flex_01">
                                                             <h4 class="listing-name verified"><a href="#"
-                                                                    class="prt-link-detail">{{ $similer_property->city }}
-                                                                    India</a></h4>
+                                                                    class="prt-link-detail">Varanasi, India
+                                                            </a></h4>
                                                         </div>
                                                     </div>
                                                     <div class="_card_flex_last">
-                                                        <h6 class="listing-card-info-price mb-0">₹{{ $similer_property->final_price }} <span><del>{{ $similer_property->price }}</del></span></spa></h6>
+                                                        <h6 class="listing-card-info-price mb-0">₹{{ $similer_property->discounted_price }} <span><del>{{ $similer_property->final_price }}</del></span></h6>
                                                     </div>
                                                 </div>
                                             </div>
