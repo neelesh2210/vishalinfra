@@ -235,7 +235,7 @@
                                                 <div class="listing-short-detail-wrap">
                                                     <div class="_card_list_flex">
                                                         <div class="_card_flex_01">
-                                                            <h5><a href="#" class="prt-link-detail">Red Carpet Real
+                                                            <h5><a href="#" class="prt-link-detail">{{ $similer_property->name }}
                                                                     Estate
                                                                 </a></h5>
                                                         </div>
@@ -243,7 +243,7 @@
                                                     <div class="_card_list_flex">
                                                         <div class="_card_flex_01">
                                                             <h4 class="listing-name verified"><a href="#"
-                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh,
+                                                                    class="prt-link-detail">{{ $similer_property->city }}
                                                                     India</a></h4>
                                                         </div>
                                                     </div>
