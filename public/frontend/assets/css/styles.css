@@ -7127,7 +7127,7 @@ span.tag_t {
 .property-listing.property-2 .listing-name {
     font-size: 17px;
     position: relative;
-    margin-bottom: 3px;
+    margin-bottom: 0px;
     font-weight: 500;
     line-height: 1.4;
     overflow: hidden;
