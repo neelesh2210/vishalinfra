@@ -10365,7 +10365,7 @@ span.mod-close {
     padding:2.5rem;
 }
 .resp_log_caption label {
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 500;
     color: #2a3961;
 }
@@ -14479,6 +14479,9 @@ h1, .h1 {
 
 
 @media (max-width: 767px) {
+    .resp_log_caption label {
+        font-size: 12px;
+    }
     .btn.pop-login {
         padding: 10px 0;
     }
