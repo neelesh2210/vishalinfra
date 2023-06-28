@@ -2985,7 +2985,7 @@ outline:none;
 }
 /*------------ GLobal Settings: All Forms Style ---------------*/
 .frm_submit_block {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 .form-control {
     height:50px;
@@ -5331,15 +5331,15 @@ span.like-listing {
     width: 1%;
     border: none;
     margin: 0;
-    height:74px;
-	padding-left:3rem;
+    height:55px;
+	padding-left:2.5rem;
 }
 
 .simple-search-wrap .pk-input-group .pk-subscribe-submit {
     background:#234ca0;
     border: 1px solid #234ca0;
     margin: 10px;
-    padding: 0rem 1.5rem;
+    padding: 0 10px;
     border-radius: 3px;
     cursor: pointer;
     text-transform: capitalize;
@@ -10365,7 +10365,7 @@ span.mod-close {
     padding:2.5rem;
 }
 .resp_log_caption label {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
     color: #2a3961;
 }
@@ -14479,6 +14479,65 @@ h1, .h1 {
 
 
 @media (max-width: 767px) {
+    .btn.pop-login {
+        padding: 10px 0;
+    }
+    [type="radio"]:checked + label, [type="radio"]:not(:checked) + label {
+        position: relative;
+        padding-left: 17px;
+        cursor: pointer;
+        line-height: 14px;
+        display: inline-block;
+    }
+    [type="radio"]:checked + label:before, [type="radio"]:not(:checked) + label:before {
+        width: 15px;
+        height: 15px;
+    }
+    [type="radio"]:checked + label:after, [type="radio"]:not(:checked) + label:after {
+        width: 9px;
+        height: 9px;
+    }
+    .form-check-inline {
+        margin-right: 0.25rem;
+    }
+    .resp_log_caption {
+        flex: 1;
+        padding: 1rem 1.5rem;
+    }
+    .property-listing.list_view .slick-slide img, .property-listing.list_view .list-img-slide img {
+        height: 175px;
+        width: 100%;
+    }
+    .avl-features li:before {
+        content: "\f00c";
+        font-family: Fontawesome;
+        position: absolute;
+        color: #6b7490;
+        width: 15px;
+        height: 15px;
+        background: #e9ebf1;
+        text-align: center;
+        line-height: 15px;
+        border-radius: 50%;
+        left: 0;
+        top: 1px;
+        font-size: 8px;
+    }
+
+    .avl-features li {
+        font-size: 10px;
+        padding-left: 18px;
+        margin: 0;
+    }
+    .listing-card-info-price {
+        position: relative;
+        font-size: 15px;
+        color: #234ca0;
+        line-height: 1;
+    }
+    .phn-pd-0{
+        padding: 0 !important;
+    }
     .property-listing.property-2 .listing-img-wrapper img {
         max-height: 125px;
         min-height: 125px;
@@ -14660,6 +14719,9 @@ h1, .h1 {
 	.featured_slick_gallery-slide .featured_slick_padd {
 		padding: 0rem;
 	}
+    .featured_slick_padd img{
+         height: 220px;
+    }
 	.foot-news {
 		display: block;
 		margin-bottom:2rem;

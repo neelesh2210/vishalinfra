@@ -29,7 +29,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-8">
+                                    <div class="col-md-8 phn-pd-0">
                                         <div class="listing-detail-wrapper mt-1">
                                             <div class="listing-short-detail-wrap">
                                                 <div class="_card_list_flex mb-2">

@@ -9,7 +9,11 @@
                         <div class="nav-toggle"></div>
                         <div class="mobile_nav">
                             <ul>
+                                @if(!Auth::guard('web')->user())
                                 <li><a href="{{route('signin')}}"><i class="fas fa-user-circle fa-lg"></i></a></li>
+                                @else
+                                <li><a href="{{route('user.dashboard')}}"><i class="fas fa-user-circle fa-lg"></i></a></li>
+                                @endif
                             </ul>
                         </div>
                     </div>
