@@ -301,7 +301,7 @@ $(function() {
 
 	// Property Slide
 	$('.item-slide').slick({
-	  slidesToShow:4,
+	  slidesToShow:5,
 	  arrows: true,
 	  dots: false,
 	  infinite: true,
@@ -321,7 +321,7 @@ $(function() {
 		  settings: {
 			arrows: true,
 			dots: false,
-			slidesToShow:1
+			slidesToShow:2
 		  }
 		}
 	  ]

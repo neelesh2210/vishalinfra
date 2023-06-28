@@ -7083,8 +7083,6 @@ span.tag_t {
 .property-listing.property-2 .listing-img-wrapper {
     overflow: hidden;
 	position:relative;
-	min-height: 220px;
-    max-height: 220px;
 }
 /* .list-img-slide {
     overflow: hidden;
@@ -7111,12 +7109,12 @@ span.tag_t {
     bottom: 0;
 }
 .property-listing.property-2 .listing-img-wrapper img{
-	max-height: 220px;
-    min-height: 220px;
+	max-height: 175px;
+    min-height: 175px;
 	width: 100%;
 }
 .property-listing.property-2 .listing-detail-wrapper {
-    padding:1rem 1rem;
+    padding:10px;
     width: 100%;
     display: flex;
     vertical-align: middle;
@@ -7390,7 +7388,7 @@ span._list_blickes.types {
 
 .listing-card-info-price {
 	position:relative;
-    font-size:20px;
+    font-size:18px;
     color:#234ca0;
 	line-height:1.4;
 }
@@ -7536,7 +7534,7 @@ span._list_blickes.types {
 	color: #808fa0;
 }
 .listing-detail-footer {
-    padding: 10px 14px 12px 14px;
+    padding: 10px 10px 11px 10px;
     border-top: 1px solid #e4e8f3;
     display: flex;
     align-items: center;
@@ -7570,15 +7568,16 @@ span._list_blickes.types {
 	float: left;
 }
 .footer-flex .prt-view {
-    padding: 4px 18px;
+    padding: 4px 12px;
     color: #ffffff !important;
     background: #ff5f20;
-    border-radius:0.2rem;
-    height: 32px;
-	font-weight: 500;
+    border-radius: 0.2rem;
+    height: 30px;
+    font-weight: 500;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    font-size: 14px;
 }
 .call-view{
     padding: 4px 18px;
@@ -14480,6 +14479,50 @@ h1, .h1 {
 
 
 @media (max-width: 767px) {
+    .property-listing.property-2 .listing-img-wrapper img {
+        max-height: 125px;
+        min-height: 125px;
+        width: 100%;
+    }
+    .category-box .property_category_short i{
+        font-size:32px;
+    }
+    .category-box .property_category_short .category-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0.5rem auto 0.25rem;
+    }
+    .category-box {
+        position: relative;
+        height: 130px;
+        margin-bottom: 25px;
+    }
+    .property-listing.property-2 .listing-detail-wrapper {
+        padding: 2px 5px 7px;
+    }
+    .sec-heading {
+        margin-bottom: 1rem;
+    }
+    span.property-type.elt_rent {
+        padding: 5px;
+        font-size: 7px;
+    }
+    .latest_new_post{
+        font-size: 12px;
+    }
+    .property-listing.property-2 .listing-name {
+        font-size: 12px;
+        margin-bottom: 0px;
+        line-height: 1;
+    }
+    .listing-detail-footer {
+        padding: 5px 8px 5px;
+        min-height: 40px;
+        max-height: 42px;
+    }
+    .category-box .property_category_short .property_category_expand h4 {
+        font-size: 12px;
+    }
     .btn.btn-call_action_wrap {
         background: #ffffff;
         padding: 10px 20px !important;
@@ -14491,14 +14534,18 @@ h1, .h1 {
     }
     .default-btn {
         padding: 5px 5px!important;
-        font-size: 12px;
+        font-size: 11px !important;
+    }
+    section.min {
+        padding: 40px 0 20px;
+        position: relative;
     }
     .page-title {
         width: 100%;
         min-height: 90px;
     }
     h2 {
-        line-height: 28px;
+        line-height: 22px;
         font-size: 22px;
     }
     .submit-page{
@@ -14520,8 +14567,9 @@ h1, .h1 {
 		font-weight: 600;
 	}
 	.footer-flex .prt-view, .call-view {
-		padding: 4px 12px;
-		font-size: 13px;
+        padding: 1px 6px;
+        font-size: 9px;
+        height: 22px;
 	}
 
 	ul.prs_lists li {
@@ -15140,12 +15188,12 @@ h1, .h1 {
     font-weight: 500;
 }
 .default-btn {
-    padding: 10px 18px;
+    padding: 10px 15px;
     color: #fff !important;
     text-align: center;
     position: relative;
     overflow: hidden;
-    font-size: 14px;
+    font-size: 12px;
     z-index: 1;
     text-transform: capitalize;
     background-color: #004e9d;

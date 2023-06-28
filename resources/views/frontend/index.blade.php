@@ -130,7 +130,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg col-md-4">
+                <div class="col-lg col-md-4 col-xs-6">
                     <div class="property_cats_boxs">
                         <a href="{{route('properties')}}?properties_type=flat_apartment" class="category-box">
                             <div class="property_category_short">
@@ -139,13 +139,13 @@
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
                                     <h4>Flat/ Apartment</h4>
-                                    <p>{{App\CPU\PropertyManager::withoutTrash()->where('properties_type','flat_apartment')->get()->count()}} Property</p>
+                                    {{-- <p>{{App\CPU\PropertyManager::withoutTrash()->where('properties_type','flat_apartment')->get()->count()}} Property</p> --}}
                                 </div>
                             </div>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg col-md-4">
+                <div class="col-lg col-md-4 col-xs-6">
                     <div class="property_cats_boxs">
                         <a href="{{route('properties')}}?properties_type=residental_house" class="category-box">
                             <div class="property_category_short">
@@ -154,13 +154,13 @@
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
                                     <h4>Residential House</h4>
-                                    <p>{{App\CPU\PropertyManager::withoutTrash()->where('properties_type','residental_house')->get()->count()}} Property</p>
+                                    {{-- <p>{{App\CPU\PropertyManager::withoutTrash()->where('properties_type','residental_house')->get()->count()}} Property</p> --}}
                                 </div>
                             </div>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg col-md-4">
+                <div class="col-lg col-md-4 col-xs-6">
                     <div class="property_cats_boxs">
                         <a href="{{route('properties')}}?properties_type=commerical_space" class="category-box">
                             <div class="property_category_short">
@@ -169,13 +169,13 @@
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
                                     <h4>Commercial Space</h4>
-                                    <p>{{App\CPU\PropertyManager::withoutTrash()->where('properties_type','commerical_space')->get()->count()}} Property</p>
+                                    {{-- <p>{{App\CPU\PropertyManager::withoutTrash()->where('properties_type','commerical_space')->get()->count()}} Property</p> --}}
                                 </div>
                             </div>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg col-md-4">
+                <div class="col-lg col-md-4 col-xs-6">
                     <div class="property_cats_boxs">
                         <a href="{{route('properties')}}?properties_type=plot" class="category-box">
                             <div class="property_category_short">
@@ -184,7 +184,7 @@
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
                                     <h4>Plot</h4>
-                                    <p>{{App\CPU\PropertyManager::withoutTrash()->where('properties_type','plot')->get()->count()}} Home</p>
+                                    {{-- <p>{{App\CPU\PropertyManager::withoutTrash()->where('properties_type','plot')->get()->count()}} Home</p> --}}
                                 </div>
                             </div>
                         </a>
@@ -453,7 +453,7 @@
             </div>
         </div>
     </section> --}}
-    <section class="min">
+    <section class="min gray-simple">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-9 col-md-9">

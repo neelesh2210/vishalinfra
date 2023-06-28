@@ -197,19 +197,12 @@
         </div>
     </section>
 
-    <section class="min">
+    <section class="min gray-simple">
         <div class="container">
             <div class="row">
-                <div class="col-9 col-md-9">
+                <div class="col-12 col-md-12">
                     <div class="sec-heading">
                         <h2>New Project Gallery</h2>
-                    </div>
-                </div>
-                <div class="col-3 col-md-3">
-                    <div class="float-end mt-2">
-                        <a href="#" class="default-btn border-radius">
-                            View All <i class="fas fa-chevron-circle-right"></i>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -365,7 +358,7 @@
             </div>
         </div>
     </section> --}}
-    <section class="pt-0">
+    <section class="min">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12 col-md-12">
