@@ -197,7 +197,90 @@
         </div>
     </section>
 
-    <section class="pt-0">
+    <section class="min">
+        <div class="container">
+            <div class="row">
+                <div class="col-9 col-md-9">
+                    <div class="sec-heading">
+                        <h2>New Project Gallery</h2>
+                    </div>
+                </div>
+                <div class="col-3 col-md-3">
+                    <div class="float-end mt-2">
+                        <a href="#" class="default-btn border-radius">
+                            View All <i class="fas fa-chevron-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="list_views">
+                        <!-- Single Item -->
+                        <div class="single_items">
+                            <div class="row">
+                                @foreach ($similer_properties as $similer_property)
+                                <!-- Single Property -->
+                                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
+                                    <div class="property-listing list_view row m-0">
+                                        <div class="col-md-4 p-0">
+                                            <div class="_exlio_125">Sponsored</div>
+                                            <div class="project">
+                                                <a href="{{ route('property.detail',$similer_property->slug) }}"><img src="{{uploaded_asset($similer_property->thumbnail_img)}}"
+                                                        class="img-fluid mx-auto" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 pr-0">
+                                            <div class="listing-detail-wrapper mt-1">
+                                                <div class="listing-short-detail-wrap">
+                                                    <div class="_card_list_flex">
+                                                        <div class="_card_flex_01">
+                                                            <h5><a href="#" class="prt-link-detail">Red Carpet Real
+                                                                    Estate
+                                                                </a></h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="_card_list_flex">
+                                                        <div class="_card_flex_01">
+                                                            <h4 class="listing-name verified"><a href="#"
+                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh,
+                                                                    India</a></h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="_card_flex_last">
+                                                        <h6 class="listing-card-info-price mb-0">₹{{ $similer_property->final_price }} <span><del>{{ $similer_property->price }}</del></span></spa></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="listing-detail-footer">
+                                                <div class="footer-first">
+                                                    <div class="foot-rate">
+                                                        <span>Marketed by VHV Builders Pvt. Ltd.</span>
+                                                    </div>
+                                                </div>
+                                                <div class="footer-flex">
+                                                    <a href="{{ route('property.detail',$similer_property->slug) }}" class="prt-view">View <i
+                                                            class="fas fa-chevron-right pl-1"></i>
+                                                        @if ($similer_property->pincode)
+                                                            {{ $similer_property->city }}, {{ $similer_property->state }},
+                                                            {{ $similer_property->country }},{{ $similer_property->pincode }}
+                                                        @endif
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- <section class="pt-0">
         <div class="container">
             <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -208,7 +291,7 @@
                                 <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
                                     <div class="property-listing list_view row m-0">
                                         <div class="col-md-4 p-0">
-                                            {{-- <div class="_exlio_125">Sponsored</div> --}}
+                                            {{-- <div class="_exlio_125">Sponsored</div>
                                             <div class="list-img-slide">
                                                 <a href="{{ route('property.detail',$similer_property->slug) }}"><img src="{{uploaded_asset($similer_property->thumbnail_img)}}" class="img-fluid mx-auto" alt="" /></a>
                                             </div>
@@ -247,7 +330,7 @@
                                                         @if($similer_property->bedroom)
                                                             <li class="active">{{$similer_property->bedroom}} BHK</li>
                                                             <li class="active">Balcony</li>
-                                                            {{-- <li class="active">Corner Plot</li> --}}
+                                                            {{-- <li class="active">Corner Plot</li>
                                                         @else
                                                             <li class="active">{{$similer_property->plot_length}} Length</li>
                                                             <li class="active">{{$similer_property->plot_breadth}} Breadth</li>
@@ -282,7 +365,7 @@
               </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section class="pt-0">
         <div class="container">
             <div class="row justify-content-center">

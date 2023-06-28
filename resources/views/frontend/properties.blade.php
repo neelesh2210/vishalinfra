@@ -90,7 +90,7 @@
                         @endforeach
                     </div>
                     <div class="row justify-content-center pt-3 m-0">
-                        <div class="short_wraping">
+                        <div class="short_wraping mb-3">
                             <div class="row align-items-center">
                                 <div class="col-lg-12 col-md-12 col-sm-12 order-lg-2 order-md-3 col-sm-12">
                                     <div class="shorting_pagination">
