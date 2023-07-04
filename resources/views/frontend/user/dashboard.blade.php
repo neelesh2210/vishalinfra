@@ -12,25 +12,29 @@
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan ">
                                     <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content"><h4>607</h4> <span>Total Property</span></div>
+                                    <div class="dashboard_stats_wrap_content"><h4>{{App\Models\Admin\Property::where('added_by',Auth::guard('web')->user()->id)->get()->count()}}</h4> <span>Total Property</span></div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="dashboard_stats_wrap widget-3 gradient-45deg-red-pink">
                                     <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content"><h4>540</h4> <span>Approved Property</span></div>
+                                    <div class="dashboard_stats_wrap_content"><h4>{{App\Models\Admin\Property::where('added_by',Auth::guard('web')->user()->id)->where('is_status','1')->get()->count()}}</h4> <span>Approved Property</span></div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="dashboard_stats_wrap widget-2 gradient-45deg-amber-amber">
                                     <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content"><h4>580</h4> <span>Total Leads</span></div>
+                                    <div class="dashboard_stats_wrap_content"><h4>{{App\Models\Enquiry::whereHas('property',function($q){
+                                        $q->where('added_by',Auth::guard('web')->user()->id);
+                                    })->get()->count()}}</h4> <span>Total Leads</span></div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
                                     <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content"><h4>580</h4> Consumed Leads<span></span></div>
+                                    <div class="dashboard_stats_wrap_content"><h4>{{App\Models\Enquiry::whereHas('property',function($q){
+                                        $q->where('added_by',Auth::guard('web')->user()->id);
+                                    })->get()->count()}}</h4> Consumed Leads<span></span></div>
                                 </div>
                             </div>
                         </div>

@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\AmenityController;
 use App\Http\Controllers\Admin\CountryController;
 use App\Http\Controllers\Admin\EnquiryController;
 use App\Http\Controllers\Admin\PincodeController;
+use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\Auth\LoginController;
@@ -42,6 +43,9 @@ Route::group(['middleware'=>'auth:admin','as'=>'admin.'],function () {
     Route::resource('cities',CityController::class);
     Route::get('get-cities-by-state',[CityController::class,'getCitiesByState'])->name('get.cities.by.state');
     Route::resource('pincodes',PincodeController::class);
+
+    //Project
+    Route::get('project-index',[ProjectController::class,'index'])->name('project.index');
 
     //Property
     Route::resource('property',PropertyController::class);

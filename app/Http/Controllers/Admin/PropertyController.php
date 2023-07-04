@@ -20,6 +20,7 @@ class PropertyController extends Controller
         $search_city = $request->search_city;
         $search_property = $request->search_property;
         $search_status = $request->search_status;
+        $search_user_type = $request->search_user_type;
 
         $properties = PropertyManager::withoutTrash();
         if($search_property){
@@ -55,6 +56,11 @@ class PropertyController extends Controller
         if($search_status != null){
             $properties = $properties->where('is_status',$search_status);
         }
+        if($search_user_type){
+            $properties = $properties->whereHas('addedBy',function($q) use ($search_user_type){
+                $q->where('type',$search_user_type);
+            });
+        }
         if($search_key){
             $properties = $properties->where('name','like','%'.$search_key.'%');
         }
@@ -62,10 +68,10 @@ class PropertyController extends Controller
         $properties = $properties->orderBy('id','desc')->paginate(15);
 
         if($request->ajax()){
-            return view('admin.property.table',compact('properties','search_key','search_price','search_bedroom','search_room_type','search_city','search_property','search_status'));
+            return view('admin.property.table',compact('properties','search_key','search_price','search_bedroom','search_room_type','search_city','search_property','search_status','search_user_type'));
         }
 
-        return view('admin.property.index',compact('properties','search_key','search_price','search_bedroom','search_room_type','search_city','search_property','search_status'),['page_title'=>'Properties']);
+        return view('admin.property.index',compact('properties','search_key','search_price','search_bedroom','search_room_type','search_city','search_property','search_status','search_user_type'),['page_title'=>'Properties']);
     }
 
     // public function create(){

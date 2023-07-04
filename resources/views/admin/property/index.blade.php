@@ -43,12 +43,12 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <div class="card @if($search_bedroom || $search_room_type || $search_city || $search_property || $search_price || $search_status || $search_key) @else collapsed-card @endif">
+                        <div class="card @if($search_bedroom || $search_room_type || $search_city || $search_property || $search_price || $search_status || $search_key || $search_user_type) @else collapsed-card @endif">
                             <div class="card-header">
                                 <h3 class="card-title">Fillter</h3>
                                 <div class="card-tools">
                                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                        <i class="@if($search_bedroom || $search_room_type || $search_city || $search_property || $search_price || $search_status || $search_key) fas fa-minus @else fas fa-plus @endif"></i>
+                                        <i class="@if($search_bedroom || $search_room_type || $search_city || $search_property || $search_price || $search_status || $search_key || $search_user_type) fas fa-minus @else fas fa-plus @endif"></i>
                                     </button>
                                 </div>
                             </div>
@@ -108,6 +108,15 @@
                                                 <option value="">Select Status...</option>
                                                 <option value="1" @if($search_status == '1') selected @endif>Available</option>
                                                 <option value="0" @if($search_status == '0') selected @endif>Not Available</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 mb-2">
+                                            <label>User Type</label>
+                                            <select name="search_user_type" class="form-control select2" onchange="fillter()">
+                                                <option value="">Select USer Type...</option>
+                                                <option value="buyer_owner" @if($search_user_type == 'buyer_owner') selected @endif>Buyer/Owner</option>
+                                                <option value="agent" @if($search_user_type == 'agent') selected @endif>Agent</option>
+                                                <option value="builder" @if($search_user_type == 'builder') selected @endif>Builder</option>
                                             </select>
                                         </div>
                                         <div class="col-md-3 mb-2 mt-1">

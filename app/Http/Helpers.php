@@ -290,3 +290,23 @@ function compress($src, $dist, $dis_width =500) {
     imagedestroy($new_image);
     return filesize($src);
 }
+
+
+function abreviateTotalCount($value)
+{
+
+    $abbreviations = array(12 => 'T', 9 => 'Cr', 6 => 'Lac', 3 => 'K', 0 => '');
+
+    foreach($abbreviations as $exponent => $abbreviation)
+    {
+
+        if($value >= pow(10, $exponent))
+        {
+
+            return round(floatval($value / pow(10, $exponent))).$abbreviation;
+
+        }
+
+    }
+
+}

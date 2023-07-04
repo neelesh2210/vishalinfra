@@ -43,7 +43,7 @@
                                                     @endif
                                                 </td>
                                                 <td>
-                                                    <b>Property Number:</b> {{$enquiry->property->property_number}} <br>
+                                                    <a href="{{route('property.detail',$enquiry->property->slug)}}" target="_blank"><b>Property Number:</b> {{$enquiry->property->property_number}}</a> <i class="fas fa-external-link-alt"></i> <br>
                                                     <b>Owner Name:</b> {{$enquiry->property->addedBy->name}} ({{$enquiry->property->addedBy->user_name}})
                                                 </td>
                                                 <td class="text-center">{{$enquiry->name}}</td>

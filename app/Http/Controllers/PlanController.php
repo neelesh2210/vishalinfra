@@ -17,6 +17,12 @@ class PlanController extends Controller
         return view('frontend.plan',compact('plans'));
     }
 
+    public function index(){
+        $subsriptions =  PlanPurchase::where('user_id',Auth::guard('web')->user()->id)->get();
+
+        return view('frontend.user.plan.index',compact('subsriptions'));
+    }
+
     public function attemptPlanPurchase(Request $request){
         $plan = Plan::find($request->plan_id);
         $instamojo = new InstamojoController;

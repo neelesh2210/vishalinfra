@@ -20,6 +20,11 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
+                            <a href="{{route('admin.project.index')}}" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.project.index'])) active @endif">
+                                <p>Project</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{route('admin.property.index')}}" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.property.index','admin.property.create','admin.property.edit'])) active @endif">
                                 <p>Properties</p>
                             </a>

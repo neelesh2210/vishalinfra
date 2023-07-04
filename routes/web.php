@@ -79,7 +79,7 @@ Route::group(['middleware'=>['auth:web']],function () {
         Route::view('leads','frontend.user.leads')->name('leads');
 
         //Plan Purchase
-        Route::view('pricing-plan','frontend.user.pricing_plan')->name('pricing_plan');
+        Route::get('subscription-list',[PlanController::class,'index'])->name('subscription.list');
         Route::post('attempt-plan-purchase',[PlanController::class,'attemptPlanPurchase'])->name('attempt.plan.purchase');
         Route::get('instamojo/payment/pay-success',[InstamojoController::class, 'success'])->name('instamojo.success');
 

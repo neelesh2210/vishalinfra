@@ -3,10 +3,10 @@
         <tr>
             <th>#</th>
             <th>Name</th>
-            <th>GEO Code</th>
+            <th>User Detail</th>
             <th>Address</th>
-            <th>Description</th>
-            <th>Action</th>
+            <th>Launch Date</th>
+            <th>Completion Date</th>
         </tr>
     </thead>
     <tbody>
@@ -15,21 +15,12 @@
                 <td>{{($key+1) + ($projects->currentPage() - 1)*$projects->perPage()}}</td>
                 <td>{{$project->name}}</td>
                 <td>
-                    <b>Latitude:</b> {{$project->lat}} <br>
-                    <b>Longitude:</b> {{$project->long}}
+                    <b>Name:</b> {{$project->user->name}} <br>
+                    <b>Phone:</b> {{$project->user->phone}}
                 </td>
-                <td>
-                    <b>Pincode:</b> {{$project->pincode}} <br>
-                    <b>City:</b> {{$project->city}} <br>
-                    <b>State:</b> {{$project->state}} <br>
-                    <b>Country:</b> {{$project->country}}
-                </td>
-                <td>{!!$project->description!!}</td>
-                <td>
-                    <a href="{{route('admin.project.edit',$project->id)}}" class="btn btn-outline-primary btn-sm mr-1 mb-1">
-                        <i class="fas fa-edit "></i>
-                    </a>
-                </td>
+                <td>{{$project->address}}</td>
+                <td>{{$project->launch_date}}</td>
+                <td>{{$project->completion_date}}</td>
             </tr>
         @empty
             <tr class="footable-empty">
@@ -48,7 +39,7 @@
         <p><b>Showing {{($projects->currentpage()-1)*$projects->perpage()+1}} to {{(($projects->currentpage()-1)*$projects->perpage())+$projects->count()}} of {{$projects->total()}} projects</b></p>
     </div>
     <div class="col-md-8 d-flex justify-content-end">
-        {!! $projects->appends(['search_key'=>$search_key])->links() !!}
+        {!! $projects->links() !!}
     </div>
 </div>
 

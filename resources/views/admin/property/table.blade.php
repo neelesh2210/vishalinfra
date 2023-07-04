@@ -18,7 +18,10 @@
 
             <tr>
                 <td class="text-center">{{($key+1) + ($properties->currentPage() - 1)*$properties->perPage()}}</td>
-                <td class="text-center">{{ucwords(str_replace('_',' ',$property->properties_type))}}</td>
+                <td class="text-center">
+                    {{ucwords(str_replace('_',' ',$property->properties_type))}} <br>
+                    <b>User Type:</b> {{ucwords(str_replace('_',' ',$property->addedBy->type))}}
+                </td>
                 <td>
                     <b>Name: </b>{{$property->name}} <br>
                     <b>Plot Area: </b>{{$property->plot_area}} sqft. ({{$property->plot_length}}X{{$property->plot_breadth}})
@@ -91,7 +94,7 @@
         <p><b>Showing {{($properties->currentpage()-1)*$properties->perpage()+1}} to {{(($properties->currentpage()-1)*$properties->perpage())+$properties->count()}} of {{$properties->total()}} Properties</b></p>
     </div>
     <div class="col-md-8 d-flex justify-content-end">
-        {!! $properties->appends(['search_key'=>$search_key,'search_price'=>$search_price,'search_bedroom'=>$search_bedroom,'search_room_type'=>$search_room_type,'search_city'=>$search_city,'search_property'=>$search_property])->links() !!}
+        {!! $properties->appends(['search_key'=>$search_key,'search_price'=>$search_price,'search_bedroom'=>$search_bedroom,'search_room_type'=>$search_room_type,'search_city'=>$search_city,'search_property'=>$search_property,'search_user_type'=>$search_user_type])->links() !!}
     </div>
 </div>
 

@@ -213,7 +213,7 @@
             <div class="row justify-content-center">
                 <div class="col-9 col-md-9">
                     <div class="sec-heading">
-                        <h2>Popular Owner Properties</h2>
+                        <h2>Popular Properties</h2>
                     </div>
                 </div>
                 <div class="col-3 col-md-3">
@@ -268,7 +268,7 @@
                                     </div>
                                     <div class="listing-detail-footer">
                                         <div class="footer-first">
-                                            <h6 class="listing-card-info-price mb-0 p-0">₹{{ $property->final_price }}</h6>
+                                            <h6 class="listing-card-info-price mb-0 p-0">₹{{ abreviateTotalCount($property->final_price) }}</h6>
                                         </div>
                                         <div class="footer-flex">
                                             <a href="{{ route('property.detail',$property->slug) }}" class="prt-view">View Detail</a>
@@ -573,10 +573,84 @@
                                     </div>
                                     <div class="listing-detail-footer">
                                         <div class="footer-first">
-                                            <h6 class="listing-card-info-price mb-0 p-0">₹{{ $featured_property->final_price }}</h6>
+                                            <h6 class="listing-card-info-price mb-0 p-0">₹{{ abreviateTotalCount($featured_property->final_price) }}</h6>
                                         </div>
                                         <div class="footer-flex">
                                             <a href="{{ route('property.detail',$featured_property->slug) }}" class="prt-view">View Detail</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="min">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-9 col-md-9">
+                    <div class="sec-heading">
+                        <h2>Most Demanded Properties</h2>
+                    </div>
+                </div>
+                <div class="col-3 col-md-3">
+                    <div class="float-end mt-2">
+                        <a href="#" class="default-btn border-radius">
+                            View All <i class="fas fa-chevron-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="item-slide space">
+                        @foreach ($most_demanded_properties as $most_demanded_property)
+                            <div class="single_items">
+                                <div class="property-listing property-2">
+                                    <div class="listing-img-wrapper">
+                                        <div class="list-img-slide">
+                                            <a href="{{ route('property.detail',$most_demanded_property->slug) }}">
+                                                <img src="{{uploaded_asset($most_demanded_property->thumbnail_img)}}"
+                                                    class="img-fluid mx-auto" alt="" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="listing-detail-wrapper">
+                                        <div class="listing-short-detail-wrap">
+                                            <div class="_card_list_flex mb-2">
+                                                <div class="_card_flex_01">
+                                                    <span class="property-type elt_rent">{{ucwords(str_replace('_',' ',$most_demanded_property->properties_type))}}</span>
+                                                </div>
+                                                <div class="_card_flex_last">
+                                                    <div class="prt_saveed_12lk">
+                                                        <span class="latest_new_post hot">{{ $most_demanded_property->carpet_area }} sqft</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="listing-short-detail">
+                                                <h4 class="listing-name verified"><a href="{{ route('property.detail',$most_demanded_property->slug) }}"
+                                                        class="prt-link-detail">{{ $most_demanded_property->name }}</a></h4>
+                                                @if ($most_demanded_property->pincode || $most_demanded_property->address)
+                                                    <div class="foot-location">
+                                                        <img src="{{ asset('frontend/assets/img/pin.svg') }}"
+                                                            width="18" alt="" />{{ $most_demanded_property->address }}
+                                                        @if ($most_demanded_property->pincode)
+                                                            {{ $most_demanded_property->city }}, {{ $most_demanded_property->state }},
+                                                            {{ $most_demanded_property->country }},{{ $most_demanded_property->pincode }}
+                                                        @endif
+                                                    </div>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="listing-detail-footer">
+                                        <div class="footer-first">
+                                            <h6 class="listing-card-info-price mb-0 p-0">₹{{ abreviateTotalCount($most_demanded_property->final_price) }}</h6>
+                                        </div>
+                                        <div class="footer-flex">
+                                            <a href="{{ route('property.detail',$most_demanded_property->slug) }}" class="prt-view">View Detail</a>
                                         </div>
                                     </div>
                                 </div>

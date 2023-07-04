@@ -490,7 +490,7 @@
                                                 <input type="number" step="0.01" min="0.00" class="form-control" name="booking_amount" placeholder="Booking Amount...">
                                             </div>
                                             <div class="col-md-4 mb-2">
-                                                <label class="col-from-label">Maintenance Charge</label>
+                                                <label class="col-from-label">Maintenance Charge (in amount)</label>
                                                 <input type="number" step="0.01" min="0.00" class="form-control" name="maintenance_charge" placeholder="Maintenance Charge...">
                                             </div>
                                             <div class="col-md-4 mb-2">
@@ -555,9 +555,9 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label>Image</label>
+                                                    <label>Thumbnail Image (main image)</label>
                                                     <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="false">
-                                                        <div class="form-control file-amount">Choose Gallery Image</div>
+                                                        <div class="form-control file-amount">Choose Thumbnail Image</div>
                                                         <input type="hidden" name="image" class="selected-files">
                                                         <div class="input-group-prepend">
                                                             <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
