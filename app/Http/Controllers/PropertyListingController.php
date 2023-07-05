@@ -16,7 +16,7 @@ class PropertyListingController extends Controller
     public function index(){
         $properties = PropertyManager::withoutTrash()->where('added_by',Auth::guard('web')->user()->id)->with('planPurchase')->orderBy('id','desc')->paginate(15);
 
-        return view('frontend.user.property.index',compact('properties'));
+        return view('frontend.user.property.index',compact('properties'),['page_title'=>'My Properties']);
     }
 
     public function create(){
@@ -28,13 +28,13 @@ class PropertyListingController extends Controller
         if($register_properties->count() >= 1){
             $times = $register_properties->count();
             if($plan_purchases->count() != 0){
-                return view('frontend.user.property.create',compact('times','plan_purchases','projects'));
+                return view('frontend.user.property.create',compact('times','plan_purchases','projects'),['page_title'=>'Add New Property']);
             }else{
                 return redirect()->route('plan');
             }
         }else{
             $times = 0;
-            return view('frontend.user.property.create',compact('times','plan_purchases','projects'));
+            return view('frontend.user.property.create',compact('times','plan_purchases','projects'),['page_title'=>'Add New Property']);
         }
     }
 

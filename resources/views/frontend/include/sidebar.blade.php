@@ -12,7 +12,10 @@
                     {{-- <span class="notti_coun style-1">4</span> --}}
                 </a>
             </li>
-            <li><a href="{{ route('user.profile') }}"><i class="fa fa-user-tie"></i>My Profile</a></li>
+
+            @if(Auth::guard('web')->user()->type == 'builder')
+                <li><a href="{{route('user.project.list')}}"><i class="fa fa-building"></i>My Projects</a></li>
+            @endif
             <li>
                 <a href="{{ route('user.property.index') }}">
                     <i class="fa fa-tasks"></i>My Properties
@@ -22,8 +25,13 @@
                 </a>
             </li>
             <li>
+                <a href="{{route('user.property.listing')}}">
+                    <i class="fa fa-plus-circle"></i>Add New Property
+                </a>
+            </li>
+            <li>
                 <a href="{{route('user.enquiry.index')}}">
-                    <i class="fa fa-envelope"></i>Get Leads
+                    <i class="fa fa-envelope"></i>My Leads
                     <span class="notti_coun style-3">
                         {{App\Models\Enquiry::whereHas('property',function($q){
                             $q->where('added_by',Auth::guard('web')->user()->id);
@@ -31,6 +39,7 @@
                     </span>
                 </a>
             </li>
+            <li><a href="{{ route('user.profile') }}"><i class="fa fa-user-tie"></i>My Profile</a></li>
             <li>
                 <a href="{{route('user.subscription.list')}}">
                     <i class="fa fa-gift"></i> Subscription Status
@@ -52,14 +61,8 @@
                     </span>
                 </a>
             </li>
-            <li>
-                <a href="{{route('user.property.listing')}}">
-                    <i class="fa fa-pen-nib"></i>Submit New Property
-                </a>
-            </li>
-            @if(Auth::guard('web')->user()->type == 'builder')
-                <li><a href="{{route('user.project.list')}}"><i class="fa fa-pen-nib"></i>Add Project</a></li>
-            @endif
+
+
         </ul>
     </div>
     <div class="dash_user_footer">

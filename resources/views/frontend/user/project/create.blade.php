@@ -15,7 +15,7 @@
                                         @csrf
                                         <div class="submit-page">
                                             <div class="frm_submit_block">
-                                                <h3>Basic Information</h3>
+                                                <h3>Project Details</h3>
                                                 <div class="frm_submit_wrap">
                                                     <div class="form-row">
                                                         <div class="form-group col-md-12">
@@ -46,12 +46,12 @@
                                                             <input type="date" class="form-control" name="launch_date">
                                                         </div>
                                                         <div class="form-group col-md-6">
-                                                            <label>Completed in</label>
+                                                            <label>Completion Date</label>
                                                             <input type="date" class="form-control" name="completion_date">
                                                         </div>
                                                         <div class="form-group col-md-6">
-                                                            <label>Project Area</label>
-                                                            <input type="text" class="form-control" name="project_area" placeholder="Project Area">
+                                                            <label>Project Area (in Sqft.)</label>
+                                                            <input type="text" class="form-control" name="project_area" placeholder="Project Area (in Sqft.)">
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label>Total Units</label>
@@ -84,10 +84,7 @@
                                                             </div>
                                                             <div class="file-preview box sm"></div>
                                                         </div>
-                                                        <div class="form-group col-md-12">
-                                                            <label>Why Buy ?</label>
-                                                            <textarea name="why_buy" class="form-control"></textarea>
-                                                        </div>
+
                                                         <div class="form-group col-md-6">
                                                             <label>Floor plan - PDF</label>
                                                             <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="false">
@@ -100,7 +97,7 @@
                                                             <div class="file-preview box sm"></div>
                                                         </div>
                                                         <div class="form-group col-md-4">
-                                                            <label>Add videos</label>
+                                                            <label>Add video URL (Youtube Embedd URL)</label>
                                                             <input type="text" class="form-control" name="videos[]" placeholder="Option to add videos">
                                                         </div>
                                                         <div class="form-group col-md-2">
@@ -114,10 +111,12 @@
                                             </div>
                                             <div class="frm_submit_block">
                                                 <h3>Gallery</h3>
+                                                <hr />
                                                 <div class="frm_submit_wrap">
                                                     <div class="form-row">
                                                         <div class="form-group col-md-6">
-                                                            <label>Gallery</label>
+                                                            <label>Gallery Images</label>
+
                                                             <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="true">
                                                                 <div class="form-control file-amount">Choose Gallery</div>
                                                                 <input type="hidden" name="gallery_image" class="selected-files">
@@ -142,35 +141,39 @@
                                                 </div>
                                             </div>
                                             <div class="frm_submit_block">
-                                                <h3>Location</h3>
+                                                <h4>Location</h4>
+                                                <hr />
                                                 <div class="frm_submit_wrap">
                                                     <div class="form-row">
                                                         <div class="form-group col-md-6">
                                                             <label>Address</label>
-                                                            <input type="text" class="form-control" name="address" placeholder="Address">
+                                                            <input type="text" class="form-control" name="address" placeholder="Address" required>
                                                         </div>
                                                         <div class="form-group col-md-6">
-                                                            <label>Pin Code</label>
-                                                            <input type="text" class="form-control" name="pincode" id="pincode" placeholder="Pin Code" onchange="getCityState()">
+                                                            <label>Pincode</label>
+                                                            <input type="text" class="form-control" name="pincode" id="pincode" placeholder="Pincode" onchange="getCityState()" required>
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label>City</label>
-                                                            <input type="text" class="form-control" name="city_id" id="city" placeholder="City" readonly>
+                                                            <input type="text" class="form-control" name="city_id" id="city" placeholder="City" required readonly>
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label>State</label>
-                                                            <input type="text" class="form-control" name="state_id" id="state" placeholder="State" readonly>
+                                                            <input type="text" class="form-control" name="state_id" id="state" placeholder="State" required readonly>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="frm_submit_block">
-                                                <h3>Detailed Information</h3>
                                                 <div class="frm_submit_wrap">
                                                     <div class="form-row">
                                                         <div class="form-group col-md-12">
-                                                            <label>About</label>
-                                                            <textarea class="form-control h-120" name="about" placeholder="About"></textarea>
+                                                            <label>Project Description</label>
+                                                            <textarea class="form-control h-120" name="about" placeholder="Project description.."></textarea>
+                                                        </div>
+                                                        <div class="form-group col-md-12">
+                                                            <label>Why Customer should buy this project ?</label>
+                                                            <textarea name="why_buy" class="form-control"></textarea>
                                                         </div>
                                                         <div class="form-group col-md-12">
                                                             <label>Amenties</label>
@@ -235,12 +238,12 @@
                                                 <ul class="no-ul-list">
                                                     <li>
                                                         <input id="aj-1" class="checkbox-custom" name="aj-1" type="checkbox">
-                                                        <label for="aj-1" class="checkbox-custom-label">I consent to  having this website store my submitted information so they can respond to my inquiry.</label>
+                                                        <label for="aj-1" class="checkbox-custom-label">After clicking on Save Project you agree to our <a href="">Terms & Conditions</a></label>
                                                     </li>
                                                 </ul>
                                             </div>
                                             <div class="form-group col-lg-12 col-md-12">
-                                                <button class="btn btn-theme" type="submit">Submit-</button>
+                                                <button class="btn btn-theme" type="submit">Save Project</button>
                                             </div>
                                         </div>
                                     </form>

@@ -183,7 +183,7 @@
                                     </div>
                                     <div class="p-2">
                                         <div class="row">
-                                            <div class="col-md-6 mb-2" id="bed">
+                                            <div class="col-md-4 mb-2" id="bed">
                                                 <b class="prop">Bedroom</b> <br>
                                                 <div class="bedRooms listForSelect higt_ovfl" >
                                                     <ul>
@@ -192,12 +192,12 @@
                                                         <li class="bedroom" onclick="select_list('bedroom','3')"><a>3</a></li>
                                                         <li class="bedroom" onclick="select_list('bedroom','4')"><a>4</a></li>
                                                         <li class="bedroom" onclick="select_list('bedroom','5')"><a>5</a> </li>
-                                                        <li class="bedroom" onclick="select_list('bedroom','6')"><a>6</a></li>
-                                                        <li class="bedroom" onclick="select_list('bedroom','7')"><a>7</a></li>
-                                                        <li class="bedroom" onclick="select_list('bedroom','8')"><a>8</a></li>
-                                                        <li class="bedroom" onclick="select_list('bedroom','9')"><a>9</a></li>
-                                                        <li class="btn dropdown-toggle btn_bedroom-toggle bedroom" type="button" data-toggle="dropdown" style="width: 55px;padding:9px">10</li>
+                                                        <li class="btn dropdown-toggle btn_bedroom-toggle bedroom" type="button" data-toggle="dropdown" style="width: 55px;padding:9px">6</li>
                                                         <ul class="dropdown-menu bedroom_list higt_ovfl">
+                                                            <li class="bedroom" onclick="select_list('bedroom','6')"><a>6</a></li>
+                                                            <li class="bedroom" onclick="select_list('bedroom','7')"><a>7</a></li>
+                                                            <li class="bedroom" onclick="select_list('bedroom','8')"><a>8</a></li>
+                                                            <li class="bedroom" onclick="select_list('bedroom','9')"><a>9</a></li>
                                                             <li  class="bedroom" onclick="select_list('bedroom','11')"><a>11</a></li>
                                                             <li  class="bedroom" onclick="select_list('bedroom','12')"><a>12</a></li>
                                                         </ul>
@@ -214,7 +214,7 @@
                                                     <option value='8' >8</option>
                                                 </select>
                                             </div>
-                                            <div class="col-md-6 mb-2">
+                                            <div class="col-md-4 mb-2">
                                                 <b class="prop">Balconies</b><br>
                                                 <div class="bedRooms listForSelect">
                                                     <ul>
@@ -223,12 +223,12 @@
                                                         <li class="balconies" class="csF bdOption" onclick="select_list('balconies','3')"><a>3</a></li>
                                                         <li class="balconies" class="csF bdOption" onclick="select_list('balconies','4')"><a>4</a></li>
                                                         <li class="balconies" class="csF bdOption" onclick="select_list('balconies','5')"><a>5</a></li>
-                                                        <li class="balconies" class="csF bdOption" onclick="select_list('balconies','6')"><a>6</a></li>
-                                                        <li class="balconies" class="csF bdOption" onclick="select_list('balconies','7')"><a>7</a></li>
-                                                        <li class="balconies" class="csF bdOption" onclick="select_list('balconies','8')"><a>8</a></li>
-                                                        <li class="balconies" class="csF bdOption" onclick="select_list('balconies','9')"><a>9</a></li>
-                                                        <li class="btn dropdown-toggle btn_balconies-toggle balconies" type="button" data-toggle="dropdown" style="width: 55px;padding:9px">10</li>
+                                                        <li class="btn dropdown-toggle btn_balconies-toggle balconies" type="button" data-toggle="dropdown" style="width: 55px;padding:9px">6</li>
                                                         <ul class="dropdown-menu balconies_list higt_ovfl">
+                                                            <li class="balconies" class="csF bdOption" onclick="select_list('balconies','6')"><a>6</a></li>
+                                                            <li class="balconies" class="csF bdOption" onclick="select_list('balconies','7')"><a>7</a></li>
+                                                            <li class="balconies" class="csF bdOption" onclick="select_list('balconies','8')"><a>8</a></li>
+                                                            <li class="balconies" class="csF bdOption" onclick="select_list('balconies','9')"><a>9</a></li>
                                                             <li class="balconies" onclick="select_list('balconies','10')"><a>10</a></li>
                                                             <li class="balconies" onclick="select_list('balconies','11')"><a>11</a></li>
                                                             <li class="balconies" onclick="select_list('balconies','12')"><a>12</a></li>
@@ -246,7 +246,7 @@
                                                     <option value='8' >8</option>
                                                 </select>
                                             </div>
-                                            <div class="col-md-6 mb-2">
+                                            <div class="col-md-4 mb-2">
                                                 <b class="prop"> Bathroom</b><br>
                                                 <div class="bedRooms listForSelect">
                                                     <ul>
@@ -255,12 +255,13 @@
                                                         <li class="bathroom" onclick="select_list('bathroom','3')"><a>3</a></li>
                                                         <li class="bathroom" onclick="select_list('bathroom','4')"><a>4</a></li>
                                                         <li class="bathroom" onclick="select_list('bathroom','5')"><a>5</a> </li>
-                                                        <li class="bathroom" onclick="select_list('bathroom','6')"><a>6</a></li>
-                                                        <li class="bathroom" onclick="select_list('bathroom','7')"><a>7</a></li>
-                                                        <li class="bathroom" onclick="select_list('bathroom','8')"><a>8</a></li>
-                                                        <li class="bathroom" onclick="select_list('bathroom','9')"><a>9</a></li>
-                                                        <li class="btn dropdown-toggle btn_bathroom-toggle bathroom" type="button" data-toggle="dropdown" style="width: 55px;padding:9px">10</li>
+
+                                                        <li class="btn dropdown-toggle btn_bathroom-toggle bathroom" type="button" data-toggle="dropdown" style="width: 55px;padding:9px">6</li>
                                                         <ul class="dropdown-menu bathroom_list higt_ovfl">
+                                                            <li class="bathroom" onclick="select_list('bathroom','6')"><a>6</a></li>
+                                                            <li class="bathroom" onclick="select_list('bathroom','7')"><a>7</a></li>
+                                                            <li class="bathroom" onclick="select_list('bathroom','8')"><a>8</a></li>
+                                                            <li class="bathroom" onclick="select_list('bathroom','9')"><a>9</a></li>
                                                             <li class="bathroom" onclick="select_list('bathroom','10')"><a>10</a></li>
                                                             <li class="bathroom" onclick="select_list('bathroom','11')"><a>11</a></li>
                                                             <li class="bathroom" onclick="select_list('bathroom','12')"><a>12</a></li>
@@ -279,45 +280,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="row pt-20">
-                                            <div class="col-md-12">
-                                                <b class="prop">Floor No</b><br>
-                                                <div class="bedRooms listForSelect">
-                                                    <ul>
-                                                        <li class="floor_no" onclick="select_list('floor_no','lower_basement')"><a>Lower Basemenet</a> </li>
-                                                        <li class="floor_no" onclick="select_list('floor_no','upper_basement')"><a>Upper Basemenet</a> </li>
-                                                        <li class="floor_no" onclick="select_list('floor_no','ground_basement')"><a>Ground Basemenet</a> </li>
-                                                        <li class="floor_no" onclick="select_list('floor_no','1')"><a>1</a></li>
-                                                        <li class="floor_no" onclick="select_list('floor_no','2')"><a>2</a></li>
-                                                        <li class="floor_no" onclick="select_list('floor_no','3')"><a>3</a></li>
-                                                        <li class="floor_no" onclick="select_list('floor_no','4')"><a>4</a></li>
-                                                        <li class="floor_no" onclick="select_list('floor_no','5')"><a>5</a></li>
-                                                        <li class="floor_no" onclick="select_list('floor_no','6')"><a>6</a></li>
-                                                        <li class="floor_no" onclick="select_list('floor_no','7')"><a>7</a></li>
-                                                        <li class="floor_no" onclick="select_list('floor_no','8')"><a>8</a></li>
-                                                        <li class="floor_no" onclick="select_list('floor_no','9')"><a>9</a></li>
-                                                        <li class="floor_no" onclick="select_list('floor_no','10')"><a>10</a></li>
-                                                        <li class="floor_no" onclick="select_list('floor_no','11')"><a>11</a></li>
-                                                        <li class="floor_no" onclick="select_list('floor_no','12')"><a>12</a></li>
-                                                        <li class="floor_no" onclick="select_list('floor_no','13')"><a>13</a></li>
-                                                        <li class="btn dropdown-toggle btn_floor_no-toggle floor_no" type="button" data-toggle="dropdown" style="width: 55px;padding:9px">14</li>
-                                                        <ul class="dropdown-menu floor_no_list higt_ovfl">
-                                                            @for($i=5;$i<=20;$i++)
-                                                        <li class="floor_no" onclick="select_list('floor_no','{{$i}}')"><a>{{$i}}</a></li>
-                                                        @endfor
-                                                        </ul>
-                                                    </ul>
-                                                </div>
-                                                <select  name="floor_no" id="floor_no"  style="display:none;">
-                                                    <option value='lower_basement' >lower_basement</option>
-                                                    <option value='upper_basement' >upper_basement</option>
-                                                    <option value='ground_basement' >ground_basement</option>
-                                                    @for($i=1;$i<=20;$i++)
-                                                        <option value='{{$i}}' >{{$i}}</option>
-                                                    @endfor
-                                                </select>
-                                            </div>
-                                        </div>
+
                                         <div class="row pt-20">
                                             <div class="col-md-5">
                                                 <b class="prop">Total Floors</b><br>
@@ -357,6 +320,35 @@
                                                     <option value='furnished' >furnished</option>
                                                     <option value='unfurnished' >unfurnished</option>
                                                     <option value='semi-unfurnished' >semi-unfurnished</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row pt-20">
+                                            <div class="col-md-12">
+                                                <b class="prop">Floor No</b><br>
+                                                <div class="bedRooms listForSelect">
+                                                    <ul>
+                                                        <li class="floor_no" onclick="select_list('floor_no','lower_basement')"><a>Lower Basemenet</a> </li>
+                                                        <li class="floor_no" onclick="select_list('floor_no','upper_basement')"><a>Upper Basemenet</a> </li>
+                                                        <li class="floor_no" onclick="select_list('floor_no','ground_basement')"><a>Ground Basemenet</a> </li>
+                                                        <li class="floor_no" onclick="select_list('floor_no','1')"><a>1</a></li>
+                                                        <li class="floor_no" onclick="select_list('floor_no','2')"><a>2</a></li>
+
+                                                        <li class="btn dropdown-toggle btn_floor_no-toggle floor_no" type="button" data-toggle="dropdown" style="width: 55px;padding:9px">3</li>
+                                                        <ul class="dropdown-menu floor_no_list higt_ovfl">
+                                                            @for($i=3;$i<=20;$i++)
+                                                        <li class="floor_no" onclick="select_list('floor_no','{{$i}}')"><a>{{$i}}</a></li>
+                                                        @endfor
+                                                        </ul>
+                                                    </ul>
+                                                </div>
+                                                <select  name="floor_no" id="floor_no"  style="display:none;">
+                                                    <option value='lower_basement' >lower_basement</option>
+                                                    <option value='upper_basement' >upper_basement</option>
+                                                    <option value='ground_basement' >ground_basement</option>
+                                                    @for($i=1;$i<=20;$i++)
+                                                        <option value='{{$i}}' >{{$i}}</option>
+                                                    @endfor
                                                 </select>
                                             </div>
                                         </div>
@@ -431,15 +423,15 @@
                                             <div class="p-2">
                                                 <div class="form-group row">
                                                     <div class="col-md-4">
-                                                        <label class="col-from-label">Plot Area</label>
+                                                        <label class="col-from-label">Plot Area (in SqFt.)</label>
                                                         <input type="number" step="0.01" min="0.00" class="form-control area" name="plot_area" id="plot_area" placeholder="Plot Area...">
                                                     </div>
                                                     <div class="col-md-4">
-                                                        <label class="col-from-label">Plot Length</label>
+                                                        <label class="col-from-label">Plot Length  (in feet)</label>
                                                         <input type="number" step="0.01" min="0.00" class="form-control" name="plot_length" placeholder="Plot Length...">
                                                     </div>
                                                     <div class="col-md-4">
-                                                        <label class="col-from-label">Plot Breadth</label>
+                                                        <label class="col-from-label">Plot Breadth  (in feet)</label>
                                                         <input type="number" step="0.01" min="0.00" class="form-control" name="plot_breadth" placeholder="Plot Breadth...">
                                                     </div>
                                                 </div>
@@ -486,24 +478,27 @@
                                     <div class="p-2">
                                         <div class="form-group row">
                                             <div class="col-md-4 mb-2">
-                                                <label class="col-from-label">Booking Amount</label>
-                                                <input type="number" step="0.01" min="0.00" class="form-control" name="booking_amount" placeholder="Booking Amount...">
-                                            </div>
-                                            <div class="col-md-4 mb-2">
-                                                <label class="col-from-label">Maintenance Charge (in amount)</label>
-                                                <input type="number" step="0.01" min="0.00" class="form-control" name="maintenance_charge" placeholder="Maintenance Charge...">
-                                            </div>
-                                            <div class="col-md-4 mb-2">
                                                 <label class="col-from-label">Final Price <span class="text-danger">*</span></label>
                                                 <input type="number" step="0.01" min="0.00" class="form-control area" name="final_price" id="final_price" placeholder="Final Price..."  required>
                                             </div>
                                             <div class="col-md-4 mb-2">
-                                                <label class="col-from-label">Discounted Price <span class="text-danger">*</span></label>
-                                                <input type="number" step="0.01" min="0.00" class="form-control" name="discounted_price" id="discounted_price" placeholder="Discounted Price..." required>
+                                                <label class="col-from-label">Price (Per sqft.) <span class="text-danger">*</span></label>
+                                                <input type="number" step="0.01" min="0.00" class="form-control" name="price" id="price_per_sq_ft" placeholder="Price..." readonly>
                                             </div>
                                             <div class="col-md-4 mb-2">
-                                                <label class="col-from-label">Price per sq ft <span class="text-danger">*</span></label>
-                                                <input type="number" step="0.01" min="0.00" class="form-control" name="price" id="price_per_sq_ft" placeholder="Price..." readonly>
+                                                <label class="col-from-label">Discounted Price (Per sqft.) <span class="text-danger">*</span></label>
+                                                <input type="number" step="0.01" min="0.00" class="form-control" name="discounted_price" id="discounted_price" placeholder="Discounted Price..." required>
+                                            </div>
+
+                                            <div class="col-md-4 mb-2">
+                                                <label class="col-from-label">Maintenance Charge (in amount)</label>
+                                                <input type="number" step="0.01" min="0.00" class="form-control" name="maintenance_charge" placeholder="Maintenance Charge...">
+                                            </div>
+
+
+                                            <div class="col-md-4 mb-2">
+                                                <label class="col-from-label">Booking Amount</label>
+                                                <input type="number" step="0.01" min="0.00" class="form-control" name="booking_amount" placeholder="Booking Amount...">
                                             </div>
                                         </div>
                                     </div>
@@ -555,7 +550,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label>Thumbnail Image (main image)</label>
+                                                    <label>Thumbnail Image (Main Image)</label>
                                                     <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="false">
                                                         <div class="form-control file-amount">Choose Thumbnail Image</div>
                                                         <input type="hidden" name="image" class="selected-files">
@@ -567,7 +562,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-12 pt-20">
-                                                <label class="col-from-label">Detail</label>
+                                                <label class="col-from-label">Property Details : </label>
                                                 <textarea name="remark" rows="8" class="form-control"></textarea>
                                             </div>
                                         </div>

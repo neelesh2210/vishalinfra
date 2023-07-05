@@ -40,12 +40,12 @@
                                         <table class="table">
                                             <thead class="thead-dark">
                                                 <tr>
-                                                    <th scope="col">#</th>
-                                                    <th scope="col">Name</th>
-                                                    <th scope="col">Date</th>
-                                                    <th scope="col">Area</th>
-                                                    <th scope="col">address</th>
-                                                    <th scope="col">Action</th>
+                                                    <th scope="col" class="text-center">#</th>
+                                                    <th scope="col" class="text-center">Name</th>
+                                                    <th scope="col" class="text-center">Date</th>
+                                                    <th scope="col" class="text-center">Project Details</th>
+                                                    <th scope="col" class="text-center">Address</th>
+                                                    <th scope="col" class="text-center">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -54,10 +54,21 @@
                                                         <td>{{$key+1}}</td>
                                                         <td>{{$project->name}}</td>
                                                         <td>
-                                                            {{$project->launch_date}} - {{$project->completion_date}}
+                                                            <b>Launch : </b>{{$project->launch_date}} <br>
+                                                            <b>Completion : </b> {{$project->completion_date}}
                                                         </td>
-                                                        <td>{{$project->project_area}}</td>
-                                                        <td>{{$project->address}}</td>
+                                                        <td>
+                                                            <b>Area : </b> @if($project->project_area){{$project->project_area}} Sqft. @endif <br>
+                                                            <b>Units : </b> @if($project->total_unit){{$project->total_unit}} @endif
+                                                        </td>
+                                                        <td>{{$project->address}},
+                                                            @if($project->pincode)
+                                                                {{$project->city}},
+                                                                {{$project->state}},
+                                                                {{$project->pincode}}</td>
+                                                            @endif
+
+
                                                         <td>
                                                             <div class="_leads_action">
                                                                 <a href="{{route('user.edit.project',encrypt($project->id))}}"><i class="fas fa-edit"></i></a>

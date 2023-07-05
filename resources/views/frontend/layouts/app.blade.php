@@ -8,7 +8,14 @@
     <meta charset="utf-8" />
     <meta name="author" content="Themezhub" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vishal Infra</title>
+    <title>
+        @isset($page_title)
+            {{$page_title}}
+        @else
+            Reframe RealEstate
+        @endisset
+
+    </title>
     <!-- Custom CSS -->
     <link href="{{ asset('frontend/assets/css/styles.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/image/css/vendors.css') }}">

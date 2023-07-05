@@ -12,11 +12,11 @@ class ProjectController extends Controller
     public function index(){
         $projects = Project::orderBy('id','desc')->paginate(10);
 
-        return view('frontend.user.project.index',compact('projects'));
+        return view('frontend.user.project.index',compact('projects'),['page_title'=>'My Properties']);
     }
 
     public function create(){
-        return view('frontend.user.project.create');
+        return view('frontend.user.project.create',['page_title'=>'Add New Project']);
     }
 
     public function store(Request $request){

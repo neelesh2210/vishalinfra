@@ -58,15 +58,16 @@
                                                                 <div class="dash_prt_caption">
                                                                     <h5>{{ $property->name }}</h5>
                                                                     <div class="prt_dashb_lot">5682 Brown River Suit 18</div>
-                                                                    <div class="prt_dash_rate"><span>₹ {{ $property->expected_price }}</span></div>
+                                                                    <div class="prt_dash_rate"><span>₹ {{ $property->final_price }}</span></div>
                                                                 </div>
                                                             </div>
                                                         </td>
                                                         <td class="m2_hide">
                                                             <div class="_leads_view">
-                                                                <h5 class="up">816</h5>
+                                                                <h5 class="up">Views : 816</h5>
+                                                                 <h5 class="up">Views : 816</h5>
                                                             </div>
-                                                            <div class="_leads_view_title"><span>Total Views</span></div>
+                                                            <div class="_leads_view_title"><span></span></div>
                                                         </td>
                                                         <td class="m2_hide">
                                                             <div class="_leads_posted">

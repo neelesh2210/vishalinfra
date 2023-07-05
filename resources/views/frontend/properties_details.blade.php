@@ -15,7 +15,9 @@
                         <div class="gg_single_part-right min  mb-2">
                             <a href="{{uploaded_asset($photo)}}" class="mfp-gallery">
                                 <img src="{{uploaded_asset($photo)}}" class="img-fluid mx-auto" alt="" />
-                                <p class="vw_dtls"> <i class="fas fa-images"></i> <br> <span> + {{count(explode(',',$property_detail->photos)) - 3}} Photos</span> </p>
+                                @if(count(explode(',',$property_detail->photos)) > 3)
+                                    <p class="vw_dtls"> <i class="fas fa-images"></i> <br> <span> +{{count(explode(',',$property_detail->photos)) - 3}} Photos </span> </p>
+                                @endif
                             </a>
                         </div>
                         @if($keyp == 2)
@@ -202,7 +204,7 @@
             <div class="row">
                 <div class="col-12 col-md-12">
                     <div class="sec-heading">
-                        <h2>Related Products</h2>
+                        <h2>Related Properties</h2>
                     </div>
                 </div>
             </div>
