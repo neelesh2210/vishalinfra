@@ -509,7 +509,7 @@
 							<a href="{{route('properties')}}" class="img-wrap">
 									<div class="location_wrap_content visible">
 										<div class="location_wrap_content_first">
-											<h4>California, USA</h4>
+											<h4>Delhi</h4>
 											<span>48 Properties</span>
 										</div>
 										<div class="location_btn"><i class="fa fa-arrow-right"></i></div>
@@ -522,7 +522,7 @@
 							<a href="{{route('properties')}}" class="img-wrap">
 									<div class="location_wrap_content visible">
 										<div class="location_wrap_content_first">
-											<h4>Barbingham, USA</h4>
+											<h4>Banglore</h4>
 											<span>73 Properties</span>
 										</div>
 										<div class="location_btn"><i class="fa fa-arrow-right"></i></div>
@@ -535,7 +535,7 @@
 							<a href="{{route('properties')}}" class="img-wrap">
 									<div class="location_wrap_content visible">
 										<div class="location_wrap_content_first">
-											<h4>Denever, USA</h4>
+											<h4>Hydrabad</h4>
 											<span>40 Properties</span>
 										</div>
 										<div class="location_btn"><i class="fa fa-arrow-right"></i></div>
@@ -548,7 +548,7 @@
 							<a href="{{route('properties')}}" class="img-wrap">
 									<div class="location_wrap_content visible">
 										<div class="location_wrap_content_first">
-											<h4>Liverpool, London</h4>
+											<h4>Lucknow</h4>
 											<span>35 Properties</span>
 										</div>
 										<div class="location_btn"><i class="fa fa-arrow-right"></i></div>
@@ -561,7 +561,7 @@
 							<a href="{{route('properties')}}" class="img-wrap">
 									<div class="location_wrap_content visible">
 										<div class="location_wrap_content_first">
-											<h4>New Orleans, Louisiana</h4>
+											<h4>Varanasi</h4>
 											<span>10 Properties</span>
 										</div>
 										<div class="location_btn"><i class="fa fa-arrow-right"></i></div>
