@@ -96,12 +96,12 @@
                                                             </div>
                                                             <div class="file-preview box sm"></div>
                                                         </div>
-                                                        <div class="form-group col-md-4">
+                                                        <div class="form-group col-md-5 col-9">
                                                             <label>Add video URL (Youtube Embedd URL)</label>
                                                             <input type="text" class="form-control" name="videos[]" placeholder="Option to add videos">
                                                         </div>
-                                                        <div class="form-group col-md-2">
-                                                            <a class="btn btn-success" style="margin-top: 31px;" onclick="addVideoDiv()"><i class="fas fa-plus"></i></a>
+                                                        <div class="form-group col-md-1 col-1">
+                                                            <a class="btn btn-theme" style="margin-top: 31px;color:#fff;" onclick="addVideoDiv()"><i class="fas fa-plus"></i></a>
                                                         </div>
                                                     </div>
                                                     <div class="form-row vidiv">
@@ -260,12 +260,12 @@
         var x = 1;
         function addVideoDiv(){
             x++;
-            $('.vidiv').append('<div class="form-group col-md-4 remdiv'+x+'">'+
+            $('.vidiv').append('<div class="form-group col-md-5 col-9 remdiv'+x+'">'+
                                 '<label>Add videos</label>'+
                                 '<input type="text" class="form-control" name="videos[]" placeholder="Option to add videos">'+
                             '</div>'+
-                            '<div class="form-group col-md-2 remdiv'+x+'">'+
-                                '<a class="btn btn-danger" style="margin-top: 31px;" onclick="removeVideoDiv('+x+')"><i class="fas fa-minus"></i></a>'+
+                            '<div class="form-group col-md-1 col-2 remdiv'+x+'">'+
+                                '<a class="btn btn-danger" style="margin-top: 31px;color:#fff;" onclick="removeVideoDiv('+x+')"><i class="fas fa-minus"></i></a>'+
                             '</div>');
         }
 

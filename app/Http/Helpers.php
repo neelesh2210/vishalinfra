@@ -295,7 +295,7 @@ function compress($src, $dist, $dis_width =500) {
 function abreviateTotalCount($value)
 {
 
-    $abbreviations = array(12 => 'T', 9 => 'Cr', 6 => 'Lac', 3 => 'K', 0 => '');
+    $abbreviations = array(12 => 'T', 7 => 'Cr', 5 => 'Lac', 3 => 'K', 0 => '');
 
     foreach($abbreviations as $exponent => $abbreviation)
     {

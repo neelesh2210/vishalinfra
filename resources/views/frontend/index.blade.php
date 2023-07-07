@@ -429,29 +429,6 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="min gray-simple">
-        <div class="container">
-            <div class="row">
-                <div class="col-9 col-md-9">
-                    <div class="sec-heading">
-                        <h2>Project Gallery</h2>
-                    </div>
-                </div>
-                <div class="col-3 col-md-3">
-                    <div class="float-end mt-2">
-                        <a href="#" class="default-btn border-radius">
-                            View All <i class="fas fa-chevron-circle-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-banner vedio-banner">
-                <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                    <source src="{{ asset('frontend/assets/img/banners.mp4') }}" type="video/mp4">
-                </video>
-            </div>
-        </div>
     </section> --}}
     <section class="min gray-simple">
         <div class="container">
@@ -513,7 +490,93 @@
             </div>
         </div>
     </section>
-    <section class="min">
+
+    			<!-- ============================ Property By Location ================================== -->
+			<section class="min">
+				<div class="container">
+
+					<div class="row justify-content-center">
+						<div class="col-lg-7 col-md-8">
+							<div class="sec-heading center">
+								<h2>Top Property Places</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row justify-content-center">
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<a href="{{route('properties')}}" class="img-wrap">
+									<div class="location_wrap_content visible">
+										<div class="location_wrap_content_first">
+											<h4>California, USA</h4>
+											<span>48 Properties</span>
+										</div>
+										<div class="location_btn"><i class="fa fa-arrow-right"></i></div>
+									</div>
+								<div class="img-wrap-background" style="background-image: url({{ asset('frontend/assets/img/city-6.png')}});"></div>
+							</a>
+						</div>
+
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<a href="{{route('properties')}}" class="img-wrap">
+									<div class="location_wrap_content visible">
+										<div class="location_wrap_content_first">
+											<h4>Barbingham, USA</h4>
+											<span>73 Properties</span>
+										</div>
+										<div class="location_btn"><i class="fa fa-arrow-right"></i></div>
+									</div>
+								<div class="img-wrap-background" style="background-image: url({{ asset('frontend/assets/img/city-7.png')}});"></div>
+							</a>
+						</div>
+
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<a href="{{route('properties')}}" class="img-wrap">
+									<div class="location_wrap_content visible">
+										<div class="location_wrap_content_first">
+											<h4>Denever, USA</h4>
+											<span>40 Properties</span>
+										</div>
+										<div class="location_btn"><i class="fa fa-arrow-right"></i></div>
+									</div>
+								<div class="img-wrap-background" style="background-image: url({{ asset('frontend/assets/img/city-3.png')}});"></div>
+							</a>
+						</div>
+
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<a href="{{route('properties')}}" class="img-wrap">
+									<div class="location_wrap_content visible">
+										<div class="location_wrap_content_first">
+											<h4>Liverpool, London</h4>
+											<span>35 Properties</span>
+										</div>
+										<div class="location_btn"><i class="fa fa-arrow-right"></i></div>
+									</div>
+								<div class="img-wrap-background" style="background-image: url({{ asset('frontend/assets/img/city-4.png')}});"></div>
+							</a>
+						</div>
+
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<a href="{{route('properties')}}" class="img-wrap">
+									<div class="location_wrap_content visible">
+										<div class="location_wrap_content_first">
+											<h4>New Orleans, Louisiana</h4>
+											<span>10 Properties</span>
+										</div>
+										<div class="location_btn"><i class="fa fa-arrow-right"></i></div>
+									</div>
+								<div class="img-wrap-background" style="background-image: url({{ asset('frontend/assets/img/city-5.png')}});"></div>
+							</a>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+			<!-- ============================ Property By Location End ================================== -->
+
+    <section class="min gray-simple">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-9 col-md-9">
@@ -738,291 +801,54 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="list_views">
+                <div class="col-lg-12 col-md-12">
+                    <div class="item-slide-custom space">
+                        @foreach ($projects as $project)
                         <!-- Single Item -->
                         <div class="single_items">
-                            <div class="row">
-                                <!-- Single Property -->
-                                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
-                                    <div class="property-listing list_view row m-0">
-                                        <div class="col-md-4 p-0">
-                                            <div class="_exlio_125">Sponsored</div>
-                                            <div class="project">
-                                                <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
-                                                        class="img-fluid mx-auto" alt="" /></a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8 pr-0">
-                                            <div class="listing-detail-wrapper mt-1">
-                                                <div class="listing-short-detail-wrap">
-                                                    <div class="_card_list_flex">
-                                                        <div class="_card_flex_01">
-                                                            <h5><a href="#" class="prt-link-detail">Red Carpet Real
-                                                                    Estate
-                                                                </a></h5>
-                                                        </div>
-                                                    </div>
-                                                    <div class="_card_list_flex">
-                                                        <div class="_card_flex_01">
-                                                            <h4 class="listing-name verified"><a href="#"
-                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh,
-                                                                    India</a></h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="_card_flex_last">
-                                                        <h6 class="listing-card-info-price mb-0">₹3,700 <span><del>4000</del></span></spa></h6>
-                                                    </div>
+                            <div class="property-listing list_view row m-0">
+                                <div class="col-md-4 p-0">
+                                    <div class="_exlio_125">Sponsored</div>
+                                    <div class="project">
+                                        <a href="#"><img src="{{uploaded_asset($project->cover_image)}}"
+                                                class="img-fluid mx-auto" alt="" /></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 pr-0">
+                                    <div class="listing-detail-wrapper mt-1">
+                                        <div class="listing-short-detail-wrap">
+                                            <div class="_card_list_flex">
+                                                <div class="_card_flex_01">
+                                                    <h5><a href="#" class="prt-link-detail">{{$project->name}}</a></h5>
                                                 </div>
                                             </div>
-                                            <div class="listing-detail-footer">
-                                                <div class="footer-first">
-                                                    <div class="foot-rate">
-                                                        <span>Marketed by VHV Builders Pvt. Ltd.</span>
-                                                    </div>
+                                            <div class="_card_list_flex">
+                                                <div class="_card_flex_01">
+                                                    <h4 class="listing-name verified"><a href="#"
+                                                            class="prt-link-detail">{{$project->address}}</a></h4>
                                                 </div>
-                                                <div class="footer-flex">
-                                                    <a href="#" class="prt-view">View <i
-                                                            class="fas fa-chevron-right pl-1"></i></a>
-                                                </div>
+                                            </div>
+                                            <div class="_card_flex_last">
+                                                <h6 class="listing-card-info-price mb-0">₹3,700 <span><del>4000</del></span></spa></h6>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
-                                    <div class="property-listing list_view row m-0">
-                                        <div class="col-md-4 p-0">
-                                            <div class="_exlio_125">Sponsored</div>
-                                            <div class="project">
-                                                <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
-                                                        class="img-fluid mx-auto" alt="" /></a>
+                                    <div class="listing-detail-footer">
+                                        <div class="footer-first">
+                                            <div class="foot-rate">
+                                                <span>Marketed by VHV Builders Pvt. Ltd.</span>
                                             </div>
                                         </div>
-                                        <div class="col-md-8 pr-0">
-                                            <div class="listing-detail-wrapper mt-1">
-                                                <div class="listing-short-detail-wrap">
-                                                    <div class="_card_list_flex">
-                                                        <div class="_card_flex_01">
-                                                            <h5><a href="#" class="prt-link-detail">Red Carpet Real
-                                                                    Estate
-                                                                </a></h5>
-                                                        </div>
-                                                    </div>
-                                                    <div class="_card_list_flex">
-                                                        <div class="_card_flex_01">
-                                                            <h4 class="listing-name verified"><a href="#"
-                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh,
-                                                                    India</a></h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="_card_flex_last">
-                                                        <h6 class="listing-card-info-price mb-0">₹3,700 <span><del>4000</del></span></spa></h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="listing-detail-footer">
-                                                <div class="footer-first">
-                                                    <div class="foot-rate">
-                                                        <span>Marketed by VHV Builders Pvt. Ltd.</span>
-                                                    </div>
-                                                </div>
-                                                <div class="footer-flex">
-                                                    <a href="#" class="prt-view">View <i
-                                                            class="fas fa-chevron-right pl-1"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
-                                    <div class="property-listing list_view row m-0">
-                                        <div class="col-md-4 p-0">
-                                            <div class="_exlio_125">Sponsored</div>
-                                            <div class="project">
-                                                <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
-                                                        class="img-fluid mx-auto" alt="" /></a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8 pr-0">
-                                            <div class="listing-detail-wrapper mt-1">
-                                                <div class="listing-short-detail-wrap">
-                                                    <div class="_card_list_flex">
-                                                        <div class="_card_flex_01">
-                                                            <h5><a href="#" class="prt-link-detail">Red Carpet Real
-                                                                    Estate
-                                                                </a></h5>
-                                                        </div>
-                                                    </div>
-                                                    <div class="_card_list_flex">
-                                                        <div class="_card_flex_01">
-                                                            <h4 class="listing-name verified"><a href="#"
-                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh,
-                                                                    India</a></h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="_card_flex_last">
-                                                        <h6 class="listing-card-info-price mb-0">₹3,700 <span><del>4000</del></span></spa></h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="listing-detail-footer">
-                                                <div class="footer-first">
-                                                    <div class="foot-rate">
-                                                        <span>Marketed by VHV Builders Pvt. Ltd.</span>
-                                                    </div>
-                                                </div>
-                                                <div class="footer-flex">
-                                                    <a href="#" class="prt-view">View <i
-                                                            class="fas fa-chevron-right pl-1"></i></a>
-                                                </div>
-                                            </div>
+                                        <div class="footer-flex">
+                                            <a href="#" class="prt-view">View <i
+                                                    class="fas fa-chevron-right pl-1"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="row">
-                                <!-- Single Property -->
-                                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
-                                    <div class="property-listing list_view row m-0">
-                                        <div class="col-md-4 p-0">
-                                            <div class="_exlio_125">Sponsored</div>
-                                            <div class="project">
-                                                <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
-                                                        class="img-fluid mx-auto" alt="" /></a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8 pr-0">
-                                            <div class="listing-detail-wrapper mt-1">
-                                                <div class="listing-short-detail-wrap">
-                                                    <div class="_card_list_flex">
-                                                        <div class="_card_flex_01">
-                                                            <h5><a href="#" class="prt-link-detail">Red Carpet Real
-                                                                    Estate
-                                                                </a></h5>
-                                                        </div>
-                                                    </div>
-                                                    <div class="_card_list_flex">
-                                                        <div class="_card_flex_01">
-                                                            <h4 class="listing-name verified"><a href="#"
-                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh,
-                                                                    India</a></h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="_card_flex_last">
-                                                        <h6 class="listing-card-info-price mb-0">₹3,700 <span><del>4000</del></span></spa></h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="listing-detail-footer">
-                                                <div class="footer-first">
-                                                    <div class="foot-rate">
-                                                        <span>Marketed by VHV Builders Pvt. Ltd.</span>
-                                                    </div>
-                                                </div>
-                                                <div class="footer-flex">
-                                                    <a href="#" class="prt-view">View <i
-                                                            class="fas fa-chevron-right pl-1"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
-                                    <div class="property-listing list_view row m-0">
-                                        <div class="col-md-4 p-0">
-                                            <div class="_exlio_125">Sponsored</div>
-                                            <div class="project">
-                                                <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
-                                                        class="img-fluid mx-auto" alt="" /></a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8 pr-0">
-                                            <div class="listing-detail-wrapper mt-1">
-                                                <div class="listing-short-detail-wrap">
-                                                    <div class="_card_list_flex">
-                                                        <div class="_card_flex_01">
-                                                            <h5><a href="#" class="prt-link-detail">Red Carpet Real
-                                                                    Estate
-                                                                </a></h5>
-                                                        </div>
-                                                    </div>
-                                                    <div class="_card_list_flex">
-                                                        <div class="_card_flex_01">
-                                                            <h4 class="listing-name verified"><a href="#"
-                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh,
-                                                                    India</a></h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="_card_flex_last">
-                                                        <h6 class="listing-card-info-price mb-0">₹3,700 <span><del>4000</del></span></spa></h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="listing-detail-footer">
-                                                <div class="footer-first">
-                                                    <div class="foot-rate">
-                                                        <span>Marketed by VHV Builders Pvt. Ltd.</span>
-                                                    </div>
-                                                </div>
-                                                <div class="footer-flex">
-                                                    <a href="#" class="prt-view">View <i
-                                                            class="fas fa-chevron-right pl-1"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
-                                    <div class="property-listing list_view row m-0">
-                                        <div class="col-md-4 p-0">
-                                            <div class="_exlio_125">Sponsored</div>
-                                            <div class="project">
-                                                <a href="#"><img src="{{ asset('frontend/assets/img/p-1.png') }}"
-                                                        class="img-fluid mx-auto" alt="" /></a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8 pr-0">
-                                            <div class="listing-detail-wrapper mt-1">
-                                                <div class="listing-short-detail-wrap">
-                                                    <div class="_card_list_flex">
-                                                        <div class="_card_flex_01">
-                                                            <h5><a href="#" class="prt-link-detail">Red Carpet Real
-                                                                    Estate
-                                                                </a></h5>
-                                                        </div>
-                                                    </div>
-                                                    <div class="_card_list_flex">
-                                                        <div class="_card_flex_01">
-                                                            <h4 class="listing-name verified"><a href="#"
-                                                                    class="prt-link-detail">Varanasi, Uttar Pradesh,
-                                                                    India</a></h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="_card_flex_last">
-                                                        <h6 class="listing-card-info-price mb-0">₹3,700 <span><del>4000</del></span></spa></h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="listing-detail-footer">
-                                                <div class="footer-first">
-                                                    <div class="foot-rate">
-                                                        <span>Marketed by VHV Builders Pvt. Ltd.</span>
-                                                    </div>
-                                                </div>
-                                                <div class="footer-flex">
-                                                    <a href="#" class="prt-view">View <i
-                                                            class="fas fa-chevron-right pl-1"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Item -->
+                        @endforeach
                     </div>
                 </div>
             </div>

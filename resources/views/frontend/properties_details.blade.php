@@ -6,7 +6,7 @@
                 <div class="col-lg-8 col-md-7 col-sm-12 pr-1">
                     <div class="gg_single_part left">
                         <a href="{{uploaded_asset($property_detail->thumbnail_img)}}" class="mfp-gallery">
-                            <img src="{{uploaded_asset($property_detail->thumbnail_img)}}" class="img-fluid mx-auto" alt="" />
+                            <img src="{{uploaded_asset($property_detail->thumbnail_img)}}" class="wh-100" alt="" />
                         </a>
                     </div>
                 </div>
@@ -155,8 +155,12 @@
                         <div class="sider_blocks_wrap shadows">
                             <div class="sidetab-content">
                                 <div class="sider-block-body p-3">
+
                                     @if(Session::has('success'))
-                                        <span style="background: rgba(76, 175, 80,0.1);color: #4caf50;">{{Session::get('success')}}</span>
+                                    <div class="alert alert-success alert-dismissible">
+                                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                        <strong>Success!</strong> {{Session::get('success')}}
+                                    </div>
                                     @endif
                                     <form action="{{route('enquiry.store')}}" method="POST">
                                         @csrf

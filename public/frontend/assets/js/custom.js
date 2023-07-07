@@ -327,6 +327,33 @@ $(function() {
 	  ]
 	});
 
+    	// Property Slide
+	$('.item-slide-custom').slick({
+        slidesToShow:3,
+        arrows: true,
+        dots: false,
+        infinite: true,
+        autoplaySpeed: 2000,
+        autoplay:true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              arrows: true,
+              dots: false,
+              slidesToShow:2
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              arrows: true,
+              dots: false,
+              slidesToShow:2
+            }
+          }
+        ]
+      });
 
 	// location Slide
 	$('.item-slide-2').slick({

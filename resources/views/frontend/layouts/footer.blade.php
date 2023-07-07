@@ -7,8 +7,27 @@
 							<div class="col-lg-4 col-md-4">
 								<div class="footer_widget">
                                     <h4 class="widget_title">About Vishal Infra</h4>
-									<p>The motive of our company is to help people turn their ideas on paper into reality and live in their dream houses.</p>
-								</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <h5 class="text-white">Follow us</h5>
+                                    <ul class="social-link">
+                                        <li>
+                                            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                                        </li>
+
+                                        {{-- <li>
+                                            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                                        </li> --}}
+                                    </ul>
+                                </div>
 							</div>
 
 							<div class="col-lg-8 col-md-8 ml-auto">
@@ -43,15 +62,21 @@
 
 									<div class="col-lg-4 col-md-4 col-xs-6">
 										<div class="footer_widget">
-											<h4 class="widget_title">Company</h4>
-											<ul class="footer-menu">
-												<li><a href="#">About <i class="fas fa-chevron-right"></i></a></li>
-												<li><a href="#">Blog <i class="fas fa-chevron-right"></i></a></li>
-												<li><a href="#">Pricing <i class="fas fa-chevron-right"></i></a></li>
-												<li><a href="#">Affiliate <i class="fas fa-chevron-right"></i></a></li>
-												<li><a href="#">Login <i class="fas fa-chevron-right"></i></a></li>
-												<li><a href="#">Changelog <i class="fas fa-chevron-right"></i></a></li>
-											</ul>
+											<h4 class="widget_title">Get In Touch</h4>
+											<ul class="footer-contact-list">
+                                                <li>
+                                                    <a href="#"><i class="fas fa-map-marker-alt"></i> Varanasi Office : Varanasi (U.P.) India (221010)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="tel:+91-1234567890 , 1234567890"><i class="fas fa-phone-alt"></i>
+                                                        +91-1234567890 , 1234567890</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="mailto:info@reframerealstate.com"><i class="fas fa-envelope"></i>
+                                                        info@reframerealstate.com</a>
+                                                </li>
+                                            </ul>
 										</div>
 									</div>
 
