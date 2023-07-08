@@ -12115,7 +12115,6 @@ span.tes_quote {
     align-items: center;
     justify-content: center;
     background: #ffffff;
-    border: 2px solid #d4efdf;
     border-radius: 50px;
     color: #234ca0;
     font-weight: 550;
@@ -15445,18 +15444,18 @@ font-size: 12px;
     transform: rotate(-45deg);
 }
 .pln-ylw{
-    background: #FFC107;
+    background: #FFC107 !important;
     color: #fff !important;
 }
 .pln-grn{
-    background: #4CAF50;
+    background: #4CAF50 !important;
     color: #fff !important;
 }
 .pln-blu{
-    background: #2196f3;
+    background: #2196f3 !important;
     color: #fff !important;
 }
 .pln-red{
-    background: #f44336;
+    background: #f44336 !important;
     color: #fff !important;
 }
