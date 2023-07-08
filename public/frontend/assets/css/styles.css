@@ -4329,7 +4329,7 @@ span.expiration {
     -webkit-box-shadow: 0 5px 30px rgba(0, 22, 84, 0.1);
     background: #ffffff;
     position: fixed;
-    z-index: 999;
+    z-index: 99999;
     width: 100%;
     top: 0;
     -webkit-transition: 0.2s ease-in;
@@ -12115,7 +12115,6 @@ span.tes_quote {
     align-items: center;
     justify-content: center;
     background: #ffffff;
-    border: 2px solid #d4efdf;
     border-radius: 50px;
     color: #234ca0;
     font-weight: 550;
@@ -13038,7 +13037,6 @@ table.property-table-wrap .dashboard_propert_wrapper .title .table-property-pric
     border-radius: 0.2rem;
 }
 ._prt_filt_add_new .prt_submit_link i {
-    color:#3cd67d;
     margin-right: 7px;
 }
 .dashboard_property {
@@ -15445,18 +15443,18 @@ font-size: 12px;
     transform: rotate(-45deg);
 }
 .pln-ylw{
-    background: #FFC107;
+    background: #FFC107 !important;
     color: #fff !important;
 }
 .pln-grn{
-    background: #4CAF50;
+    background: #4CAF50 !important;
     color: #fff !important;
 }
 .pln-blu{
-    background: #2196f3;
+    background: #2196f3 !important;
     color: #fff !important;
 }
 .pln-red{
-    background: #f44336;
+    background: #f44336 !important;
     color: #fff !important;
 }

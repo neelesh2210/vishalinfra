@@ -7,6 +7,12 @@
     letter-spacing: 0.5px;
     color: #004e9d;
 }
+strong {
+    font-weight: 600;
+    letter-spacing: .5px;
+    color: #ff5f20;
+    font-size: 20px;
+}
 .fa-check{
     color: green;
 }
@@ -26,73 +32,6 @@
             </div>
         </div>
     </div>
-    <section>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10 col-sm-12">
-                    <div class="reio_o9i text-center mb-5">
-                        <h2>Choose the plan that's just right for you and your business</h2>
-                        <p>Buy a pack and enjoy all agent benefits on Vishal Infra</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row align-items-center">
-                    <div class="col-lg-4 col-md-4 mb-3">
-                        <div class="pricing_wrap">
-                            <div class="prc_bg">
-                                <div class="prt_head">
-                                    <h4>Standard</h4>
-                                </div>
-                                <div class="prt_price">
-
-                                    <h2>Rs. 5000 <del class="ml-2" style="color: #ff5f20; font-size:25px;"> 4500</del></h2>
-                                    <span>180 Days Validity</span>
-                                </div>
-                            </div>
-                            <div class="prt_body">
-                                <ul>
-                                    <li>Number of listings 50</li>
-                                    {{-- <li>Upto 5x More</li>
-                                    <li>High</li>
-                                    <li class="none">Unlimited</li> --}}
-                                </ul>
-                            </div>
-                            <div class="prt_footer">
-                                <a class="btn choose_package">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                 <div class="col-lg-4 col-md-4 mb-3">
-                    <div class="pricing_wrap">
-                        <div class="ribbon">
-                            <span>Recommended</span>
-                        </div>
-                        <div class="prc_bg">
-                            <div class="prt_head">
-                                <h4>Certified Agent Plus</h4>
-                            </div>
-                            <div class="prt_price">
-                                <h2>Rs. 5000</h2>
-                                <span>90 Days Validity</span>
-                            </div>
-                        </div>
-                        <div class="prt_body">
-                            <ul>
-                                <li>Number of listings (25)</li>
-                                <li>Upto 5x More</li>
-                                <li>High</li>
-                                <li class="none">Unlimited</li>
-                            </ul>
-                        </div>
-                        <div class="prt_footer">
-                            <a href="#" class="btn choose_package active">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section>
         <div class="container">
             <div class="row justify-content-center">
@@ -181,26 +120,26 @@
                               </tr>
                               <tr class="text-center">
                                 <th scope="row">Amount</th>
-                                <td>15000/-</td>
-                                <td>25000/-</td>
-                                <td>35000/-</td>
-                                <td>50000/-</td>
+                                <td><strong>2800</strong> <del>15000</del>/-</td>
+                                <td><strong>5200</strong> <del>25000</del>/-</td>
+                                <td><strong>9500</strong> <del>35000</del>/-</td>
+                                <td><strong>20000</strong> <del>50000</del>/-</td>
                               </tr>
-                              <tr class="text-center">
+                              {{-- <tr class="text-center">
                                 <th scope="row">Discount Rate</th>
                                 <td>2800/-</td>
                                 <td>5200/-</td>
                                 <td>9500/-</td>
                                 <td>20000/-</td>
-                              </tr>
+                              </tr> --}}
                             </tbody>
                             <tfoot>
                                 <tr class="text-center">
                                     <th scope="row"></th>
-                                    <td><a href="#" class="btn choose_package active">Buy Now <i class="fas fa-chevron-right"></i></a></td>
-                                    <td><a href="#" class="btn choose_package active">Buy Now <i class="fas fa-chevron-right"></i></a></td>
-                                    <td><a href="#" class="btn choose_package active">Buy Now <i class="fas fa-chevron-right"></i></a></td>
-                                    <td><a href="#" class="btn choose_package active">Buy Now <i class="fas fa-chevron-right"></i></a></td>
+                                    <td><a href="#" class="btn choose_package pln-ylw">Buy Now <i class="fas fa-chevron-right"></i></a></td>
+                                    <td><a href="#" class="btn choose_package pln-grn">Buy Now <i class="fas fa-chevron-right"></i></a></td>
+                                    <td><a href="#" class="btn choose_package pln-blu">Buy Now <i class="fas fa-chevron-right"></i></a></td>
+                                    <td><a href="#" class="btn choose_package pln-red">Buy Now <i class="fas fa-chevron-right"></i></a></td>
                                   </tr>
                               </tfoot>
                           </table>

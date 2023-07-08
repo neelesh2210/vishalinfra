@@ -61,18 +61,14 @@
     .pt-20 {
         padding-top: 20px;
     }
-    .dropdown-menu.show {
+    .listForSelect .dropdown-menu.show {
     display: inline-grid;
     width: 56px;
     text-align: center;
     max-height: 220px;
     overflow-y: overlay;
-}
-    .higt_ovfl .dropdown-menu.show {
-    max-height: 220px;
-    overflow-y: overlay;
-}
 
+}
     .dropdown-menu {
         border-radius: 0;
         min-width: 2rem;
@@ -358,7 +354,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card">
+                                    <div class="card m-2">
                                         <div class="card-header">
                                             <h5 class="mb-0 h6">Property Area</h5>
                                         </div>
