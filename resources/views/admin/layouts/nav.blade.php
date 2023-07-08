@@ -8,6 +8,7 @@
         </li>
     </ul>
 
+    <marquee behavior="alternate" direction=""><h2>{{env('APP_NAME')}}</h2></marquee>
     <ul class="navbar-nav ml-auto">
         {{-- <li class="nav-item pl-4">
             <a class="btn btn-danger" href="{{ route('admin.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">

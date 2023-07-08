@@ -49,6 +49,22 @@
         <p><b>Showing {{($amenities->currentpage()-1)*$amenities->perpage()+1}} to {{(($amenities->currentpage()-1)*$amenities->perpage())+$amenities->count()}} of {{$amenities->total()}} Amenities</b></p>
     </div>
     <div class="col-md-8 d-flex justify-content-end">
-        {!! $amenities->links() !!}
+        {!! $amenities->appends(['search_key'=>$search_key])->links() !!}
     </div>
 </div>
+
+<script>
+    $(function () {
+        $('.page-link').on('click', function (event) {
+            event.preventDefault()
+            var url = $(this).attr('href');
+            $.ajax({
+                type: 'GET',
+                url: url,
+                success: function(data) {
+                    $('#table').html(data)
+                }
+            });
+        });
+    });
+</script>

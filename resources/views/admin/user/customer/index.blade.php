@@ -10,9 +10,6 @@
                             <li class="breadcrumb-item active">@isset($page_title) {{$page_title}} @endisset</li>
                         </ol>
                     </div>
-                    <div class="col-sm-6">
-                        <a href="#" class="btn btn-primary float-right">Add Customer <i class="fas fa-plus"></i></a>
-                    </div>
                 </div>
             </div>
         </section>

@@ -46,6 +46,9 @@ Route::group(['middleware'=>'auth:admin','as'=>'admin.'],function () {
 
     //Project
     Route::get('project-index',[ProjectController::class,'index'])->name('project.index');
+    Route::get('project-edit/{id}',[ProjectController::class,'edit'])->name('project.edit');
+    Route::put('project-update/{id}',[ProjectController::class,'update'])->name('project.update');
+    Route::get('project-status/{id}/{status}',[ProjectController::class,'status'])->name('project.status');
 
     //Property
     Route::resource('property',PropertyController::class);
@@ -53,9 +56,15 @@ Route::group(['middleware'=>'auth:admin','as'=>'admin.'],function () {
     Route::get('property-demanded-status/{id}/{status}',[PropertyController::class,'demandedStatus'])->name('property.demanded.status');
     Route::get('property-trending-status/{id}/{status}',[PropertyController::class,'trendingStatus'])->name('property.trending.status');
     Route::get('property-published-status/{id}/{status}',[PropertyController::class,'publishedStatus'])->name('property.published.status');
+    Route::get('property-enquiry/{id}',[PropertyController::class,'enquiry'])->name('property.enquiry');
 
     //Customers
     Route::get('customer-index',[UserController::class,'index'])->name('customer.index');
+    Route::get('customer-edit/{id}',[UserController::class,'edit'])->name('customer.edit');
+    Route::put('customer-update/{id}',[UserController::class,'update'])->name('customer.update');
+    Route::get('customer-verify-status/{id}/{status}',[UserController::class,'verifyStatus'])->name('customer.verify.status');
+    Route::get('customer-block-status/{id}/{status}',[UserController::class,'verifyBlock'])->name('customer.block.status');
+    Route::get('customer-plan-purchase/{id}',[UserController::class,'planPurchase'])->name('customer.plan.purchase');
 
     //Purchase Plan
     Route::get('purchase-plan-index',[PurchasePlanController::class,'index'])->name('purchase.plan.index');

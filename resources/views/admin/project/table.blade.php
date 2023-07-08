@@ -7,6 +7,8 @@
             <th>Address</th>
             <th>Launch Date</th>
             <th>Completion Date</th>
+            <th>Is Active</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -21,6 +23,20 @@
                 <td>{{$project->address}}</td>
                 <td>{{$project->launch_date}}</td>
                 <td>{{$project->completion_date}}</td>
+                <td>
+                    @if($project->is_active == '1')
+                        <a href="{{route('admin.project.status',[encrypt($project->id),encrypt('0')])}}">
+                            <span class="badge bg-success">Active</span>
+                        </a>
+                    @else
+                    <a href="{{route('admin.project.status',[encrypt($project->id),encrypt('1')])}}">
+                        <span class="badge bg-danger">InActive</span>
+                    </a>
+                    @endif
+                </td>
+                <td>
+                    <a href="{{route('admin.project.edit',encrypt($project->id))}}" class="btn btn-outline-primary btn-sm mr-1 mb-1"><i class="fas fa-edit"></i></a>
+                </td>
             </tr>
         @empty
             <tr class="footable-empty">
@@ -39,7 +55,7 @@
         <p><b>Showing {{($projects->currentpage()-1)*$projects->perpage()+1}} to {{(($projects->currentpage()-1)*$projects->perpage())+$projects->count()}} of {{$projects->total()}} projects</b></p>
     </div>
     <div class="col-md-8 d-flex justify-content-end">
-        {!! $projects->links() !!}
+        {!! $projects->appends(['search_launch_date'=>$search_launch_date,'search_completion_date'=>$search_completion_date,'search_type'=>$search_type,'search_key'=>$search_key])->links() !!}
     </div>
 </div>
 

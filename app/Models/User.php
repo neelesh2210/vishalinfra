@@ -18,16 +18,12 @@ class User extends Authenticatable
     protected $fillable = [
         'added_by',
         'type',
+        'user_name',
         'name',
-        'phone ',
         'email',
-        'referrer_code',
-        'referral_code',
-        'aadhar_number',
-        'is_kyced',
+        'phone ',
         'is_verified',
-        'is_old',
-        'is_delete'
+        'is_blocked'
     ];
 
     protected $hidden = [

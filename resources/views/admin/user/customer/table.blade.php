@@ -2,10 +2,13 @@
     <thead>
         <tr>
             <th class="text-center">#</th>
+            <th class="text-center">Type</th>
             <th class="text-center">Name</th>
             <th class="text-center">Email</th>
             <th class="text-center">Phone</th>
             <th class="text-center">Date</th>
+            <th class="text-center">Is Verified</th>
+            <th class="text-center">Is Blocked</th>
             <th class="text-center">Action</th>
         </tr>
     </thead>
@@ -13,13 +16,31 @@
         @forelse ($customers as $key=>$customer)
             <tr>
                 <td class="text-center">{{($key+1) + ($customers->currentPage() - 1)*$customers->perPage()}}</td>
+                <td class="text-center">{{ucwords(str_replace('_',' ',$customer->type))}}</td>
                 <td class="text-center">{{$customer->name}} ({{$customer->user_name}})</td>
                 <td class="text-center">{{$customer->email}}</td>
                 <td class="text-center">{{$customer->phone}}</td>
                 <td class="text-center">{{$customer->created_at->format('d-M-Y')}}</td>
                 <td class="text-center">
-                    <a href="#" class="btn btn-outline-primary btn-sm mr-1 mb-1">
+                    @if($customer->is_verified == '1')
+                        <a href="{{route('admin.customer.verify.status',[encrypt($customer->id),encrypt('0')])}}"><span class="badge bg-success">Yes</span></a>
+                    @else
+                        <a href="{{route('admin.customer.verify.status',[encrypt($customer->id),encrypt('1')])}}"><span class="badge bg-danger">No</span></a>
+                    @endif
+                </td>
+                <td class="text-center">
+                    @if($customer->is_blocked == '1')
+                        <a href="{{route('admin.customer.block.status',[encrypt($customer->id),encrypt('0')])}}"><span class="badge bg-danger">Yes</span></a>
+                    @else
+                        <a href="{{route('admin.customer.block.status',[encrypt($customer->id),encrypt('1')])}}"><span class="badge bg-success">No</span></a>
+                    @endif
+                </td>
+                <td class="text-center">
+                    <a href="{{route('admin.customer.edit',encrypt($customer->id))}}" class="btn btn-outline-primary btn-sm mr-1 mb-1" title="Edit">
                         <i class="fas fa-edit "></i>
+                    </a>
+                    <a href="{{route('admin.customer.plan.purchase',encrypt($customer->id))}}" class="btn btn-outline-primary btn-sm mr-1 mb-1" title="Plan Purchase">
+                        <i class="fas fa-file-alt "></i>
                     </a>
                 </td>
             </tr>

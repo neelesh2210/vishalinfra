@@ -10,10 +10,22 @@ use App\Http\Controllers\Controller;
 class AmenityController extends Controller
 {
 
-    public function index(){
-        $amenities = Amenity::orderBy('name','asc')->paginate(10);
+    public function index(Request $request){
+        $search_key = $request->search_key;
 
-        return view('admin.amenity.index',compact('amenities'),['page_title'=>'Amenity List']);
+        $amenities = Amenity::orderBy('name','asc');
+
+        if($search_key){
+            $amenities = $amenities->where('name','LIKE','%'.$search_key.'%');
+        }
+
+        $amenities = $amenities->paginate(10);
+
+        if($request->ajax()){
+            return view('admin.amenity.table',compact('amenities','search_key'));
+        }
+
+        return view('admin.amenity.index',compact('amenities','search_key'),['page_title'=>'Amenity List']);
     }
 
     public function create(){

@@ -11,8 +11,8 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="nav-item @if(in_array(Route::currentRouteName(), ['admin.property.index','admin.property.create','admin.property.edit','admin.amenities.index','admin.amenities.create','admin.amenities.edit'])) menu-is-opening menu-open @endif">
-                    <a href="#" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.property.index','admin.property.create','admin.property.edit','admin.amenities.index','admin.amenities.create','admin.amenities.edit'])) active @endif">
+                <li class="nav-item @if(in_array(Route::currentRouteName(), ['admin.property.index','admin.property.create','admin.property.edit','admin.amenities.index','admin.amenities.create','admin.amenities.edit','admin.project.index','admin.project.edit'])) menu-is-opening menu-open @endif">
+                    <a href="#" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.property.index','admin.property.create','admin.property.edit','admin.amenities.index','admin.amenities.create','admin.amenities.edit','admin.project.index','admin.project.edit'])) active @endif">
                         <i class="nav-icon fa fa-building" aria-hidden="true"></i>
                         <p>Property Management
                             <i class="fas fa-angle-left right"></i>
@@ -20,7 +20,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('admin.project.index')}}" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.project.index'])) active @endif">
+                            <a href="{{route('admin.project.index')}}" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.project.index','admin.project.edit'])) active @endif">
                                 <p>Project</p>
                             </a>
                         </li>

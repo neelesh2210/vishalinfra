@@ -15,7 +15,6 @@ class InstamojoController extends Controller
 {
     public function pay($plan){
         $user=Auth::guard('web')->user();
-
         $endPoint = env('INSTAMOJO_END_POINT');
         $api = new \Instamojo\Instamojo(
             env('INSTAMOJO_KEY'),

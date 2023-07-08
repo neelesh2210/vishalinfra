@@ -158,6 +158,21 @@
         $('#reservation').on('cancel.daterangepicker', function(ev, picker) {
             $(this).val('');
         });
+
+        $('#reservation1').daterangepicker({
+            autoUpdateInput: false,
+            locale: {
+                cancelLabel: 'Clear'
+            }
+        })
+
+        $('#reservation1').on('apply.daterangepicker', function(ev, picker) {
+            $(this).val(picker.startDate.format('MM/DD/YYYY') + '-' + picker.endDate.format('MM/DD/YYYY'));
+        });
+
+        $('#reservation1').on('cancel.daterangepicker', function(ev, picker) {
+            $(this).val('');
+        });
     });
   </script>
 </body>

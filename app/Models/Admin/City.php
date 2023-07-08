@@ -2,8 +2,9 @@
 
 namespace App\Models\Admin;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Admin\Property;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class City extends Model
 {
@@ -15,5 +16,9 @@ class City extends Model
 
     public function state(){
         return $this->belongsTo(State::class);
+    }
+
+    public function property(){
+        return $this->hasMany(Property::class,'city');
     }
 }

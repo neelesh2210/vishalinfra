@@ -65,6 +65,9 @@
                     <a href="{{route('admin.property.edit',encrypt($property->id))}}" class="btn btn-outline-primary btn-sm mr-1 mb-1">
                         <i class="fas fa-edit "></i>
                     </a>
+                    <a href="{{route('admin.property.enquiry',encrypt($property->id))}}" class="btn btn-outline-primary btn-sm mr-1 mb-1">
+                        <i class="far fa-question-circle"></i>
+                    </a>
                     {{-- <a href="{{route('admin.duplicate.property',$property->id)}}" class="btn btn-outline-primary btn-sm mr-1 mb-1">
                         <i class="fas fa-copy "></i>
                     </a> --}}

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Auth;
+use App\Models\Enquiry;
 use App\CPU\PhaseManager;
 use App\CPU\PropertyManager;
 use Illuminate\Http\Request;
@@ -283,6 +284,12 @@ class PropertyController extends Controller
         $property->save();
 
         return back()->with('success','Published Status Changed Successfully!');
+    }
+
+    public function enquiry($id){
+        $enquiries = Enquiry::where('property_id',decrypt($id))->paginate(10);
+
+        return view('admin.property.enquiry',compact('enquiries'),['page_title'=>'Property Enquiry']);
     }
 
 }
