@@ -138,6 +138,11 @@
                                                         </select>
                                                     </div>
                                                 </div>
+                                                <div class="col-md-4 form_div">
+                                                    <div class="form-group">
+                                                        <a href="{{route('user.add.project')}}" class="btn btn-primary mt-2" style="margin-top: 32px !important;"><i class="fas fa-plus"></i></a>
+                                                    </div>
+                                                </div>
                                             @endif
                                             <div class="col-md-4 form_div">
                                                 <div class="form-group">

@@ -72,6 +72,12 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4">
+                                <p>Owner Type</p>
+                            </div>
+                            <div class="col-md-8">
+                                <strong>{{ ucwords(str_replace('_',' ',$property_detail->addedBy->type)) }}</strong>
+                            </div>
+                            <div class="col-md-4">
                                 <p>Price</p>
                             </div>
                             <div class="col-md-8">
@@ -223,7 +229,7 @@
                                 <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
                                     <div class="property-listing list_view row m-0">
                                         <div class="col-md-4 p-0">
-                                            <div class="_exlio_125">{{ $similer_property->properties_type }}</div>
+                                            <div class="_exlio_125">{{ ucwords(str_replace('_',' ',$similer_property->properties_type)) }}</div>
                                             <div class="project">
                                                 <a href="{{ route('property.detail',$similer_property->slug) }}"><img src="{{uploaded_asset($similer_property->thumbnail_img)}}"
                                                         class="img-fluid mx-auto" alt="" /></a>
