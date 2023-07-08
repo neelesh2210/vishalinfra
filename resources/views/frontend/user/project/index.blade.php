@@ -12,14 +12,16 @@
                             <div class="col-lg-12 col-md-12">
                                 <div class="_prt_filt_dash">
                                     <div class="_prt_filt_dash_flex">
-                                        <div class="foot-news-last">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" placeholder="Search Here..">
-                                                <div class="input-group-append">
-                                                    <span type="button" class="input-group-text theme-bg b-0 text-light"><i class="fas fa-search"></i></span>
+                                        <form>
+                                            <div class="foot-news-last">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" name="search_key" value="{{$search_key}}" placeholder="Search Here..">
+                                                    <div class="input-group-append">
+                                                        <button type="submit" class="input-group-text theme-bg b-0 text-light"><i class="fas fa-search"></i></button>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </form>
                                     </div>
                                     <div class="_prt_filt_dash_last m2_hide">
                                         <div class="_prt_filt_radius"></div>

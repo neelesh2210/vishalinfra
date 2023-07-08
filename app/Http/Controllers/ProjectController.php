@@ -9,10 +9,18 @@ use App\Models\Admin\Project;
 class ProjectController extends Controller
 {
 
-    public function index(){
-        $projects = Project::orderBy('id','desc')->paginate(10);
+    public function index(Request $request){
+        $search_key = $request->search_key;
 
-        return view('frontend.user.project.index',compact('projects'),['page_title'=>'My Properties']);
+        $projects = Project::orderBy('id','desc')->where('user_id',Auth::guard('web')->user()->id);
+
+        if($search_key){
+            $projects = $projects->where('name','LIKE','%'.$search_key.'%');
+        }
+
+        $projects = $projects->paginate(10);
+
+        return view('frontend.user.project.index',compact('projects','search_key'),['page_title'=>'My Properties']);
     }
 
     public function create(){
