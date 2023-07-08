@@ -15,7 +15,7 @@
                                         @csrf
                                         <div class="submit-page">
                                             <div class="frm_submit_block">
-                                                <h3>Project Details</h3>
+                                                <h3>Project Details</h3><hr>
                                                 <div class="frm_submit_wrap">
                                                     <div class="form-row">
                                                         <div class="form-group col-md-12">
@@ -110,7 +110,7 @@
                                                 </div>
                                             </div>
                                             <div class="frm_submit_block">
-                                                <h3>Gallery</h3>
+                                                <h4>Gallery</h4>
                                                 <hr />
                                                 <div class="frm_submit_wrap">
                                                     <div class="form-row">

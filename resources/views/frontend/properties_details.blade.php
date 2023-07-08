@@ -67,7 +67,7 @@
                     </div>
                     <div class="property_block_wrap">
                         <div class="property_block_wrap_header">
-                            <h3 class="property_block_title">More Details</h3>
+                            <h4 class="property_block_title">More Details</h4>
                             <hr />
                         </div>
                         <div class="row">
@@ -167,8 +167,8 @@
                                         <div class="row">
                                             <input type="hidden" name="property_id" value="{{$property_detail->id}}">
                                             <div class="col-lg-12 col-md-12 col-sm-12">
-                                                <h5>Fill this one-time contact form</h5>
-                                                 <p>Get Agent's details over email</p>
+                                                <h5>Fill This Enquiry Form</h5>
+                                                 {{-- <p>Get Agent's details over email</p> --}}
                                                 <hr>
                                                 <div class="form-group">
                                                     <label>Full Name</label>
@@ -189,7 +189,7 @@
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12">
                                                 <div class="form-group">
-                                                    <button class="btn book_btn theme-bg">Get Contact Details</button>
+                                                    <button class="btn book_btn theme-bg">Get Contact Details <i class="fas fa-chevron-right"></i></button>
                                                 </div>
                                             </div>
                                         </div>

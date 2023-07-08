@@ -40,7 +40,7 @@
 /*------------------------------------
 	Fonts
 ------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap";
 
 /*------------------------------------
 	Preloader
@@ -73,7 +73,7 @@ body {
 	background: #ffffff;
 	color:#000;
 	font-size:15px;
-	font-family: 'Lexend Deca', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	margin: 0;
 	overflow-x: hidden !important;
 	font-weight: 400;
@@ -191,7 +191,7 @@ p, ul, ol, dl, dt, dd, blockquote, address {
 }
 
 .explore-content h1, .explore-content h2{
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
 .shadow-0{
@@ -207,19 +207,19 @@ h3,
 h4,
 h5,
 h6 {
-	color:#2D3954;
+	color:#333;
 	font-weight:500;
 	text-transform: capitalize;
-	font-family: 'Lexend Deca', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 h5,
 h6 {
-	color:#2D3954;
+	color:#333;
 }
 
 .font-2{
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 h1 {
@@ -3488,7 +3488,7 @@ nav a:hover {
 .nav-menu>li>a {
     padding: 30px 12px;
     display: inline-block;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight:500;
     transition: color .3s, background .3s;
     font-size: 16px;
@@ -3852,7 +3852,7 @@ nav a:hover {
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-	font-family: 'Lexend Deca', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 .nav-dropdown>li:last-child>a{
 	border-bottom:none;
@@ -4270,7 +4270,7 @@ height: 60px;
     font-weight: 500;
     color: #495363;
 	position:relative;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
     padding: .5rem .75rem;
     border-bottom: 1px solid #edf0f3;
 }
@@ -4294,7 +4294,7 @@ height: 60px;
     border-radius: 50%;
     font-size: 13px;
     font-weight: 600 !important;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #ffffff;
 }
 span.notti_coun.style-1 {
@@ -4437,7 +4437,7 @@ li._my_prt_list a {
     font-size: 16px;
     font-weight: 500;
     color:#004371;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 li._my_prt_list a span {
     width: auto;
@@ -4484,7 +4484,7 @@ li._my_prt_list a span {
     font-size: 14px;
     font-weight: 600;
     color:#293544;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 .mobile_nav ul li._my_prt_list a span {
     width: auto;
@@ -4620,7 +4620,7 @@ nav .menu li.dropdown.open > a{
     color:#72809D;
     display: block;
     font-weight: 500;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .account-drop .btn.btn-order-by-filt {
@@ -5133,7 +5133,7 @@ span.like-listing {
 }
 #module>a, #module>a:hover, #module>a:focus{
 	width: 100%;
-	color:#2D3954;
+	color:#333;
     padding:14px 10px 14px 45px;
     position: relative;
     line-height: 1.25;
@@ -5344,7 +5344,7 @@ span.like-listing {
     cursor: pointer;
     text-transform: capitalize;
     color: #ffffff;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
     display: inline-flex;
     align-items: center;
     letter-spacing: 1px;
@@ -5545,7 +5545,7 @@ h1.big-header-capt {
     font-size: 13px;
     margin-bottom: 0px;
     color: #6b79a0;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
 }
 .lightanic_search.hero_search-radius .select2-selection.select2-selection--single {
@@ -7125,7 +7125,7 @@ span.tag_t {
     width: 100%;
 }
 .property-listing.property-2 .listing-name {
-    font-size: 16px;
+    font-size: 15px;
     position: relative;
     margin-bottom: 0px;
     font-weight: 500;
@@ -8281,7 +8281,7 @@ ul.inline_social li a.tw{
     font-weight: 500;
     color: #ffffff;
     border-radius: 50px;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 15px;
 }
 /*----------- Agency Grid -----------*/
@@ -8480,7 +8480,7 @@ span.agents_count {
     overflow: hidden;
 }
 .gg_single_part a {
-    display: inline-block;
+    /* display: inline-block; */
 }
 .gg_single_part-right {
     display: block;
@@ -8650,7 +8650,7 @@ span.agents_count {
     font-size: 16px;
     color: #1b2132;
     font-weight: 600;
-	font-family: 'Lexend Deca', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 .nav-tabs.customize-tab {
     border: none;
@@ -9654,7 +9654,7 @@ span.remove-from-compare {
 }
 
 .pr-price-into h2 {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.4;
     margin: 0;
 }
@@ -10711,7 +10711,7 @@ span.approved-agent i {
     align-items: center;
     justify-content: center;
     display: block;
-    color: #2D3954;
+    color: #333;
     font-weight: 700;
     height: 52px;
     display: flex;
@@ -10756,7 +10756,7 @@ span.approved-agent i {
     padding: 10px 5px 10px 5px;
 }
 .form-group {
-	color:#707e9c;
+	color:#333;
 	font-weight:500;
 	position: relative;
     padding:0;
@@ -10895,7 +10895,7 @@ span.btn-add, span.btn-minus {
     flex: 1;
     font-weight: 800;
     font-size: 13px;
-    color: #2D3954;
+    color: #333;
 }
 .side-booking-header .price{
     margin: 0;
@@ -11021,7 +11021,6 @@ span.btn-add, span.btn-minus {
     width: 100%;
     height: 55px;
     border-radius: 6px;
-    display: flex;
     align-items: center;
     justify-content: center;
     color: #ffffff;
@@ -11072,7 +11071,7 @@ input.form-control.light, .form-control.light {
     border: 1px solid #dee3ea;
 }
 .daterangepicker {
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 15px;
 }
 .daterangepicker .calendar-table td, .daterangepicker .calendar-table th {
@@ -11428,7 +11427,7 @@ th.next.available, .prev.available {
     font-weight: 700;
     font-size: 20px;
 	color:#ffffff;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 .blog-body {
     padding:20px 20px;
@@ -12038,23 +12037,23 @@ span.tes_quote {
 }
 /*------------ pricing Box ----------------*/
 .pricing_wrap {
+    margin-bottom: 30px;
     background: #ffffff;
     box-shadow: 0 0 20px 0 rgb(62 28 131 / 10%);
-	-webkit-box-shadow: 0 0 20px 0 rgb(62 28 131 / 10%);
-    border-radius:0.5rem;
+    -webkit-box-shadow: 0 0 20px 0 rgb(62 28 131 / 10%);
+    border-radius: 1rem;
 }
 .prt_head {
     text-align: center;
     margin-bottom: 1rem;
-    border-bottom: 1px dashed #ddd;
 }
 .prt_body{
     padding: 15px 30px 0px 30px;
     border-bottom: 1px solid #ddd;
 }
 .prc_bg{
-    background: #ff5f202e;
-    padding: 25px;
+    padding: 25px 20px 15px;
+    border-bottom: 1px solid #ddd;
 }
 .prt_price {
     text-align: center;
@@ -12066,7 +12065,7 @@ span.tes_quote {
     padding:17px 30px 18px;
 }
 .prt_price h2 {
-    font-size: 36px;
+    font-size: 30px;
     letter-spacing: 0px;
     display: flex;
     align-items: center;
@@ -12080,11 +12079,11 @@ span.tes_quote {
 }
 .prt_body ul li {
     position: relative;
-    padding: 10px 10px 18px 40px;
+    padding: 10px 10px 15px 35px;
     color: #2c3038;
     font-size: 15px;
-    font-weight: 600;
-	margin-bottom:10px;
+    font-weight: 500;
+    margin-bottom: 10px;
     border-bottom: 1px dashed #ddd;
 }
 .prt_body ul li.none{
@@ -12094,26 +12093,25 @@ span.tes_quote {
     content:"\f00c";
     font-family: 'Font Awesome 5 Free';
     width: 30px;
-    height: 30px;
+    height: 32px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(39, 174, 96,0.12);
     border-radius: 50%;
     color: #234ca0;
     left: 0;
     position: absolute;
     top: 5px;
     font-size: 13px;
+    font-weight: 600;
 }
 .prt_body ul li.none:before {
     content: "\f00d";
-    background:rgba(220, 53, 69,0.12)!important;
+    /* background:rgba(220, 53, 69,0.12)!important; */
     color:rgb(220 53 69)!important;
 }
 .btn.choose_package {
-    height: 52px;
-    display: flex;
+    height: 47px;
     align-items: center;
     justify-content: center;
     background: #ffffff;
@@ -12126,18 +12124,17 @@ span.tes_quote {
 }
 .btn.choose_package:hover, .btn.choose_package:focus {
     background:#d4efdf;
-    border: 4px solid #d4efdf;
     color: #234ca0;
 }
 .recommended {
     margin-bottom: 1rem;
-    padding: 6px 20px;
-    background:#ff5f20;
+    padding: 5px 15px;
+    background: #ff5f20;
     display: inline-block;
     border-radius: 50px;
     color: #ffffff;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 500;
 }
 .btn.choose_package.active{
 	background:#234ca0;
@@ -12546,7 +12543,7 @@ ul.packages-lists-list li {
     font-weight:500;
 	position: relative;
 	transition:all ease 0.4s;
-	font-family:'Lexend Deca', sans-serif;
+	font-family:'Poppins', sans-serif;
 }
 .dash_user_menues ul li a:hover, .dash_user_menues ul li a:focus{
     color: #234ca0;
@@ -13322,7 +13319,7 @@ footer.skin-dark-footer .extream, footer.skin-light-footer .extream {
     letter-spacing: 1px;
     font-weight: 700;
 	line-height:1.4;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 footer.skin-dark-footer h4{
     color: #ffffff;
@@ -14145,7 +14142,7 @@ h1, .h1 {
 	font-size:60px;
 }
 .sec-heading h2{
-	font-size:26px;
+	font-size:22px;
 	line-height:1.2;
 }
 
@@ -15423,3 +15420,43 @@ font-size: 12px;
     background-color: #c80000;
 }
 
+.ribbon {
+    position: absolute;
+    overflow: hidden;
+    top: -5px;
+    left: 10px;
+    width: 130px;
+    height: 120px;
+}
+
+.ribbon span {
+    position: absolute;
+    display: block;
+    width: 160px;
+    padding: 10px 0;
+    background-color: #3498db;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    left: -35px;
+    top: 25px;
+    transform: rotate(-45deg);
+}
+.pln-ylw{
+    background: #FFC107;
+    color: #fff !important;
+}
+.pln-grn{
+    background: #4CAF50;
+    color: #fff !important;
+}
+.pln-blu{
+    background: #2196f3;
+    color: #fff !important;
+}
+.pln-red{
+    background: #f44336;
+    color: #fff !important;
+}

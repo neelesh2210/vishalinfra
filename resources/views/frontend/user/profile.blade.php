@@ -17,40 +17,40 @@
 										<div class="frm_submit_wrap">
 											<div class="form-row">
 												<div class="form-group col-md-6">
-													<label>NAME *</label>
+													<label>Name *</label>
 													<input type="text" class="form-control" value="Vikas Sharma">
 												</div>
                                                 <div class="form-group col-md-6">
-													<label>PHONE *</label>
+													<label>Phone *</label>
 													<input type="text" class="form-control" value="9454528015">
 												</div>
 												<div class="form-group col-md-6">
-													<label>EMAIL</label>
+													<label>Email</label>
 													<input type="email" class="form-control" value="vikas@gmail.com">
 												</div>
 												<div class="form-group col-md-6">
-													<label>PINCODE</label>
+													<label>Pincode</label>
 													<input type="text" class="form-control" value="221010">
 												</div>
 
 												<div class="form-group col-md-6">
-													<label>LANDMARK</label>
+													<label>Landmark</label>
 													<input type="text" class="form-control" value="Near Rampur Gate">
 												</div>
 												<div class="form-group col-md-6">
-													<label>CITY</label>
+													<label>City</label>
 													<input type="text" class="form-control" value="Varanasi">
 												</div>
 												<div class="form-group col-md-6">
-													<label>STATE</label>
+													<label>State</label>
 													<input type="text" class="form-control" value="UP">
 												</div>
 												<div class="form-group col-md-6">
-													<label>COUNTRY</label>
+													<label>Country</label>
 													<input type="text" class="form-control" value="India">
 												</div>
                                                 <div class="form-group col-md-6">
-													<label>PROFILE</label>
+													<label>Profile</label>
 													<input type="file" class="form-control">
 												</div>
                                                 <div class="form-group col-md-6 mt-20">

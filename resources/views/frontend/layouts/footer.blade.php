@@ -8,7 +8,7 @@
 								<div class="footer_widget">
                                     <h4 class="widget_title">About Vishal Infra</h4>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                    <h5 class="text-white">Follow us</h5>
+                                    <h6 class="widget_title text-white">Follow us: </h4>
                                     <ul class="social-link">
                                         <li>
                                             <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
