@@ -19,5 +19,11 @@ class Plan extends Model
         'duration_in_day',
         'image',
         'description',
+        'buyer_notification',
+        'top_listing',
+        'trust_seal',
+        'verified_enquiry',
+        'classified',
+        'search_banner',
     ];
 }

@@ -24,6 +24,12 @@ class CreatePlansTable extends Migration
             $table->integer('duration_in_day');
             $table->string('image')->nullable();
             $table->text('description')->nullable();
+            $table->enum('buyer_notification', ['1', '0']);
+            $table->enum('top_listing', ['1', '0']);
+            $table->enum('trust_seal', ['1', '0']);
+            $table->enum('verified_enquiry', ['1', '0']);
+            $table->enum('classified', ['1', '0']);
+            $table->enum('search_banner', ['1', '0']);
             $table->timestamps();
         });
     }

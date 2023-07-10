@@ -68,6 +68,114 @@
                                                     <input type="number" step="1" class="form-control" id="duration_in_day" name="duration_in_day" value="{{$plan->duration_in_day}}" placeholder="Enter Duration In Day..." required>
                                                 </div>
                                             </div>
+                                            <div class="col-md-4 card text-center">
+                                                <div class="form-group">
+                                                    <div class="card-head">
+                                                        <label class="mt-2">Buyer Notification</label>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row card-body">
+                                                        <div class="col-md-6">
+                                                            <label for="buyer_notification_yes">Yes</label>
+                                                            <input type="radio" name="buyer_notification" value="1" id="buyer_notification_yes" class="form-control" @if($plan->buyer_notification == '1') checked @endif>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="buyer_notification_no">No</label>
+                                                            <input type="radio" name="buyer_notification" value="0" id="buyer_notification_no" class="form-control" @if($plan->buyer_notification == '0') checked @endif>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 card text-center">
+                                                <div class="form-group">
+                                                    <div class="card-head">
+                                                        <label class="mt-2">Top Listing</label>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row card-body">
+                                                        <div class="col-md-6">
+                                                            <label for="top_listing_yes">Yes</label>
+                                                            <input type="radio" name="top_listing" value="1" id="top_listing_yes" class="form-control" @if($plan->top_listing == '1') checked @endif>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="top_listing_no">No</label>
+                                                            <input type="radio" name="top_listing" value="0" id="top_listing_no" class="form-control" @if($plan->top_listing == '0') checked @endif>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 card text-center">
+                                                <div class="form-group">
+                                                    <div class="card-head">
+                                                        <label class="mt-2">Trust Seal</label>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row card-body">
+                                                        <div class="col-md-6">
+                                                            <label for="trust_seal_yes">Yes</label>
+                                                            <input type="radio" name="trust_seal" value="1" id="trust_seal_yes" class="form-control" @if($plan->trust_seal == '1') checked @endif>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="trust_seal_no">No</label>
+                                                            <input type="radio" name="trust_seal" value="0" id="trust_seal_no" class="form-control" @if($plan->trust_seal == '0') checked @endif>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 card text-center">
+                                                <div class="form-group">
+                                                    <div class="card-head">
+                                                        <label class="mt-2">Verified Enquiry</label>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row card-body">
+                                                        <div class="col-md-6">
+                                                            <label for="verified_enquiry_yes">Yes</label>
+                                                            <input type="radio" name="verified_enquiry" value="1" id="verified_enquiry_yes" class="form-control" @if($plan->verified_enquiry == '1') checked @endif>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="verified_enquiry_no">No</label>
+                                                            <input type="radio" name="verified_enquiry" value="0" id="verified_enquiry_no" class="form-control" @if($plan->verified_enquiry == '0') checked @endif>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 card text-center">
+                                                <div class="form-group">
+                                                    <div class="card-head">
+                                                        <label class="mt-2">Classified</label>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row card-body">
+                                                        <div class="col-md-6">
+                                                            <label for="classified_yes">Yes</label>
+                                                            <input type="radio" name="classified" value="1" id="classified_yes" class="form-control" @if($plan->classified == '1') checked @endif>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="classified_no">No</label>
+                                                            <input type="radio" name="classified" value="0" id="classified_no" class="form-control" @if($plan->classified == '0') checked @endif>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 card text-center">
+                                                <div class="form-group">
+                                                    <div class="card-head">
+                                                        <label class="mt-2">Search Banner</label>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row card-body">
+                                                        <div class="col-md-6">
+                                                            <label for="search_banner_yes">Yes</label>
+                                                            <input type="radio" name="search_banner" value="1" id="search_banner_yes" class="form-control" @if($plan->search_banner == '1') checked @endif>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="search_banner_no">No</label>
+                                                            <input type="radio" name="search_banner" value="0" id="search_banner_no" class="form-control" @if($plan->search_banner == '0') checked @endif>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="col-md-12 pt-20">
                                                 <label class="col-from-label">Description</label>
                                                 <textarea name="description" rows="8" class="form-control summernote">{!!$plan->description!!}</textarea>

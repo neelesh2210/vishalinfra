@@ -34,6 +34,12 @@ class PlanController extends Controller
         $plan->number_of_property = $request->number_of_property;
         $plan->duration_in_day = $request->duration_in_day;
         $plan->image = imageUpload($request->file('image'),'backend/img/plan');
+        $plan->buyer_notification = $request->buyer_notification;
+        $plan->top_listing = $request->top_listing;
+        $plan->trust_seal = $request->trust_seal;
+        $plan->verified_enquiry = $request->verified_enquiry;
+        $plan->classified = $request->classified;
+        $plan->search_banner = $request->search_banner;
         $plan->description = $request->description;
         $plan->save();
 
@@ -60,6 +66,12 @@ class PlanController extends Controller
         if($request->has('image')){
             $plan->image = imageUpload($request->file('image'),'backend/img/plan');
         }
+        $plan->buyer_notification = $request->buyer_notification;
+        $plan->top_listing = $request->top_listing;
+        $plan->trust_seal = $request->trust_seal;
+        $plan->verified_enquiry = $request->verified_enquiry;
+        $plan->classified = $request->classified;
+        $plan->search_banner = $request->search_banner;
         $plan->description = $request->description;
         $plan->save();
 
