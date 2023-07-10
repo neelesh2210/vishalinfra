@@ -4557,8 +4557,8 @@ fixed-bottom 1030*/
 .aiz-uploader-all {
     margin-left: -10px;
     margin-right: -10px;
-    overflow-y: auto;
-    min-height: 225px;
+    overflow-y: scroll;
+    height: 225px;
 }
 .uppy-Dashboard-files {
     max-height: calc(100vh - 363px);
