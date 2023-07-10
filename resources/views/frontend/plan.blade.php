@@ -1,5 +1,26 @@
 @extends('frontend.layouts.app')
 @section('content')
+<style>
+    table.table tr th {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        color: #004e9d;
+    }
+    strong {
+        font-weight: 600;
+        letter-spacing: .5px;
+        color: #ff5f20;
+        font-size: 20px;
+    }
+    .fa-check{
+        color: green;
+    }
+    .fa-times{
+        color: red;
+    }
+</style>
     <div class="page-title" style="background:#f4f4f4 url({{ asset('frontend/assets/img/bg.jpg') }});" data-overlay="5">
         <div class="container">
             <div class="row">
