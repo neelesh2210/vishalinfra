@@ -14,9 +14,7 @@
         @else
             Reframe RealEstate
         @endisset
-
     </title>
-    <!-- Custom CSS -->
     <link href="{{ asset('frontend/assets/css/styles.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/image/css/vendors.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/image/css/aiz-core.css') }}">

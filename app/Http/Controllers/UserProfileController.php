@@ -17,11 +17,13 @@ class UserProfileController extends Controller
     }
 
     public function saveProfile(Request $request){
+
         $this->validate($request, [
             'name' => 'required|string|max:150',
             'email' => 'required|string|email|unique:users,email,'. Auth::guard('web')->user()->id .'id',
             'phone' => 'required|min:10|max:10|unique:users,phone,'. Auth::guard('web')->user()->id .'id'
         ]);
+
         $user = User::find(Auth::guard('web')->user()->id);
         $user->name = $request->name;
         $user->email = $request->email;
