@@ -6,8 +6,9 @@ use Auth;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Admin\Pincode;
-use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\RegisterRequest;
 
 class RegisterController extends Controller
@@ -31,12 +32,14 @@ class RegisterController extends Controller
         $user->phone = $request->phone;
         $user->save();
 
+        Mail::send('frontend.email.welcome', ['user_name'=>$user->name,'phone'=>$user->phone], function($message) use($user){
+            $message->to($user->email);
+            $message->subject('Registration Successful');
+        });
+
         if (Auth::guard('web')->attempt(['user_name' => $user->user_name,'password' => $request->password,])){
             return redirect()->route('user.dashboard');
         }
-
-        //return redirect()->route('signin');
-
     }
 
     public function getAddress(Request $request){

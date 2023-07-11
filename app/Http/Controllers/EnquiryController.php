@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Auth;
 use App\Models\Enquiry;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class EnquiryController extends Controller
 {
@@ -29,6 +30,11 @@ class EnquiryController extends Controller
         $enquiry->phone = $request->phone;
         $enquiry->email = $request->email;
         $enquiry->save();
+
+        Mail::send('frontend.email.enquiry', ['user_name'=>$enquiry->name,'phone'=>$enquiry->phone,'email'=>$enquiry->email,'property_id'=>$enquiry->property_id], function($message) use($enquiry){
+            $message->to($enquiry->property->addedBy->email);
+            $message->subject('Enquiry for Property');
+        });
 
         return back()->with('success','Enquiry Submitted Successfully!');
     }
