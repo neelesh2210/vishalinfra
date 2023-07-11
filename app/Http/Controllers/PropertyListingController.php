@@ -13,10 +13,17 @@ use App\Models\Admin\PlanPurchase;
 class PropertyListingController extends Controller
 {
 
-    public function index(){
-        $properties = PropertyManager::withoutTrash()->where('added_by',Auth::guard('web')->user()->id)->with('planPurchase')->orderBy('id','desc')->paginate(15);
+    public function index(Request $request){
+        $search_key = $request->search_key;
 
-        return view('frontend.user.property.index',compact('properties'),['page_title'=>'My Properties']);
+        $properties = PropertyManager::withoutTrash()->where('added_by',Auth::guard('web')->user()->id);
+        if($search_key){
+            $properties = $properties->where('name','LIKE','%'.$search_key.'%');
+        }
+
+        $properties = $properties->with('planPurchase')->orderBy('id','desc')->paginate(15);
+
+        return view('frontend.user.property.index',compact('properties','search_key'),['page_title'=>'My Properties']);
     }
 
     public function create(){
@@ -144,6 +151,89 @@ class PropertyListingController extends Controller
             $times = 0;
             return view('frontend.user.property.edit',compact('times','plan_purchases','projects','property'));
         }
+    }
+
+    public function update(Request $request,$id){
+        $property=Property::find(decrypt($id));
+        $property->name=$request->name;
+        $property->properties_type=$request->properties_type;
+        $property->city=$request->city_id;
+        $property->landmark=$request->landmark;
+
+        if($request->properties_type == 'plot'){
+            $property->plot_area=$request->plot_area;
+            $property->plot_length=$request->plot_length;
+            $property->plot_breadth=$request->plot_breadth;
+            $property->self_tieup=$request->self_tieup;
+            $property->plot_type=$request->plot_type;
+            $property->facing=$request->facing;
+
+            $property->furnished_status=null;
+            $property->bedroom=null;
+            $property->balconies=null;
+            $property->bathroom=null;
+            $property->floor_no=null;
+            $property->total_floor=null;
+            $property->carpet_area=null;
+            $property->super_area=null;
+
+        }elseif($request->properties_type == 'flat_apartment' || $request->properties_type == 'residental_house'){
+            $property->furnished_status=$request->furnished_status;
+            $property->bedroom=$request->bedroom;
+            $property->balconies=$request->balconies;
+            $property->bathroom=$request->bathroom;
+            $property->floor_no=$request->floor_no;
+            $property->total_floor=$request->total_floor;
+            $property->carpet_area=$request->carpet_area;
+            $property->super_area=$request->super_area;
+
+            $property->plot_area=null;
+            $property->plot_length=null;
+            $property->plot_breadth=null;
+            $property->self_tieup=null;
+            $property->plot_type=null;
+            $property->facing=null;
+        }elseif($request->properties_type == 'commerical_space'){
+            $property->furnished_status=$request->furnished_status;
+            $property->balconies=$request->balconies;
+            $property->bathroom=$request->bathroom;
+            $property->floor_no=$request->floor_no;
+            $property->total_floor=$request->total_floor;
+            $property->carpet_area=$request->carpet_area;
+            $property->super_area=$request->super_area;
+
+            $property->plot_area=null;
+            $property->plot_length=null;
+            $property->plot_breadth=null;
+            $property->self_tieup=null;
+            $property->plot_type=null;
+            $property->facing=null;
+        }
+
+        $property->transaction_type=$request->transaction_type;
+        $property->prossession_status=$request->prossession_status;
+
+        $property->price=$request->price;
+        $property->booking_amount=$request->booking_amount;
+        $property->maintenance_charge=$request->maintenance_charge;
+        $property->discounted_price=$request->discounted_price;
+        $property->final_price=$request->final_price;
+        $property->photos=$request->gallery_image;
+        $property->amenities=json_encode($request->amenity);
+
+        $property->thumbnail_img=$request->image;
+        $property->remark=$request->remark;
+        $property->save();
+
+        return redirect()->route('user.property.index')->with('success','Property Updated Successfully!');
+    }
+
+    public function status($id,$status){
+        $property = Property::find($id);
+        $property->is_status = $status;
+        $property->save();
+
+        return back()->with('success','Property Updated Successfully!');
     }
 
 }

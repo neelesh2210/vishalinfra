@@ -13,12 +13,14 @@
                                 <div class="_prt_filt_dash">
                                     <div class="_prt_filt_dash_flex">
                                         <div class="foot-news-last">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" placeholder="Search Here..">
-                                                <div class="input-group-append">
-                                                    <span type="button" class="input-group-text theme-bg b-0 text-light"><i class="fas fa-search"></i></span>
+                                            <form action="">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" name="search_key" value="{{$search_key}}" placeholder="Search Here..">
+                                                    <div class="input-group-append">
+                                                        <button type="submit" class="input-group-text theme-bg b-0 text-light"><i class="fas fa-search"></i></button>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </form>
                                         </div>
                                     </div>
                                     <div class="_prt_filt_dash_last m2_hide">
@@ -64,8 +66,7 @@
                                                         </td>
                                                         <td class="m2_hide">
                                                             <div class="_leads_view">
-                                                                <h5 class="up">Views : 816</h5>
-                                                                 <h5 class="up">Views : 816</h5>
+                                                                <h5 class="up">Views : 0</h5>
                                                             </div>
                                                             <div class="_leads_view_title"><span></span></div>
                                                         </td>
@@ -78,17 +79,17 @@
                                                         <td>
                                                             <div class="_leads_status">
                                                                 @if($property->is_status == '1')
-                                                                    <span class="active">Active</span>
+                                                                    <a href="{{route('user.property.listing.status',[$property->id,'0'])}}"><span class="active">Active</span></a>
                                                                 @else
-                                                                    <span class="active">Inactive</span>
+                                                                    <a href="{{route('user.property.listing.status',[$property->id,'1'])}}"><span class="expire">Inactive</span></a>
                                                                 @endif
                                                             </div>
-                                                            <div class="_leads_view_title"><span>Till {{$property->planPurchase?$property->planPurchase->created_at->addDays($property->planPurchase->duration_in_day):'FREE'}}</span></div>
+                                                            <div class="_leads_view_title"><span>Till {{$property->planPurchase?$property->planPurchase->expiry_at:'FREE'}}</span></div>
                                                         </td>
                                                         <td>
                                                             <div class="_leads_action">
                                                                 <a href="{{route('user.property.listing.edit',encrypt($property->id))}}"><i class="fas fa-edit"></i></a>
-                                                                <a href="#"><i class="fas fa-trash"></i></a>
+                                                                {{-- <a href="#"><i class="fas fa-trash"></i></a> --}}
                                                             </div>
                                                         </td>
                                                     </tr>

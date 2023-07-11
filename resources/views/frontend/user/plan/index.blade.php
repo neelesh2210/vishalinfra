@@ -29,7 +29,8 @@
                                                     <th scope="col">#</th>
                                                     <th scope="col">Plan Detail</th>
                                                     <th scope="col">Payment Detail</th>
-                                                    <th scope="col">Date</th>
+                                                    <th scope="col">Purchase Date</th>
+                                                    <th scope="col">Expiry Date</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -46,6 +47,7 @@
                                                             <b>Price: </b>₹ {{$subsription->discounted_price}}
                                                         </td>
                                                         <td>{{$subsription->created_at}}</td>
+                                                        <td>{{$subsription->expiry_at}}</td>
                                                     </tr>
                                                 @endforeach
                                             <tbody>

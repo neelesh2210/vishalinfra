@@ -70,6 +70,8 @@ Route::group(['middleware'=>['auth:web']],function () {
         Route::get('property-listing',[PropertyListingController::class,'create'])->name('property.listing');
         Route::post('property-listing-store',[PropertyListingController::class,'store'])->name('property.listing.store');
         Route::get('property-listing-edit/{id}',[PropertyListingController::class,'edit'])->name('property.listing.edit');
+        Route::put('property-listing-update/{id}',[PropertyListingController::class,'update'])->name('property.listing.update');
+        Route::get('property-listing-status/{id}/{status}',[PropertyListingController::class,'status'])->name('property.listing.status');
 
         //Profile
         Route::get('profile',[UserProfileController::class,'profile'])->name('profile');

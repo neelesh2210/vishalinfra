@@ -60,7 +60,7 @@
                         <li>
                             <div class="btn-group account-drop">
                                 <button type="button" class="btn btn-order-by-filt" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="{{ asset('frontend/images/user/avatars/'.Auth::guard('web')->user()->userProfile->avatar) }}" class="img-fluid avater" onerror="this.onerror=null;this.src='{{ asset('frontend/assets/img/profile.png') }}';" style="height: 40px;width: 40px;">
+                                    <img src="{{ asset('frontend/images/user/avatars/'.optional(Auth::guard('web')->user()->userProfile)->avatar) }}" class="img-fluid avater" onerror="this.onerror=null;this.src='{{ asset('frontend/assets/img/profile.png') }}';" style="height: 40px;width: 40px;">
                                 </button>
                                 <div class="dropdown-menu pull-right animated flipInX">
                                     <div class="drp_menu_headr">

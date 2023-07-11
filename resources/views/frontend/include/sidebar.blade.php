@@ -1,6 +1,6 @@
 <div class="property_dashboard_navbar">
     <div class="dash_user_avater">
-        <img src="{{ asset('frontend/images/user/avatars/'.Auth::guard('web')->user()->userProfile->avatar) }}" class="img-fluid avater" onerror="this.onerror=null;this.src='{{ asset('frontend/assets/img/profile.png') }}';">
+        <img src="{{ asset('frontend/images/user/avatars/'.optional(Auth::guard('web')->user()->userProfile)->avatar) }}" class="img-fluid avater" onerror="this.onerror=null;this.src='{{ asset('frontend/assets/img/profile.png') }}';">
         <h4>{{ Auth::guard('web')->user()->name }}</h4>
     </div>
     <div class="dash_user_menues">
