@@ -48,22 +48,14 @@
                     <i class="fa fa-gift"></i> Subscription Status
                     <span class="expiration">
                         @php
-                            $date = App\Models\Admin\PlanPurchase::where('user_id', Auth::guard('web')->user()->id)
-                                                                    ->whereRaw('DATE_ADD(`created_at`, INTERVAL `duration_in_day` DAY) >= NOW()')
-                                                                    ->orderBy('duration_in_day', 'desc')
-                                                                    ->first();
+                            $date = App\Models\Admin\PlanPurchase::where('user_id', Auth::guard('web')->user()->id)->where('expiry_at', '>=', \Carbon\Carbon::now())->orderBy('expiry_at','asc')->first();
                             if($date){
-                                $start = Carbon\Carbon::parse($date->created_at->addDays($date->duration_in_day)->format('Y-m-d'));
-                                $end = Carbon\Carbon::parse(Carbon\Carbon::now()->format('Y-m-d'));
-                                $diff = $start->diffInDays($end);
+                                $diff = $date->created_at->diffInDays($date->expiry_at);
+                            }else{
+                                $diff = 0;
                             }
                         @endphp
-                        @if ($date)
-                            {{ $diff }}
-                        @else
-                            0
-                        @endif
-                        days left
+                        {{ $diff }} days left
                     </span>
                 </a>
             </li>

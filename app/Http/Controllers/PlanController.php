@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Auth;
+use Carbon\Carbon;
 use App\Models\Admin\Plan;
 use Illuminate\Http\Request;
 use App\Models\Admin\PlanPurchase;
@@ -40,6 +41,11 @@ class PlanController extends Controller
         $plan_purchase->discounted_price = $plan->discounted_price;
         $plan_purchase->payment_detail = $request->payment_detalis;
         $plan_purchase->payment_status = 'success';
+
+        $date = Carbon::now();
+        $expiry_at = $date->addDays($plan->duration_in_day);
+
+        $plan_purchase->expiry_at = $expiry_at;
         $plan_purchase->save();
 
         session()->forget('data');

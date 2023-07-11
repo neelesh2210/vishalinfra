@@ -19,6 +19,7 @@ class PlanPurchase extends Model
         'discounted_price',
         'payment_detail',
         'payment_status',
+        'expiry_at'
     ];
 
     public function user(){

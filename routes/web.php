@@ -40,8 +40,6 @@ Route::post('get-address',[RegisterController::class,'getAddress'])->name('get.a
 Route::get('signin',[LoginController::class,'signin'])->name('signin');
 Route::post('login',[LoginController::class,'login'])->name('login');
 
-Route::view('price-plan', 'frontend.price-plan')->name('price_plan');
-
 Route::view('forgot-password', 'frontend.auth.forgot_password')->name('forgot_password');
 Route::view('reset-password', 'frontend.auth.reset_password')->name('reset_password');
 

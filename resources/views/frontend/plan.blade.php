@@ -42,34 +42,6 @@
                 </div>
             </div>
             <div class="row align-items-center">
-                {{-- @foreach ($plans as $key=>$plan)
-                    <div class="col-lg-4 col-md-4 mb-3">
-                        <div class="pricing_wrap">
-                            <div class="prc_bg">
-                                <div class="prt_head">
-                                    <h4>{{$plan->name}}</h4>
-                                </div>
-                                <div class="prt_price">
-
-                                    <h2><span>₹</span>{{$plan->discounted_price}} <del class="ml-2" style="color: #ff5f20; font-size:25px;"> {{$plan->price}}</del></h2>
-                                    <span>{{$plan->duration_in_day}} Days Validity</span>
-                                </div>
-                            </div>
-                            <div class="prt_body">
-                                <ul>
-                                    <li>Number of listings ({{$plan->number_of_property}})</li>
-                                </ul>
-                            </div>
-                            <div class="prt_footer">
-                                <a class="btn choose_package" onclick="$('#form_{{$plan->id}}').submit()">Buy Now</a>
-                                <form action="{{route('user.attempt.plan.purchase')}}" id="form_{{$plan->id}}" method="POST">
-                                    @csrf
-                                    <input type="hidden" name="plan_id" value="{{$plan->id}}">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach --}}
                 <div class="col-lg-12 col-md-12 mb-3">
                     <div class="pricing_wrap p-4 table-responsive">
                         <table class="table table-bordered table-striped ">
@@ -78,9 +50,6 @@
                                     <th scope="col"></th>
                                     @foreach ($plans as $key=>$plan)
                                         <th scope="col" class="text-center @if($key == 0) pln-ylw @elseif($key == 1) pln-grn @elseif($key == 2) pln-blu @elseif($key == 3) pln-red @endif">{{$plan->name}}</th>
-                                        {{-- <th scope="col" class="text-center pln-grn">Standard</th>
-                                        <th scope="col" class="text-center pln-blu">Professional</th>
-                                        <th scope="col" class="text-center pln-red">Enterprise</th> --}}
                                     @endforeach
                                 </tr>
                                 <tr class="text-center">

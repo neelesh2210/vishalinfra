@@ -115,7 +115,7 @@
                                                             <option value="">Select Plan...</option>
                                                             @foreach ($plan_purchases as $plan_purchase)
                                                                 @if($plan_purchase->property_count < $plan_purchase->number_of_property)
-                                                                    <option value="{{$plan_purchase->id}}">{{$plan_purchase->plan->name}} Expire at {{$plan_purchase->created_at->addDay($plan_purchase->duration_in_day)}}</option>
+                                                                    <option value="{{$plan_purchase->id}}">{{$plan_purchase->plan->name}} Expire at {{$plan_purchase->expiry_at}}</option>
                                                                 @endif
                                                             @endforeach
                                                         </select>

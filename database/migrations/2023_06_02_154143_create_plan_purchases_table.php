@@ -23,6 +23,7 @@ class CreatePlanPurchasesTable extends Migration
             $table->double('discounted_price',15,2);
             $table->text('payment_detail');
             $table->enum('payment_status', ['success', 'pending', 'failed']);
+            $table->timestamp('expiry_at');
             $table->timestamps();
         });
     }
