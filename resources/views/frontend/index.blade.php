@@ -16,8 +16,7 @@
                         <div class="hero_search-2">
                             <div class="simple_tab_search">
                                 <div class="pk-input-group">
-                                    <input type="text" name="email" class="email form-control"
-                                        placeholder="Search By City, Locality, Project">
+                                    <input type="text" name="email" class="email form-control" placeholder="Search By City, Locality, Project">
                                     <button class="pk-subscribe-submit" type="submit"><i class="fa fa-search"></i></button>
                                 </div>
                             </div>
@@ -25,15 +24,15 @@
                     </div>
                     <div class="full_search_box nexio_search lightanic_search hero_search-radius modern">
                         <div class="search_hero_wrapping">
-                            <form action="{{route('properties')}}">
+                            <form action="{{ route('properties') }}">
                                 <div class="row">
                                     <div class="col-lg-4 col-md-4 col-sm-12">
                                         <div class="form-group">
                                             <div class="input-with-icon">
                                                 <select id="location" name="location" class="form-control">
                                                     <option value="">Select City</option>
-                                                    @foreach (App\CPU\PropertyManager::withoutTrash()->groupBy('city')->with('cities')->get() as $city)
-                                                        <option value="{{$city->city}}">{{$city->cities->name}}</option>
+                                                    @foreach ($cities as $city)
+                                                        <option value="{{ $city->id }}">{{ $city->name }}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
@@ -77,37 +76,19 @@
                     </div>
                 </div>
                 {{-- <div class="col-xl-3 col-lg-3 col-md-9">
-							<div class="modern-testimonial">
-
-								<!-- Single Items -->
-								<div class="single_items">
-                                    <div class="">
-                                        <img src="{{ asset('frontend/assets/img/destination-projects-web.jpg') }}" class="img-fluid br_red">
-                                    </div>
-								</div>
-
-								<!-- Single Items -->
-								<div class="single_items">
-                                    <div class="">
-                                        <img src="{{ asset('frontend/assets/img/destination-projects-web.jpg') }}" class="img-fluid br_red">
-                                    </div>
-								</div>
-
-								<!-- Single Items -->
-								<div class="single_items">
-                                    <div class="">
-                                        <img src="{{ asset('frontend/assets/img/destination-projects-web.jpg') }}" class="img-fluid br_red">
-                                    </div>
-								</div>
-
-								<!-- Single Items -->
-								<div class="single_items">
-                                    <div class="">
-                                        <img src="{{ asset('frontend/assets/img/destination-projects-web.jpg') }}" class="img-fluid br_red">
-                                    </div>
-								</div>
-
-							</div>
+                    <div class="modern-testimonial">
+                        @foreach ($sliders as $slider)
+                            <div class="single_items">
+                                @if($slider->link)
+                                    <a href="{{$slider->link}}">
+                                        <img src="{{asset('backend/img/sliders/'.$slider->image)}}" class="img-fluid br_red">
+                                    </a>
+                                @else
+                                    <img src="{{asset('backend/img/sliders/'.$slider->image)}}" class="img-fluid br_red">
+                                @endif
+                            </div>
+                        @endforeach
+                    </div>
                 </div> --}}
             </div>
         </div>
@@ -122,8 +103,8 @@
                 </div>
                 <div class="col-3 col-md-3">
                     <div class="float-end mt-2">
-                        <a href="#" class="default-btn border-radius"> View All <i
-                                class="fas fa-chevron-circle-right"></i>
+                        <a href="#" class="default-btn border-radius"> View All
+                            <i class="fas fa-chevron-circle-right"></i>
                         </a>
                     </div>
                 </div>
@@ -131,14 +112,13 @@
             <div class="row justify-content-center">
                 <div class="col-lg col-md-4 col-xs-6">
                     <div class="property_cats_boxs">
-                        <a href="{{route('properties')}}?properties_type=flat_apartment" class="category-box">
+                        <a href="{{ route('properties') }}?properties_type=flat_apartment" class="category-box">
                             <div class="property_category_short">
                                 <div class="category-icon clip-3">
                                     <i class="flaticon-apartments"></i>
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
                                     <h4>Flat/ Apartment</h4>
-                                    {{-- <p>{{App\CPU\PropertyManager::withoutTrash()->where('properties_type','flat_apartment')->get()->count()}} Property</p> --}}
                                 </div>
                             </div>
                         </a>
@@ -146,14 +126,13 @@
                 </div>
                 <div class="col-lg col-md-4 col-xs-6">
                     <div class="property_cats_boxs">
-                        <a href="{{route('properties')}}?properties_type=residental_house" class="category-box">
+                        <a href="{{ route('properties') }}?properties_type=residental_house" class="category-box">
                             <div class="property_category_short">
                                 <div class="category-icon clip-5">
                                     <i class="flaticon-modern-house-4"></i>
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
                                     <h4>Residential House</h4>
-                                    {{-- <p>{{App\CPU\PropertyManager::withoutTrash()->where('properties_type','residental_house')->get()->count()}} Property</p> --}}
                                 </div>
                             </div>
                         </a>
@@ -161,14 +140,13 @@
                 </div>
                 <div class="col-lg col-md-4 col-xs-6">
                     <div class="property_cats_boxs">
-                        <a href="{{route('properties')}}?properties_type=commerical_space" class="category-box">
+                        <a href="{{ route('properties') }}?properties_type=commerical_space" class="category-box">
                             <div class="property_category_short">
                                 <div class="category-icon clip-4">
                                     <i class="flaticon-student-housing"></i>
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
                                     <h4>Commercial Space</h4>
-                                    {{-- <p>{{App\CPU\PropertyManager::withoutTrash()->where('properties_type','commerical_space')->get()->count()}} Property</p> --}}
                                 </div>
                             </div>
                         </a>
@@ -176,34 +154,18 @@
                 </div>
                 <div class="col-lg col-md-4 col-xs-6">
                     <div class="property_cats_boxs">
-                        <a href="{{route('properties')}}?properties_type=plot" class="category-box">
+                        <a href="{{ route('properties') }}?properties_type=plot" class="category-box">
                             <div class="property_category_short">
                                 <div class="category-icon clip-1">
                                     <i class="flaticon-beach-house-2"></i>
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
                                     <h4>Plot</h4>
-                                    {{-- <p>{{App\CPU\PropertyManager::withoutTrash()->where('properties_type','plot')->get()->count()}} Home</p> --}}
                                 </div>
                             </div>
                         </a>
                     </div>
                 </div>
-                {{-- <div class="col-lg col-md-4">
-                    <div class="property_cats_boxs">
-                        <a href="#" class="category-box">
-                            <div class="property_category_short">
-                                <div class="category-icon clip-2">
-                                    <i class="flaticon-cabin"></i>
-                                </div>
-                                <div class="property_category_expand property_category_short-text">
-                                    <h4>Renting a home</h4>
-                                    <p>155 Home</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div> --}}
             </div>
         </div>
     </section>
@@ -231,9 +193,8 @@
                                 <div class="property-listing property-2">
                                     <div class="listing-img-wrapper">
                                         <div class="list-img-slide">
-                                            <a href="{{ route('property.detail',$property->slug) }}">
-                                                <img src="{{uploaded_asset($property->thumbnail_img)}}"
-                                                    class="img-fluid mx-auto" alt="" />
+                                            <a href="{{ route('property.detail', $property->slug) }}">
+                                                <img src="{{ uploaded_asset($property->thumbnail_img) }}" class="img-fluid mx-auto" alt="" />
                                             </a>
                                         </div>
                                     </div>
@@ -241,7 +202,7 @@
                                         <div class="listing-short-detail-wrap">
                                             <div class="_card_list_flex mb-2">
                                                 <div class="_card_flex_01">
-                                                    <span class="property-type elt_rent">{{ucwords(str_replace('_',' ',$property->properties_type))}}</span>
+                                                    <span class="property-type elt_rent">{{ ucwords(str_replace('_', ' ', $property->properties_type)) }}</span>
                                                 </div>
                                                 <div class="_card_flex_last">
                                                     <div class="prt_saveed_12lk">
@@ -250,12 +211,12 @@
                                                 </div>
                                             </div>
                                             <div class="listing-short-detail">
-                                                <h4 class="listing-name verified"><a href="{{ route('property.detail',$property->slug) }}"
-                                                        class="prt-link-detail">{{ $property->name }}</a></h4>
+                                                <h4 class="listing-name verified">
+                                                    <a href="{{ route('property.detail', $property->slug) }}" class="prt-link-detail">{{ $property->name }}</a>
+                                                </h4>
                                                 @if ($property->pincode || $property->address)
                                                     <div class="foot-location">
-                                                        <img src="{{ asset('frontend/assets/img/pin.svg') }}"
-                                                            width="18" alt="" />{{ $property->address }}
+                                                        <img src="{{ asset('frontend/assets/img/pin.svg') }}" width="18" alt="" />{{ $property->address }}
                                                         @if ($property->pincode)
                                                             {{ $property->city }}, {{ $property->state }},
                                                             {{ $property->country }},{{ $property->pincode }}
@@ -267,10 +228,12 @@
                                     </div>
                                     <div class="listing-detail-footer">
                                         <div class="footer-first">
-                                            <h6 class="listing-card-info-price mb-0 p-0">₹{{ abreviateTotalCount($property->final_price) }}</h6>
+                                            <h6 class="listing-card-info-price mb-0 p-0">
+                                                ₹{{ abreviateTotalCount($property->final_price) }}
+                                            </h6>
                                         </div>
                                         <div class="footer-flex">
-                                            <a href="{{ route('property.detail',$property->slug) }}" class="prt-view">View Detail</a>
+                                            <a href="{{ route('property.detail', $property->slug) }}" class="prt-view">View Detail</a>
                                         </div>
                                     </div>
                                 </div>
@@ -281,154 +244,6 @@
             </div>
         </div>
     </section>
-    {{-- <section class="min gray-simple">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-9 col-md-9">
-                    <div class="sec-heading">
-                        <h2>Exclusive Owner Properties in Varanasi</h2>
-                    </div>
-                </div>
-                <div class="col-3 col-md-3">
-                    <div class="float-end mt-2">
-                        <a href="#" class="default-btn border-radius">
-                            View All <i class="fas fa-chevron-circle-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="item-slide space">
-                        @foreach ($properties as $property)
-                            <div class="single_items">
-                                <div class="property-listing property-2">
-                                    <div class="listing-img-wrapper">
-                                        <div class="list-img-slide">
-                                            <a href="{{ route('property.detail',$property->slug) }}">
-                                                <img src="{{uploaded_asset($property->thumbnail_img)}}"
-                                                    class="img-fluid mx-auto" alt="" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="listing-detail-wrapper">
-                                        <div class="listing-short-detail-wrap">
-                                            <div class="_card_list_flex mb-2">
-                                                <div class="_card_flex_01">
-                                                    <span class="property-type elt_rent">3 BHK Flats</span>
-                                                </div>
-                                                <div class="_card_flex_last">
-                                                    <div class="prt_saveed_12lk">
-                                                        <span class="latest_new_post hot">{{ $property->carpet_area }} sqft</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="listing-short-detail">
-                                                <h4 class="listing-name verified"><a href="{{ route('property.detail',$property->slug) }}"
-                                                        class="prt-link-detail">{{ $property->name }}</a></h4>
-                                                @if ($property->pincode || $property->address)
-                                                    <div class="foot-location">
-                                                        <img src="{{ asset('frontend/assets/img/pin.svg') }}"
-                                                            width="18" alt="" />{{ $property->address }}
-                                                        @if ($property->pincode)
-                                                            {{ $property->city }}, {{ $property->state }},
-                                                            {{ $property->country }},{{ $property->pincode }}
-                                                        @endif
-                                                    </div>
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="listing-detail-footer">
-                                        <div class="footer-first">
-                                            <h6 class="listing-card-info-price mb-0 p-0">₹{{ $property->final_price }}</h6>
-                                        </div>
-                                        <div class="footer-flex">
-                                            <a href="{{ route('property.detail',$property->slug) }}" class="prt-view">View Detail</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="min">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-9 col-md-9">
-                    <div class="sec-heading">
-                        <h2>Featured Projects</h2>
-                    </div>
-                </div>
-                <div class="col-3 col-md-3">
-                    <div class="float-end mt-2">
-                        <a href="#" class="default-btn border-radius">
-                            View All <i class="fas fa-chevron-circle-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="item-slide space">
-                        @foreach ($properties as $property)
-                            <div class="single_items">
-                                <div class="property-listing property-2">
-                                    <div class="listing-img-wrapper">
-                                        <div class="list-img-slide">
-                                            <a href="{{ route('property.detail',$property->slug) }}">
-                                                <img src="{{uploaded_asset($property->thumbnail_img)}}"
-                                                    class="img-fluid mx-auto" alt="" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="listing-detail-wrapper">
-                                        <div class="listing-short-detail-wrap">
-                                            <div class="_card_list_flex mb-2">
-                                                <div class="_card_flex_01">
-                                                    <span class="property-type elt_rent">3 BHK Flats</span>
-                                                </div>
-                                                <div class="_card_flex_last">
-                                                    <div class="prt_saveed_12lk">
-                                                        <span class="latest_new_post hot">{{ $property->carpet_area }} sqft</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="listing-short-detail">
-                                                <h4 class="listing-name verified"><a href="{{ route('property.detail',$property->slug) }}"
-                                                        class="prt-link-detail">{{ $property->name }}</a></h4>
-                                                @if ($property->pincode || $property->address)
-                                                    <div class="foot-location">
-                                                        <img src="{{ asset('frontend/assets/img/pin.svg') }}"
-                                                            width="18" alt="" />{{ $property->address }}
-                                                        @if ($property->pincode)
-                                                            {{ $property->city }}, {{ $property->state }},
-                                                            {{ $property->country }},{{ $property->pincode }}
-                                                        @endif
-                                                    </div>
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="listing-detail-footer">
-                                        <div class="footer-first">
-                                            <h6 class="listing-card-info-price mb-0 p-0">₹{{ $property->final_price }}</h6>
-                                        </div>
-                                        <div class="footer-flex">
-                                            <a href="{{ route('property.detail',$property->slug) }}" class="prt-view">View Detail</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
     <section class="min gray-simple">
         <div class="container">
             <div class="row justify-content-center">
@@ -439,8 +254,8 @@
                 </div>
                 <div class="col-3 col-md-3">
                     <div class="float-end mt-2">
-                        <a href="#" class="default-btn border-radius">
-                            View All <i class="fas fa-chevron-circle-right"></i>
+                        <a href="#" class="default-btn border-radius"> View All
+                            <i class="fas fa-chevron-circle-right"></i>
                         </a>
                     </div>
                 </div>
@@ -453,29 +268,31 @@
                                 <div class="property-listing property-2">
                                     <div class="listing-img-wrapper">
                                         <div class="list-img-slide">
-                                            <a href="#"><img src="{{uploaded_asset($project->cover_image)}}" class="img-fluid mx-auto" alt="" /></a>
+                                            <a href="#">
+                                                <img src="{{ uploaded_asset($project->cover_image) }}" class="img-fluid mx-auto" alt="" />
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="listing-detail-wrapper">
                                         <div class="listing-short-detail-wrap">
                                             <div class="_card_list_flex mb-2">
                                                 <div class="_card_flex_01">
-                                                    <span class="_list_blickes _netork">{{$project->total_unit}} Unit</span>
+                                                    <span class="_list_blickes _netork">{{ $project->total_unit }} Unit</span>
                                                 </div>
                                             </div>
                                             <div class="listing-short-detail">
                                                 <h4 class="listing-name verified">
-                                                    <a href="#" class="prt-link-detail">{{$project->name}}</a>
+                                                    <a href="#" class="prt-link-detail">{{ $project->name }}</a>
                                                 </h4>
                                                 <div class="foot-location">
-                                                    <img src="{{ asset('frontend/assets/img/pin.svg') }}" width="18" alt="" />{{$project->address}}
+                                                    <img src="{{ asset('frontend/assets/img/pin.svg') }}" width="18" alt="" />{{ $project->address }}
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="listing-detail-footer">
                                         <div class="footer-first">
-                                            <h6 class="listing-card-info-price mb-0 p-0">{{$project->project_area}} Area</h6>
+                                            <h6 class="listing-card-info-price mb-0 p-0">{{ $project->project_area }} Area</h6>
                                         </div>
                                         <div class="footer-flex">
                                             <a href="#" class="prt-view">View Detail</a>
@@ -489,92 +306,34 @@
             </div>
         </div>
     </section>
-
-    			<!-- ============================ Property By Location ================================== -->
-			<section class="min">
-				<div class="container">
-
-					<div class="row justify-content-center">
-						<div class="col-lg-7 col-md-8">
-							<div class="sec-heading center">
-								<h2>Top Property Places</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="row justify-content-center">
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<a href="{{route('properties')}}" class="img-wrap">
-									<div class="location_wrap_content visible">
-										<div class="location_wrap_content_first">
-											<h4>Delhi</h4>
-											<span>48 Properties</span>
-										</div>
-										<div class="location_btn"><i class="fa fa-arrow-right"></i></div>
-									</div>
-								<div class="img-wrap-background" style="background-image: url({{ asset('frontend/assets/img/city-6.png')}});"></div>
-							</a>
-						</div>
-
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<a href="{{route('properties')}}" class="img-wrap">
-									<div class="location_wrap_content visible">
-										<div class="location_wrap_content_first">
-											<h4>Banglore</h4>
-											<span>73 Properties</span>
-										</div>
-										<div class="location_btn"><i class="fa fa-arrow-right"></i></div>
-									</div>
-								<div class="img-wrap-background" style="background-image: url({{ asset('frontend/assets/img/city-7.png')}});"></div>
-							</a>
-						</div>
-
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<a href="{{route('properties')}}" class="img-wrap">
-									<div class="location_wrap_content visible">
-										<div class="location_wrap_content_first">
-											<h4>Hydrabad</h4>
-											<span>40 Properties</span>
-										</div>
-										<div class="location_btn"><i class="fa fa-arrow-right"></i></div>
-									</div>
-								<div class="img-wrap-background" style="background-image: url({{ asset('frontend/assets/img/city-3.png')}});"></div>
-							</a>
-						</div>
-
-						<div class="col-lg-6 col-md-6 col-sm-6">
-							<a href="{{route('properties')}}" class="img-wrap">
-									<div class="location_wrap_content visible">
-										<div class="location_wrap_content_first">
-											<h4>Lucknow</h4>
-											<span>35 Properties</span>
-										</div>
-										<div class="location_btn"><i class="fa fa-arrow-right"></i></div>
-									</div>
-								<div class="img-wrap-background" style="background-image: url({{ asset('frontend/assets/img/city-4.png')}});"></div>
-							</a>
-						</div>
-
-						<div class="col-lg-6 col-md-6 col-sm-6">
-							<a href="{{route('properties')}}" class="img-wrap">
-									<div class="location_wrap_content visible">
-										<div class="location_wrap_content_first">
-											<h4>Varanasi</h4>
-											<span>10 Properties</span>
-										</div>
-										<div class="location_btn"><i class="fa fa-arrow-right"></i></div>
-									</div>
-								<div class="img-wrap-background" style="background-image: url({{ asset('frontend/assets/img/city-5.png')}});"></div>
-							</a>
-						</div>
-
-					</div>
-
-				</div>
-			</section>
-			<!-- ============================ Property By Location End ================================== -->
-
+    <section class="min">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-md-8">
+                    <div class="sec-heading center">
+                        <h2>Top Property Places</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                @foreach ($cities as $key => $city)
+                    <div class="@if ($key <= 3) col-lg-4 col-md-4 col-sm-6 @else col-lg-6 col-md-6 col-sm-6 @endif">
+                        <a href="{{ route('properties') }}?location={{ $city->id }}" class="img-wrap">
+                            <div class="location_wrap_content visible">
+                                <div class="location_wrap_content_first">
+                                    <h4>{{ $city->name }}</h4>
+                                    <span>{{ $city->property_count }} Properties</span>
+                                </div>
+                                <div class="location_btn"><i class="fa fa-arrow-right"></i></div>
+                            </div>
+                            <div class="img-wrap-background" style="background-image: url({{ asset('frontend/assets/img/city-6.png') }});"></div>
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
     <section class="min gray-simple">
         <div class="container">
             <div class="row justify-content-center">
@@ -585,8 +344,8 @@
                 </div>
                 <div class="col-3 col-md-3">
                     <div class="float-end mt-2">
-                        <a href="#" class="default-btn border-radius">
-                            View All <i class="fas fa-chevron-circle-right"></i>
+                        <a href="#" class="default-btn border-radius"> View All
+                            <i class="fas fa-chevron-circle-right"></i>
                         </a>
                     </div>
                 </div>
@@ -599,9 +358,8 @@
                                 <div class="property-listing property-2">
                                     <div class="listing-img-wrapper">
                                         <div class="list-img-slide">
-                                            <a href="{{ route('property.detail',$featured_property->slug) }}">
-                                                <img src="{{uploaded_asset($featured_property->thumbnail_img)}}"
-                                                    class="img-fluid mx-auto" alt="" />
+                                            <a href="{{ route('property.detail', $featured_property->slug) }}">
+                                                <img src="{{ uploaded_asset($featured_property->thumbnail_img) }}" class="img-fluid mx-auto" alt="" />
                                             </a>
                                         </div>
                                     </div>
@@ -609,7 +367,7 @@
                                         <div class="listing-short-detail-wrap">
                                             <div class="_card_list_flex mb-2">
                                                 <div class="_card_flex_01">
-                                                    <span class="property-type elt_rent">{{ucwords(str_replace('_',' ',$featured_property->properties_type))}}</span>
+                                                    <span class="property-type elt_rent">{{ ucwords(str_replace('_', ' ', $featured_property->properties_type)) }}</span>
                                                 </div>
                                                 <div class="_card_flex_last">
                                                     <div class="prt_saveed_12lk">
@@ -618,14 +376,15 @@
                                                 </div>
                                             </div>
                                             <div class="listing-short-detail">
-                                                <h4 class="listing-name verified"><a href="{{ route('property.detail',$featured_property->slug) }}"
-                                                        class="prt-link-detail">{{ $featured_property->name }}</a></h4>
-                                                @if ($featured_property->pincode || $featured_property->address)
+                                                <h4 class="listing-name verified">
+                                                    <a href="{{ route('property.detail', $featured_property->slug) }}" class="prt-link-detail">{{ $featured_property->name }}</a>
+                                                </h4>
+                                                @if($featured_property->pincode || $featured_property->address)
                                                     <div class="foot-location">
-                                                        <img src="{{ asset('frontend/assets/img/pin.svg') }}"
-                                                            width="18" alt="" />{{ $featured_property->address }}
+                                                        <img src="{{ asset('frontend/assets/img/pin.svg') }}" width="18" alt="" />{{ $featured_property->address }}
                                                         @if ($featured_property->pincode)
-                                                            {{ $featured_property->city }}, {{ $featured_property->state }},
+                                                            {{ $featured_property->city }},
+                                                            {{ $featured_property->state }},
                                                             {{ $featured_property->country }},{{ $featured_property->pincode }}
                                                         @endif
                                                     </div>
@@ -635,10 +394,12 @@
                                     </div>
                                     <div class="listing-detail-footer">
                                         <div class="footer-first">
-                                            <h6 class="listing-card-info-price mb-0 p-0">₹{{ abreviateTotalCount($featured_property->final_price) }}</h6>
+                                            <h6 class="listing-card-info-price mb-0 p-0">
+                                                ₹{{ abreviateTotalCount($featured_property->final_price) }}
+                                            </h6>
                                         </div>
                                         <div class="footer-flex">
-                                            <a href="{{ route('property.detail',$featured_property->slug) }}" class="prt-view">View Detail</a>
+                                            <a href="{{ route('property.detail', $featured_property->slug) }}" class="prt-view">View Detail</a>
                                         </div>
                                     </div>
                                 </div>
@@ -659,8 +420,8 @@
                 </div>
                 <div class="col-3 col-md-3">
                     <div class="float-end mt-2">
-                        <a href="#" class="default-btn border-radius">
-                            View All <i class="fas fa-chevron-circle-right"></i>
+                        <a href="#" class="default-btn border-radius"> View All
+                            <i class="fas fa-chevron-circle-right"></i>
                         </a>
                     </div>
                 </div>
@@ -673,9 +434,8 @@
                                 <div class="property-listing property-2">
                                     <div class="listing-img-wrapper">
                                         <div class="list-img-slide">
-                                            <a href="{{ route('property.detail',$most_demanded_property->slug) }}">
-                                                <img src="{{uploaded_asset($most_demanded_property->thumbnail_img)}}"
-                                                    class="img-fluid mx-auto" alt="" />
+                                            <a href="{{ route('property.detail', $most_demanded_property->slug) }}">
+                                                <img src="{{ uploaded_asset($most_demanded_property->thumbnail_img) }}" class="img-fluid mx-auto" alt="" />
                                             </a>
                                         </div>
                                     </div>
@@ -683,7 +443,7 @@
                                         <div class="listing-short-detail-wrap">
                                             <div class="_card_list_flex mb-2">
                                                 <div class="_card_flex_01">
-                                                    <span class="property-type elt_rent">{{ucwords(str_replace('_',' ',$most_demanded_property->properties_type))}}</span>
+                                                    <span class="property-type elt_rent">{{ ucwords(str_replace('_', ' ', $most_demanded_property->properties_type)) }}</span>
                                                 </div>
                                                 <div class="_card_flex_last">
                                                     <div class="prt_saveed_12lk">
@@ -692,14 +452,15 @@
                                                 </div>
                                             </div>
                                             <div class="listing-short-detail">
-                                                <h4 class="listing-name verified"><a href="{{ route('property.detail',$most_demanded_property->slug) }}"
-                                                        class="prt-link-detail">{{ $most_demanded_property->name }}</a></h4>
+                                                <h4 class="listing-name verified">
+                                                    <a href="{{ route('property.detail', $most_demanded_property->slug) }}" class="prt-link-detail">{{ $most_demanded_property->name }}</a>
+                                                </h4>
                                                 @if ($most_demanded_property->pincode || $most_demanded_property->address)
                                                     <div class="foot-location">
-                                                        <img src="{{ asset('frontend/assets/img/pin.svg') }}"
-                                                            width="18" alt="" />{{ $most_demanded_property->address }}
+                                                        <img src="{{ asset('frontend/assets/img/pin.svg') }}" width="18" alt="" />{{ $most_demanded_property->address }}
                                                         @if ($most_demanded_property->pincode)
-                                                            {{ $most_demanded_property->city }}, {{ $most_demanded_property->state }},
+                                                            {{ $most_demanded_property->city }},
+                                                            {{ $most_demanded_property->state }},
                                                             {{ $most_demanded_property->country }},{{ $most_demanded_property->pincode }}
                                                         @endif
                                                     </div>
@@ -709,10 +470,12 @@
                                     </div>
                                     <div class="listing-detail-footer">
                                         <div class="footer-first">
-                                            <h6 class="listing-card-info-price mb-0 p-0">₹{{ abreviateTotalCount($most_demanded_property->final_price) }}</h6>
+                                            <h6 class="listing-card-info-price mb-0 p-0">
+                                                ₹{{ abreviateTotalCount($most_demanded_property->final_price) }}
+                                            </h6>
                                         </div>
                                         <div class="footer-flex">
-                                            <a href="{{ route('property.detail',$most_demanded_property->slug) }}" class="prt-view">View Detail</a>
+                                            <a href="{{ route('property.detail', $most_demanded_property->slug) }}" class="prt-view">View Detail</a>
                                         </div>
                                     </div>
                                 </div>
@@ -729,8 +492,7 @@
                 <div class="col-lg-7 col-md-8">
                     <div class="sec-heading center">
                         <h2>How It Works?</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                     </div>
                 </div>
             </div>
@@ -739,14 +501,12 @@
                     <div class="wpk_process">
                         <div class="wpk_thumb">
                             <div class="wpk_thumb_figure">
-                                <img src="{{ asset('frontend/assets/img/account-cl.svg') }}" class="img-fluid"
-                                    alt="" />
+                                <img src="{{ asset('frontend/assets/img/account-cl.svg') }}" class="img-fluid" alt="" />
                             </div>
                         </div>
                         <div class="wpk_caption">
                             <h4>Create An Account</h4>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have Ipsum
-                                available.</p>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have Ipsum available.</p>
                         </div>
                     </div>
                 </div>
@@ -754,14 +514,12 @@
                     <div class="wpk_process active">
                         <div class="wpk_thumb">
                             <div class="wpk_thumb_figure">
-                                <img src="{{ asset('frontend/assets/img/search.svg') }}" class="img-fluid"
-                                    alt="" />
+                                <img src="{{ asset('frontend/assets/img/search.svg') }}" class="img-fluid" alt="" />
                             </div>
                         </div>
                         <div class="wpk_caption">
                             <h4>Find & Search Property</h4>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have Ipsum
-                                available.</p>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have Ipsum available.</p>
                         </div>
                     </div>
                 </div>
@@ -769,14 +527,12 @@
                     <div class="wpk_process">
                         <div class="wpk_thumb">
                             <div class="wpk_thumb_figure">
-                                <img src="{{ asset('frontend/assets/img/booking-cl.svg') }}" class="img-fluid"
-                                    alt="" />
+                                <img src="{{ asset('frontend/assets/img/booking-cl.svg') }}" class="img-fluid" alt="" />
                             </div>
                         </div>
                         <div class="wpk_caption">
                             <h4>Book Your Property</h4>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have Ipsum
-                                available.</p>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have Ipsum available.</p>
                         </div>
                     </div>
                 </div>
@@ -793,8 +549,8 @@
                 </div>
                 <div class="col-3 col-md-3">
                     <div class="float-end mt-2">
-                        <a href="#" class="default-btn border-radius">
-                            View All <i class="fas fa-chevron-circle-right"></i>
+                        <a href="#" class="default-btn border-radius"> View All
+                            <i class="fas fa-chevron-circle-right"></i>
                         </a>
                     </div>
                 </div>
@@ -803,50 +559,55 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="item-slide-custom space">
                         @foreach ($projects as $project)
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="property-listing list_view row m-0">
-                                <div class="col-md-4 p-0">
-                                    <div class="_exlio_125">Sponsored</div>
-                                    <div class="project">
-                                        <a href="#"><img src="{{uploaded_asset($project->cover_image)}}"
-                                                class="img-fluid mx-auto" alt="" /></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 pr-0">
-                                    <div class="listing-detail-wrapper mt-1">
-                                        <div class="listing-short-detail-wrap">
-                                            <div class="_card_list_flex">
-                                                <div class="_card_flex_01">
-                                                    <h5><a href="#" class="prt-link-detail">{{$project->name}}</a></h5>
-                                                </div>
-                                            </div>
-                                            <div class="_card_list_flex">
-                                                <div class="_card_flex_01">
-                                                    <h4 class="listing-name verified"><a href="#"
-                                                            class="prt-link-detail">{{$project->address}}</a></h4>
-                                                </div>
-                                            </div>
-                                            <div class="_card_flex_last">
-                                                <h6 class="listing-card-info-price mb-0">₹3,700 <span><del>4000</del></span></spa></h6>
-                                            </div>
+                            <div class="single_items">
+                                <div class="property-listing list_view row m-0">
+                                    <div class="col-md-4 p-0">
+                                        <div class="_exlio_125">Sponsored</div>
+                                        <div class="project">
+                                            <a href="#">
+                                                <img src="{{ uploaded_asset($project->cover_image) }}" class="img-fluid mx-auto" alt="" />
+                                            </a>
                                         </div>
                                     </div>
-                                    <div class="listing-detail-footer">
-                                        <div class="footer-first">
-                                            <div class="foot-rate">
-                                                <span>Marketed by VHV Builders Pvt. Ltd.</span>
+                                    <div class="col-md-8 pr-0">
+                                        <div class="listing-detail-wrapper mt-1">
+                                            <div class="listing-short-detail-wrap">
+                                                <div class="_card_list_flex">
+                                                    <div class="_card_flex_01">
+                                                        <h5>
+                                                            <a href="#" class="prt-link-detail">{{ $project->name }}</a>
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                                <div class="_card_list_flex">
+                                                    <div class="_card_flex_01">
+                                                        <h4 class="listing-name verified">
+                                                            <a href="#" class="prt-link-detail">{{ $project->address }}</a>
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                                {{-- <div class="_card_flex_last">
+                                                    <h6 class="listing-card-info-price mb-0">₹3,700
+                                                        <span><del>4000</del></span></spa>
+                                                    </h6>
+                                                </div> --}}
                                             </div>
                                         </div>
-                                        <div class="footer-flex">
-                                            <a href="#" class="prt-view">View <i
-                                                    class="fas fa-chevron-right pl-1"></i></a>
+                                        <div class="listing-detail-footer">
+                                            {{-- <div class="footer-first">
+                                                <div class="foot-rate">
+                                                    <span>Marketed by VHV Builders Pvt. Ltd.</span>
+                                                </div>
+                                            </div> --}}
+                                            <div class="footer-flex">
+                                                <a href="#" class="prt-view">View
+                                                    <i class="fas fa-chevron-right pl-1"></i>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Single Item -->
                         @endforeach
                     </div>
                 </div>
@@ -862,8 +623,9 @@
                             <h3>Do You Have Questions ?</h3>
                             <span>We'll help you to grow your career and growth.</span>
                         </div>
-                        <a href="{{ route('contact') }}" class="btn btn-call_action_wrap">Contact Us <i
-                                class="fas fa-chevron-right"></i></a>
+                        <a href="{{ route('contact') }}" class="btn btn-call_action_wrap">Contact Us
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
