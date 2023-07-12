@@ -3,7 +3,8 @@
     <body>
         <div style="width:800px; border:1px solid #b5b5b5; margin:auto;">
             <div style="height: 220px; background-color:#70709E; ">
-                <img src="{{ asset('backend/img/logo.png') }}" width="180px" height="80px" style="position:relative; left:320px; top:20px;" alt="">                <p style="text-transform: uppercase; color:azure; text-align:center; font-size:18px; margin-top: 40px; font-family:Verdana, Geneva, Tahoma, sans-serif;">
+                <img src="{{ asset('backend/img/logo.png') }}" width="180px" height="80px" style="position:relative; left:320px; top:20px;" alt="">
+                <p style="text-transform: uppercase; color:azure; text-align:center; font-size:18px; margin-top: 40px; font-family:Verdana, Geneva, Tahoma, sans-serif;">
                     taking the worry out of real estate
                 </p>
                 <p style="text-transform: uppercase; color:azure; text-align:center; font-size:30px; margin-top: 35px; font-family:Verdana, Geneva, Tahoma, sans-serif;">
