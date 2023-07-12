@@ -30,7 +30,7 @@ Route::get('/admin',function(){
 
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
-
+Route::view('email','frontend.email.welcome');
 //Register
 Route::get('signup',[RegisterController::class,'register'])->name('signup');
 Route::post('registration',[RegisterController::class,'registration'])->name('registartion');
