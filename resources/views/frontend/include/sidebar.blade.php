@@ -50,7 +50,7 @@
                         @php
                             $date = App\Models\Admin\PlanPurchase::where('user_id', Auth::guard('web')->user()->id)->where('expiry_at', '>=', \Carbon\Carbon::now())->orderBy('expiry_at','asc')->first();
                             if($date){
-                                $diff = $date->created_at->diffInDays($date->expiry_at);
+                                $diff = \Carbon\Carbon::now()->diffInDays($date->expiry_at);
                             }else{
                                 $diff = 0;
                             }
