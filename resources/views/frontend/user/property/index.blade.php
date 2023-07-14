@@ -55,7 +55,7 @@
                                                         <td>
                                                             <div class="dash_prt_wrap">
                                                                 <div class="dash_prt_thumb">
-                                                                    <img src="{{ asset('frontend/assets/img/p-1.png') }}" class="img-fluid" alt="" />
+                                                                    <img src="{{ uploaded_asset($property->thumbnail_img) }}" class="img-fluid" alt="" />
                                                                 </div>
                                                                 <div class="dash_prt_caption">
                                                                     <h5>{{ $property->name }}</h5>
