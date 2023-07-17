@@ -14,7 +14,84 @@
     <section class="gray pt-4">
         <div class="container">
             <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="page-sidebar p-0">
+                            <!-- Find New Property -->
+                            <div class="sidebar-widgets p-4 mb-0">
+                                <div class="form-group mb-0">
+                                    <div class="input-with-icon">
+                                        <input type="text" class="form-control" placeholder="Search Keywords">
+                                        <i class="ti-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="p-0">
+                        <div class="sider_blocks_wrap">
+                            <div class="side-booking-body">
+                                <div class="agent-_blocks_title">
+                                    <div class="agent-_blocks_thumb"><img src="{{ asset('frontend/assets/img/profile.png')}}" alt=""></div>
+                                    <div class="agent-_blocks_caption">
+                                        <h4><a href="#">Customer Support</a></h4>
+                                        <span class="approved-agent"><i class="ti-check"></i>approved</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <a href="#" class="agent-btn-contact" data-toggle="modal" data-target="#autho-message"><i class="ti-comment-alt"></i>Message</a>
+                                <span id="number" data-last="+91-1234567890">
+                                    <span><a href="tel:+91-1234567890">+91-1234567890</a></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-lg-8 col-md-12 col-sm-12">
+                    <div class="row m-0">
+                        <div class="short_wraping mb-3">
+                            <div class="row align-items-center">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="form-group mb-1">
+                                        <div class="simple-input">
+                                            <select id="lacality" class="form-control">
+                                                <option value="">&nbsp;</option>
+                                                <option value="1">Varanasi</option>
+                                                <option value="2">Delhi</option>
+                                                <option value="3">Lucknow</option>
+                                                <option value="4">Hydrabad</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="form-group mb-1">
+                                        <div class="simple-input">
+                                            <select id="ptype" class="form-control">
+                                                <option value="">&nbsp;</option>
+                                                <option value="1">Flat/Apartment</option>
+                                                <option value="2">Residential House</option>
+                                                <option value="3">Commercial Space</option>
+                                                <option value="4">Plot</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="form-group mb-1">
+                                        <div class="simple-input">
+                                            <select id="budget" class="form-control">
+                                                <option value="">&nbsp;</option>
+                                                <option value="1">₹2Lac to ₹10Lac</option>
+                                                <option value="1">₹2Lac to ₹10Lac</option>
+                                                <option value="1">₹2Lac to ₹10Lac</option>
+                                                <option value="1">₹2Lac to ₹10Lac</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row justify-content-center">
                         @foreach($properties as $property)
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-3">
@@ -106,26 +183,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="p-0">
-                        <div class="sider_blocks_wrap">
-                            <div class="side-booking-body">
-                                <div class="agent-_blocks_title">
-                                    <div class="agent-_blocks_thumb"><img src="{{ asset('frontend/assets/img/profile.png')}}" alt=""></div>
-                                    <div class="agent-_blocks_caption">
-                                        <h4><a href="#">Customer Support</a></h4>
-                                        <span class="approved-agent"><i class="ti-check"></i>approved</span>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <a href="#" class="agent-btn-contact" data-toggle="modal" data-target="#autho-message"><i class="ti-comment-alt"></i>Message</a>
-                                <span id="number" data-last="+91-1234567890">
-                                    <span><a href="tel:+91-1234567890">+91-1234567890</a></span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>

@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4">
                     <div class="footer_widget">
-                        <h4 class="widget_title">About Vishal Infra</h4>
+                        <h4 class="widget_title">About Reframe Real Estate</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         <h6 class="widget_title text-white">Follow us: </h6>
                         <ul class="social-link">
@@ -61,35 +61,25 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-xs-6">
                             <div class="footer_widget">
-                                <h4 class="widget_title">All Sections</h4>
+                                <h4 class="widget_title">Our Policies</h4>
                                 <ul class="footer-menu">
                                     <li>
-                                        <a href="#">Headers
-                                            <i class="fas fa-chevron-right"></i>
-                                        </a>
-                                    </li>
-                                    <li>.
-                                        <a href="#">Features
+                                        <a href="{{route('privacy_policy')}}">Privacy Policy
                                             <i class="fas fa-chevron-right"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">Attractive
+                                        <a href="{{route('term_and_condition')}}">Term & Condition
                                             <i class="fas fa-chevron-right"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">Testimonials
+                                        <a href="{{route('faq')}}">FAQ
                                             <i class="fas fa-chevron-right"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">Videos
-                                            <i class="fas fa-chevron-right"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Footers
+                                        <a href="{{route('about')}}">About Us
                                             <i class="fas fa-chevron-right"></i>
                                         </a>
                                     </li>
@@ -112,7 +102,7 @@
                                     </li>
                                     <li>
                                         <a href="mailto:info@reframerealstate.com">
-                                            <i class="fas fa-envelope"></i>info@reframerealstate.com
+                                            <i class="fas fa-envelope"></i> info@reframerealstate.com
                                         </a>
                                     </li>
                                 </ul>

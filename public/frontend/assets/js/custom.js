@@ -460,6 +460,16 @@ $(function() {
 		allowClear: true
 	});
 
+    $('#lacality').select2({
+		placeholder: "Select Location",
+		allowClear: true
+	});
+	// Select Property Types
+	$('#budget').select2({
+		placeholder: "Select Budget",
+		allowClear: true
+	});
+
 	// Select Property Types
 	$('#ptype').select2({
 		placeholder: "Property Types",

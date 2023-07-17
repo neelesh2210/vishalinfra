@@ -25,7 +25,7 @@
             <div class="nav-menus-wrapper nav-style-separated" style="transition-property: none;">
                 <ul class="nav-menu">
                     <li class="active">
-                        <a href="{{ route('index') }}">Home</a>
+                        <a href="{{ route('index') }}"> <i class="far fa-home"></i> Home</a>
                     </li>
                     <li>
                         <a href="#">Buy<span class="submenu-indicator"></span></a>
