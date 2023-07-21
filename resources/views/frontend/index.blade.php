@@ -194,7 +194,7 @@
                                     <div class="listing-img-wrapper">
                                         <div class="list-img-slide">
                                             <a href="{{ route('property.detail', $property->slug) }}">
-                                                <img src="{{ uploaded_asset($property->thumbnail_img) }}" class="img-fluid mx-auto" alt="" />
+                                                <img src="{{ uploaded_asset($property->thumbnail_img) }}" class="img-fluid mx-auto" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                                             </a>
                                         </div>
                                     </div>
@@ -269,7 +269,7 @@
                                     <div class="listing-img-wrapper">
                                         <div class="list-img-slide">
                                             <a href="#">
-                                                <img src="{{ uploaded_asset($project->cover_image) }}" class="img-fluid mx-auto" alt="" />
+                                                <img src="{{ uploaded_asset($project->cover_image) }}" class="img-fluid mx-auto" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                                             </a>
                                         </div>
                                     </div>
@@ -359,7 +359,7 @@
                                     <div class="listing-img-wrapper">
                                         <div class="list-img-slide">
                                             <a href="{{ route('property.detail', $featured_property->slug) }}">
-                                                <img src="{{ uploaded_asset($featured_property->thumbnail_img) }}" class="img-fluid mx-auto" alt="" />
+                                                <img src="{{ uploaded_asset($featured_property->thumbnail_img) }}" class="img-fluid mx-auto" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                                             </a>
                                         </div>
                                     </div>
@@ -435,7 +435,7 @@
                                     <div class="listing-img-wrapper">
                                         <div class="list-img-slide">
                                             <a href="{{ route('property.detail', $most_demanded_property->slug) }}">
-                                                <img src="{{ uploaded_asset($most_demanded_property->thumbnail_img) }}" class="img-fluid mx-auto" alt="" />
+                                                <img src="{{ uploaded_asset($most_demanded_property->thumbnail_img) }}" class="img-fluid mx-auto" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                                             </a>
                                         </div>
                                     </div>
@@ -565,7 +565,7 @@
                                         <div class="_exlio_125">Sponsored</div>
                                         <div class="project">
                                             <a href="#">
-                                                <img src="{{ uploaded_asset($project->cover_image) }}" class="img-fluid mx-auto" alt="" />
+                                                <img src="{{ uploaded_asset($project->cover_image) }}" class="img-fluid mx-auto" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                                             </a>
                                         </div>
                                     </div>
