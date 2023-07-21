@@ -6,7 +6,7 @@
                 <div class="col-lg-8 col-md-7 col-sm-12 pr-1">
                     <div class="gg_single_part left">
                         <a href="{{uploaded_asset($property_detail->thumbnail_img)}}" class="mfp-gallery">
-                            <img src="{{uploaded_asset($property_detail->thumbnail_img)}}" class="wh-100" alt="" />
+                            <img src="{{uploaded_asset($property_detail->thumbnail_img)}}" class="wh-100" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                         </a>
                     </div>
                 </div>
@@ -14,7 +14,7 @@
                     @foreach (explode(',',$property_detail->photos) as $keyp=>$photo)
                         <div class="gg_single_part-right min  mb-2">
                             <a href="{{uploaded_asset($photo)}}" class="mfp-gallery">
-                                <img src="{{uploaded_asset($photo)}}" class="img-fluid mx-auto" alt="" />
+                                <img src="{{uploaded_asset($photo)}}" class="img-fluid mx-auto" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                                 @if(count(explode(',',$property_detail->photos)) > 3)
                                     <p class="vw_dtls"> <i class="fas fa-images"></i> <br> <span> +{{count(explode(',',$property_detail->photos)) - 3}} Photos </span> </p>
                                 @endif
@@ -34,13 +34,13 @@
         <div class="featured_slick_gallery-slide">
             <div class="featured_slick_padd">
                 <a href="{{uploaded_asset($photo)}}" class="mfp-gallery">
-                    <img src="{{uploaded_asset($photo)}}" class="img-fluid mx-auto" alt="" />
+                    <img src="{{uploaded_asset($photo)}}" class="img-fluid mx-auto" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                 </a>
             </div>
             @foreach (explode(',',$property_detail->photos) as $photo)
                 <div class="featured_slick_padd">
                     <a href="{{uploaded_asset($photo)}}" class="mfp-gallery">
-                        <img src="{{uploaded_asset($photo)}}" class="img-fluid mx-auto" alt="" />
+                        <img src="{{uploaded_asset($photo)}}" class="img-fluid mx-auto" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                     </a>
                 </div>
             @endforeach
@@ -232,7 +232,7 @@
                                             <div class="_exlio_125">{{ ucwords(str_replace('_',' ',$similer_property->properties_type)) }}</div>
                                             <div class="project">
                                                 <a href="{{ route('property.detail',$similer_property->slug) }}"><img src="{{uploaded_asset($similer_property->thumbnail_img)}}"
-                                                        class="img-fluid mx-auto" alt="" /></a>
+                                                        class="img-fluid mx-auto" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';"></a>
                                             </div>
                                         </div>
                                         <div class="col-md-8 pr-0">
@@ -387,7 +387,7 @@
                                 <div class="property-listing property-2">
                                     <div class="listing-img-wrapper">
                                         <div class="list-img-slide">
-                                            <a href="#"><img src="{{uploaded_asset($project->cover_image)}}" class="img-fluid mx-auto" alt="" /></a>
+                                            <a href="#"><img src="{{uploaded_asset($project->cover_image)}}" class="img-fluid mx-auto" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';"></a>
                                         </div>
                                     </div>
                                     <div class="listing-detail-wrapper">

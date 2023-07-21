@@ -101,7 +101,7 @@
                                         <div class="list-img-slide">
                                             <div class="click">
                                                     <a href="{{uploaded_asset($property->thumbnail_img)}}">
-                                                        <img src="{{uploaded_asset($property->thumbnail_img)}}" class="img-fluid mx-auto" alt="{{$property->name}}" />
+                                                        <img src="{{uploaded_asset($property->thumbnail_img)}}" class="img-fluid mx-auto" alt="{{$property->name}}" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                                                     </a>
                                             </div>
                                         </div>
