@@ -192,7 +192,6 @@ p, ul, ol, dl, dt, dd, blockquote, address {
 
 .explore-content h1, .explore-content h2{
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
 }
 .shadow-0{
 	box-shadow:none !important;
@@ -6605,7 +6604,7 @@ a.filter_links {
     border: 1px solid #e6eaf1;
     background: #ffffff;
     padding: 25px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 .shorting-wrap {
     background: #ffffff;
@@ -15273,6 +15272,10 @@ h1, .h1 {
 .float-end{
 float: right;
 }
+.story-wrap h2{
+    font-size: 22px;
+    line-height: 1.2;
+}
 .story-wrap p{
 text-align: justify;
 }
@@ -15280,7 +15283,7 @@ text-align: justify;
     background: #d9d9d9c4 none repeat scroll 0 0;
     content: "";
     height: 10px;
-    margin-top: -2px;
+    margin-top: -3px;
     position: absolute;
     top: 48%;
     width: 1px;
@@ -15457,4 +15460,9 @@ font-size: 12px;
 .pln-red{
     background: #f44336 !important;
     color: #fff !important;
+}
+.property_block_title{
+    margin: 0 0 10px;
+    position: relative;
+    font-size: 16px;
 }

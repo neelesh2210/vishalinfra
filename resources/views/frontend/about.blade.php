@@ -19,12 +19,12 @@
 					<div class="row align-items-center">
 						<div class="col-lg-6 col-md-6">
 							<div class="story-wrap explore-content">
-
-								<h2>Vishal Infra Story</h2>
-								<span class="theme-cl">Check out our company story and work process</span>
-								<p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-								<p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-								<a href="#" class="btn theme-bg btn-rounded">More About Us <i class="fas fa-chevron-right"></i></a>
+								<h2>About Of Reframe Real Estate</h2>
+								<span class="theme-cl">The Reframe Real Estate is an online marketplace to deal with every aspect of the consumers’ needs in the real estate industry. It is an online forum where buyers and sellers can exchange information about real estate properties quickly. </span>
+							</div>
+                            <div class="story-wrap explore-content mt-3">
+								<h2>Company Profile</h2>
+								<p class="mb-3">Reframe Real Estate Pvt. Ltd. is a newly formed in January 2020. The Reframe Real Estate is an online marketplace to deals with every aspect of the consumers’ needs in the real estate industry. It is an online forum where buyers and sellers can exchange information about real estate properties quickly, The RRE helps you to find the right property with its well cared online procedure, RRE’s BDMs are well qualified to guide you all about the Property, We knows The property selection process is rigorous and based on long term investment so we RRE committed to provide the best online Real Estate services to our users.</p>
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6">
@@ -32,6 +32,18 @@
 						</div>
 					</div>
 					<!-- /row -->
+                    <div class="row">
+                        <div class="col-md-12">
+                        <div class="story-wrap explore-content">
+                            <h2>Business Objectives</h2>
+                            <p class="mb-3">Offering to our clients exceptional and professional service, we strive to not only meet your expectations but to exceed them and ensure that your experience is both profitable and totally satisfying. Whether you are a Seller, Purchaser, we are dedicated and committed to making "A Wow Experience" for your next real estate venture. </p>
+                        </div>
+                        <div class="story-wrap explore-content mt-3">
+                            <h2>Mission Statement</h2>
+                            <p class="mb-3">Reframe Real Estate’s goal is to invest in quality – both in its Builders and in its Buyers. We RRE as the venture of Real Estate and Technology has planned to deliver the dream home on the go.</p>
+                        </div>
+                    </div>
+                    </div>
 				</div>
 			</section>
 
