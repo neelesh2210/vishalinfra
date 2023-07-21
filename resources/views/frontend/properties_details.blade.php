@@ -75,7 +75,7 @@
                                 <p>Owner Type</p>
                             </div>
                             <div class="col-md-8">
-                                <strong>{{ ucwords(str_replace('_',' ',$property_detail->addedBy->type)) }}</strong>
+                                <strong>{{ ucwords(str_replace('_','/',$property_detail->addedBy->type)) }}</strong>
                             </div>
                             <div class="col-md-4">
                                 <p>Price</p>
