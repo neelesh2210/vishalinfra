@@ -253,11 +253,11 @@
                                             </div>
                                         </div>
                                         <div class="listing-detail-footer">
-                                            <div class="footer-first">
+                                            {{-- <div class="footer-first">
                                                 <div class="foot-rate">
                                                     <span>Marketed by VHV Builders Pvt. Ltd.</span>
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                             <div class="footer-flex">
                                                 <a href="{{ route('property.detail',$similer_property->slug) }}" class="prt-view">View <i
                                                         class="fas fa-chevron-right pl-1"></i>
