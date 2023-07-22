@@ -243,7 +243,7 @@
                                                 <div class="_card_list_flex">
                                                     <div class="_card_flex_01">
                                                         <h4 class="listing-name verified"><a href="#"
-                                                                class="prt-link-detail">Varanasi, India
+                                                                class="prt-link-detail">{{ optional($similer_property->cities)->name }}, India
                                                         </a></h4>
                                                     </div>
                                                 </div>
