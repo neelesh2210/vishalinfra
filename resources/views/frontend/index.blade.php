@@ -318,7 +318,7 @@
             </div>
             <div class="row justify-content-center">
                 @foreach ($cities as $key => $city)
-                    <div class="@if ($key <= 3) col-lg-4 col-md-4 col-sm-6 @else col-lg-6 col-md-6 col-sm-6 @endif">
+                    <div class="@if ($key < 3) col-lg-4 col-md-4 col-sm-6 @else col-lg-6 col-md-6 col-sm-6 @endif">
                         <a href="{{ route('properties') }}?location={{ $city->id }}" class="img-wrap">
                             <div class="location_wrap_content visible">
                                 <div class="location_wrap_content_first">

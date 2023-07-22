@@ -219,68 +219,63 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="list_views">
-                        <!-- Single Item -->
-                        <div class="single_items">
-                            <div class="row">
-                                @foreach ($similer_properties as $similer_property)
-                                <!-- Single Property -->
-                                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
-                                    <div class="property-listing list_view row m-0">
-                                        <div class="col-md-4 p-0">
-                                            <div class="_exlio_125">{{ ucwords(str_replace('_',' ',$similer_property->properties_type)) }}</div>
-                                            <div class="project">
-                                                <a href="{{ route('property.detail',$similer_property->slug) }}"><img src="{{uploaded_asset($similer_property->thumbnail_img)}}"
-                                                        class="img-fluid mx-auto" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';"></a>
+                <div class="col-lg-12 col-md-12">
+                    <div class="item-slide-custom space">
+                        @foreach ($similer_properties as $similer_property)
+                            <div class="single_items">
+                                <div class="property-listing list_view row m-0">
+                                    <div class="col-md-4 p-0">
+                                        <div class="_exlio_125">{{ ucwords(str_replace('_',' ',$similer_property->properties_type)) }}</div>
+                                        <div class="project">
+                                            <a href="{{ route('property.detail',$similer_property->slug) }}"><img src="{{uploaded_asset($similer_property->thumbnail_img)}}"
+                                                    class="img-fluid mx-auto" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 pr-0">
+                                        <div class="listing-detail-wrapper mt-1">
+                                            <div class="listing-short-detail-wrap">
+                                                <div class="_card_list_flex">
+                                                    <div class="_card_flex_01">
+                                                        <h5><a href="#" class="prt-link-detail">{{ $similer_property->name }}
+                                                            </a></h5>
+                                                    </div>
+                                                </div>
+                                                <div class="_card_list_flex">
+                                                    <div class="_card_flex_01">
+                                                        <h4 class="listing-name verified"><a href="#"
+                                                                class="prt-link-detail">Varanasi, India
+                                                        </a></h4>
+                                                    </div>
+                                                </div>
+                                                <div class="_card_flex_last">
+                                                    <h6 class="listing-card-info-price mb-0">₹{{ $similer_property->discounted_price }} <span><del>{{ $similer_property->final_price }}</del></span></h6>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-8 pr-0">
-                                            <div class="listing-detail-wrapper mt-1">
-                                                <div class="listing-short-detail-wrap">
-                                                    <div class="_card_list_flex">
-                                                        <div class="_card_flex_01">
-                                                            <h5><a href="#" class="prt-link-detail">{{ $similer_property->name }}
-                                                                </a></h5>
-                                                        </div>
-                                                    </div>
-                                                    <div class="_card_list_flex">
-                                                        <div class="_card_flex_01">
-                                                            <h4 class="listing-name verified"><a href="#"
-                                                                    class="prt-link-detail">Varanasi, India
-                                                            </a></h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="_card_flex_last">
-                                                        <h6 class="listing-card-info-price mb-0">₹{{ $similer_property->discounted_price }} <span><del>{{ $similer_property->final_price }}</del></span></h6>
-                                                    </div>
+                                        <div class="listing-detail-footer">
+                                            <div class="footer-first">
+                                                <div class="foot-rate">
+                                                    <span>Marketed by VHV Builders Pvt. Ltd.</span>
                                                 </div>
                                             </div>
-                                            <div class="listing-detail-footer">
-                                                <div class="footer-first">
-                                                    <div class="foot-rate">
-                                                        <span>Marketed by VHV Builders Pvt. Ltd.</span>
-                                                    </div>
-                                                </div>
-                                                <div class="footer-flex">
-                                                    <a href="{{ route('property.detail',$similer_property->slug) }}" class="prt-view">View <i
-                                                            class="fas fa-chevron-right pl-1"></i>
-                                                        @if ($similer_property->pincode)
-                                                            {{ $similer_property->city }}, {{ $similer_property->state }},
-                                                            {{ $similer_property->country }},{{ $similer_property->pincode }}
-                                                        @endif
-                                                    </a>
-                                                </div>
+                                            <div class="footer-flex">
+                                                <a href="{{ route('property.detail',$similer_property->slug) }}" class="prt-view">View <i
+                                                        class="fas fa-chevron-right pl-1"></i>
+                                                    @if ($similer_property->pincode)
+                                                        {{ $similer_property->city }}, {{ $similer_property->state }},
+                                                        {{ $similer_property->country }},{{ $similer_property->pincode }}
+                                                    @endif
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                @endforeach
                             </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
