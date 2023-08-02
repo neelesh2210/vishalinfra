@@ -92,7 +92,7 @@
                                         <div class="eltio_ol9">
                                             <div class="eltio_k1">
                                                 <input id="dds" class="checkbox-custom" name="agree" type="checkbox">
-                                                <label for="dds" class="checkbox-custom-label" style="font-size: 13px;">I agree to RRE T&C, Privacy Policy, & Cookie Policy</label>
+                                                <label for="dds" class="checkbox-custom-label" style="font-size: 12px;">I agree to RRE T&C, Privacy Policy, & Cookie Policy</label>
                                             </div>
                                         </div>
                                         @error('agree')

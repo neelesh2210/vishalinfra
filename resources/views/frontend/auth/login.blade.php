@@ -62,7 +62,7 @@
                                     </div>
                                 </form>
                                 <div class="signup__text">
-                                    New to Vishal Infra?
+                                    New to Reframe Realestate?
                                     <a href="{{ route('signup') }}" class="signup__link">Sign Up</a>
                                 </div>
                             </div>
