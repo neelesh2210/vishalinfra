@@ -63,11 +63,12 @@ class AizUploadController extends Controller
             $arr = explode('.', $request->file('aiz_file')->getClientOriginalName());
 
             for($i=0; $i < count($arr)-1; $i++){
+                $file_name = $arr[$i].rand(1111,9999);
                 if($i == 0){
-                    $upload->file_original_name .= $arr[$i];
+                    $upload->file_original_name .= $file_name;
                 }
                 else{
-                    $upload->file_original_name .= ".".$arr[$i];
+                    $upload->file_original_name .= ".".$file_name;
                 }
             }
 
@@ -81,7 +82,7 @@ class AizUploadController extends Controller
                 $upload->type = "others";
             }
             $upload->file_size = $request->file('aiz_file')->getSize();
-            $request->file('aiz_file')->move(public_path('uploads/all'), $request->file('aiz_file')->getClientOriginalName());
+            $request->file('aiz_file')->move(public_path('uploads/all'), $file_name);
             // if($upload->file_size >= 102400){
 
             //     if($upload->extension == 'jpg' || $upload->extension == 'jpeg' || $upload->extension == 'png' || $upload->extension =='svg' || $upload->extension == 'webp'){
@@ -92,7 +93,7 @@ class AizUploadController extends Controller
             //     }
 
             // }
-            $upload->file_name = 'uploads/all/'.$request->file('aiz_file')->getClientOriginalName();
+            $upload->file_name = 'uploads/all/'.$file_name;
             $upload->save();
 
             return '{}';
