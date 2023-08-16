@@ -9,13 +9,16 @@
                         <h6 class="widget_title text-white">Follow us: </h6>
                         <ul class="social-link">
                             <li>
-                                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                                <a href="https://www.facebook.com/reframerealestate/" target="_blank"><i class="fab fa-facebook"></i></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="https://twitter.com/ReframeE" target="_blank"><i class="fab fa-twitter"></i></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/reframerealestate/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/vishal-singh-2b65aa1a3/" target="_blank"><i class="fab fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -91,18 +94,23 @@
                                 <h4 class="widget_title">Get In Touch</h4>
                                 <ul class="footer-contact-list">
                                     <li>
-                                        <a href="#"><i class="fas fa-map-marker-alt">
-                                            </i> Varanasi Office :  Varanasi (U.P.) India (221010)
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:+91-1234567890 , 1234567890">
-                                            <i class="fas fa-phone-alt"></i> +91-1234567890 , 1234567890
+                                        <a href="tel:+91-9453777525">
+                                            <i class="fas fa-phone-alt"></i> +91-9453777525
                                         </a>
                                     </li>
                                     <li>
                                         <a href="mailto:info@reframerealstate.com">
                                             <i class="fas fa-envelope"></i> info@reframerealstate.com
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fas fa-map-marker-alt">
+                                            </i> Registered Office :  Lane No. 6, Krishnapuri Colony, Manduadih Varanasi (221103)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fas fa-map-marker-alt">
+                                            </i> Branch Office :  Kadipur, Bari bazar, Amara Khaira Chak, Lathiya, Varanasi, Uttar Pradesh 221003, India
                                         </a>
                                     </li>
                                 </ul>

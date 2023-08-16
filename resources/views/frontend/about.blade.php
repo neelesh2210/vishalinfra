@@ -67,7 +67,7 @@
 											<img src="{{ asset('frontend/assets/img/profile.png')}}" alt="" class="img-fluid" />
 										</div>
 										<div class="teamgrid-content">
-											<h4>Shaurya Preet</h4>
+											<h4>Reframe Real Estate</h4>
 											<span>Co-Founder</span>
 										</div>
 										<div class="teamgrid-social">
@@ -87,7 +87,7 @@
 											<img src="{{ asset('frontend/assets/img/profile.png')}}" alt="" class="img-fluid" />
 										</div>
 										<div class="teamgrid-content">
-											<h4>Vishal Infra</h4>
+											<h4>Reframe Real Estate</h4>
 											<span>Co-Founder</span>
 										</div>
 										<div class="teamgrid-social">
@@ -107,7 +107,7 @@
 											<img src="{{ asset('frontend/assets/img/profile.png')}}" alt="" class="img-fluid" />
 										</div>
 										<div class="teamgrid-content">
-											<h4>Vishal Infra</h4>
+											<h4>Reframe Real Estate</h4>
 											<span>Co-Founder</span>
 										</div>
 										<div class="teamgrid-social">
@@ -127,7 +127,7 @@
 											<img src="{{ asset('frontend/assets/img/profile.png')}}" alt="" class="img-fluid" />
 										</div>
 										<div class="teamgrid-content">
-											<h4>Vishal Infra</h4>
+											<h4>Reframe Real Estate</h4>
 											<span>Co-Founder</span>
 										</div>
 										<div class="teamgrid-social">
@@ -147,7 +147,7 @@
 											<img src="{{ asset('frontend/assets/img/profile.png')}}" alt="" class="img-fluid" />
 										</div>
 										<div class="teamgrid-content">
-											<h4>Vishal Infra</h4>
+											<h4>Reframe Real Estate</h4>
 											<span>Co-Founder</span>
 										</div>
 										<div class="teamgrid-social">
@@ -167,7 +167,7 @@
 											<img src="{{ asset('frontend/assets/img/profile.png')}}" alt="" class="img-fluid" />
 										</div>
 										<div class="teamgrid-content">
-											<h4>Vishal Infra</h4>
+											<h4>Reframe Real Estate</h4>
 											<span>Co-Founder</span>
 										</div>
 										<div class="teamgrid-social">

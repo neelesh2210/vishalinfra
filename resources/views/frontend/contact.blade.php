@@ -21,23 +21,21 @@
                     <div class="contact-box">
                         <i class="fas fa-phone-alt theme-cl"></i>
                         <h4>Contact</h4>
-                        <p>+91-1234567890</p>
-                        <p>+91-1234567890</p>
+                        <p>+91-9453777525</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="contact-box">
                         <i class="fas fa-envelope theme-cl"></i>
                         <h4>Email</h4>
-                        <p>vishalinfra@gmail.com</p>
-                        <p>vishalinfra@gmail.com</p>
+                        <p>info@reframerealestate.com</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="contact-box">
                         <i class="fas fa-map-marker-alt theme-cl"></i>
                         <h4>Address</h4>
-                        <p>Varanasi, Uttar Pradesh, <br> India</p>
+                        <p>Lane No. 6, Krishnapuri Colony, Manduadih Varanasi (221103)</p>
                     </div>
                 </div>
             </div>
