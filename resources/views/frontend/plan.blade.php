@@ -59,6 +59,12 @@
                                     @endforeach
                                 </tr>
                                 <tr class="text-center">
+                                    <th scope="row">Duration of classified</th>
+                                    @foreach ($plans as $key=>$plan)
+                                        <td>{{$plan->duration_in_day}} days</td>
+                                    @endforeach
+                                </tr>
+                                <tr class="text-center">
                                     <th scope="row">Soft copy of brochure</th>
                                     @foreach ($plans as $key=>$plan)
                                         <td>
@@ -66,12 +72,7 @@
                                         </td>
                                     @endforeach
                                 </tr>
-                                <tr class="text-center">
-                                    <th scope="row">Duration of classified</th>
-                                    @foreach ($plans as $key=>$plan)
-                                        <td>{{$plan->duration_in_day}} days</td>
-                                    @endforeach
-                                </tr>
+
                                 <tr class="text-center">
                                     <th scope="row">Buyers will be notified</th>
                                     @foreach ($plans as $key=>$plan)
@@ -97,34 +98,10 @@
                                     @endforeach
                                 </tr>
                                 <tr class="text-center">
-                                    <th scope="row">Trust Seal of RRE on Property*</th>
-                                    @foreach ($plans as $key=>$plan)
-                                        <td>
-                                            @if($plan->trust_seal == '1')
-                                                <i class="fas fa-check"></i>
-                                            @else
-                                                <i class="fas fa-times"></i>
-                                            @endif
-                                        </td>
-                                    @endforeach
-                                </tr>
-                                <tr class="text-center">
                                     <th scope="row">Verified Inquiries</th>
                                     @foreach ($plans as $key=>$plan)
                                         <td>
                                             @if($plan->verified_enquiry == '1')
-                                                <i class="fas fa-check"></i>
-                                            @else
-                                                <i class="fas fa-times"></i>
-                                            @endif
-                                        </td>
-                                    @endforeach
-                                </tr>
-                                <tr class="text-center">
-                                    <th scope="row">Classified by RRE</th>
-                                    @foreach ($plans as $key=>$plan)
-                                        <td>
-                                            @if($plan->classified == '1')
                                                 <i class="fas fa-check"></i>
                                             @else
                                                 <i class="fas fa-times"></i>
@@ -144,6 +121,32 @@
                                         </td>
                                     @endforeach
                                 </tr>
+                                <tr class="text-center">
+                                    <th scope="row">Trust Seal of RRE on Property*</th>
+                                    @foreach ($plans as $key=>$plan)
+                                        <td>
+                                            @if($plan->trust_seal == '1')
+                                                <i class="fas fa-check"></i>
+                                            @else
+                                                <i class="fas fa-times"></i>
+                                            @endif
+                                        </td>
+                                    @endforeach
+                                </tr>
+
+                                <tr class="text-center">
+                                    <th scope="row">Classified by RRE (Physical Verification)</th>
+                                    @foreach ($plans as $key=>$plan)
+                                        <td>
+                                            @if($plan->classified == '1')
+                                                <i class="fas fa-check"></i>
+                                            @else
+                                                <i class="fas fa-times"></i>
+                                            @endif
+                                        </td>
+                                    @endforeach
+                                </tr>
+
                                 <tr class="text-center">
                                     <th scope="row">Amount</th>
                                     @foreach ($plans as $key=>$plan)
