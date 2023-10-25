@@ -1,6 +1,7 @@
 @extends('frontend.layouts.app')
 @section('content')
     <section class="gallery_parts pt-2 pb-2 d-none d-sm-none d-md-none d-lg-none d-xl-block">
+        <img src="{{asset('backend/img/banners/'.$city_banner)}}" onerror="this.onerror=null;this.src='{{ asset('frontend/assets/img/bg.jpg') }}'" >
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 col-md-7 col-sm-12 pr-1">
@@ -236,13 +237,13 @@
                                             <div class="listing-short-detail-wrap">
                                                 <div class="_card_list_flex">
                                                     <div class="_card_flex_01">
-                                                        <h5><a href="#" class="prt-link-detail">{{ $similer_property->name }}
+                                                        <h5><a href="{{ route('property.detail',$similer_property->slug) }}" class="prt-link-detail">{{ $similer_property->name }}
                                                             </a></h5>
                                                     </div>
                                                 </div>
                                                 <div class="_card_list_flex">
                                                     <div class="_card_flex_01">
-                                                        <h4 class="listing-name verified"><a href="#"
+                                                        <h4 class="listing-name verified"><a href="{{ route('property.detail',$similer_property->slug) }}"
                                                                 class="prt-link-detail">{{ optional($similer_property->cities)->name }}, India
                                                         </a></h4>
                                                     </div>

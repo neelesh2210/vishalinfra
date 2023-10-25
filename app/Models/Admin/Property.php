@@ -49,6 +49,7 @@ class Property extends Model
         'booking_status',
         'amenities',
         'remark',
+        'is_trust_seal',
         'is_featured',
         'is_demanded',
         'is_trending',

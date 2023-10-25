@@ -1,10 +1,12 @@
 <?php
 
 
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\CityController;
 use App\Http\Controllers\Admin\PlanController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\StateController;
+use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\AmenityController;
 use App\Http\Controllers\Admin\CountryController;
@@ -52,6 +54,7 @@ Route::group(['middleware'=>'auth:admin','as'=>'admin.'],function () {
 
     //Property
     Route::resource('property',PropertyController::class);
+    Route::get('property-trust-seal-status/{id}/{status}',[PropertyController::class,'trustSealStatus'])->name('property.trust.seal.status');
     Route::get('property-featured-status/{id}/{status}',[PropertyController::class,'featuredStatus'])->name('property.featured.status');
     Route::get('property-demanded-status/{id}/{status}',[PropertyController::class,'demandedStatus'])->name('property.demanded.status');
     Route::get('property-trending-status/{id}/{status}',[PropertyController::class,'trendingStatus'])->name('property.trending.status');
@@ -74,6 +77,11 @@ Route::group(['middleware'=>'auth:admin','as'=>'admin.'],function () {
 
     //Sliders
     Route::resource('sliders', SliderController::class);
+
+    //Banners
+    Route::resource('banners', BannerController::class)->except('create','show','edit','update');
+
+    Route::resource('faqs', FaqController::class)->except('show');
 
     //Enquiry
     Route::get('enquiry-index',[EnquiryController::class,'index'])->name('enquiry.index');

@@ -32,10 +32,14 @@ class RegisterController extends Controller
         $user->phone = $request->phone;
         $user->save();
 
-        Mail::send('frontend.email.welcome', ['user_name'=>$user->name,'phone'=>$user->phone], function($message) use($user){
-            $message->to($user->email);
-            $message->subject('Registration Successful');
-        });
+        try{
+            Mail::send('frontend.email.welcome', ['user_name'=>$user->name,'phone'=>$user->phone], function($message) use($user){
+                $message->to($user->email);
+                $message->subject('Registration Successful');
+            });
+        }catch(\Throwable $th){
+            //throw $th;
+        }
 
         if (Auth::guard('web')->attempt(['user_name' => $user->user_name,'password' => $request->password,])){
             return redirect()->route('user.dashboard');

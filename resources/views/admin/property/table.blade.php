@@ -5,6 +5,7 @@
             <th class="text-center">Property Type</th>
             <th class="text-center">Property</th>
             <th class="text-center">Price</th>
+            <th class="text-center">Trust Seal</th>
             <th class="text-center">Is Featured</th>
             <th class="text-center">Most Demanded</th>
             <th class="text-center">Is Trending</th>
@@ -29,6 +30,13 @@
                 <td>
                     <b>Price: </b>{{$property->expected_price}} <br>
                     <b>sqft. Price: </b>{{$property->price}}
+                </td>
+                <td class="text-center">
+                    @if($property->is_trust_seal == '1')
+                        <a href="{{route('admin.property.trust.seal.status',[$property->id,'0'])}}"><span class="badge bg-success">Trusted</span></a>
+                    @else
+                        <a href="{{route('admin.property.trust.seal.status',[$property->id,'1'])}}"><span class="badge bg-danger">Not Trusted</span></a>
+                    @endif
                 </td>
                 <td class="text-center">
                     @if($property->is_featured == '1')

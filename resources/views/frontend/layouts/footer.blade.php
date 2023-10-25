@@ -29,36 +29,13 @@
                             <div class="footer_widget">
                                 <h4 class="widget_title">Properties in India</h4>
                                 <ul class="footer-menu">
-                                    <li>
-                                        <a href="#">Property in New Delhi
-                                            <i class="fas fa-chevron-right"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Property in New Delhi
-                                            <i class="fas fa-chevron-right"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Property in New Delhi
-                                            <i class="fas fa-chevron-right"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Property in New Delhi
-                                            <i class="fas fa-chevron-right"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Property in New Delhi
-                                            <i class="fas fa-chevron-right"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Property in New Delhi
-                                            <i class="fas fa-chevron-right"></i>
-                                        </a>
-                                    </li>
+                                    @foreach (App\Models\Admin\City::whereHas('property')->get() as $city)
+                                        <li>
+                                            <a href="{{ route('properties') }}?location={{$city->id}}">Property in {{$city->name}}
+                                                <i class="fas fa-chevron-right"></i>
+                                            </a>
+                                        </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>

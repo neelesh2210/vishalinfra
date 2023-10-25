@@ -9,6 +9,7 @@ use App\CPU\PropertyManager;
 use Illuminate\Http\Request;
 use App\Models\Admin\Property;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
 
 class PropertyController extends Controller
 {
@@ -254,6 +255,14 @@ class PropertyController extends Controller
         return back()->with('error','Property Deleted Successfully!');
     }
 
+    public function trustSealStatus($id,$status){
+        $property = Property::find($id);
+        $property->is_trust_seal = $status;
+        $property->save();
+
+        return back()->with('success','Trust Seal Status Changed Successfully!');
+    }
+
     public function featuredStatus($id,$status){
         $property = Property::find($id);
         $property->is_featured = $status;
@@ -279,9 +288,18 @@ class PropertyController extends Controller
     }
 
     public function publishedStatus($id,$status){
-        $property = Property::find($id);
+        $property = Property::with('addedBy')->where('id',$id)->first();
         $property->is_status = $status;
         $property->save();
+        if($status == '1'){
+            Mail::send('frontend.email.property_publishing', ['property'=>$property], function($message) use($property){
+                $message->to($property->addedBy->email);
+                $message->subject('Property Published Successful');
+            });
+            try {
+            } catch (\Throwable $th) {
+            }
+        }
 
         return back()->with('success','Published Status Changed Successfully!');
     }

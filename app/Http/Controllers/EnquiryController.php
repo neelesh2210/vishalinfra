@@ -31,10 +31,14 @@ class EnquiryController extends Controller
         $enquiry->email = $request->email;
         $enquiry->save();
 
-        Mail::send('frontend.email.enquiry', ['user_name'=>$enquiry->name,'phone'=>$enquiry->phone,'email'=>$enquiry->email,'property_id'=>$enquiry->property_id], function($message) use($enquiry){
-            $message->to($enquiry->property->addedBy->email);
-            $message->subject('Enquiry for Property');
-        });
+        try {
+            Mail::send('frontend.email.enquiry', ['user_name'=>$enquiry->name,'phone'=>$enquiry->phone,'email'=>$enquiry->email,'property_id'=>$enquiry->property_id], function($message) use($enquiry){
+                $message->to($enquiry->property->addedBy->email);
+                $message->subject('Enquiry for Property');
+            });
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
 
         return back()->with('success','Enquiry Submitted Successfully!');
     }

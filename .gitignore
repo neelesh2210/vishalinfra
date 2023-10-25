@@ -22,6 +22,7 @@ Homestead.yaml
 docker-compose.override.yml
 /public/backend/img/sliders
 /public/backend/img/amenity
+/public/backend/img/banners
 /public/backend/img/projects
 /public/backend/img/properies
 /public/backend/img/testimonial

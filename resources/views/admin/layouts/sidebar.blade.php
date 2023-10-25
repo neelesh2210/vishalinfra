@@ -90,8 +90,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item @if(in_array(Route::currentRouteName(), ['admin.sliders.index','admin.sliders.edit'])) menu-is-opening menu-open @endif">
-                    <a href="#" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.sliders.index','admin.sliders.edit'])) active @endif">
+                <li class="nav-item @if(in_array(Route::currentRouteName(), ['admin.sliders.index','admin.sliders.edit','admin.banners.index','admin.faqs.index','admin.faqs.create','admin.faqs.edit'])) menu-is-opening menu-open @endif">
+                    <a href="#" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.sliders.index','admin.sliders.edit','admin.banners.index','admin.faqs.index','admin.faqs.create','admin.faqs.edit'])) active @endif">
                         <i class="nav-icon fas fa-cogs" aria-hidden="true"></i>
                         <p>Website Setting
                             <i class="fas fa-angle-left right"></i>
@@ -101,6 +101,16 @@
                         <li class="nav-item">
                             <a href="{{route('admin.sliders.index')}}" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.sliders.index','admin.sliders.edit'])) active @endif">
                                 <p>Sliders</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('admin.banners.index')}}" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.banners.index'])) active @endif">
+                                <p>Banners</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('admin.faqs.index')}}" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.faqs.index','admin.faqs.create','admin.faqs.edit'])) active @endif">
+                                <p>FAQs</p>
                             </a>
                         </li>
                     </ul>

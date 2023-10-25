@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Auth;
 use App\CPU\UserManager;
 use App\CPU\PropertyManager;
+use App\Models\Admin\Banner;
 use Illuminate\Http\Request;
 use App\Models\Admin\Project;
 
@@ -82,6 +83,7 @@ class PropertyController extends Controller
         $search_property_type = $request->properties_type;
         $search_location = $request->location;
         $search_price_range = $request->price_range;
+        $city_banner = null;
 
         $properties = PropertyManager::withoutTrash();
 
@@ -89,6 +91,7 @@ class PropertyController extends Controller
             $properties = $properties->where('properties_type',$search_property_type);
         }
         if($search_location){
+            $city_banner = optional(Banner::where('from','search')->where('city_id',$search_location)->first())->image;
             $properties = $properties->where('city',$search_location);
         }
         if($search_price_range){
@@ -96,7 +99,7 @@ class PropertyController extends Controller
         }
         $properties = $properties->orderBy('created_at','desc')->paginate(10);
 
-        return view('frontend.properties',compact('properties'));
+        return view('frontend.properties',compact('properties','city_banner'));
     }
 
     public function detail($slug){
@@ -104,8 +107,9 @@ class PropertyController extends Controller
             $property_detail = PropertyManager::withoutTrash()->where('slug',$slug)->first();
             $similer_properties = PropertyManager::withoutTrash()->where('id','!=',$property_detail->id)->where('properties_type',$property_detail->properties_type)->orderBy('created_at','desc')->take(10)->get();
             $projects = Project::where('is_active','1')->take(10)->get();
+            $city_banner = optional(Banner::where('from','product_detail')->where('city_id',$property_detail->city)->first())->image;
 
-            return view('frontend.properties_details',compact('property_detail','similer_properties','projects'));
+            return view('frontend.properties_details',compact('property_detail','similer_properties','projects','city_banner'));
         } catch (\Throwable $th) {
             abort(404);
         }

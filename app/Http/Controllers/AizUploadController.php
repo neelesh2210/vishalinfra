@@ -82,18 +82,18 @@ class AizUploadController extends Controller
                 $upload->type = "others";
             }
             $upload->file_size = $request->file('aiz_file')->getSize();
-            $request->file('aiz_file')->move(public_path('uploads/all'), $file_name);
-            // if($upload->file_size >= 102400){
+            $request->file('aiz_file')->move(public_path('uploads/all'), $file_name.'.'.$upload->extension);
+            if($upload->file_size >= 102400){
 
-            //     if($upload->extension == 'jpg' || $upload->extension == 'jpeg' || $upload->extension == 'png' || $upload->extension =='svg' || $upload->extension == 'webp'){
+                if($upload->extension == 'jpg' || $upload->extension == 'jpeg' || $upload->extension == 'png' || $upload->extension =='svg' || $upload->extension == 'webp'){
 
-            //         $src= "public/uploads/all/".$request->file('aiz_file')->getClientOriginalName();
-            //         $upload->file_size=compress($src, $src, 500, $request->file('aiz_file')->getClientOriginalName());
+                    $src= "uploads/all/".$file_name.'.'.$upload->extension;
+                    $upload->file_size=compress($src, $src, 500, $file_name.'.'.$upload->extension);
 
-            //     }
+                }
 
-            // }
-            $upload->file_name = 'uploads/all/'.$file_name;
+            }
+            $upload->file_name = 'uploads/all/'.$file_name.'.'.$upload->extension;
             $upload->save();
 
             return '{}';

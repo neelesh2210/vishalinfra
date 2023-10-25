@@ -128,6 +128,7 @@ class PropertyListingController extends Controller
 
         $property->thumbnail_img=$request->image;
         $property->remark=$request->remark;
+        $property->is_status='0';
         $property->save();
 
         return redirect()->route('user.property.index')->with('success','Property Added Successfully!');
