@@ -13324,6 +13324,7 @@ footer.skin-dark-footer h4{
 footer.skin-dark-footer .footer_widget ul li a, footer.skin-dark-footer, footer.skin-dark-footer a {
     color: #fdfdfd;
     font-size: 14px;
+    word-wrap: break-word;
 }
 footer.skin-dark-footer .footer_widget ul li a:hover, footer.skin-dark-footer .footer_widget ul li a:focus{
     /* color:#ff572e; */
