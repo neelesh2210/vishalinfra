@@ -15,7 +15,8 @@
             Reframe RealEstate
         @endisset
     </title>
-    <link href="{{ asset('frontend/assets/css/styles.css')}}" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{{ asset('frontend/assets/img/favicon.png')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/styles.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/image/css/vendors.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/image/css/aiz-core.css') }}">
     <script src="{{ asset('frontend/assets/js/jquery.min.js')}}"></script>
