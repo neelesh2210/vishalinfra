@@ -614,7 +614,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="gray-simple">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7 col-md-8">
