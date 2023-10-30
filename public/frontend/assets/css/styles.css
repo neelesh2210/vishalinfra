@@ -8477,12 +8477,13 @@ span.agents_count {
     display: block;
     border-radius: 6px;
     overflow: hidden;
+    margin-bottom: 3px;
 }
 .gg_single_part a {
     /* display: inline-block; */
 }
 .gg_single_part-right {
-    display: block;
+    display: inline-block;
     border-radius: 6px;
     overflow: hidden;
 }
@@ -8491,6 +8492,7 @@ span.agents_count {
 }
 .gg_single_part-right.min {
     height: 158px;
+    width: 24.6%;
 }
 .gg_single_part-right.min img{
     height: 158px;
