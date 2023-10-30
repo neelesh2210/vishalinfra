@@ -36,6 +36,11 @@ Route::get('signup',[RegisterController::class,'register'])->name('signup');
 Route::post('registration',[RegisterController::class,'registration'])->name('registartion');
 Route::post('get-address',[RegisterController::class,'getAddress'])->name('get.address');
 
+//Email
+Route::view('welcome_mail','email.welcome_mail')->name('welcome_mail');
+Route::view('active_mail','email.active_mail')->name('active_mail');
+Route::view('passive_mail','email.passive_mail')->name('passive_mail');
+Route::view('payout','email.payout')->name('payout');
 //Login
 Route::get('signin',[LoginController::class,'signin'])->name('signin');
 Route::post('login',[LoginController::class,'login'])->name('login');
