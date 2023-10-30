@@ -8710,6 +8710,7 @@ span.agents_count {
     text-align: left;
     padding:15px 0;
 	position:relative;
+    text-wrap: balance;
 }
 .accordion .card:last-child .card-header {
     border: none;
