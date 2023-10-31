@@ -93,9 +93,11 @@
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-3">
-                        <img src="{{asset('backend/img/banners/'.$city_banner)}}" onerror="this.onerror=null;this.src='{{ asset('frontend/assets/img/bg.jpg') }}'" class="img-fluid">
-                        </div>
+                        @if($city_banner)
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-3">
+                                <img src="{{asset('backend/img/banners/'.$city_banner)}}" onerror="this.onerror=null;this.src='{{ asset('frontend/assets/img/bg.jpg') }}'" class="img-fluid">
+                            </div>
+                        @endif
                         @foreach($properties as $property)
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-3">
                                 <div class="property-listing list_view row m-0">

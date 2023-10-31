@@ -1,8 +1,10 @@
 @extends('frontend.layouts.app')
 @section('content')
-<section class="m-0 p-0">
-    <img src="{{asset('backend/img/banners/'.$city_banner)}}" onerror="this.onerror=null;this.src='{{ asset('frontend/assets/img/bg.jpg') }}'" class="img-fluid">
-</section>
+    @if($city_banner)
+        <section class="m-0 p-0">
+            <img src="{{asset('backend/img/banners/'.$city_banner)}}" onerror="this.onerror=null;this.src='{{ asset('frontend/assets/img/bg.jpg') }}'" class="img-fluid">
+        </section>
+    @endif
     <div class="featured_slick_gallery gray d-block d-md-block d-lg-block d-xl-none">
         <div class="featured_slick_gallery-slide">
             <div class="featured_slick_padd">
