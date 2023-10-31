@@ -39,8 +39,8 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <a href="#" class="agent-btn-contact" data-toggle="modal" data-target="#autho-message"><i class="ti-comment-alt"></i>Message</a>
-                                <span id="number" data-last="+91-1234567890">
-                                    <span><a href="tel:+91-1234567890">+91-1234567890</a></span>
+                                <span id="number" data-last="+91-9453777525">
+                                    <span><a href="tel:+91-9453777525">+91-9453777525</a></span>
                                 </span>
                             </div>
                         </div>
@@ -92,7 +92,9 @@
                             </div>
                         </div>
                     </div>
-                    <img src="{{asset('backend/img/banners/'.$city_banner)}}" onerror="this.onerror=null;this.src='{{ asset('frontend/assets/img/bg.jpg') }}'" >
+                    @if($city_banner)
+                        <img src="{{asset('backend/img/banners/'.$city_banner)}}">
+                    @endif
                     <div class="row justify-content-center">
                         @foreach($properties as $property)
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-3">

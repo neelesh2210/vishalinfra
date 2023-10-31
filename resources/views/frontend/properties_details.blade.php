@@ -1,7 +1,9 @@
 @extends('frontend.layouts.app')
 @section('content')
     <section class="gallery_parts pt-2 pb-2 d-none d-sm-none d-md-none d-lg-none d-xl-block">
-        <img src="{{asset('backend/img/banners/'.$city_banner)}}" onerror="this.onerror=null;this.src='{{ asset('frontend/assets/img/bg.jpg') }}'" >
+        @if($city_banner)
+            <img src="{{asset('backend/img/banners/'.$city_banner)}}">
+        @endif
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 col-md-7 col-sm-12 pr-1">
@@ -180,18 +182,27 @@
                                                 <div class="form-group">
                                                     <label>Full Name</label>
                                                     <input type="text" class="form-control light" name ="name" placeholder="Enter Name">
+                                                    @error('name')
+                                                        <span class="text-danger">{{$message}}</span>
+                                                    @enderror
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12">
                                                 <div class="form-group">
                                                     <label>Contact Number</label>
                                                     <input type="number" minlength="10" maxlength="10" class="form-control light" name="phone" placeholder="Enter Phone No.">
+                                                    @error('phone')
+                                                        <span class="text-danger">{{$message}}</span>
+                                                    @enderror
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12">
                                                 <div class="form-group">
                                                     <label>Email ID</label>
                                                     <input type="email" class="form-control light" name="email" placeholder="Enter Email">
+                                                    @error('email')
+                                                        <span class="text-danger">{{$message}}</span>
+                                                    @enderror
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12">

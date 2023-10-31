@@ -19,12 +19,18 @@ class EnquiryController extends Controller
     }
 
     public function store(Request $request){
+        $this->validate($request,[
+            'property_id'=>'required',
+            'name'=>'required',
+            'phone'=>'required',
+            'email'=>'required',
+        ]);
+
         $enquiry = new Enquiry;
 
         if(Auth::check()){
             $enquiry->user_id = Auth::guard('web')->user()->id;
         }
-
         $enquiry->property_id = $request->property_id;
         $enquiry->name = $request->name;
         $enquiry->phone = $request->phone;
