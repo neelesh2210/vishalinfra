@@ -8477,12 +8477,13 @@ span.agents_count {
     display: block;
     border-radius: 6px;
     overflow: hidden;
+    margin-bottom: 3px;
 }
 .gg_single_part a {
     /* display: inline-block; */
 }
 .gg_single_part-right {
-    display: block;
+    display: inline-block;
     border-radius: 6px;
     overflow: hidden;
 }
@@ -8491,6 +8492,7 @@ span.agents_count {
 }
 .gg_single_part-right.min {
     height: 158px;
+    width: 24.6%;
 }
 .gg_single_part-right.min img{
     height: 158px;
@@ -8708,6 +8710,7 @@ span.agents_count {
     text-align: left;
     padding:15px 0;
 	position:relative;
+    text-wrap: balance;
 }
 .accordion .card:last-child .card-header {
     border: none;
@@ -13324,6 +13327,7 @@ footer.skin-dark-footer h4{
 footer.skin-dark-footer .footer_widget ul li a, footer.skin-dark-footer, footer.skin-dark-footer a {
     color: #fdfdfd;
     font-size: 14px;
+    word-wrap: break-word;
 }
 footer.skin-dark-footer .footer_widget ul li a:hover, footer.skin-dark-footer .footer_widget ul li a:focus{
     /* color:#ff572e; */

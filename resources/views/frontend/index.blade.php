@@ -614,6 +614,141 @@
             </div>
         </div>
     </section>
+    <section class="gray-simple">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-md-8">
+                    <div class="sec-heading center">
+                        <h2>FAQ?</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 col-md-10 col-sm-10 m-auto">
+                    <!-- Single Basics List -->
+                    <div class="faq_wrap">
+                        <div class="faq_wrap_body mb-5">
+                            <div class="accordion" id="generalac">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                      <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            1. What the first step of the home buying process?
+                                        </button>
+                                      </h2>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#generalac">
+                                      <div class="card-body">
+                                        <p class="ac-para">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                      <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            2. How long does it take to buy a home?
+                                        </button>
+                                      </h2>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#generalac">
+                                      <div class="card-body">
+                                        <p class="ac-para">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                      <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            3. What is a seller's market?
+                                        </button>
+                                      </h2>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#generalac">
+                                      <div class="card-body">
+                                        <p class="ac-para">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingFour">
+                                      <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            4. What is a buyer's market?
+                                        </button>
+                                      </h2>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" aria-labelledby="collapseFour" data-parent="#generalac">
+                                        <div class="card-body">
+                                          <p class="ac-para">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingFive">
+                                      <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                            5. What is a stratified market?
+                                        </button>
+                                      </h2>
+                                    </div>
+                                    <div id="collapseFive" class="collapse" aria-labelledby="collapseFive" data-parent="#generalac">
+                                        <div class="card-body">
+                                          <p class="ac-para">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingSix">
+                                      <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                            6. How much do I have to pay an agent to help me buy a house?
+                                        </button>
+                                      </h2>
+                                    </div>
+                                    <div id="collapseSix" class="collapse" aria-labelledby="collapseSix" data-parent="#generalac">
+                                        <div class="card-body">
+                                          <p class="ac-para">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingSeven">
+                                      <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                            7. What kind of credit score do I need to buy a home?
+                                        </button>
+                                      </h2>
+                                    </div>
+                                    <div id="collapseSeven" class="collapse" aria-labelledby="collapseSeven" data-parent="#generalac">
+                                        <div class="card-body">
+                                          <p class="ac-para">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingEight">
+                                      <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                            8. How much do I need for a down payment?
+                                        </button>
+                                      </h2>
+                                    </div>
+                                    <div id="collapseEight" class="collapse" aria-labelledby="collapseEight" data-parent="#generalac">
+                                        <div class="card-body">
+                                          <p class="ac-para">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="theme-bg call_action_wrap-wrap">
         <div class="container">
             <div class="row">

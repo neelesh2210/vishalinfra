@@ -29,11 +29,11 @@
 												</button>
 											  </h2>
 											</div>
-											{{-- <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#generalac">
+											<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#generalac">
 											  <div class="card-body">
-												<p class="ac-para"></p>
+												<p class="ac-para">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
 											  </div>
-											</div> --}}
+											</div>
 										</div>
 										<div class="card">
 											<div class="card-header" id="headingTwo">
@@ -43,11 +43,11 @@
 												</button>
 											  </h2>
 											</div>
-											{{-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#generalac">
+											<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#generalac">
 											  <div class="card-body">
-												<p class="ac-para">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+												<p class="ac-para">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
 											  </div>
-											</div> --}}
+											</div>
 										</div>
 										<div class="card">
 											<div class="card-header" id="headingThree">
@@ -57,11 +57,11 @@
 												</button>
 											  </h2>
 											</div>
-											{{-- <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#generalac">
+											<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#generalac">
 											  <div class="card-body">
-												<p class="ac-para">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+												<p class="ac-para">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
 											  </div>
-											</div> --}}
+											</div>
 										</div>
                                         <div class="card">
 											<div class="card-header" id="headingFour">
@@ -71,6 +71,11 @@
 												</button>
 											  </h2>
 											</div>
+                                            <div id="collapseFour" class="collapse" aria-labelledby="collapseFour" data-parent="#generalac">
+                                                <div class="card-body">
+                                                  <p class="ac-para">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+                                                </div>
+                                            </div>
 										</div>
                                         <div class="card">
 											<div class="card-header" id="headingFive">
@@ -80,6 +85,11 @@
 												</button>
 											  </h2>
 											</div>
+                                            <div id="collapseFive" class="collapse" aria-labelledby="collapseFive" data-parent="#generalac">
+                                                <div class="card-body">
+                                                  <p class="ac-para">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+                                                </div>
+                                            </div>
 										</div>
                                         <div class="card">
 											<div class="card-header" id="headingSix">
@@ -89,6 +99,11 @@
 												</button>
 											  </h2>
 											</div>
+                                            <div id="collapseSix" class="collapse" aria-labelledby="collapseSix" data-parent="#generalac">
+                                                <div class="card-body">
+                                                  <p class="ac-para">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+                                                </div>
+                                            </div>
 										</div>
                                         <div class="card">
 											<div class="card-header" id="headingSeven">
@@ -98,6 +113,11 @@
 												</button>
 											  </h2>
 											</div>
+                                            <div id="collapseSeven" class="collapse" aria-labelledby="collapseSeven" data-parent="#generalac">
+                                                <div class="card-body">
+                                                  <p class="ac-para">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+                                                </div>
+                                            </div>
 										</div>
                                         <div class="card">
 											<div class="card-header" id="headingEight">
@@ -107,6 +127,11 @@
 												</button>
 											  </h2>
 											</div>
+                                            <div id="collapseEight" class="collapse" aria-labelledby="collapseEight" data-parent="#generalac">
+                                                <div class="card-body">
+                                                  <p class="ac-para">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+                                                </div>
+                                            </div>
 										</div>
 									</div>
 								</div>
