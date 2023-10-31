@@ -327,7 +327,7 @@
                                 </div>
                                 <div class="location_btn"><i class="fa fa-arrow-right"></i></div>
                             </div>
-                            <div class="img-wrap-background" style="background-image: url({{ asset('frontend/assets/img/'.{{$key+1}}.'.webp') }});"></div>
+                            <div class="img-wrap-background" style="background-image: url({{ asset('frontend/assets/img/'.$key+1.'.webp') }});"></div>
                         </a>
                     </div>
                 @endforeach
