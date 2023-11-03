@@ -60,6 +60,7 @@ Route::view('requested-property','frontend.requested_property')->name('requested
 Route::view('privacy-policy', 'frontend.privacy_policy')->name('privacy_policy');
 Route::view('term-and-condition', 'frontend.term_and_condition')->name('term_and_condition');
 Route::view('faq', 'frontend.faq')->name('faq');
+Route::view('cancel-and-refund-policy', 'frontend.cancel-and-refund-policy')->name('cancel_and_refund_policy');
 
 //Plan
 Route::get('plan',[PlanController::class,'plan'])->name('plan');

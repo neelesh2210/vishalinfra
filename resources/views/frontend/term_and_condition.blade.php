@@ -104,7 +104,7 @@
                             <p>We reserve the right, at our sole discretion, to update, change or replace any part of these Terms and Conditions by posting updates and changes to our website. It is your responsibility to check our website periodically for changes. Your continued use of or access to our website or the Service following the posting of any changes to these Terms and Conditions constitutes acceptance of those changes.</p>
 
                             <h3>Need Help?</h3>
-                            <p>Contact us at info@thesuccesspreneur.com for questions related to refunds and cancel.</p>
+                            <p>Contact us at info@reframerealstate.com for questions related to refunds and cancel.</p>
                             </ol>
                         </div>
                     </div>

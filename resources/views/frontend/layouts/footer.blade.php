@@ -54,6 +54,11 @@
                                         </a>
                                     </li>
                                     <li>
+                                        <a href="{{route('cancel_and_refund_policy')}}">Cancel & Refund Policy
+                                            <i class="fas fa-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="{{route('faq')}}">FAQ
                                             <i class="fas fa-chevron-right"></i>
                                         </a>
