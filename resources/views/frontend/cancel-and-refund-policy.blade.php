@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="breadcrumbs-wrap">
-                        <h2 class="breadcrumb-title">Privacy Policy</h2>
+                        <h2 class="breadcrumb-title">Cancel & Refund Policy</h2>
                     </div>
                 </div>
             </div>
