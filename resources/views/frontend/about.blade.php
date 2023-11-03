@@ -24,7 +24,7 @@
 							</div>
                             <div class="story-wrap explore-content mt-3">
 								<h2>Company Profile</h2>
-								<p class="mb-3">Reframe Real Estate Pvt. Ltd. is a newly formed in January 2020. The Reframe Real Estate is an online marketplace to deals with every aspect of the consumers’ needs in the real estate industry. It is an online forum where buyers and sellers can exchange information about real estate properties quickly, The RRE helps you to find the right property with its well cared online procedure, RRE’s BDMs are well qualified to guide you all about the Property, We knows The property selection process is rigorous and based on long term investment so we RRE committed to provide the best online Real Estate services to our users.</p>
+								<p class="mb-3">Reframe Real Estate Enterprises is a newly formed in January 2020. The Reframe Real Estate is an online marketplace to deals with every aspect of the consumers’ needs in the real estate industry. It is an online forum where buyers and sellers can exchange information about real estate properties quickly, The RRE helps you to find the right property with its well cared online procedure, RRE’s BDMs are well qualified to guide you all about the Property, We knows The property selection process is rigorous and based on long term investment so we RRE committed to provide the best online Real Estate services to our users.</p>
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6">
