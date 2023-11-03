@@ -5,7 +5,7 @@
                 <div class="col-lg-4 col-md-4">
                     <div class="footer_widget">
                         <h4 class="widget_title">About Reframe Real Estate</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>The Reframe Real Estate is an online marketplace to deal with every aspect of the consumers’ needs in the real estate industry. It is an online forum where buyers and sellers can exchange information about real estate properties quickly.</p>
                         <h6 class="widget_title text-white">Follow us: </h6>
                         <ul class="social-link">
                             <li>
