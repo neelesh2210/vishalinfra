@@ -22,8 +22,8 @@
 
                 <div class="col-lg-12 col-md-12">
                     <div class="property_block_wrap">
-                        <h4 class="property_block_title">Who we are</h4>
                         <div class="block-body">
+                            <h3>Who we are</h3>
                             <p>Our website address is: {{env('APP_URL')}}.</p>
                             <h3>Comments</h3>
                             <p>When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor’s IP address and browser user agent string to help spam detection.</p>

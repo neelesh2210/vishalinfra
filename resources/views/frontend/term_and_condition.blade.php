@@ -22,7 +22,7 @@
 
                 <div class="col-lg-12 col-md-12">
                     <div class="property_block_wrap">
-                        <h4 class="property_block_title">Overview</h4>
+                        <h3>Overview</h3>
                         <div class="block-body">
                             <p>By visiting our site and/ or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms and Conditions”, “Terms”), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms and Conditions apply to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content.</p>
                             <p>Please read these Terms and Conditions carefully before accessing or using our website. By accessing or using any part of the site, you agree to be bound by these Terms and Conditions. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services. If these Terms and Conditions are considered an offer, acceptance is expressly limited to these Terms and Conditions.</p>
