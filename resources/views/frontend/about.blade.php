@@ -19,8 +19,8 @@
 					<div class="row align-items-center">
 						<div class="col-lg-6 col-md-6">
 							<div class="story-wrap explore-content">
-								<h2>About Of Reframe Enterprises</h2>
-								<span class="theme-cl">The Reframe Enterprises is an online marketplace to deal with every aspect of the consumers’ needs in the real estate industry. It is an online forum where buyers and sellers can exchange information about real estate properties quickly. </span>
+								<h2>About Of Reframe Real Estate</h2>
+								<span class="theme-cl">The Reframe Real Estate is an online marketplace to deal with every aspect of the consumers’ needs in the real estate industry. It is an online forum where buyers and sellers can exchange information about real estate properties quickly. </span>
 							</div>
                             <div class="story-wrap explore-content mt-3">
 								<h2>Company Profile</h2>
