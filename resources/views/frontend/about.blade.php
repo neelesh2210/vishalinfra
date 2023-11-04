@@ -19,12 +19,12 @@
 					<div class="row align-items-center">
 						<div class="col-lg-6 col-md-6">
 							<div class="story-wrap explore-content">
-								<h2>About Of Reframe Real Estate</h2>
-								<span class="theme-cl">The Reframe Real Estate is an online marketplace to deal with every aspect of the consumers’ needs in the real estate industry. It is an online forum where buyers and sellers can exchange information about real estate properties quickly. </span>
+								<h2>About Of Reframe Enterprises</h2>
+								<span class="theme-cl">The Reframe Enterprises is an online marketplace to deal with every aspect of the consumers’ needs in the real estate industry. It is an online forum where buyers and sellers can exchange information about real estate properties quickly. </span>
 							</div>
                             <div class="story-wrap explore-content mt-3">
 								<h2>Company Profile</h2>
-								<p class="mb-3">Reframe Real Estate Enterprises is a newly formed in January 2020. The Reframe Real Estate is an online marketplace to deals with every aspect of the consumers’ needs in the real estate industry. It is an online forum where buyers and sellers can exchange information about real estate properties quickly, The RRE helps you to find the right property with its well cared online procedure, RRE’s BDMs are well qualified to guide you all about the Property, We knows The property selection process is rigorous and based on long term investment so we RRE committed to provide the best online Real Estate services to our users.</p>
+								<p class="mb-3">Reframe Enterprises is a newly formed in January 2020. The Reframe Enterprises is an online marketplace to deals with every aspect of the consumers’ needs in the real estate industry. It is an online forum where buyers and sellers can exchange information about real estate properties quickly, The RRE helps you to find the right property with its well cared online procedure, RRE’s BDMs are well qualified to guide you all about the Property, We knows The property selection process is rigorous and based on long term investment so we RRE committed to provide the best online Real Estate services to our users.</p>
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6">
@@ -40,7 +40,7 @@
                         </div>
                         <div class="story-wrap explore-content mt-3">
                             <h2>Mission Statement</h2>
-                            <p class="mb-3">Reframe Real Estate’s goal is to invest in quality – both in its Builders and in its Buyers. We RRE as the venture of Real Estate and Technology has planned to deliver the dream home on the go.</p>
+                            <p class="mb-3">Reframe Enterprises goal is to invest in quality – both in its Builders and in its Buyers. We RRE as the venture of Real Estate and Technology has planned to deliver the dream home on the go.</p>
                         </div>
                     </div>
                     </div>
@@ -67,7 +67,7 @@
 											<img src="{{ asset('frontend/assets/img/profile.png')}}" alt="" class="img-fluid" />
 										</div>
 										<div class="teamgrid-content">
-											<h4>Reframe Real Estate</h4>
+											<h4>Reframe Enterprises</h4>
 											<span>Co-Founder</span>
 										</div>
 										<div class="teamgrid-social">
@@ -87,7 +87,7 @@
 											<img src="{{ asset('frontend/assets/img/profile.png')}}" alt="" class="img-fluid" />
 										</div>
 										<div class="teamgrid-content">
-											<h4>Reframe Real Estate</h4>
+											<h4>Reframe Enterprises</h4>
 											<span>Co-Founder</span>
 										</div>
 										<div class="teamgrid-social">
@@ -107,7 +107,7 @@
 											<img src="{{ asset('frontend/assets/img/profile.png')}}" alt="" class="img-fluid" />
 										</div>
 										<div class="teamgrid-content">
-											<h4>Reframe Real Estate</h4>
+											<h4>Reframe Enterprises</h4>
 											<span>Co-Founder</span>
 										</div>
 										<div class="teamgrid-social">
@@ -127,7 +127,7 @@
 											<img src="{{ asset('frontend/assets/img/profile.png')}}" alt="" class="img-fluid" />
 										</div>
 										<div class="teamgrid-content">
-											<h4>Reframe Real Estate</h4>
+											<h4>Reframe Enterprises</h4>
 											<span>Co-Founder</span>
 										</div>
 										<div class="teamgrid-social">
@@ -147,7 +147,7 @@
 											<img src="{{ asset('frontend/assets/img/profile.png')}}" alt="" class="img-fluid" />
 										</div>
 										<div class="teamgrid-content">
-											<h4>Reframe Real Estate</h4>
+											<h4>Reframe Enterprises</h4>
 											<span>Co-Founder</span>
 										</div>
 										<div class="teamgrid-social">
@@ -167,7 +167,7 @@
 											<img src="{{ asset('frontend/assets/img/profile.png')}}" alt="" class="img-fluid" />
 										</div>
 										<div class="teamgrid-content">
-											<h4>Reframe Real Estate</h4>
+											<h4>Reframe Enterprises</h4>
 											<span>Co-Founder</span>
 										</div>
 										<div class="teamgrid-social">

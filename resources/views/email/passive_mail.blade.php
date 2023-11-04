@@ -3,8 +3,8 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Reframe Real Estate</title>
-<meta name="description" content="Reframe Real Estate">
+<title>Reframe Enterprises</title>
+<meta name="description" content="Reframe Enterprises">
 </head>
 <style>
 a:hover {
@@ -81,7 +81,7 @@ a:hover {
                                                    <b> Details: </b> </td>
                                                 <td
                                                     style="padding: 10px; color: #455056;">
-                                                    Reframe Real Estate
+                                                    Reframe Enterprises
                                             </tr>
                                             <tr>
                                                 <td
