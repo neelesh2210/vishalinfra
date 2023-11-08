@@ -19,6 +19,8 @@ class Property extends Model
         'property_number',
         'name',
         'properties_type',
+        'property_selling_type',
+        'offer',
         'city',
         'landmark',
         'furnished_status',

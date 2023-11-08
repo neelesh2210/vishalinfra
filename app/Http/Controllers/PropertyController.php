@@ -83,6 +83,7 @@ class PropertyController extends Controller
         $search_property_type = $request->properties_type;
         $search_location = $request->location;
         $search_price_range = $request->price_range;
+        $search_selling_type = $request->property_selling_type;
         $city_banner = null;
 
         $properties = PropertyManager::withoutTrash();
@@ -97,6 +98,10 @@ class PropertyController extends Controller
         if($search_price_range){
             $properties = $properties->whereBetween('final_price',[explode(',',$search_price_range)[0],explode(',',$search_price_range)[1]]);
         }
+        if($search_selling_type){
+            $properties = $properties->where('property_selling_type',$search_selling_type);
+        }
+
         $properties = $properties->orderBy('created_at','desc')->paginate(10);
 
         return view('frontend.properties',compact('properties','city_banner'));

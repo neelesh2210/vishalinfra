@@ -154,6 +154,17 @@
                                             </div>
                                             <div class="col-md-4 form_div">
                                                 <div class="form-group">
+                                                    <label for="property_selling_type">Property Selling Type <span class="text-danger">*</span></label>
+                                                    <select class="form-control select2" name="property_selling_type" id="property_selling_type"  data-live-search="true" required>
+                                                        <option value="">Select Property Selling Type</option>
+                                                        <option value="buy" >Buy</option>
+                                                        <option value="rent">Rent</option>
+                                                        <option value="sell">Sell</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 form_div">
+                                                <div class="form-group">
                                                     <label>Property Name <span class="text-danger">*</span></label>
                                                     <input type="text" class="form-control" name="name" placeholder="Property Name..." required>
                                                 </div>
@@ -562,6 +573,18 @@
                                                     <div class="file-preview box sm"></div>
                                                 </div>
                                             </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input id="offer" class="checkbox-custom" name="offer" type="checkbox" value="1" onclick="offerDivShow()">
+                                                    <label for="offer" class="checkbox-custom-label">Offer</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12" id="offer_div" style="display:none">
+                                                <div class="form-group">
+                                                    <label for="offer_text" class="checkbox-custom-label">Offer</label>
+                                                    <textarea name="offer_text" rows="8" class="form-control"></textarea>
+                                                </div>
+                                            </div>
                                             <div class="col-md-12 pt-20">
                                                 <label class="col-from-label">Property Details : </label>
                                                 <textarea name="remark" rows="8" class="form-control"></textarea>
@@ -690,6 +713,14 @@
             const [file] = img_input1.files
             if (file) {
                 img1.src = URL.createObjectURL(file)
+            }
+        }
+
+        function offerDivShow(){
+            if($('#offer').is(":checked")){
+                $('#offer_div').show()
+            }else{
+                $('#offer_div').hide()
             }
         }
 

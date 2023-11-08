@@ -62,6 +62,7 @@ class PropertyListingController extends Controller
         $property->property_number=$property_number;
         $property->name=$request->name;
         $property->properties_type=$request->properties_type;
+        $property->property_selling_type=$request->property_selling_type;
         $property->city=$request->city_id;
         $property->landmark=$request->landmark;
 
@@ -128,6 +129,12 @@ class PropertyListingController extends Controller
 
         $property->thumbnail_img=$request->image;
         $property->remark=$request->remark;
+        if($request->offer){
+            $property->offer = $request->offer_text;
+        }else{
+            $property->offer = null;
+        }
+        $property->remark=$request->remark;
         $property->is_status='0';
         $property->save();
 
@@ -158,6 +165,7 @@ class PropertyListingController extends Controller
         $property=Property::find(decrypt($id));
         $property->name=$request->name;
         $property->properties_type=$request->properties_type;
+        $property->property_selling_type=$request->property_selling_type;
         $property->city=$request->city_id;
         $property->landmark=$request->landmark;
 
@@ -223,6 +231,11 @@ class PropertyListingController extends Controller
         $property->amenities=json_encode($request->amenity);
 
         $property->thumbnail_img=$request->image;
+        if($request->offer){
+            $property->offer = $request->offer_text;
+        }else{
+            $property->offer = null;
+        }
         $property->remark=$request->remark;
         $property->save();
 

@@ -111,6 +111,17 @@
                                             </div>
                                             <div class="col-md-4 form_div">
                                                 <div class="form-group">
+                                                    <label for="property_selling_type">Property Selling Type <span class="text-danger">*</span></label>
+                                                    <select class="form-control select2" name="property_selling_type" id="property_selling_type"  data-live-search="true" required>
+                                                        <option value="">Select Property Selling Type</option>
+                                                        <option value="buy" @if($property->property_selling_type == 'buy') selected @endif>Buy</option>
+                                                        <option value="rent" @if($property->property_selling_type == 'rent') selected @endif>Rent</option>
+                                                        <option value="sell" @if($property->property_selling_type == 'sell') selected @endif>Sell</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 form_div">
+                                                <div class="form-group">
                                                     <label>Property Name <span class="text-danger">*</span></label>
                                                     <input type="text" class="form-control" name="name" value="{{$property->name}}" placeholder="Property Name..." required>
                                                 </div>
@@ -458,7 +469,7 @@
                                             <ul class="no-ul-list third-row">
                                                 @foreach (App\Models\Admin\Amenity::orderBy('name','asc')->get() as $amenity)
                                                     <li>
-                                                        <input id="{{$amenity->id}}" class="checkbox-custom" name="amenity[]" type="checkbox" value="{{$amenity->id}}" @if(is_array(json_decode($property->amenities))) @if(is_array($amenity->id,json_decode($property->amenities))) checked @endif @endif>
+                                                        <input id="{{$amenity->id}}" class="checkbox-custom" name="amenity[]" type="checkbox" value="{{$amenity->id}}" @if(is_array(json_decode($property->amenities))) @if(in_array($amenity->id,json_decode($property->amenities))) checked @endif @endif>
                                                         <label for="{{$amenity->id}}" class="checkbox-custom-label">{{$amenity->name}}</label>
                                                     </li>
                                                 @endforeach
@@ -494,6 +505,18 @@
                                                         </div>
                                                     </div>
                                                     <div class="file-preview box sm"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input id="offer" class="checkbox-custom" name="offer" type="checkbox" value="1" @if($property->offer) checked @endif onclick="offerDivShow()">
+                                                    <label for="offer" class="checkbox-custom-label">Offer</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12" id="offer_div" @if(!$property->offer) style="display:none" @endif>
+                                                <div class="form-group">
+                                                    <label for="offer_text" class="checkbox-custom-label">Offer</label>
+                                                    <textarea name="offer_text" rows="8" class="form-control">{{$property->offer}}</textarea>
                                                 </div>
                                             </div>
                                             <div class="col-md-12 pt-20">
@@ -627,6 +650,14 @@
             const [file] = img_input1.files
             if (file) {
                 img1.src = URL.createObjectURL(file)
+            }
+        }
+
+        function offerDivShow(){
+            if($('#offer').is(":checked")){
+                $('#offer_div').show()
+            }else{
+                $('#offer_div').hide()
             }
         }
 

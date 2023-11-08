@@ -28,13 +28,13 @@
                         <a href="{{ route('index') }}"> <i class="far fa-home"></i> Home</a>
                     </li>
                     <li>
-                        <a href="#">Buy<span class="submenu-indicator"></span></a>
+                        <a href="{{ route('properties') }}?property_selling_type=buy">Buy<span class="submenu-indicator"></span></a>
                     </li>
                     <li>
-                        <a href="#">Rent</a>
+                        <a href="{{ route('properties') }}?property_selling_type=rent">Rent</a>
                     </li>
                     <li>
-                        <a href="#">Sell</a>
+                        <a href="{{ route('properties') }}?property_selling_type=sell">Sell</a>
                     </li>
                     <li>
                         <a href="{{ route('properties') }}">Property Services</a>
