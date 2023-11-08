@@ -20,6 +20,9 @@
                             <li>
                                 <a href="https://www.linkedin.com/in/vishal-singh-2b65aa1a3/" target="_blank"><i class="fab fa-linkedin"></i></a>
                             </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCbGYFcKKlaQDLBYCLT35H7g/" target="_blank"><i class="fab fa-youtube"></i></a>
+                            </li>
                         </ul>
                     </div>
                 </div>
