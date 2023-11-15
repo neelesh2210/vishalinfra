@@ -63,7 +63,7 @@
                                 </form>
                                 <div class="signup__text">
                                     New to Reframe Realestate?
-                                    <a href="{{ route('signup') }}" class="signup__link">Sign Up</a>
+                                    <a href="{{ route('signup') }}" class="signup__link" style="font-weight: 600; color: #000;">Sign Up</a>
                                 </div>
                             </div>
                         </div>

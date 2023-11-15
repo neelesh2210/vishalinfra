@@ -3329,7 +3329,7 @@ ul {
 }
 
 .nav-brand {
-    padding:10px 15px;
+    padding:5px 15px;
     font-size: 24px;
 	margin-right: 1rem;
 	padding-left: 0;
@@ -3485,7 +3485,7 @@ nav a:hover {
 }
 
 .nav-menu>li>a {
-    padding: 30px 12px;
+    padding: 22px 12px;
     display: inline-block;
     font-family: 'Poppins', sans-serif;
     font-weight:500;
@@ -3529,7 +3529,7 @@ nav a:hover {
 
 .nav-menu.nav-menu-social>li {
     text-align: center;
-    float: none;
+    /* float: none; */
     border: none !important
 }
 .navigation-portrait .nav-menu.nav-menu-social>li {
@@ -3955,6 +3955,7 @@ nav a {
     background: #fff;
     z-index: 6;
     border-bottom: 1px solid #dddddda6;
+    height: 75px;
 }
 
 .header-top {
@@ -4179,7 +4180,7 @@ nav a {
 }
 .nav-menu.nav-menu-social>li.add-listing {
     border-radius:5px;
-    top: 16px;
+    top: 12px;
     position: relative;
     height:50px;
     padding: 0px;
@@ -4196,7 +4197,7 @@ nav a {
 }
 .nav-menu.nav-menu-social>li.add-listing a {
     top:0px;
-	padding: 30px 20px;
+	padding: 26px 20px;
     color:#ffffff !important;
 }
 .nav-menu.nav-menu-social>li.add-listing.dark-bg {
@@ -4211,10 +4212,10 @@ nav a {
     color:#333333 !important;
 }
 .nav-brand img {
-    max-width:170px;
-	position: relative;
-    top:0px;
-height: 60px;
+    max-width: 160px;
+    position: relative;
+    top: 8px;
+    height: 50px;
 }
 
 /*--------- Dashboard Dropdown ----------*/
@@ -4347,7 +4348,7 @@ span.expiration {
     border-bottom:1px solid #e9ecef;
 }
 .nav-menu.nav-menu-social>li.add-listing a {
-    top: -17px;
+    top: -15px;
 }
 .nav-menu.nav-menu-social>li.add-listing.style-2 a {
     top: -16px;
@@ -4455,6 +4456,7 @@ li._my_prt_list a span {
     max-width:150px;
     position: relative;
     top: 2px;
+    height: 45px;
 }
 .nav-brand {
     padding: 10px 15px;
