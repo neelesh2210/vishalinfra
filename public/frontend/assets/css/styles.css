@@ -7875,17 +7875,32 @@ ul.eplios_list li:before {
 .prt_saveed_12lk .toggler input:checked + i {
     color:#ff5722;
 }
+
 ._exlio_125 {
     position: absolute;
     left: 10px;
     top: 10px;
     z-index: 1;
-    background: #234ca0;
+    background: #008006;
     height: 25px;
     padding: 0 10px;
     font-size: 12px;
     font-weight: 500;
-border-radius: 50px;
+    border-radius: 50px;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+}
+.trusted_img {
+    position: absolute;
+    right: 0px;
+    top: 3px;
+    z-index: 1;
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 50px;
     color: #ffffff;
     align-items: center;
     justify-content: center;
@@ -9683,6 +9698,7 @@ ul.prs_lists {
 ul.prs_lists li {
     display: inline-block;
     margin-right:10px;
+    margin-bottom: 15px;
     list-style: none;
 }
 ul.prs_lists li .foot-rates {

@@ -102,7 +102,14 @@
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-3">
                                 <div class="property-listing list_view row m-0">
                                     <div class="col-md-4 p-0">
-                                        <div class="_exlio_125">Verified on Site</div>
+                                        @if($property->is_featured)
+                                            <div class="_exlio_125">Verified on Site</div>
+                                        @endif
+                                        @if($property->is_trust_seal)
+                                            <div class="trusted_img">
+                                                <img src="{{ asset('frontend/assets/img/trusted.png')}}" alt="">
+                                            </div>
+                                        @endif
                                         <div class="list-img-slide">
                                             <div class="click">
                                                     <a href="{{uploaded_asset($property->thumbnail_img)}}">

@@ -48,9 +48,6 @@ Route::post('login',[LoginController::class,'login'])->name('login');
 Route::view('forgot-password', 'frontend.auth.forgot_password')->name('forgot_password');
 Route::view('reset-password', 'frontend.auth.reset_password')->name('reset_password');
 
-//Project
-Route::view('project_details', 'frontend.project_details')->name('project_details');
-
 //Static Route
 Route::view('about', 'frontend.about')->name('about');
 Route::view('contact', 'frontend.contact')->name('contact');
@@ -68,6 +65,9 @@ Route::get('plan',[PlanController::class,'plan'])->name('plan');
 //Property
 Route::get('properties',[PropertyController::class,'propertyList'])->name('properties');
 Route::get('/{slug}',[PropertyController::class,'detail'])->name('property.detail');
+
+//Project
+Route::get('project/{id}',[PropertyController::class,'projectDetail'])->name('project.details');
 
 //Enquiry
 Route::post('enquiry-store',[EnquiryController::class,'store'])->name('enquiry.store');

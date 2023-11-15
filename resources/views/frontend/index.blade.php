@@ -268,7 +268,7 @@
                                 <div class="property-listing property-2">
                                     <div class="listing-img-wrapper">
                                         <div class="list-img-slide">
-                                            <a href="#">
+                                            <a href="{{route('project.details',$project->id)}}">
                                                 <img src="{{ uploaded_asset($project->cover_image) }}" class="img-fluid mx-auto" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                                             </a>
                                         </div>
@@ -282,7 +282,7 @@
                                             </div>
                                             <div class="listing-short-detail">
                                                 <h4 class="listing-name verified">
-                                                    <a href="#" class="prt-link-detail">{{ $project->name }}</a>
+                                                    <a href="{{route('project.details',$project->id)}}" class="prt-link-detail">{{ $project->name }}</a>
                                                 </h4>
                                                 <div class="foot-location">
                                                     <img src="{{ asset('frontend/assets/img/pin.svg') }}" width="18" alt="" />{{ $project->address }}
@@ -295,7 +295,7 @@
                                             <h6 class="listing-card-info-price mb-0 p-0">{{ $project->project_area }} Area</h6>
                                         </div>
                                         <div class="footer-flex">
-                                            <a href="#" class="prt-view">View Detail</a>
+                                            <a href="{{route('project.details',$project->id)}}" class="prt-view">View Detail</a>
                                         </div>
                                     </div>
                                 </div>

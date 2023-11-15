@@ -4,22 +4,36 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-12 col-sm-12">
-                <div class="gg_single_part left mt-2">
-                    <a href="#" class="mfp-gallery">
-                        <img src="{{asset('backend/img/property_default.jpg')}}" class="wh-100" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}">
+                <div class="gg_single_part left">
+                    <a href="{{uploaded_asset($project_detail->cover_image)}}" class="mfp-gallery">
+                        <img src="{{uploaded_asset($project_detail->cover_image)}}" class="wh-100" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                     </a>
                 </div>
+                @foreach (explode(',',$project_detail->gallery_image) as $keyp=>$photo)
+                    <div class="gg_single_part-right min  mb-2">
+                        <a href="{{uploaded_asset($photo)}}" class="mfp-gallery">
+                            <img src="{{uploaded_asset($photo)}}" class="img-fluid mx-auto" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
+                            @if(count(explode(',',$project_detail->gallery_image)) > 3)
+                                <p class="vw_dtls"> <i class="fas fa-images"></i> <br> <span> +{{count(explode(',',$project_detail->gallery_image)) - 3}} Photos </span> </p>
+                            @endif
+                        </a>
+                    </div>
+                    @if($keyp == 3)
+                        @php
+                            break;
+                        @endphp
+                    @endif
+                @endforeach
                 <div class="property_info_detail_wrap mb-4 mt-4">
                     <div class="property_info_detail_wrap_first">
                         <div class="pr-price-into">
                             <ul class="prs_lists mb-3">
-                                <li><span class="bed"> Beds</span></li>
-                                <li><span class="bath">5 Bath</span></li>
-                                <li><span class="gar">4 Balcony</span></li>
-                                <li><span class="sqft">1500/sqft</span></li>
+                                @foreach (json_decode($project_detail->amenities) as $amenity)
+                                    <li><span class="bath"> {{$amenity}}</span></li>
+                                @endforeach
                             </ul>
-                            <h2 class="mb-3">Manland</h2>
-                            <span><i class="lni-map-marker"></i> near airport, PUNE</span>
+                            <h2 class="mb-3">{{$project_detail->name}}</h2>
+                            <span><i class="lni-map-marker"></i> {{$project_detail->address}} - {{$project_detail->pincode}}</span>
                         </div>
                     </div>
                 </div>
@@ -30,63 +44,47 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <p>Owner Type</p>
+                            <p>Project Type</p>
                         </div>
                         <div class="col-md-8">
-                            <strong>Agent</strong>
+                            <strong>{{ucfirst($project_detail->project_type)}}</strong>
                         </div>
                         <div class="col-md-4">
-                            <p>Price</p>
+                            <p>Project Area</p>
                         </div>
                         <div class="col-md-8">
-                            <strong>30000</strong> <span><del>30000000</del></span>
+                            <strong>{{$project_detail->project_area}} / sqft</strong>
                         </div>
                         <div class="col-md-4">
-                            <p>Booking Amount</p>
+                            <p>Launch Date</p>
                         </div>
                         <div class="col-md-8">
-                            <strong>200000</strong>
+                            <strong>{{$project_detail->launch_date}}</strong>
                         </div>
                         <div class="col-md-4">
-                            <p>Carpet Area</p>
+                            <p>Completion Date</p>
                         </div>
                         <div class="col-md-8">
-                            <strong>15000sqft | ₹1500/sqft </strong>
+                            <strong>{{$project_detail->completion_date}} </strong>
                         </div>
 
                         <div class="col-md-4">
-                            <p>Address</p>
+                            <p>Total Unit</p>
                         </div>
                         <div class="col-md-8">
-                            <strong>PUNE, India</strong>
-                        </div>
-                        <div class="col-md-4">
-                            <p>Landmarks</p>
-                        </div>
-                        <div class="col-md-8">
-                            <strong>near airport</strong>
-                        </div>
-                        <div class="col-md-4">
-                            <p>Furnishing</p>
-                        </div>
-                        <div class="col-md-8">
-                            <strong>semi-unfurnished</strong>
+                            <strong>{{$project_detail->total_unit}}</strong>
                         </div>
 
-                        <div class="col-md-12">
-                            <h6 class="property_block_title">Description :</h6>
-                            <p class="more">Commercial Project</p>
-                        </div>
                     </div>
                 </div>
                                     <div class="property_block_wrap">
                     <div class="property_block_wrap_header">
-                        <h4 class="property_block_title">Popular Landmarks Nearby</h4>
+                        <h4 class="property_block_title">About</h4>
                         <hr>
                     </div>
                     <div class="block-body">
                         <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115408.09799694136!2d82.90870601301123!3d25.320894921383157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2db76febcf4d%3A0x68131710853ff0b5!2sVaranasi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1683535825071!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            {{$project_detail->about}}
                         </div>
                     </div>
                 </div>
