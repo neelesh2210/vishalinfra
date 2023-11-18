@@ -92,12 +92,8 @@ class PhonepeController extends Controller
         if (!empty($response_data->success)) {
             if (($response_data->success == true) && ($response_data->code=='PAYMENT_SUCCESS') ) {
                 $m_tid = session()->get('mm_tid');
-                $input = session()->get('data');
-
-                $request->request->add($input);
                 $payment_detalis = json_encode(array('id' => $response_data->data->transactionId,'method' => 'phonepe','amount' => $response_data->data->amount/100,'currency' => 'INR'));
                 $request->request->add(['payment_detalis' => $payment_detalis]);
-                //session()->forget('data');
                 session()->forget('mm_tid');
                 $register = new PlanController;
                 return $register->planPurchase($request);
