@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PlanController;
 use App\Http\Controllers\EnquiryController;
+use App\Http\Controllers\PhonepeController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\PropertyController;
@@ -71,6 +72,10 @@ Route::get('/{slug}',[PropertyController::class,'detail'])->name('property.detai
 
 //Enquiry
 Route::post('enquiry-store',[EnquiryController::class,'store'])->name('enquiry.store');
+
+//Phonepe
+Route::get('phonepe/callback',[PhonepeController::class, 'callback'])->name('phonepe.callback');
+Route::get('phonepe/redirectUrl',[PhonepeController::class, 'redirectUrl'])->name('phonepe.redirectUrl');
 
 Route::group(['middleware'=>['auth:web']],function () {
 

@@ -26,8 +26,13 @@ class PlanController extends Controller
 
     public function attemptPlanPurchase(Request $request){
         $plan = Plan::find($request->plan_id);
-        $instamojo = new InstamojoController;
-        return $instamojo->pay($plan);
+        // $instamojo = new InstamojoController;
+
+        // return $instamojo->pay($plan);
+
+        $phonepe = new PhonepeController;
+
+        return redirect()->to($phonepe->payWithPhonePe($plan));
     }
 
     public function planPurchase(Request $request){
