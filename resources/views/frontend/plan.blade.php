@@ -86,10 +86,10 @@
                                     @endforeach
                                 </tr>
                                 <tr class="text-center">
-                                    <th scope="row">Top listing Property</th>
+                                    <th scope="row">Verified Inquiries</th>
                                     @foreach ($plans as $key=>$plan)
                                         <td>
-                                            @if($plan->top_listing == '1')
+                                            @if($plan->verified_enquiry == '1')
                                                 <i class="fas fa-check"></i>
                                             @else
                                                 <i class="fas fa-times"></i>
@@ -98,10 +98,10 @@
                                     @endforeach
                                 </tr>
                                 <tr class="text-center">
-                                    <th scope="row">Verified Inquiries</th>
+                                    <th scope="row">Top listing Property</th>
                                     @foreach ($plans as $key=>$plan)
                                         <td>
-                                            @if($plan->verified_enquiry == '1')
+                                            @if($plan->top_listing == '1')
                                                 <i class="fas fa-check"></i>
                                             @else
                                                 <i class="fas fa-times"></i>
