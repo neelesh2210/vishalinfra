@@ -63,7 +63,7 @@
     </div>
     <div class="dash_user_footer">
         <ul>
-            <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+            <li><a onclick="$('#logout-form').submit()" href="#"><i class="fa fa-power-off"></i> Logout</a></li>
         </ul>
     </div>
 </div>

@@ -105,7 +105,7 @@
                                 </form>
                                 <div class="login-block">
                                     Already registered?
-                                    <a href="{{ route('signin') }}" title="Login Now">Login Now</a>
+                                    <a href="{{ route('signin') }}" title="Login Now" style="font-weight: 600; color: #000;">Login Now</a>
                                 </div>
                             </div>
                         </div>

@@ -120,4 +120,14 @@ class PropertyController extends Controller
         }
     }
 
+    public function projectDetail($id){
+        try {
+            $project_detail = Project::where('is_active','1')->where('id',$id)->first();
+
+            return view('frontend.project_details',compact('project_detail'));
+        } catch (\Throwable $th) {
+            abort(404);
+        }
+    }
+
 }
