@@ -18,9 +18,9 @@
                     {{$plan->name}}
                 </td>
                 <td class="text-center">
-                    ₹ {{$plan->price}}
+                    <del>₹ {{$plan->price}}</del>
                     @if($plan->price != $plan->discounted_price)
-                        <del>₹ {{$plan->discounted_price}}</del>
+                        ₹ {{$plan->discounted_price}}
                     @endif
                 </td>
                 <td class="text-center">{{$plan->number_of_property}}</td>
