@@ -564,7 +564,7 @@
                                     <div class="col-md-4 p-0">
                                         <div class="_exlio_125">Sponsored</div>
                                         <div class="project">
-                                            <a href="#">
+                                            <a href="{{route('project.details',$project->id)}}">
                                                 <img src="{{ uploaded_asset($project->cover_image) }}" class="img-fluid mx-auto" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                                             </a>
                                         </div>
@@ -575,14 +575,14 @@
                                                 <div class="_card_list_flex">
                                                     <div class="_card_flex_01">
                                                         <h5>
-                                                            <a href="#" class="prt-link-detail">{{ $project->name }}</a>
+                                                            <a href="{{route('project.details',$project->id)}}" class="prt-link-detail">{{ $project->name }}</a>
                                                         </h5>
                                                     </div>
                                                 </div>
                                                 <div class="_card_list_flex">
                                                     <div class="_card_flex_01">
                                                         <h4 class="listing-name verified">
-                                                            <a href="#" class="prt-link-detail">{{ $project->address }}</a>
+                                                            <a href="{{route('project.details',$project->id)}}" class="prt-link-detail">{{ $project->address }}</a>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -600,7 +600,7 @@
                                                 </div>
                                             </div> --}}
                                             <div class="footer-flex">
-                                                <a href="#" class="prt-view">View
+                                                <a href="{{route('project.details',$project->id)}}" class="prt-view">View
                                                     <i class="fas fa-chevron-right pl-1"></i>
                                                 </a>
                                             </div>
