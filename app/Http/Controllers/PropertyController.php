@@ -86,7 +86,7 @@ class PropertyController extends Controller
         $search_selling_type = $request->property_selling_type;
         $city_banner = null;
 
-        $properties = PropertyManager::withoutTrash();
+        $properties = PropertyManager::withoutTrash()->where('is_status','1');
 
         if($search_property_type){
             $properties = $properties->where('properties_type',$search_property_type);
@@ -110,7 +110,7 @@ class PropertyController extends Controller
     public function detail($slug){
         try {
             $property_detail = PropertyManager::withoutTrash()->where('slug',$slug)->first();
-            $similer_properties = PropertyManager::withoutTrash()->where('id','!=',$property_detail->id)->where('properties_type',$property_detail->properties_type)->orderBy('created_at','desc')->take(10)->get();
+            $similer_properties = PropertyManager::withoutTrash()->where('id','!=',$property_detail->id)->where('properties_type',$property_detail->properties_type)->where('is_status','1')->orderBy('created_at','desc')->take(10)->get();
             $projects = Project::where('is_active','1')->take(10)->get();
             $city_banner = optional(Banner::where('from','product_detail')->where('city_id',$property_detail->city)->first())->image;
 

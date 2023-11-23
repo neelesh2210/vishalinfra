@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Auth;
 use App\Models\Enquiry;
 use Illuminate\Http\Request;
+use App\Models\Admin\Property;
+use Craftsys\Msg91\Facade\Msg91;
 use Illuminate\Support\Facades\Mail;
 
 class EnquiryController extends Controller
@@ -37,11 +39,19 @@ class EnquiryController extends Controller
         $enquiry->email = $request->email;
         $enquiry->save();
 
+        $property = Property::find($request->property_id);
+
         try {
             Mail::send('frontend.email.enquiry', ['user_name'=>$enquiry->name,'phone'=>$enquiry->phone,'email'=>$enquiry->email,'property_id'=>$enquiry->property_id], function($message) use($enquiry){
                 $message->to($enquiry->property->addedBy->email);
                 $message->subject('Enquiry for Property');
             });
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+
+        try {
+            Msg91::sms()->to('91'.$enquiry->property->addedBy->phone)->flow('655f0c87d6fc057dc844bfd2')->variable('user',$enquiry->property->addedBy->name)->variable('property',$property->name)->variable('customer', $request->name)->send();
         } catch (\Throwable $th) {
             //throw $th;
         }

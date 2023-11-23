@@ -8,6 +8,7 @@ use App\CPU\PhaseManager;
 use App\CPU\PropertyManager;
 use Illuminate\Http\Request;
 use App\Models\Admin\Property;
+use Craftsys\Msg91\Facade\Msg91;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 
@@ -292,12 +293,19 @@ class PropertyController extends Controller
         $property->is_status = $status;
         $property->save();
         if($status == '1'){
-            Mail::send('frontend.email.property_publishing', ['property'=>$property], function($message) use($property){
-                $message->to($property->addedBy->email);
-                $message->subject('Property Published Successful');
-            });
             try {
+                Mail::send('frontend.email.property_publishing', ['property'=>$property], function($message) use($property){
+                    $message->to($property->addedBy->email);
+                    $message->subject('Property Published Successful');
+                });
             } catch (\Throwable $th) {
+                //
+            }
+
+            try {
+                Msg91::sms()->to('91'.$property->addedBy->phone)->flow('655f0be3d6fc05194314e812')->variable('user',$property->addedBy->name)->variable('property',$property->name)->send();
+            } catch (\Throwable $th) {
+                //throw $th;
             }
         }
 

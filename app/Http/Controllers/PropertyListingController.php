@@ -8,6 +8,7 @@ use App\CPU\PropertyManager;
 use Illuminate\Http\Request;
 use App\Models\Admin\Project;
 use App\Models\Admin\Property;
+use Craftsys\Msg91\Facade\Msg91;
 use App\Models\Admin\PlanPurchase;
 
 class PropertyListingController extends Controller
@@ -137,6 +138,12 @@ class PropertyListingController extends Controller
         $property->remark=$request->remark;
         $property->is_status='0';
         $property->save();
+
+        Msg91::sms()->to('91'.Auth::guard('web')->user()->phone)->flow('655f0cfed6fc0535a924cdf3')->variable('user',Auth::guard('web')->user()->name)->variable('property',$property->name)->send();
+        try {
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
 
         return redirect()->route('user.property.index')->with('success','Property Added Successfully!');
     }
