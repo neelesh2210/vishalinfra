@@ -10,7 +10,7 @@
                             <div class="login-form">
                                 <h3>Sign Up</h3>
                                 <hr/>
-                                <form action="{{route('registartion')}}" method="POST">
+                                <form action="{{route('send.otp')}}" method="POST">
                                     @csrf
                                     <div class="form-group">
                                         <label>I am</label>
@@ -61,20 +61,6 @@
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label>Password</label>
-                                        <div class="input-group" id="show_hide_password">
-                                            <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password..." required>
-                                            <div class="input-group-append ">
-                                                <div class="input-group-text">
-                                                    <a href=""><i class="fas fa-low-vision" aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        @error('password')
-                                            <span class="text-danger">{{$message}}</span>
-                                        @enderror
-                                    </div>
-                                    <div class="form-group">
                                         <label>Phone</label>
                                         <div class="input-group">
                                             <input type="text" class="form-control" name="phone" value="{{old('phone')}}" placeholder="Enter Phone..." required>
@@ -85,6 +71,20 @@
                                             </div>
                                         </div>
                                         @error('phone')
+                                            <span class="text-danger">{{$message}}</span>
+                                        @enderror
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <div class="input-group" id="show_hide_password">
+                                            <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password..." required>
+                                            <div class="input-group-append ">
+                                                <div class="input-group-text">
+                                                    <a href=""><i class="fas fa-low-vision" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @error('password')
                                             <span class="text-danger">{{$message}}</span>
                                         @enderror
                                     </div>
@@ -100,7 +100,7 @@
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-md full-width pop-login">Register</button>
+                                        <button type="submit" class="btn btn-md full-width pop-login">Send OTP</button>
                                     </div>
                                 </form>
                                 <div class="login-block">

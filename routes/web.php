@@ -34,7 +34,9 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::view('email','frontend.email.welcome');
 //Register
 Route::get('signup',[RegisterController::class,'register'])->name('signup');
-Route::post('registration',[RegisterController::class,'registration'])->name('registartion');
+Route::post('send-otp',[RegisterController::class,'sendOtp'])->name('send.otp');
+Route::get('verify-otp',[RegisterController::class,'verifyOtp'])->name('verify.otp');
+Route::post('registration',[RegisterController::class,'registration'])->name('registration');
 Route::post('get-address',[RegisterController::class,'getAddress'])->name('get.address');
 
 //Email
