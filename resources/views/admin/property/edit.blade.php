@@ -1,5 +1,13 @@
 @extends('admin.layouts.app')
 @section('content')
+<meta name="csrf-token" content="{{ csrf_token() }}">
+<meta name="app-url" content="{{ getBaseURL() }}">
+<meta name="file-base-url" content="{{ getFileBaseURL() }}">
+<script>
+    var AIZ = AIZ || {};
+</script>
+<link rel="stylesheet" href="{{ asset('assets/image/css/vendors.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/image/css/aiz-core.css') }}">
 <style>
     .listForSelect {
         float: left;
@@ -329,6 +337,9 @@
                                                 </div>
                                             </div>
                                         </div>
+
+
+
                                         <div class="card"  id="property_feature_land"  style="display:none;">
                                             <div class="card-header">
                                                 <h5 class="mb-0 h6">Property Features</h5>
@@ -460,16 +471,16 @@
                                             </div>
                                         </div>
                                         <div class="card">
-                                            {{-- <div class="card-header">
+                                            <div class="card-header">
                                                 <h5 class="mb-0 h6">Property Images</h5>
-                                            </div> --}}
+                                            </div>
                                             <div class="p-2">
                                                 <div class="form-group row">
-                                                    {{-- <div class="col-lg-6">
+                                                    <div class="col-lg-6">
                                                         <label>Gallery Image</label>
                                                         <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="true">
                                                             <div class="form-control file-amount">Choose Gallery Image</div>
-                                                            <input type="hidden" name="gallery_image" class="selected-files">
+                                                            <input type="hidden" name="gallery_image" class="selected-files"  value="{{$property->photos}}">
                                                             <div class="input-group-prepend">
                                                                 <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
                                                             </div>
@@ -481,14 +492,14 @@
                                                             <label>Image</label>
                                                             <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="false">
                                                                 <div class="form-control file-amount">Choose Image</div>
-                                                                <input type="hidden" name="image" class="selected-files">
+                                                                <input type="hidden" name="image" class="selected-files"  value="{{$property->thumbnail_img}}">
                                                                 <div class="input-group-prepend">
                                                                     <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
                                                                 </div>
                                                             </div>
                                                             <div class="file-preview box sm"></div>
                                                         </div>
-                                                    </div> --}}
+                                                    </div>
                                                     <div class="col-md-12 pt-20">
                                                         <label class="col-from-label">Detail</label>
                                                         <textarea name="remark" rows="8" class="form-control">{!!$property->remark!!}</textarea>
@@ -581,4 +592,6 @@
         });
 
      </script>
+     <script src="{{ asset('assets/image/js/vendors.js') }}"></script>
+     <script src="{{ asset('assets/image/js/aiz-core.js') }}"></script>
 @endsection
