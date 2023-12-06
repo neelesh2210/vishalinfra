@@ -479,11 +479,11 @@
                                                     <div class="col-lg-6">
                                                         <label>Gallery Image</label>
                                                         <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="true">
-                                                            <div class="form-control file-amount">Choose Gallery Image</div>
+                                                            {{-- <div class="form-control file-amount">Choose Gallery Image</div> --}}
                                                             <input type="hidden" name="gallery_image" class="selected-files"  value="{{$property->photos}}">
-                                                            <div class="input-group-prepend">
+                                                            {{-- <div class="input-group-prepend">
                                                                 <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
-                                                            </div>
+                                                            </div> --}}
                                                         </div>
                                                         <div class="file-preview box sm"></div>
                                                     </div>
@@ -491,11 +491,11 @@
                                                         <div class="form-group">
                                                             <label>Image</label>
                                                             <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="false">
-                                                                <div class="form-control file-amount">Choose Image</div>
+                                                                {{-- <div class="form-control file-amount">Choose Image</div> --}}
                                                                 <input type="hidden" name="image" class="selected-files"  value="{{$property->thumbnail_img}}">
-                                                                <div class="input-group-prepend">
+                                                                {{-- <div class="input-group-prepend">
                                                                     <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
-                                                                </div>
+                                                                </div> --}}
                                                             </div>
                                                             <div class="file-preview box sm"></div>
                                                         </div>

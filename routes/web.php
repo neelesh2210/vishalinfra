@@ -79,6 +79,14 @@ Route::post('enquiry-store',[EnquiryController::class,'store'])->name('enquiry.s
 Route::get('phonepe/callback',[PhonepeController::class, 'callback'])->name('phonepe.callback');
 Route::get('phonepe/redirectUrl',[PhonepeController::class, 'redirectUrl'])->name('phonepe.redirectUrl');
 
+Route::any('aiz-uploader', [AizUploadController::class, 'show_uploader']);
+Route::post('aiz-uploader/upload', [AizUploadController::class, 'upload']);
+Route::get('aiz-uploader/get_uploaded_files', [AizUploadController::class, 'get_uploaded_files']);
+Route::delete('aiz-uploader/destroy/{id}', [AizUploadController::class, 'destroy']);
+Route::post('aiz-uploader/get_file_by_ids', [AizUploadController::class, 'get_preview_files']);
+Route::get('aiz-uploader/download/{id}', [AizUploadController::class, 'attachment_download'])->name('download_attachment');
+
+
 Route::group(['middleware'=>['auth:web']],function () {
 
     Route::group(['prefix'=>'user','as'=>'user.'],function () {
@@ -120,13 +128,7 @@ Route::group(['middleware'=>['auth:web']],function () {
 
     });
 
-    // Upload multiple Images
-    Route::any('aiz-uploader', [AizUploadController::class, 'show_uploader']);
-    Route::post('aiz-uploader/upload', [AizUploadController::class, 'upload']);
-    Route::get('aiz-uploader/get_uploaded_files', [AizUploadController::class, 'get_uploaded_files']);
-    Route::delete('aiz-uploader/destroy/{id}', [AizUploadController::class, 'destroy']);
-    Route::post('aiz-uploader/get_file_by_ids', [AizUploadController::class, 'get_preview_files']);
-    Route::get('aiz-uploader/download/{id}', [AizUploadController::class, 'attachment_download'])->name('download_attachment');
+
 
 });
 

@@ -147,7 +147,8 @@ class PropertyController extends Controller
 
         $property->transaction_type=$request->transaction_type;
         $property->prossession_status=$request->prossession_status;
-
+        $property->photos=$request->gallery_image;
+        $property->thumbnail_img=$request->image;
         $property->expected_price=$request->expected_price;
         $property->price=$request->price;
         $property->booking_amount=$request->booking_amount;
@@ -242,8 +243,8 @@ class PropertyController extends Controller
         $property->maintenance_charge=$request->maintenance_charge;
         $property->discounted_price=$request->discounted_price;
         $property->final_price=$request->final_price;
-        // $property->photos=$request->gallery_image;
-        // $property->thumbnail_img=$request->image;
+        $property->photos=$request->gallery_image;
+        $property->thumbnail_img=$request->image;
         $property->remark=$request->remark;
         $property->save();
 
