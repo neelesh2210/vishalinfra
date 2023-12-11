@@ -49,9 +49,9 @@ class EnquiryController extends Controller
         } catch (\Throwable $th) {
             //throw $th;
         }
-
+        $name_phone = explode(' ',$request->name)[0].'('.$request->phone.')';
+        Msg91::sms()->to('91'.$enquiry->property->addedBy->phone)->flow('655f0c87d6fc057dc844bfd2')->variable('user',$enquiry->property->addedBy->name)->variable('property',$property->name)->variable('customer', $name_phone)->send();
         try {
-            Msg91::sms()->to('91'.$enquiry->property->addedBy->phone)->flow('655f0c87d6fc057dc844bfd2')->variable('user',$enquiry->property->addedBy->name)->variable('property',$property->name)->variable('customer', $request->name)->send();
         } catch (\Throwable $th) {
             //throw $th;
         }
