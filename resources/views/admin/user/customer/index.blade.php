@@ -19,10 +19,22 @@
                     <div class="col-12">
                         <div class="card card-outline card-primary">
                             <div class="card-header">
-                                <div class="card-tools">
+                                <div class="">
                                     <form action="{{route('admin.customer.index')}}" id="search_form">
                                         <div class="row">
-                                            <div class="input-group input-group-sm mr-2" style="width: 200px;">
+                                            <div class="col-md-3"></div>
+                                            <div class="col-md-3">
+                                            <div class="form-group">
+                                                <select class="form-control" style="height:31px;padding:0rem 0.25rem;border-radius:3px;">
+                                                <option>Select Buyer/Builder/Customer</option>
+                                                <option>Buyer</option>
+                                                <option>Builder</option>
+                                                <option>Customer</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="input-group input-group-sm mr-2">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">
                                                         <i class="far fa-calendar-alt"></i>
@@ -30,7 +42,9 @@
                                                 </div>
                                                 <input type="text" name="search_date" value="{{$search_date}}" class="form-control float-right" id="reservation" placeholder="Select Daterange...">
                                             </div>
-                                            <div class="input-group input-group-sm" style="width: 200px;">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="input-group input-group-sm">
                                                 <input type="text" name="search_key" value="{{$search_key}}" class="form-control float-right" placeholder="Search" onkeyup="fillter()">
                                                 <div class="input-group-append">
                                                     <button type="submit" class="btn btn-default">
@@ -38,6 +52,7 @@
                                                     </button>
                                                 </div>
                                             </div>
+                                        </div>
                                         </div>
                                     </form>
                                 </div>
