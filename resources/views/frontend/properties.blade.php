@@ -1,5 +1,25 @@
 @extends('frontend.layouts.app')
 @section('content')
+<style>
+    .watermarked {
+  position: relative;
+}
+
+.watermarked:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 120px;
+    left: 150px;
+    background-image: url(http://127.0.0.1:8000/frontend/assets/img/logo.png);
+    background-size: 80px 30px;
+    background-position: 30px 30px;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+}
+</style>
     <div class="page-title" style="background:#f4f4f4 url({{ asset('frontend/assets/img/bg.jpg') }});" data-overlay="5">
         <div class="container">
             <div class="row">
@@ -118,9 +138,9 @@
                                             </div>
                                         @endif
                                         <div class="list-img-slide">
-                                            <div class="click">
+                                            <div class="click watermarked">
                                                     <a href="{{uploaded_asset($property->thumbnail_img)}}">
-                                                        <img src="{{uploaded_asset($property->thumbnail_img)}}" class="img-fluid mx-auto" alt="{{$property->name}}" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
+                                                        <img src="{{uploaded_asset($property->thumbnail_img)}}" class=" img-fluid mx-auto" alt="{{$property->name}}" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                                                     </a>
                                             </div>
                                         </div>
