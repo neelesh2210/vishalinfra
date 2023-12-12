@@ -1,5 +1,35 @@
 @extends('frontend.layouts.app')
 @section('content')
+<style>
+.watermarked:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 62%;
+    right: -57%;
+    background-image: url("{{asset('frontend/assets/img/watermark.png')}}");
+    background-size: 50px 20px;
+    background-position: 30px 30px;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+}
+.details-watermarked:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 85%;
+    right: -86%;
+    background-image: url("{{asset('frontend/assets/img/watermark.png')}}");
+    background-size: 50px 20px;
+    background-position: 30px 30px;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+}
+</style>
     @if($city_banner)
         <section class="m-0 p-0">
             <img src="{{asset('backend/img/banners/'.$city_banner)}}" onerror="this.onerror=null;this.src='{{ asset('frontend/assets/img/bg.jpg') }}'" class="img-fluid">
@@ -27,13 +57,13 @@
             <div class="row">
                 <div class="col-lg-8 col-md-12 col-sm-12">
                     <div class="col-lg-12 col-md-7 col-sm-12 pr-1 d-none d-sm-none d-md-none d-lg-none d-xl-block">
-                    <div class="gg_single_part left">
+                    <div class="gg_single_part left details-watermarked">
                         <a href="{{uploaded_asset($property_detail->thumbnail_img)}}" class="mfp-gallery">
                             <img src="{{uploaded_asset($property_detail->thumbnail_img)}}" class="wh-100" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                         </a>
                     </div>
                     @foreach (explode(',',$property_detail->photos) as $keyp=>$photo)
-                        <div class="gg_single_part-right min  mb-2">
+                        <div class="gg_single_part-right min  mb-2 watermarked">
                             <a href="{{uploaded_asset($photo)}}" class="mfp-gallery">
                                 <img src="{{uploaded_asset($photo)}}" class="img-fluid mx-auto" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                                 @if(count(explode(',',$property_detail->photos)) > 3)
