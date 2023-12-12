@@ -61,7 +61,7 @@
         <p><b>Showing {{($customers->currentpage()-1)*$customers->perpage()+1}} to {{(($customers->currentpage()-1)*$customers->perpage())+$customers->count()}} of {{$customers->total()}} Customers</b></p>
     </div>
     <div class="col-md-8 d-flex justify-content-end">
-        {!! $customers->appends(['search_date'=>$search_date,'search_key'=>$search_key])->links() !!}
+        {!! $customers->appends(['search_date'=>$search_date,'search_key'=>$search_key,'search_user_type'=>$search_user_type])->links() !!}
     </div>
 </div>
 

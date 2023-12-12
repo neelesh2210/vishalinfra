@@ -15,6 +15,7 @@ class UserController extends Controller
 
     public function index(Request $request){
         $search_date = $request->search_date;
+        $search_user_type = $request->search_user_type;
         $search_key = $request->search_key;
 
         $customers = User::orderBy('created_at','desc');
@@ -30,6 +31,9 @@ class UserController extends Controller
             $search_date=$dates[0].'-'.$dates[1];
             $customers = $customers->whereBetween('created_at', [$startDate, $endDate]);
         }
+        if($search_user_type){
+            $customers = $customers->where('type',$search_user_type);
+        }
         if($search_key){
             $customers = $customers->where(function($query) use ($search_key){
                 $query->where('name','like','%'.$search_key.'%')
@@ -39,9 +43,9 @@ class UserController extends Controller
         }
         $customers = $customers->paginate(15);
         if($request->ajax()){
-            return view('admin.user.customer.table',compact('customers','search_date','search_key'));
+            return view('admin.user.customer.table',compact('customers','search_date','search_key','search_user_type'));
         }
-        return view('admin.user.customer.index',compact('customers','search_date','search_key'),['page_title'=>'Customers']);
+        return view('admin.user.customer.index',compact('customers','search_date','search_key','search_user_type'),['page_title'=>'Customers']);
 
     }
 
