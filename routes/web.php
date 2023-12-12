@@ -12,6 +12,7 @@ use App\Http\Controllers\AizUploadController;
 use App\Http\Controllers\InstamojoController;
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\PropertyListingController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Frontend\Auth\LoginController;
 use App\Http\Controllers\Frontend\Auth\RegisterController;
 
@@ -48,8 +49,21 @@ Route::view('payout','email.payout')->name('payout');
 Route::get('signin',[LoginController::class,'signin'])->name('signin');
 Route::post('login',[LoginController::class,'login'])->name('login');
 
-Route::view('forgot-password', 'frontend.auth.forgot_password')->name('forgot_password');
-Route::view('reset-password', 'frontend.auth.reset_password')->name('reset_password');
+
+//Forgot Password
+Route::get('forgot-password',function(){
+    if(Auth::guard('web')->user()){
+        return redirect()->route('user.dashboard');
+    }else{
+        return view('frontend.auth.forgot_password');
+    }
+})->name('forgot.password');
+Route::post('send-mail-forgot-password',[ForgotPasswordController::class,'sendMailForgotPassword'])->name('send.mail.forgot.password');
+Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
+Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
+
+
+//Route::view('reset-password', 'frontend.auth.reset_password')->name('reset_password');
 
 //Static Route
 Route::view('about', 'frontend.about')->name('about');

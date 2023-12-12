@@ -53,7 +53,7 @@
                                     <div class="form-group">
                                         <div class="eltio_ol9 d-flex justify-content-center">
                                             <div class="eltio_k2">
-                                                <a href="{{ route('forgot_password') }}">Lost Your Password?</a>
+                                                <a href="{{ route('forgot.password') }}">Lost Your Password?</a>
                                             </div>
                                         </div>
                                     </div>

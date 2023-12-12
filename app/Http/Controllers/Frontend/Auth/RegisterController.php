@@ -54,7 +54,7 @@ class RegisterController extends Controller
             $user->save();
 
             try{
-                Mail::send('frontend.email.welcome', ['user_name'=>$user->name,'phone'=>$user->phone], function($message) use($user){
+                Mail::send('frontend.email.welcome', ['user_name'=>$user->name,'phone'=>$user->phone,'user_id'=>$user->user_name], function($message) use($user){
                     $message->to($user->email);
                     $message->subject('Registration Successful');
                 });

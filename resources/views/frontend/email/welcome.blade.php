@@ -8,7 +8,7 @@
                     taking the worry out of real estate
                 </p>
                 <p style="text-transform: uppercase; color:azure; text-align:center; font-size:30px; margin-top: 35px; font-family:Verdana, Geneva, Tahoma, sans-serif;">
-                    welcome home
+                    welcome {{$user_name}} Your User Id is {{$user_id}}
                 </p>
             </div>
             <div style="width: 800px; height: 450px; display: flex; flex-wrap: wrap; position: relative;">
