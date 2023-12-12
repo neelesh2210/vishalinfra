@@ -11,13 +11,13 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 120px;
-    left: 150px;
-    background-image: url(http://127.0.0.1:8000/frontend/assets/img/logo.png);
-    background-size: 80px 30px;
+    top: 70%;
+    right: -65%;
+    background-image: url(http://127.0.0.1:8000/frontend/assets/img/watermark.png);
+    background-size: 50px 20px;
     background-position: 30px 30px;
     background-repeat: no-repeat;
-    opacity: 0.7;
+    opacity: 0.3;
 }
 </style>
     <div class="page-title" style="background:#f4f4f4 url({{ asset('frontend/assets/img/bg.jpg') }});" data-overlay="5">
