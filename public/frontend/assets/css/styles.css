@@ -15509,7 +15509,7 @@ font-size: 12px;
       position: absolute;
       top: 70%;
       right: -65%;
-      background-image: url({{asset('frontend/assets/img/watermark.png')}});
+      background-image: url("{{asset('frontend/assets/img/watermark.png')}}");
       background-size: 50px 20px;
       background-position: 30px 30px;
       background-repeat: no-repeat;

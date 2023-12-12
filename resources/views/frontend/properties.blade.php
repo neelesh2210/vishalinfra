@@ -1,5 +1,21 @@
 @extends('frontend.layouts.app')
 @section('content')
+<style>
+      .watermarked:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 70%;
+      right: -65%;
+      background-image: url("{{asset('frontend/assets/img/watermark.png')}}");
+      background-size: 50px 20px;
+      background-position: 30px 30px;
+      background-repeat: no-repeat;
+      opacity: 0.3;
+  }
+</style>
     <div class="page-title" style="background:#f4f4f4 url({{ asset('frontend/assets/img/bg.jpg') }});" data-overlay="5">
         <div class="container">
             <div class="row">
