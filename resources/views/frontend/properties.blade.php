@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="page-sidebar p-0">
+                    {{-- <div class="page-sidebar p-0">
                             <!-- Find New Property -->
                             <div class="sidebar-widgets p-4 mb-0">
                                 <div class="form-group mb-0">
@@ -25,7 +25,7 @@
                                     </div>
                                 </div>
                             </div>
-                    </div>
+                    </div> --}}
 
                     <div class="p-0">
                         <div class="sider_blocks_wrap">
@@ -47,51 +47,58 @@
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-12 col-sm-12">
-                    <div class="row m-0">
-                        <div class="short_wraping mb-3">
-                            <div class="row align-items-center">
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group mb-1">
-                                        <div class="simple-input">
-                                            <select id="lacality" class="form-control">
-                                                <option value="">&nbsp;</option>
-                                                <option value="1">Varanasi</option>
-                                                <option value="2">Delhi</option>
-                                                <option value="3">Lucknow</option>
-                                                <option value="4">Hydrabad</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                    <form action="{{ route('properties') }}">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <div class="form-group">
+                                    <select id="location" name="location" class="form-control">
+                                        <option value="">Select City</option>
+                                        @foreach ($cities as $city)
+                                            <option value="{{ $city->id }}">{{ $city->name }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group mb-1">
-                                        <div class="simple-input">
-                                            <select id="ptype" class="form-control">
-                                                <option value="">&nbsp;</option>
-                                                <option value="1">Flat/Apartment</option>
-                                                <option value="2">Residential House</option>
-                                                <option value="3">Commercial Space</option>
-                                                <option value="4">Plot</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <div class="form-group">
+                                    <select id="ptypes" name="properties_type" class="form-control">
+                                        <option value="">All categories</option>
+                                        <option value="flat_apartment">Flat/ Apartment</option>
+                                        <option value="residental_house">Residential House</option>
+                                        <option value="commerical_space">Commercial Space</option>
+                                        <option value="plot">Plot</option>
+                                    </select>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group mb-1">
-                                        <div class="simple-input">
-                                            <select id="budget" class="form-control">
-                                                <option value="">&nbsp;</option>
-                                                <option value="1">₹2Lac to ₹10Lac</option>
-                                                <option value="1">₹2Lac to ₹10Lac</option>
-                                                <option value="1">₹2Lac to ₹10Lac</option>
-                                                <option value="1">₹2Lac to ₹10Lac</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-12 d-md-none d-lg-block">
+                                <div class="form-group">
+                                    <select id="price" name="price_range" class="form-control">
+                                        <option value="">Price Range</option>
+                                        <option value="40000,1000000">From 40,000 To 10l</option>
+                                        <option value="60000,2000000">From 60,000 To 20l</option>
+                                        <option value="70000,3000000">From 70,000 To 30l</option>
+                                        <option value="80000,4000000">From 80,000 To 40l</option>
+                                        <option value="90000,5000000">From 90,000 To 50l</option>
+                                        <option value="100000,6000000">From 1l To 60l</option>
+                                        <option value="200000,7000000">From 2l To 70l</option>
+                                        <option value="300000,8000000">From 3l To 80l</option>
+                                        <option value="400000,9000000">From 4l To 90l</option>
+                                        <option value="500000,10000000">From 5l To 1cr</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" name="search_key" value="{{$search_key}}" class="form-control" placeholder="Search Property">
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col-md-2 col-sm-12 small-padd">
+                                <div class="form-group none">
+                                    <button class="btn search-btn"><i class="fa fa-search"></i></button>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
                     <div class="row justify-content-center">
                         @if($city_banner)
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-3">

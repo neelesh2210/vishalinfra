@@ -14,12 +14,14 @@
                     <h1 class="big-header-capt mb-4">Welcome back! Let’s continue your search</h1>
                     <div class="simple-search-wrap mb-3">
                         <div class="hero_search-2">
-                            <div class="simple_tab_search">
-                                <div class="pk-input-group">
-                                    <input type="text" name="email" class="email form-control" placeholder="Search By City, Locality, Project">
-                                    <button class="pk-subscribe-submit" type="submit"><i class="fa fa-search"></i></button>
+                            <form action="{{ route('properties') }}">
+                                <div class="simple_tab_search">
+                                    <div class="pk-input-group">
+                                        <input type="text" name="search_key" class="email form-control" placeholder="Search By City, Locality, Project">
+                                        <button class="pk-subscribe-submit" type="submit"><i class="fa fa-search"></i></button>
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                     <div class="full_search_box nexio_search lightanic_search hero_search-radius modern">
@@ -61,6 +63,11 @@
                                                     <option value="70000,3000000">From 70,000 To 30l</option>
                                                     <option value="80000,4000000">From 80,000 To 40l</option>
                                                     <option value="90000,5000000">From 90,000 To 50l</option>
+                                                    <option value="100000,6000000">From 1l To 60l</option>
+                                                    <option value="200000,7000000">From 2l To 70l</option>
+                                                    <option value="300000,8000000">From 3l To 80l</option>
+                                                    <option value="400000,9000000">From 4l To 90l</option>
+                                                    <option value="500000,10000000">From 5l To 1cr</option>
                                                 </select>
                                             </div>
                                         </div>

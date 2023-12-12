@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\CPU\UserManager;
+use App\Models\Admin\City;
 use App\CPU\PropertyManager;
 use App\Models\Admin\Banner;
 use Illuminate\Http\Request;
@@ -84,6 +85,7 @@ class PropertyController extends Controller
         $search_location = $request->location;
         $search_price_range = $request->price_range;
         $search_selling_type = $request->property_selling_type;
+        $search_key = $request->search_key;
         $city_banner = null;
 
         $properties = PropertyManager::withoutTrash()->where('is_status','1');
@@ -101,10 +103,14 @@ class PropertyController extends Controller
         if($search_selling_type){
             $properties = $properties->where('property_selling_type',$search_selling_type);
         }
+        if($search_key){
+            $properties = $properties->where('name','LIKE','%'.$search_key.'%');
+        }
 
         $properties = $properties->orderBy('created_at','desc')->paginate(10);
+        $cities = City::whereHas('property')->withCount('property')->orderBy('property_count', 'desc')->take(5)->get();
 
-        return view('frontend.properties',compact('properties','city_banner'));
+        return view('frontend.properties',compact('properties','city_banner','search_property_type','search_location','search_price_range','search_selling_type','cities','search_key'));
     }
 
     public function detail($slug){
