@@ -12,7 +12,7 @@ class HomeController extends Controller
 {
 
     public function index(){
-        $projects = Project::where('is_active','1')->take(12)->get();
+        $projects = Project::where('is_active','1')->orderBy('id','desc')->take(12)->get();
         $properties = PropertyManager::withoutTrash()->where('is_status','1')->orderBy('created_at','desc')->take(12)->get();
         $featured_properties = PropertyManager::withoutTrash()->where('is_status','1')->where('is_featured','1')->take(12)->get();
         $most_demanded_properties = PropertyManager::withoutTrash()->where('is_status','1')->where('is_demanded','1')->take(12)->get();
