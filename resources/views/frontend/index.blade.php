@@ -199,7 +199,7 @@
                             <div class="single_items">
                                 <div class="property-listing property-2">
                                     <div class="listing-img-wrapper">
-                                        <div class="list-img-slide">
+                                        <div class="list-img-slide watermarked">
                                             <a href="{{ route('property.detail', $property->slug) }}">
                                                 <img src="{{ uploaded_asset($property->thumbnail_img) }}" class="img-fluid mx-auto" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                                             </a>
@@ -274,7 +274,7 @@
                             <div class="single_items">
                                 <div class="property-listing property-2">
                                     <div class="listing-img-wrapper">
-                                        <div class="list-img-slide">
+                                        <div class="list-img-slide watermarked">
                                             <a href="{{route('project.details',$project->id)}}">
                                                 <img src="{{ uploaded_asset($project->cover_image) }}" class="img-fluid mx-auto" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                                             </a>
@@ -364,7 +364,7 @@
                             <div class="single_items">
                                 <div class="property-listing property-2">
                                     <div class="listing-img-wrapper">
-                                        <div class="list-img-slide">
+                                        <div class="list-img-slide watermarked">
                                             <a href="{{ route('property.detail', $featured_property->slug) }}">
                                                 <img src="{{ uploaded_asset($featured_property->thumbnail_img) }}" class="img-fluid mx-auto" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                                             </a>
@@ -440,7 +440,7 @@
                             <div class="single_items">
                                 <div class="property-listing property-2">
                                     <div class="listing-img-wrapper">
-                                        <div class="list-img-slide">
+                                        <div class="list-img-slide watermarked">
                                             <a href="{{ route('property.detail', $most_demanded_property->slug) }}">
                                                 <img src="{{ uploaded_asset($most_demanded_property->thumbnail_img) }}" class="img-fluid mx-auto" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                                             </a>
@@ -506,7 +506,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="wpk_process">
-                        <div class="wpk_thumb">
+                        <div class="wpk_thumb watermarked">
                             <div class="wpk_thumb_figure">
                                 <img src="{{ asset('frontend/assets/img/account-cl.svg') }}" class="img-fluid" alt="" />
                             </div>
@@ -520,7 +520,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="wpk_process active">
                         <div class="wpk_thumb">
-                            <div class="wpk_thumb_figure">
+                            <div class="wpk_thumb_figure watermarked">
                                 <img src="{{ asset('frontend/assets/img/search.svg') }}" class="img-fluid" alt="" />
                             </div>
                         </div>
@@ -533,7 +533,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="wpk_process">
                         <div class="wpk_thumb">
-                            <div class="wpk_thumb_figure">
+                            <div class="wpk_thumb_figure watermarked">
                                 <img src="{{ asset('frontend/assets/img/booking-cl.svg') }}" class="img-fluid" alt="" />
                             </div>
                         </div>

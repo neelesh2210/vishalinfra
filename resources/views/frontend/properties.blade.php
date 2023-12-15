@@ -1,5 +1,21 @@
 @extends('frontend.layouts.app')
 @section('content')
+<style>
+      .watermarked:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 70%;
+      right: -65%;
+      background-image: url("{{asset('frontend/assets/img/watermark.png')}}");
+      background-size: 50px 20px;
+      background-position: 30px 30px;
+      background-repeat: no-repeat;
+      opacity: 0.3;
+  }
+</style>
     <div class="page-title" style="background:#f4f4f4 url({{ asset('frontend/assets/img/bg.jpg') }});" data-overlay="5">
         <div class="container">
             <div class="row">
@@ -49,7 +65,7 @@
                 <div class="col-lg-8 col-md-12 col-sm-12">
                     <form action="{{ route('properties') }}">
                         <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="col-lg-3 col-md-3 col-sm-12 pr-00">
                                 <div class="form-group">
                                     <select id="location" name="location" class="form-control">
                                         <option value="">Select City</option>
@@ -59,7 +75,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="col-lg-3 col-md-3 col-sm-12 pr-00">
                                 <div class="form-group">
                                     <select id="ptypes" name="properties_type" class="form-control">
                                         <option value="">All categories</option>
@@ -70,7 +86,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-sm-12 d-md-none d-lg-block">
+                            <div class="col-lg-3 col-sm-12 d-md-none d-lg-block pr-00">
                                 <div class="form-group">
                                     <select id="price" name="price_range" class="form-control">
                                         <option value="">Price Range</option>
@@ -87,16 +103,20 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-12">
+
+                            <div class="col-lg-3 col-md-3 col-sm-12">
+                            <div class="row">
+                            <div class="col-lg-10 col-md-10 col-sm-12 pr-00">
                                 <div class="form-group">
                                     <input type="text" name="search_key" value="{{$search_key}}" class="form-control" placeholder="Search Property">
                                 </div>
                             </div>
-                            <div class="col-lg-1 col-md-2 col-sm-12 small-padd">
-                                <div class="form-group none">
-                                    <button class="btn search-btn"><i class="fa fa-search"></i></button>
+                            <div class="col-lg-2 col-md-2 col-sm-12 small-padd">
+                                <div class="form-group none" >
+                                    <button class="btn search-btn" style="height: 49px;"><i class="fa fa-search"></i></button>
                                 </div>
                             </div>
+                        </div>
                         </div>
                     </form>
                     <div class="row justify-content-center">
@@ -118,9 +138,9 @@
                                             </div>
                                         @endif
                                         <div class="list-img-slide">
-                                            <div class="click">
+                                            <div class="click watermarked">
                                                     <a href="{{uploaded_asset($property->thumbnail_img)}}">
-                                                        <img src="{{uploaded_asset($property->thumbnail_img)}}" class="img-fluid mx-auto" alt="{{$property->name}}" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
+                                                        <img src="{{uploaded_asset($property->thumbnail_img)}}" class=" img-fluid mx-auto" alt="{{$property->name}}" onerror="this.onerror=null;this.src='{{asset('backend/img/property_default.jpg')}}';">
                                                     </a>
                                             </div>
                                         </div>
