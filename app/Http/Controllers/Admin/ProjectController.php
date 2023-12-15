@@ -16,7 +16,7 @@ class ProjectController extends Controller
         $search_type = $request->search_type;
         $search_key = $request->search_key;
 
-        $projects = Project::orderby('name','asc');
+        $projects = Project::orderby('id','desc');
 
         if($search_launch_date){
             $dates=explode('-',$search_launch_date);

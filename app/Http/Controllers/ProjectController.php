@@ -47,6 +47,7 @@ class ProjectController extends Controller
         $project->amenities = json_encode($request->amenity);
         $project->floor_plan = $request->floor_plan;
         $project->videos = json_encode($request->videos);
+        $project->is_Active = '0';
         $project->save();
 
         return redirect()->route('user.project.list')->with('success','Project Added Successfully!');
