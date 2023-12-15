@@ -186,7 +186,7 @@
                 </div>
                 <div class="col-3 col-md-3">
                     <div class="float-end mt-2">
-                        <a href="#" class="default-btn border-radius">
+                        <a href="{{route('properties')}}" class="default-btn border-radius">
                             View All <i class="fas fa-chevron-circle-right"></i>
                         </a>
                     </div>
