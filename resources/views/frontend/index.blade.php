@@ -330,7 +330,7 @@
                             <div class="location_wrap_content visible">
                                 <div class="location_wrap_content_first">
                                     <h4>{{ $city->name }}</h4>
-                                    <span>{{ $city->property_count }} Properties</span>
+                                    {{-- <span>{{ $city->property_count }} Properties</span> --}}
                                 </div>
                                 <div class="location_btn"><i class="fa fa-arrow-right"></i></div>
                             </div>
