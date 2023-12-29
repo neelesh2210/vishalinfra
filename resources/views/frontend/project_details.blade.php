@@ -28,7 +28,7 @@
                     <div class="property_info_detail_wrap_first">
                         <div class="pr-price-into">
                             <ul class="prs_lists mb-3">
-                                @foreach (json_decode($project_detail->amenities) as $amenity)
+                                @foreach (json_decode($project_detail->amenities??[]) as $amenity)
                                     <li><span class="bath"> {{$amenity}}</span></li>
                                 @endforeach
                             </ul>
