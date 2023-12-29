@@ -27,11 +27,13 @@
                 <div class="property_info_detail_wrap mb-4 mt-4">
                     <div class="property_info_detail_wrap_first">
                         <div class="pr-price-into">
-                            <ul class="prs_lists mb-3">
-                                @foreach (json_decode($project_detail->amenities??[]) as $amenity)
-                                    <li><span class="bath"> {{$amenity}}</span></li>
-                                @endforeach
-                            </ul>
+                            @if($project_detail->amenities)
+                                <ul class="prs_lists mb-3">
+                                    @foreach (json_decode($project_detail->amenities) as $amenity)
+                                        <li><span class="bath"> {{$amenity}}</span></li>
+                                    @endforeach
+                                </ul>
+                            @endif
                             <h2 class="mb-3">{{$project_detail->name}}</h2>
                             <span><i class="lni-map-marker"></i> {{$project_detail->address}} - {{$project_detail->pincode}}</span>
                         </div>
