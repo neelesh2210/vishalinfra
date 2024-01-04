@@ -58,9 +58,18 @@ Route::get('forgot-password',function(){
         return view('frontend.auth.forgot_password');
     }
 })->name('forgot.password');
+
+//Email Forget Password
 Route::post('send-mail-forgot-password',[ForgotPasswordController::class,'sendMailForgotPassword'])->name('send.mail.forgot.password');
 Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
 Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
+
+//Phone Forget Password
+Route::post('send-otp-forget-password',[ForgotPasswordController::class,'sendOtpForgetPassword'])->name('send.otp.forget.password');
+Route::get('verify-otp-forget-password',[ForgotPasswordController::class,'verifyOtpForgetPassword'])->name('verify.otp.forget.password');
+Route::post('validate-otp-forget-password',[ForgotPasswordController::class,'validateOtpForgetPassword'])->name('validate.otp.forget.password');
+Route::get('set-new-password',[ForgotPasswordController::class,'setNewPassword'])->name('set.new.password');
+Route::post('update-new-password',[ForgotPasswordController::class,'updateNewPassword'])->name('update.new.password');
 
 
 //Route::view('reset-password', 'frontend.auth.reset_password')->name('reset_password');

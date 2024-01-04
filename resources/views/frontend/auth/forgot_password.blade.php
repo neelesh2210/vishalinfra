@@ -12,24 +12,24 @@
                             <div class="login-form">
                                 <h3>Forgot Password</h3>
                                 <hr/>
-                                <form action="{{route('send.mail.forgot.password')}}" method="POST">
+                                <form action="{{route('send.otp.forget.password')}}" method="POST">
                                     @csrf
                                     @if($errors->has('error'))
                                         <div class="text-danger">{{ $errors->first('error') }}</div>
                                     @endif
                                     <div class="form-group">
-                                        <label>Email id</label>
+                                        <label>Phone Number</label>
                                         <div class="input-group">
-                                            <input type="email" name="email" class="form-control" placeholder="Email Id" />
+                                            <input type="number" name="phone" class="form-control" placeholder="Enter Phone Number..." />
                                             <div class="input-group-append ">
                                                 <div class="input-group-text">
-                                                    <i class="fas fa-envelope"></i>
+                                                    <i class="fas fa-phone"></i>
                                                 </div>
                                             </div>
                                         </div>
-                                        @if($errors->has('email'))
-                                            <div class="text-danger lbl_msg">{{ $errors->first('email') }}</div>
-                                        @endif
+                                        @error('phone')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-md full-width pop-login">Send Verification Code</button>
