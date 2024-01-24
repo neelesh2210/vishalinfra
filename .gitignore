@@ -5,6 +5,7 @@
 /storage
 /public/hot
 .env.backup
+composer.lock
 /node_modules
 npm-debug.log
 /storage/*.key
