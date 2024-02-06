@@ -10,6 +10,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\AizUploadController;
 use App\Http\Controllers\InstamojoController;
+use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\PropertyListingController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
@@ -151,7 +152,7 @@ Route::group(['middleware'=>['auth:web']],function () {
 
     });
 
-
+    Route::post('upload/image', [ImageUploadController::class, 'storeMedia'])->name('projects.storeMedia');
 
 });
 

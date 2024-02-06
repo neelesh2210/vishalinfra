@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="{{ asset('assets/image/css/vendors.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/image/css/aiz-core.css') }}">
     <script src="{{ asset('frontend/assets/js/jquery.min.js')}}"></script>
+    <link rel="stylesheet" href="{{ asset('assets/image/css/dropzone/dropzone.min.css') }}">
+    <script src="{{ asset('assets/image/js/dropzone/dropzone.min.js') }}"></script>
     <script>
         var AIZ = AIZ || {};
     </script>

@@ -125,7 +125,12 @@ class PropertyListingController extends Controller
         $property->maintenance_charge=$request->maintenance_charge;
         $property->discounted_price=$request->discounted_price;
         $property->final_price=$request->final_price;
-        $property->photos=$request->gallery_image;
+        if(is_array($request->gallery_image)){
+         $property->photos=implode(",",$request->gallery_image);
+        }else{
+            $property->photos='';
+           }
+
         $property->amenities=json_encode($request->amenity);
 
         $property->thumbnail_img=$request->image;
@@ -139,8 +144,8 @@ class PropertyListingController extends Controller
         $property->is_status='0';
         $property->save();
 
-        Msg91::sms()->to('91'.Auth::guard('web')->user()->phone)->flow('655f0cfed6fc0535a924cdf3')->variable('user',Auth::guard('web')->user()->name)->variable('property',$property->name)->send();
         try {
+            Msg91::sms()->to('91'.Auth::guard('web')->user()->phone)->flow('655f0cfed6fc0535a924cdf3')->variable('user',Auth::guard('web')->user()->name)->variable('property',$property->name)->send();
         } catch (\Throwable $th) {
             //throw $th;
         }
@@ -234,7 +239,11 @@ class PropertyListingController extends Controller
         $property->maintenance_charge=$request->maintenance_charge;
         $property->discounted_price=$request->discounted_price;
         $property->final_price=$request->final_price;
-        $property->photos=$request->gallery_image;
+        if(is_array($request->gallery_image)){
+            $property->photos=implode(",",$request->gallery_image);
+           }else{
+            $property->photos='';
+           }
         $property->amenities=json_encode($request->amenity);
 
         $property->thumbnail_img=$request->image;

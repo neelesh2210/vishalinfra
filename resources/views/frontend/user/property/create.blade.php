@@ -1,6 +1,9 @@
 @extends('frontend.layouts.app')
 @section('content')
 <style>
+     .file_input {
+            display: none;
+        }
     .listForSelect {
         float: left;
         border-radius: 3px;
@@ -550,7 +553,7 @@
                                     <div class="p-2">
                                         <div class="form-group row">
                                             <div class="col-lg-6">
-                                                <label>Gallery Image</label>
+                                                {{-- <label>Gallery Image</label>
                                                 <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="true">
                                                     <div class="form-control file-amount">Choose Gallery Image</div>
                                                     <input type="hidden" name="gallery_image" class="selected-files">
@@ -558,19 +561,24 @@
                                                         <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
                                                     </div>
                                                 </div>
-                                                <div class="file-preview box sm"></div>
+                                                <div class="file-preview box sm"></div> --}}
+
+
+                                                    <label for="document" class="form-label">Gallery Image</label>
+                                                    <div class="needsclick dropzone" id="document-dropzone">
+
+                                                    </div>
+
+
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label>Thumbnail Image (Main Image)</label>
-                                                    <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="false">
-                                                        <div class="form-control file-amount">Choose Thumbnail Image</div>
-                                                        <input type="hidden" name="image" class="selected-files">
-                                                        <div class="input-group-prepend">
-                                                            <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
-                                                        </div>
+                                                    <div class="form-group">
+                                                        <label for="document" class="form-label">Thumbnail Image</label>
+                                                    <div class="needsclick dropzone " id="documentThumbnail-dropzone">
+
                                                     </div>
-                                                    <div class="file-preview box sm"></div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
@@ -709,12 +717,7 @@
             $('#gallery_image').empty();
         }
 
-        img_input1.onchange = evt => {
-            const [file] = img_input1.files
-            if (file) {
-                img1.src = URL.createObjectURL(file)
-            }
-        }
+
 
         function offerDivShow(){
             if($('#offer').is(":checked")){
@@ -725,4 +728,58 @@
         }
 
     </script>
+
+<script>
+    var uploadedDocumentMap = {}
+    Dropzone.options.documentDropzone = {
+        dictDefaultMessage: "Select File to Upload",
+        url: '{{ route('projects.storeMedia') }}',
+        maxFilesize: 2, // MB
+        addRemoveLinks: true,
+        headers: {
+            'X-CSRF-TOKEN': "{{ csrf_token() }}"
+        },
+        success: function(file, response) {
+            $('form').append('<input type="hidden" name="gallery_image[]" value="' + response.name + '">')
+            uploadedDocumentMap[file.name] = response.name
+        },
+        removedfile: function(file) {
+            file.previewElement.remove();
+            if (typeof file.name !== 'undefined') {
+                name = file.name
+            } else {
+                name = uploadedDocumentMap[file.name]
+            }
+            $('form').find('input[name="gallery_image[]"][value="' + name + '"]').remove();
+        },
+
+    }
+
+    var uploadedDocumentThumbnailMap = {}
+    Dropzone.options.documentThumbnailDropzone = {
+        url: '{{ route('projects.storeMedia') }}',
+        maxFiles: 1,
+        maxFilesize: 2, // MB
+        addRemoveLinks: true,
+        headers: {
+            'X-CSRF-TOKEN': "{{ csrf_token() }}"
+        },
+        success: function(file, response) {
+            $('form').append('<input type="hidden" name="image" value="' + response.name + '">')
+            uploadedDocumentThumbnailMap[file.name] = response.name
+            this.disable();
+        },
+        removedfile: function(file) {
+            file.previewElement.remove();
+            if (typeof file.name !== 'undefined') {
+                name = file.name
+            } else {
+                name = uploadedDocumentThumbnailMap[file.name]
+            }
+            $('form').find('input[name="image"][value="' + name + '"]').remove();
+            this.enable();
+        },
+
+    }
+</script>
 @endsection
