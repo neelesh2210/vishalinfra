@@ -152,7 +152,7 @@ Route::group(['middleware'=>['auth:web']],function () {
 
     });
 
-    Route::post('upload/image', [ImageUploadController::class, 'storeMedia'])->name('projects.storeMedia');
+    Route::post('store-media', [ImageUploadController::class, 'storeMedia'])->name('store.media');
 
 });
 
