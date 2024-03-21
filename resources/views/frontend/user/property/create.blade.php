@@ -169,7 +169,7 @@
                                             <div class="col-md-4 form_div">
                                                 <div class="form-group">
                                                     <label>Property Name <span class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="name" placeholder="Property Name..." required>
+                                                    <input type="text" class="form-control" id="property_name" name="name" placeholder="Property Name..." required>
                                                 </div>
                                             </div>
                                             <div class="col-md-4 form_div">
@@ -734,6 +734,12 @@
         Dropzone.options.documentDropzone = {
             dictDefaultMessage: "Select File to Upload",
             url: '{{ route('store.media') }}',
+            init: function() {
+                this.on("sending", function(file, xhr, formData) {
+                    var property_name = $('#property_name').val();
+                    formData.append("property_name", property_name);
+                });
+            },
             maxFilesize: 2, // MB
             addRemoveLinks: true,
             headers: {
@@ -757,6 +763,12 @@
         var uploadedDocumentThumbnailMap = {}
         Dropzone.options.documentThumbnailDropzone = {
             url: '{{ route('store.media') }}',
+            init: function() {
+                this.on("sending", function(file, xhr, formData) {
+                    var property_name = $('#property_name').val();
+                    formData.append("property_name", property_name);
+                });
+            },
             maxFiles: 1,
             maxFilesize: 2, // MB
             addRemoveLinks: true,

@@ -29,9 +29,9 @@
                                 <form action="{{route('login')}}" method="POST">
                                     @csrf
                                     <div class="form-group">
-                                        <label>User Name</label>
+                                        <label>User Name/Email/Phone</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="User Name" name="user_name" required>
+                                            <input type="text" class="form-control" placeholder="User Name/Email/Phone" name="user_name" required>
                                             <div class="input-group-append ">
                                                 <div class="input-group-text">
                                                     <i class="fas fa-user"></i>

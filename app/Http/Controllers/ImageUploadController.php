@@ -72,7 +72,11 @@ class ImageUploadController extends Controller
             }
 
             $upload->user_id = Auth::user()->id;
-            $fileName = Str::uuid() . '.' . $request->file($name)->getClientOriginalName();
+            if($request->property_name){
+                $fileName = $request->property_name.rand(111111,999999).'.'.$request->file($name)->getClientOriginalExtension();
+            }else{
+                $fileName = Str::uuid() . '.' . $request->file($name)->getClientOriginalName();
+            }
             $upload->extension = $request->file($name)->getClientOriginalExtension();
             if (isset($type[$upload->extension])) {
                 $upload->type = $type[$upload->extension];

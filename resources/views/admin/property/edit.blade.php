@@ -478,27 +478,45 @@
                                                 <div class="form-group row">
                                                     <div class="col-lg-6">
                                                         <label>Gallery Image</label>
-                                                        <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="true">
-                                                            {{-- <div class="form-control file-amount">Choose Gallery Image</div> --}}
+                                                        {{-- <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="true">
+                                                            <div class="form-control file-amount">Choose Gallery Image</div>
                                                             <input type="hidden" name="gallery_image" class="selected-files"  value="{{$property->photos}}">
-                                                            {{-- <div class="input-group-prepend">
+                                                            <div class="input-group-prepend">
                                                                 <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
-                                                            </div> --}}
+                                                            </div>
                                                         </div>
-                                                        <div class="file-preview box sm"></div>
+                                                        <div class="file-preview box sm"></div> --}}
+                                                        <div class="needsclick dropzone " id="document-dropzone">
+
+                                                        </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label>Image</label>
-                                                            <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="false">
-                                                                {{-- <div class="form-control file-amount">Choose Image</div> --}}
+                                                            {{-- <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="false">
+                                                                <div class="form-control file-amount">Choose Image</div>
                                                                 <input type="hidden" name="image" class="selected-files"  value="{{$property->thumbnail_img}}">
-                                                                {{-- <div class="input-group-prepend">
+                                                                <div class="input-group-prepend">
                                                                     <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
-                                                                </div> --}}
+                                                                </div>
                                                             </div>
-                                                            <div class="file-preview box sm"></div>
+                                                            <div class="file-preview box sm"></div> --}}
+                                                            <div class="needsclick dropzone " id="documentThumbnail-dropzone">
+
+                                                            </div>
                                                         </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="col-from-label">Meta Title</label>
+                                                        <input type="text" class="form-control" name="meta_title" id="meta_title" value="{{$property->meta_title}}" placeholder="Meta Title...">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="col-from-label">Meta Keyword</label>
+                                                        <input type="text" class="form-control" name="meta_keyword" id="meta_keyword" value="{{$property->meta_keyword}}" placeholder="Meta Title...">
+                                                    </div>
+                                                    <div class="col-md-12 pt-20">
+                                                        <label class="col-from-label">Meta Description</label>
+                                                        <textarea name="meta_description" class="form-control">{{$property->meta_description}}</textarea>
                                                     </div>
                                                     <div class="col-md-12 pt-20">
                                                         <label class="col-from-label">Detail</label>
@@ -592,6 +610,103 @@
         });
 
      </script>
-     <script src="{{ asset('assets/image/js/vendors.js') }}"></script>
-     <script src="{{ asset('assets/image/js/aiz-core.js') }}"></script>
+
+     <script>
+        var uploadedDocumentMap = {}
+        Dropzone.options.documentDropzone = {
+            url: '{{ route('store.media') }}',
+            maxFilesize: 2, // MB
+            addRemoveLinks: true,
+            headers: {
+                'X-CSRF-TOKEN': "{{ csrf_token() }}"
+            },
+            success: function(file, response) {
+                $('form').append('<input type="hidden" name="gallery_image[]" value="' + response.name + '">')
+                uploadedDocumentMap[file.name] = response.name
+            },
+            removedfile: function(file) {
+                file.previewElement.remove();
+                if (typeof file.name !== 'undefined') {
+                    name = file.name
+                } else {
+                    name = uploadedDocumentMap[file.name]
+                }
+                $('form').find('input[name="gallery_image[]"][value="' + name + '"]').remove();
+            },
+            init: function() {
+                @if (isset($property) && $property->photos)
+                    @foreach (explode(",",$property->photos) as $media)
+                        var existingFileUrl = "{{ uploaded_asset($media) }}";
+                        var mockFile = {
+                            name: "{{ $media }}",
+                            size: "30.3",
+                            accepted: true
+                        };
+
+                        // Add the mock file to the Dropzone
+                        this.emit("addedfile", mockFile);
+                        this.emit("thumbnail", mockFile, existingFileUrl);
+                        this.emit("complete", mockFile);
+
+                        // Disable further file uploads
+
+                        // Customize the look and behavior of the thumbnail
+                        this.options.thumbnail.call(this, mockFile, existingFileUrl);
+                        $('form').append('<input type="hidden" name="gallery_image[]" value="{{ $media }}">');
+                    @endforeach
+                @endif
+            }
+        }
+
+        var uploadedDocumentThumbnailMap = {}
+        Dropzone.options.documentThumbnailDropzone = {
+            url: '{{ route('store.media') }}',
+            maxFiles: 1,
+            maxFilesize: 2, // MB
+            addRemoveLinks: true,
+            headers: {
+                'X-CSRF-TOKEN': "{{ csrf_token() }}"
+            },
+            success: function(file, response) {
+                $('form').append('<input type="hidden" name="image" value="' + response.name + '">')
+                uploadedDocumentThumbnailMap[file.name] = response.name
+                this.disable();
+            },
+            removedfile: function(file) {
+                file.previewElement.remove();
+                if (typeof file.name !== 'undefined') {
+                    name = file.name
+                } else {
+                    name = uploadedDocumentThumbnailMap[file.name]
+                }
+                $('form').find('input[name="image"][value="' + name + '"]').remove();
+                this.enable();
+            },
+            init: function() {
+                @if (isset($property) && $property->thumbnail_img)
+
+                        var existingFileUrl = "{{ uploaded_asset($property->thumbnail_img) }}";
+                        var mockFile = {
+                            name: "{{ $property->thumbnail_img }}",
+                            size: "30.3",
+                            accepted: true
+                        };
+
+                        // Add the mock file to the Dropzone
+                        this.emit("addedfile", mockFile);
+                        this.emit("thumbnail", mockFile, existingFileUrl);
+                        this.emit("complete", mockFile);
+
+                        // Disable further file uploads
+
+                        // Customize the look and behavior of the thumbnail
+                        this.options.thumbnail.call(this, mockFile, existingFileUrl);
+                        $('form').append('<input type="hidden" name="image" value="{{ $property->thumbnail_img }}">');
+                        this.disable();
+
+                @endif
+            }
+        }
+
+    </script>
 @endsection

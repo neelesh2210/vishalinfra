@@ -120,7 +120,7 @@ class PropertyController extends Controller
             $projects = Project::where('is_active','1')->take(10)->get();
             $city_banner = optional(Banner::where('from','product_detail')->where('city_id',$property_detail->city)->first())->image;
 
-            return view('frontend.properties_details',compact('property_detail','similer_properties','projects','city_banner'));
+            return view('frontend.properties_details',compact('property_detail','similer_properties','projects','city_banner'),['page_title'=>$property_detail->name]);
         } catch (\Throwable $th) {
             abort(404);
         }

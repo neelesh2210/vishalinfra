@@ -126,10 +126,10 @@ class PropertyListingController extends Controller
         $property->discounted_price=$request->discounted_price;
         $property->final_price=$request->final_price;
         if(is_array($request->gallery_image)){
-         $property->photos=implode(",",$request->gallery_image);
+            $property->photos=implode(",",$request->gallery_image);
         }else{
             $property->photos='';
-           }
+        }
 
         $property->amenities=json_encode($request->amenity);
 
@@ -141,6 +141,7 @@ class PropertyListingController extends Controller
             $property->offer = null;
         }
         $property->remark=$request->remark;
+        $property->meta_title = $request->name;
         $property->is_status='0';
         $property->save();
 
@@ -241,9 +242,9 @@ class PropertyListingController extends Controller
         $property->final_price=$request->final_price;
         if(is_array($request->gallery_image)){
             $property->photos=implode(",",$request->gallery_image);
-           }else{
+        }else{
             $property->photos='';
-           }
+        }
         $property->amenities=json_encode($request->amenity);
 
         $property->thumbnail_img=$request->image;
@@ -253,6 +254,7 @@ class PropertyListingController extends Controller
             $property->offer = null;
         }
         $property->remark=$request->remark;
+        $property->meta_title = $property->meta_title??$request->name;
         $property->save();
 
         return redirect()->route('user.property.index')->with('success','Property Updated Successfully!');

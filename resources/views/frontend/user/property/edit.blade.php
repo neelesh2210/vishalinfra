@@ -495,9 +495,9 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="document" class="form-label">Thumbnail Image</label>
-                                                <div class="needsclick dropzone " id="documentThumbnail-dropzone">
+                                                    <div class="needsclick dropzone " id="documentThumbnail-dropzone">
 
-                                                </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">

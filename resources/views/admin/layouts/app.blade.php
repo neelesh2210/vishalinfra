@@ -31,8 +31,15 @@
     <link rel="stylesheet" href="{{asset('backend/css/select2-bootstrap4.min.css')}}">
     <!-- SweetAlert2 -->
     <link rel="stylesheet" href="{{asset('backend/css/bootstrap-4.min.css')}}">
+
+    {{-- Dropzone CSS --}}
+    <link rel="stylesheet" href="{{ asset('assets/image/css/dropzone/dropzone.min.css') }}">
+
     <!-- jQuery -->
     <script src="{{ asset('backend/js/jquery.min.js') }}"></script>
+
+    {{-- Dropzone JS --}}
+    <script src="{{ asset('assets/image/js/dropzone/dropzone.min.js') }}"></script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
     <style>
