@@ -135,7 +135,7 @@
                                                     <div class="col-md-3 form_div">
                                                         <div class="form-group">
                                                             <label>Property Name <span class="text-danger">*</span></label>
-                                                            <input type="text" class="form-control" name="name" value="{{$property->name}}" placeholder="Property Name..." required>
+                                                            <input type="text" class="form-control" name="name" id="property_name" value="{{$property->name}}" placeholder="Property Name..." required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3 form_div">
@@ -611,10 +611,13 @@
 
      </script>
 
-     <script>
+    <script>
         var uploadedDocumentMap = {}
         Dropzone.options.documentDropzone = {
             url: '{{ route('admin.store.media') }}',
+            params: {
+                'property_name':$('#property_name').val()
+            },
             maxFilesize: 2, // MB
             addRemoveLinks: true,
             headers: {
@@ -661,6 +664,9 @@
         var uploadedDocumentThumbnailMap = {}
         Dropzone.options.documentThumbnailDropzone = {
             url: '{{ route('admin.store.media') }}',
+            params: {
+                'property_name':$('#property_name').val()
+            },
             maxFiles: 1,
             maxFilesize: 2, // MB
             addRemoveLinks: true,
