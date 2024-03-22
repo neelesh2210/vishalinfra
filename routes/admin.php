@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\CityController;
 use App\Http\Controllers\Admin\PlanController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\StateController;
+use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\AmenityController;
@@ -91,6 +92,9 @@ Route::group(['middleware'=>'auth:admin','as'=>'admin.'],function () {
 
     //Amenity
     Route::resource('amenities', AmenityController::class);
+
+    //Store Media
+    Route::post('store-media', [ImageUploadController::class, 'storeMedia'])->name('store.media');
 
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 });

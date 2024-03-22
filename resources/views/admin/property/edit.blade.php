@@ -614,7 +614,7 @@
      <script>
         var uploadedDocumentMap = {}
         Dropzone.options.documentDropzone = {
-            url: '{{ route('store.media') }}',
+            url: '{{ route('admin.store.media') }}',
             maxFilesize: 2, // MB
             addRemoveLinks: true,
             headers: {
@@ -660,7 +660,7 @@
 
         var uploadedDocumentThumbnailMap = {}
         Dropzone.options.documentThumbnailDropzone = {
-            url: '{{ route('store.media') }}',
+            url: '{{ route('admin.store.media') }}',
             maxFiles: 1,
             maxFilesize: 2, // MB
             addRemoveLinks: true,
