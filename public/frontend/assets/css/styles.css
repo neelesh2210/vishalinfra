@@ -15515,3 +15515,22 @@ font-size: 12px;
       background-repeat: no-repeat;
       opacity: 0.3;
   }
+    .signup__link{
+        color: #fff;
+        background: #f60;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-weight: 600;
+    }
+.signup__link:hover{
+  color:#fff;
+}
+.cardss{
+    padding: 7px 20px;
+    background: #f60;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+.resp_log_caption .abb label {
+    color: #fff;
+}

@@ -12,7 +12,7 @@
                                 <hr/>
                                 <form action="{{route('send.otp')}}" method="POST">
                                     @csrf
-                                    <div class="form-group">
+                                    <div class="cardss abb">
                                         <label>I am</label>
                                         <div class="input-group">
                                             <div class="form-check form-check-inline">
@@ -105,7 +105,7 @@
                                 </form>
                                 <div class="login-block">
                                     Already registered?
-                                    <a href="{{ route('signin') }}" title="Login Now" style="font-weight: 600; color: #000;">Login Now</a>
+                                    <a href="{{ route('signin') }}" title="Login Now" class="signup__link">Login Now</a>
                                 </div>
                             </div>
                         </div>
