@@ -111,7 +111,8 @@
                                         <tr>
                                             <th class="text-center">#</th>
                                             <th class="text-center">User Type</th>
-                                            <th class="text-center">Property</th>
+                                            <th class="text-center">From</th>
+                                            <th class="text-center">Property/Project</th>
                                             <th class="text-center">Name</th>
                                             <th class="text-center">Phone</th>
                                             <th class="text-center">Email</th>
@@ -129,10 +130,18 @@
                                                         Guest User
                                                     @endif
                                                 </td>
-                                                <td>
-                                                    <a href="{{route('property.detail',$enquiry->property->slug)}}" target="_blank"><b>Property Number:</b> {{$enquiry->property->property_number}}<i class="fas fa-external-link-alt"></i> </a> <br>
-                                                    <b>Owner Name:</b> {{$enquiry->property->addedBy->name}} ({{$enquiry->property->addedBy->user_name}})
-                                                </td>
+                                                <td class="text-center">{{ucwords($enquiry->type)}}</td>
+                                                @if($enquiry->type == 'property')
+                                                    <td>
+                                                        <a href="{{route('property.detail',$enquiry->property->slug)}}" target="_blank"><b>Property Number:</b> {{$enquiry->property->property_number}}<i class="fas fa-external-link-alt"></i> </a> <br>
+                                                        <b>Owner Name:</b> {{$enquiry->property->addedBy->name}} ({{$enquiry->property->addedBy->user_name}})
+                                                    </td>
+                                                @else
+                                                    <td>
+                                                        <a href="{{route('project.details',$enquiry->project->id)}}" target="_blank"><b>Project Name:</b> {{$enquiry->project->name}}<i class="fas fa-external-link-alt"></i> </a> <br>
+                                                        <b>Owner Name:</b> {{$enquiry->project->user->name}} ({{$enquiry->project->user->user_name}})
+                                                    </td>
+                                                @endif
                                                 <td class="text-center">{{$enquiry->name}}</td>
                                                 <td class="text-center">{{$enquiry->phone}}</td>
                                                 <td class="text-center">{{$enquiry->email}}</td>

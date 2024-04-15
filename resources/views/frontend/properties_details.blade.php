@@ -200,6 +200,7 @@
                                     </div>
                                     @endif
                                     <form action="{{route('enquiry.store')}}" method="POST">
+                                        <input type="hidden" name="type" value="property" required>
                                         @csrf
                                         <div class="row">
                                             <input type="hidden" name="property_id" value="{{$property_detail->id}}">
@@ -228,6 +229,15 @@
                                                 <div class="form-group">
                                                     <label>Email ID</label>
                                                     <input type="email" class="form-control light" name="email" placeholder="Enter Email">
+                                                    @error('email')
+                                                        <span class="text-danger">{{$message}}</span>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                <div class="form-group">
+                                                    <label>Message</label>
+                                                    <textarea name="message" id="message" class="form-control light" placeholder="Enter Message..."></textarea>
                                                     @error('email')
                                                         <span class="text-danger">{{$message}}</span>
                                                     @enderror

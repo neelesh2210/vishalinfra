@@ -28,11 +28,18 @@ class ProjectController extends Controller
     }
 
     public function store(Request $request){
+        $this->validate($request,[
+            'total_unit'=>'nullable|integer'
+        ]);
         $project = new Project;
         $project->user_id = Auth::guard('web')->user()->id;
         $project->name = $request->name;
         $project->cover_image = $request->cover_image;
-        $project->gallery_image = $request->gallery_image;
+        if(is_array($request->gallery_image)){
+            $project->gallery_image=implode(",",$request->gallery_image);
+        }else{
+            $project->gallery_image='';
+        }
         $project->address = $request->address;
         $project->pincode = $request->pincode;
         $project->about = $request->about;
@@ -60,10 +67,18 @@ class ProjectController extends Controller
     }
 
     public function update(Request $request,$id){
+        $this->validate($request,[
+            'total_unit'=>'nullable|integer'
+        ]);
+
         $project = Project::find(decrypt($id));
         $project->name = $request->name;
         $project->cover_image = $request->cover_image;
-        $project->gallery_image = $request->gallery_image;
+        if(is_array($request->gallery_image)){
+            $project->gallery_image=implode(",",$request->gallery_image);
+        }else{
+            $project->gallery_image='';
+        }
         $project->address = $request->address;
         $project->pincode = $request->pincode;
         $project->about = $request->about;

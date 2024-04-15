@@ -11,7 +11,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-9 col-lg-9 col-md-12">
-                    <h1 class="big-header-capt mb-4">Welcome back! Let’s continue your search</h1>
+                    <h1 class="big-header-capt mb-4">Unlock your dream home with us!</h1>
                     <div class="simple-search-wrap mb-3">
                         <div class="hero_search-2">
                             <form action="{{ route('properties') }}">

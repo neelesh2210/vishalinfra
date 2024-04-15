@@ -22,7 +22,9 @@ class EnquiryController extends Controller
 
     public function store(Request $request){
         $this->validate($request,[
-            'property_id'=>'required',
+            'type'=>'required|in:property,project',
+            'property_id'=>'nullable|required_if:type,property',
+            'project_id'=>'nullable|required_if:type,project',
             'name'=>'required',
             'phone'=>'required',
             'email'=>'required',
@@ -33,10 +35,16 @@ class EnquiryController extends Controller
         if(Auth::check()){
             $enquiry->user_id = Auth::guard('web')->user()->id;
         }
-        $enquiry->property_id = $request->property_id;
+        if($request->type == 'property'){
+            $enquiry->property_id = $request->property_id;
+        }elseif($request->type == 'project'){
+            $enquiry->property_id = $request->project_id;
+        }
+        $enquiry->type = $request->type;
         $enquiry->name = $request->name;
         $enquiry->phone = $request->phone;
         $enquiry->email = $request->email;
+        $enquiry->message = $request->message;
         $enquiry->save();
 
         $property = Property::find($request->property_id);
@@ -50,8 +58,8 @@ class EnquiryController extends Controller
             //throw $th;
         }
         $name_phone = explode(' ',$request->name)[0].'('.$request->phone.')';
-        Msg91::sms()->to('91'.$enquiry->property->addedBy->phone)->flow('655f0c87d6fc057dc844bfd2')->variable('user',$enquiry->property->addedBy->name)->variable('property',$property->name)->variable('customer', $name_phone)->send();
         try {
+            Msg91::sms()->to('91'.$enquiry->property->addedBy->phone)->flow('655f0c87d6fc057dc844bfd2')->variable('user',$enquiry->property->addedBy->name)->variable('property',$property->name)->variable('customer', $name_phone)->send();
         } catch (\Throwable $th) {
             //throw $th;
         }

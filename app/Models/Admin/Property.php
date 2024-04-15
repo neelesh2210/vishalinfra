@@ -4,6 +4,7 @@ namespace App\Models\Admin;
 
 use App\Models\User;
 use App\Models\BookProperty;
+use App\Models\Admin\Project;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -71,5 +72,9 @@ class Property extends Model
 
     public function addedBy(){
         return $this->belongsTo(User::class,'added_by');
+    }
+
+    public function project(){
+        return $this->belongsTo(Project::class,'project_id');
     }
 }

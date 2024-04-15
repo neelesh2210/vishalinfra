@@ -20,7 +20,7 @@
                                                     <div class="form-row">
                                                         <div class="form-group col-md-12">
                                                             <label>Project Name</label>
-                                                            <input type="text" class="form-control" name="name" placeholder="Enter Project Name..." required>
+                                                            <input type="text" class="form-control" name="name" id="project_name" placeholder="Enter Project Name..." required>
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label>Status</label>
@@ -55,12 +55,16 @@
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label>Total Units</label>
-                                                            <select class="form-control" name="total_unit">
+                                                            <input type="number" step="0.1" class="form-control" name="total_unit" placeholder="Enter Total Unit...">
+                                                            @error('total_unit')
+                                                                <span class="text-dange">{{$message}}</span>
+                                                            @enderror
+                                                            {{-- <select class="form-control" name="total_unit">
                                                                 <option value="">Select Total Unit...</option>
                                                                 @for ($i=1;$i<=100;$i++)
                                                                     <option value="{{$i}}">{{$i}}</option>
                                                                 @endfor
-                                                            </select>
+                                                            </select> --}}
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label>Occupancy Certificate</label>
@@ -114,8 +118,8 @@
                                                 <hr />
                                                 <div class="frm_submit_wrap">
                                                     <div class="form-row">
-                                                        <div class="form-group col-md-6">
-                                                            <label>Gallery Images</label>
+                                                        <div class="form-group col-md-12">
+                                                            {{-- <label>Gallery Images</label>
 
                                                             <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="true">
                                                                 <div class="form-control file-amount">Choose Gallery</div>
@@ -124,18 +128,26 @@
                                                                     <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
                                                                 </div>
                                                             </div>
-                                                            <div class="file-preview box sm"></div>
+                                                            <div class="file-preview box sm"></div> --}}
+                                                            <label for="document" class="form-label">Gallery Image</label>
+                                                            <div class="needsclick dropzone" id="document-dropzone">
+
+                                                    </div>
                                                         </div>
-                                                        <div class="form-group col-md-6">
+                                                        <div class="form-group col-md-12">
                                                             <label>Cover Picture</label>
-                                                            <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="false">
+                                                            {{-- <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="false">
                                                                 <div class="form-control file-amount">Choose Cover Picture</div>
                                                                 <input type="hidden" name="cover_image" class="selected-files">
                                                                 <div class="input-group-prepend">
                                                                     <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
                                                                 </div>
                                                             </div>
-                                                            <div class="file-preview box sm"></div>
+                                                            <div class="file-preview box sm"></div> --}}
+                                                            <label for="document" class="form-label">Thumbnail Image</label>
+                                                            <div class="needsclick dropzone " id="documentThumbnail-dropzone">
+
+                                                    </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -293,6 +305,71 @@
             });
         }
 
+    </script>
+
+    <script>
+        var uploadedDocumentMap = {}
+        Dropzone.options.documentDropzone = {
+            dictDefaultMessage: "Select File to Upload",
+            url: '{{ route('store.media') }}',
+            init: function() {
+                this.on("sending", function(file, xhr, formData) {
+                    var project_name = $('#project_name').val();
+                    formData.append("property_name", project_name);
+                });
+            },
+            maxFilesize: 2, // MB
+            addRemoveLinks: true,
+            headers: {
+                'X-CSRF-TOKEN': "{{ csrf_token() }}"
+            },
+            success: function(file, response) {
+                $('form').append('<input type="hidden" name="gallery_image[]" value="' + response.name + '">')
+                uploadedDocumentMap[file.name] = response.name
+            },
+            removedfile: function(file) {
+                file.previewElement.remove();
+                if (typeof file.name !== 'undefined') {
+                    name = file.name
+                } else {
+                    name = uploadedDocumentMap[file.name]
+                }
+                $('form').find('input[name="gallery_image[]"][value="' + name + '"]').remove();
+            },
+        }
+
+        var uploadedDocumentThumbnailMap = {}
+        Dropzone.options.documentThumbnailDropzone = {
+            url: '{{ route('store.media') }}',
+            init: function() {
+                this.on("sending", function(file, xhr, formData) {
+                    var project_name = $('#project_name').val();
+                    formData.append("property_name", project_name);
+                });
+            },
+            maxFiles: 1,
+            maxFilesize: 2, // MB
+            addRemoveLinks: true,
+            headers: {
+                'X-CSRF-TOKEN': "{{ csrf_token() }}"
+            },
+            success: function(file, response) {
+                $('form').append('<input type="hidden" name="cover_image" value="' + response.name + '">')
+                uploadedDocumentThumbnailMap[file.name] = response.name
+                this.disable();
+            },
+            removedfile: function(file) {
+                file.previewElement.remove();
+                if (typeof file.name !== 'undefined') {
+                    name = file.name
+                } else {
+                    name = uploadedDocumentThumbnailMap[file.name]
+                }
+                $('form').find('input[name="cover_image"][value="' + name + '"]').remove();
+                this.enable();
+            },
+
+        }
     </script>
 
 @endsection

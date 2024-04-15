@@ -119,7 +119,7 @@
                                                         <option value="">Select Property Selling Type</option>
                                                         <option value="buy" @if($property->property_selling_type == 'buy') selected @endif>Buy</option>
                                                         <option value="rent" @if($property->property_selling_type == 'rent') selected @endif>Rent</option>
-                                                        <option value="sell" @if($property->property_selling_type == 'sell') selected @endif>Sell</option>
+                                                        {{-- <option value="sell" @if($property->property_selling_type == 'sell') selected @endif>Sell</option> --}}
                                                     </select>
                                                 </div>
                                             </div>
@@ -149,12 +149,115 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0 h6">Transaction Type</h5>
+                                    </div>
+                                    <div class="p-2">
+                                        <div class="form-group row">
+                                            <div class="col-sm-6">
+                                                <label class="col-from-label" for="transaction_type">Transaction Type <span class="text-danger">*</span></label><br>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input"  type="radio" name="transaction_type" id="new" value="new" @if($property->transaction_type == 'new') checked @endif required>
+                                                    <label class="form-check-label" for="new"> New Property</label>
+                                                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <input class="form-check-input" type="radio" name="transaction_type" id="resale" value="resale" @if($property->transaction_type == 'resale') checked @endif required>
+                                                    <label class="form-check-label" for="resale"> Resale</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label class="col-from-label" for="prossession_status">Possession Status <span class="text-danger">*</span></label><br>
+                                                <div class="form-check">
+                                                    <input class="form-check-input"  type="radio" name="prossession_status" id="under_construction" value="under_construction" @if($property->prossession_status == 'under_construction') checked @endif required>
+                                                    <label class="form-check-label" for="under_construction">Under Construction</label>
+                                                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <input class="form-check-input" type="radio" name="prossession_status" id="ready_to_move" value="ready_to_move" @if($property->prossession_status == 'ready_to_move') checked @endif required>
+                                                    <label class="form-check-label" for="ready_to_move"> Ready To Move</label>
+                                                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <input class="form-check-input" type="radio" name="prossession_status" id="proposed_site" value="proposed_site" @if($property->prossession_status == 'proposed_site') checked @endif required>
+                                                    <label class="form-check-label" for="proposed_site"> Proposed Site</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="card"  id="property_feature"  style="display:none;">
                                     <div class="card-header">
                                         <h5 class="mb-0 h6">Property Features</h5>
                                     </div>
                                     <div class="p-2">
-                                        <div class="row">
+                                        <div class="row pt-20">
+                                            <div class="col-md-5">
+                                                <b class="prop">Total Floors</b><br>
+                                                <div class="bedRooms listForSelect">
+                                                    <ul>
+                                                        <li class="total_floor @if($property->total_floor == '1') current @endif" onclick="select_list('total_floor','1')"><a>1</a> </li>
+                                                        <li class="total_floor @if($property->total_floor == '2') current @endif" onclick="select_list('total_floor','2')"><a>2</a></li>
+                                                        <li class="total_floor @if($property->total_floor == '3') current @endif" onclick="select_list('total_floor','3')"><a>3</a></li>
+                                                        <li class="total_floor @if($property->total_floor == '4') current @endif" onclick="select_list('total_floor','4')"><a>4</a></li>
+                                                        <li class="total_floor @if($property->total_floor == '5') current @endif" onclick="select_list('total_floor','5')"><a>5</a> </li>
+                                                        <li class="total_floor @if($property->total_floor == '6') current @endif" onclick="select_list('total_floor','6')"><a>6</a></li>
+                                                        <li class="total_floor @if($property->total_floor == '7') current @endif" onclick="select_list('total_floor','7')"><a>7</a></li>
+                                                        <li class="btn dropdown-toggle btn_total_floor-toggle total_floor @if($property->total_floor >= '8') current @endif" type="button" data-toggle="dropdown" style="width: 55px;padding:9px">@if($property->total_floor >= '8') {{$property->total_floor}} @endif</li>
+                                                        <ul class="dropdown-menu total_floor_list higt_ovfl">
+                                                            @for($i=5;$i<=20;$i++)
+                                                                <li class="total_floor @if($property->total_floor == $i) current @endif" onclick="select_list('total_floor','{{$i}}')"><a>{{$i}}</a></li>
+                                                            @endfor
+                                                        </ul>
+                                                    </ul>
+                                                </div>
+                                                <select  name="total_floor" id="total_floor"  style="display:none;">
+                                                    @for($i=1;$i<=20;$i++)
+                                                        <option value='{{$i}}' @if($property->total_floor == $i) selected @endif>{{$i}}</option>
+                                                    @endfor
+                                                </select>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <b class="prop">Furnished Status</b><br>
+                                                <div class="bedRooms listForSelect">
+                                                    <ul>
+                                                        <li class="furnished_status @if($property->furnished_status == 'furnished') current @endif" onclick="select_list('furnished_status','furnished')"><a>Furnished</a> </li>
+                                                        <li class="furnished_status @if($property->furnished_status == 'unfurnished') current @endif" onclick="select_list('furnished_status','unfurnished')"><a>Unfurnished</a></li>
+                                                        <li class="furnished_status @if($property->furnished_status == 'semi-unfurnished') current @endif" onclick="select_list('furnished_status','semi-unfurnished')"><a>Semi-Furnished</a></li>
+                                                    </ul>
+                                                </div>
+                                                <select name="furnished_status" id="furnished_status"  style="display:none;">
+                                                    <option value='furnished' @if($property->furnished_status == 'furnished') selected @endif>furnished</option>
+                                                    <option value='unfurnished' @if($property->furnished_status == 'unfurnished') selected @endif>unfurnished</option>
+                                                    <option value='semi-unfurnished' @if($property->furnished_status == 'semi-unfurnished') selected @endif>semi-unfurnished</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row pt-20">
+                                            <div class="col-md-12">
+                                                <b class="prop">Floor No</b><br>
+                                                <div class="bedRooms listForSelect">
+                                                    <ul>
+                                                        <li class="floor_no @if($property->floor_no == 'lower_basement') current @endif" onclick="select_list('floor_no','lower_basement')"><a>Lower Basemenet</a> </li>
+                                                        <li class="floor_no @if($property->floor_no == 'upper_basement') current @endif" onclick="select_list('floor_no','upper_basement')"><a>Upper Basemenet</a> </li>
+                                                        <li class="floor_no @if($property->floor_no == 'ground_basement') current @endif" onclick="select_list('floor_no','ground_basement')"><a>Ground Basemenet</a> </li>
+                                                        <li class="floor_no @if($property->floor_no == '1') current @endif" onclick="select_list('floor_no','1')"><a>1</a></li>
+                                                        <li class="floor_no @if($property->floor_no == '2') current @endif" onclick="select_list('floor_no','2')"><a>2</a></li>
+
+                                                        <li class="btn dropdown-toggle btn_floor_no-toggle floor_no @if((int)$property->floor_no >= '3') current @endif" type="button" data-toggle="dropdown" style="width: 55px;padding:9px">@if((int)$property->floor_no >= '5') {{$property->floor_no}} @else 3 @endif</li>
+                                                        <ul class="dropdown-menu floor_no_list higt_ovfl">
+                                                            @for($i=3;$i<=20;$i++)
+                                                        <li class="floor_no @if($property->floor_no == $i) current @endif" onclick="select_list('floor_no','{{$i}}')"><a>{{$i}}</a></li>
+                                                        @endfor
+                                                        </ul>
+                                                    </ul>
+                                                </div>
+                                                <select  name="floor_no" id="floor_no"  style="display:none;">
+                                                    <option value='lower_basement' @if($property->floor_no == 'lower_basement') selected @endif>lower_basement</option>
+                                                    <option value='upper_basement' @if($property->floor_no == 'upper_basement') selected @endif>upper_basement</option>
+                                                    <option value='ground_basement' @if($property->floor_no == 'ground_basement') selected @endif>ground_basement</option>
+                                                    @for($i=1;$i<=20;$i++)
+                                                        <option value='{{$i}}' @if($property->floor_no == $i) selected @endif>{{$i}}</option>
+                                                    @endfor
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row pt-20">
                                             <div class="col-md-4 mb-2" id="bed">
                                                 <b class="prop">Bedroom</b> <br>
                                                 <div class="bedRooms listForSelect higt_ovfl" >
@@ -240,78 +343,6 @@
                                                 </select>
                                             </div>
                                         </div>
-
-                                        <div class="row pt-20">
-                                            <div class="col-md-5">
-                                                <b class="prop">Total Floors</b><br>
-                                                <div class="bedRooms listForSelect">
-                                                    <ul>
-                                                        <li class="total_floor @if($property->total_floor == '1') current @endif" onclick="select_list('total_floor','1')"><a>1</a> </li>
-                                                        <li class="total_floor @if($property->total_floor == '2') current @endif" onclick="select_list('total_floor','2')"><a>2</a></li>
-                                                        <li class="total_floor @if($property->total_floor == '3') current @endif" onclick="select_list('total_floor','3')"><a>3</a></li>
-                                                        <li class="total_floor @if($property->total_floor == '4') current @endif" onclick="select_list('total_floor','4')"><a>4</a></li>
-                                                        <li class="total_floor @if($property->total_floor == '5') current @endif" onclick="select_list('total_floor','5')"><a>5</a> </li>
-                                                        <li class="total_floor @if($property->total_floor == '6') current @endif" onclick="select_list('total_floor','6')"><a>6</a></li>
-                                                        <li class="total_floor @if($property->total_floor == '7') current @endif" onclick="select_list('total_floor','7')"><a>7</a></li>
-                                                        <li class="btn dropdown-toggle btn_total_floor-toggle total_floor @if($property->total_floor >= '8') current @endif" type="button" data-toggle="dropdown" style="width: 55px;padding:9px">@if($property->total_floor >= '8') {{$property->total_floor}} @endif</li>
-                                                        <ul class="dropdown-menu total_floor_list higt_ovfl">
-                                                            @for($i=5;$i<=20;$i++)
-                                                                <li class="total_floor @if($property->total_floor == $i) current @endif" onclick="select_list('total_floor','{{$i}}')"><a>{{$i}}</a></li>
-                                                            @endfor
-                                                        </ul>
-                                                    </ul>
-                                                </div>
-                                                <select  name="total_floor" id="total_floor"  style="display:none;">
-                                                    @for($i=1;$i<=20;$i++)
-                                                        <option value='{{$i}}' @if($property->total_floor == $i) selected @endif>{{$i}}</option>
-                                                    @endfor
-                                                </select>
-                                            </div>
-                                            <div class="col-md-7">
-                                                <b class="prop">Furnished Status</b><br>
-                                                <div class="bedRooms listForSelect">
-                                                    <ul>
-                                                        <li class="furnished_status @if($property->furnished_status == 'furnished') current @endif" onclick="select_list('furnished_status','furnished')"><a>Furnished</a> </li>
-                                                        <li class="furnished_status @if($property->furnished_status == 'unfurnished') current @endif" onclick="select_list('furnished_status','unfurnished')"><a>Unfurnished</a></li>
-                                                        <li class="furnished_status @if($property->furnished_status == 'semi-unfurnished') current @endif" onclick="select_list('furnished_status','semi-unfurnished')"><a>Semi-Furnished</a></li>
-                                                    </ul>
-                                                </div>
-                                                <select name="furnished_status" id="furnished_status"  style="display:none;">
-                                                    <option value='furnished' @if($property->furnished_status == 'furnished') selected @endif>furnished</option>
-                                                    <option value='unfurnished' @if($property->furnished_status == 'unfurnished') selected @endif>unfurnished</option>
-                                                    <option value='semi-unfurnished' @if($property->furnished_status == 'semi-unfurnished') selected @endif>semi-unfurnished</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="row pt-20">
-                                            <div class="col-md-12">
-                                                <b class="prop">Floor No</b><br>
-                                                <div class="bedRooms listForSelect">
-                                                    <ul>
-                                                        <li class="floor_no @if($property->floor_no == 'lower_basement') current @endif" onclick="select_list('floor_no','lower_basement')"><a>Lower Basemenet</a> </li>
-                                                        <li class="floor_no @if($property->floor_no == 'upper_basement') current @endif" onclick="select_list('floor_no','upper_basement')"><a>Upper Basemenet</a> </li>
-                                                        <li class="floor_no @if($property->floor_no == 'ground_basement') current @endif" onclick="select_list('floor_no','ground_basement')"><a>Ground Basemenet</a> </li>
-                                                        <li class="floor_no @if($property->floor_no == '1') current @endif" onclick="select_list('floor_no','1')"><a>1</a></li>
-                                                        <li class="floor_no @if($property->floor_no == '2') current @endif" onclick="select_list('floor_no','2')"><a>2</a></li>
-
-                                                        <li class="btn dropdown-toggle btn_floor_no-toggle floor_no @if((int)$property->floor_no >= '3') current @endif" type="button" data-toggle="dropdown" style="width: 55px;padding:9px">@if((int)$property->floor_no >= '5') {{$property->floor_no}} @else 3 @endif</li>
-                                                        <ul class="dropdown-menu floor_no_list higt_ovfl">
-                                                            @for($i=3;$i<=20;$i++)
-                                                        <li class="floor_no @if($property->floor_no == $i) current @endif" onclick="select_list('floor_no','{{$i}}')"><a>{{$i}}</a></li>
-                                                        @endfor
-                                                        </ul>
-                                                    </ul>
-                                                </div>
-                                                <select  name="floor_no" id="floor_no"  style="display:none;">
-                                                    <option value='lower_basement' @if($property->floor_no == 'lower_basement') selected @endif>lower_basement</option>
-                                                    <option value='upper_basement' @if($property->floor_no == 'upper_basement') selected @endif>upper_basement</option>
-                                                    <option value='ground_basement' @if($property->floor_no == 'ground_basement') selected @endif>ground_basement</option>
-                                                    @for($i=1;$i<=20;$i++)
-                                                        <option value='{{$i}}' @if($property->floor_no == $i) selected @endif>{{$i}}</option>
-                                                    @endfor
-                                                </select>
-                                            </div>
-                                        </div>
                                     </div>
                                     <div class="card m-2">
                                         <div class="card-header">
@@ -394,38 +425,6 @@
                                                         <label class="col-from-label">Plot Breadth  (in feet)</label>
                                                         <input type="number" step="0.01" min="0.00" class="form-control" name="plot_breadth" value="{{$property->plot_breadth}}" placeholder="Plot Breadth...">
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="mb-0 h6">Transaction Type</h5>
-                                    </div>
-                                    <div class="p-2">
-                                        <div class="form-group row">
-                                            <div class="col-sm-6">
-                                                <label class="col-from-label" for="transaction_type">Transaction Type <span class="text-danger">*</span></label><br>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input"  type="radio" name="transaction_type" id="new" value="new" @if($property->transaction_type == 'new') checked @endif required>
-                                                    <label class="form-check-label" for="new"> New Property</label>
-                                                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <input class="form-check-input" type="radio" name="transaction_type" id="resale" value="resale" @if($property->transaction_type == 'resale') checked @endif required>
-                                                    <label class="form-check-label" for="resale"> Resale</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label class="col-from-label" for="prossession_status">Possession Status <span class="text-danger">*</span></label><br>
-                                                <div class="form-check">
-                                                    <input class="form-check-input"  type="radio" name="prossession_status" id="under_construction" value="under_construction" @if($property->prossession_status == 'under_construction') checked @endif required>
-                                                    <label class="form-check-label" for="under_construction">Under Construction</label>
-                                                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <input class="form-check-input" type="radio" name="prossession_status" id="ready_to_move" value="ready_to_move" @if($property->prossession_status == 'ready_to_move') checked @endif required>
-                                                    <label class="form-check-label" for="ready_to_move"> Ready To Move</label>
-                                                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <input class="form-check-input" type="radio" name="prossession_status" id="proposed_site" value="proposed_site" @if($property->prossession_status == 'proposed_site') checked @endif required>
-                                                    <label class="form-check-label" for="proposed_site"> Proposed Site</label>
                                                 </div>
                                             </div>
                                         </div>

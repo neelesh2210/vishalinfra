@@ -21,7 +21,7 @@
                                                     <div class="form-row">
                                                         <div class="form-group col-md-12">
                                                             <label>Project Name</label>
-                                                            <input type="text" class="form-control" name="name" value="{{$project->name}}" placeholder="Enter Project Name..." required>
+                                                            <input type="text" class="form-control" name="name" id="project_name" value="{{$project->name}}" placeholder="Enter Project Name..." required>
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label>Status</label>
@@ -54,7 +54,7 @@
                                                             <label>Project Area</label>
                                                             <input type="text" class="form-control" name="project_area" value="{{$project->project_area}}" placeholder="Project Area">
                                                         </div>
-                                                        <div class="form-group col-md-6">
+                                                        {{-- <div class="form-group col-md-6">
                                                             <label>Total Units</label>
                                                             <select class="form-control" name="total_unit">
                                                                 <option value="">Select Total Unit...</option>
@@ -62,6 +62,19 @@
                                                                     <option value="{{$i}}" @if($project->total_unit == $i) selected @endif>{{$i}}</option>
                                                                 @endfor
                                                             </select>
+                                                        </div> --}}
+                                                        <div class="form-group col-md-6">
+                                                            <label>Total Units</label>
+                                                            <input type="number" step="0.1" class="form-control" name="total_unit" value="{{$project->total_unit}}" placeholder="Enter Total Unit...">
+                                                            @error('total_unit')
+                                                                <span class="text-dange">{{$message}}</span>
+                                                            @enderror
+                                                            {{-- <select class="form-control" name="total_unit">
+                                                                <option value="">Select Total Unit...</option>
+                                                                @for ($i=1;$i<=100;$i++)
+                                                                    <option value="{{$i}}">{{$i}}</option>
+                                                                @endfor
+                                                            </select> --}}
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label>Occupancy Certificate</label>
@@ -124,8 +137,8 @@
                                                 <h3>Gallery</h3>
                                                 <div class="frm_submit_wrap">
                                                     <div class="form-row">
-                                                        <div class="form-group col-md-6">
-                                                            <label>Gallery</label>
+                                                        <div class="form-group col-md-12">
+                                                            {{-- <label>Gallery</label>
                                                             <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="true">
                                                                 <div class="form-control file-amount">Choose Gallery</div>
                                                                 <input type="hidden" name="gallery_image" value="{{$project->gallery_image}}" class="selected-files">
@@ -133,10 +146,12 @@
                                                                     <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
                                                                 </div>
                                                             </div>
-                                                            <div class="file-preview box sm"></div>
-                                                        </div>
-                                                        <div class="form-group col-md-6">
-                                                            <label>Cover Picture</label>
+                                                            <div class="file-preview box sm"></div> --}}
+                                                            <label for="document" class="form-label">Gallery Image</label>
+                                                            <div class="needsclick dropzone" id="document-dropzone"></div>
+                                                    </div>
+                                                        <div class="form-group col-md-12">
+                                                            {{-- <label>Cover Picture</label>
                                                             <div class="input-group" data-toggle="aizuploader" data-type="image" data-multiple="false">
                                                                 <div class="form-control file-amount">Choose Cover Picture</div>
                                                                 <input type="hidden" name="cover_image" value="{{$project->cover_image}}" class="selected-files">
@@ -144,7 +159,9 @@
                                                                     <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
                                                                 </div>
                                                             </div>
-                                                            <div class="file-preview box sm"></div>
+                                                            <div class="file-preview box sm"></div> --}}
+                                                            <label for="document" class="form-label">Thumbnail Image</label>
+                                                            <div class="needsclick dropzone " id="documentThumbnail-dropzone"> </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -296,6 +313,117 @@
                     }
                 }
             });
+        }
+
+    </script>
+
+    <script>
+        var uploadedDocumentMap = {}
+        Dropzone.options.documentDropzone = {
+            url: '{{ route('store.media') }}',
+            init: function() {
+                this.on("sending", function(file, xhr, formData) {
+                    var project_name = $('#project_name').val();
+                    formData.append("property_name", project_name);
+                });
+            },
+            maxFilesize: 2, // MB
+            addRemoveLinks: true,
+            headers: {
+                'X-CSRF-TOKEN': "{{ csrf_token() }}"
+            },
+            success: function(file, response) {
+                $('form').append('<input type="hidden" name="gallery_image[]" value="' + response.name + '">')
+                uploadedDocumentMap[file.name] = response.name
+            },
+            removedfile: function(file) {
+                file.previewElement.remove();
+                if (typeof file.name !== 'undefined') {
+                    name = file.name
+                } else {
+                    name = uploadedDocumentMap[file.name]
+                }
+                $('form').find('input[name="gallery_image[]"][value="' + name + '"]').remove();
+            },
+            init: function() {
+                @if (isset($project) && $project->gallery_image)
+                    @foreach (explode(",",$project->gallery_image) as $media)
+                        var existingFileUrl = "{{ uploaded_asset($media) }}";
+                        var mockFile = {
+                            name: "{{ $media }}",
+                            size: "30.3",
+                            accepted: true
+                        };
+
+                        // Add the mock file to the Dropzone
+                        this.emit("addedfile", mockFile);
+                        this.emit("thumbnail", mockFile, existingFileUrl);
+                        this.emit("complete", mockFile);
+
+                        // Disable further file uploads
+
+                        // Customize the look and behavior of the thumbnail
+                        this.options.thumbnail.call(this, mockFile, existingFileUrl);
+                        $('form').append('<input type="hidden" name="gallery_image[]" value="{{ $media }}">');
+                    @endforeach
+                @endif
+            }
+        }
+
+        var uploadedDocumentThumbnailMap = {}
+        Dropzone.options.documentThumbnailDropzone = {
+            url: '{{ route('store.media') }}',
+            init: function() {
+                this.on("sending", function(file, xhr, formData) {
+                    var project_name = $('#project_name').val();
+                    formData.append("property_name", project_name);
+                });
+            },
+            maxFiles: 1,
+            maxFilesize: 2, // MB
+            addRemoveLinks: true,
+            headers: {
+                'X-CSRF-TOKEN': "{{ csrf_token() }}"
+            },
+            success: function(file, response) {
+                $('form').append('<input type="hidden" name="cover_image" value="' + response.name + '">')
+                uploadedDocumentThumbnailMap[file.name] = response.name
+                this.disable();
+            },
+            removedfile: function(file) {
+                file.previewElement.remove();
+                if (typeof file.name !== 'undefined') {
+                    name = file.name
+                } else {
+                    name = uploadedDocumentThumbnailMap[file.name]
+                }
+                $('form').find('input[name="image"][value="' + name + '"]').remove();
+                this.enable();
+            },
+            init: function() {
+                @if (isset($project) && $project->cover_image)
+
+                        var existingFileUrl = "{{ uploaded_asset($project->cover_image) }}";
+                        var mockFile = {
+                            name: "{{ $project->cover_image }}",
+                            size: "30.3",
+                            accepted: true
+                        };
+
+                        // Add the mock file to the Dropzone
+                        this.emit("addedfile", mockFile);
+                        this.emit("thumbnail", mockFile, existingFileUrl);
+                        this.emit("complete", mockFile);
+
+                        // Disable further file uploads
+
+                        // Customize the look and behavior of the thumbnail
+                        this.options.thumbnail.call(this, mockFile, existingFileUrl);
+                        $('form').append('<input type="hidden" name="image" value="{{ $project->cover_image }}">');
+                        this.disable();
+
+                @endif
+            }
         }
 
     </script>

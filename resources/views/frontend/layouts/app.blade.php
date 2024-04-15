@@ -30,6 +30,10 @@
     <script>
         var AIZ = AIZ || {};
     </script>
+
+    <script type="text/javascript" id="zsiqchat">
+        var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode: "siqb9567f80ce45c0c0aec92128962140bba8ce4c7fd4db77c5a871bd434c53d152", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zohopublic.in/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);
+    </script>
 </head>
 
     <body class="yellow-skin">

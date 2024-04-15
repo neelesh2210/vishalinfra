@@ -46,10 +46,6 @@ class EnquiryController extends Controller
 
         $enquiries = $enquiries->paginate(10);
 
-        if($request->ajax()){
-            return view('admin.enquiry.table',compact('enquiries','search_date','search_property_type','search_city','search_key'));
-        }
-
         return view('admin.enquiry.index',compact('enquiries','search_date','search_property_type','search_city','search_key'),['page_title'=>'Enquiry List']);
     }
 

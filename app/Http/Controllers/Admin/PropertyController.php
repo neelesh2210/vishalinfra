@@ -170,6 +170,10 @@ class PropertyController extends Controller
         return redirect()->route('admin.property.index')->with('success','Property Added Successfully!');
     }
 
+    public function show(Property $property){
+        return view('admin.property.show',compact('property'),['page_title'=>'Property Info']);
+    }
+
     public function edit($id){
         $property = Property::find(decrypt($id));
 
