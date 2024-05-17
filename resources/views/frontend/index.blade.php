@@ -218,9 +218,9 @@
                                                 </div>
                                             </div>
                                             <div class="listing-short-detail">
-                                                <h4 class="listing-name verified">
+                                                <h1 class="listing-name verified">
                                                     <a href="{{ route('property.detail', $property->slug) }}" class="prt-link-detail">{{ $property->name }}</a>
-                                                </h4>
+                                                </h1>
                                                 @if ($property->pincode || $property->address)
                                                     <div class="foot-location">
                                                         <img src="{{ asset('frontend/assets/img/pin.svg') }}" width="18" alt="" />{{ $property->address }}
@@ -288,9 +288,9 @@
                                                 </div>
                                             </div>
                                             <div class="listing-short-detail">
-                                                <h4 class="listing-name verified">
+                                                <h1 class="listing-name verified">
                                                     <a href="{{route('project.details',$project->id)}}" class="prt-link-detail">{{ $project->name }}</a>
-                                                </h4>
+                                                </h1>
                                                 <div class="foot-location">
                                                     <img src="{{ asset('frontend/assets/img/pin.svg') }}" width="18" alt="" />{{ $project->address }}
                                                 </div>
@@ -329,7 +329,7 @@
                         <a href="{{ route('properties') }}?location={{ $city->id }}" class="img-wrap">
                             <div class="location_wrap_content visible">
                                 <div class="location_wrap_content_first">
-                                    <h4>{{ $city->name }}</h4>
+                                    <h41>{{ $city->name }}</h1>
                                     {{-- <span>{{ $city->property_count }} Properties</span> --}}
                                 </div>
                                 <div class="location_btn"><i class="fa fa-arrow-right"></i></div>

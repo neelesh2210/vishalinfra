@@ -150,7 +150,7 @@
                                             <div class="listing-short-detail-wrap">
                                                 <div class="_card_list_flex mb-2">
                                                     <div class="_card_flex_01">
-                                                    <h5><a href="{{ route('property.detail',$property->slug) }}" class="prt-link-detail">{{$property->name}} </a></h5>
+                                                    <h1><a href="{{ route('property.detail',$property->slug) }}" class="prt-link-detail">{{$property->name}} </a></h1>
                                                     </div>
                                                     <div class="_card_flex_last">
                                                         <h6 class="listing-card-info-price mb-0">₹{{$property->booking_amount}}</h6>

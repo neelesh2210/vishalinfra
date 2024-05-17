@@ -7359,6 +7359,20 @@ span.tag_t {
 ._card_flex_01 {
     flex: 1;
 }
+.listing-short-detail-wrap h1{
+    line-height: 22px;
+    font-size: 18px;
+}
+.listing-short-detail h1{
+    font-size: 15px;
+    position: relative;
+    margin-bottom: 0px;
+    font-weight: 500;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 span._list_blickes {
     display: inline-flex;
     align-items: center;
