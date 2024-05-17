@@ -6010,6 +6010,10 @@ button.btn.adv-btn {
 .location_wrap_content_first {
     flex: 1;
 }
+.location_wrap_content_first h1{
+    line-height: 22px;
+    font-size: 18px;
+}
 .location_wrap_content h4 {
     font-size: 17px;
     color:#ffffff;

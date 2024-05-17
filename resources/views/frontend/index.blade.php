@@ -329,7 +329,7 @@
                         <a href="{{ route('properties') }}?location={{ $city->id }}" class="img-wrap">
                             <div class="location_wrap_content visible">
                                 <div class="location_wrap_content_first">
-                                    <h41>{{ $city->name }}</h1>
+                                    <h1>{{ $city->name }}</h1>
                                     {{-- <span>{{ $city->property_count }} Properties</span> --}}
                                 </div>
                                 <div class="location_btn"><i class="fa fa-arrow-right"></i></div>
@@ -581,9 +581,9 @@
                                             <div class="listing-short-detail-wrap">
                                                 <div class="_card_list_flex">
                                                     <div class="_card_flex_01">
-                                                        <h5>
+                                                        <h1>
                                                             <a href="{{route('project.details',$project->id)}}" class="prt-link-detail">{{ $project->name }}</a>
-                                                        </h5>
+                                                        </h1>
                                                     </div>
                                                 </div>
                                                 <div class="_card_list_flex">
