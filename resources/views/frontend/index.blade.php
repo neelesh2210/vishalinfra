@@ -125,7 +125,7 @@
                                     <i class="flaticon-apartments"></i>
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
-                                    <h4>Flat/ Apartment</h4>
+                                    <h1>Flat/ Apartment</h1>
                                 </div>
                             </div>
                         </a>
@@ -139,7 +139,7 @@
                                     <i class="flaticon-modern-house-4"></i>
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
-                                    <h4>Residential House</h4>
+                                    <h1>Residential House</h1>
                                 </div>
                             </div>
                         </a>
@@ -153,7 +153,7 @@
                                     <i class="flaticon-student-housing"></i>
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
-                                    <h4>Commercial Space</h4>
+                                    <h1>Commercial Space</h1>
                                 </div>
                             </div>
                         </a>
@@ -167,7 +167,7 @@
                                     <i class="flaticon-beach-house-2"></i>
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
-                                    <h4>Plot</h4>
+                                    <h1>Plot</h1>
                                 </div>
                             </div>
                         </a>
