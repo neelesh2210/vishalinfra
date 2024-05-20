@@ -30,15 +30,28 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-4">
                             <div class="footer_widget">
-                                <h4 class="widget_title">Properties in India</h4>
+                                <h4 class="widget_title">Quick Links</h4>
                                 <ul class="footer-menu">
-                                    @foreach (App\Models\Admin\City::whereHas('property')->get() as $city)
-                                        <li>
-                                            <a href="{{ route('properties') }}?location={{$city->id}}">Property in {{$city->name}}
-                                                <i class="fas fa-chevron-right"></i>
-                                            </a>
-                                        </li>
-                                    @endforeach
+                                    <li>
+                                        <a href="{{route('about')}}">About Us
+                                            <i class="fas fa-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('plan')}}">Our Plan
+                                            <i class="fas fa-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('contact')}}">Contact
+                                            <i class="fas fa-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Buy & Sell
+                                            <i class="fas fa-chevron-right"></i>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -63,11 +76,6 @@
                                     </li>
                                     <li>
                                         <a href="{{route('faq')}}">FAQ
-                                            <i class="fas fa-chevron-right"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="{{route('about')}}">About Us
                                             <i class="fas fa-chevron-right"></i>
                                         </a>
                                     </li>
@@ -166,10 +174,8 @@
             <nav class="menu-important-links-container">
                 <ul class="menu">
                     <li><a href="#" class="menu-link">About Us</a></li>
-                    <li><a href="#" class="menu-link">Corporate Trainings</a></li>
                     <li><a href="#" class="menu-link">Blog</a></li>
-                    <li><a href="#" class="menu-link">Webinars</a></li>
-                    <li><a href="#" class="menu-link">Quiz</a>
+                    <li><a href="#" class="menu-link">Plan</a>
                     </li>
                     <li><a href="#" class="menu-link">Contact Us</a></li>
                 </ul>
