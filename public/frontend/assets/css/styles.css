@@ -14521,6 +14521,15 @@ h1, .h1 {
 
 
 @media (max-width: 767px) {
+    .site-footer .widget-titless {
+        padding-left: 15px !important;
+    }
+    .site-footer .widget .menu li a {
+        line-height: 11px !important;
+        padding-left: 15px;
+        text-decoration: none;
+        border-bottom: 0;
+    }
     .pl-00{
         padding-left: 10px !important;
     }
@@ -15566,8 +15575,8 @@ font-size: 12px;
     text-align: left;
 }
 .site-footer .widget .menu li a {
-    font-size: 14px;
-    line-height: 21px;
+    font-size: 13px;
+    line-height: 23px;
     font-weight: 400;
     color: #fff;
 }
@@ -15590,4 +15599,9 @@ font-size: 12px;
 .brdrd{
     border-bottom:1px solid #dddddd61;
     margin-bottom: 20px;
+}
+.footer-menu i{
+    float: right;
+    font-size: 12px;
+    line-height: 20px;
 }
