@@ -13323,7 +13323,7 @@ img.img-footer.small {
 }
 
 .footer_widget {
-    padding:60px 0 60px;
+    padding:60px 0 15px;
 }
 h4.widget_title {
     margin-bottom: 18px;
@@ -15552,4 +15552,42 @@ font-size: 12px;
 }
 .resp_log_caption .abb label {
     color: #fff;
+}
+.site-footer .widget .menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+.site-footer .widget-titless {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+    text-align: left;
+}
+.site-footer .widget .menu li a {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #fff;
+}
+.site-footer .widget .menu li a:hover{
+    color: #ff5f20;
+}
+.site-footer .widget .menu li:not(:last-child):after {
+    content: '|';
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #fff;
+    margin: 0 10px;
+}
+.site-footer .widget ul {
+    margin: 0;
+    list-style-type: none;
+    padding-left: 0;
+}
+.brdrd{
+    border-bottom:1px solid #dddddd61;
+    margin-bottom: 20px;
 }

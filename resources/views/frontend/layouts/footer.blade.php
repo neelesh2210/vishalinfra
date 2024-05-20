@@ -1,7 +1,7 @@
 <footer class="dark-footer skin-dark-footer style-2">
     <div class="footer-middle">
         <div class="container">
-            <div class="row">
+            <div class="row brdrd">
                 <div class="col-lg-4 col-md-4">
                     <div class="footer_widget">
                         <h4 class="widget_title">About Reframe Enterprises</h4>
@@ -104,6 +104,78 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+    <div class="site-footer">
+        <div class="widget widget_nav_menu mb-3">
+            <h2 class="widget-titless">Properties in India</h2>
+            <nav class="menu-digital-marketing-courses-container">
+                <ul class="menu">
+                    @foreach (App\Models\Admin\City::whereHas('property')->get() as $city)
+                    <li><a class="menu-link" href="{{ route('properties') }}?location={{$city->id}}">Property in {{$city->name}}</a></li>
+                    @endforeach
+                </ul>
+            </nav>
+        </div>
+        <div class="widget widget_nav_menu mb-3">
+            <h2 class="widget-titless">Properties in India</h2>
+            <nav class="menu-digital-marketing-certification-course-container">
+                <ul class="menu">
+                    <li><a href="#" class="menu-link">Real Estate in Varanasi</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="widget widget_nav_menu mb-3">
+            <h2 class="widget-titless">Properties in India</h2>
+            <nav class="menu-digital-marketing-course-in-container">
+                <ul class="menu">
+                    <li><a href="#" class="menu-link">Delhi</a></li>
+                    <li><a href="#" class="menu-link">Mumbai</a></li>
+                    <li><a href="#" class="menu-link">Bangalore</a></li>
+                    <li><a href="#" class="menu-link">Gurgaon</a></li>
+                    <li><a href="#" class="menu-link">Pune</a></li>
+                    <li><a href="#" class="menu-link">Kolkata</a></li>
+                    <li><a href="#" class="menu-link">Hydrabad</a></li>
+                    <li><a href="#" class="menu-link">Chennai</a></li>
+                    <li><a href="#" class="menu-link">Noida</a></li>
+                    <li><a href="#" class="menu-link">Surat</a></li>
+                    <li><a href="#" class="menu-link">Indore</a></li>
+                    <li><a href="#" class="menu-link">Patna</a></li>
+                    <li><a href="#" class="menu-link">Lucknow</a></li>
+                    <li><a href="#" class="menu-link">Nagpur</a></li>
+                    <li><a href="#" class="menu-link">Coimbatore</a></li>
+                    <li><a href="#" class="menu-link">Kochi</a></li>
+                    <li><a href="#" class="menu-link">Jaipur</a></li>
+                    <li><a href="#" class="menu-link">Dubai</a></li>
+                    <li><a href="#" class="menu-link">Agra</a></li>
+                    <li><a href="#" class="menu-link">Ahmedabad</a></li>
+                    <li><a href="#" class="menu-link">Chandigarh</a></li>
+                    <li><a href="#" class="menu-link">Dehradun</a></li>
+                    <li><a href="#" class="menu-link">Faridabad</a></li>
+                    <li><a href="#" class="menu-link">Kanpur</a></li>
+                    <li><a href="#" class="menu-link">Mohali</a></li>
+                    <li><a href="#" class="menu-link">Raipur</a></li>
+                    <li><a href="#" class="menu-link">Varanasi</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="widget widget_nav_menu mb-3">
+            <h2 class="widget-titless">Important Links</h2>
+            <nav class="menu-important-links-container">
+                <ul class="menu">
+                    <li><a href="#" class="menu-link">About Us</a></li>
+                    <li><a href="#" class="menu-link">Corporate Trainings</a></li>
+                    <li><a href="#" class="menu-link">Blog</a></li>
+                    <li><a href="#" class="menu-link">Webinars</a></li>
+                    <li><a href="#" class="menu-link">Quiz</a>
+                    </li>
+                    <li><a href="#" class="menu-link">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
         </div>
     </div>
     <div class="footer-bottom">
