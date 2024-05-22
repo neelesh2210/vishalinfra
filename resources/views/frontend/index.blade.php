@@ -122,7 +122,7 @@
                         <a href="{{ route('properties') }}?properties_type=flat_apartment" class="category-box">
                             <div class="property_category_short">
                                 <div class="category-icon clip-3">
-                                    <i class="flaticon-apartments"></i>
+                                    <img src="{{ asset('frontend/assets/img/building.png') }}" alt="" class="img-fluid">
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
                                     <h1>Flat/ Apartment</h1>
@@ -136,7 +136,7 @@
                         <a href="{{ route('properties') }}?properties_type=residental_house" class="category-box">
                             <div class="property_category_short">
                                 <div class="category-icon clip-5">
-                                    <i class="flaticon-modern-house-4"></i>
+                                    <img src="{{ asset('frontend/assets/img/housing-area.png') }}" alt="" class="img-fluid">
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
                                     <h1>Residential House</h1>
@@ -150,7 +150,7 @@
                         <a href="{{ route('properties') }}?properties_type=commerical_space" class="category-box">
                             <div class="property_category_short">
                                 <div class="category-icon clip-4">
-                                    <i class="flaticon-student-housing"></i>
+                                    <img src="{{ asset('frontend/assets/img/commercial-building.png') }}" alt="" class="img-fluid">
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
                                     <h1>Commercial Space</h1>
@@ -163,8 +163,8 @@
                     <div class="property_cats_boxs">
                         <a href="{{ route('properties') }}?properties_type=plot" class="category-box">
                             <div class="property_category_short">
-                                <div class="category-icon clip-1">
-                                    <i class="flaticon-beach-house-2"></i>
+                                <div class="category-icon clip-3">
+                                    <img src="{{ asset('frontend/assets/img/location-pin.png') }}" alt="" class="img-fluid">
                                 </div>
                                 <div class="property_category_expand property_category_short-text">
                                     <h1>Plot</h1>
@@ -635,7 +635,7 @@
                 <div class="col-lg-10 col-md-10 col-sm-10 m-auto">
                     <!-- Single Basics List -->
                     <div class="faq_wrap">
-                        <div class="faq_wrap_body mb-5">
+                        <div class="faq_wrap_body">
                             <div class="accordion" id="generalac">
                                 <div class="card">
                                     <div class="card-header" id="headingOne">
@@ -756,7 +756,10 @@
             </div>
         </div>
     </section>
-    <section class="theme-bg call_action_wrap-wrap">
+    <div class="footer-banner">
+        <img src="{{ asset('frontend/images/bg-footer.png') }}" alt="img">
+    </div>
+    {{-- <section class="theme-bg call_action_wrap-wrap">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -772,5 +775,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection
