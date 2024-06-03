@@ -2,14 +2,9 @@ $(function() {
     "use strict";
 
 	//Loader
-	$(function preloaderLoad() {
-        if($('.preloader').length){
-            $('.preloader').delay(200).fadeOut(300);
-        }
-        $(".preloader_disabler").on('click', function() {
-            $("#preloader").hide();
-        });
-    });
+    jQuery(window).on('load',function(){
+		jQuery(".preloader").fadeOut(500);
+	});
 
 	// Script Navigation
 	! function(n, e, i, a) {
