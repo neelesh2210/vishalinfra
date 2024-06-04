@@ -100,6 +100,170 @@
             </div>
         </div>
     </div>
+    <section class="min">
+        <div class="container">
+            <div class="row">
+                <div class="col-9 col-md-9">
+                    <div class="sec-heading">
+                        <h2>Categories</h2>
+                    </div>
+                </div>
+                <div class="col-3 col-md-3">
+                    <div class="float-end mt-2">
+                        <a href="#" class="default-btn border-radius"> View All
+                            <i class="fas fa-chevron-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-2 col-lg-2 col-md-3 col-xs-6">
+                    <div class="card bg-card-light">
+                        <div class="card-body">
+                            <div class="cat-item text-center">
+                                <a href="#"></a>
+                                <div class="cat-img"> <img src="{{ asset('frontend/assets/img/icon/balcony.svg')}}" alt="img"> </div>
+                                <div class="cat-desc">
+                                    <h5 class="mb-1">2BHK Homes</h5> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-3 col-xs-6">
+                    <div class="card bg-card-light">
+                        <div class="card-body">
+                            <div class="cat-item text-center">
+                                <a href="#"></a>
+                                <div class="cat-img"> <img src="{{ asset('frontend/assets/img/icon/appartment.svg')}}" alt="img"> </div>
+                                <div class="cat-desc">
+                                    <h5 class="mb-1">Deluxe Flats</h5> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-3 col-xs-6">
+                    <div class="card bg-card-light">
+                        <div class="card-body">
+                            <div class="cat-item text-center">
+                                <a href="#"></a>
+                                <div class="cat-img"> <img src="{{ asset('frontend/assets/img/icon/beach-house.svg')}}" alt="img"> </div>
+                                <div class="cat-desc">
+                                    <h5 class="mb-1">Offices</h5> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-3 col-xs-6">
+                    <div class="card bg-card-light">
+                        <div class="card-body">
+                            <div class="cat-item text-center">
+                                <a href="#"></a>
+                                <div class="cat-img text-shadow1"> <img src="{{ asset('frontend/assets/img/icon/building.svg')}}" alt="img"> </div>
+                                <div class="cat-desc">
+                                    <h5 class="mb-1">Apartments</h5> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-3 col-xs-6">
+                    <div class="card bg-card-light">
+                        <div class="card-body">
+                            <div class="cat-item text-center">
+                                <a href="#"></a>
+                                <div class="cat-img"> <img src="{{ asset('frontend/assets/img/icon/cabin.svg')}}" alt="img"> </div>
+                                <div class="cat-desc">
+                                    <h5 class="mb-1">Budget House</h5> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-3 col-xs-6">
+                    <div class="card bg-card-light">
+                        <div class="card-body">
+                            <div class="cat-item text-center">
+                                <a href="#"></a>
+                                <div class="cat-img"> <img src="{{ asset('frontend/assets/img/icon/farm.svg')}}" alt="img"> </div>
+                                <div class="cat-desc">
+                                    <h5 class="mb-1">Farm House</h5> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-3 col-xs-6">
+                    <div class="card bg-card-light mb-xl-0">
+                        <div class="card-body">
+                            <div class="cat-item text-center">
+                                <a href="#"></a>
+                                <div class="cat-img"> <img src="{{ asset('frontend/assets/img/icon/house.svg')}}" alt="img"> </div>
+                                <div class="cat-desc">
+                                    <h5 class="mb-1">2BHK House</h5> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-3 col-xs-6">
+                    <div class="card bg-card-light mb-xl-0">
+                        <div class="card-body">
+                            <div class="cat-item text-center">
+                                <a href="#"></a>
+                                <div class="cat-img"> <img src="{{ asset('frontend/assets/img/icon/mansion.svg')}}" alt="img"> </div>
+                                <div class="cat-desc">
+                                    <h5 class="mb-1">Duplex House</h5> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-3 col-xs-6">
+                    <div class="card bg-card-light mb-md-0">
+                        <div class="card-body">
+                            <div class="cat-item text-center">
+                                <a href="#"></a>
+                                <div class="cat-img"> <img src="{{ asset('frontend/assets/img/icon/appartment.svg')}}" alt="img"> </div>
+                                <div class="cat-desc">
+                                    <h5 class="mb-1">3BHK Flats</h5> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-3 col-xs-6">
+                    <div class="card bg-card-light mb-md-0">
+                        <div class="card-body">
+                            <div class="cat-item text-center">
+                                <a href="#"></a>
+                                <div class="cat-img"> <img src="{{ asset('frontend/assets/img/icon/cabin.svg')}}" alt="img"> </div>
+                                <div class="cat-desc">
+                                    <h5 class="mb-1">Single Houses</h5> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-3  col-xs-6">
+                    <div class="card bg-card-light mb-sm-0">
+                        <div class="card-body">
+                            <div class="cat-item text-center">
+                                <a href="#"></a>
+                                <div class="cat-img"> <img src="{{ asset('frontend/assets/img/icon/house.svg')}}" alt="img"> </div>
+                                <div class="cat-desc">
+                                    <h5 class="mb-1">Luxury Rooms</h5> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-3 col-xs-6">
+                    <div class="card bg-card-light mb-0">
+                        <div class="card-body">
+                            <div class="cat-item text-center">
+                                <a href="#"></a>
+                                <div class="cat-img"> <img src="{{ asset('frontend/assets/img/icon/beach-house.svg')}}" alt="img"> </div>
+                                <div class="cat-desc">
+                                    <h5 class="mb-1">Offices</h5> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="gray-simple min">
         <div class="container">
             <div class="row">
