@@ -1,3 +1,46 @@
+<div class="header-top">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-6 left-box">
+                <ul class="info">
+                    <li><i class="fas fa-phone-volume"></i>+91-9453777525</li>
+                    <li><i class="fas fa-envelope-open-text"></i>info@reframerealstate.com</li>
+                </ul>
+            </div>
+
+
+
+            <div class="col-md-6 right-box ">
+
+                <ul class="social-box">
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</div>
 <div class="header header-light">
     <div class="container">
         <nav id="navigation" class="navigation navigation-landscape">
