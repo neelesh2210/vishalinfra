@@ -100,7 +100,7 @@
             </div>
         </div>
     </div>
-    <section class="min">
+    {{-- <section class="min">
         <div class="container">
             <div class="row">
                 <div class="col-9 col-md-9">
@@ -263,7 +263,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section class="gray-simple min">
         <div class="container">
             <div class="row">
