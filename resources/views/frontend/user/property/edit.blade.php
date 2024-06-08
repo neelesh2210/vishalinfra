@@ -117,7 +117,7 @@
                                                     <label for="property_selling_type">Property Selling Type <span class="text-danger">*</span></label>
                                                     <select class="form-control select2" name="property_selling_type" id="property_selling_type"  data-live-search="true" required>
                                                         <option value="">Select Property Selling Type</option>
-                                                        <option value="buy" @if($property->property_selling_type == 'buy') selected @endif>Buy</option>
+                                                        <option value="buy" @if($property->property_selling_type == 'buy') selected @endif>Sell</option>
                                                         <option value="rent" @if($property->property_selling_type == 'rent') selected @endif>Rent</option>
                                                         {{-- <option value="sell" @if($property->property_selling_type == 'sell') selected @endif>Sell</option> --}}
                                                     </select>

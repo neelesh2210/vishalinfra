@@ -160,7 +160,7 @@
                                                     <label for="property_selling_type">Property Selling Type <span class="text-danger">*</span></label>
                                                     <select class="form-control select2" name="property_selling_type" id="property_selling_type"  data-live-search="true" required>
                                                         <option value="">Select Property Selling Type</option>
-                                                        <option value="buy" >Buy</option>
+                                                        <option value="buy">Sell</option>
                                                         <option value="rent">Rent</option>
                                                         {{-- <option value="sell">Sell</option> --}}
                                                     </select>

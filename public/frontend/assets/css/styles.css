@@ -285,6 +285,10 @@ p {
 }
 .gray-simple{
 	background:#f7f9fc;
+    background-image: url(../../../frontend/images/background.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .bg-1{
 	background:#f7d0cb;
