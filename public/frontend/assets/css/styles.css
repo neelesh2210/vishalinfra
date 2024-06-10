@@ -14691,6 +14691,18 @@ h1, .h1 {
 
 
 @media (max-width: 767px) {
+        .sec-heading h2 {
+        font-size: 22px;
+        line-height: 1.2;
+        color: #000;
+        background: linear-gradient(to right, #002999 50%, #f60) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        display: inline-block !important;
+    }
+    .reis-list li {
+        width: 100% !important;
+    }
     .hero_banner:before{
         left: 0;
     }
@@ -15785,7 +15797,6 @@ font-size: 12px;
     line-height: 20px;
 }
 .footer-banner img{
-    background: #f7f9fc;
     width: 100%;
     height: 300px;
 }
@@ -15858,4 +15869,73 @@ font-size: 12px;
 .cat-item .cat-desc {
     margin-top: 15px;
     color: #212529;
+}
+.reis-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    justify-content: center;
+    padding-left: 0;
+}
+.reis-list li {
+    width: 25%;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 25px;
+}
+.cp {
+    cursor: pointer;
+}
+.reis-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #ddd;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+    border: solid 1px #eee;
+}
+.reis-item .reis-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #f5f5f5;
+    line-height: 0;
+    box-sizing: border-box;
+    width: 100px;
+    height: 90px;
+    border-radius: 80px 0 0 0;
+    padding: 25px 0px 0px 30px;
+}
+.reis-item .reis-title {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    line-height: 25px;
+    margin-bottom: 7px;
+}
+.reis-item .reis-title a {
+    color: #333;
+}
+.reis-item .reis-msg {
+    max-width: 80%;
+    font-size: 13px;
+    line-height: 22px;
+    color: #555;
+    min-height: 65px;
+}
+.reis-item .reis-rm {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #9ecce6;
+    color: #2a77a3;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
 }

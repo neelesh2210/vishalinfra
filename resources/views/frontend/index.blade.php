@@ -796,7 +796,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-10 col-md-10 col-sm-10 m-auto">
+                <div class="col-lg-5 col-md-5 col-sm-5">
+                 <img src="{{ asset('frontend/assets/img/faq.png')}}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-7">
                     <!-- Single Basics List -->
                     <div class="faq_wrap">
                         <div class="faq_wrap_body">
@@ -871,7 +874,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                {{-- <div class="card">
                                     <div class="card-header" id="headingSix">
                                       <h2 class="mb-0">
                                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
@@ -912,7 +915,7 @@
                                           <p class="ac-para">Our listings are regularly updated to provide the latest information. However, the frequency may vary, and it's always a good idea to check back periodically for the most current listings.</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -920,6 +923,100 @@
             </div>
         </div>
     </section>
+
+    <section class="reis-sec pb-1">
+        <div class="row justify-content-center">
+            <div class="col-lg-7 col-md-8">
+                <div class="sec-heading center">
+                    <h2>Real Estate Service in Varanasi</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+        <ul class="reis-list">
+                <li>
+
+                <div class="reis-item cp full_link">
+                <div class="reis-icon">
+                <img loading="lazy" src="{{ asset('frontend/assets/img/icon/reis-img.png')}}" alt="Agents / Brokers" height="55" width="55">
+                </div>
+                <h3 class="reis-title"><a href="#" title="Agents / Brokers in India">Agents / Brokers</a></h3>
+                <div class="reis-msg">Here Are Hassle-Free Solutions! Buy - Sell - Rent Your Property</div>
+                <a href="#" class="reis-rm sc">Read More</a>
+                </div>		</li>
+                    <li>
+
+                <div class="reis-item cp full_link">
+                <div class="reis-icon">
+                <img loading="lazy" src="{{ asset('frontend/assets/img/icon/reis-img2.png')}}" alt="Builders / Developers" height="55" width="55">
+                </div>
+                <h3 class="reis-title"><a href="#" title="Builders / Developers in India">Builders / Developers</a></h3>
+                <div class="reis-msg">List of the most trusted and reliable builders to fulfill your Dream HOME.</div>
+                <a href="#" class="reis-rm sc">Read More</a>
+                </div>		</li>
+                    <li>
+
+                <div class="reis-item cp full_link">
+                <div class="reis-icon">
+                <img loading="lazy" src="{{ asset('frontend/assets/img/icon/reis-img3.png')}}" alt="Architects / Architecture" height="55" width="55">
+                </div>
+                <h3 class="reis-title"><a href="#" title="Architects / Architecture in India">Architects / Architecture</a></h3>
+                <div class="reis-msg">Professional Architecture will meet your needs and expectations.</div>
+                <a href="#" class="reis-rm sc">Read More</a>
+                </div>		</li>
+                    <li>
+
+                <div class="reis-item cp full_link">
+                <div class="reis-icon">
+                <img loading="lazy" src="{{ asset('frontend/assets/img/icon/reis-img4.png')}}" alt="Interior Decorators" height="55" width="55">
+                </div>
+                <h3 class="reis-title"><a href="#" title="Interior Decorators in India">Interior Decorators</a></h3>
+                <div class="reis-msg">A One-Stop Solution for all your decor Needs to Match Your Lifestyle.</div>
+                <a href="#" class="reis-rm sc">Read More</a>
+                </div>		</li>
+                    <li>
+
+                <div class="reis-item cp full_link">
+                <div class="reis-icon">
+                <img loading="lazy" src="{{ asset('frontend/assets/img/icon/reis-img7.png')}}" alt="Vaastu Consultant" height="55" width="55">
+                </div>
+                <h3 class="reis-title"><a href="#" title="Vaastu Consultant in India">Vaastu Consultant</a></h3>
+                <div class="reis-msg">Connect to top most Vastu consultants for right direction.</div>
+                <a href="#" class="reis-rm sc">Read More</a>
+                </div>		</li>
+                    <li>
+
+                <div class="reis-item cp full_link">
+                <div class="reis-icon">
+                <img loading="lazy" src="{{ asset('frontend/assets/img/icon/reis-img5.png')}}" "="" alt="Building Contractors" height="55" width="55">
+                </div>
+                <h3 class="reis-title"><a href="#" title="Building Contractors in India">Building Contractors</a></h3>
+                <div class="reis-msg">General contractor for a home repair, remodel, or construction.</div>
+                <a href="#" class="reis-rm sc">Read More</a>
+                </div>		</li>
+                    <li>
+
+                <div class="reis-item cp full_link">
+                <div class="reis-icon">
+                <img loading="lazy" src="{{ asset('frontend/assets/img/icon//reis-img8.png')}}" alt="Home Inspection" height="55" width="55">
+                </div>
+                <h3 class="reis-title"><a href="#" title="Home Inspection in India">Home Inspection</a></h3>
+                <div class="reis-msg">A complete range of building and home inspection services.</div>
+                <a href="#" class="reis-rm sc">Read More</a>
+                </div>		</li>
+                    <li>
+
+                <div class="reis-item cp full_link">
+                <div class="reis-icon">
+                <img loading="lazy" src="{{ asset('frontend/assets/img/icon/reis-img6.png')}}" alt="Property Consultants" height="55" width="55">
+                </div>
+                <h3 class="reis-title"><a href="#" title="Property Consultants in India">Property Consultants</a></h3>
+                <div class="reis-msg">List of Leading Real Estate Consultant for Professional Assistance Services.</div>
+                <a href="#" class="reis-rm sc">Read More</a>
+                </div>		</li>
+                </ul>
+        </div>
+        </section>
     <div class="footer-banner">
         <img src="{{ asset('frontend/images/bg-footer.png') }}" alt="img">
     </div>
