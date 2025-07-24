@@ -463,6 +463,17 @@
                                                         <label class="col-from-label">Discounted Price <span class="text-danger">*</span></label>
                                                         <input type="number" step="0.01" min="0.00" class="form-control" name="discounted_price" id="discounted_price" value="{{$property->discounted_price}}" placeholder="Discounted Price..." required>
                                                     </div>
+                                                    @php
+                                                        if(!$property->commission_amount) {
+                                                            $commission_amount = ($property->discounted_price * $property->project->commission) / 100;
+                                                        }else {
+                                                            $commission_amount = $property->commission_amount;
+                                                        }
+                                                    @endphp
+                                                    <div class="col-md-3 mb-2">
+                                                        <label class="col-from-label">Commission Amount <span class="text-danger">*</span></label>
+                                                        <input type="number" step="0.01" min="0.00" class="form-control" name="commission_amount" id="commission_amount" value="{{$commission_amount}}" placeholder="Commission Amount..." required>
+                                                    </div>
                                                     <div class="col-md-3">
                                                         <label class="col-from-label">Price per sq ft <span class="text-danger">*</span></label>
                                                         <input type="number" step="0.01" min="0.00" class="form-control" name="price" id="price_per_sq_ft" value="{{$property->price}}" placeholder="Price..." readonly>
@@ -578,6 +589,14 @@
                 $('#property_feature_land').hide();
             }
         }
+
+        $('#discounted_price').change(function(){
+            var discounted_price  =  parseInt($('#discounted_price').val());
+            var project_commission = parseInt({{$property->project->commission}});
+            var commission_amount = (discounted_price * project_commission) / 100;
+            $('#commission_amount').val(commission_amount.toFixed(2));
+
+        });
 
         function select_list(id,value){
             $('#'+id).val(value);

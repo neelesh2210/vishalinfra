@@ -62,6 +62,10 @@
                                                         <td>
                                                             <b>Area : </b> @if($project->project_area){{$project->project_area}} Sqft. @endif <br>
                                                             <b>Units : </b> @if($project->total_unit){{$project->total_unit}} @endif
+                                                            @if($project->commission > 0)
+                                                                <br>
+                                                                <b>Commission : </b> {{$project->commission}} % <br>
+                                                            @endif
                                                         </td>
                                                         <td>{{$project->address}},
                                                             @if($project->pincode)

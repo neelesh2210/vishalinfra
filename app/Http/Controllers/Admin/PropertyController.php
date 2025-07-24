@@ -245,6 +245,7 @@ class PropertyController extends Controller
         $property->maintenance_charge=$request->maintenance_charge;
         $property->discounted_price=$request->discounted_price;
         $property->final_price=$request->final_price;
+        $property->commission_amount=$request->commission_amount;
         if(is_array($request->gallery_image)){
             $property->photos=implode(",",$request->gallery_image);
         }else{

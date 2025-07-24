@@ -15,13 +15,17 @@
                                         <tr>
                                             <th class="text-center">Level</th>
                                             <th class="text-center">Percent</th>
+                                            <th class="text-center">Amount</th>
+                                            <th class="text-center" style="width:300px">Reward</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @forelse ($level_percents as $key=>$level_percent)
                                             <tr>
                                                 <td class="text-center">{{$level_percent->level}}</td>
-                                                <td class="text-center">{{ $level_percent->percent }}</td>
+                                                <td class="text-center">{{ $level_percent->percent }} %</td>
+                                                <td class="text-center">₹ {{ $level_percent->amount }}</td>
+                                                <td class="text-center">{{ $level_percent->reward }}</td>
                                             </tr>
                                         @empty
                                             <tr class="footable-empty">
@@ -52,7 +56,7 @@
                                                 <label for="level">Level</label>
                                                 <select name="level" class="form-control" id="level" required onchange="get_percent()">
                                                     <option value="">Select Level...</option>
-                                                    @for ($i=0;$i<=12;$i++)
+                                                    @for ($i=0;$i<=13;$i++)
                                                         <option value="{{$i}}">{{$i}}</option>
                                                     @endfor
                                                 </select>
@@ -60,8 +64,20 @@
                                         </div>
                                         <div class="col-md-12 form_div">
                                             <div class="form-group">
-                                                <label for="level">Level</label>
+                                                <label for="percent">Percent</label>
                                                 <input type="number" step="0.01" min="0.00" value="0.00" name="percent" id="percent" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 form_div">
+                                            <div class="form-group">
+                                                <label for="amount">Amount</label>
+                                                <input type="number" step="0.01" min="0.00" value="0.00" name="amount" id="amount" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 form_div">
+                                            <div class="form-group">
+                                                <label for="reward">Reward</label>
+                                                <textarea name="reward" id="reward" class="form-control"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -87,6 +103,8 @@
                 success: function(data) {
                     if(data){
                         $('#percent').val(data.percent);
+                        $('#amount').val(data.amount);
+                        $('#reward').text(data.reward);
                     }else{
                         $('#percent').val('0.00');
                     }

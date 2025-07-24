@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/vishalinfra/public_html/
+    - export DEPLOYPATH=/home/reframe/public_html/
     - /bin/cp -R * $DEPLOYPATH

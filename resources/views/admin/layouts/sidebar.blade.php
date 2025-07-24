@@ -90,8 +90,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item @if(in_array(Route::currentRouteName(), ['admin.sliders.index','admin.sliders.edit','admin.banners.index','admin.faqs.index','admin.faqs.create','admin.faqs.edit'])) menu-is-opening menu-open @endif">
-                    <a href="#" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.sliders.index','admin.sliders.edit','admin.banners.index','admin.faqs.index','admin.faqs.create','admin.faqs.edit'])) active @endif">
+                <li class="nav-item @if(in_array(Route::currentRouteName(), ['admin.sliders.index','admin.sliders.edit','admin.banners.index','admin.faqs.index','admin.faqs.create','admin.faqs.edit', 'admin.level-percent.index'])) menu-is-opening menu-open @endif">
+                    <a href="#" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.sliders.index','admin.sliders.edit','admin.banners.index','admin.faqs.index','admin.faqs.create','admin.faqs.edit', 'admin.level-percent.index'])) active @endif">
                         <i class="nav-icon fas fa-cogs" aria-hidden="true"></i>
                         <p>Website Setting
                             <i class="fas fa-angle-left right"></i>
@@ -101,6 +101,11 @@
                         <li class="nav-item">
                             <a href="{{route('admin.sliders.index')}}" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.sliders.index','admin.sliders.edit'])) active @endif">
                                 <p>Sliders</p>
+                            </a>
+                        </li>
+                         <li class="nav-item">
+                            <a href="{{route('admin.level-percent.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.level-percent.index' || Route::currentRouteName() == 'admin.level-percent.edit') active @endif">
+                                <p>Level Percent</p>
                             </a>
                         </li>
                         <li class="nav-item">

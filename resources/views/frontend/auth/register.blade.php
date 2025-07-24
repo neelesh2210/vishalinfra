@@ -16,15 +16,15 @@
                                         <label>I am</label>
                                         <div class="input-group">
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="type" id="buyer_owner" value="buyer_owner" @if(old('type') == 'buyer_owner') checked @else checked @endif required>
+                                                <input class="form-check-input" type="radio" name="type" id="buyer_owner" value="buyer_owner" @if(old('type') == 'buyer_owner') checked @else checked @endif required onchange="showHideDiv()">
                                                 <label class="form-check-label" for="buyer_owner">Buyer/Owner </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="type" id="agent" value="agent" @if(old('type') == 'agent') checked @endif>
+                                                <input class="form-check-input" type="radio" name="type" id="agent" value="agent" @if(old('type') == 'agent') checked @endif onchange="showHideDiv()">
                                                 <label class="form-check-label" for="agent">Agent </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="type" id="builder" value="builder" @if(old('type') == 'builder') checked @endif>
+                                                <input class="form-check-input" type="radio" name="type" id="builder" value="builder" @if(old('type') == 'builder') checked @endif onchange="showHideDiv()">
                                                 <label class="form-check-label" for="builder">Builder </label>
                                             </div>
                                         </div>
@@ -88,6 +88,20 @@
                                             <span class="text-danger">{{$message}}</span>
                                         @enderror
                                     </div>
+                                    <div class="form-group d-none" id="sponsor_div">
+                                        <label>Sponsor Code</label>
+                                        <div class="input-group" id="show_hide_password">
+                                            <input type="text" class="form-control" name="sponsor_code" id="sponsor_code" placeholder="Enter Sponsor Code..." value="{{old('sponsor_code')}}">
+                                            <div class="input-group-append ">
+                                                <div class="input-group-text">
+                                                    <a href=""><i class="fas fa-asterisk" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @error('sponsor_code')
+                                            <span class="text-danger">{{$message}}</span>
+                                        @enderror
+                                    </div>
                                     <div class="form-group">
                                         <div class="eltio_ol9">
                                             <div class="eltio_k1">
@@ -130,5 +144,17 @@
                 }
             });
         });
+
+        $(showHideDiv());
+
+        function showHideDiv() {
+            var type = document.querySelector('input[name="type"]:checked').value;
+            if (type === 'agent') {
+                $('#sponsor_div').removeClass('d-none');
+            } else {
+                $('#sponsor_div').addClass('d-none');
+                $('#sponsor_div').val('');
+            }
+        }
     </script>
 @endsection

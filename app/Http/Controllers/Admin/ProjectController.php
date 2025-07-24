@@ -71,6 +71,7 @@ class ProjectController extends Controller
         $project->total_unit = $request->total_unit;
         $project->project_type = $request->project_type;
         $project->project_area = $request->project_area;
+        $project->commission = $request->commission;
         $project->why_buy = $request->why_buy;
         $project->amenities = json_encode($request->amenity);
         $project->videos = json_encode($request->videos);

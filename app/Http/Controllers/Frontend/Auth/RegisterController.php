@@ -25,7 +25,8 @@ class RegisterController extends Controller
     }
 
     public function sendOtp(RegisterRequest $request){
-        $otp = rand(111111,999999);
+        // $otp = rand(111111,999999);
+        $otp = 123456;
         try {
             Msg91::sms()->to('91'.$request->phone)->flow('6565a7dad6fc056d141c67b3')->variable('user',$request->name)->variable('otp',$otp)->send();
         } catch (\Throwable $th) {
@@ -50,6 +51,9 @@ class RegisterController extends Controller
             $user->name = $data['name'];
             $user->email = $data['email'];
             $user->phone = $data['phone'];
+            if($data['type'] == 'agent'){
+                $user->sponsor_code = $data['sponsor_code'];
+            }
             $user->password = Hash::make($data['password']);
             $user->save();
 

@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\Auth\LoginController;
+use App\Http\Controllers\Admin\LevelPercentController;
 use App\Http\Controllers\Admin\PurchasePlanController;
 use App\Http\Controllers\Admin\AssociateWalletController;
 
@@ -95,6 +96,9 @@ Route::group(['middleware'=>'auth:admin','as'=>'admin.'],function () {
 
     //Store Media
     Route::post('store-media', [ImageUploadController::class, 'storeMedia'])->name('store.media');
+
+    //Level Percent
+    Route::resource('level-percent', LevelPercentController::class);
 
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 });

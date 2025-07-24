@@ -25,13 +25,18 @@ class RegisterRequest extends FormRequest
     public function rules(Request $request)
     {
         $rule = [
-            'type' => 'required',
-            'name' => 'required|string|max:150',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' =>'required|string|min:8',
-            'phone' => 'required|min:10|max:10|unique:users,phone',
-            'agree' => 'required',
+            'type'          => 'required',
+            'name'          => 'required|string|max:150',
+            'email'         => 'required|string|email|max:255|unique:users',
+            'password'      =>'required|string|min:8',
+            'phone'         => 'required|min:10|max:10|unique:users,phone',
+            'agree'         => 'required',
         ];
+
+        // Add sponsor_code validation only if type is 'agent'
+        if ($request->input('type') === 'agent') {
+            $rule['sponsor_code'] = 'nullable|exists:users,user_name,type,agent';
+        }
 
         return $rule;
     }

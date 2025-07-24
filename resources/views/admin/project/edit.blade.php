@@ -25,9 +25,13 @@
                                             <div class="frm_submit_block">
                                                 <div class="frm_submit_wrap">
                                                     <div class="form-row">
-                                                        <div class="form-group col-md-12">
+                                                        <div class="form-group col-md-6">
                                                             <label>Project Name</label>
                                                             <input type="text" class="form-control" name="name" value="{{$project->name}}" placeholder="Enter Project Name..." required>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label>Commission (in percentage)</label>
+                                                            <input type="number" step="0.01" class="form-control" name="commission" min="0" max="100" value="{{$project->commission}}" placeholder="Enter Commission (in percentage)..." required>
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label>Status</label>

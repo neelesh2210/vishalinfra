@@ -28,6 +28,13 @@
                     <i class="fa fa-plus-circle"></i>Add New Property
                 </a>
             </li>
+            @if (Auth::guard('web')->user()->type == 'agent')
+                <li @if(in_array(Route::currentRouteName(), ['user.team.index'])) class="active" @endif>
+                    <a href="{{ route('user.team.index') }}">
+                        <i class="fa fa-users"></i>My Team
+                    </a>
+                </li>
+            @endif
             <li @if(in_array(Route::currentRouteName(), ['user.enquiry.index'])) class="active" @endif>
                 <a href="{{ route('user.enquiry.index') }}">
                     <i class="fa fa-envelope"></i>My Leads

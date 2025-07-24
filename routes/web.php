@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PlanController;
+use App\Http\Controllers\TeamController;
 use App\Http\Controllers\EnquiryController;
 use App\Http\Controllers\PhonepeController;
 use App\Http\Controllers\ProjectController;
@@ -146,6 +147,9 @@ Route::group(['middleware'=>['auth:web']],function () {
         Route::put('update-project/{id}',[ProjectController::class,'update'])->name('update.project');
 
         Route::get('enquiry-index',[EnquiryController::class,'index'])->name('enquiry.index');
+
+        //Teams
+        Route::get('team', [TeamController::class, 'index'])->name('team.index');
 
         //Logout
         Route::post('logout',[LoginController::class,'logout'])->name('logout');
