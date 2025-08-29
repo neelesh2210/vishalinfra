@@ -465,7 +465,7 @@
                                                     </div>
                                                     @php
                                                         if(!$property->commission_amount) {
-                                                            $commission_amount = ($property->discounted_price * $property->project->commission) / 100;
+                                                            $commission_amount = ($property->discounted_price * $property->project?->commission) / 100;
                                                         }else {
                                                             $commission_amount = $property->commission_amount;
                                                         }
@@ -592,7 +592,7 @@
 
         $('#discounted_price').change(function(){
             var discounted_price  =  parseInt($('#discounted_price').val());
-            var project_commission = parseInt({{$property->project->commission}});
+            var project_commission = parseInt({{$property->project?->commission}});
             var commission_amount = (discounted_price * project_commission) / 100;
             $('#commission_amount').val(commission_amount.toFixed(2));
 

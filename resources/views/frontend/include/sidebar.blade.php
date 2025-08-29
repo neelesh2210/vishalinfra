@@ -34,6 +34,16 @@
                         <i class="fa fa-users"></i>My Team
                     </a>
                 </li>
+                <li @if(in_array(Route::currentRouteName(), ['user.customer.index', 'user.customer.create', 'user.customer.edit'])) class="active" @endif>
+                    <a href="{{ route('user.customer.index') }}">
+                        <i class="fa fa-users"></i>My Customers
+                    </a>
+                </li>
+                <li @if(in_array(Route::currentRouteName(), ['user.sell.property.index'])) class="active" @endif>
+                    <a href="{{ route('user.sell.property.index') }}">
+                        <i class="fa fa-users"></i>Sell Property
+                    </a>
+                </li>
             @endif
             <li @if(in_array(Route::currentRouteName(), ['user.enquiry.index'])) class="active" @endif>
                 <a href="{{ route('user.enquiry.index') }}">

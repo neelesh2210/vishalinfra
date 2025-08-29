@@ -13,6 +13,7 @@ use App\Http\Controllers\AizUploadController;
 use App\Http\Controllers\InstamojoController;
 use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\UserProfileController;
+use App\Http\Controllers\SellPropertyController;
 use App\Http\Controllers\PropertyListingController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Frontend\Auth\LoginController;
@@ -150,6 +151,12 @@ Route::group(['middleware'=>['auth:web']],function () {
 
         //Teams
         Route::get('team', [TeamController::class, 'index'])->name('team.index');
+
+        //Customers
+        Route::resource('customer', CustomerController::class);
+
+        //Sell Property
+        Route::get('sell-property', [SellPropertyController::class, 'index'])->name('sell.property.index');
 
         //Logout
         Route::post('logout',[LoginController::class,'logout'])->name('logout');
