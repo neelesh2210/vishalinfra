@@ -20,7 +20,7 @@
                                                 <label class="form-check-label" for="buyer_owner">Buyer/Owner </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="type" id="agent" value="agent" @if(old('type') == 'agent') checked @endif onchange="showHideDiv()">
+                                                <input class="form-check-input" type="radio" name="type" id="agent" value="agent" @if(old('type') == 'agent' || $sponsor_code) checked @endif onchange="showHideDiv()">
                                                 <label class="form-check-label" for="agent">Agent </label>
                                             </div>
                                             <div class="form-check form-check-inline">
@@ -91,7 +91,7 @@
                                     <div class="form-group d-none" id="sponsor_div">
                                         <label>Sponsor Code</label>
                                         <div class="input-group" id="show_hide_password">
-                                            <input type="text" class="form-control" name="sponsor_code" id="sponsor_code" placeholder="Enter Sponsor Code..." value="{{old('sponsor_code')}}">
+                                            <input type="text" class="form-control" name="sponsor_code" id="sponsor_code" placeholder="Enter Sponsor Code..." value="{{old('sponsor_code', $sponsor_code)}}">
                                             <div class="input-group-append ">
                                                 <div class="input-group-text">
                                                     <a href=""><i class="fas fa-asterisk" aria-hidden="true"></i></a>

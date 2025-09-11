@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Admin;
 use Carbon\Carbon;
 use App\Models\User;
 use App\CPU\UserManager;
+use App\Models\UserProfile;
 use Illuminate\Http\Request;
+use App\Models\Admin\LevelPercent;
 use App\Models\Admin\PlanPurchase;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -51,12 +53,12 @@ class UserController extends Controller
 
     public function edit($id){
         $user = User::find(decrypt($id));
+        $levels = LevelPercent::oldest('level')->get();
 
-        return view('admin.user.customer.edit',compact('user'),['page_title'=>'Edit Customer']);
+        return view('admin.user.customer.edit',compact('user', 'levels'),['page_title'=>'Edit Customer']);
     }
 
     public function update(Request $request,$id){
-
         $this->validate($request, [
             'name' => 'required',
             'phone' => 'required|unique:users,phone,'.decrypt($id),
@@ -68,6 +70,17 @@ class UserController extends Controller
         $user->phone = $request->phone;
         $user->email = $request->email;
         $user->save();
+
+        if($user->type === 'agent') {
+            $user_profile = UserProfile::where('user_id', $user->id)->first();
+            if(!$user_profile) {
+                $user_profile = new UserProfile;
+                $user_profile->user_id = $user->id;
+            }
+
+            $user_profile->level = $request->level;
+            $user_profile->save();
+        }
 
         return redirect()->route('admin.customer.index')->with('success','Customer Updated Successfully!');
     }

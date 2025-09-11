@@ -6,6 +6,31 @@
                 <div class="col-lg-3 col-md-4">
                     @include('frontend.include.sidebar')
                 </div>
+                @php
+                    $today_earning = App\Models\Admin\Commission::where('is_confirm','1')->where('user_id',Auth::guard('web')->user()->id)->whereDate('created_at', Carbon\Carbon::today())->sum('commission_amount');
+                    $last_7_day_earning = App\Models\Admin\Commission::where('is_confirm','1')->where('user_id',Auth::guard('web')->user()->id)->whereDate('created_at', '>=', Carbon\Carbon::now()->subDays(7))->sum('commission_amount');
+                    $last_30_day_earning = App\Models\Admin\Commission::where('is_confirm','1')->where('user_id',Auth::guard('web')->user()->id)->whereDate('created_at', '>=', Carbon\Carbon::now()->subDays(30))->sum('commission_amount');
+                    $all_time_earning = App\Models\Admin\Commission::where('is_confirm','1')->where('user_id',Auth::guard('web')->user()->id)->sum('commission_amount');
+
+                    $charges = App\Models\Admin\Charge::all();
+                    if(isset($charges[0])){
+                        $service_charge = $charges[0]->amount;
+                    }else{
+                        $service_charge = 0;
+                    }
+                    if(isset($charges[1])){
+                        $tds_charge = $charges[1]->amount;
+                    }else{
+                        $tds_charge = 0;
+                    }
+                    $service_amount = (Auth::guard('web')->user()->commission_balance*$service_charge)/100;
+                    $tds_amount = ((Auth::guard('web')->user()->commission_balance - $service_amount)*$tds_charge)/100;
+                    $pending_payout = Auth::guard('web')->user()->commission_balance - $service_amount - $tds_amount;
+                    $total_book_property = App\Models\BookProperty::where('booked_by',Auth::guard('web')->user()->id)->count();
+                    $total_collection = App\Models\Installment::whereHas('booking',function($query){
+                        $query->where('booked_by',Auth::guard('web')->user()->id);
+                    })->sum('final_amount');
+                @endphp
                 <div class="col-lg-9 col-md-8">
                     <div class="dashboard-body">
                         <div class="row">
@@ -37,8 +62,56 @@
                                     })->get()->count()}}</h4> Consumed Leads<span></span></div>
                                 </div>
                             </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
+                                    <div class="dashboard_stats_wrap_content"><h4>{{$today_earning}}</h4> Today Earning<span></span></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
+                                    <div class="dashboard_stats_wrap_content"><h4>{{$last_7_day_earning}}</h4> Last 7 Days Earning<span></span></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
+                                    <div class="dashboard_stats_wrap_content"><h4>{{$last_30_day_earning}}</h4> Last 30 Days Earning<span></span></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
+                                    <div class="dashboard_stats_wrap_content"><h4>{{$all_time_earning}}</h4> All Time Earning<span></span></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
+                                    <div class="dashboard_stats_wrap_content"><h4>{{round($pending_payout)}}</h4>Pending Payout<span></span></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
+                                    <div class="dashboard_stats_wrap_content"><h4>{{Auth::guard('web')->user()->userProfile->level}} ({{Auth::guard('web')->user()?->userProfile?->levelPercent?->percent}} %)</h4>Level<span></span></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
+                                    <div class="dashboard_stats_wrap_content"><h4>{{$total_book_property}}</h4>Total Book Property<span></span></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
+                                    <div class="dashboard_stats_wrap_content"><h4>{{$total_collection}}</h4>Total Collection<span></span></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="row">
+                        {{-- <div class="row">
                             <div class="col-lg-8 col-md-7 col-sm-12">
                                 <div class="card">
                                     <div class="card-header">
@@ -87,7 +160,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

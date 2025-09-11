@@ -310,3 +310,52 @@ function abreviateTotalCount($value)
     }
 
 }
+
+if(!function_exists('getIndianCurrency')){
+    function getIndianCurrency($number) {
+        $ones = array(
+            0 => 'zero', 1 => 'one', 2 => 'two', 3 => 'three', 4 => 'four', 5 => 'five', 6 => 'six', 7 => 'seven', 8 => 'eight', 9 => 'nine',
+            10 => 'ten', 11 => 'eleven', 12 => 'twelve', 13 => 'thirteen', 14 => 'fourteen', 15 => 'fifteen', 16 => 'sixteen', 17 => 'seventeen', 18 => 'eighteen', 19 => 'nineteen'
+        );
+        $tens = array(
+            0 => 'zero', 1 => 'ten', 2 => 'twenty', 3 => 'thirty', 4 => 'forty', 5 => 'fifty', 6 => 'sixty', 7 => 'seventy', 8 => 'eighty', 9 => 'ninety'
+        );
+        $hundreds = array(
+            0 => '', 1 => 'one hundred', 2 => 'two hundred', 3 => 'three hundred', 4 => 'four hundred', 5 => 'five hundred', 6 => 'six hundred', 7 => 'seven hundred', 8 => 'eight hundred', 9 => 'nine hundred'
+        );
+        $thousands = array(
+            '', 'thousand', 'lakh', 'crore'
+        );
+        $number_parts = explode('.', $number);
+        $integer_part = (int) $number_parts[0];
+        $fractional_part = (isset($number_parts[1])) ? (int) $number_parts[1] : 0;
+        $integer_words = convertToWordsHelper($integer_part, $ones, $tens, $hundreds, $thousands);
+        $fractional_words = convertToWordsHelper($fractional_part, $ones, $tens, $hundreds, $thousands);
+        $result = $integer_words . ' rupees';
+        if ($fractional_part > 0) {
+            $result .= ' and ' . $fractional_words . ' paise';
+        }
+        return $result;
+    }
+}
+
+if(!function_exists('convertToWordsHelper')){
+    function convertToWordsHelper($number, $ones, $tens, $hundreds, $thousands) {
+        if ($number < 20) {
+            return $ones[$number];
+        } elseif ($number < 100) {
+            return $tens[floor($number / 10)] . (($number % 10 > 0) ? ' ' . $ones[$number % 10] : '');
+        } elseif ($number < 1000) {
+            return $hundreds[floor($number / 100)] . (($number % 100 > 0) ? ' ' . convertToWordsHelper($number % 100, $ones, $tens, $hundreds, $thousands) : '');
+        } else {
+            $str = '';
+            for ($i = 0; $number > 0; $i++) {
+                if ($number % 1000 > 0) {
+                    $str = convertToWordsHelper($number % 1000, $ones, $tens, $hundreds, $thousands) . ' ' . $thousands[$i] . ' ' . $str;
+                }
+                $number = floor($number / 1000);
+            }
+            return $str;
+        }
+    }
+}

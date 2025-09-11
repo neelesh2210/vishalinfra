@@ -22,6 +22,7 @@
 
     {{-- Dropzone CSS --}}
     <link rel="stylesheet" href="{{ asset('assets/image/css/dropzone/dropzone.min.css') }}">
+    <link rel="stylesheet" href="{{asset('backend/css/bootstrap-4.min.css')}}">
 
     <script src="{{ asset('frontend/assets/js/jquery.min.js')}}"></script>
 

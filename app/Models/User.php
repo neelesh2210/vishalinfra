@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Admin\Payout;
+use App\Models\Admin\Commission;
 use App\Models\Admin\UserDetail;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\Admin\AssociateWallet;
@@ -37,6 +38,14 @@ class User extends Authenticatable
 
     public function userAddress(){
         return $this->belongsTo(UserAddress::class,'id','user_id');
+    }
+
+    public function commissions(){
+        return $this->hasMany(Commission::class);
+    }
+
+    public function payouts(){
+        return $this->hasMany(Payout::class);
     }
 
 }

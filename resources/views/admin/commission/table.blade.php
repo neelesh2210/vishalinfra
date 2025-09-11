@@ -16,15 +16,14 @@
                     <b>Name: </b>{{$commission->user->name}} <br>
                     <b>Email: </b>{{$commission->user->email}} <br>
                     <b>Phone: </b>{{$commission->user->phone}} <br>
-                    <b>Referrer Code: </b>{{$commission->user->referrer_code}}
+                    <b>Referrer Code: </b>{{$commission->user->user_name}}
                 </td>
                 <td>
                     <b>Type: </b>{{ucwords(str_replace('_',' ',$commission->property->properties_type))}} <br>
                     <b>Project: </b>{{$commission->property->project->name}} <br>
-                    <b>Phase: </b>{{$commission->property->phase->name}} <br>
                     <b>Name: </b>{{$commission->property->name}} <br>
                     <b>Number: </b>{{$commission->property->property_number}} <br>
-                    <b>Price: </b>{{$commission->property->expected_price}}
+                    <b>Price: </b>{{$commission->property->final_price}}
                 </td>
                 <td class="text-center">₹ {{$commission->commission_amount}}</td>
                 <td class="text-center">{{$commission->created_at->format('d-m-Y h:i A')}}</td>

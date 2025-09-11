@@ -39,6 +39,16 @@
                         <i class="fa fa-users"></i>My Customers
                     </a>
                 </li>
+                <li @if(in_array(Route::currentRouteName(), ['user.associates'])) class="active" @endif>
+                    <a href="{{ route('user.associates') }}">
+                        <i class="fa fa-users"></i>My Associates
+                    </a>
+                </li>
+                <li @if(in_array(Route::currentRouteName(), ['user.referral.link'])) class="active" @endif>
+                    <a href="{{ route('user.referral.link') }}">
+                        <i class="fa fa-users"></i>Referral Link
+                    </a>
+                </li>
                 <li @if(in_array(Route::currentRouteName(), ['user.sell.property.index'])) class="active" @endif>
                     <a href="{{ route('user.sell.property.index') }}">
                         <i class="fa fa-users"></i>Sell Property

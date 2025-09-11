@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend\Auth;
 use Auth;
 use Session;
 use App\Models\User;
+use App\Models\UserProfile;
 use Illuminate\Http\Request;
 use App\Models\Admin\Pincode;
 use Craftsys\Msg91\Facade\Msg91;
@@ -16,11 +17,12 @@ use App\Http\Requests\RegisterRequest;
 class RegisterController extends Controller
 {
 
-    public function register(){
+    public function register(Request $request){
+        $sponsor_code = $request->sponsor_code;
         if(Auth::guard('web')->user()){
             return redirect()->route('user.dashboard');
         }else{
-            return view('frontend.auth.register');
+            return view('frontend.auth.register', compact('sponsor_code'));
         }
     }
 
@@ -56,6 +58,11 @@ class RegisterController extends Controller
             }
             $user->password = Hash::make($data['password']);
             $user->save();
+
+            $user_profile = new UserProfile;
+            $user_profile->user_id = $user->id;
+            $user_profile->level = 0;
+            $user_profile->save();
 
             try{
                 Mail::send('frontend.email.welcome', ['user_name'=>$user->name,'phone'=>$user->phone,'user_id'=>$user->user_name], function($message) use($user){

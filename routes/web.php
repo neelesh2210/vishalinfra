@@ -155,8 +155,14 @@ Route::group(['middleware'=>['auth:web']],function () {
         //Customers
         Route::resource('customer', CustomerController::class);
 
+        Route::get('associates', [CustomerController::class, 'associates'])->name('associates');
+
+        Route::view('referral-link','frontend.user.referral_link')->name('referral.link');
+
         //Sell Property
         Route::get('sell-property', [SellPropertyController::class, 'index'])->name('sell.property.index');
+        Route::get('sell-property-detail/{property_id}',[SellPropertyController::class,'sellPropertyDetail'])->name('sell.property.detail');
+        Route::post('book-property/{property_id}',[SellPropertyController::class,'bookProperty'])->name('book.property');
 
         //Logout
         Route::post('logout',[LoginController::class,'logout'])->name('logout');

@@ -77,4 +77,8 @@ class Property extends Model
     public function project(){
         return $this->belongsTo(Project::class,'project_id');
     }
+
+    public function bookProperty(){
+        return $this->belongsTo(BookProperty::class,'id','property_id');
+    }
 }

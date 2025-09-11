@@ -60,6 +60,76 @@
                         <p>Plan Purchase</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{route('admin.installment.request.list')}}" class="nav-link @if(Route::currentRouteName() == 'admin.installment.request.list') active @endif">
+                        <i class="nav-icon fas fa-building"></i>
+                        <p>Installment Request</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('admin.booked.property.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.booked.property.index' || Route::currentRouteName() == 'admin.booked.property.detail' || Route::currentRouteName() == 'admin.property.installment' || Route::currentRouteName() == 'admin.convert.to.emi') active @endif">
+                        <i class="nav-icon fas fa-building"></i>
+                        <p>Booked Property</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{route('admin.emi.property.list')}}" class="nav-link @if(Route::currentRouteName() == 'admin.emi.property.list' || Route::currentRouteName() == 'admin.property.emi' || Route::currentRouteName() == 'admin.final.emi') active @endif">
+                        <i class="nav-icon fas fa-building"></i>
+                        <p>EMI Property</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{route('admin.refund.property.list')}}" class="nav-link @if(Route::currentRouteName() == 'admin.refund.property.list') active @endif">
+                        <i class="nav-icon fas fa-building"></i>
+                        <p>Refund Property</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{route('admin.sold.property.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.sold.property.index') active @endif">
+                        <i class="nav-icon fas fa-building"></i>
+                        <p>Sold Property</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{route('admin.payments')}}" class="nav-link @if(Route::currentRouteName() == 'admin.payments') active @endif">
+                        <i class="nav-icon fas fa-building"></i>
+                        <p>Payments</p>
+                    </a>
+                </li>
+
+                <li class="nav-item @if(Route::currentRouteName() == 'admin.payout.success.index' || Route::currentRouteName() == 'admin.commission.index' || Route::currentRouteName() == 'admin.payout.index') menu-is-opening menu-open @endif">
+                    <a href="#" class="nav-link @if(Route::currentRouteName() == 'admin.payout.success.index' || Route::currentRouteName() == 'admin.commission.index' || Route::currentRouteName() == 'admin.payout.index') active @endif">
+                        <i class="nav-icon fa fa-money-bill" aria-hidden="true"></i>
+                        <p>Payout
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('admin.commission.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.commission.index') active @endif">
+                                <p>Commission</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{route('admin.payout.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.payout.index') active @endif">
+                                <p>Payout Pending List</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{route('admin.payout.success.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.payout.success.index') active @endif">
+                                <p>Success</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
                 <li class="nav-item @if(in_array(Route::currentRouteName(), ['admin.countries.index','admin.countries.edit','admin.states.index','admin.states.edit','admin.cities.index','admin.cities.edit','admin.pincodes.index','admin.pincodes.edit'])) menu-is-opening menu-open @endif">
                     <a href="#" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.countries.index','admin.countries.edit','admin.states.index','admin.states.edit','admin.cities.index','admin.cities.edit','admin.pincodes.index','admin.pincodes.edit'])) active @endif">
                         <i class="nav-icon fa fa-map-marker-alt" aria-hidden="true"></i>
@@ -109,6 +179,11 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{route('admin.charge')}}" class="nav-link @if(Route::currentRouteName() == 'admin.charge') active @endif">
+                                <p>Charge</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{route('admin.banners.index')}}" class="nav-link @if(in_array(Route::currentRouteName(), ['admin.banners.index'])) active @endif">
                                 <p>Banners</p>
                             </a>
@@ -118,6 +193,11 @@
                                 <p>FAQs</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                                <a href="{{route('admin.billing.info')}}" class="nav-link @if(Route::currentRouteName() == 'admin.billing.info') active @endif">
+                                    <p>Billing Info</p>
+                                </a>
+                            </li>
                     </ul>
                 </li>
             </ul>

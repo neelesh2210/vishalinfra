@@ -60,6 +60,19 @@
                                                     </select> --}}
                                                 </div>
                                             </div>
+                                            @if($user->type === 'agent')
+                                                <div class="col-md-6 form_div">
+                                                    <div class="form-group">
+                                                        <label for="level">Level</label>
+                                                        <select name="level" id="level" class="form-control">
+                                                            @foreach ($levels as $level)
+                                                                <option value="{{$level->level}}" @if(optional($user->userProfile)->level == $level->level) selected @endif>{{$level->level}} ({{$level->percent}}%)</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                    <span id="error_level" class="lbl_msg"></span>
+                                                </div>
+                                            @endif
                                         </div>
                                         <div class="d-flex justify-content-center">
                                             <button type="submit" class="btn btn-outline-success">Save</button>

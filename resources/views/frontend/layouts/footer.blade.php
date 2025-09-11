@@ -209,3 +209,90 @@
 <script src="{{ asset('frontend/assets/js/lightbox.js') }}"></script>
 <script src="{{ asset('frontend/assets/js/imagesloaded.js') }}"></script>
 <script src="{{ asset('frontend/assets/js/custom.js') }}"></script>
+<script src="{{ asset('backend/js/sweetalert2.min.js') }}"></script>
+
+<script>
+    $(function () {
+
+        //alerts
+        var Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000
+        });
+        var success_message = "{{ Session::get('success') }}";
+        var info_message = "{{ Session::get('info') }}";
+        var error_message = "{{ Session::get('error') }}";
+        var warning_message = "{{ Session::get('warning') }}";
+        if (success_message != "") {
+            success_alert(success_message);
+        }
+        if (info_message != "") {
+            info_alert(info_message);
+        }
+        if (error_message != "") {
+            error_alert(error_message)
+        }
+        if (warning_message != "") {
+            warning_alert(warning_message)
+        }
+        function success_alert(success_message) {
+            Toast.fire({
+                icon: 'success',
+                title: success_message
+            })
+        }
+        function info_alert(info_message) {
+            Toast.fire({
+                icon: 'info',
+                title: info_message
+            })
+        }
+        function error_alert(error_message) {
+            Toast.fire({
+                icon: 'error',
+                title: error_message
+            })
+        }
+        function warning_alert(warning_message) {
+            Toast.fire({
+                icon: 'warning',
+                title: warning_message
+            })
+        }
+
+        //Daterange
+        $('#reservation').daterangepicker({
+            autoUpdateInput: false,
+            locale: {
+                cancelLabel: 'Clear'
+            }
+        })
+
+        $('#reservation').on('apply.daterangepicker', function(ev, picker) {
+            $(this).val(picker.startDate.format('MM/DD/YYYY') + '-' + picker.endDate.format('MM/DD/YYYY'));
+        });
+
+        $('#reservation').on('cancel.daterangepicker', function(ev, picker) {
+            $(this).val('');
+        });
+
+        $('#reservation1').daterangepicker({
+            autoUpdateInput: false,
+            locale: {
+                cancelLabel: 'Clear'
+            }
+        })
+
+        $('#reservation1').on('apply.daterangepicker', function(ev, picker) {
+            $(this).val(picker.startDate.format('MM/DD/YYYY') + '-' + picker.endDate.format('MM/DD/YYYY'));
+        });
+
+        $('#reservation1').on('cancel.daterangepicker', function(ev, picker) {
+            $(this).val('');
+        });
+    });
+</script>
+
+@stack('script')

@@ -79,4 +79,19 @@ class CustomerController extends Controller
 
         return redirect()->route('user.customer.index')->with('success','Customer Updated Successfully!');
     }
+
+    public function associates(Request $request){
+        $search_key = $request->search_key;
+
+        $customers = User::where('sponsor_code', auth()->guard('web')->user()->user_name)->where('type', 'agent')->when($search_key, function($query) use ($search_key) {
+            $query->where(function($q) use ($search_key) {
+                $q->where('user_name', $search_key)
+                  ->orWhere('name', 'like', '%' . $search_key . '%')
+                  ->orWhere('email', $search_key)
+                  ->orWhere('phone', $search_key);
+            });
+        })->latest()->paginate(10);
+
+        return view('frontend.user.customer.associate',compact('customers', 'search_key'));
+    }
 }

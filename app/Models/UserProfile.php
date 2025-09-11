@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Admin\LevelPercent;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class UserProfile extends Model
 {
@@ -17,4 +18,8 @@ class UserProfile extends Model
         'pan_front',
         'pan_back',
     ];
+
+    public function levelPercent(){
+        return $this->belongsTo(LevelPercent::class,'level','level');
+    }
 }
