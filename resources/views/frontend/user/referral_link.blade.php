@@ -8,18 +8,21 @@
                 </div>
                 <div class="col-lg-9 col-md-8 col-sm-12">
                     <div class="dashboard-body">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="referral" class="form-label">Associate Referrel Link</label>
-                                    <input type="text" id="referral_link" value="{{route('signup')}}?sponsor_code={{Auth::guard('web')->user()->user_name}}" class="form-control">
-                                </div>
-                                <div class="col-md-6 mb-3 mt-4">
-                                    <a class="btn btn-primary mt-3_5" onclick="copyText()">Copy Referral Code</a>
-                                </div>
+                        <label for="referral" class="form-label">Associate Referrel Link</label>
+                        <div class="row d-lg-flex d-block align-items-center">
+                            <div class="col-md-6">
+                                <input type="text" id="referral_link"
+                                    value="{{ route('signup') }}?sponsor_code={{ Auth::guard('web')->user()->user_name }}"
+                                    class="form-control">
+                            </div>
+                            <div class="col-md-6 mt-lg-0 mt-2">
+                                <a class="btn btn-success text-white mt-3_5" onclick="copyText()">Copy Referral Code</a>
                             </div>
                         </div>
+                    </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 

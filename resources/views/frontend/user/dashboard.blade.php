@@ -7,107 +7,238 @@
                     @include('frontend.include.sidebar')
                 </div>
                 @php
-                    $today_earning = App\Models\Admin\Commission::where('is_confirm','1')->where('user_id',Auth::guard('web')->user()->id)->whereDate('created_at', Carbon\Carbon::today())->sum('commission_amount');
-                    $last_7_day_earning = App\Models\Admin\Commission::where('is_confirm','1')->where('user_id',Auth::guard('web')->user()->id)->whereDate('created_at', '>=', Carbon\Carbon::now()->subDays(7))->sum('commission_amount');
-                    $last_30_day_earning = App\Models\Admin\Commission::where('is_confirm','1')->where('user_id',Auth::guard('web')->user()->id)->whereDate('created_at', '>=', Carbon\Carbon::now()->subDays(30))->sum('commission_amount');
-                    $all_time_earning = App\Models\Admin\Commission::where('is_confirm','1')->where('user_id',Auth::guard('web')->user()->id)->sum('commission_amount');
+                    $today_earning = App\Models\Admin\Commission::where('is_confirm', '1')
+                        ->where('user_id', Auth::guard('web')->user()->id)
+                        ->whereDate('created_at', Carbon\Carbon::today())
+                        ->sum('commission_amount');
+                    $last_7_day_earning = App\Models\Admin\Commission::where('is_confirm', '1')
+                        ->where('user_id', Auth::guard('web')->user()->id)
+                        ->whereDate('created_at', '>=', Carbon\Carbon::now()->subDays(7))
+                        ->sum('commission_amount');
+                    $last_30_day_earning = App\Models\Admin\Commission::where('is_confirm', '1')
+                        ->where('user_id', Auth::guard('web')->user()->id)
+                        ->whereDate('created_at', '>=', Carbon\Carbon::now()->subDays(30))
+                        ->sum('commission_amount');
+                    $all_time_earning = App\Models\Admin\Commission::where('is_confirm', '1')
+                        ->where('user_id', Auth::guard('web')->user()->id)
+                        ->sum('commission_amount');
 
                     $charges = App\Models\Admin\Charge::all();
-                    if(isset($charges[0])){
+                    if (isset($charges[0])) {
                         $service_charge = $charges[0]->amount;
-                    }else{
+                    } else {
                         $service_charge = 0;
                     }
-                    if(isset($charges[1])){
+                    if (isset($charges[1])) {
                         $tds_charge = $charges[1]->amount;
-                    }else{
+                    } else {
                         $tds_charge = 0;
                     }
-                    $service_amount = (Auth::guard('web')->user()->commission_balance*$service_charge)/100;
-                    $tds_amount = ((Auth::guard('web')->user()->commission_balance - $service_amount)*$tds_charge)/100;
+                    $service_amount = (Auth::guard('web')->user()->commission_balance * $service_charge) / 100;
+                    $tds_amount =
+                        ((Auth::guard('web')->user()->commission_balance - $service_amount) * $tds_charge) / 100;
                     $pending_payout = Auth::guard('web')->user()->commission_balance - $service_amount - $tds_amount;
-                    $total_book_property = App\Models\BookProperty::where('booked_by',Auth::guard('web')->user()->id)->count();
-                    $total_collection = App\Models\Installment::whereHas('booking',function($query){
-                        $query->where('booked_by',Auth::guard('web')->user()->id);
+                    $total_book_property = App\Models\BookProperty::where(
+                        'booked_by',
+                        Auth::guard('web')->user()->id,
+                    )->count();
+                    $total_collection = App\Models\Installment::whereHas('booking', function ($query) {
+                        $query->where('booked_by', Auth::guard('web')->user()->id);
                     })->sum('final_amount');
                 @endphp
                 <div class="col-lg-9 col-md-8">
                     <div class="dashboard-body">
                         <div class="row">
                             <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan ">
-                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content"><h4>{{App\Models\Admin\Property::where('added_by',Auth::guard('web')->user()->id)->get()->count()}}</h4> <span>Total Property</span></div>
+                                <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
+                                    <div class="dashboard_stats_wrap_content">
+                                        <div class="dashboard-content">
+                                            <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
+                                                <i class="fa fa-building fs-3 lh-1"></i>
+                                            </div>
+                                            <div>
+                                                <h4>{{ App\Models\Admin\Property::where('added_by', Auth::guard('web')->user()->id)->get()->count() }}
+                                                </h4>
+                                                <span>Total Property</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="dashboard_stats_wrap widget-3 gradient-45deg-red-pink">
-                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content"><h4>{{App\Models\Admin\Property::where('added_by',Auth::guard('web')->user()->id)->where('is_status','1')->get()->count()}}</h4> <span>Approved Property</span></div>
+                                    <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
+                                    <div class="dashboard_stats_wrap_content">
+                                        <div class="dashboard-content">
+                                            <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
+                                                <i class="fa fa-building fs-3 lh-1"></i>
+                                            </div>
+                                            <div>
+                                                <h4>{{ App\Models\Admin\Property::where('added_by', Auth::guard('web')->user()->id)->where('is_status', '1')->get()->count() }}
+                                                </h4> <span>Approved Property</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="dashboard_stats_wrap widget-2 gradient-45deg-amber-amber">
-                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content"><h4>{{App\Models\Enquiry::whereHas('property',function($q){
-                                        $q->where('added_by',Auth::guard('web')->user()->id);
-                                    })->get()->count()}}</h4> <span>Total Leads</span></div>
+                                    <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
+                                    <div class="dashboard_stats_wrap_content">
+                                        <div class="dashboard-content">
+                                            <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
+                                                <i class="fas fa-chart-line fs-3 lh-1"></i>
+                                            </div>
+                                            <div>
+                                                <h4>{{ App\Models\Enquiry::whereHas('property', function ($q) {
+                                                    $q->where('added_by', Auth::guard('web')->user()->id);
+                                                })->get()->count() }}
+                                                </h4> <span>Total Leads</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
-                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content"><h4>{{App\Models\Enquiry::whereHas('property',function($q){
-                                        $q->where('added_by',Auth::guard('web')->user()->id);
-                                    })->get()->count()}}</h4> Consumed Leads<span></span></div>
+                                <div class="dashboard_stats_wrap widget-12 gradient-45deg-light-green-veg">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
+                                    <div class="dashboard_stats_wrap_content">
+                                        <div class="dashboard-content">
+                                            <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
+                                                <i class="fas fa-chart-pie fs-3 lh-1"></i>
+                                            </div>
+                                            <div>
+                                                <h4>{{ App\Models\Enquiry::whereHas('property', function ($q) {
+                                                    $q->where('added_by', Auth::guard('web')->user()->id);
+                                                })->get()->count() }}
+                                                </h4> Consumed Leads<span></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
-                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content"><h4>{{$today_earning}}</h4> Today Earning<span></span></div>
+                                <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
+                                    <div class="dashboard_stats_wrap_content">
+                                        <div class="dashboard-content">
+                                            <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
+                                                <i class="fas fa-coins fs-3 lh-1"></i>
+                                            </div>
+                                            <div>
+                                                <h4>{{ $today_earning }}</h4> Today Earning<span></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
-                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content"><h4>{{$last_7_day_earning}}</h4> Last 7 Days Earning<span></span></div>
+                                <div class="dashboard_stats_wrap widget-3 gradient-45deg-red-pink">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
+                                    <div class="dashboard_stats_wrap_content">
+                                        <div class="dashboard-content">
+                                            <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
+                                                <i class="fas fa-money-bill-wave fs-3 lh-1"></i>
+                                            </div>
+                                            <div>
+                                                <h4>{{ $last_7_day_earning }}</h4> Last 7 Days Earning<span></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
-                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content"><h4>{{$last_30_day_earning}}</h4> Last 30 Days Earning<span></span></div>
+                                <div class="dashboard_stats_wrap widget-2 gradient-45deg-amber-amber">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
+                                    <div class="dashboard_stats_wrap_content">
+                                        <div class="dashboard-content">
+                                            <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
+                                                <i class="far fa-money-bill-alt fs-3 lh-1"></i>
+                                            </div>
+                                            <div>
+                                                <h4>{{ $last_30_day_earning }}</h4> Last 30 Days Earning<span></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
-                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content"><h4>{{$all_time_earning}}</h4> All Time Earning<span></span></div>
+                                <div class="dashboard_stats_wrap widget-12 gradient-45deg-light-green-veg">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
+                                    <div class="dashboard_stats_wrap_content">
+                                        <div class="dashboard-content">
+                                            <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
+                                                <i class="fas fa-money-bill fs-3 lh-1"></i>
+                                            </div>
+                                            <div>
+                                                <h4>{{ $all_time_earning }}</h4> All Time Earning<span></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
-                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content"><h4>{{round($pending_payout)}}</h4>Pending Payout<span></span></div>
+                                <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
+                                    <div class="dashboard_stats_wrap_content">
+                                        <div class="dashboard-content">
+                                            <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
+                                                <i class="fas fa-hand-holding-usd fs-3 lh-1"></i>
+                                            </div>
+                                            <div>
+                                                <h4>{{ round($pending_payout) }}</h4>Pending Payout<span></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
-                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content"><h4>{{Auth::guard('web')->user()->userProfile->level}} ({{Auth::guard('web')->user()?->userProfile?->levelPercent?->percent}} %)</h4>Level<span></span></div>
+                                <div class="dashboard_stats_wrap widget-10 widget-3 gradient-45deg-red-pink">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
+                                    <div class="dashboard_stats_wrap_content">
+                                        <div class="dashboard-content">
+                                            <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
+                                                <i class="fas fa-route fs-3 lh-1"></i>
+                                            </div>
+                                            <div>
+                                                <h4>{{ Auth::guard('web')->user()->userProfile->level }}
+                                                    ({{ Auth::guard('web')->user()?->userProfile?->levelPercent?->percent }}
+                                                    %)
+                                                </h4>Level<span></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
-                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content"><h4>{{$total_book_property}}</h4>Total Book Property<span></span></div>
+                                <div class="dashboard_stats_wrap widget-2 gradient-45deg-amber-amber">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
+                                    <div class="dashboard_stats_wrap_content">
+                                        <div class="dashboard-content">
+                                            <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
+                                                <i class="fas fa-map-signs fs-3 lh-1"></i>
+                                            </div>
+                                            <div>
+                                                <h4>{{ $total_book_property }}</h4>Total Book Property<span></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-4 gradient-45deg-green-teal">
-                                    <img src="{{ asset('frontend/assets/img/circle.svg')}}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content"><h4>{{$total_collection}}</h4>Total Collection<span></span></div>
+                                <div class="dashboard_stats_wrap widget-12 gradient-45deg-light-green-veg">
+                                    <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
+                                    <div class="dashboard_stats_wrap_content">
+                                        <div class="dashboard-content">
+                                            <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
+                                                <i class="fas fa-donate fs-3 lh-1"></i>
+                                            </div>
+                                            <div>
+                                                <h4>{{ $total_collection }}</h4>Total Collection<span></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -166,26 +297,34 @@
             </div>
         </div>
     </section>
-    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="registermodal" aria-hidden="true">
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="registermodal"
+        aria-hidden="true">
         <div class="modal-dialog modal-xl login-pop-form" role="document">
             <div class="modal-content overli" id="registermodal">
                 <div class="modal-body p-0">
                     <div class="resp_log_wrap">
-                        <div class="resp_log_thumb" style="background:url({{ asset('frontend/assets/img/log.jpg')}})no-repeat;"></div>
+                        <div class="resp_log_thumb"
+                            style="background:url({{ asset('frontend/assets/img/log.jpg') }})no-repeat;"></div>
                         <div class="resp_log_caption">
-                            <span class="mod-close" data-dismiss="modal" aria-hidden="true"><i class="ti-close"></i></span>
+                            <span class="mod-close" data-dismiss="modal" aria-hidden="true"><i
+                                    class="ti-close"></i></span>
                             <div class="edlio_152">
                                 <ul class="nav nav-pills tabs_system center" id="pills-tab" role="tablist">
                                     <li class="nav-item">
-                                    <a class="nav-link active" id="pills-login-tab" data-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-login" aria-selected="true"><i class="fas fa-sign-in-alt mr-2"></i>Login</a>
+                                        <a class="nav-link active" id="pills-login-tab" data-toggle="pill"
+                                            href="#pills-login" role="tab" aria-controls="pills-login"
+                                            aria-selected="true"><i class="fas fa-sign-in-alt mr-2"></i>Login</a>
                                     </li>
                                     <li class="nav-item">
-                                    <a class="nav-link" id="pills-signup-tab" data-toggle="pill" href="#pills-signup" role="tab" aria-controls="pills-signup" aria-selected="false"><i class="fas fa-user-plus mr-2"></i>Register</a>
+                                        <a class="nav-link" id="pills-signup-tab" data-toggle="pill"
+                                            href="#pills-signup" role="tab" aria-controls="pills-signup"
+                                            aria-selected="false"><i class="fas fa-user-plus mr-2"></i>Register</a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="tab-content" id="pills-tabContent">
-                                <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
+                                <div class="tab-pane fade show active" id="pills-login" role="tabpanel"
+                                    aria-labelledby="pills-login-tab">
                                     <div class="login-form">
                                         <form>
                                             <div class="form-group">
@@ -205,8 +344,10 @@
                                             <div class="form-group">
                                                 <div class="eltio_ol9">
                                                     <div class="eltio_k1">
-                                                        <input id="dd" class="checkbox-custom" name="dd" type="checkbox">
-                                                        <label for="dd" class="checkbox-custom-label">Remember Me</label>
+                                                        <input id="dd" class="checkbox-custom" name="dd"
+                                                            type="checkbox">
+                                                        <label for="dd" class="checkbox-custom-label">Remember
+                                                            Me</label>
                                                     </div>
                                                     <div class="eltio_k2">
                                                         <a href="#">Lost Your Password?</a>
@@ -214,12 +355,14 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <button type="submit" class="btn btn-md full-width pop-login">Login</button>
+                                                <button type="submit"
+                                                    class="btn btn-md full-width pop-login">Login</button>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="pills-signup" role="tabpanel" aria-labelledby="pills-signup-tab">
+                                <div class="tab-pane fade" id="pills-signup" role="tabpanel"
+                                    aria-labelledby="pills-signup-tab">
                                     <div class="login-form">
                                         <form>
                                             <div class="form-group">
@@ -246,13 +389,16 @@
                                             <div class="form-group">
                                                 <div class="eltio_ol9">
                                                     <div class="eltio_k1">
-                                                        <input id="dds" class="checkbox-custom" name="dds" type="checkbox">
-                                                        <label for="dds" class="checkbox-custom-label">By using the website, you accept the terms and conditions</label>
+                                                        <input id="dds" class="checkbox-custom" name="dds"
+                                                            type="checkbox">
+                                                        <label for="dds" class="checkbox-custom-label">By using the
+                                                            website, you accept the terms and conditions</label>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <button type="submit" class="btn btn-md full-width pop-login">Register</button>
+                                                <button type="submit"
+                                                    class="btn btn-md full-width pop-login">Register</button>
                                             </div>
                                         </form>
                                     </div>
@@ -266,8 +412,7 @@
     </div>
     <a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
 
-    <script src="{{ asset('frontend/assets/js/raphael.min.js')}}"></script>
-    <script src="{{ asset('frontend/assets/js/morris.min.js')}}"></script>
-    <script src="{{ asset('frontend/assets/js/morris.js')}}"></script>
-
+    <script src="{{ asset('frontend/assets/js/raphael.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/morris.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/morris.js') }}"></script>
 @endsection

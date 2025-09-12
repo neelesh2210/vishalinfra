@@ -7,7 +7,7 @@
         <ul>
             <li @if(in_array(Route::currentRouteName(), ['user.dashboard'])) class="active" @endif>
                 <a href="{{ route('user.dashboard') }}">
-                    <i class="fa fa-tachometer-alt"></i>Dashboard
+                    <i class="fa fa-th"></i>Dashboard
                 </a>
             </li>
             @if (Auth::guard('web')->user()->type == 'builder')
@@ -17,7 +17,7 @@
             @endif
             <li @if(in_array(Route::currentRouteName(), ['user.property.index'])) class="active" @endif>
                 <a href="{{ route('user.property.index') }}">
-                    <i class="fa fa-tasks"></i>My Properties
+                    <i class="fa fa-building"></i>My Properties
                     <span class="notti_coun style-1">
                         {{ App\Models\Admin\Property::where('added_by', Auth::guard('web')->user()->id)->get()->count() }}
                     </span>
@@ -31,7 +31,7 @@
             @if (Auth::guard('web')->user()->type == 'agent')
                 <li @if(in_array(Route::currentRouteName(), ['user.team.index'])) class="active" @endif>
                     <a href="{{ route('user.team.index') }}">
-                        <i class="fa fa-users"></i>My Team
+                        <i class="fas fa-user-friends"></i>My Team
                     </a>
                 </li>
                 <li @if(in_array(Route::currentRouteName(), ['user.customer.index', 'user.customer.create', 'user.customer.edit'])) class="active" @endif>
@@ -46,18 +46,18 @@
                 </li>
                 <li @if(in_array(Route::currentRouteName(), ['user.referral.link'])) class="active" @endif>
                     <a href="{{ route('user.referral.link') }}">
-                        <i class="fa fa-users"></i>Referral Link
+                        <i class="fa fa-link"></i>Referral Link
                     </a>
                 </li>
                 <li @if(in_array(Route::currentRouteName(), ['user.sell.property.index'])) class="active" @endif>
                     <a href="{{ route('user.sell.property.index') }}">
-                        <i class="fa fa-users"></i>Sell Property
+                        <i class="fas fa-hand-holding-usd"></i>Sell Property
                     </a>
                 </li>
             @endif
             <li @if(in_array(Route::currentRouteName(), ['user.enquiry.index'])) class="active" @endif>
                 <a href="{{ route('user.enquiry.index') }}">
-                    <i class="fa fa-envelope"></i>My Leads
+                    <i class="fas fa-chart-line"></i>My Leads
                     <span class="notti_coun style-3">
                         {{ App\Models\Enquiry::whereHas('property', function ($q) {
                             $q->where('added_by', Auth::guard('web')->user()->id);
@@ -67,12 +67,12 @@
             </li>
             <li @if(in_array(Route::currentRouteName(), ['user.profile'])) class="active" @endif>
                 <a href="{{ route('user.profile') }}">
-                    <i class="fa fa-user-tie"></i>My Profile
+                    <i class="fas fa-user-cog"></i>My Profile
                 </a>
             </li>
             <li @if(in_array(Route::currentRouteName(), ['user.subscription.list'])) class="active" @endif>
                 <a href="{{ route('user.subscription.list') }}">
-                    <i class="fa fa-gift"></i> Subscription Status
+                    <i class="fa fa-bell"></i> Subscription Status
                     <span class="expiration">
                         @php
                             $date = App\Models\Admin\PlanPurchase::where('user_id', Auth::guard('web')->user()->id)->where('expiry_at', '>=', \Carbon\Carbon::now())->orderBy('expiry_at','asc')->first();
