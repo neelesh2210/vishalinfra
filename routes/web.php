@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PlanController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\TreeController;
 use App\Http\Controllers\EnquiryController;
 use App\Http\Controllers\PhonepeController;
 use App\Http\Controllers\ProjectController;
@@ -127,6 +128,7 @@ Route::group(['middleware'=>['auth:web']],function () {
         Route::get('property-listing-edit/{id}',[PropertyListingController::class,'edit'])->name('property.listing.edit');
         Route::put('property-listing-update/{id}',[PropertyListingController::class,'update'])->name('property.listing.update');
         Route::get('property-listing-status/{id}/{status}',[PropertyListingController::class,'status'])->name('property.listing.status');
+        Route::get('property-installment/{booking_id}',[PropertyListingController::class,'propertyInstallment'])->name('property.installment');
 
         //Profile
         Route::get('profile',[UserProfileController::class,'profile'])->name('profile');
@@ -163,6 +165,12 @@ Route::group(['middleware'=>['auth:web']],function () {
         Route::get('sell-property', [SellPropertyController::class, 'index'])->name('sell.property.index');
         Route::get('sell-property-detail/{property_id}',[SellPropertyController::class,'sellPropertyDetail'])->name('sell.property.detail');
         Route::post('book-property/{property_id}',[SellPropertyController::class,'bookProperty'])->name('book.property');
+
+        //Tree
+        Route::get('tree',[TreeController::class,'tree'])->name('tree');
+        Route::get('get-mlm-tree',[TreeController::class,'getMLMTree'])->name('get.mlm.tree');
+        Route::get('get-referrel-detail',[TreeController::class,'referral_details'])->name('get.referrel.detail');
+        Route::get('/tree/json', [TreeController::class, 'getTreeJson'])->name('user.get.tree.json');
 
         //Logout
         Route::post('logout',[LoginController::class,'logout'])->name('logout');

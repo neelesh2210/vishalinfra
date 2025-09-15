@@ -34,6 +34,11 @@
                         <i class="fas fa-user-friends"></i>My Team
                     </a>
                 </li>
+                <li @if(in_array(Route::currentRouteName(), ['user.tree'])) class="active" @endif>
+                    <a href="{{ route('user.tree') }}">
+                        <i class="fas fa-user-friends"></i>Tree
+                    </a>
+                </li>
                 <li @if(in_array(Route::currentRouteName(), ['user.customer.index', 'user.customer.create', 'user.customer.edit'])) class="active" @endif>
                     <a href="{{ route('user.customer.index') }}">
                         <i class="fa fa-users"></i>My Customers

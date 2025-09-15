@@ -79,6 +79,7 @@ Route::group(['middleware'=>'auth:admin','as'=>'admin.'],function () {
     Route::get('customer-verify-status/{id}/{status}',[UserController::class,'verifyStatus'])->name('customer.verify.status');
     Route::get('customer-block-status/{id}/{status}',[UserController::class,'verifyBlock'])->name('customer.block.status');
     Route::get('customer-plan-purchase/{id}',[UserController::class,'planPurchase'])->name('customer.plan.purchase');
+    Route::get('customer-login/{id}',[UserController::class,'customerLogin'])->name('customer.login');
 
     //Purchase Plan
     Route::get('purchase-plan-index',[PurchasePlanController::class,'index'])->name('purchase.plan.index');

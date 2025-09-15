@@ -46,7 +46,7 @@
                 color:green;
             }
         </style>
-             <div class="preloader">
+             {{-- <div class="preloader">
                 <div class="d-table">
                     <div class="d-table-cell">
                         <div class="lds-spinner">
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
          <div id="main-wrapper">
             @include('frontend.layouts.header')
                 @yield('content')

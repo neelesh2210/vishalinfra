@@ -42,6 +42,9 @@
                     <a href="{{route('admin.customer.plan.purchase',encrypt($customer->id))}}" class="btn btn-outline-primary btn-sm mr-1 mb-1" title="Plan Purchase">
                         <i class="fas fa-file-alt "></i>
                     </a>
+                    <a class="btn btn-outline-success btn-sm mr-1 mb-1" title="Login" href="{{route('admin.customer.login',$customer->id)}}" target="_blank">
+                        <i class="fas fa-sign-in-alt"></i>
+                    </a>
                 </td>
             </tr>
         @empty

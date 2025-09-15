@@ -109,4 +109,13 @@ class UserController extends Controller
         return view('admin.user.customer.plan_purchase',compact('user','plan_purchases'),['page_title'=>'Plan Purchase']);
     }
 
+    public function customerLogin($id){
+        $user = User::find($id);
+        if($user){
+            auth()->guard('web')->login($user);
+            return redirect()->route('user.dashboard');
+        }
+        return back();
+    }
+
 }

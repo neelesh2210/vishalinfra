@@ -118,129 +118,131 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan">
-                                    <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content">
-                                        <div class="dashboard-content">
-                                            <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
-                                                <i class="fas fa-coins fs-3 lh-1"></i>
-                                            </div>
-                                            <div>
-                                                <h4>{{ $today_earning }}</h4> Today Earning<span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-3 gradient-45deg-red-pink">
-                                    <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content">
-                                        <div class="dashboard-content">
-                                            <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
-                                                <i class="fas fa-money-bill-wave fs-3 lh-1"></i>
-                                            </div>
-                                            <div>
-                                                <h4>{{ $last_7_day_earning }}</h4> Last 7 Days Earning<span></span>
+                            @if(Auth::guard('web')->user()->type === 'agent')
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan">
+                                        <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
+                                        <div class="dashboard_stats_wrap_content">
+                                            <div class="dashboard-content">
+                                                <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
+                                                    <i class="fas fa-coins fs-3 lh-1"></i>
+                                                </div>
+                                                <div>
+                                                    <h4>{{ $today_earning }}</h4> Today Earning<span></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-2 gradient-45deg-amber-amber">
-                                    <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content">
-                                        <div class="dashboard-content">
-                                            <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
-                                                <i class="far fa-money-bill-alt fs-3 lh-1"></i>
-                                            </div>
-                                            <div>
-                                                <h4>{{ $last_30_day_earning }}</h4> Last 30 Days Earning<span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-12 gradient-45deg-light-green-veg">
-                                    <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content">
-                                        <div class="dashboard-content">
-                                            <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
-                                                <i class="fas fa-money-bill fs-3 lh-1"></i>
-                                            </div>
-                                            <div>
-                                                <h4>{{ $all_time_earning }}</h4> All Time Earning<span></span>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="dashboard_stats_wrap widget-3 gradient-45deg-red-pink">
+                                        <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
+                                        <div class="dashboard_stats_wrap_content">
+                                            <div class="dashboard-content">
+                                                <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
+                                                    <i class="fas fa-money-bill-wave fs-3 lh-1"></i>
+                                                </div>
+                                                <div>
+                                                    <h4>{{ $last_7_day_earning }}</h4> Last 7 Days Earning<span></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan">
-                                    <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content">
-                                        <div class="dashboard-content">
-                                            <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
-                                                <i class="fas fa-hand-holding-usd fs-3 lh-1"></i>
-                                            </div>
-                                            <div>
-                                                <h4>{{ round($pending_payout) }}</h4>Pending Payout<span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-10 widget-3 gradient-45deg-red-pink">
-                                    <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content">
-                                        <div class="dashboard-content">
-                                            <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
-                                                <i class="fas fa-route fs-3 lh-1"></i>
-                                            </div>
-                                            <div>
-                                                <h4>{{ Auth::guard('web')->user()->userProfile->level }}
-                                                    ({{ Auth::guard('web')->user()?->userProfile?->levelPercent?->percent }}
-                                                    %)
-                                                </h4>Level<span></span>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="dashboard_stats_wrap widget-2 gradient-45deg-amber-amber">
+                                        <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
+                                        <div class="dashboard_stats_wrap_content">
+                                            <div class="dashboard-content">
+                                                <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
+                                                    <i class="far fa-money-bill-alt fs-3 lh-1"></i>
+                                                </div>
+                                                <div>
+                                                    <h4>{{ $last_30_day_earning }}</h4> Last 30 Days Earning<span></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-2 gradient-45deg-amber-amber">
-                                    <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content">
-                                        <div class="dashboard-content">
-                                            <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
-                                                <i class="fas fa-map-signs fs-3 lh-1"></i>
-                                            </div>
-                                            <div>
-                                                <h4>{{ $total_book_property }}</h4>Total Book Property<span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-12 gradient-45deg-light-green-veg">
-                                    <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
-                                    <div class="dashboard_stats_wrap_content">
-                                        <div class="dashboard-content">
-                                            <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
-                                                <i class="fas fa-donate fs-3 lh-1"></i>
-                                            </div>
-                                            <div>
-                                                <h4>{{ $total_collection }}</h4>Total Collection<span></span>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="dashboard_stats_wrap widget-12 gradient-45deg-light-green-veg">
+                                        <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
+                                        <div class="dashboard_stats_wrap_content">
+                                            <div class="dashboard-content">
+                                                <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
+                                                    <i class="fas fa-money-bill fs-3 lh-1"></i>
+                                                </div>
+                                                <div>
+                                                    <h4>{{ $all_time_earning }}</h4> All Time Earning<span></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan">
+                                        <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
+                                        <div class="dashboard_stats_wrap_content">
+                                            <div class="dashboard-content">
+                                                <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
+                                                    <i class="fas fa-hand-holding-usd fs-3 lh-1"></i>
+                                                </div>
+                                                <div>
+                                                    <h4>{{ round($pending_payout) }}</h4>Pending Payout<span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="dashboard_stats_wrap widget-10 widget-3 gradient-45deg-red-pink">
+                                        <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
+                                        <div class="dashboard_stats_wrap_content">
+                                            <div class="dashboard-content">
+                                                <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
+                                                    <i class="fas fa-route fs-3 lh-1"></i>
+                                                </div>
+                                                <div>
+                                                    <h4>{{ Auth::guard('web')->user()?->userProfile?->level }}
+                                                        ({{ Auth::guard('web')->user()?->userProfile?->levelPercent?->percent }}
+                                                        %)
+                                                    </h4>Level<span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="dashboard_stats_wrap widget-2 gradient-45deg-amber-amber">
+                                        <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
+                                        <div class="dashboard_stats_wrap_content">
+                                            <div class="dashboard-content">
+                                                <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
+                                                    <i class="fas fa-map-signs fs-3 lh-1"></i>
+                                                </div>
+                                                <div>
+                                                    <h4>{{ $total_book_property }}</h4>Total Book Property<span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="dashboard_stats_wrap widget-12 gradient-45deg-light-green-veg">
+                                        <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
+                                        <div class="dashboard_stats_wrap_content">
+                                            <div class="dashboard-content">
+                                                <div class="icon-box lg p-4 rounded-5 me-3 shadow-solid-rb ">
+                                                    <i class="fas fa-donate fs-3 lh-1"></i>
+                                                </div>
+                                                <div>
+                                                    <h4>{{ $total_collection }}</h4>Total Collection<span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
                         </div>
                         {{-- <div class="row">
                             <div class="col-lg-8 col-md-7 col-sm-12">

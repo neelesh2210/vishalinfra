@@ -87,10 +87,17 @@
                                                             <div class="_leads_view_title"><span>Till {{$property->planPurchase?$property->planPurchase->expiry_at:'FREE'}}</span></div>
                                                         </td>
                                                         <td>
-                                                            <div class="_leads_action">
-                                                                <a href="{{route('user.property.listing.edit',encrypt($property->id))}}"><i class="fas fa-edit"></i></a>
-                                                                {{-- <a href="#"><i class="fas fa-trash"></i></a> --}}
-                                                            </div>
+                                                            @if($property->bookProperty)
+                                                                <a href="{{route('user.property.installment', encrypt($property->bookProperty->id))}}">Booked</a>
+                                                                <div class="_leads_action">
+                                                                    <a href="{{route('user.property.installment', encrypt($property->bookProperty->id))}}">View Detail</a>
+                                                                </div>
+                                                            @else
+                                                                <div class="_leads_action">
+                                                                    <a href="{{route('user.property.listing.edit',encrypt($property->id))}}"><i class="fas fa-edit"></i></a>
+                                                                    {{-- <a href="#"><i class="fas fa-trash"></i></a> --}}
+                                                                </div>
+                                                            @endif
                                                         </td>
                                                     </tr>
                                                 @endforeach

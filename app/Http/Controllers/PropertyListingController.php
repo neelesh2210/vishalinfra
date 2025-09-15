@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Auth;
 use Carbon\Carbon;
+use App\Models\Installment;
 use App\CPU\PropertyManager;
+use App\Models\BookProperty;
 use Illuminate\Http\Request;
 use App\Models\Admin\Project;
 use App\Models\Admin\Property;
@@ -22,7 +24,7 @@ class PropertyListingController extends Controller
             $properties = $properties->where('name','LIKE','%'.$search_key.'%');
         }
 
-        $properties = $properties->with('planPurchase')->orderBy('id','desc')->paginate(15);
+        $properties = $properties->with('planPurchase', 'bookProperty')->orderBy('id','desc')->paginate(15);
 
         return view('frontend.user.property.index',compact('properties','search_key'),['page_title'=>'My Properties']);
     }
@@ -266,6 +268,15 @@ class PropertyListingController extends Controller
         $property->save();
 
         return back()->with('success','Property Updated Successfully!');
+    }
+
+    public function propertyInstallment(Request $request,$booking_id){
+        $search_date = $request->search_date;
+
+        $property = BookProperty::where('id',decrypt($booking_id))->with(['property','user'])->first();
+        $installments = Installment::where('booking_id',decrypt($booking_id))->with('commissions.user')->latest()->get();
+
+        return view('frontend.user.property.installment',compact('property','installments','search_date'),['page_title'=>'Installment List']);
     }
 
 }
