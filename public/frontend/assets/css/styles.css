@@ -2755,7 +2755,8 @@ a.btn-trans-video i {
 
 .btn-info:hover,
 .btn-info.disabled:hover {
-    background: #1ac790;
+    background: transparent;
+    color: #1ac790;
     border: 1px solid #1ac790;
 }
 
@@ -18438,9 +18439,7 @@ input.form-control.tbl_quan {
 }
 
 .gradient-45deg-light-blue-cyan {
-    background: #6a11cb;
-    background: -webkit-linear-gradient(45deg, #5927d6, #335def) !important;
-    background: linear-gradient(45deg, #5927d6, #335def) !important;
+    background: linear-gradient(45deg, #234ca0, #ff6600) !important;
 }
 
 .gradient-45deg-light-green-veg {
@@ -18456,7 +18455,7 @@ input.form-control.tbl_quan {
 .gradient-45deg-amber-amber {
     background: #ff6f00;
     background: -webkit-linear-gradient(45deg, #ff6f00, #ffca28) !important;
-    background: linear-gradient(45deg, #ff6f00, #ffca28) !important;
+    background: linear-gradient(45deg, #ff5f20, #ff5f20) !important;
 }
 
 .gradient-45deg-red-teal {
@@ -18870,7 +18869,7 @@ input.form-control.tbl_quan {
 .icon-box.lg {
     width: 4rem;
     height: 4rem;
-    background: rgba(255, 255, 255, .3);
+    background: rgb(255 102 0);
 }
 
 .shadow-solid-rb {

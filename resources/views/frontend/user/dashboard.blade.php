@@ -67,7 +67,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-3 gradient-45deg-red-pink">
+                                <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan">
                                     <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
                                     <div class="dashboard_stats_wrap_content">
                                         <div class="dashboard-content">
@@ -83,7 +83,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-2 gradient-45deg-amber-amber">
+                                <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan">
                                     <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
                                     <div class="dashboard_stats_wrap_content">
                                         <div class="dashboard-content">
@@ -101,7 +101,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="dashboard_stats_wrap widget-12 gradient-45deg-light-green-veg">
+                                <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan">
                                     <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
                                     <div class="dashboard_stats_wrap_content">
                                         <div class="dashboard-content">
@@ -118,7 +118,7 @@
                                     </div>
                                 </div>
                             </div>
-                            @if(Auth::guard('web')->user()->type === 'agent')
+                            @if (Auth::guard('web')->user()->type === 'agent')
                                 <div class="col-lg-3 col-md-6 col-sm-12">
                                     <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan">
                                         <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
@@ -135,7 +135,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 col-sm-12">
-                                    <div class="dashboard_stats_wrap widget-3 gradient-45deg-red-pink">
+                                    <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan">
                                         <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
                                         <div class="dashboard_stats_wrap_content">
                                             <div class="dashboard-content">
@@ -150,7 +150,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 col-sm-12">
-                                    <div class="dashboard_stats_wrap widget-2 gradient-45deg-amber-amber">
+                                    <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan">
                                         <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
                                         <div class="dashboard_stats_wrap_content">
                                             <div class="dashboard-content">
@@ -165,7 +165,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 col-sm-12">
-                                    <div class="dashboard_stats_wrap widget-12 gradient-45deg-light-green-veg">
+                                    <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan">
                                         <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
                                         <div class="dashboard_stats_wrap_content">
                                             <div class="dashboard-content">
@@ -195,7 +195,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 col-sm-12">
-                                    <div class="dashboard_stats_wrap widget-10 widget-3 gradient-45deg-red-pink">
+                                    <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan">
                                         <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
                                         <div class="dashboard_stats_wrap_content">
                                             <div class="dashboard-content">
@@ -213,7 +213,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 col-sm-12">
-                                    <div class="dashboard_stats_wrap widget-2 gradient-45deg-amber-amber">
+                                    <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan">
                                         <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
                                         <div class="dashboard_stats_wrap_content">
                                             <div class="dashboard-content">
@@ -228,7 +228,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 col-sm-12">
-                                    <div class="dashboard_stats_wrap widget-12 gradient-45deg-light-green-veg">
+                                    <div class="dashboard_stats_wrap widget-1 gradient-45deg-light-blue-cyan">
                                         <img src="{{ asset('frontend/assets/img/circle.svg') }}" alt="New Matching Leads">
                                         <div class="dashboard_stats_wrap_content">
                                             <div class="dashboard-content">
